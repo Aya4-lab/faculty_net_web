@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Faculty Network 3D Explorer</title>
+    <style>
+        body { margin: 0; overflow: hidden; font-family: 'Helvetica Neue', Arial, sans-serif; background-color: #111; color: #fff;}
+        canvas { display: block; }
+        
+        #info-panel { position: absolute; top: 20px; right: 20px; width: 300px; background: rgba(30, 30, 30, 0.8); padding: 20px; border-radius: 8px; border: 1px solid #444; display: none; box-shadow: 0 4px 15px rgba(0,0,0,0.5); pointer-events: none;}
+        #info-panel h2 { margin: 0 0 10px 0; font-size: 1.2em; color: #4DA8DA; }
+        .info-row { margin-bottom: 8px; font-size: 0.9em; line-height: 1.4; }
+        .info-label { color: #aaa; font-size: 0.8em; }
+        .keyword-chip { display: inline-block; background: #333; padding: 2px 8px; border-radius: 10px; font-size: 0.8em; margin: 2px; border: 1px solid #555;}
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+</head>
+<body>
+
+    <div id="info-panel">
+        <h2 id="p-name">教員名</h2>
+        <div class="info-row"><span class="info-label">所属:</span> <span id="p-affil"></span></div>
+        <div class="info-row"><span class="info-label">専門:</span> <span id="p-spec"></span></div>
+        <div class="info-row"><span class="info-label">担当科目:</span> <span id="p-course"></span></div>
+        <div class="info-row" style="margin-top:10px;" id="p-keywords"></div>
+    </div>
+
+    <script>
+        // === Three.js Setup ===
+        const scene = new THREE.Scene();
+        // 変更箇所①: Fog（霧）の数値を 0.02 から 0.002 にして薄くする
+        scene.fog = new THREE.FogExp2(0x111111, 0.002); 
+
+        const camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 0.1, 1000);
+        // 変更箇所②: カメラの位置(Z軸)を 40 から 150 に下げて、全体を見渡しやすくする
+        camera.position.set(0, 0, 150);
+
+        const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        document.body.appendChild(renderer.domElement);
+
+        const controls = new THREE.OrbitControls(camera, renderer.domElement);
+        controls.enableDamping = true;
+        controls.dampingFactor = 0.05;
+
+        const ambientLight = new THREE.AmbientLight(0xffffff, 0.6);
+        scene.add(ambientLight);
+        const dirLight = new THREE.DirectionalLight(0xffffff, 0.8);
+        dirLight.position.set(10, 20, 10);
+        scene.add(dirLight);
+
+        const colors = [
+            0xE63946, 0x457B9D, 0x1D3557, 0x2A9D8F, 0xE9C46A, 
+            0xF4A261, 0x8AB17D, 0x9D8189, 0x3D5A80, 0xEE6C4D
+        ];
+
+        let nodeMeshes = [];
+        const nodeDict = {};
+        const raycaster = new THREE.Raycaster();
+        const mouse = new THREE.Vector2();
+
+        // APIからデータを取得して描画
+        fetch('/api/network')
+            .then(res => res.json())
+            .then(data => {
+                const scale = 15; 
+                const lineMaterial = new THREE.LineBasicMaterial({ color: 0xffffff, transparent: true, opacity: 0.15 });
+                const points = [];
+
+                data.nodes.forEach(node => {
+                    const px = node.position.x * scale;
+                    const py = node.position.y * scale;
+                    const pz = node.position.z * scale;
+                    node.vec3 = new THREE.Vector3(px, py, pz);
+                    nodeDict[node.id] = node;
+                });
+
+                data.edges.forEach(edge => {
+                    const source = nodeDict[edge.source];
+                    const target = nodeDict[edge.target];
+                    if(source && target) {
+                        points.push(source.vec3);
+                        points.push(target.vec3);
+                    }
+                });
+
+                const lineGeometry = new THREE.BufferGeometry().setFromPoints(points);
+                const edgesObject = new THREE.LineSegments(lineGeometry, lineMaterial);
+                scene.add(edgesObject);
+
+                const sphereGeo = new THREE.SphereGeometry(0.4, 16, 16);
+                data.nodes.forEach(node => {
+                    const color = colors[node.cluster_id % colors.length] || 0xcccccc;
+                    const mat = new THREE.MeshLambertMaterial({ color: color });
+                    const mesh = new THREE.Mesh(sphereGeo, mat);
+                    
+                    mesh.position.copy(node.vec3);
+                    mesh.userData = node; 
+                    
+                    scene.add(mesh);
+                    nodeMeshes.push(mesh);
+                });
+            });
+
+        // マウスホバー処理
+        let hoveredNode = null;
+        window.addEventListener('mousemove', (event) => {
+            mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
+            mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
+
+            raycaster.setFromCamera(mouse, camera);
+            const intersects = raycaster.intersectObjects(nodeMeshes);
+
+            if (intersects.length > 0) {
+                const object = intersects[0].object;
+                if (hoveredNode !== object) {
+                    if(hoveredNode) hoveredNode.scale.set(1, 1, 1);
+                    hoveredNode = object;
+                    hoveredNode.scale.set(1.8, 1.8, 1.8);
+                    showInfo(hoveredNode.userData);
+                }
+            } else {
+                if (hoveredNode) {
+                    hoveredNode.scale.set(1, 1, 1);
+                    hoveredNode = null;
+                    document.getElementById('info-panel').style.display = 'none';
+                }
+            }
+        });
+
+        function showInfo(node) {
+            document.getElementById('p-name').innerText = node.name || 'Unknown';
+            document.getElementById('p-affil').innerText = node.affiliation || '-';
+            document.getElementById('p-spec').innerText = node.specialty || '-';
+            document.getElementById('p-course').innerText = node.main_course || '-';
+            
+            const kwContainer = document.getElementById('p-keywords');
+            kwContainer.innerHTML = '';
+            (node.keywords || []).forEach(kw => {
+                const span = document.createElement('span');
+                span.className = 'keyword-chip';
+                span.innerText = kw;
+                kwContainer.appendChild(span);
+            });
+
+            document.getElementById('info-panel').style.display = 'block';
+        }
+
+        window.addEventListener('resize', () => {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+        });
+
+        function animate() {
+            requestAnimationFrame(animate);
+            controls.update();
+            renderer.render(scene, camera);
+        }
+        animate();
+    </script>
+</body>
+</html>
