@@ -10,7 +10,10 @@ from bs4 import BeautifulSoup
 from playwright.sync_api import sync_playwright
 
 SCRIPT_DIR = Path(__file__).resolve().parent
-RESEARCHMAP_COOKIE_FILE = SCRIPT_DIR / "researchmap_session_cookie.txt"
+PROJECT_ROOT = SCRIPT_DIR.parent
+RESEARCHMAP_DATA_DIR = PROJECT_ROOT / "data" / "raw" / "researchmap"
+RESEARCHMAP_COOKIE_FILE = RESEARCHMAP_DATA_DIR / "researchmap_session_cookie.txt"
+LEGACY_COOKIE_FILE = SCRIPT_DIR / "researchmap_session_cookie.txt"
 RESEARCHMAP_USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.131.0 Chrome/148.0.7778.280 Electron/42.7.0 Safari/537.36"
 
 NOISE_TOKENS = {
@@ -31,13 +34,14 @@ def load_researchmap_cookie():
     if cookie_value:
         return cookie_value
 
-    if RESEARCHMAP_COOKIE_FILE.exists():
-        try:
-            cookie_value = RESEARCHMAP_COOKIE_FILE.read_text(encoding="utf-8").strip()
-            if cookie_value:
-                return cookie_value
-        except Exception:
-            pass
+    for cookie_file in (RESEARCHMAP_COOKIE_FILE, LEGACY_COOKIE_FILE):
+        if cookie_file.exists():
+            try:
+                cookie_value = cookie_file.read_text(encoding="utf-8").strip()
+                if cookie_value:
+                    return cookie_value
+            except Exception:
+                pass
 
     return ""
 
@@ -174,9 +178,11 @@ def build_index_via_browser(query="金沢大学", out_file="kanazawa_researchers
             print(f"  -> Extracted {len(items)} items on page ({new_count} new). Total collected: {len(all_researchers)}")
 
             if len(items) == 0:
-                with open("debug_page_source.html", "w", encoding="utf-8") as df:
+                debug_page = RESEARCHMAP_DATA_DIR / "debug_page_source.html"
+                debug_page.parent.mkdir(parents=True, exist_ok=True)
+                with open(debug_page, "w", encoding="utf-8") as df:
                     df.write(html)
-                print("  No researchers detected. Saved HTML to 'debug_page_source.html'. Stopping.")
+                print(f"  No researchers detected. Saved HTML to '{debug_page}'. Stopping.")
                 break
 
             if len(items) < page_size:
@@ -188,7 +194,9 @@ def build_index_via_browser(query="金沢大学", out_file="kanazawa_researchers
 
         browser.close()
 
-    with open(out_file, "w", encoding="utf-8") as f:
+    out_path = Path(out_file)
+    out_path.parent.mkdir(parents=True, exist_ok=True)
+    with open(out_path, "w", encoding="utf-8") as f:
         json.dump(all_researchers, f, ensure_ascii=False, indent=2)
 
     print(f"\nCompleted! Saved {len(all_researchers)} researchers to '{out_file}'.")
@@ -196,7 +204,7 @@ def build_index_via_browser(query="金沢大学", out_file="kanazawa_researchers
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--query", default="金沢大学")
-    parser.add_argument("--out", default="kanazawa_researchers_index.json")
+    parser.add_argument("--out", default=str(RESEARCHMAP_DATA_DIR / "kanazawa_researchers_index.json"))
     parser.add_argument("--pages", "--max-pages", dest="pages", type=int, default=0, help="Optional safety cap; 0 means crawl until the last page.")
     parser.add_argument("--delay", type=float, default=1.5)
     args = parser.parse_args()

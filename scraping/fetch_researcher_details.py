@@ -10,7 +10,9 @@ from bs4 import BeautifulSoup
 
 SCRIPT_DIR = Path(__file__).resolve().parent
 PROJECT_ROOT = SCRIPT_DIR.parent
-RESEARCHMAP_COOKIE_FILE = SCRIPT_DIR / "researchmap_session_cookie.txt"
+RESEARCHMAP_DATA_DIR = PROJECT_ROOT / "data" / "raw" / "researchmap"
+RESEARCHMAP_COOKIE_FILE = RESEARCHMAP_DATA_DIR / "researchmap_session_cookie.txt"
+LEGACY_COOKIE_FILE = SCRIPT_DIR / "researchmap_session_cookie.txt"
 RESEARCHMAP_USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.131.0 Chrome/148.0.7778.280 Electron/42.7.0 Safari/537.36"
 
 HEADERS = {
@@ -46,6 +48,9 @@ def resolve_path(path_str: str) -> Path:
     candidate = PROJECT_ROOT / path
     if candidate.exists() or not path.exists():
         return candidate
+    legacy_candidate = PROJECT_ROOT / path.name
+    if legacy_candidate.exists():
+        return legacy_candidate
     return path
 
 def get_soup(url, session=None, timeout=15):
@@ -80,13 +85,14 @@ def load_researchmap_cookie():
     if cookie_value:
         return cookie_value
 
-    if RESEARCHMAP_COOKIE_FILE.exists():
-        try:
-            cookie_value = RESEARCHMAP_COOKIE_FILE.read_text(encoding="utf-8").strip()
-            if cookie_value:
-                return cookie_value
-        except Exception:
-            pass
+    for cookie_file in (RESEARCHMAP_COOKIE_FILE, LEGACY_COOKIE_FILE):
+        if cookie_file.exists():
+            try:
+                cookie_value = cookie_file.read_text(encoding="utf-8").strip()
+                if cookie_value:
+                    return cookie_value
+            except Exception:
+                pass
 
     return ""
 
@@ -403,8 +409,8 @@ def scrape_profile(profile_base, session=None, render_browser=None, lang="ja", m
 
     return data
 
-def run_fetch(index_file, filter_yugo=True, json_ja="ridb_yugo_faculty_ja.json", json_en="ridb_yugo_faculty_en.json",
-              out_ja="remp_yugo_faculty_ja.json", out_en="remp_yugo_faculty_en.json",
+def run_fetch(index_file, filter_yugo=True, json_ja="data/raw/ridb/ridb_yugo_faculty_ja.json", json_en="data/raw/ridb/ridb_yugo_faculty_en.json",
+              out_ja=None, out_en=None,
               start_idx=0, limit=None, delay=1.5, max_papers=10, render=False, fetch_abstract=True,
               single_source=False):
 
@@ -437,6 +443,11 @@ def run_fetch(index_file, filter_yugo=True, json_ja="ridb_yugo_faculty_ja.json",
     rows_en = None if single_source else load_json_rows(json_en)
     if not single_source and rows_en is None:
         print(f"English RIDB file not found: {json_en}. Falling back to Japanese names for EN output.")
+
+    if out_ja is None:
+        out_ja = RESEARCHMAP_DATA_DIR / "remp_yugo_faculty_ja.json"
+    if out_en is None:
+        out_en = RESEARCHMAP_DATA_DIR / "remp_yugo_faculty_en.json"
 
     targets = build_targets_from_rows(index_data, rows_ja, None if single_source else rows_en)
 
@@ -475,6 +486,9 @@ def run_fetch(index_file, filter_yugo=True, json_ja="ridb_yugo_faculty_ja.json",
 
         time.sleep(delay)
 
+    Path(out_ja).parent.mkdir(parents=True, exist_ok=True)
+    Path(out_en).parent.mkdir(parents=True, exist_ok=True)
+
     with open(out_ja, "w", encoding="utf-8") as f:
         json.dump(results_ja, f, ensure_ascii=False, indent=2)
     print(f"\nSaved JA data to {out_ja}")
@@ -496,12 +510,12 @@ def run_fetch(index_file, filter_yugo=True, json_ja="ridb_yugo_faculty_ja.json",
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Fetch details from researchmap index.")
-    parser.add_argument("--index", default="kanazawa_researchers_index.json", help="Index file path")
+    parser.add_argument("--index", default=str(RESEARCHMAP_DATA_DIR / "kanazawa_researchers_index.json"), help="Index file path")
     parser.add_argument("--all", action="store_true", help="Scrape all index researchers (Default: filter by yugo faculty)")
-    parser.add_argument("--json-ja", default="ridb_yugo_faculty_ja.json", help="Input Japanese RIDB JSON")
-    parser.add_argument("--json-en", default="ridb_yugo_faculty_en.json", help="Input English RIDB JSON")
-    parser.add_argument("--out-ja", default="remp_yugo_faculty_ja.json", help="Output Japanese JSON")
-    parser.add_argument("--out-en", default="remp_yugo_faculty_en.json", help="Output English JSON")
+    parser.add_argument("--json-ja", default="data/raw/ridb/ridb_yugo_faculty_ja.json", help="Input Japanese RIDB JSON")
+    parser.add_argument("--json-en", default="data/raw/ridb/ridb_yugo_faculty_en.json", help="Input English RIDB JSON")
+    parser.add_argument("--out-ja", default=str(RESEARCHMAP_DATA_DIR / "remp_yugo_faculty_ja.json"), help="Output Japanese JSON")
+    parser.add_argument("--out-en", default=str(RESEARCHMAP_DATA_DIR / "remp_yugo_faculty_en.json"), help="Output English JSON")
     parser.add_argument("--start-idx", type=int, default=0, help="Start target index")
     parser.add_argument("--limit", type=int, default=0, help="Limit number of researchers (0 = all)")
     parser.add_argument("--delay", type=float, default=1.5, help="Delay between requests")

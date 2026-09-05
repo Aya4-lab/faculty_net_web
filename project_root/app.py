@@ -5,7 +5,13 @@ from typing import Dict
 from flask import Flask, jsonify, send_from_directory
 
 APP_DIR = Path(__file__).resolve().parent
-DEFAULT_JSON = APP_DIR / "faculty_network_v2.json"
+PROJECT_ROOT = APP_DIR.parent
+NETWORK_JSON = PROJECT_ROOT / "data" / "display" / "faculty_network_v2.json"
+LEGACY_NETWORK_JSON = PROJECT_ROOT / "faculty_network_v2.json"
+
+DEFAULT_JSON = NETWORK_JSON if NETWORK_JSON.exists() else LEGACY_NETWORK_JSON
+if not DEFAULT_JSON.exists():
+    DEFAULT_JSON = APP_DIR / "faculty_network_v2.json"
 
 app = Flask(__name__, static_folder="web", static_url_path="/web")
 app.config["JSON_AS_ASCII"] = False

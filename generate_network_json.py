@@ -17,6 +17,7 @@ if not hasattr(sys, 'get_int_max_str_digits'):
     sys.set_int_max_str_digits = lambda x: None
     
 import json
+from pathlib import Path
 import pandas as pd
 import numpy as np
 from sentence_transformers import SentenceTransformer
@@ -600,6 +601,9 @@ def create_final_json(faculty_data, embeddings, coords_3d, cluster_labels,
         output_path: 出力JSONファイルのパス
     """
     print(f"\n💾 最終JSONを生成しています: {output_path}")
+
+    output_path = Path(output_path)
+    output_path.parent.mkdir(parents=True, exist_ok=True)
     
     # ノードデータの作成
     nodes = []
@@ -725,7 +729,7 @@ def main():
     # 設定ファイルから設定を読み込み
     try:
         from config import (
-            INPUT_JSONL, OUTPUT_JSON, BERT_MODEL,
+            INPUT_JSONL, NETWORK_JSON, BERT_MODEL,
             UMAP_N_NEIGHBORS, UMAP_MIN_DIST,
             DBSCAN_EPS, DBSCAN_MIN_SAMPLES,
             SIMILARITY_THRESHOLD, TOP_KEYWORDS_PER_CLUSTER
@@ -734,7 +738,7 @@ def main():
     except ImportError:
         # デフォルト値を使用
         INPUT_JSONL = 'yugo_faculty_merged_v2.jsonl'
-        OUTPUT_JSON = 'faculty_network_v2.json'
+        NETWORK_JSON = 'faculty_network_v2.json'
         BERT_MODEL = 'sonoisa/sentence-bert-base-ja-mean-tokens-v2'
         UMAP_N_NEIGHBORS = 15
         UMAP_MIN_DIST = 0.1
@@ -746,7 +750,7 @@ def main():
     
     print(f"\n📋 使用する設定:")
     print(f"   入力ファイル: {INPUT_JSONL}")
-    print(f"   出力ファイル: {OUTPUT_JSON}")
+    print(f"   出力ファイル: {NETWORK_JSON}")
     print(f"   類似度閾値: {SIMILARITY_THRESHOLD}")
     print(f"   DBSCAN EPS: {DBSCAN_EPS}")
     print(f"   DBSCAN MIN_SAMPLES: {DBSCAN_MIN_SAMPLES}")
@@ -777,7 +781,7 @@ def main():
         cluster_labels, 
         cluster_keywords, 
         edges,
-        output_path=OUTPUT_JSON
+        output_path=NETWORK_JSON
     )
     
     print("\n" + "=" * 60)
