@@ -2,10 +2,16 @@ import json
 import time
 import re
 import argparse
+import os
 from pathlib import Path
 
 import requests
 from bs4 import BeautifulSoup
+
+SCRIPT_DIR = Path(__file__).resolve().parent
+PROJECT_ROOT = SCRIPT_DIR.parent
+RESEARCHMAP_COOKIE_FILE = SCRIPT_DIR / "researchmap_session_cookie.txt"
+RESEARCHMAP_USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.131.0 Chrome/148.0.7778.280 Electron/42.7.0 Safari/537.36"
 
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
@@ -32,6 +38,16 @@ def is_noise(text: str) -> bool:
         return True
     return False
 
+
+def resolve_path(path_str: str) -> Path:
+    path = Path(path_str)
+    if path.is_absolute():
+        return path
+    candidate = PROJECT_ROOT / path
+    if candidate.exists() or not path.exists():
+        return candidate
+    return path
+
 def get_soup(url, session=None, timeout=15):
     s = session or requests
     try:
@@ -57,6 +73,96 @@ def render_page_get_soup(url, browser, timeout=30):
 def normalize_name(name_str: str) -> str:
     s = re.sub(r"[（(].*?[）)]", "", str(name_str))
     return re.sub(r"[\s,]+", "", s).lower().strip()
+
+
+def load_researchmap_cookie():
+    cookie_value = os.environ.get("RESEARCHMAP_SESSION_COOKIE", "").strip()
+    if cookie_value:
+        return cookie_value
+
+    if RESEARCHMAP_COOKIE_FILE.exists():
+        try:
+            cookie_value = RESEARCHMAP_COOKIE_FILE.read_text(encoding="utf-8").strip()
+            if cookie_value:
+                return cookie_value
+        except Exception:
+            pass
+
+    return ""
+
+
+def apply_researchmap_session(session):
+    session.headers.update({"User-Agent": RESEARCHMAP_USER_AGENT})
+    cookie_value = load_researchmap_cookie()
+    if cookie_value and "=" in cookie_value:
+        name, value = cookie_value.split("=", 1)
+        session.cookies.set(name, value, domain="researchmap.jp", path="/")
+
+
+def apply_researchmap_browser_state(context):
+    context.add_init_script("Object.defineProperty(navigator, 'webdriver', { get: () => undefined });")
+    cookie_value = load_researchmap_cookie()
+    if cookie_value and "=" in cookie_value:
+        name, value = cookie_value.split("=", 1)
+        context.add_cookies([
+            {"name": name, "value": value, "domain": "researchmap.jp", "path": "/"}
+        ])
+
+
+def load_json_rows(path_str):
+    if not path_str:
+        return None
+    path = resolve_path(path_str)
+    if not path.exists():
+        return None
+    with open(path, "r", encoding="utf-8") as f:
+        return json.load(f)
+
+
+def match_index_url(index_data, target_names):
+    normalized_targets = [normalize_name(name) for name in target_names if name]
+
+    for item in index_data:
+        idx_norm = normalize_name(item.get("name", ""))
+        if not idx_norm:
+            continue
+        for target_norm in normalized_targets:
+            if target_norm == idx_norm or target_norm in idx_norm or idx_norm in target_norm:
+                return item.get("profile_url")
+    return None
+
+
+def extract_row_name(row):
+    for key in ("名前", "name", "氏名"):
+        value = row.get(key)
+        if value:
+            return str(value).strip()
+    return ""
+
+
+def build_targets_from_rows(index_data, rows_ja, rows_en=None):
+    targets = []
+    rows_en = rows_en or []
+
+    for i, row_ja in enumerate(rows_ja):
+        name_ja = extract_row_name(row_ja)
+        if not name_ja:
+            continue
+
+        name_en = name_ja
+        if i < len(rows_en):
+            candidate_en = extract_row_name(rows_en[i])
+            if candidate_en:
+                name_en = candidate_en
+
+        matched_url = match_index_url(index_data, [name_ja, name_en])
+        targets.append({
+            "name_ja": name_ja,
+            "name_en": name_en,
+            "url": matched_url,
+        })
+
+    return targets
 
 def extract_section_by_heading(soup, heading_keywords):
     results = []
@@ -299,51 +405,40 @@ def scrape_profile(profile_base, session=None, render_browser=None, lang="ja", m
 
 def run_fetch(index_file, filter_yugo=True, json_ja="ridb_yugo_faculty_ja.json", json_en="ridb_yugo_faculty_en.json",
               out_ja="remp_yugo_faculty_ja.json", out_en="remp_yugo_faculty_en.json",
-              start_idx=0, limit=None, delay=1.5, max_papers=10, render=False, fetch_abstract=True):
-    
-    with open(index_file, "r", encoding="utf-8") as f:
+              start_idx=0, limit=None, delay=1.5, max_papers=10, render=False, fetch_abstract=True,
+              single_source=False):
+
+    index_path = resolve_path(index_file)
+    with open(index_path, "r", encoding="utf-8") as f:
         index_data = json.load(f)
 
     session = requests.Session()
+    apply_researchmap_session(session)
     playwright_controller = None
     browser = None
-    if render:
+    use_browser = render or bool(load_researchmap_cookie())
+    if use_browser:
         try:
             from playwright.sync_api import sync_playwright
             playwright_controller = sync_playwright().start()
-            browser = playwright_controller.chromium.launch(headless=True)
+            browser = playwright_controller.chromium.launch(headless=True).new_context(
+                user_agent=RESEARCHMAP_USER_AGENT,
+                locale="ja-JP"
+            )
+            apply_researchmap_browser_state(browser)
         except Exception as e:
             print(f"Failed to start Playwright: {e}")
             raise
 
-    targets = []
-    if filter_yugo:
-        with open(json_ja, "r", encoding="utf-8") as f:
-            rows_ja = json.load(f)[:2]
-        with open(json_en, "r", encoding="utf-8") as f:
-            rows_en = json.load(f)[:1]
+    rows_ja = load_json_rows(json_ja)
+    if rows_ja is None:
+        raise FileNotFoundError(f"RIDB input not found: {json_ja}")
 
-        for r_ja, r_en in zip(rows_ja, rows_en):
-            name_ja = r_ja.get("名前", "").strip()[:2]
-            name_en = r_en.get("名前", "").strip()[:1]
-            norm_ja = normalize_name(name_ja)
-            norm_en = normalize_name(name_en)
+    rows_en = None if single_source else load_json_rows(json_en)
+    if not single_source and rows_en is None:
+        print(f"English RIDB file not found: {json_en}. Falling back to Japanese names for EN output.")
 
-            matched_url = None
-            for item in index_data:
-                idx_norm = normalize_name(item["name"])
-                if norm_ja in idx_norm or idx_norm in norm_ja or (norm_en and norm_en in idx_norm):
-                    matched_url = item["profile_url"]
-                    break
-
-            if matched_url:
-                targets.append({"name_ja": name_ja, "name_en": name_en, "url": matched_url})
-            else:
-                targets.append({"name_ja": name_ja, "name_en": name_en, "url": None})
-    else:
-        # 将来の全員モード用
-        for item in index_data:
-            targets.append({"name_ja": item["name"], "name_en": item["name"], "url": item["profile_url"]})
+    targets = build_targets_from_rows(index_data, rows_ja, None if single_source else rows_en)
 
     # スライス処理
     if limit:
@@ -352,6 +447,8 @@ def run_fetch(index_file, filter_yugo=True, json_ja="ridb_yugo_faculty_ja.json",
         targets = targets[start_idx:]
 
     print(f"Total targets to scrape: {len(targets)}")
+    matched_targets = sum(1 for t in targets if t["url"])
+    print(f"Matched profile URLs: {matched_targets}/{len(targets)}")
     results_ja = []
     results_en = []
 
@@ -410,6 +507,7 @@ if __name__ == "__main__":
     parser.add_argument("--delay", type=float, default=1.5, help="Delay between requests")
     parser.add_argument("--max-papers", type=int, default=10, help="Papers limit per researcher")
     parser.add_argument("--no-abstract", action="store_true", help="Skip fetching paper abstract")
+    parser.add_argument("--single-source", action="store_true", help="Use only the Japanese RIDB file and reuse it for EN output names")
     parser.add_argument("--render", action="store_true", help="Use Playwright for dynamic rendering")
     args = parser.parse_args()
 
@@ -426,5 +524,6 @@ if __name__ == "__main__":
         delay=args.delay,
         max_papers=args.max_papers,
         render=args.render,
-        fetch_abstract=not args.no_abstract
+        fetch_abstract=not args.no_abstract,
+        single_source=args.single_source
     )
