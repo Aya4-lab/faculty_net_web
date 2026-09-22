@@ -33,6 +33,14 @@ def _text_preview(node: dict, max_len: int = 480) -> str:
     return raw[: max_len - 1].rstrip() + "…"
 
 
+def _first_url(*candidates: str) -> str:
+    for value in candidates:
+        url = (value or "").strip()
+        if url.startswith("http://") or url.startswith("https://"):
+            return url
+    return ""
+
+
 def load_network_data(json_path: Path):
     if not json_path.exists():
         return {"nodes": [], "edges": []}
@@ -59,6 +67,13 @@ def load_network_data(json_path: Path):
         preview = _text_preview(node)
 
         if ntype == "professor":
+            researchmap_url = _first_url(node.get("researchmap_url"), node.get("url"))
+            ridb_url = _first_url(node.get("ridb_url"))
+            # Prefer researchmap; keep ridb as fallback for UI
+            if not researchmap_url and ridb_url:
+                # ridb_url alone is fine for "研究者情報を開く"
+                pass
+            primary = _first_url(researchmap_url, ridb_url, node.get("url"))
             normalized_nodes.append(
                 {
                     "id": nid,
@@ -68,6 +83,9 @@ def load_network_data(json_path: Path):
                     "keywords": keywords,
                     "text_preview": preview,
                     "description": (node.get("description") or "").strip(),
+                    "researchmap_url": researchmap_url,
+                    "ridb_url": ridb_url,
+                    "url": primary,
                     "position": _position_to_dict(node.get("position", [0, 0, 0])),
                 }
             )
@@ -77,6 +95,7 @@ def load_network_data(json_path: Path):
                 (node.get("instructor_name") or "").strip()
                 or prof_name_by_id.get(instructor_id, "")
             )
+            syllabus_url = _first_url(node.get("syllabus_url"), node.get("url"))
             normalized_nodes.append(
                 {
                     "id": nid,
@@ -87,6 +106,8 @@ def load_network_data(json_path: Path):
                     "keywords": keywords,
                     "text_preview": preview,
                     "description": (node.get("description") or "").strip(),
+                    "syllabus_url": syllabus_url,
+                    "url": syllabus_url,
                     "position": _position_to_dict(node.get("position", [0, 0, 0])),
                 }
             )
@@ -98,6 +119,7 @@ def load_network_data(json_path: Path):
                     "name": name,
                     "keywords": keywords,
                     "text_preview": preview,
+                    "url": _first_url(node.get("url")),
                     "position": _position_to_dict(node.get("position", [0, 0, 0])),
                 }
             )

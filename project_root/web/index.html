@@ -30,10 +30,17 @@
             box-shadow: 0 10px 36px rgba(0,0,0,0.4);
         }
         #left-panel h1 {
-            margin: 0; font-size: 1.05em; font-weight: 600; letter-spacing: 0.02em;
+            margin: 0 0 8px 0;
+            font-size: 1.05em;
+            font-weight: 600;
+            letter-spacing: 0.02em;
+            line-height: 1.3;
         }
         #left-panel .subtitle {
-            margin: -6px 0 0; font-size: 0.75em; color: var(--muted); line-height: 1.4;
+            margin: 0;
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.5;
         }
         .section-label {
             font-size: 0.72em; color: var(--muted); letter-spacing: 0.04em;
@@ -169,6 +176,48 @@
         }
         #status-toast.show { opacity: 1; }
 
+        #op-guide {
+            position: absolute;
+            left: 50%;
+            bottom: 18px;
+            transform: translateX(-50%);
+            z-index: 5;
+            color: rgba(255, 255, 255, 0.45);
+            font-size: 12px;
+            letter-spacing: 0.02em;
+            pointer-events: none;
+            white-space: nowrap;
+            text-shadow: 0 1px 4px rgba(0, 0, 0, 0.55);
+        }
+
+        .ext-link-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            margin: 4px 0 14px;
+            padding: 8px 12px;
+            font-size: 0.82em;
+            color: #c5e6f5;
+            background: rgba(90, 158, 200, 0.12);
+            border: 1px solid #4a90b8;
+            border-radius: 8px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+        }
+        .ext-link-btn:hover {
+            background: rgba(90, 158, 200, 0.28);
+            border-color: #6eb0d4;
+            color: #e8f6fc;
+        }
+        .ext-link-btn.is-disabled,
+        .ext-link-btn[aria-disabled="true"] {
+            opacity: 0.4;
+            pointer-events: none;
+            cursor: not-allowed;
+        }
+        .ext-link-btn .ext-icon { font-size: 0.95em; opacity: 0.9; }
+
         #hover-tip {
             position: absolute; z-index: 12; display: none; pointer-events: none;
             max-width: 260px; padding: 8px 10px;
@@ -188,6 +237,7 @@
             white-space: nowrap; pointer-events: none; user-select: none;
             max-width: 150px; overflow: hidden; text-overflow: ellipsis;
             transform: translateY(-12px);
+            transition: opacity 0.2s ease;
         }
         .node-label.professor {
             color: #f0c090; border-color: rgba(224, 138, 60, 0.45); font-weight: 600;
@@ -249,6 +299,7 @@
 
     <div id="status-toast"></div>
     <div id="hover-tip"></div>
+    <div id="op-guide">ドラッグで回転 ・ ホイールでズーム ・ ノードをクリックで詳細</div>
 
     <div id="info-panel">
         <button id="panel-close" type="button" aria-label="閉じる">×</button>
@@ -294,8 +345,11 @@
         // display_data coords are already normalized to ~±28
         const SCALE = 1;
         const ENTRY_COUNT = 5;
-        const SIM_EXPAND_TOP = 5;
+        const SIM_EXPAND_TOP = 2; // discovery: top similarity bridges
         const COURSE_NAME_MAX = 12;
+        const PROF_MIN_DIST = 3.4; // keep professor spheres clickable
+        const LABEL_NEAR = 32;
+        const LABEL_FAR = 68;
 
         const QUICK_TAGS = [
             { label: 'AI・データ', terms: ['AI', 'データ', '機械学習', 'DX', 'データサイエンス', '情報'] },
@@ -356,10 +410,80 @@
             const label = mesh.userData.labelObj;
             const el = mesh.userData.labelEl;
             if (!label || !el) return;
-            const show = mesh.visible && labelMode !== 'hidden';
-            label.visible = show;
-            el.classList.toggle('hidden-label', !show);
-            if (show) el.textContent = labelTextFor(mesh.userData);
+            if (!mesh.visible || labelMode === 'hidden') {
+                label.visible = false;
+                el.classList.add('hidden-label');
+                el.style.opacity = '0';
+                return;
+            }
+            el.textContent = labelTextFor(mesh.userData);
+            applyLabelDistance(mesh);
+        }
+
+        function applyLabelDistance(mesh) {
+            const label = mesh.userData.labelObj;
+            const el = mesh.userData.labelEl;
+            if (!label || !el || !mesh.visible || labelMode === 'hidden') return;
+
+            const dist = camera.position.distanceTo(mesh.position);
+            if (dist > LABEL_FAR) {
+                label.visible = false;
+                el.classList.add('hidden-label');
+                el.style.opacity = '0';
+                return;
+            }
+            label.visible = true;
+            el.classList.remove('hidden-label');
+            const t = dist <= LABEL_NEAR
+                ? 1
+                : 1 - (dist - LABEL_NEAR) / (LABEL_FAR - LABEL_NEAR);
+            el.style.opacity = String(Math.max(0.08, Math.min(1, t)));
+        }
+
+        function updateVisibleLabelDistances() {
+            if (labelMode === 'hidden') return;
+            for (const mesh of nodeMeshes) {
+                if (mesh.visible) applyLabelDistance(mesh);
+            }
+        }
+
+        function separateProfessorNodes(iterations = 48) {
+            const profs = [];
+            for (const id in nodeDict) {
+                const n = nodeDict[id];
+                if (n.type === 'professor' && n.vec3) profs.push(n);
+            }
+            const minDist = PROF_MIN_DIST;
+            for (let iter = 0; iter < iterations; iter++) {
+                for (let i = 0; i < profs.length; i++) {
+                    for (let j = i + 1; j < profs.length; j++) {
+                        const a = profs[i].vec3;
+                        const b = profs[j].vec3;
+                        const dx = a.x - b.x;
+                        const dy = a.y - b.y;
+                        const dz = a.z - b.z;
+                        let d = Math.sqrt(dx * dx + dy * dy + dz * dz);
+                        if (d >= minDist) continue;
+                        if (d < 1e-5) {
+                            // identical position → random nudge
+                            const ang = (i * 12.9898 + j * 78.233) % (Math.PI * 2);
+                            a.x += Math.cos(ang) * minDist * 0.5;
+                            a.z += Math.sin(ang) * minDist * 0.5;
+                            continue;
+                        }
+                        const push = (minDist - d) * 0.52;
+                        const nx = dx / d;
+                        const ny = dy / d;
+                        const nz = dz / d;
+                        a.x += nx * push;
+                        a.y += ny * push * 0.85;
+                        a.z += nz * push;
+                        b.x -= nx * push;
+                        b.y -= ny * push * 0.85;
+                        b.z -= nz * push;
+                    }
+                }
+            }
         }
 
         function refreshAllLabels() {
@@ -480,8 +604,8 @@
 
         function edgeBaseOpacity(rec) {
             if (rec.type === 'taught_by') return 0.35;
-            const s = Math.max(0, Math.min(1, rec.score || 0));
-            return 0.06 + s * 0.22;
+            // discovery similarity: keep faint (~0.2)
+            return 0.2;
         }
 
         function revealEdge(rec, { animate = true } = {}) {
@@ -698,6 +822,12 @@
             ).join('');
         }
 
+        function externalLinkButton({ href, label }) {
+            const url = (href || '').trim();
+            if (!url) return ''; // no URL → hide button
+            return `<a class="ext-link-btn" href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(label)} <span class="ext-icon">↗</span></a>`;
+        }
+
         function showInfo(node) {
             const typeEl = document.getElementById('p-type');
             const nameEl = document.getElementById('p-name');
@@ -709,6 +839,11 @@
             let html = '';
 
             if (node.type === 'professor') {
+                const researchUrl = (node.researchmap_url || '').trim();
+                const ridbUrl = (node.ridb_url || '').trim();
+                const linkUrl = researchUrl || ridbUrl || (node.url || '').trim();
+                const linkLabel = researchUrl ? 'researchmap を開く' : '研究者情報を開く';
+                html += externalLinkButton({ href: linkUrl, label: linkLabel });
                 html += `
                     <div class="info-row">
                         <span class="info-label">所属組織</span>
@@ -723,6 +858,8 @@
                         <div class="preview-text">${escapeHtml(preview || '—')}</div>
                     </div>`;
             } else if (node.type === 'course') {
+                const syllabusUrl = (node.syllabus_url || node.url || '').trim();
+                html += externalLinkButton({ href: syllabusUrl, label: 'シラバス詳細を開く' });
                 const hasInstructor = !!(node.instructor_id && meshById[node.instructor_id]);
                 const instructorLabel = escapeHtml(node.instructor_name || node.instructor_id || '—');
                 const instructorHtml = hasInstructor
@@ -810,6 +947,9 @@
                     nodeDict[node.id] = node;
                 });
 
+                // Push overlapping professor nodes apart so they stay clickable
+                separateProfessorNodes();
+
                 const profGeo = new THREE.SphereGeometry(0.85, 20, 20);
                 const courseGeo = new THREE.SphereGeometry(0.32, 12, 12);
 
@@ -848,18 +988,33 @@
 
                     const score = Number(edge.similarity ?? edge.score ?? 0) || 0;
                     const type = edge.type || 'similarity';
-                    const color = type === 'taught_by' ? 0xc8cdd4 : 0x6a9ab8;
-
                     const geo = new THREE.BufferGeometry().setFromPoints([source.vec3, target.vec3]);
-                    const mat = new THREE.LineBasicMaterial({
-                        color,
-                        transparent: true,
-                        opacity: 0,
-                        depthWrite: false,
-                    });
-                    const line = new THREE.Line(geo, mat);
+
+                    let mat;
+                    let line;
+                    if (type === 'similarity') {
+                        mat = new THREE.LineDashedMaterial({
+                            color: 0x7eb8d4,
+                            transparent: true,
+                            opacity: 0,
+                            dashSize: 0.55,
+                            gapSize: 0.4,
+                            depthWrite: false,
+                        });
+                        line = new THREE.Line(geo, mat);
+                        line.computeLineDistances();
+                        line.renderOrder = 0;
+                    } else {
+                        mat = new THREE.LineBasicMaterial({
+                            color: 0xc8cdd4,
+                            transparent: true,
+                            opacity: 0,
+                            depthWrite: false,
+                        });
+                        line = new THREE.Line(geo, mat);
+                        line.renderOrder = 1;
+                    }
                     line.visible = false;
-                    line.renderOrder = type === 'taught_by' ? 1 : 0;
                     scene.add(line);
 
                     const rec = {
@@ -991,6 +1146,7 @@
             }
 
             controls.update();
+            updateVisibleLabelDistances();
             renderer.render(scene, camera);
             labelRenderer.render(scene, camera);
         }
