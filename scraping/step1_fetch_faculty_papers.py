@@ -142,17 +142,57 @@ def strip_furigana(name: str) -> str:
     return re.sub(r"[（(].*?[）)]", "", str(name or "")).strip()
 
 
+def extract_kanji_variants(name: str) -> list:
+    """
+    Build kanji search-query variants (tried in order):
+      1. spaced full name after furigana strip  ("相澤 大輝")
+      2. compacted full name                   ("相澤大輝")
+      3. family name only when splittable      ("相澤")
+    Non-CJK names yield an empty list (use English search instead).
+    """
+    spaced = strip_furigana(name)
+    spaced = re.sub(r"[\u3000\s]+", " ", spaced).strip()
+    if not spaced or not re.search(r"[\u3400-\u9fff\uf900-\ufaff]", spaced):
+        return []
+
+    variants = []
+    seen = set()
+
+    def add(v: str):
+        v = (v or "").strip()
+        if v and v not in seen:
+            seen.add(v)
+            variants.append(v)
+
+    add(spaced)
+    add(re.sub(r"\s+", "", spaced))
+    tokens = spaced.split()
+    if len(tokens) >= 2:
+        add(tokens[0])
+    return variants
+
+
 def normalize_name(name_str: str) -> str:
+    """Compact name for comparison: drop furigana, spaces (half/full), commas."""
     s = strip_furigana(name_str)
-    return re.sub(r"[\s,]+", "", s).lower().strip()
+    s = s.replace("\u3000", " ")
+    return re.sub(r"[\s,，、]+", "", s).lower().strip()
 
 
 def names_match(candidate_name: str, target_name: str) -> bool:
+    """True if names match ignoring spaces / furigana parentheses."""
     c = normalize_name(candidate_name)
     t = normalize_name(target_name)
     if not c or not t:
         return False
     return c == t or t in c or c in t
+
+
+def profile_base_url(url: str) -> str:
+    """Normalize to a bare profile URL shared by ja/en scraping."""
+    if not url:
+        return ""
+    return absolute_researchmap_url(url) or str(url).split("?")[0].split("#")[0].rstrip("/")
 
 
 def affiliation_is_kanazawa(affiliation: str) -> bool:
@@ -295,9 +335,13 @@ def extract_search_candidates(soup):
     return candidates
 
 
-def search_kanazawa_profile_url(name, render_browser=None):
-    """Fallback: search researchmap and pick matching profile."""
+def search_kanazawa_profile_url(name, render_browser=None, match_names=None, require_kanazawa_if_ambiguous=True):
+    """
+    Fallback: search researchmap and pick matching profile.
+    For surname-only queries, multiple hits are resolved via Kanazawa affiliation.
+    """
     query = strip_furigana(name)
+    query = re.sub(r"[\u3000\s]+", " ", query).strip()
     if not query:
         return None
 
@@ -308,47 +352,113 @@ def search_kanazawa_profile_url(name, render_browser=None):
         return None
 
     candidates = extract_search_candidates(soup)
-    # 対象の氏名と完全一致する候補を抽出
-    name_matched_cands = [c for c in candidates if names_match(c["name"], query)]
+    targets = [t for t in (match_names or [query]) if t]
+    if query not in targets:
+        targets = [query] + targets
+
+    name_matched_cands = [
+        c for c in candidates
+        if any(names_match(c["name"], t) for t in targets)
+    ]
 
     if not name_matched_cands:
         print(f"  Fallback: no name match for {query}")
         return None
 
-    # ① 同姓同名が1人しかいない場合：所属判定をスキップして確定
+    # ① Unique candidate
     if len(name_matched_cands) == 1:
         target = name_matched_cands[0]
         print(f"  Fallback matched (unique candidate): {target['name']} -> {target['profile_url']}")
-        return target["profile_url"]
+        return profile_base_url(target["profile_url"])
 
-    # ② 同姓同名が複数いる場合：所属テキストに「金沢大学」が含まれるものを優先
-    for cand in name_matched_cands:
-        if affiliation_is_kanazawa(cand.get("affiliation", "")):
-            print(f"  Fallback matched (Kanazawa affiliation): {cand['name']} / {cand['affiliation']} -> {cand['profile_url']}")
-            return cand["profile_url"]
+    # ② Multiple: prefer Kanazawa affiliation
+    if require_kanazawa_if_ambiguous:
+        for cand in name_matched_cands:
+            if affiliation_is_kanazawa(cand.get("affiliation", "")):
+                print(
+                    f"  Fallback matched (Kanazawa affiliation): "
+                    f"{cand['name']} / {cand['affiliation']} -> {cand['profile_url']}"
+                )
+                return profile_base_url(cand["profile_url"])
 
-    # ③ それでも見つからない場合（プロフィールページ本文で確認する最終手段）
-    for cand in name_matched_cands:
-        p_soup = render_page_get_soup(cand["profile_url"], render_browser)
-        if p_soup and ("金沢大学" in p_soup.get_text() or "Kanazawa University" in p_soup.get_text()):
-            print(f"  Fallback matched (profile page check): {cand['name']} -> {cand['profile_url']}")
-            return cand["profile_url"]
+        # ③ Profile page body check
+        for cand in name_matched_cands:
+            p_soup = render_page_get_soup(cand["profile_url"], render_browser)
+            if p_soup and ("金沢大学" in p_soup.get_text() or "Kanazawa University" in p_soup.get_text()):
+                print(f"  Fallback matched (profile page check): {cand['name']} -> {cand['profile_url']}")
+                return profile_base_url(cand["profile_url"])
 
     print(f"  Fallback: multiple candidates exist, but none matched Kanazawa for {query}")
     return None
 
 
-def resolve_profile_url(index_data, name_ja, name_en, render_browser=None):
-    matched = match_index_url(index_data, [name_ja, name_en])
-    if matched:
-        return matched
+def _index_lookup_names(name_ja, name_en) -> list:
+    names = []
+    seen = set()
 
-    for query_name in (name_ja, name_en):
-        if not query_name:
-            continue
-        found = search_kanazawa_profile_url(query_name, render_browser=render_browser)
+    def add(n):
+        n = (n or "").strip()
+        if n and n not in seen:
+            seen.add(n)
+            names.append(n)
+
+    for v in extract_kanji_variants(name_ja):
+        add(v)
+    add(strip_furigana(name_ja))
+    add(name_ja)
+    add(strip_furigana(name_en))
+    add(name_en)
+    return names
+
+
+def resolve_profile_url(index_data, name_ja, name_en, render_browser=None):
+    """
+    Resolve a single shared profile URL for both ja/en scraping.
+    Order: index -> kanji variants search -> English search.
+    """
+    # 1) Index match (kanji variants + EN)
+    matched = match_index_url(index_data, _index_lookup_names(name_ja, name_en))
+    if matched:
+        url = profile_base_url(matched)
+        print(f"  Index matched: {url}")
+        return url
+
+    # Match target names for candidate filtering (full names, not surname-only alone)
+    match_targets = []
+    for n in (name_ja, strip_furigana(name_ja), name_en, strip_furigana(name_en)):
+        if n and n not in match_targets:
+            match_targets.append(n)
+    for v in extract_kanji_variants(name_ja):
+        if v not in match_targets:
+            match_targets.append(v)
+
+    # 2) Japanese kanji searches (spaced -> compacted -> surname)
+    kanji_variants = extract_kanji_variants(name_ja)
+    for i, query in enumerate(kanji_variants):
+        # Last variant is surname-only when full name was split
+        is_surname_only = (len(kanji_variants) >= 3 and i == len(kanji_variants) - 1)
+        found = search_kanazawa_profile_url(
+            query,
+            render_browser=render_browser,
+            match_names=[query] + match_targets if is_surname_only else match_targets,
+            require_kanazawa_if_ambiguous=True,
+        )
         if found:
-            return found
+            return profile_base_url(found)
+
+    # 3) English / alphabet search
+    en_query = strip_furigana(name_en or "")
+    en_query = re.sub(r"[\u3000\s]+", " ", en_query).strip()
+    if en_query:
+        found = search_kanazawa_profile_url(
+            en_query,
+            render_browser=render_browser,
+            match_names=match_targets + [en_query],
+            require_kanazawa_if_ambiguous=True,
+        )
+        if found:
+            return profile_base_url(found)
+
     return None
 
 
@@ -367,11 +477,11 @@ def build_targets_from_rows(index_data, rows_ja, rows_en=None):
             if candidate_en:
                 name_en = candidate_en
 
-        matched_url = match_index_url(index_data, [name_ja, name_en])
+        matched_url = match_index_url(index_data, _index_lookup_names(name_ja, name_en))
         targets.append({
             "name_ja": name_ja,
             "name_en": name_en,
-            "url": matched_url,
+            "url": profile_base_url(matched_url) if matched_url else None,
         })
 
     return targets
@@ -929,15 +1039,17 @@ def run_fetch(index_file, json_ja="data/raw/ridb/ridb_yugo_faculty_ja.json", jso
                 p_url = resolve_profile_url(
                     index_data, name_ja, name_en, render_browser=browser
                 )
-                t["url"] = p_url
+            # One shared bare URL for both JA and EN scraping
+            p_url = profile_base_url(p_url) if p_url else None
+            t["url"] = p_url
 
             if not p_url:
-                print(f"  Profile URL not found for {name_ja}")
+                print(f"  Profile URL not found for {name_ja} / {name_en}")
                 results_ja.append(empty_faculty_record(name_ja, found=False))
                 results_en.append(empty_faculty_record(name_en, found=False))
                 continue
 
-            print(f"  Target URL: {p_url}")
+            print(f"  Target URL (shared ja/en): {p_url}")
             name_variants = [name_ja, name_en]
             print("    Scraping Japanese (JA)...")
             data_ja = scrape_profile(
