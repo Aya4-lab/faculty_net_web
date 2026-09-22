@@ -2,163 +2,999 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Faculty Network 3D Explorer</title>
     <style>
-        body { margin: 0; overflow: hidden; font-family: 'Helvetica Neue', Arial, sans-serif; background-color: #111; color: #fff;}
+        :root {
+            --panel-bg: rgba(18, 20, 24, 0.88);
+            --panel-border: #3a3f48;
+            --accent: #8ecae6;
+            --warm: #e08a3c;
+            --text: #e8eaed;
+            --muted: #8a9099;
+        }
+        * { box-sizing: border-box; }
+        body {
+            margin: 0; overflow: hidden;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background-color: #0c0d10; color: var(--text);
+        }
         canvas { display: block; }
-        
-        #info-panel { position: absolute; top: 20px; right: 20px; width: 300px; background: rgba(30, 30, 30, 0.8); padding: 20px; border-radius: 8px; border: 1px solid #444; display: none; box-shadow: 0 4px 15px rgba(0,0,0,0.5); pointer-events: none;}
-        #info-panel h2 { margin: 0 0 10px 0; font-size: 1.2em; color: #4DA8DA; }
-        .info-row { margin-bottom: 8px; font-size: 0.9em; line-height: 1.4; }
-        .info-label { color: #aaa; font-size: 0.8em; }
-        .keyword-chip { display: inline-block; background: #333; padding: 2px 8px; border-radius: 10px; font-size: 0.8em; margin: 2px; border: 1px solid #555;}
+
+        #left-panel {
+            position: absolute; top: 16px; left: 16px; bottom: 16px;
+            width: 310px; z-index: 10;
+            background: var(--panel-bg); backdrop-filter: blur(10px);
+            border: 1px solid var(--panel-border); border-radius: 12px;
+            padding: 18px 16px; display: flex; flex-direction: column; gap: 14px;
+            box-shadow: 0 10px 36px rgba(0,0,0,0.4);
+        }
+        #left-panel h1 {
+            margin: 0; font-size: 1.05em; font-weight: 600; letter-spacing: 0.02em;
+        }
+        #left-panel .subtitle {
+            margin: -6px 0 0; font-size: 0.75em; color: var(--muted); line-height: 1.4;
+        }
+        .section-label {
+            font-size: 0.72em; color: var(--muted); letter-spacing: 0.04em;
+            text-transform: uppercase; margin-bottom: 6px;
+        }
+        #search-form { display: flex; gap: 6px; }
+        #search-input {
+            flex: 1; background: #1a1d24; border: 1px solid #455; color: var(--text);
+            border-radius: 8px; padding: 9px 11px; font-size: 0.9em; outline: none;
+        }
+        #search-input:focus { border-color: var(--accent); }
+        #search-input::placeholder { color: #666; }
+        .btn {
+            background: #2a303a; border: 1px solid #4a5560; color: var(--text);
+            border-radius: 8px; padding: 9px 12px; font-size: 0.85em; cursor: pointer;
+            white-space: nowrap;
+        }
+        .btn:hover { background: #343b48; border-color: #6a7580; }
+        .btn-primary { background: rgba(90, 158, 200, 0.25); border-color: #4a90b8; color: #b8e0f5; }
+        .btn-primary:hover { background: rgba(90, 158, 200, 0.4); }
+        .btn-ghost {
+            width: 100%; background: transparent; border: 1px dashed #455;
+            color: var(--muted); font-size: 0.8em;
+        }
+        .btn-ghost:hover { color: var(--text); border-color: #677; }
+
+        .seg-toggle {
+            display: flex; width: 100%; border: 1px solid #3d4550; border-radius: 8px; overflow: hidden;
+        }
+        .seg-toggle button {
+            flex: 1; background: #1a1d24; border: none; border-right: 1px solid #3d4550;
+            color: var(--muted); padding: 7px 4px; font-size: 0.72em; cursor: pointer;
+        }
+        .seg-toggle button:last-child { border-right: none; }
+        .seg-toggle button:hover { color: var(--text); background: #242830; }
+        .seg-toggle button.active {
+            background: rgba(90, 158, 200, 0.22); color: #c5e6f5;
+        }
+
+        #quick-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+        .tag-btn {
+            background: #1e232b; border: 1px solid #3d4550; color: #c8ced6;
+            border-radius: 999px; padding: 5px 10px; font-size: 0.75em; cursor: pointer;
+        }
+        .tag-btn:hover, .tag-btn.active {
+            border-color: var(--warm); color: #f0c090;
+            background: rgba(224, 138, 60, 0.15);
+        }
+
+        #trail-section { flex: 1; min-height: 0; display: flex; flex-direction: column; }
+        #trail-list {
+            flex: 1; overflow-y: auto; list-style: none; margin: 0; padding: 0;
+            border: 1px solid #2a3038; border-radius: 8px; background: rgba(0,0,0,0.2);
+        }
+        #trail-list:empty::after {
+            content: 'まだ痕跡はありません。興味から探索を始めてください。';
+            display: block; padding: 14px; font-size: 0.8em; color: #666; line-height: 1.45;
+        }
+        .trail-item {
+            display: flex; align-items: flex-start; gap: 8px;
+            width: 100%; text-align: left; background: transparent; border: none;
+            border-bottom: 1px solid #2a3038; color: var(--text);
+            padding: 10px 12px; cursor: pointer; font: inherit;
+        }
+        .trail-item:last-child { border-bottom: none; }
+        .trail-item:hover { background: rgba(255,255,255,0.04); }
+        .trail-dot {
+            width: 8px; height: 8px; border-radius: 50%; margin-top: 5px; flex-shrink: 0;
+        }
+        .trail-dot.professor { background: var(--warm); }
+        .trail-dot.course { background: var(--accent); }
+        .trail-meta { font-size: 0.68em; color: var(--muted); }
+        .trail-name { font-size: 0.84em; line-height: 1.3; }
+
+        #empty-hint {
+            position: absolute; left: 50%; top: 48%; transform: translate(-50%, -50%);
+            text-align: center; color: #6a7078; pointer-events: none; z-index: 5;
+            transition: opacity 0.4s ease;
+        }
+        #empty-hint strong { display: block; color: #9aa0a8; font-size: 1.1em; margin-bottom: 8px; font-weight: 500; }
+        #empty-hint span { font-size: 0.85em; }
+
+        #info-panel {
+            position: absolute; top: 16px; right: 16px; width: 320px; z-index: 10;
+            background: var(--panel-bg); backdrop-filter: blur(10px);
+            padding: 20px; border-radius: 12px; border: 1px solid var(--panel-border);
+            display: none; box-shadow: 0 10px 36px rgba(0,0,0,0.4);
+            max-height: calc(100vh - 32px); overflow-y: auto;
+        }
+        #info-panel .type-badge {
+            display: inline-block; font-size: 0.7em; letter-spacing: 0.06em;
+            text-transform: uppercase; padding: 2px 8px; border-radius: 4px;
+            margin-bottom: 8px;
+        }
+        #info-panel .type-badge.professor {
+            background: rgba(232, 140, 74, 0.25); color: #f0b27a; border: 1px solid #c77a3a;
+        }
+        #info-panel .type-badge.course {
+            background: rgba(90, 170, 220, 0.2); color: #8ecae6; border: 1px solid #4a90b8;
+        }
+        #info-panel h2 { margin: 0 0 12px 0; font-size: 1.15em; line-height: 1.35; color: #f2f4f7; }
+        .info-row { margin-bottom: 10px; font-size: 0.9em; line-height: 1.45; }
+        .info-label { display: block; color: var(--muted); font-size: 0.75em; margin-bottom: 2px; }
+        .info-value { color: var(--text); }
+        .info-link {
+            color: var(--accent); cursor: pointer; text-decoration: underline;
+            text-underline-offset: 2px; background: none; border: none;
+            padding: 0; font: inherit;
+        }
+        .info-link:hover { color: #b8e0f5; }
+        .keyword-chip {
+            display: inline-block; background: #2a2e36; padding: 2px 8px;
+            border-radius: 10px; font-size: 0.78em; margin: 2px;
+            border: 1px solid #4a505a; color: #d0d4da;
+        }
+        .preview-text {
+            white-space: pre-wrap; font-size: 0.85em; color: #c5c9d0;
+            line-height: 1.5; max-height: 220px; overflow-y: auto;
+        }
+        #panel-close {
+            position: absolute; top: 12px; right: 14px;
+            background: transparent; border: none; color: #888;
+            font-size: 1.2em; cursor: pointer; line-height: 1;
+        }
+        #panel-close:hover { color: #fff; }
+
+        #status-toast {
+            position: absolute; left: 50%; bottom: 24px; transform: translateX(-50%);
+            background: rgba(30, 34, 40, 0.9); border: 1px solid #455;
+            color: #c8ced6; padding: 8px 14px; border-radius: 8px;
+            font-size: 0.8em; z-index: 8; opacity: 0; pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+        #status-toast.show { opacity: 1; }
+
+        #hover-tip {
+            position: absolute; z-index: 12; display: none; pointer-events: none;
+            max-width: 260px; padding: 8px 10px;
+            background: rgba(16, 18, 22, 0.94); border: 1px solid #4a5560;
+            border-radius: 8px; box-shadow: 0 8px 24px rgba(0,0,0,0.45);
+            font-size: 0.78em; line-height: 1.4; color: #e8eaed;
+        }
+        #hover-tip .tip-type { font-size: 0.72em; color: var(--muted); margin-bottom: 2px; }
+        #hover-tip .tip-name { font-weight: 600; margin-bottom: 4px; }
+        #hover-tip .tip-kw { color: #aeb6c0; font-size: 0.92em; }
+
+        .node-label {
+            color: #e8eaed; font-size: 11px; line-height: 1.25;
+            padding: 2px 7px; border-radius: 4px;
+            background: rgba(12, 14, 18, 0.78);
+            border: 1px solid rgba(80, 90, 100, 0.45);
+            white-space: nowrap; pointer-events: none; user-select: none;
+            max-width: 150px; overflow: hidden; text-overflow: ellipsis;
+            transform: translateY(-12px);
+        }
+        .node-label.professor {
+            color: #f0c090; border-color: rgba(224, 138, 60, 0.45); font-weight: 600;
+        }
+        .node-label.course { color: #b8dceb; }
+        .node-label.hidden-label { display: none !important; }
+
+        @media (max-width: 900px) {
+            #left-panel { width: 260px; }
+            #info-panel { width: 280px; }
+        }
     </style>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/renderers/CSS2DRenderer.js"></script>
 </head>
 <body>
 
+    <aside id="left-panel">
+        <div>
+            <h1>知識の地図を育てる</h1>
+            <p class="subtitle">興味を起点に、講義から教員・関連へ辿っていきます</p>
+        </div>
+
+        <div>
+            <div class="section-label">興味のある言葉</div>
+            <form id="search-form">
+                <input id="search-input" type="search" placeholder="例: ロボット / 触覚 / まちづくり" autocomplete="off">
+                <button class="btn btn-primary" type="submit">探索</button>
+            </form>
+        </div>
+
+        <div>
+            <div class="section-label">クイック関心</div>
+            <div id="quick-tags"></div>
+        </div>
+
+        <div>
+            <div class="section-label">ラベル表示</div>
+            <div class="seg-toggle" id="label-mode-toggle" role="group" aria-label="ラベル表示切替">
+                <button type="button" data-mode="name" class="active">名称</button>
+                <button type="button" data-mode="keywords">主要キーワード</button>
+                <button type="button" data-mode="hidden">非表示</button>
+            </div>
+        </div>
+
+        <button id="reset-btn" class="btn btn-ghost" type="button">探索をリセット</button>
+
+        <div id="trail-section">
+            <div class="section-label">探索の痕跡（自分の地図）</div>
+            <div id="trail-list"></div>
+        </div>
+    </aside>
+
+    <div id="empty-hint">
+        <strong>まだ空間は空です</strong>
+        <span>左のパネルから興味のある言葉やタグを選んでください</span>
+    </div>
+
+    <div id="status-toast"></div>
+    <div id="hover-tip"></div>
+
     <div id="info-panel">
-        <h2 id="p-name">教員名</h2>
-        <div class="info-row"><span class="info-label">所属:</span> <span id="p-affil"></span></div>
-        <div class="info-row"><span class="info-label">専門:</span> <span id="p-spec"></span></div>
-        <div class="info-row"><span class="info-label">担当科目:</span> <span id="p-course"></span></div>
-        <div class="info-row" style="margin-top:10px;" id="p-keywords"></div>
+        <button id="panel-close" type="button" aria-label="閉じる">×</button>
+        <div id="p-type" class="type-badge">—</div>
+        <h2 id="p-name">—</h2>
+        <div id="panel-body"></div>
     </div>
 
     <script>
-        // === Three.js Setup ===
         const scene = new THREE.Scene();
-        // 変更箇所①: Fog（霧）の数値を 0.02 から 0.002 にして薄くする
-        scene.fog = new THREE.FogExp2(0x111111, 0.002); 
+        scene.fog = new THREE.FogExp2(0x0c0d10, 0.0018);
+        scene.background = new THREE.Color(0x0c0d10);
 
-        const camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 0.1, 1000);
-        // 変更箇所②: カメラの位置(Z軸)を 40 から 150 に下げて、全体を見渡しやすくする
-        camera.position.set(0, 0, 150);
+        const camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 0.1, 2000);
+        camera.position.set(0, 18, 78);
 
-        const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+        const renderer = new THREE.WebGLRenderer({ antialias: true });
         renderer.setSize(window.innerWidth, window.innerHeight);
+        renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
         document.body.appendChild(renderer.domElement);
+
+        const labelRenderer = new THREE.CSS2DRenderer();
+        labelRenderer.setSize(window.innerWidth, window.innerHeight);
+        labelRenderer.domElement.style.position = 'absolute';
+        labelRenderer.domElement.style.top = '0';
+        labelRenderer.domElement.style.left = '0';
+        labelRenderer.domElement.style.pointerEvents = 'none';
+        labelRenderer.domElement.style.zIndex = '4';
+        document.body.appendChild(labelRenderer.domElement);
 
         const controls = new THREE.OrbitControls(camera, renderer.domElement);
         controls.enableDamping = true;
-        controls.dampingFactor = 0.05;
+        controls.dampingFactor = 0.06;
+        controls.target.set(0, 0, 0);
 
-        const ambientLight = new THREE.AmbientLight(0xffffff, 0.6);
-        scene.add(ambientLight);
-        const dirLight = new THREE.DirectionalLight(0xffffff, 0.8);
+        scene.add(new THREE.AmbientLight(0xffffff, 0.55));
+        const dirLight = new THREE.DirectionalLight(0xffffff, 0.85);
         dirLight.position.set(10, 20, 10);
         scene.add(dirLight);
 
-        const colors = [
-            0xE63946, 0x457B9D, 0x1D3557, 0x2A9D8F, 0xE9C46A, 
-            0xF4A261, 0x8AB17D, 0x9D8189, 0x3D5A80, 0xEE6C4D
+        const PROF_COLOR = 0xe08a3c;
+        const COURSE_COLOR = 0x5a9ec8;
+        // display_data coords are already normalized to ~±28
+        const SCALE = 1;
+        const ENTRY_COUNT = 5;
+        const SIM_EXPAND_TOP = 5;
+        const COURSE_NAME_MAX = 12;
+
+        const QUICK_TAGS = [
+            { label: 'AI・データ', terms: ['AI', 'データ', '機械学習', 'DX', 'データサイエンス', '情報'] },
+            { label: '地域・まちづくり', terms: ['地域', 'まちづくり', '都市', '観光', 'コミュニティ', '復興'] },
+            { label: 'デザイン思考', terms: ['デザイン', '創造', 'STEAM', 'アート', '思考'] },
+            { label: '医療・健康', terms: ['医療', '健康', '医学', '看護', '予防', 'リハビリテーション'] },
+            { label: 'ロボティクス', terms: ['ロボット', 'ロボティクス', '制御', 'メカトロ', '自律'] },
         ];
 
-        let nodeMeshes = [];
+        const nodeMeshes = [];
         const nodeDict = {};
+        const meshById = {};
+        const edgeRecords = []; // {source,target,type,score,line,material}
+        const edgesByNode = new Map(); // id -> edgeRecords[]
+        const trail = []; // {id, name, type}
+
+        let selectedNode = null;
+        let hoveredNode = null;
+        let dataReady = false;
+        let camTween = null;
+        let labelMode = 'name'; // name | keywords | hidden
+        const fadeAnims = [];
+
         const raycaster = new THREE.Raycaster();
         const mouse = new THREE.Vector2();
 
-        // APIからデータを取得して描画
+        const infoPanel = document.getElementById('info-panel');
+        const panelBody = document.getElementById('panel-body');
+        const emptyHint = document.getElementById('empty-hint');
+        const trailList = document.getElementById('trail-list');
+        const toastEl = document.getElementById('status-toast');
+        const leftPanel = document.getElementById('left-panel');
+        const hoverTip = document.getElementById('hover-tip');
+
+        function truncateText(str, max) {
+            const t = String(str || '').replace(/\s+/g, ' ').trim();
+            if (t.length <= max) return t;
+            return t.slice(0, max) + '…';
+        }
+
+        function nameLabelText(node) {
+            if (node.type === 'course') return truncateText(node.name || node.id, COURSE_NAME_MAX);
+            return node.name || node.id || '';
+        }
+
+        function keywordLabelText(node) {
+            const kws = (node.keywords || []).map(k => String(k).trim()).filter(Boolean);
+            if (!kws.length) return nameLabelText(node);
+            return truncateText(kws.slice(0, 3).join(' · '), 18);
+        }
+
+        function labelTextFor(node) {
+            if (labelMode === 'keywords') return keywordLabelText(node);
+            return nameLabelText(node);
+        }
+
+        function syncNodeLabel(mesh) {
+            const label = mesh.userData.labelObj;
+            const el = mesh.userData.labelEl;
+            if (!label || !el) return;
+            const show = mesh.visible && labelMode !== 'hidden';
+            label.visible = show;
+            el.classList.toggle('hidden-label', !show);
+            if (show) el.textContent = labelTextFor(mesh.userData);
+        }
+
+        function refreshAllLabels() {
+            nodeMeshes.forEach(syncNodeLabel);
+        }
+
+        function showHoverTip(node, clientX, clientY) {
+            if (!node) {
+                hoverTip.style.display = 'none';
+                return;
+            }
+            const typeLabel = node.type === 'professor' ? '教員' : node.type === 'course' ? '講義' : '';
+            const kws = (node.keywords || []).slice(0, 4).join(' · ') || '—';
+            hoverTip.innerHTML = `
+                <div class="tip-type">${escapeHtml(typeLabel)}</div>
+                <div class="tip-name">${escapeHtml(node.name || node.id || '')}</div>
+                <div class="tip-kw">${escapeHtml(kws)}</div>`;
+            hoverTip.style.display = 'block';
+            const pad = 14;
+            let left = clientX + pad;
+            let top = clientY + pad;
+            const rect = hoverTip.getBoundingClientRect();
+            if (left + rect.width > window.innerWidth - 8) left = clientX - rect.width - pad;
+            if (top + rect.height > window.innerHeight - 8) top = clientY - rect.height - pad;
+            hoverTip.style.left = `${Math.max(8, left)}px`;
+            hoverTip.style.top = `${Math.max(8, top)}px`;
+        }
+
+        function hideHoverTip() {
+            hoverTip.style.display = 'none';
+        }
+
+        function showToast(msg, ms = 2200) {
+            toastEl.textContent = msg;
+            toastEl.classList.add('show');
+            clearTimeout(showToast._t);
+            showToast._t = setTimeout(() => toastEl.classList.remove('show'), ms);
+        }
+
+        function updateEmptyHint() {
+            const anyVisible = nodeMeshes.some(m => m.visible);
+            emptyHint.style.opacity = anyVisible ? '0' : '1';
+        }
+
+        function ensureEdgeIndex(id) {
+            if (!edgesByNode.has(id)) edgesByNode.set(id, []);
+            return edgesByNode.get(id);
+        }
+
+        function searchBlob(node) {
+            const parts = [
+                node.name || '',
+                ...(node.keywords || []),
+                node.description || '',
+                node.text_preview || '',
+                node.affiliation || '',
+                node.instructor_name || '',
+            ];
+            return parts.join('\n').toLowerCase();
+        }
+
+        function scoreNodeAgainstTerms(node, terms) {
+            const blob = searchBlob(node);
+            let score = 0;
+            for (const term of terms) {
+                const t = String(term).trim().toLowerCase();
+                if (!t) continue;
+                if ((node.name || '').toLowerCase().includes(t)) score += 6;
+                const kwHit = (node.keywords || []).some(k => String(k).toLowerCase().includes(t));
+                if (kwHit) score += 4;
+                if (blob.includes(t)) score += 2;
+            }
+            return score;
+        }
+
+        function parseQuery(q) {
+            return String(q || '')
+                .split(/[\s　、,，/|]+/)
+                .map(s => s.trim())
+                .filter(Boolean);
+        }
+
+        function findEntryCourses(terms, limit = ENTRY_COUNT) {
+            const scored = [];
+            for (const mesh of nodeMeshes) {
+                const node = mesh.userData;
+                if (node.type !== 'course') continue;
+                const s = scoreNodeAgainstTerms(node, terms);
+                if (s > 0) scored.push({ mesh, score: s });
+            }
+            scored.sort((a, b) => b.score - a.score || a.mesh.userData.name.localeCompare(b.mesh.userData.name, 'ja'));
+            return scored.slice(0, limit).map(x => x.mesh);
+        }
+
+        function targetOpacityFor(mesh) {
+            return mesh.userData.type === 'professor' ? 1.0 : 0.78;
+        }
+
+        function revealNode(mesh, { animate = true } = {}) {
+            if (!mesh) return;
+            mesh.visible = true;
+            mesh.material.transparent = true;
+            syncNodeLabel(mesh);
+            if (!animate) {
+                mesh.material.opacity = targetOpacityFor(mesh);
+                return;
+            }
+            if (mesh.material.opacity < 0.05) mesh.material.opacity = 0;
+            fadeAnims.push({
+                kind: 'node',
+                mesh,
+                from: mesh.material.opacity,
+                to: targetOpacityFor(mesh),
+                t: 0,
+                dur: 0.55,
+            });
+        }
+
+        function edgeBaseOpacity(rec) {
+            if (rec.type === 'taught_by') return 0.35;
+            const s = Math.max(0, Math.min(1, rec.score || 0));
+            return 0.06 + s * 0.22;
+        }
+
+        function revealEdge(rec, { animate = true } = {}) {
+            if (!rec || !rec.line) return;
+            rec.line.visible = true;
+            const to = edgeBaseOpacity(rec);
+            if (!animate) {
+                rec.material.opacity = to;
+                return;
+            }
+            if (rec.material.opacity < 0.02) rec.material.opacity = 0;
+            fadeAnims.push({
+                kind: 'edge',
+                rec,
+                from: rec.material.opacity,
+                to,
+                t: 0,
+                dur: 0.5,
+            });
+        }
+
+        function hideAllNetwork() {
+            fadeAnims.length = 0;
+            for (const mesh of nodeMeshes) {
+                mesh.visible = false;
+                mesh.material.opacity = 0;
+                mesh.scale.set(1, 1, 1);
+                syncNodeLabel(mesh);
+            }
+            for (const rec of edgeRecords) {
+                rec.line.visible = false;
+                rec.material.opacity = 0;
+            }
+            selectedNode = null;
+            hoveredNode = null;
+            hideHoverTip();
+            infoPanel.style.display = 'none';
+            updateEmptyHint();
+        }
+
+        function flyToPoints(points, { distance = 42, duration = 1.1 } = {}) {
+            if (!points.length) return;
+            const box = new THREE.Box3();
+            points.forEach(p => box.expandByPoint(p));
+            const center = new THREE.Vector3();
+            box.getCenter(center);
+            const size = new THREE.Vector3();
+            box.getSize(size);
+            const radius = Math.max(size.length() * 0.55, 8);
+            const dist = Math.max(distance, radius * 2.4);
+
+            const startPos = camera.position.clone();
+            const startTarget = controls.target.clone();
+            const endTarget = center.clone();
+            const dir = startPos.clone().sub(startTarget);
+            if (dir.lengthSq() < 0.01) dir.set(0.35, 0.25, 1);
+            dir.normalize();
+            const endPos = endTarget.clone().add(dir.multiplyScalar(dist));
+
+            camTween = {
+                t: 0,
+                dur: duration,
+                startPos,
+                endPos,
+                startTarget,
+                endTarget,
+            };
+        }
+
+        function flyToNode(mesh) {
+            if (!mesh) return;
+            flyToPoints([mesh.position.clone()], { distance: 28, duration: 0.9 });
+        }
+
+        function addTrail(node) {
+            if (!node || trail.some(t => t.id === node.id)) return;
+            trail.push({
+                id: node.id,
+                name: node.name || node.id,
+                type: node.type || 'unknown',
+            });
+            renderTrail();
+        }
+
+        function renderTrail() {
+            trailList.innerHTML = '';
+            trail.forEach((item, idx) => {
+                const btn = document.createElement('button');
+                btn.type = 'button';
+                btn.className = 'trail-item';
+                btn.innerHTML = `
+                    <span class="trail-dot ${escapeHtml(item.type)}"></span>
+                    <span>
+                        <div class="trail-meta">${idx + 1}. ${item.type === 'professor' ? '教員' : '講義'}</div>
+                        <div class="trail-name">${escapeHtml(item.name)}</div>
+                    </span>`;
+                btn.addEventListener('click', () => {
+                    const mesh = meshById[item.id];
+                    if (!mesh) return;
+                    revealNode(mesh, { animate: false });
+                    mesh.material.opacity = targetOpacityFor(mesh);
+                    focusNode(mesh, { flyCamera: true, expand: false, recordTrail: false });
+                });
+                trailList.appendChild(btn);
+            });
+        }
+
+        function clearTrail() {
+            trail.length = 0;
+            renderTrail();
+        }
+
+        function expandFromNode(mesh) {
+            if (!mesh) return;
+            const nid = mesh.userData.id;
+            const connected = edgesByNode.get(nid) || [];
+
+            const taught = connected.filter(e => e.type === 'taught_by');
+            const sims = connected
+                .filter(e => e.type === 'similarity')
+                .slice()
+                .sort((a, b) => (b.score || 0) - (a.score || 0))
+                .slice(0, SIM_EXPAND_TOP);
+
+            const toReveal = [...taught, ...sims];
+            const neighborMeshes = [];
+
+            for (const rec of toReveal) {
+                const otherId = rec.source === nid ? rec.target : rec.source;
+                const other = meshById[otherId];
+                if (other) {
+                    revealNode(other);
+                    neighborMeshes.push(other);
+                }
+                revealEdge(rec);
+            }
+
+            if (neighborMeshes.length) {
+                flyToPoints(
+                    [mesh.position, ...neighborMeshes.map(m => m.position)],
+                    { distance: 36, duration: 0.95 }
+                );
+            }
+            updateEmptyHint();
+        }
+
+        function focusNode(mesh, { flyCamera = false, expand = true, recordTrail = true } = {}) {
+            if (!mesh || !mesh.visible) return;
+
+            if (selectedNode && selectedNode !== mesh) {
+                selectedNode.scale.set(1, 1, 1);
+            }
+            selectedNode = mesh;
+            mesh.scale.set(1.85, 1.85, 1.85);
+            showInfo(mesh.userData);
+
+            if (recordTrail) addTrail(mesh.userData);
+            if (expand) expandFromNode(mesh);
+            if (flyCamera) flyToNode(mesh);
+        }
+
+        function startExploration(terms, label) {
+            const clean = (terms || []).map(t => String(t).trim()).filter(Boolean);
+            if (!clean.length) {
+                showToast('興味のある言葉を入力してください');
+                return;
+            }
+            if (!dataReady) {
+                showToast('データを読み込み中です…');
+                return;
+            }
+
+            document.querySelectorAll('.tag-btn').forEach(b => b.classList.remove('active'));
+
+            const entries = findEntryCourses(clean, ENTRY_COUNT);
+            if (!entries.length) {
+                showToast(`「${label || clean.join(' ')}」に合う講義が見つかりませんでした`);
+                return;
+            }
+
+            // Keep previously revealed map growing — only add entry courses
+            entries.forEach(m => revealNode(m));
+            flyToPoints(entries.map(m => m.position.clone()), { distance: 40, duration: 1.15 });
+            updateEmptyHint();
+            showToast(`${entries.length}件の講義が現れました — クリックして辿ってみましょう`);
+        }
+
+        function resetExploration() {
+            hideAllNetwork();
+            clearTrail();
+            selectedNode = null;
+            hoveredNode = null;
+            camTween = null;
+            camera.position.set(0, 18, 78);
+            controls.target.set(0, 0, 0);
+            document.getElementById('search-input').value = '';
+            document.querySelectorAll('.tag-btn').forEach(b => b.classList.remove('active'));
+            hideHoverTip();
+            showToast('探索をリセットしました');
+        }
+
+        function escapeHtml(str) {
+            return String(str || '')
+                .replace(/&/g, '&amp;')
+                .replace(/</g, '&lt;')
+                .replace(/>/g, '&gt;')
+                .replace(/"/g, '&quot;');
+        }
+
+        function keywordChips(keywords) {
+            if (!keywords || !keywords.length) return '<span class="info-value">—</span>';
+            return keywords.slice(0, 24).map(kw =>
+                `<span class="keyword-chip">${escapeHtml(kw)}</span>`
+            ).join('');
+        }
+
+        function showInfo(node) {
+            const typeEl = document.getElementById('p-type');
+            const nameEl = document.getElementById('p-name');
+            typeEl.className = 'type-badge ' + (node.type || '');
+            typeEl.textContent = node.type === 'professor' ? '教員' : node.type === 'course' ? '講義' : (node.type || '—');
+            nameEl.textContent = node.name || node.id || 'Unknown';
+
+            const preview = node.text_preview || node.description || '';
+            let html = '';
+
+            if (node.type === 'professor') {
+                html += `
+                    <div class="info-row">
+                        <span class="info-label">所属組織</span>
+                        <span class="info-value">${escapeHtml(node.affiliation || '—')}</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">専門分野キーワード</span>
+                        <div>${keywordChips(node.keywords)}</div>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">研究概要・紹介</span>
+                        <div class="preview-text">${escapeHtml(preview || '—')}</div>
+                    </div>`;
+            } else if (node.type === 'course') {
+                const hasInstructor = !!(node.instructor_id && meshById[node.instructor_id]);
+                const instructorLabel = escapeHtml(node.instructor_name || node.instructor_id || '—');
+                const instructorHtml = hasInstructor
+                    ? `<button type="button" class="info-link" data-goto="${escapeHtml(node.instructor_id)}">${instructorLabel}</button>`
+                    : `<span class="info-value">${instructorLabel}</span>`;
+                html += `
+                    <div class="info-row">
+                        <span class="info-label">担当教員</span>
+                        ${instructorHtml}
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">シラバス・キーワード</span>
+                        <div>${keywordChips(node.keywords)}</div>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">授業概要・目標</span>
+                        <div class="preview-text">${escapeHtml(preview || '—')}</div>
+                    </div>`;
+            } else {
+                html += `<div class="info-row"><span class="info-value">${escapeHtml(preview || node.id)}</span></div>`;
+            }
+
+            panelBody.innerHTML = html;
+            infoPanel.style.display = 'block';
+
+            const link = panelBody.querySelector('[data-goto]');
+            if (link) {
+                link.addEventListener('click', (ev) => {
+                    ev.preventDefault();
+                    const id = link.getAttribute('data-goto');
+                    const target = meshById[id];
+                    if (!target) return;
+                    revealNode(target);
+                    // also reveal taught_by edge if any
+                    const edges = edgesByNode.get(node.id) || [];
+                    edges.filter(e => e.type === 'taught_by' && (e.source === id || e.target === id))
+                        .forEach(e => revealEdge(e));
+                    focusNode(target, { flyCamera: true, expand: true, recordTrail: true });
+                });
+            }
+        }
+
+        // --- Quick tags UI ---
+        const tagsRoot = document.getElementById('quick-tags');
+        QUICK_TAGS.forEach(tag => {
+            const btn = document.createElement('button');
+            btn.type = 'button';
+            btn.className = 'tag-btn';
+            btn.textContent = tag.label;
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.tag-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                document.getElementById('search-input').value = tag.label;
+                startExploration(tag.terms, tag.label);
+            });
+            tagsRoot.appendChild(btn);
+        });
+
+        document.getElementById('search-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const q = document.getElementById('search-input').value;
+            startExploration(parseQuery(q), q.trim());
+        });
+
+        document.getElementById('reset-btn').addEventListener('click', resetExploration);
+
+        document.querySelectorAll('#label-mode-toggle button').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('#label-mode-toggle button').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                labelMode = btn.getAttribute('data-mode') || 'name';
+                refreshAllLabels();
+            });
+        });
+
+        // --- Load network ---
         fetch('/api/network')
             .then(res => res.json())
             .then(data => {
-                const scale = 15; 
-                const lineMaterial = new THREE.LineBasicMaterial({ color: 0xffffff, transparent: true, opacity: 0.15 });
-                const points = [];
-
                 data.nodes.forEach(node => {
-                    const px = node.position.x * scale;
-                    const py = node.position.y * scale;
-                    const pz = node.position.z * scale;
+                    const px = node.position.x * SCALE;
+                    const py = node.position.y * SCALE;
+                    const pz = node.position.z * SCALE;
                     node.vec3 = new THREE.Vector3(px, py, pz);
                     nodeDict[node.id] = node;
+                });
+
+                const profGeo = new THREE.SphereGeometry(0.85, 20, 20);
+                const courseGeo = new THREE.SphereGeometry(0.32, 12, 12);
+
+                data.nodes.forEach(node => {
+                    const isProf = node.type === 'professor';
+                    const mat = new THREE.MeshLambertMaterial({
+                        color: isProf ? PROF_COLOR : COURSE_COLOR,
+                        transparent: true,
+                        opacity: 0,
+                        depthWrite: false,
+                    });
+                    const mesh = new THREE.Mesh(isProf ? profGeo : courseGeo, mat);
+                    mesh.position.copy(node.vec3);
+                    mesh.userData = node;
+                    mesh.visible = false;
+
+                    const labelEl = document.createElement('div');
+                    labelEl.className = `node-label ${node.type || ''} hidden-label`;
+                    labelEl.textContent = nameLabelText(node);
+                    const labelObj = new THREE.CSS2DObject(labelEl);
+                    labelObj.position.set(0, isProf ? 1.35 : 0.7, 0);
+                    labelObj.visible = false;
+                    mesh.add(labelObj);
+                    mesh.userData.labelEl = labelEl;
+                    mesh.userData.labelObj = labelObj;
+
+                    scene.add(mesh);
+                    nodeMeshes.push(mesh);
+                    meshById[node.id] = mesh;
                 });
 
                 data.edges.forEach(edge => {
                     const source = nodeDict[edge.source];
                     const target = nodeDict[edge.target];
-                    if(source && target) {
-                        points.push(source.vec3);
-                        points.push(target.vec3);
-                    }
+                    if (!source || !target) return;
+
+                    const score = Number(edge.similarity ?? edge.score ?? 0) || 0;
+                    const type = edge.type || 'similarity';
+                    const color = type === 'taught_by' ? 0xc8cdd4 : 0x6a9ab8;
+
+                    const geo = new THREE.BufferGeometry().setFromPoints([source.vec3, target.vec3]);
+                    const mat = new THREE.LineBasicMaterial({
+                        color,
+                        transparent: true,
+                        opacity: 0,
+                        depthWrite: false,
+                    });
+                    const line = new THREE.Line(geo, mat);
+                    line.visible = false;
+                    line.renderOrder = type === 'taught_by' ? 1 : 0;
+                    scene.add(line);
+
+                    const rec = {
+                        source: edge.source,
+                        target: edge.target,
+                        type,
+                        score,
+                        line,
+                        material: mat,
+                    };
+                    edgeRecords.push(rec);
+                    ensureEdgeIndex(edge.source).push(rec);
+                    ensureEdgeIndex(edge.target).push(rec);
                 });
 
-                const lineGeometry = new THREE.BufferGeometry().setFromPoints(points);
-                const edgesObject = new THREE.LineSegments(lineGeometry, lineMaterial);
-                scene.add(edgesObject);
-
-                const sphereGeo = new THREE.SphereGeometry(0.4, 16, 16);
-                data.nodes.forEach(node => {
-                    const color = colors[node.cluster_id % colors.length] || 0xcccccc;
-                    const mat = new THREE.MeshLambertMaterial({ color: color });
-                    const mesh = new THREE.Mesh(sphereGeo, mat);
-                    
-                    mesh.position.copy(node.vec3);
-                    mesh.userData = node; 
-                    
-                    scene.add(mesh);
-                    nodeMeshes.push(mesh);
-                });
+                dataReady = true;
+                updateEmptyHint();
+            })
+            .catch(err => {
+                console.error(err);
+                showToast('ネットワークデータの読み込みに失敗しました');
             });
 
-        // マウスホバー処理
-        let hoveredNode = null;
-        window.addEventListener('mousemove', (event) => {
+        function pickVisibleNode(event) {
             mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
             mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
-
             raycaster.setFromCamera(mouse, camera);
-            const intersects = raycaster.intersectObjects(nodeMeshes);
+            const visible = nodeMeshes.filter(m => m.visible);
+            const hits = raycaster.intersectObjects(visible);
+            return hits.length ? hits[0].object : null;
+        }
 
-            if (intersects.length > 0) {
-                const object = intersects[0].object;
-                if (hoveredNode !== object) {
-                    if(hoveredNode) hoveredNode.scale.set(1, 1, 1);
-                    hoveredNode = object;
-                    hoveredNode.scale.set(1.8, 1.8, 1.8);
-                    showInfo(hoveredNode.userData);
-                }
-            } else {
-                if (hoveredNode) {
+        function isUiEvent(event) {
+            return leftPanel.contains(event.target) || infoPanel.contains(event.target);
+        }
+
+        window.addEventListener('mousemove', (event) => {
+            if (isUiEvent(event)) {
+                document.body.style.cursor = 'default';
+                hideHoverTip();
+                return;
+            }
+            const object = pickVisibleNode(event);
+            if (object) {
+                if (hoveredNode && hoveredNode !== object && hoveredNode !== selectedNode) {
                     hoveredNode.scale.set(1, 1, 1);
-                    hoveredNode = null;
-                    document.getElementById('info-panel').style.display = 'none';
                 }
+                hoveredNode = object;
+                if (object !== selectedNode) object.scale.set(1.4, 1.4, 1.4);
+                document.body.style.cursor = 'pointer';
+                showHoverTip(object.userData, event.clientX, event.clientY);
+            } else {
+                if (hoveredNode && hoveredNode !== selectedNode) {
+                    hoveredNode.scale.set(1, 1, 1);
+                }
+                hoveredNode = null;
+                document.body.style.cursor = 'default';
+                hideHoverTip();
             }
         });
 
-        function showInfo(node) {
-            document.getElementById('p-name').innerText = node.name || 'Unknown';
-            document.getElementById('p-affil').innerText = node.affiliation || '-';
-            document.getElementById('p-spec').innerText = node.specialty || '-';
-            document.getElementById('p-course').innerText = node.main_course || '-';
-            
-            const kwContainer = document.getElementById('p-keywords');
-            kwContainer.innerHTML = '';
-            (node.keywords || []).forEach(kw => {
-                const span = document.createElement('span');
-                span.className = 'keyword-chip';
-                span.innerText = kw;
-                kwContainer.appendChild(span);
-            });
+        let pointerDown = null;
+        window.addEventListener('pointerdown', (event) => {
+            if (isUiEvent(event)) return;
+            pointerDown = { x: event.clientX, y: event.clientY };
+        });
 
-            document.getElementById('info-panel').style.display = 'block';
-        }
+        window.addEventListener('click', (event) => {
+            if (isUiEvent(event)) return;
+            if (pointerDown) {
+                const dx = event.clientX - pointerDown.x;
+                const dy = event.clientY - pointerDown.y;
+                if (dx * dx + dy * dy > 16) return;
+            }
+            const object = pickVisibleNode(event);
+            if (object) {
+                focusNode(object, { expand: true, recordTrail: true });
+            }
+        });
+
+        document.getElementById('panel-close').addEventListener('click', (e) => {
+            e.stopPropagation();
+            if (selectedNode) {
+                selectedNode.scale.set(1, 1, 1);
+                selectedNode = null;
+            }
+            infoPanel.style.display = 'none';
+        });
 
         window.addEventListener('resize', () => {
             camera.aspect = window.innerWidth / window.innerHeight;
             camera.updateProjectionMatrix();
             renderer.setSize(window.innerWidth, window.innerHeight);
+            labelRenderer.setSize(window.innerWidth, window.innerHeight);
         });
 
-        function animate() {
+        function easeInOut(t) {
+            return t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2;
+        }
+
+        let lastTs = performance.now();
+        function animate(now) {
             requestAnimationFrame(animate);
+            const dt = Math.min(0.05, (now - lastTs) / 1000);
+            lastTs = now;
+
+            if (camTween) {
+                camTween.t += dt;
+                const u = Math.min(1, camTween.t / camTween.dur);
+                const e = easeInOut(u);
+                camera.position.lerpVectors(camTween.startPos, camTween.endPos, e);
+                controls.target.lerpVectors(camTween.startTarget, camTween.endTarget, e);
+                if (u >= 1) camTween = null;
+            }
+
+            for (let i = fadeAnims.length - 1; i >= 0; i--) {
+                const a = fadeAnims[i];
+                a.t += dt;
+                const u = Math.min(1, a.t / a.dur);
+                const e = easeInOut(u);
+                const op = a.from + (a.to - a.from) * e;
+                if (a.kind === 'node') {
+                    a.mesh.material.opacity = op;
+                    a.mesh.material.depthWrite = op > 0.85;
+                } else {
+                    a.rec.material.opacity = op;
+                }
+                if (u >= 1) fadeAnims.splice(i, 1);
+            }
+
             controls.update();
             renderer.render(scene, camera);
+            labelRenderer.render(scene, camera);
         }
-        animate();
+        requestAnimationFrame(animate);
     </script>
 </body>
 </html>
