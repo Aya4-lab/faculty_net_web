@@ -1,0 +1,2054 @@
+{
+  "https://researchmap.jp/Hiro0Aiza/published_papers/50807890": {
+    "paper_url": "https://researchmap.jp/Hiro0Aiza/published_papers/50807890",
+    "lang": "en",
+    "title": "How Should Place₋Based Policies Be Designed to Efficiently Promote Retail Agglomeration?",
+    "authors": "Hiroki Aizawa, Tatsuhito Kono",
+    "abstract": "ABSTRACT Place‐based policies can change the spatial distribution of retail stores and consumers. We develop a general equilibrium model in which consumers make a single shopping trip and freely choose where to reside. By using this model, we evaluate the welfare impacts of place‐based policies for downtown retail agglomeration to clarify what place‐based policies are efficient. Results show that the efficiency of place‐based policies depends on the recipients of government subsidies, consumers or stores, even if the policies promote retail agglomeration in downtown areas. Using a utility function with the constant elasticity of substitution (CES) subutility for varieties, we examine the welfare impacts of these place‐based policies. We demonstrate that subsidizing consumers to relocate near downtown areas is inevitably harmful from the viewpoint of welfare under the CES, whereas subsidizing retail stores is efficient.",
+    "keywords": [],
+    "doi": "https://doi.org/10.1111/jors.70009"
+  },
+  "https://researchmap.jp/Hiro0Aiza/published_papers/42901897": {
+    "paper_url": "https://researchmap.jp/Hiro0Aiza/published_papers/42901897",
+    "lang": "en",
+    "title": "Satellite City Formation for a Spatial Economic Model: Bifurcation Mechanism in a Hexagonal Domain",
+    "authors": "Hiroki Aizawa, Kiyohiro Ikeda, Yosuke Kogure",
+    "abstract": "",
+    "keywords": [],
+    "doi": "https://doi.org/10.1007/s11067-023-09586-z"
+  },
+  "https://researchmap.jp/Hiro0Aiza/published_papers/42114100": {
+    "paper_url": "https://researchmap.jp/Hiro0Aiza/published_papers/42114100",
+    "lang": "en",
+    "title": "BIFURCATION ANALYSIS OF MONOCENTRIC AGGLOMERATION ON A LONG NARROW ECONOMY",
+    "authors": "Hiroki AIZAWA, Kiyohiro IKEDA, Yosuke KOGURE, Minoru OSAWA, José Maria GASPAR",
+    "abstract": "",
+    "keywords": [],
+    "doi": "https://doi.org/10.2208/jscejipm.76.4_282"
+  },
+  "https://researchmap.jp/Hiro0Aiza/published_papers/54886959": {
+    "paper_url": "https://researchmap.jp/Hiro0Aiza/published_papers/54886959",
+    "lang": "en",
+    "title": "Bifurcation patterns in a remote work economy: intercity impacts of remote work on spatial distribution of workers and firms",
+    "authors": "Hiroki Aizawa, Takuhiro Saka",
+    "abstract": "",
+    "keywords": [],
+    "doi": ""
+  },
+  "https://researchmap.jp/Hiro0Aiza/published_papers/50099144": {
+    "paper_url": "https://researchmap.jp/Hiro0Aiza/published_papers/50099144",
+    "lang": "en",
+    "title": "Bifurcation Mechanism at a Sustain Point of a Long Narrow Economy",
+    "authors": "K. Ikeda, H. Aizawa, J. M. Gaspar",
+    "abstract": "In this paper, we investigate population agglomeration in a long narrow economy, in which an odd number of places are evenly distributed over a line segment. The bifurcation analysis of this economy elucidates the mechanism of the emergence of twin cities around the central city. The validity and usefulness of this analysis are confirmed using several well-known economic geography models that display various kinds of bifurcation behaviors. By this analysis, we investigate the historical change in the population distribution in a chain of cities on Japan’s Main Island.",
+    "keywords": [],
+    "doi": "https://doi.org/10.1142/s0218127424300210"
+  },
+  "https://researchmap.jp/akita11/published_papers/54708425": {
+    "paper_url": "https://researchmap.jp/akita11/published_papers/54708425",
+    "lang": "en",
+    "title": "携帯端末の Wi-Fi 接続パケット内の情報を用いた人数計測手法",
+    "authors": "秋田 純一, 澤口 翔, 中林 弘貴, 森崎 裕磨, 藤生 慎",
+    "abstract": "",
+    "keywords": [],
+    "doi": "https://doi.org/10.11532/jsceiii.7.1_163"
+  },
+  "https://researchmap.jp/akita11/published_papers/52870010": {
+    "paper_url": "https://researchmap.jp/akita11/published_papers/52870010",
+    "lang": "en",
+    "title": "Temporal Forecasting of Sit-to-Stand Motion for Assistive Device Control Based on Muscle Synergy Prediction",
+    "authors": "Julian Ilham, Yuichi Nakamura, Takahide Ito, Kei Shimonishi, Kazuaki Kondo, Qi An, Jun-Ichiro Furukawa, Junichi Akita, Masashi Toda",
+    "abstract": "",
+    "keywords": [],
+    "doi": "https://doi.org/10.1109/access.2025.3650519"
+  },
+  "https://researchmap.jp/akita11/published_papers/54708427": {
+    "paper_url": "https://researchmap.jp/akita11/published_papers/54708427",
+    "lang": "en",
+    "title": "Sensorless Measurement of Solenoid Stroke and Temperature Using Convolution Neural Network with Two Points of <scp>PWM</scp> Driving Current",
+    "authors": "Junichi Akita",
+    "abstract": "A solenoid is used to push or pull an object, and the stroke is typically controlled in two states of ON and OFF. Various studies have been carried out to measure and control the plunger position of a solenoid at an intermediate position by measuring the electrical characteristics of the solenoid. We previously reported a method for measuring the stroke of a solenoid (plunger position) using its electric characteristics without mechanical attachments. However, the method is limited by the differences in the electrical characteristics of the target solenoid and the solenoids to which it can be applied. In this study, we proposed a method to measure the stroke and temperature of a solenoid using a convolution neural network for two measured values of driving current and evaluated its accuracy. Herein, we have described the results obtained for the preliminary experiments carried out to control the plunger position without mechanical attachments. © 2025 Institute of Electrical Engineers of Japan and Wiley Periodicals LLC.",
+    "keywords": [],
+    "doi": "https://doi.org/10.1002/tee.70228"
+  },
+  "https://researchmap.jp/akita11/published_papers/54033155": {
+    "paper_url": "https://researchmap.jp/akita11/published_papers/54033155",
+    "lang": "en",
+    "title": "Motion Simulation of the Human Upper Limb Based on Optimal Control",
+    "authors": "Miki Eto, Masahiro Migita, Masashi Toda, Kazuaki Kondo, Qi An, Junichi Akita, Yuichi Nakamura",
+    "abstract": "",
+    "keywords": [],
+    "doi": "https://doi.org/10.1109/icetisi67983.2025.11405860"
+  },
+  "https://researchmap.jp/akita11/published_papers/54033168": {
+    "paper_url": "https://researchmap.jp/akita11/published_papers/54033168",
+    "lang": "en",
+    "title": "Elbow Joint Movement Simulation for Muscle Fatigue Reduction",
+    "authors": "Miki Eto, Masahiro Migita, Masashi Toda, Kazuaki Kondo, Qi An, Junichi Akita, Yuichi Nakamura",
+    "abstract": "",
+    "keywords": [],
+    "doi": "https://doi.org/10.1109/iciss66954.2025.11389367"
+  },
+  "https://researchmap.jp/minatsu_ariga/published_papers/53159975": {
+    "paper_url": "https://researchmap.jp/minatsu_ariga/published_papers/53159975",
+    "lang": "en",
+    "title": "Adaptive Learning Support Systems in Metaverse Education: Evidence from a Virtual Campus Construction Project",
+    "authors": "Minatsu ARIGA, Megumi Futatsugi, Akio Shimogohri",
+    "abstract": "",
+    "keywords": [],
+    "doi": "https://doi.org/10.34385/proc.95.17"
+  },
+  "https://researchmap.jp/minatsu_ariga/published_papers/52051380": {
+    "paper_url": "https://researchmap.jp/minatsu_ariga/published_papers/52051380",
+    "lang": "en",
+    "title": "地方創生におけるSTEAM教育の可能性～教育実践の社会的役割に関する考察～",
+    "authors": "有賀 三夏, 今門 凪海, 菊地 由太郎",
+    "abstract": "",
+    "keywords": [],
+    "doi": ""
+  },
+  "https://researchmap.jp/minatsu_ariga/published_papers/53164346": {
+    "paper_url": "https://researchmap.jp/minatsu_ariga/published_papers/53164346",
+    "lang": "en",
+    "title": "メタバース空間における角間バーチャルキャンパスの構築とその教育効果に関する実証研究",
+    "authors": "有賀 三夏, 二木 恵, 下郡 啓夫",
+    "abstract": "",
+    "keywords": [],
+    "doi": ""
+  },
+  "https://researchmap.jp/minatsu_ariga/published_papers/53163777": {
+    "paper_url": "https://researchmap.jp/minatsu_ariga/published_papers/53163777",
+    "lang": "en",
+    "title": "芸術思考教育の実践と展開",
+    "authors": "有賀三夏",
+    "abstract": "",
+    "keywords": [],
+    "doi": ""
+  },
+  "https://researchmap.jp/minatsu_ariga/published_papers/53164410": {
+    "paper_url": "https://researchmap.jp/minatsu_ariga/published_papers/53164410",
+    "lang": "en",
+    "title": "デザイン思考のEmpathizeプロセスにおける観察の一考察",
+    "authors": "有賀 三夏, 下郡 啓夫",
+    "abstract": "",
+    "keywords": [],
+    "doi": ""
+  },
+  "https://researchmap.jp/read0009939/published_papers/52078474": {
+    "paper_url": "https://researchmap.jp/read0009939/published_papers/52078474",
+    "lang": "en",
+    "title": "Development of Low Turn-On Voltage Wet-Processed Organic Rectifier Diodes Based on a P3HT:Y6 Bulk-Heterojunction",
+    "authors": "Naoya Tanaka, Hiromu Hamazaki, Tomoki Kobayashi, Md. Shahiduzzaman, Tetsuya Taima, Makoto Karakawa, Koichi Iiyama, Jean‐Michel Nunzi, Masahiro Nakano",
+    "abstract": "ABSTRACT We report the development of low turn‐on voltage organic rectifier diodes based on a bulk‐heterojunction (BHJ) film of regio‐regular P3HT and Y6. Encouraged by the low open‐circuit voltage observed in P3HT:Y6‐based organic solar cells, we fabricated rectifier diodes with the same architecture as P3HT:Y6‐based organic solar cells. The rectifier diodes achieved a turn‐on voltage ( V f ) of 344 mV, a low value compared to those of other solution‐processed organic rectifier diodes. Although initial devices exhibited a low rectifier ratio (RR) of 1.7 × 10 2 , substituting a laminated Au electrode for the PEDOT:PSS layer improved RR to 2.5 × 10 3 . Mechanistic analysis revealed that rectification originates from the p–n junction formed between P3HT and ZnO rather than the BHJ‐P3HT:Y6 interface. Interestingly, Y6 plays a secondary role in enhancing forward current by modifying the molecular orientation of P3HT. AC–DC conversion simulations at 13.56 kHz yielded a 127 mV output from a 400 mV input, establishing potential for radio‐frequency identification applications.",
+    "keywords": [],
+    "doi": "https://doi.org/10.1002/app.70234"
+  },
+  "https://researchmap.jp/read0009939/published_papers/52078414": {
+    "paper_url": "https://researchmap.jp/read0009939/published_papers/52078414",
+    "lang": "en",
+    "title": "Frequency response and equivalent circuit of organic photodetectors based on zinc phthalocyanine and the fullerene derivative organic solar cell",
+    "authors": "Xingjian Xu, Jiaxun You, Md. Shahiduzzaman, Tetsuya Taima, Koichi Iiyama",
+    "abstract": "English",
+    "keywords": [],
+    "doi": "https://doi.org/10.1007/s10043-025-01016-4"
+  },
+  "https://researchmap.jp/read0009939/published_papers/52671557": {
+    "paper_url": "https://researchmap.jp/read0009939/published_papers/52671557",
+    "lang": "en",
+    "title": "Enhancing Voltage Tolerance of CsFA Perovskite‐Based Rectifying Diodes Through Ionic Liquid Incorporation",
+    "authors": "Hiromu Hamazaki, Hiroki Matsui, Naoya Tanaka, Tomoki Kobayashi, Ruka Yazawa, Md. Shahiduzzaman, Tetsuya Taima, Makoto Karakawa, Koichi Iiyama, Jean‐Michel Nunzi …",
+    "abstract": "English",
+    "keywords": [],
+    "doi": "https://doi.org/10.1002/adsu.202500762"
+  },
+  "https://researchmap.jp/read0009939/published_papers/52078432": {
+    "paper_url": "https://researchmap.jp/read0009939/published_papers/52078432",
+    "lang": "en",
+    "title": "Long-term temperature monitoring by multiplexed Fiber Bragg Grating sensor system combined with incoherent FMCW optical ranging system",
+    "authors": "Zhixuan Cheng, Ibuki Abe, Koichi Iiyama",
+    "abstract": "",
+    "keywords": [],
+    "doi": ""
+  },
+  "https://researchmap.jp/read0009939/published_papers/50794125": {
+    "paper_url": "https://researchmap.jp/read0009939/published_papers/50794125",
+    "lang": "en",
+    "title": "Multipoint FBG Sensing System for Long-Range and Long-Term Structural Health Monitoring by Incoherent FMCW Optical Ranging System",
+    "authors": "Jiaxun You, Meng Shan, Yuto Sugita, Zhixuan Cheng, Ibuki Abe, Koichi Iiyama",
+    "abstract": "",
+    "keywords": [],
+    "doi": "https://doi.org/10.1109/jsen.2025.3564040"
+  },
+  "https://researchmap.jp/read0189529/published_papers/40360256": {
+    "paper_url": "https://researchmap.jp/read0189529/published_papers/40360256",
+    "lang": "en",
+    "title": "キャッシュレス社会における高等学校家庭科・金融教育の課題",
+    "authors": "尾島恭子",
+    "abstract": "",
+    "keywords": [],
+    "doi": ""
+  },
+  "https://researchmap.jp/read0189529/published_papers/16004127": {
+    "paper_url": "https://researchmap.jp/read0189529/published_papers/16004127",
+    "lang": "en",
+    "title": "高等学校における生活設計教育の課題",
+    "authors": "尾島 恭子",
+    "abstract": "",
+    "keywords": [],
+    "doi": ""
+  },
+  "https://researchmap.jp/read0189529/published_papers/16784079": {
+    "paper_url": "https://researchmap.jp/read0189529/published_papers/16784079",
+    "lang": "en",
+    "title": "中学校・高等学校における生活設計教育と保険教育―家庭科における学習内容の検討",
+    "authors": "尾島 恭子",
+    "abstract": "",
+    "keywords": [],
+    "doi": ""
+  },
+  "https://researchmap.jp/read0189529/published_papers/14049567": {
+    "paper_url": "https://researchmap.jp/read0189529/published_papers/14049567",
+    "lang": "en",
+    "title": "オープン参加型セミナーとシステムを併用した大学での金融教育支援の取り組み",
+    "authors": "二木 恵, 大藪 千穂, 尾島 恭子, 高田 良宏, 笠原 禎也",
+    "abstract": "",
+    "keywords": [],
+    "doi": ""
+  },
+  "https://researchmap.jp/read0189529/published_papers/14049565": {
+    "paper_url": "https://researchmap.jp/read0189529/published_papers/14049565",
+    "lang": "en",
+    "title": "共助努力型ファイナンシャルサポートシステムの開発",
+    "authors": "二木 恵, 尾島 恭子",
+    "abstract": "",
+    "keywords": [],
+    "doi": ""
+  },
+  "https://researchmap.jp/todagiri/published_papers/40049570": {
+    "paper_url": "https://researchmap.jp/todagiri/published_papers/40049570",
+    "lang": "en",
+    "title": "Miki's Ethics of Singularity",
+    "authors": "Odagiri, Takushi",
+    "abstract": "",
+    "keywords": [],
+    "doi": ""
+  },
+  "https://researchmap.jp/todagiri/published_papers/40049617": {
+    "paper_url": "https://researchmap.jp/todagiri/published_papers/40049617",
+    "lang": "en",
+    "title": "On Technological Form",
+    "authors": "Odagiri, Takushi",
+    "abstract": "",
+    "keywords": [],
+    "doi": ""
+  },
+  "https://researchmap.jp/todagiri/published_papers/40049601": {
+    "paper_url": "https://researchmap.jp/todagiri/published_papers/40049601",
+    "lang": "en",
+    "title": "Cinema's Coloniality",
+    "authors": "Odagiri, Takushi",
+    "abstract": "",
+    "keywords": [],
+    "doi": ""
+  },
+  "https://researchmap.jp/todagiri/published_papers/9426404": {
+    "paper_url": "https://researchmap.jp/todagiri/published_papers/9426404",
+    "lang": "en",
+    "title": "Mental (2008): Sōda Kazuhiro’s Observational Cinema",
+    "authors": "Odagiri, Takushi",
+    "abstract": "",
+    "keywords": [],
+    "doi": ""
+  },
+  "https://researchmap.jp/todagiri/published_papers/9426406": {
+    "paper_url": "https://researchmap.jp/todagiri/published_papers/9426406",
+    "lang": "en",
+    "title": "Kawase Naomi’s Introspective Style: Aesthetic Surfaces of World Cinema",
+    "authors": "Odagiri, Takushi",
+    "abstract": "",
+    "keywords": [],
+    "doi": ""
+  },
+  "https://researchmap.jp/kanaimasa/published_papers/53083159": {
+    "paper_url": "https://researchmap.jp/kanaimasa/published_papers/53083159",
+    "lang": "en",
+    "title": "Which matters more for preventing knee replacements: reducing overactivity or combating inactivity?",
+    "authors": "Masashi Kanai, Upul Cooray, Takahiro Miki, Yuta Hagiwara, Masayasu Murakami, Ken Osaka, Takaaki Ikeda",
+    "abstract": "BACKGROUND: Daily physical activity (PA) has been gaining attention for the management and prevention of knee osteoarthritis (OA). AIMS: This study aimed to compare the effects of various hypothetical daily PA regimens on the incidence of knee replacement (KR) surgery using a targeted learning approach. METHODS: We analyzed data from the Osteoarthritis Initiative on adults in the US with symptomatic knee OA or at risk. Daily PA was measured by the Physical Activity Scale for the Elderly (PASE) score. Seven hypothetical daily PA treatment regimens were developed based on the baseline PASE scores. The outcome was the incidence of KR surgery over a 96-month follow-up period. The effects of the PA interventions were estimated using a doubly robust targeted minimum loss-based estimator. RESULTS: Maintaining the baseline PASE score resulted in a KR surgery incidence ratio of 4.71% (95% CI: 4.37% to 5.05%). Reducing the PASE scores to 200 only for those with scores > 242 decreased the incidence ratio to 2.98% (95% CI: 2.39% to 3.57%). Increasing the PASE scores by 10% and 20% among those with low baseline scores further reduced the risk of KR surgery, whereas increasing them by 30%-50% diminished the additional benefit. DISCUSSION: Optimizing daily PA levels, particularly by reducing excessive PA to optimal levels, was beneficial for reducing the risk of KR surgery in older adults with or at risk for knee OA. CONCLUSION: Our results suggest that tailoring daily PA to an optimal level is most beneficial.",
+    "keywords": [],
+    "doi": "https://doi.org/10.1007/s40520-026-03360-0"
+  },
+  "https://researchmap.jp/kanaimasa/published_papers/53083160": {
+    "paper_url": "https://researchmap.jp/kanaimasa/published_papers/53083160",
+    "lang": "en",
+    "title": "Heterogeneous associations of a mobile health-based disease management program on uncontrolled hypertension: A target trial emulation study.",
+    "authors": "Masashi Kanai, Takahiro Miki, Takuya Toda, Yuta Hagiwara, Takaaki Ikeda",
+    "abstract": "Long-term effectiveness of digital health interventions for hypertension remains unclear, particularly regarding individual variability in treatment response. This study examined the association of a mobile health-based disease management program for uncontrolled hypertension and assessed treatment effect heterogeneity using a target trial emulation framework. We analyzed health checkup data of employees June 2021-December 2023. Individuals with hypertension, diabetes, or dyslipidemia were invited to participate in a six-month mobile health-based disease management program incorporating lifestyle tracking via a mobile application and remote behavioral coaching. We compared the following two treatments using a target trial emulation framework: mobile health-based disease management program combined with conventional treatment, versus conventional treatment alone. The primary outcome was uncontrolled hypertension at the one-year follow-up (systolic ≥140 mmHg or diastolic ≥90 mmHg). We estimated average and individual treatment effects using outcome regression based on the G-formula with ensemble machine learning methods for model specification. Clustering analysis was used to identify heterogeneous subgroups and potential effect modifiers. Mobile health-based disease management program was associated with a 5.2% (95% confidence interval: 4.4% to 6.0%) lower prevalence of uncontrolled hypertension compared with conventional treatment. Treatment response varied, with greater benefits observed in individuals with a strong intention to improve lifestyle habits, higher diastolic blood pressure, and more favorable behavioral and metabolic characteristics. Age was associated with benefit, though it had relatively lower importance. Participation in a mobile health-based disease management program was associated with better blood pressure control over one year. The substantial variation in treatment effectiveness highlights the need for personalized digital health strategies.",
+    "keywords": [],
+    "doi": "https://doi.org/10.1371/journal.pdig.0001268"
+  },
+  "https://researchmap.jp/kanaimasa/published_papers/52221844": {
+    "paper_url": "https://researchmap.jp/kanaimasa/published_papers/52221844",
+    "lang": "en",
+    "title": "Investigating feature-engineered predictors for systolic blood pressure changes in an mHealth-based disease management program.",
+    "authors": "Masashi Kanai, Sangjun Park, Takahiro Miki, Yuta Hagiwara, Atsushi Hashimoto, Hidetaka Nambo, Shigehiro Karashima",
+    "abstract": "Mobile health (mHealth)-based disease management programs enable continuous monitoring of blood pressure (BP) and related health behaviors. Feature engineering may help to extract informative predictors from longitudinal data, potentially improving BP change prediction. This study aimed to evaluate whether feature-engineered predictors can improve the prediction of systolic BP (SBP) changes using an mHealth-based disease management program. We analyzed data from participants with hypertension, dyslipidemia, or diabetes mellitus who completed the 24-week Mystar program, which combined phone-based coaching, remote monitoring, and app-based logging of BP and behavioral data. The primary outcome was the change in morning SBP from baseline to the end of the program. Prediction models for SBP changes were developed using ElasticNet regression at weeks 4, 8, 12, and 22 by comparing models with and without feature-engineered variables generated by feature tools. In total, 2318 participants were included in the analysis. At week 4, the top feature after feature engineering showed a stronger correlation with SBP change (r = 0.561) than the best original predictor (r = 0.455), although the model-level performance was similar (r = 0.561 vs. 0.559). By week 22, both models achieved a high correlation of approximately 0.85 with no substantial difference in performance. Feature engineering increased the correlation between individual predictors and SBP change in the early phase; however, the overall prediction performance of the ElasticNet model remained largely unchanged. Further studies are required to confirm these findings and examine their applicability in broader clinical and implementation contexts. Data from a 24-week mHealth-based program were analyzed to predict systolic blood pressure SBP changes using feature-engineered variables and ElasticNet regression. In the early phase, feature-engineered predictors ranked highest in importance, although overall model performance remained similar with and without feature engineering. Prediction accuracy improved over time, with correlations reaching ~0.85 by week 22.",
+    "keywords": [],
+    "doi": "https://doi.org/10.1038/s41440-026-02569-w"
+  },
+  "https://researchmap.jp/kanaimasa/published_papers/51958646": {
+    "paper_url": "https://researchmap.jp/kanaimasa/published_papers/51958646",
+    "lang": "en",
+    "title": "Effect of personalized messages tailored to distinct health behavior clusters on healthcare-seeking in high-risk populations for noncommunicable diseases in Japan: A randomized controlled study.",
+    "authors": "Masashi Kanai, Kojiro Yamamoto, Takahiro Miki, Yuta Hagiwara",
+    "abstract": "OBJECTIVES: This randomized controlled study aimed to investigate the effect of personalized messages tailored to distinct health behavior clusters on healthcare-seeking behavior and disease management in individuals at risk for noncommunicable diseases (NCDs). METHODS: This study included individuals insured by a single health insurance association in Japan, all of whom had at least one value exceeding the recommended thresholds for physician consultation based on NCDs. We sent personalized physician visit messages tailored to five distinct health behavior clusters identified in our previous study. These messages incorporated cluster-specific motivational elements to encourage physician consultation. The control group received a standard message encouraging consultation without behavioral tailoring. We utilized medical claims data to evaluate physician visit rates within 3 months and assessed disease management improvements using the following year's health checkup data, comparing outcomes between the two groups. RESULTS: The final analysis included 155 participants (mean age: 48.0 years, 85.6 % men), with 76 in the intervention group and 79 in the control group. No significant differences in physician visit rates within 3 months were observed between the two groups (intervention group: 10.6 %, control group: 17.7 %, p = 0.252). Similarly, no significant differences were found in the improvement rates for blood pressure, lipid levels, and blood glucose (intervention group: 45.9 %, control group: 41.0 %, p = 0.546). However, participants who visited a physician demonstrated notably higher improvement rates in both groups (intervention group: 75.0 %, control group: 71.4 %). CONCLUSIONS: The present study revealed no significant differences in physician visit rates or disease management outcomes between participants receiving personalized motivational messages and those receiving traditional messages. Future research is warranted to address barriers to healthcare access and ensure consistent follow-up care to improve the effectiveness of personalized interventions in managing NCDs.",
+    "keywords": [],
+    "doi": "https://doi.org/10.1016/j.pec.2025.109242"
+  },
+  "https://researchmap.jp/kanaimasa/published_papers/50533889": {
+    "paper_url": "https://researchmap.jp/kanaimasa/published_papers/50533889",
+    "lang": "en",
+    "title": "Ongoing incentives' 36-month effect on physical activity in a Japanese insurance-based health-promotion program.",
+    "authors": "Masashi Kanai, Naoki Onozato, Yosuke Fujisawa, Takashi Hamatani, Kakeru Tateyama, Takahiro Miki, Takuya Toda, Tsutomu Sugawara, Yuta Hagiwara",
+    "abstract": "OBJECTIVE: Although incentive-based interventions have shown promise in promoting physical activity, evidence on their long-term effectiveness remains limited. This study aimed to evaluate ongoing, structured incentives' long-term effects on physical activity in a large, real-world population. METHODS: This retrospective cohort study used a pre-post observational design using data from the SUMITOMO LIFE Vitality program in Japan. Participants enrolled from January to June 2021 with three years of uninterrupted participation. Participants earning weekly incentives for step goals received tangible rewards, such as beverages or food, reinforcing engagement. Additionally, accumulated points contributed to improving their insurance status, which resulted in greater reductions in insurance premiums and access to a broader range of benefits. The primary outcome was an upward trend in average daily step counts that were continuously tracked over 36-months with wearable devices and smartphone applications. RESULTS: Included in the final analysis were 86,175 participants (mean [standard deviation] age, 43.4 [12.1] years; 57.7 % men). Model-adjusted average daily step counts increased from 7239.7 (95 % CI, 7213.4 to 7266.0) steps/day at Month 1 to 9054.9 (95 % CI, 9023.7 to 9086.2) at Month 12, 9350.1 (95 % CI, 9318.4 to 9381.8) at Month 24, and 9392.7 (95 % CI, 9361.1 to 9424.3) at Month 36. These increases were statistically significant (P < 0.001), and sensitivity analyses confirmed consistent results. CONCLUSIONS: Ongoing, structured incentives were associated with sustained increases in physical activity over 36 months, providing evidence for incentive-based interventions' long-term effectiveness in real-world settings.",
+    "keywords": [],
+    "doi": "https://doi.org/10.1016/j.ypmed.2025.108327"
+  },
+  "https://researchmap.jp/kanamadaisuke/published_papers/49648566": {
+    "paper_url": "https://researchmap.jp/kanamadaisuke/published_papers/49648566",
+    "lang": "en",
+    "title": "Role of the grey entrepreneur in startups: an empirical study of the impact of age diversity on innovation performance",
+    "authors": "Kanama, D., Ito, S., Muranaka, S., Watanabe, T.",
+    "abstract": "",
+    "keywords": [],
+    "doi": ""
+  },
+  "https://researchmap.jp/kanamadaisuke/published_papers/43008968": {
+    "paper_url": "https://researchmap.jp/kanamadaisuke/published_papers/43008968",
+    "lang": "en",
+    "title": "イノベーション創出過程に対するアートの役割：3つのアクション・リサーチによる試行的研究",
+    "authors": "金間大介, 西村実花子, 中村雛乃, 正木真優",
+    "abstract": "",
+    "keywords": [],
+    "doi": ""
+  },
+  "https://researchmap.jp/kanamadaisuke/published_papers/38185666": {
+    "paper_url": "https://researchmap.jp/kanamadaisuke/published_papers/38185666",
+    "lang": "en",
+    "title": "スタートアップ・エコシステム研究の潮流と今後のリサーチ・アジェンダ：地域の特徴に基づいたエコシステムの構築に向けて",
+    "authors": "金間大介",
+    "abstract": "",
+    "keywords": [],
+    "doi": ""
+  },
+  "https://researchmap.jp/kanamadaisuke/published_papers/36577469": {
+    "paper_url": "https://researchmap.jp/kanamadaisuke/published_papers/36577469",
+    "lang": "en",
+    "title": "データ利活用の進捗プロセスと成果に関する実証研究",
+    "authors": "金間大介",
+    "abstract": "",
+    "keywords": [],
+    "doi": ""
+  },
+  "https://researchmap.jp/kanamadaisuke/published_papers/36458880": {
+    "paper_url": "https://researchmap.jp/kanamadaisuke/published_papers/36458880",
+    "lang": "en",
+    "title": "国産紅茶の市場創出過程における⽣産者の事業機会発⾒と新製品の価格づけ―既存と新興産地の⽐較分析―",
+    "authors": "金間大介, 高野里紗",
+    "abstract": "",
+    "keywords": [],
+    "doi": ""
+  },
+  "https://researchmap.jp/g0000209119/published_papers/53419408": {
+    "paper_url": "https://researchmap.jp/g0000209119/published_papers/53419408",
+    "lang": "en",
+    "title": "防災・復興実践における女性の社会参画の現状と課題―令和 6 年能登半島地震の事例より―",
+    "authors": "川澄厚志, 藤井善仁",
+    "abstract": "",
+    "keywords": [],
+    "doi": ""
+  },
+  "https://researchmap.jp/g0000209119/published_papers/53419374": {
+    "paper_url": "https://researchmap.jp/g0000209119/published_papers/53419374",
+    "lang": "en",
+    "title": "観光科学を核とした文理医融合研究による新たな観光価値創造と地方活性化",
+    "authors": "川澄厚志",
+    "abstract": "",
+    "keywords": [],
+    "doi": ""
+  },
+  "https://researchmap.jp/g0000209119/published_papers/50139116": {
+    "paper_url": "https://researchmap.jp/g0000209119/published_papers/50139116",
+    "lang": "en",
+    "title": "令和6年能登半島地震における観光資源被害状況と復興ツーリズムの展望",
+    "authors": "川澄厚志",
+    "abstract": "",
+    "keywords": [],
+    "doi": ""
+  },
+  "https://researchmap.jp/g0000209119/published_papers/47494980": {
+    "paper_url": "https://researchmap.jp/g0000209119/published_papers/47494980",
+    "lang": "en",
+    "title": "媒介システムの拡大と「管理される移動」－労働の観光化の進行と管理されるノマドワーカー－",
+    "authors": "川澄厚志, 敷田麻実",
+    "abstract": "",
+    "keywords": [],
+    "doi": ""
+  },
+  "https://researchmap.jp/g0000209119/published_papers/45897430": {
+    "paper_url": "https://researchmap.jp/g0000209119/published_papers/45897430",
+    "lang": "en",
+    "title": "世界農業遺産認定後におけるふるさと学習を通した関係人口構築の可能性-2023年度いしかわ里山塾の事例より-",
+    "authors": "川澄厚志",
+    "abstract": "",
+    "keywords": [],
+    "doi": ""
+  },
+  "https://researchmap.jp/IkuhoKochi/published_papers/4350420": {
+    "paper_url": "https://researchmap.jp/IkuhoKochi/published_papers/4350420",
+    "lang": "en",
+    "title": "Valuing morbidity effects of wildfire smoke exposure from the 2007 Southern California wildfires",
+    "authors": "Ikuho Kochi, Patricia A. Champ, John B. Loomis, Geoffrey H. Donovan",
+    "abstract": "",
+    "keywords": [],
+    "doi": "https://doi.org/10.1016/j.jfe.2016.07.002"
+  },
+  "https://researchmap.jp/IkuhoKochi/published_papers/9792728": {
+    "paper_url": "https://researchmap.jp/IkuhoKochi/published_papers/9792728",
+    "lang": "en",
+    "title": "Impuestos Lineales Óptimos para Economías con Altruismo",
+    "authors": "Ikuho Kochi, Raúl Alberto Ponce Rodríguez, Miriam Saldaña Hernandez",
+    "abstract": "",
+    "keywords": [],
+    "doi": ""
+  },
+  "https://researchmap.jp/IkuhoKochi/published_papers/4397282": {
+    "paper_url": "https://researchmap.jp/IkuhoKochi/published_papers/4397282",
+    "lang": "en",
+    "title": "Beyond the Environmental Kuznets Curve: Understanding the Determinants of Environmental Degradation in Mexico",
+    "authors": "Ikuho Kochi, Patricia Cecilia, Medina Lopez",
+    "abstract": "",
+    "keywords": [],
+    "doi": ""
+  },
+  "https://researchmap.jp/IkuhoKochi/published_papers/9792731": {
+    "paper_url": "https://researchmap.jp/IkuhoKochi/published_papers/9792731",
+    "lang": "en",
+    "title": "Vertical Integration or Disintegration? A Bargaining Model of the Maquiladora’s Case",
+    "authors": "Ikuho Kochi, Ramsés Jiménez, Castañeda, Raúl Alberto, Ponce Rodríguez",
+    "abstract": "",
+    "keywords": [],
+    "doi": ""
+  },
+  "https://researchmap.jp/IkuhoKochi/published_papers/4397293": {
+    "paper_url": "https://researchmap.jp/IkuhoKochi/published_papers/4397293",
+    "lang": "en",
+    "title": "Valuing mortality impacts of smoke exposure from major southern California wildfires",
+    "authors": "Ikuho Kochi, Patricia A. Champ, John B. Loomis, Geoffrey H. Donovan",
+    "abstract": "",
+    "keywords": [],
+    "doi": "https://doi.org/10.1016/j.jfe.2011.10.002"
+  },
+  "https://researchmap.jp/read0121100/published_papers/52797621": {
+    "paper_url": "https://researchmap.jp/read0121100/published_papers/52797621",
+    "lang": "en",
+    "title": "Human-in-the-Loop for Machine Learning in Offensive Cybersecurity.",
+    "authors": "Satida Ruengsurat, Jaimai Eawsivigoon, Vidchaphol Sookplang, Karin Sumongkayothin, Prarinya Siritanawan, Razvan Beuran, Kazunori Kotani",
+    "abstract": "",
+    "keywords": [],
+    "doi": "https://doi.org/10.1109/ICAIIC64266.2025.10920815"
+  },
+  "https://researchmap.jp/read0121100/published_papers/52398479": {
+    "paper_url": "https://researchmap.jp/read0121100/published_papers/52398479",
+    "lang": "en",
+    "title": "Adversarial Halftone QR Code.",
+    "authors": "Palakorn Kamnounsing, Karin Sumongkayothin, Prarinya Siritanawan, Kazunori Kotani",
+    "abstract": "",
+    "keywords": [],
+    "doi": "https://doi.org/10.1109/ACCESS.2024.3405408"
+  },
+  "https://researchmap.jp/read0121100/published_papers/47810462": {
+    "paper_url": "https://researchmap.jp/read0121100/published_papers/47810462",
+    "lang": "en",
+    "title": "Botnet Detection by Integrating Multiple Machine Learning Models.",
+    "authors": "Thanawat Tejapijaya, Prarinya Siritanawan, Karin Sumongkayothin, Kazunori Kotani",
+    "abstract": "",
+    "keywords": [],
+    "doi": "https://doi.org/10.5220/0012317700003648"
+  },
+  "https://researchmap.jp/read0121100/published_papers/52398482": {
+    "paper_url": "https://researchmap.jp/read0121100/published_papers/52398482",
+    "lang": "en",
+    "title": "Compound facial expressions image generation for complex emotions.",
+    "authors": "Shwe Sin Khine Win 0001, Prarinya Siritanawan, Kazunori Kotani",
+    "abstract": "",
+    "keywords": [],
+    "doi": "https://doi.org/10.1007/s11042-022-14289-7"
+  },
+  "https://researchmap.jp/read0121100/published_papers/47810464": {
+    "paper_url": "https://researchmap.jp/read0121100/published_papers/47810464",
+    "lang": "en",
+    "title": "Gait Image Analysis Based on Human Body Parts Model.",
+    "authors": "Thanyamon Pattanapisont, Prarinya Siritanawan, Kazunori Kotani, Toshiaki Kondo, Jessada Karnjana",
+    "abstract": "",
+    "keywords": [],
+    "doi": "https://doi.org/10.1109/ICA58824.2023.00014"
+  },
+  "https://researchmap.jp/sagae/published_papers/42027563": {
+    "paper_url": "https://researchmap.jp/sagae/published_papers/42027563",
+    "lang": "en",
+    "title": "Automatic data-based bin width selection for rose diagram",
+    "authors": "Yasuhito Tsuruta, Masahiko Sagae",
+    "abstract": "",
+    "keywords": [],
+    "doi": "https://doi.org/10.1007/s10463-023-00868-4"
+  },
+  "https://researchmap.jp/sagae/published_papers/37702467": {
+    "paper_url": "https://researchmap.jp/sagae/published_papers/37702467",
+    "lang": "en",
+    "title": "Improving kernel-based nonparametric regression for circular-linear data",
+    "authors": "Yasuhito Tsuruta, Masahiko Sagae",
+    "abstract": "",
+    "keywords": [],
+    "doi": "https://doi.org/10.1007/s42081-022-00145-3"
+  },
+  "https://researchmap.jp/sagae/published_papers/41933476": {
+    "paper_url": "https://researchmap.jp/sagae/published_papers/41933476",
+    "lang": "en",
+    "title": "THE BEHAVIOR CHANGE IN INTER-PREFECTURE TRAVEL UNDER THE COVID-19 PANDEMIC: DETECTION BY SPARSE NON-NEGATIVE MATRIX FACTORIZATION",
+    "authors": "Kaisei HARADA, Hiromichi YAMAGUCHI, Masahiko SAGAE",
+    "abstract": "",
+    "keywords": [],
+    "doi": "https://doi.org/10.2208/jscejipm.77.2_160"
+  },
+  "https://researchmap.jp/sagae/published_papers/37800115": {
+    "paper_url": "https://researchmap.jp/sagae/published_papers/37800115",
+    "lang": "en",
+    "title": "AN EFFECT OF THE MEDICAL EXAMINATION AND LOCAL HEALTH PROBLEM FOR THE HEALTHY INCREASE ~USING NATIONAL HEALTH INSURANCE DATABASE (KDB)~",
+    "authors": "TAMAMORI Yuya, FUJIU Makoto, TAKAYAMA Junichi, NISHINO Tatsuya, SAGAE Masahiko, YANAGIHARA Kiyoko, HIRAKO Kohei",
+    "abstract": "Japan's declining birthrate and aging population are progressing at an unprecedented rate in the world, and Japan's medical expenses are steadily increasing. If this situation continues, the Japanese medical insurance system cannot be maintained. In addition, in response to the rapid increase in lifestyle-related diseases, the \"Fourth National Health Promotion Measures\" have been formulated in Japan. Currently, lifestyle-related diseases such as hypertension and diabetes are increasing, and the problem is that the rate of specific health checkups, which is an opportunity to detect such lifestyle-related diseases at an early stage, is sluggish. Therefore, in this study, we first show the relationship between lifestyle-related diseases and the number of medical examinations using the National Health Insurance database (KDB), and suggest the effects of medical examinations. In addition, in order to investigate the relationship with the living environment, we will analyze the current situation and characteristics of the region, clarify the regional differences in health issues and medical examination rates, and understand the health issues and characteristics of healthy regions by region.",
+    "keywords": [],
+    "doi": "https://doi.org/10.11532/jsceiii.2.j2_841"
+  },
+  "https://researchmap.jp/sagae/published_papers/37800113": {
+    "paper_url": "https://researchmap.jp/sagae/published_papers/37800113",
+    "lang": "en",
+    "title": "A Study on Regional Distribution for Vulnerable People with Orthopedic disease Considering Earthquake Disaster: Using KDB from Hakui City",
+    "authors": "MORISAKI Yuma, FUJIU Makoto, TAKAYAMA Junichi, YANAGIHARA Kiyoko, NISHINO Tatsuya, SAGAE Masahiko, HIRAKO Kohei",
+    "abstract": "In Japan, large-scale earthquake disasters occur frequently in which serious damage is concentrated on vulnerable people. Based on the situation of past earthquake disasters, each municipality has created a list of vulnerable people's information. However, there are various issues such as high hurdles for listing due to personal information. In this study, we widely regard patients with orthopedic diseases as vulnerable people, and examine regional distribution using national health insurance data. In addition, alternate index of the distance to the nearest evacuation site is created for each town using GIS network analysis. Through this research, it became possible to clarify regional differences from the two viewpoints of number of orthopedic disease patients and the distance to evacuation sites.",
+    "keywords": [],
+    "doi": "https://doi.org/10.5610/jaee.21.1_123"
+  },
+  "https://researchmap.jp/read0142983/published_papers/53559216": {
+    "paper_url": "https://researchmap.jp/read0142983/published_papers/53559216",
+    "lang": "en",
+    "title": "Revisiting CNN-Based Parkinson’s Disease Classification from DaT-SPECT Images: The Role of Training Protocols",
+    "authors": "Denis Chegodaev, Lilies Handayani, Ray Steven, Takayuki Shibutani, Kenichi Nakajima, Kenji Satou",
+    "abstract": "",
+    "keywords": [],
+    "doi": "https://doi.org/10.3390/electronics15091883"
+  },
+  "https://researchmap.jp/read0142983/published_papers/53504965": {
+    "paper_url": "https://researchmap.jp/read0142983/published_papers/53504965",
+    "lang": "en",
+    "title": "Identification of Key Genes Associated with Overall Survival in Glioblastoma Multiforme Using TCGA RNA-Seq Expression Data",
+    "authors": "Lilies Handayani, Denis Chegodaev, Ray Steven, Kenji Satou",
+    "abstract": "",
+    "keywords": [],
+    "doi": "https://doi.org/10.3390/genes16070755"
+  },
+  "https://researchmap.jp/read0142983/published_papers/46835254": {
+    "paper_url": "https://researchmap.jp/read0142983/published_papers/46835254",
+    "lang": "en",
+    "title": "Rare toxin A-negative and toxin B-positive strain of Clostridioides difficile from Japan lacking a complete tcdA gene",
+    "authors": "Yukiko Takemori-Sakai, Kenji Satou, Yasuko Senda, Youko Nakamura, Hatsumi Otani, Akiko Maekawa, Hiroyasu Oe, Megumi Oshima, Shiori Yoneda-Nakagawa, Taro Miyagawa …",
+    "abstract": "",
+    "keywords": [],
+    "doi": "https://doi.org/10.1016/j.jiac.2022.01.015"
+  },
+  "https://researchmap.jp/read0142983/published_papers/53504954": {
+    "paper_url": "https://researchmap.jp/read0142983/published_papers/53504954",
+    "lang": "en",
+    "title": "Classification of Imbalanced Data Represented as Binary Features",
+    "authors": "Kunti Robiatul Mahmudah, Fatma Indriani, Yukiko Takemori-Sakai, Yasunori Iwata, Takashi Wada, Kenji Satou",
+    "abstract": "",
+    "keywords": [],
+    "doi": "https://doi.org/10.3390/app11177825"
+  },
+  "https://researchmap.jp/read0142983/published_papers/47092928": {
+    "paper_url": "https://researchmap.jp/read0142983/published_papers/47092928",
+    "lang": "en",
+    "title": "Classification of Brainwaves for Sleep Stages by High-Dimensional FFT Features from EEG Signals",
+    "authors": "Mera Kartika Delimayanti, Bedy Purnama, Ngoc Giang Nguyen, Mohammad Reza Faisal, Kunti Robiatul Mahmudah, Fatma Indriani, Mamoru Kubo, Kenji Satou",
+    "abstract": "",
+    "keywords": [],
+    "doi": "https://doi.org/10.3390/app10051797"
+  },
+  "https://researchmap.jp/read0100137/published_papers/54779732": {
+    "paper_url": "https://researchmap.jp/read0100137/published_papers/54779732",
+    "lang": "en",
+    "title": "能登半島地震から考える過疎農村地域の維持可能性—特集 能登半島震災が浮き彫りにする政策課題",
+    "authors": "佐無田 光",
+    "abstract": "",
+    "keywords": [],
+    "doi": ""
+  },
+  "https://researchmap.jp/read0100137/published_papers/36372277": {
+    "paper_url": "https://researchmap.jp/read0100137/published_papers/36372277",
+    "lang": "en",
+    "title": "グリーン・ニューディールの潮流と日本のグリーン成長戦略 (特集 東日本大震災と原発事故(シリーズ45)「日本の脱炭素戦略」検証)",
+    "authors": "佐無田 光",
+    "abstract": "",
+    "keywords": [],
+    "doi": ""
+  },
+  "https://researchmap.jp/read0100137/published_papers/36372299": {
+    "paper_url": "https://researchmap.jp/read0100137/published_papers/36372299",
+    "lang": "en",
+    "title": "北陸新幹線後の金沢経済の分岐点 －観光化する地域の論点",
+    "authors": "佐無田光",
+    "abstract": "",
+    "keywords": [],
+    "doi": ""
+  },
+  "https://researchmap.jp/read0100137/published_papers/36347015": {
+    "paper_url": "https://researchmap.jp/read0100137/published_papers/36347015",
+    "lang": "en",
+    "title": "「地域の価値」の地域政策論試論",
+    "authors": "佐無田光",
+    "abstract": "",
+    "keywords": [],
+    "doi": ""
+  },
+  "https://researchmap.jp/read0100137/published_papers/36347009": {
+    "paper_url": "https://researchmap.jp/read0100137/published_papers/36347009",
+    "lang": "en",
+    "title": "北陸地域の内発型産業と事業創造イノベーション",
+    "authors": "佐無田 光",
+    "abstract": "",
+    "keywords": [],
+    "doi": "https://doi.org/10.12949/cjaros.10.2_13"
+  },
+  "https://researchmap.jp/chanrie/published_papers/51100614": {
+    "paper_url": "https://researchmap.jp/chanrie/published_papers/51100614",
+    "lang": "en",
+    "title": "就職活動終了後の大学・大学院生における「キャリア」概念の探索",
+    "authors": "髙沼理恵",
+    "abstract": "",
+    "keywords": [],
+    "doi": ""
+  },
+  "https://researchmap.jp/chanrie/published_papers/51100683": {
+    "paper_url": "https://researchmap.jp/chanrie/published_papers/51100683",
+    "lang": "en",
+    "title": "「ちゃんと努力した自分」を承認するために就職活動を活用する －理系大学院生の就職活動にまつわる自己形成と内的世界の分析－",
+    "authors": "髙沼理恵",
+    "abstract": "",
+    "keywords": [],
+    "doi": ""
+  },
+  "https://researchmap.jp/chanrie/published_papers/41864713": {
+    "paper_url": "https://researchmap.jp/chanrie/published_papers/41864713",
+    "lang": "en",
+    "title": "外国人留学生採用実施企業に対する採用候補者の母集団形成支援：採用設計力向上を目指したワークショップによる検討",
+    "authors": "髙沼理恵",
+    "abstract": "",
+    "keywords": [],
+    "doi": ""
+  },
+  "https://researchmap.jp/chanrie/published_papers/41864702": {
+    "paper_url": "https://researchmap.jp/chanrie/published_papers/41864702",
+    "lang": "en",
+    "title": "日本の外国人留学生に対する「社会正義のキャリアコンサルティング」に向けた探索的考察－アドボカシー活動の事例と行動を可能とする要因に注目して－",
+    "authors": "髙沼理恵",
+    "abstract": "",
+    "keywords": [],
+    "doi": ""
+  },
+  "https://researchmap.jp/chanrie/published_papers/51100668": {
+    "paper_url": "https://researchmap.jp/chanrie/published_papers/51100668",
+    "lang": "en",
+    "title": "理工系外国人留学生に対する就職支援の類型化に関する試論 －学生の日本語レベルと専門性レベルによるカテゴリーの観点から",
+    "authors": "髙沼理恵",
+    "abstract": "",
+    "keywords": [],
+    "doi": ""
+  },
+  "https://researchmap.jp/ht641027/published_papers/52881381": {
+    "paper_url": "https://researchmap.jp/ht641027/published_papers/52881381",
+    "lang": "en",
+    "title": "iPSC-derived modeling of HLA-lacking hematopoiesis reveals clonal diversity in eltrombopag response in acquired aplastic anemia.",
+    "authors": "Honoka Takahashi, Luna Seoka, Rio Takahashi, Yoshinori Yoshida, Kazuhisa Chonabayashi, Katsuto Takenaka, Koichi Akashi, Hiroyuki Takamatsu, Tatsuya Imi, Yoshitaka Zaimoku …",
+    "abstract": "Acquired aplastic anemia (AA) is an immune-mediated bone marrow failure in which cytotoxic T lymphocytes (CTLs) target hematopoietic stem cells (HSCs). Approximately 30% of AA patients develop immune escape clones lacking specific HLA class I alleles (HLA[-]) through loss of heterozygosity in chromosome 6p (6pLOH) or somatic loss-of-function mutations. Eltrombopag (EPAG), a thrombopoietin receptor agonist (TPO-RA), demonstrates clinical efficacy in AA in combination with immunosuppressive therapy; however, its impact on HLA(-) HSCs and hematopoietic progenitor cells (HPCs) remains poorly understood. In this study, we evaluated the hematopoietic effects of EPAG using umbilical cord blood-derived HPCs and a humanized hematopoiesis model in immunodeficient (BRGS) mice. Furthermore, we established induced pluripotent stem cell (iPSC)-derived hematopoietic models encompassing five wild-type (WT) clones and seven HLA-lacking clones, differentiated them into HPCs, and assessed their responses to EPAG. EPAG selectively conferred a proliferative advantage to specific hematopoietic fractions in HLA(-) HPCs, distinct from that observed in WT HPCs. Molecular analyses revealed clone-dependent differences in CD110 expression and downstream effectors, including phosphorylated STAT5, FOXM1, and E2F1, indicating differential activation of TPO receptor-mediated signaling pathways among clones. These findings highlight the functional diversity of HLA(-) hematopoiesis and suggest that the hematopoietic response to EPAG is governed by clone-intrinsic signaling programs. Furthermore, our results provide new insights into how eltrombopag modulates clonal competition and hematopoietic recovery in immune-escape hematopoiesis, with potential implications for optimizing therapeutic strategies and predicting clinical response in patients with acquired AA.",
+    "keywords": [],
+    "doi": "https://doi.org/10.1093/stmcls/sxag004"
+  },
+  "https://researchmap.jp/ht641027/published_papers/52827292": {
+    "paper_url": "https://researchmap.jp/ht641027/published_papers/52827292",
+    "lang": "en",
+    "title": "Correction: JSH practical guidelines for hematological malignancies, 2023 III. Myeloma 1. Multiple myeloma (MM).",
+    "authors": "Shinsuke Iida, Shigeki Ito, Kazutaka Sunami, Hiroyuki Takamatsu, Nobuhiro Tsukada, Naoki Hosen, Hirokazu Miki",
+    "abstract": "",
+    "keywords": [],
+    "doi": "https://doi.org/10.1007/s12185-025-04107-9"
+  },
+  "https://researchmap.jp/ht641027/published_papers/54002608": {
+    "paper_url": "https://researchmap.jp/ht641027/published_papers/54002608",
+    "lang": "en",
+    "title": "北陸地区における各ドナーごとの急性骨髄性白血病の同種移植成績",
+    "authors": "井美 達也, 近藤 恭夫, 小谷 岳春, 黒川 敏郎, 高松 秀行, 澤崎 愛子, 山田 真也, 鎧高 健志, 材木 義隆, 丸山 裕之 …",
+    "abstract": "",
+    "keywords": [],
+    "doi": ""
+  },
+  "https://researchmap.jp/ht641027/published_papers/54002589": {
+    "paper_url": "https://researchmap.jp/ht641027/published_papers/54002589",
+    "lang": "en",
+    "title": "再生不良性貧血におけるIFN-γの選択的造血制御およびクローン動態の解明",
+    "authors": "高橋 里緒, 高橋 朋花, 瀬岡 月, 岩崎 寛香, 高松 博幸, 井美 達也, 材木 義隆, 細川 晃平, 片桐 孝和",
+    "abstract": "",
+    "keywords": [],
+    "doi": ""
+  },
+  "https://researchmap.jp/ht641027/published_papers/54002586": {
+    "paper_url": "https://researchmap.jp/ht641027/published_papers/54002586",
+    "lang": "en",
+    "title": "CAR-T療法後の免疫グロブリン反復補充療法はアデノウイルス性膀胱炎とウイルス血症に効果的な可能性がある",
+    "authors": "藤井 俊, 山田 真也, 東 大貴, 貫井 友貴, 井美 達也, 鎧高 健志, 丸山 裕之, 吉田 晶代, 高松 博幸, 細川 晃平 …",
+    "abstract": "",
+    "keywords": [],
+    "doi": ""
+  },
+  "https://researchmap.jp/r_takikawa/published_papers/43315658": {
+    "paper_url": "https://researchmap.jp/r_takikawa/published_papers/43315658",
+    "lang": "en",
+    "title": "Sex differences in birth weight depending on the mother's condition: Testing the Trivers-Willard hypothesis in Indian twins",
+    "authors": "Ryoko Takikawa, Yasuyuki Fukukawa",
+    "abstract": "",
+    "keywords": [],
+    "doi": "https://doi.org/10.1016/j.evolhumbehav.2023.08.003"
+  },
+  "https://researchmap.jp/r_takikawa/published_papers/51868851": {
+    "paper_url": "https://researchmap.jp/r_takikawa/published_papers/51868851",
+    "lang": "en",
+    "title": "Stress sensitivity moderates the influence of birth weight on the timing of puberty",
+    "authors": "Ryoko Takikawa",
+    "abstract": "",
+    "keywords": [],
+    "doi": ""
+  },
+  "https://researchmap.jp/r_takikawa/published_papers/36275008": {
+    "paper_url": "https://researchmap.jp/r_takikawa/published_papers/36275008",
+    "lang": "en",
+    "title": "Fundamental study of movement sensation related to physical functions: Psychophysiological research using chaotic interactions of biosignals",
+    "authors": "Ryoko Takikawa",
+    "abstract": "",
+    "keywords": [],
+    "doi": ""
+  },
+  "https://researchmap.jp/r_takikawa/published_papers/51868853": {
+    "paper_url": "https://researchmap.jp/r_takikawa/published_papers/51868853",
+    "lang": "en",
+    "title": "Promoting symmetry of the human body by Eastern medicinal approach - A psychophysical study using head-turning tasks -",
+    "authors": "Ryoko Takikawa",
+    "abstract": "",
+    "keywords": [],
+    "doi": ""
+  },
+  "https://researchmap.jp/r_takikawa/published_papers/36076494": {
+    "paper_url": "https://researchmap.jp/r_takikawa/published_papers/36076494",
+    "lang": "en",
+    "title": "Promoting bilateral symmetry in the body through an eastern medical approach examining the chaotic nature of pulse waves using a neck rotation task via Sotai therapy",
+    "authors": "Ryoko Takikawa, Yasutomo Ishii",
+    "abstract": "",
+    "keywords": [],
+    "doi": ""
+  },
+  "https://researchmap.jp/read0180680/published_papers/351177": {
+    "paper_url": "https://researchmap.jp/read0180680/published_papers/351177",
+    "lang": "en",
+    "title": "Accuracy assessment of a noninvasive device for monitoring beat-by-beat blood pressure in the radial artery using the volume-compensation method",
+    "authors": "Shinobu Tanaka, Masamichi Nogawa, Takehiro Yamakoshi, Ken-Ichi Yamakoshi",
+    "abstract": "",
+    "keywords": [],
+    "doi": "https://doi.org/10.1109/TBME.2007.894833"
+  },
+  "https://researchmap.jp/read0180680/published_papers/351178": {
+    "paper_url": "https://researchmap.jp/read0180680/published_papers/351178",
+    "lang": "en",
+    "title": "Noninvasive measurement of instantaneous radial artery blood pressure - An instrument based on the volume-compensation method",
+    "authors": "S Tanaka, SM Gao, M Nogawa, KI Yamakoshi",
+    "abstract": "",
+    "keywords": [],
+    "doi": "https://doi.org/10.1109/MEMB.2005.1463393"
+  },
+  "https://researchmap.jp/read0180680/published_papers/351175": {
+    "paper_url": "https://researchmap.jp/read0180680/published_papers/351175",
+    "lang": "en",
+    "title": "Adaptive Control with Self-tuning for Non-invasive Beat-by-beat Blood Pressure Measurement",
+    "authors": "Masamichi Nogawa, Mitsuhiro Ogawa, Takehiro Yamakoshi, Shinobu Tanaka, Ken-ichi Yamakoshi",
+    "abstract": "",
+    "keywords": [],
+    "doi": "https://doi.org/10.1109/IEMBS.2011.6091078"
+  },
+  "https://researchmap.jp/read0180680/published_papers/351176": {
+    "paper_url": "https://researchmap.jp/read0180680/published_papers/351176",
+    "lang": "en",
+    "title": "[An instantaneous blood pressure measuring system at the wrist based on the volume-compensation method].",
+    "authors": "Gao SM, Song YL, Tanaka S, Yamakoshi K",
+    "abstract": "",
+    "keywords": [],
+    "doi": ""
+  },
+  "https://researchmap.jp/sduggan/published_papers/51963003": {
+    "paper_url": "https://researchmap.jp/sduggan/published_papers/51963003",
+    "lang": "en",
+    "title": "SDGsの観点から考える大学の現状と持続可能な共生に向けて-大学の男女共同参画に関する課題研究のまとめと提案",
+    "authors": "ダガンさがの, 私市佐代美, 清水栄子",
+    "abstract": "",
+    "keywords": [],
+    "doi": ""
+  },
+  "https://researchmap.jp/sduggan/published_papers/4436075": {
+    "paper_url": "https://researchmap.jp/sduggan/published_papers/4436075",
+    "lang": "en",
+    "title": "Influence of Japanese Educational Curriculum Reform on English learners’ self-awareness in higher education",
+    "authors": "Duggan Sagano",
+    "abstract": "",
+    "keywords": [],
+    "doi": ""
+  },
+  "https://researchmap.jp/sduggan/published_papers/4436080": {
+    "paper_url": "https://researchmap.jp/sduggan/published_papers/4436080",
+    "lang": "en",
+    "title": "Fostering autonomous English learners in common education in listening skills at Japanese higher education",
+    "authors": "Duggan Sagano",
+    "abstract": "",
+    "keywords": [],
+    "doi": ""
+  },
+  "https://researchmap.jp/sduggan/published_papers/4436063": {
+    "paper_url": "https://researchmap.jp/sduggan/published_papers/4436063",
+    "lang": "en",
+    "title": "Fostering autonomous English learning: Out-of-classroom learning plan for reading class",
+    "authors": "Duggan Sagano",
+    "abstract": "",
+    "keywords": [],
+    "doi": ""
+  },
+  "https://researchmap.jp/sduggan/published_papers/5163648": {
+    "paper_url": "https://researchmap.jp/sduggan/published_papers/5163648",
+    "lang": "en",
+    "title": "ワイカト大学短期語学研修プログラム〜事前・中間・事後テストから見る英語力の変動〜",
+    "authors": "ダガンさがの",
+    "abstract": "",
+    "keywords": [],
+    "doi": ""
+  },
+  "https://researchmap.jp/linghanzhang/published_papers/54786578": {
+    "paper_url": "https://researchmap.jp/linghanzhang/published_papers/54786578",
+    "lang": "en",
+    "title": "From resources to resourcefulness practices: How community agency shapes divergent rural community development in heritage tourism",
+    "authors": "Linghan Zhang, Xiaofei Hao, Chenyang Qiu",
+    "abstract": "Rural communities within the same heritage tourism destination often produce divergent development outcomes despite sharing identical institutional conditions. This paper examines this divergence through a comparative ethnographic study of three villages within the Kaiping Diaolou and Villages UNESCO World Heritage site in China, drawing on 4 years of embedded participant observation. Integrating Entrepreneurial Resourcefulness with Social Practice Theory and community agency, we identify the interpretive and practice-level mechanisms through which resource-constrained communities enact distinct development trajectories. The findings reveal three characteristic resourcefulness configurations, each shaped by a distinct internal organizational logic: a market-driven configuration of legitimacy-backed centralization; a resilience-driven configuration of progressive decentralization; and an externally constrained configuration of agency. The study advances ER theory by demonstrating that developmental divergence reflects not unequal resource endowments but unequal resourcefulness practice, and that the internal power architecture of collective ER translates shared structural conditions into divergent outcomes.",
+    "keywords": [],
+    "doi": "https://doi.org/10.1177/14687976261481336"
+  },
+  "https://researchmap.jp/linghanzhang/published_papers/49818234": {
+    "paper_url": "https://researchmap.jp/linghanzhang/published_papers/49818234",
+    "lang": "en",
+    "title": "Perception of small tourism enterprises in Lao PDR regarding social sustainability under the influence of social network",
+    "authors": "Linghan Zhang, Junyi Zhang",
+    "abstract": "",
+    "keywords": [],
+    "doi": "https://doi.org/10.1016/j.tourman.2018.05.012"
+  },
+  "https://researchmap.jp/linghanzhang/published_papers/54786591": {
+    "paper_url": "https://researchmap.jp/linghanzhang/published_papers/54786591",
+    "lang": "en",
+    "title": "The role of expressway roadside rest areas in truck arrival behaviors at ports with truck appointment system",
+    "authors": "Ying Jiang, Fengqian Guo, Zhiming Lin, Huanyu Yang, Linghan Zhang",
+    "abstract": "",
+    "keywords": [],
+    "doi": "https://doi.org/10.1016/j.tra.2026.105171"
+  },
+  "https://researchmap.jp/linghanzhang/published_papers/51796652": {
+    "paper_url": "https://researchmap.jp/linghanzhang/published_papers/51796652",
+    "lang": "en",
+    "title": "Utopia on your doorstep? Proximity tourism and therapeutic landscape in urban park camping",
+    "authors": "Xiaofei Hao, Mengchun Wu, Linghan Zhang",
+    "abstract": "",
+    "keywords": [],
+    "doi": "https://doi.org/10.1080/14616688.2025.2594715"
+  },
+  "https://researchmap.jp/linghanzhang/published_papers/50190178": {
+    "paper_url": "https://researchmap.jp/linghanzhang/published_papers/50190178",
+    "lang": "en",
+    "title": "The dual-process underlying social presence and behavioral responses: A meta-analysis review in the hospitality and tourism contexts",
+    "authors": "Linghan Zhang, Pei Liu, Jiahui Wang, Xuan Tang",
+    "abstract": "",
+    "keywords": [],
+    "doi": "https://doi.org/10.1016/j.ijhm.2025.104240"
+  },
+  "https://researchmap.jp/atezo_/published_papers/52778112": {
+    "paper_url": "https://researchmap.jp/atezo_/published_papers/52778112",
+    "lang": "en",
+    "title": "Psychological First Aid",
+    "authors": "Atsuro Tsutsumi, Takashi Izutsu",
+    "abstract": "",
+    "keywords": [],
+    "doi": "https://doi.org/10.1007/978-3-030-57296-9_86"
+  },
+  "https://researchmap.jp/atezo_/published_papers/52778110": {
+    "paper_url": "https://researchmap.jp/atezo_/published_papers/52778110",
+    "lang": "en",
+    "title": "Suicide Prevention",
+    "authors": "Atsuro Tsutsumi, Takashi Izutsu",
+    "abstract": "",
+    "keywords": [],
+    "doi": "https://doi.org/10.1007/978-3-030-57296-9_89"
+  },
+  "https://researchmap.jp/atezo_/published_papers/53981203": {
+    "paper_url": "https://researchmap.jp/atezo_/published_papers/53981203",
+    "lang": "en",
+    "title": "Art therapy for older adults in long-term care: A quasi-experimental study on cognitive enhancement",
+    "authors": "Akiko Kuraishi, Shodai Sunagozaka, Risa Nakayama, Atsuro Tsutsumi",
+    "abstract": "",
+    "keywords": [],
+    "doi": "https://doi.org/10.1016/j.aip.2026.102433"
+  },
+  "https://researchmap.jp/atezo_/published_papers/52596198": {
+    "paper_url": "https://researchmap.jp/atezo_/published_papers/52596198",
+    "lang": "en",
+    "title": "Intimate Partner Support as a Critical Source of Social Support on Women’s Post-Trauma Mental Recovery: A Cross-Sectional Study",
+    "authors": "Yao Xu, Helen Herrman, Rebecca Bentley, Atsuro Tsutsumi, Thach Duc Tran, Jane Fisher",
+    "abstract": "Exposure to traumatic events such as natural disasters and child loss is strongly linked to trauma- and stressor-related disorders. This study examined how different sources of social support relate to PTSD and prolonged grief disorder (PGD) symptoms among women who lost a child in an earthquake. A cross-sectional survey with structured interviews and standardized instruments was conducted among 226 participants. Clinically significant PGD symptoms were reported by 89%, and PTSD symptoms by 54%, with 80% experiencing comorbidity. Having a supportive, affectionate, and confiding relationship with an intimate partner and having a subsequent child were each associated with fewer symptoms of both disorders. Intimate partner support had the greatest impact on recovery. Women who had a subsequent child reported more positive partner relationships and better mental health outcomes. These findings underscore the critical role of intimate partner support in post-trauma recovery and highlight the importance of enhancing emotional and relational support.",
+    "keywords": [],
+    "doi": "https://doi.org/10.1177/00302228251371522"
+  },
+  "https://researchmap.jp/atezo_/published_papers/52596197": {
+    "paper_url": "https://researchmap.jp/atezo_/published_papers/52596197",
+    "lang": "en",
+    "title": "Intimate Partner Support as a Critical Source of Social Support on Women’s Post-Trauma Mental Recovery: A Cross-Sectional Study",
+    "authors": "Yao Xu, Helen Herrman, Rebecca Bentley, Atsuro Tsutsumi, Thach Duc Tran, Jane Fisher",
+    "abstract": "Exposure to traumatic events such as natural disasters and child loss is strongly linked to trauma- and stressor-related disorders. This study examined how different sources of social support relate to PTSD and prolonged grief disorder (PGD) symptoms among women who lost a child in an earthquake. A cross-sectional survey with structured interviews and standardized instruments was conducted among 226 participants. Clinically significant PGD symptoms were reported by 89%, and PTSD symptoms by 54%, with 80% experiencing comorbidity. Having a supportive, affectionate, and confiding relationship with an intimate partner and having a subsequent child were each associated with fewer symptoms of both disorders. Intimate partner support had the greatest impact on recovery. Women who had a subsequent child reported more positive partner relationships and better mental health outcomes. These findings underscore the critical role of intimate partner support in post-trauma recovery and highlight the importance of enhancing emotional and relational support.",
+    "keywords": [],
+    "doi": "https://doi.org/10.1177/00302228251371522"
+  },
+  "https://researchmap.jp/tsumita.noriyasu/published_papers/43370999": {
+    "paper_url": "https://researchmap.jp/tsumita.noriyasu/published_papers/43370999",
+    "lang": "en",
+    "title": "Urban Railway Network Expansion on Transit Oriented Development: Improvement in Accessibility in Four Asian Developing Cities",
+    "authors": "Noriyasu TSUMITA, Hiroki KIKUCHI, Varameth VICHIENSAN, Alexis FILLONE, Vu Anh TUAN, Hoang Thuy LINH, Digvijay S. PAWAR, Atsushi FUKUDA",
+    "abstract": "",
+    "keywords": [],
+    "doi": ""
+  },
+  "https://researchmap.jp/tsumita.noriyasu/published_papers/43369778": {
+    "paper_url": "https://researchmap.jp/tsumita.noriyasu/published_papers/43369778",
+    "lang": "en",
+    "title": "開発途上国における都市洪水発生時の道路ネットワーク寸断に対する政策実施効果の推計",
+    "authors": "積田典泰, 菊池浩紀, 福田敦",
+    "abstract": "",
+    "keywords": [],
+    "doi": ""
+  },
+  "https://researchmap.jp/tsumita.noriyasu/published_papers/54721494": {
+    "paper_url": "https://researchmap.jp/tsumita.noriyasu/published_papers/54721494",
+    "lang": "en",
+    "title": "ANALYSIS ON THE IMPACT OF INSTALLING ADDITIONAL LANE AT PARKING LOT ENTRANCE REGARDING TO TRAFFIC FLOW—CONSIDERING COMPLIANCE WITH ROAD TRAFFICS ACT FOR VEHICLES—",
+    "authors": "Yuya TABEI, Yu KATO, Satoru KOBAYAKAWA, Eri AOYAMA, Noriyasu TSUMITA",
+    "abstract": "",
+    "keywords": [],
+    "doi": "https://doi.org/10.2208/jscejj.25-20053"
+  },
+  "https://researchmap.jp/tsumita.noriyasu/published_papers/52987989": {
+    "paper_url": "https://researchmap.jp/tsumita.noriyasu/published_papers/52987989",
+    "lang": "en",
+    "title": "Exploring the effects of riverine flooding on traffic demand forecasting using activity-based modeling in Ubon Ratchathani, Thailand",
+    "authors": "Noriyasu Tsumita, Rattanaporn Kaewkluengklom, Sideney Schreiner, Sittha Jaensirisak, Atsushi Fukuda",
+    "abstract": "English",
+    "keywords": [],
+    "doi": "https://doi.org/10.1038/s41598-026-42434-x"
+  },
+  "https://researchmap.jp/tsumita.noriyasu/published_papers/52852630": {
+    "paper_url": "https://researchmap.jp/tsumita.noriyasu/published_papers/52852630",
+    "lang": "en",
+    "title": "Evaluation of Impact of CO2 Emission Reductions by Multimodal Transport Toward Designing Future Low-Carbon Society Using Dynamic Land Use and Transport Model",
+    "authors": "Hiroki Kikuchi, Noriyasu Tsumita, Atsushi Fukuda, Guenter Emberger, Tetsuhiro Ishizaka",
+    "abstract": "",
+    "keywords": [],
+    "doi": "https://doi.org/10.1007/978-3-031-99525-5_13"
+  },
+  "https://researchmap.jp/douyi/published_papers/52154325": {
+    "paper_url": "https://researchmap.jp/douyi/published_papers/52154325",
+    "lang": "en",
+    "title": "From Demand to Circularity: Rethinking National Strategy on Automobile Battery Supply Chain for Sustainability",
+    "authors": "Yi Dou, Aya Heiho, Yasunori Kikuchi",
+    "abstract": "",
+    "keywords": [],
+    "doi": "https://doi.org/10.21203/rs.3.rs-7959887/v1"
+  },
+  "https://researchmap.jp/douyi/published_papers/46053790": {
+    "paper_url": "https://researchmap.jp/douyi/published_papers/46053790",
+    "lang": "en",
+    "title": "Novel precise separation technology will significantly improve the circulation of critical metals in automotive lithium-ion batteries",
+    "authors": "Yi Dou, Aya Heiho, Chiharu Tokoro, Yasunori Kikuchi",
+    "abstract": "",
+    "keywords": [],
+    "doi": "https://doi.org/10.21203/rs.3.rs-4213507/v1"
+  },
+  "https://researchmap.jp/douyi/published_papers/39680859": {
+    "paper_url": "https://researchmap.jp/douyi/published_papers/39680859",
+    "lang": "en",
+    "title": "Application of CAPE Tools into Prospective Life Cycle Assessment: A Case Study in Recycling Systems Design of Lithium-Ion Battery",
+    "authors": "Yasunori Kikuchi, Aya Heiho, Yi Dou, Izuru Suwa, Chiharu Tokoro",
+    "abstract": "",
+    "keywords": [],
+    "doi": "https://doi.org/10.1016/b978-0-323-95879-0.50265-4"
+  },
+  "https://researchmap.jp/douyi/published_papers/33182528": {
+    "paper_url": "https://researchmap.jp/douyi/published_papers/33182528",
+    "lang": "en",
+    "title": "Life Cycle Assessment of Emerging Technologies for Regional Implementation",
+    "authors": "DOU Yi, HEIHO Aya, SUWA Izuru, KANEMATSU Yuichiro, KIKUCHI Yasunori",
+    "abstract": "Earlier introduction and diffusion of emerging technologies is quite necessary for achieving decarbonization target by 2050. However, many emerging technologies are still in development, while the actual decarbonization effects from implementing the technologies in the future are also uncertain. For designing an appropriate roadmap of these technologies with lower uncertainties, it is crucial to conduct earlier strategic assessment on the economic and environmental impacts before the formal regional implementation, considering the factors such as technology readiness, model change, and scale-up. Recently, more and more studies begin to apply prospective life cycle assessment （prospective LCA） as a tool for evaluating the future potential impacts from implementing the emerging technologies. This article conducts a literature review on the previous studies using prospective LCA, aims at a summary on the content and challenges in applying prospective LCA as well as providing a specific perspective from regional implementation to improve the prospective LCA.",
+    "keywords": [],
+    "doi": "https://doi.org/10.3370/lca.17.167"
+  },
+  "https://researchmap.jp/douyi/published_papers/53272970": {
+    "paper_url": "https://researchmap.jp/douyi/published_papers/53272970",
+    "lang": "en",
+    "title": "Shaping China’s Automotive Lithium-Ion Battery Recycling System to Meet the Retirement Wave: Insights from Integrated Modeling",
+    "authors": "Shuai Nie, Yi Dou, Guotian Cai, Yasunori Kikuchi",
+    "abstract": "",
+    "keywords": [],
+    "doi": "https://doi.org/10.1021/acs.est.5c15537"
+  },
+  "https://researchmap.jp/riendyteng/published_papers/51570901": {
+    "paper_url": "https://researchmap.jp/riendyteng/published_papers/51570901",
+    "lang": "en",
+    "title": "Rule-Based Symbolic AI Computing-Driven Digital Twin Model for Ex-Ante Energy Evaluation of Task-Ambience Air Conditioning Systems in Zero-Energy Buildings",
+    "authors": "Xiao Teng, Zhenjiang Shen, Yuntian Zhang",
+    "abstract": "",
+    "keywords": [],
+    "doi": "https://doi.org/10.1016/j.scs.2025.106947"
+  },
+  "https://researchmap.jp/riendyteng/published_papers/51520543": {
+    "paper_url": "https://researchmap.jp/riendyteng/published_papers/51520543",
+    "lang": "en",
+    "title": "Digital Twin Monitoring System for Pedestrian Crossings Based on Autonomous Driving Environment",
+    "authors": "Xiao Teng, Lin Huang, Zhenjiang Shen, Wankai Li",
+    "abstract": "In response to the growing demand for pedestrian crosswalk safety and visibility in the era of autonomous driving, this paper proposes and designs a crosswalk environment monitoring system based on virtual-physical twin technology. Leveraging Unreal Engine (UE) and Carla simulation software, the system constructs a high-precision virtual environment, integrating real-time data from on-site sensors and weather APIs to achieve comprehensive and dynamic monitoring of crosswalk conditions. A key innovation of the system is the application of a Vision-Language Model (VLM), which automatically translates monitoring data into understandable natural language text while also enabling threshold-based warnings and safety alerts. This enhances the intelligence and automation of the monitoring system. Compared to traditional monitoring methods that primarily rely on graphical visualization, the proposed approach significantly improves data processing efficiency and safety alert capabilities, offering a more efficient, real-time, and intelligent solution for traffic safety management in the context of autonomous driving.",
+    "keywords": [],
+    "doi": "https://doi.org/10.3233/atde250241"
+  },
+  "https://researchmap.jp/riendyteng/published_papers/50076763": {
+    "paper_url": "https://researchmap.jp/riendyteng/published_papers/50076763",
+    "lang": "en",
+    "title": "Design Guidelines for Smart Nursing Homes in the Context of Aging",
+    "authors": "Xiao Teng, Zhenjiang Shen, Yuntian Zhang",
+    "abstract": "",
+    "keywords": [],
+    "doi": "https://doi.org/10.3390/buildings15091516"
+  },
+  "https://researchmap.jp/riendyteng/published_papers/54404885": {
+    "paper_url": "https://researchmap.jp/riendyteng/published_papers/54404885",
+    "lang": "en",
+    "title": "Participatory Landscape Design and Tool Innovation through Natural Language Processing:",
+    "authors": "Haicen Gao, Xiao Teng, Zhenjiang Shen",
+    "abstract": "",
+    "keywords": [],
+    "doi": "https://doi.org/10.14246/irspsd.14.3_1"
+  },
+  "https://researchmap.jp/riendyteng/published_papers/54404886": {
+    "paper_url": "https://researchmap.jp/riendyteng/published_papers/54404886",
+    "lang": "en",
+    "title": "Exploring the Educational Effects of a Point-Cloud-Derived 3D Urban Model on Residents’ Spatial Understanding and Evacuation Behavioral Intentions for Sustainable Community-Based Tsunami Evacuation Education",
+    "authors": "Yuya Yamato, Teng Xiao, Dinh-Thanh Nguyen, Thi-My-Trinh Nguyen, Nurul Aini, Pindo Tutuko, Aisa Motoyama",
+    "abstract": "<jats:p>This study explored the preliminary educational effects of a tsunami evacuation program using a streetscape reconstructed from a real district with a 3D laser scanner. The study area was Ono-machi, Kanazawa City, Japan, where 652 scan positions were captured using a Leica BLK360; the resulting point clouds were registered, cleaned, converted into a mesh model, and imported into Unity to build a desktop-based 3D evacuation experience. Twenty-five residents participated, operating the system individually or in small groups, discussing evacuation decisions, and completing pre- and post-experience questionnaires. Exploratory pre–post comparisons using the Wilcoxon signed-rank test were conducted for the 22 complete paired responses. Because five corresponding pairs were tested, the possibility of Type I error inflation due to multiple comparisons was considered. The results were interpreted using both uncorrected p-values and a Bonferroni-adjusted significance threshold of 0.01. The largest improvement was observed in the understanding of hazardous locations, with a mean increase of 1.59 points and a large effect size. The improvement in consideration of detours and alternative routes also remained below the adjusted threshold. Other corresponding item pairs showed positive descriptive changes and uncorrected p-values below 0.05, but they did not meet the Bonferroni-adjusted threshold. Therefore, these findings should be interpreted as preliminary evidence that a locally grounded, point-cloud-derived 3D urban model may support residents’ place-based understanding of local hazards and evacuation-related reflection. By supporting local risk communication, preparedness, and evacuation-related reflection, this approach may contribute to sustainable community-based disaster-prevention education and the development of more resilient coastal communities.</jats:p>",
+    "keywords": [],
+    "doi": "https://doi.org/10.3390/su18136892"
+  },
+  "https://researchmap.jp/toyoshima/published_papers/53318960": {
+    "paper_url": "https://researchmap.jp/toyoshima/published_papers/53318960",
+    "lang": "en",
+    "title": "【Accepted】THE ACTUAL OPERATION AND THE FACILITY MANAGEMENT OF REGISTERED TANGIBLE CULTURAL PROPERTIES - Analysis of example from Shinkenchiku and ShinkenchikuJutakutokushu -",
+    "authors": "Hiroto SHOJI, Yusuke OKA, Yuki TOYOSHIMA, Tatsuya NISHINO",
+    "abstract": "",
+    "keywords": [],
+    "doi": ""
+  },
+  "https://researchmap.jp/toyoshima/published_papers/51994868": {
+    "paper_url": "https://researchmap.jp/toyoshima/published_papers/51994868",
+    "lang": "en",
+    "title": "THE STRUCTURE AND FEATURES OF LOCAL RESIDENTS' PLACE MEMORY IN THE 2024 NOTO PENINSULA EARTHQUAKE",
+    "authors": "Kazuki NAKAOKA, Yuki TOYOSHIMA, Tamotsu ASAI, Osamu TSUKIHASHI",
+    "abstract": "",
+    "keywords": [],
+    "doi": "https://doi.org/10.3130/aijt.32.976"
+  },
+  "https://researchmap.jp/toyoshima/published_papers/51994855": {
+    "paper_url": "https://researchmap.jp/toyoshima/published_papers/51994855",
+    "lang": "en",
+    "title": "RENOVATION METHODS IN THE PRESERVATION AND UTILIZATION OF REGISTERED TANGIBLE CULTURAL PROPERTIES (BUILDINGS) IN JAPAN – Analysis of examples from Shinkenchiku and Shinkenchiku Jutakutokushu –",
+    "authors": "Yusuke OKA, Shugo OKUDA, Yuki TOYOSHIMA, Tatsuya NISHINO",
+    "abstract": "",
+    "keywords": [],
+    "doi": "https://doi.org/10.3130/aija.91.720"
+  },
+  "https://researchmap.jp/toyoshima/published_papers/48290785": {
+    "paper_url": "https://researchmap.jp/toyoshima/published_papers/48290785",
+    "lang": "en",
+    "title": "Analysis of the actual state of renovation and utilization of historical buildings using vacant house bank data -A Case Study of Kanazawa City",
+    "authors": "Yuki Toyoshima, Kazuki Terayama",
+    "abstract": "",
+    "keywords": [],
+    "doi": "https://doi.org/10.11361/journalcpij.59.988"
+  },
+  "https://researchmap.jp/toyoshima/published_papers/48199081": {
+    "paper_url": "https://researchmap.jp/toyoshima/published_papers/48199081",
+    "lang": "en",
+    "title": "The Current Factors Impeding the Preservation and Utilization of Historical Buildings in Japan",
+    "authors": "Yuki Toyoshima, Mitsuhiko Kawakami, Zhenjiang Shen",
+    "abstract": "",
+    "keywords": [],
+    "doi": ""
+  },
+  "https://researchmap.jp/read0054621/published_papers/52850336": {
+    "paper_url": "https://researchmap.jp/read0054621/published_papers/52850336",
+    "lang": "en",
+    "title": "Investigating feature-engineered predictors for systolic blood pressure changes in an mHealth-based disease management program.",
+    "authors": "Masashi Kanai, Sangjun Park, Takahiro Miki, Yuta Hagiwara, Atsushi Hashimoto, Hidetaka Nambo, Shigehiro Karashima",
+    "abstract": "Mobile health (mHealth)-based disease management programs enable continuous monitoring of blood pressure (BP) and related health behaviors. Feature engineering may help to extract informative predictors from longitudinal data, potentially improving BP change prediction. This study aimed to evaluate whether feature-engineered predictors can improve the prediction of systolic BP (SBP) changes using an mHealth-based disease management program. We analyzed data from participants with hypertension, dyslipidemia, or diabetes mellitus who completed the 24-week Mystar program, which combined phone-based coaching, remote monitoring, and app-based logging of BP and behavioral data. The primary outcome was the change in morning SBP from baseline to the end of the program. Prediction models for SBP changes were developed using ElasticNet regression at weeks 4, 8, 12, and 22 by comparing models with and without feature-engineered variables generated by feature tools. In total, 2318 participants were included in the analysis. At week 4, the top feature after feature engineering showed a stronger correlation with SBP change (r = 0.561) than the best original predictor (r = 0.455), although the model-level performance was similar (r = 0.561 vs. 0.559). By week 22, both models achieved a high correlation of approximately 0.85 with no substantial difference in performance. Feature engineering increased the correlation between individual predictors and SBP change in the early phase; however, the overall prediction performance of the ElasticNet model remained largely unchanged. Further studies are required to confirm these findings and examine their applicability in broader clinical and implementation contexts. Data from a 24-week mHealth-based program were analyzed to predict systolic blood pressure SBP changes using feature-engineered variables and ElasticNet regression. In the early phase, feature-engineered predictors ranked highest in importance, although overall model performance remained similar with and without feature engineering. Prediction accuracy improved over time, with correlations reaching ~0.85 by week 22.",
+    "keywords": [],
+    "doi": "https://doi.org/10.1038/s41440-026-02569-w"
+  },
+  "https://researchmap.jp/read0054621/published_papers/52742875": {
+    "paper_url": "https://researchmap.jp/read0054621/published_papers/52742875",
+    "lang": "en",
+    "title": "Performance of GPT-4o combined with retrieval-augmented generation on nutritionist licensing exam questions.",
+    "authors": "Yu Ishikawa, Akitaka Higashi, Nozomu Arai, Daisuke Ozo, Wataru Hasegawa, Tetsuya Imamura, Zenbei Matsumoto, Hidetaka Nambo, Shigehiro Karashima",
+    "abstract": "GPT-4o, a general-purpose large language model, has a Retrieval-Augmented Variant (GPT-4o-RAG) that can assist in dietary counseling. However, research on its application in this field remains lacking. To bridge this gap, we used the Japanese National Examination for Registered Dietitians as a standardized benchmark for evaluation. Three language models-GPT-4o, GPT-4o-mini, and GPT-4o-RAG-were assessed using 599 publicly available multiple-choice questions from the 2022-2024 national examinations. For each model, we generated answers to each question five times and based our evaluation on these multiple outputs to assess response variability and robustness. A custom pipeline was implemented for GPT-4o-RAG to retrieve guideline-based documents for integration with GPT-generated responses. Accuracy rates, variance, and response consistency were evaluated. Term Frequency-Inverse Document Frequency analysis was conducted to compare word characteristics in correctly and incorrectly answered questions. All three models achieved accuracy rates >60%, the passing threshold. GPT-4o-RAG demonstrated the highest accuracy (83.5% ± 0.3%), followed by GPT-4o (82.1% ± 1.0%), and GPT-4o-mini (70.0% ± 1.4%). While the accuracy improvement of GPT-4o-RAG over GPT-4o was not statistically significant (p = 0.12), it exhibited significantly lower variance and higher response consistency (97.3% vs. 91.2-95.2%, p < 0.001). GPT-4o-RAG outperformed other models in applied and clinical nutrition categories but showed limited performance on numerical questions. Term Frequency-Inverse Document Frequency analysis suggested that incorrect answers were more frequently associated with numerical terms. GPT-4o-RAG improved response consistency and domain-specific performance, suggesting utility in clinical nutrition. However, limitations in numerical reasoning and individualized guidance warrant further development and validation.",
+    "keywords": [],
+    "doi": "https://doi.org/10.1507/endocrj.EJ25-0201"
+  },
+  "https://researchmap.jp/read0054621/published_papers/52826164": {
+    "paper_url": "https://researchmap.jp/read0054621/published_papers/52826164",
+    "lang": "en",
+    "title": "種痘接種50～80年を経た被接種者のワクチン効果の持続状況の検証 石川県志賀町における疫学調査",
+    "authors": "新田 サラ, 森田 武志, 山本 祐太朗, 辻口 博聖, 唐島 成宙, 南保 英孝, 所 正治, 原 章規, 中村 裕之, 渡士 幸一 …",
+    "abstract": "",
+    "keywords": [],
+    "doi": ""
+  },
+  "https://researchmap.jp/read0054621/published_papers/46522716": {
+    "paper_url": "https://researchmap.jp/read0054621/published_papers/46522716",
+    "lang": "en",
+    "title": "Prediction and causal inference of cardiovascular and cerebrovascular diseases based on lifestyle questionnaires.",
+    "authors": "Riku Nambo, Shigehiro Karashima, Ren Mizoguchi, Seigo Konishi, Atsushi Hashimoto, Daisuke Aono, Mitsuhiro Kometani, Kenji Furukawa, Takashi Yoneda, Kousuke Imamura …",
+    "abstract": "Cardiovascular and cerebrovascular diseases (CCVD) are prominent mortality causes in Japan, necessitating effective preventative measures, early diagnosis, and treatment to mitigate their impact. A diagnostic model was developed to identify patients with ischemic heart disease (IHD), stroke, or both, using specific health examination data. Lifestyle habits affecting CCVD development were analyzed using five causal inference methods. This study included 473,734 patients aged ≥ 40 years who underwent specific health examinations in Kanazawa, Japan between 2009 and 2018 to collect data on basic physical information, lifestyle habits, and laboratory parameters such as diabetes, lipid metabolism, renal function, and liver function. Four machine learning algorithms were used: Random Forest, Logistic regression, Light Gradient Boosting Machine, and eXtreme-Gradient-Boosting (XGBoost). The XGBoost model exhibited superior area under the curve (AUC), with mean values of 0.770 (± 0.003), 0.758 (± 0.003), and 0.845 (± 0.005) for stroke, IHD, and CCVD, respectively. The results of the five causal inference analyses were summarized, and lifestyle behavior changes were observed after the onset of CCVD. A causal relationship from 'reduced mastication' to 'weight gain' was found for all causal species theory methods. This prediction algorithm can screen for asymptomatic myocardial ischemia and stroke. By selecting high-risk patients suspected of having CCVD, resources can be used more efficiently for secondary testing.",
+    "keywords": [],
+    "doi": "https://doi.org/10.1038/s41598-024-61047-w"
+  },
+  "https://researchmap.jp/read0054621/published_papers/44177745": {
+    "paper_url": "https://researchmap.jp/read0054621/published_papers/44177745",
+    "lang": "en",
+    "title": "Plant Biopotential Sensing Based on Generative Adversarial Networks for Environmental Anomaly Detection",
+    "authors": "Hanqing Zhao, Hidetaka Nambo",
+    "abstract": "",
+    "keywords": [],
+    "doi": "https://doi.org/10.1109/jsen.2023.3323147"
+  },
+  "https://researchmap.jp/nishiwaki_yuri/published_papers/51179227": {
+    "paper_url": "https://researchmap.jp/nishiwaki_yuri/published_papers/51179227",
+    "lang": "en",
+    "title": "Application of Strong Acids for Enhanced Woody Film Production from Ball-Milled Wood",
+    "authors": "Yuri Nishiwaki-Akine, Midori Tsukane, Tomohiro Hashizume, Takashi Watanabe",
+    "abstract": "",
+    "keywords": [],
+    "doi": "https://doi.org/10.1021/acssuschemeng.5c07063"
+  },
+  "https://researchmap.jp/nishiwaki_yuri/published_papers/40681187": {
+    "paper_url": "https://researchmap.jp/nishiwaki_yuri/published_papers/40681187",
+    "lang": "en",
+    "title": "Development of novel materials by the dissolution of wood in carboxylic acid",
+    "authors": "Yuri Nishiwaki-Akine, Takashi Watanabe",
+    "abstract": "",
+    "keywords": [],
+    "doi": ""
+  },
+  "https://researchmap.jp/nishiwaki_yuri/published_papers/24588037": {
+    "paper_url": "https://researchmap.jp/nishiwaki_yuri/published_papers/24588037",
+    "lang": "en",
+    "title": "Biodegradability of woody film produced by solvent volatilisation of Japanese Beech solution",
+    "authors": "Yuri Nishiwaki-Akine, Sui Kanazawa, Norihisa Matsuura, Ryoko Yamamoto-Ikemoto",
+    "abstract": "",
+    "keywords": [],
+    "doi": "https://doi.org/10.1038/s41598-019-57228-7"
+  },
+  "https://researchmap.jp/nishiwaki_yuri/published_papers/23453084": {
+    "paper_url": "https://researchmap.jp/nishiwaki_yuri/published_papers/23453084",
+    "lang": "en",
+    "title": "Transparent Woody Film Made by Dissolution of Finely Divided Japanese Beech in Formic Acid at Room Temperature",
+    "authors": "Yuri Nishiwaki-Akine, Sui Kanazawa, Takashi Uneyama, Koh-hei Nitta, Ryoko Yamamoto-Ikemoto, Takashi Watanabe",
+    "abstract": "",
+    "keywords": [],
+    "doi": "https://doi.org/10.1021/acssuschemeng.7b02839"
+  },
+  "https://researchmap.jp/nishiwaki_yuri/published_papers/53648228": {
+    "paper_url": "https://researchmap.jp/nishiwaki_yuri/published_papers/53648228",
+    "lang": "en",
+    "title": "Mushroom Volatile Compounds Mediate Avoidance Behavior in a Mycophagous Slug and Differential Responses inDrosophilaFlies",
+    "authors": "Drosophila",
+    "abstract": "",
+    "keywords": [],
+    "doi": "https://doi.org/10.3390/ani16101444"
+  },
+  "https://researchmap.jp/akihiro_nomura/published_papers/54746393": {
+    "paper_url": "https://researchmap.jp/akihiro_nomura/published_papers/54746393",
+    "lang": "en",
+    "title": "Transformer-Based Survival Model for Cardiovascular Risk Prediction from Longitudinal Health Checkup Data",
+    "authors": "Shota Tsurimoto, Akihiro Nomura, Yoshiki Nagata, Masahiro Noguchi, Tadayuki Hirai, Yasuaki Takeji, Hayato Tada, Kenji Sakata, Soichiro Usui, Shogo Okada …",
+    "abstract": "",
+    "keywords": [],
+    "doi": "https://doi.org/10.64898/2026.08.24.26361274"
+  },
+  "https://researchmap.jp/akihiro_nomura/published_papers/51988792": {
+    "paper_url": "https://researchmap.jp/akihiro_nomura/published_papers/51988792",
+    "lang": "en",
+    "title": "Acute Physiological and Emotional Responses to a Brief 24-Minute Yoga Session: Randomized Exploratory Pilot Study With Waitlist Comparison",
+    "authors": "Ying Zhou, Ping Chen, Yuma Morisaki, Naoko Yamada, Risa Kuwahara, Atsuro Tsutsumi, Akihiro Nomura",
+    "abstract": "",
+    "keywords": [],
+    "doi": "https://doi.org/10.2196/87077"
+  },
+  "https://researchmap.jp/akihiro_nomura/published_papers/53021661": {
+    "paper_url": "https://researchmap.jp/akihiro_nomura/published_papers/53021661",
+    "lang": "en",
+    "title": "Clinical Trial on the Usefulness of an Intensive Low-Density Lipoprotein Cholesterol Treatment and Familial Hypercholesterolemia Screening Clinical Pathway for Acute Coronary Syndrome: The Hokuriku-plus Acute Coronary Syndrome Registry Study - Rationale and Study Design.",
+    "authors": "Hayato Tada, Yasuaki Takeji, Chiaki Goten, Oto Inoue, Hirofumi Okada, Shohei Yoshida, Masaya Shimojima, Akihiro Nomura, Mika Mori, Shin-Ichiro Takashima …",
+    "abstract": "BACKGROUND: Acute coronary syndrome (ACS) is the critical situation caused by decreased blood flow of the coronary arteries. The most recent clinical guideline compiled by the Japanese Circulation Society (JCS) recommends lowering low-density lipoprotein cholesterol (LDL-C) to <70 mg/dL in patients with ACS, because of the lack of clinical evidence. It has been shown that there are substantial numbers of patients with familial hypercholesterolemia (FH) among ACS patients. On this basis, we intend assembling a multicenter registry to establish the evidence for lowering LDL-C <55 mg/dL while also clarifying the proportion of FH patients among Japanese ACS patients using a prespecified clinical pathway. METHODS AND RESULTS: The Hokuriku-plus ACS registry is a prospective, observational, multicenter cohort study, enrolling consecutive ACS patients from 14 participating hospitals in Hokuriku region of Japan from October 2025 to September 2027. A total of 1,000 patients will be enrolled followed over 1 year. The primary endpoint is the proportion of patients who attain LDL-C <55 mg/dL at 4 weeks. This study has been registered at the Japan Registry of Clinical Trials (jRCT1040250123). CONCLUSIONS: We will disseminate the final results at international conferences and in a peer-reviewed journal.",
+    "keywords": [],
+    "doi": "https://doi.org/10.1253/circrep.CR-25-0289"
+  },
+  "https://researchmap.jp/akihiro_nomura/published_papers/53021668": {
+    "paper_url": "https://researchmap.jp/akihiro_nomura/published_papers/53021668",
+    "lang": "en",
+    "title": "Risk Prediction Models of Cardiotoxicity in Patients With Breast Cancer: Multicenter Prospective CHECK HEART-BC Study.",
+    "authors": "Yosuke Terui, Kotaro Nochioka, Hideki Ota, Hiroshi Tada, Haruka Sato, Satoshi Miyata, Shigeru Toyoda, Shu Inami, Akihiro Nomura, Masaya Shimojima …",
+    "abstract": "BACKGROUND: Early detection and treatment of cardiotoxicity are essential for reducing cardiac events. However, a reliable predictive model for cardiotoxicity in patients with breast cancer receiving chemotherapy is lacking. OBJECTIVES: In this study, we aimed to develop a risk prediction model and establish effective surveillance for cardiotoxicity in patients with breast cancer undergoing chemotherapy. METHODS: Patients with breast cancer scheduled for neoadjuvant and/or adjuvant chemotherapy were prospectively screened at 25 participating institutions between August 2017 and March 2020. Cardiotoxicity was defined as a reduction in left ventricular ejection fraction of >10% from baseline to a value <53%. RESULTS: The study included 559 chemotherapy-naïve female patients. Cardiotoxicity was observed in 46 of 559 patients (8.2%) during a median follow-up period of 366 days (Q1-Q3: 365-367 days). The CHECK HEART (Comprehensive Heart Imaging to Evaluate Cardiac Damage Linked With Chemotherapy in Breast Cancer Patients) score consisted of 6 variables: heart rate, left ventricular global longitudinal strain, left ventricular end-systolic and end-diastolic diameters, right ventricular fractional area change, and treatment with anthracycline and trastuzumab. The time-dependent area under the receiver operating characteristic curve (AUC) at 12 months based on pretreatment data showed acceptable accuracy (AUC: 0.82; 95% CI: 0.76-0.89). CONCLUSIONS: The developed multivariable risk prediction models can accurately predict cardiotoxicity and support effective surveillance in patients with breast cancer receiving chemotherapy.",
+    "keywords": [],
+    "doi": "https://doi.org/10.1016/j.jacasi.2025.08.018"
+  },
+  "https://researchmap.jp/akihiro_nomura/published_papers/53021669": {
+    "paper_url": "https://researchmap.jp/akihiro_nomura/published_papers/53021669",
+    "lang": "en",
+    "title": "Digital hypertension - what we need for the high-quality management of hypertension in the new era.",
+    "authors": "Kazuomi Kario, Kei Asayama, Hisatomi Arima, Chisa Matsumoto, Naoki Nakagawa, Akihiro Nomura, Michihiro Satoh, Keisuke Shinohara, Naoko Tomitani, Koichi Yamamoto …",
+    "abstract": "Digital technologies are playing an increasing role in hypertension management. Digital hypertension is a new field that integrates advancing technologies into hypertension management. This research area encompasses various aspects of digital transformation technologies, including the development of novel blood pressure (BP) measurement devices-whether cuffless or cuff-based sensors-the transmission of large-scale time-series BP data, cloud-based computing and analysis of BP indices, presentation of the results, and feedback systems for both patients and physicians. A key component of this approach is novel blood pressure (BP) monitoring devices. This article summarizes the latest information and discussions about \"held at the 2024 Japan Society of Hypertension scientific meeting. Novel BP monitoring includes cuffless devices that estimate BP, but cuffless devices require achieving accuracy without the need for calibration using conventional cuff-based devices. New BP monitoring devices can provide information on novel biomarkers beyond BP and may improve risk assessment and outcomes. Integration of BP data with omics and clinical information should enable personalized hypertension management. Key data gaps relating to novel BP monitoring devices are accuracy/validation in different settings/populations, association between BP metrics and hard clinical outcomes, and measurement/interpretation of BP variability data. Human- and health system-related factors also need to be addressed or overcome before these devices can be successfully integrated into routine clinical practice. If these things can be achieved, new BP monitoring technologies could transform hypertension management and play a pivotal role in the future of remote healthcare. This article summarizes the latest information and discussions about digital hypertension from the Digital Hypertension symposium that took place during the 2024 Japan Society of Hypertension scientific meeting.",
+    "keywords": [],
+    "doi": "https://doi.org/10.1038/s41440-025-02307-8"
+  },
+  "https://researchmap.jp/nhayashi72/published_papers/48117260": {
+    "paper_url": "https://researchmap.jp/nhayashi72/published_papers/48117260",
+    "lang": "en",
+    "title": "Patrols to Prevent the Dumping of Garbage at Irrigation Ponds.",
+    "authors": "Naoki HAYASHI, Tsuyoshi TAKAHASHI",
+    "abstract": "",
+    "keywords": [],
+    "doi": "https://doi.org/10.2750/arp.21.21-suppl_37"
+  },
+  "https://researchmap.jp/nhayashi72/published_papers/48117257": {
+    "paper_url": "https://researchmap.jp/nhayashi72/published_papers/48117257",
+    "lang": "en",
+    "title": "Measures Derived from Classification of Problems on the Managements of Irrigation Ponds by Multivariate Analysis",
+    "authors": "Naoki HAYASHI, Tsuyoshi TAKAHASHI",
+    "abstract": "",
+    "keywords": [],
+    "doi": ""
+  },
+  "https://researchmap.jp/nhayashi72/published_papers/48117252": {
+    "paper_url": "https://researchmap.jp/nhayashi72/published_papers/48117252",
+    "lang": "en",
+    "title": "Fundamental study on risk factors for drowning in irrigation ponds.",
+    "authors": "Naoki HAYASHI, Tsuyoshi TAKAHASHI",
+    "abstract": "",
+    "keywords": [],
+    "doi": "https://doi.org/10.2750/arp.20.20-suppl_85"
+  },
+  "https://researchmap.jp/nhayashi72/published_papers/48168884": {
+    "paper_url": "https://researchmap.jp/nhayashi72/published_papers/48168884",
+    "lang": "en",
+    "title": "The Actual Situation of the People’s Inconvenience of Grocery Shopping and Measures to Improve the Situation",
+    "authors": "Tatsuya Sekiguchi, Naoki Hayashi, Yuuki Terada, Hiroaki Sugino",
+    "abstract": "",
+    "keywords": [],
+    "doi": "https://doi.org/10.11361/journalcpij.59.118"
+  },
+  "https://researchmap.jp/nhayashi72/published_papers/48168869": {
+    "paper_url": "https://researchmap.jp/nhayashi72/published_papers/48168869",
+    "lang": "en",
+    "title": "“Future Compass”, a Tool That Allows Us to See the Right Horizon—Integration of Topic Modeling and Multiple-Factor Analysis",
+    "authors": "Hiroaki Sugino, Tatsuya Sekiguchi, Yuuki Terada, Naoki Hayashi",
+    "abstract": "Coastal social–ecological systems (SES), particularly in large bays, are critical for fisheries, transportation, and disaster prevention in island and coastal countries. To achieve the sustainability of such bays, public involvement is recently considered inevitable for planning and management, but the increasing complexity of variables and future visions to be considered is one difficulty when trying to include many stakeholders and public opinions. To address this challenge, a free-associative description questionnaire survey was used in this study to extract holistic coastal residents’ future visions for Tokyo Bay, including both positive and negative outcomes. By integrating biterm topic modeling (BTM) and multiple-factor analysis (MFA), this study succeeded to aggregate and visualize the various future visions of Tokyo Bay with enhanced comprehensibility. As one outcome, the linkages and differences between the major topics in the positive and negative future visions were visualized as vectors in a correlation circle. Also, the study found that these two kinds of future vectors are not always polar opposites, but, rather, some of them are interlinked, pointing in the same direction. This highlights the importance of measuring the balance between two kinds of future vectors in consensus-building in order to search for the optimal future direction. Finally, the study discusses the potential of this method as a “Future Compass”, for implementing future-oriented consensus-building toward the sustainability of SES.",
+    "keywords": [],
+    "doi": "https://doi.org/10.3390/su151310175"
+  },
+  "https://researchmap.jp/hayashi2523/published_papers/54239761": {
+    "paper_url": "https://researchmap.jp/hayashi2523/published_papers/54239761",
+    "lang": "en",
+    "title": "An algorithm to calculate physical density of biomedical objects having 3 ≤ Zeff ≤ 20: an application study using clinical photon-counting computed tomography equipment",
+    "authors": "Hiroaki Hayashi, Rina Nishigami, Takashi Asahara, Natsumi Kimoto, Daiki Kobayashi, Mana Mitani, Noriaki Akagi, Fumiyo Higaki, Toshihiro Iguchi",
+    "abstract": "",
+    "keywords": [],
+    "doi": "https://doi.org/10.1016/j.apradiso.2026.112768"
+  },
+  "https://researchmap.jp/hayashi2523/published_papers/50307327": {
+    "paper_url": "https://researchmap.jp/hayashi2523/published_papers/50307327",
+    "lang": "en",
+    "title": "Impact of different X-ray tube positions on actual dose measurements during CT examinations -An effect of patient physique-",
+    "authors": "Hiroaki Hayashi, Tatsuya Maeda, Kazuki Takegami, Sota Goto, Takashi Asahara, Natsumi Kimoto, Rina Nishigami, Daiki Kobayashi, Yuki Kanazawa, Kazuta Yamashita …",
+    "abstract": "",
+    "keywords": [],
+    "doi": "https://doi.org/10.1016/j.radphyschem.2025.113001"
+  },
+  "https://researchmap.jp/hayashi2523/published_papers/54799443": {
+    "paper_url": "https://researchmap.jp/hayashi2523/published_papers/54799443",
+    "lang": "en",
+    "title": "Impact of correcting beam hardening and detector response function in photon-counting X-ray imaging when using anti-coincidence mode",
+    "authors": "Hiroaki Hayashi, Rina Nishigami, Daiki Kobayashi, Takuya Kasue, Natsumi Kimoto, Takashi Asahara",
+    "abstract": "",
+    "keywords": [],
+    "doi": "https://doi.org/10.1016/j.net.2026.104678"
+  },
+  "https://researchmap.jp/hayashi2523/published_papers/54355678": {
+    "paper_url": "https://researchmap.jp/hayashi2523/published_papers/54355678",
+    "lang": "en",
+    "title": "Potential of quantitative X‐ray imaging from photon‐counting CT: A novel analysis based on effective atomic number and physical density",
+    "authors": "Takashi Asahara, Rina Nishigami, Natsumi Kimoto, Mana Mitani, Yusuke Morimitsu, Noriaki Akagi, Fumiyo Higaki, Toshihiro Iguchi, Takao Hiraki, Hiroaki Hayashi",
+    "abstract": "27",
+    "keywords": [],
+    "doi": "https://doi.org/10.1002/acm2.70673"
+  },
+  "https://researchmap.jp/hayashi2523/published_papers/54193424": {
+    "paper_url": "https://researchmap.jp/hayashi2523/published_papers/54193424",
+    "lang": "en",
+    "title": "Calibration of diffusion MRI measurements using aqueous glycerin phantoms with controlled viscosity",
+    "authors": "Mayuka Seguchi, Yuki Kanazawa, Tosiaki Miyati, Masafumi Harada, Mitsuharu Miyoshi, Hiroaki Hayashi, Tetsuya Wakayama, Akihiro Haga",
+    "abstract": "",
+    "keywords": [],
+    "doi": "https://doi.org/10.1007/s12194-026-01083-5"
+  },
+  "https://researchmap.jp/hisakadom/published_papers/48455701": {
+    "paper_url": "https://researchmap.jp/hisakadom/published_papers/48455701",
+    "lang": "en",
+    "title": "Deformation of Marchenko-Pastur distribution for the correlated time series",
+    "authors": "Masato Hisakado, Takuya Kaneko",
+    "abstract": "",
+    "keywords": [],
+    "doi": ""
+  },
+  "https://researchmap.jp/hisakadom/published_papers/24712087": {
+    "paper_url": "https://researchmap.jp/hisakadom/published_papers/24712087",
+    "lang": "en",
+    "title": "Phase transition in the Bayesian estimation of the default portfolio",
+    "authors": "M Hisakado, S Mori",
+    "abstract": "",
+    "keywords": [],
+    "doi": ""
+  },
+  "https://researchmap.jp/hisakadom/published_papers/54375406": {
+    "paper_url": "https://researchmap.jp/hisakadom/published_papers/54375406",
+    "lang": "en",
+    "title": "Deformation of semicircle law for correlated time series and Phase transition",
+    "authors": "Masato Hisakado, Takuya Kaneko",
+    "abstract": "",
+    "keywords": [],
+    "doi": ""
+  },
+  "https://researchmap.jp/hisakadom/published_papers/51369314": {
+    "paper_url": "https://researchmap.jp/hisakadom/published_papers/51369314",
+    "lang": "en",
+    "title": "Structural Properties of the Asymmetric Barabási-Albert Model in the Lattice Limit",
+    "authors": "Kazuaki Nakayama, Masato Hisakado, Shintaro Mori",
+    "abstract": "",
+    "keywords": [],
+    "doi": ""
+  },
+  "https://researchmap.jp/hisakadom/published_papers/48510097": {
+    "paper_url": "https://researchmap.jp/hisakadom/published_papers/48510097",
+    "lang": "en",
+    "title": "α Annealing of Ant Colony Optimization in the infinite-range Ising model",
+    "authors": "Shintaro Mori, Taiyo Shimizu, Masato Hisakado, Kazuaki Nakayama",
+    "abstract": "",
+    "keywords": [],
+    "doi": ""
+  },
+  "https://researchmap.jp/read0200927/published_papers/53363299": {
+    "paper_url": "https://researchmap.jp/read0200927/published_papers/53363299",
+    "lang": "en",
+    "title": "Visual Bioethical Research on Prototypes for the Social Implementation of Artificial Wombs",
+    "authors": "HIBINO, Yuri",
+    "abstract": "",
+    "keywords": [],
+    "doi": ""
+  },
+  "https://researchmap.jp/read0200927/published_papers/36328025": {
+    "paper_url": "https://researchmap.jp/read0200927/published_papers/36328025",
+    "lang": "en",
+    "title": "The right to know of genetic heritage of donor conceived adult in each state of Australia.",
+    "authors": "HIBINO YURI",
+    "abstract": "",
+    "keywords": [],
+    "doi": ""
+  },
+  "https://researchmap.jp/read0200927/published_papers/13902550": {
+    "paper_url": "https://researchmap.jp/read0200927/published_papers/13902550",
+    "lang": "en",
+    "title": "What is Desirable Policy with Respect to Children's Right to Know Their Genetic Origins",
+    "authors": "What is Desirable Policy with Respect to Children's Right to Know Their Genetic Origins",
+    "abstract": "",
+    "keywords": [],
+    "doi": ""
+  },
+  "https://researchmap.jp/read0200927/published_papers/13902551": {
+    "paper_url": "https://researchmap.jp/read0200927/published_papers/13902551",
+    "lang": "en",
+    "title": "Response to Reproductive Tourism : Australia's Case",
+    "authors": "HIBINO YURI",
+    "abstract": "",
+    "keywords": [],
+    "doi": ""
+  },
+  "https://researchmap.jp/read0200927/published_papers/20825323": {
+    "paper_url": "https://researchmap.jp/read0200927/published_papers/20825323",
+    "lang": "en",
+    "title": "臨床試験としての子宮移植",
+    "authors": "臨床試験としての子宮移植",
+    "abstract": "",
+    "keywords": [],
+    "doi": ""
+  },
+  "https://researchmap.jp/megumifutatsugi/published_papers/18303463": {
+    "paper_url": "https://researchmap.jp/megumifutatsugi/published_papers/18303463",
+    "lang": "en",
+    "title": "A Cooperative Learning System for Financial Education Using ICT",
+    "authors": "Megumi Futatsugi, Kyoko Ojima, Yoshihiro Takata, Yoshiya Kasahara, Chiho Oyabu, Kimikazu Sugimori",
+    "abstract": "",
+    "keywords": [],
+    "doi": "https://doi.org/10.1109/IIAI-AAI.2019.00226"
+  },
+  "https://researchmap.jp/megumifutatsugi/published_papers/10665418": {
+    "paper_url": "https://researchmap.jp/megumifutatsugi/published_papers/10665418",
+    "lang": "en",
+    "title": "Development of the Life Simulator Web Application for Classroom Use",
+    "authors": "Megumi Futatsugi, Chiho Oyabu, Ayumi Suzuki",
+    "abstract": "",
+    "keywords": [],
+    "doi": ""
+  },
+  "https://researchmap.jp/megumifutatsugi/published_papers/52022684": {
+    "paper_url": "https://researchmap.jp/megumifutatsugi/published_papers/52022684",
+    "lang": "en",
+    "title": "Evaluating the Educational Effectiveness of a Microcontroller Simulator for Beginners",
+    "authors": "Shogo YAMAGISHI, Ren SHIMIZU, Akitaka HIGASHI, Megumi FUTATSUGI",
+    "abstract": "",
+    "keywords": [],
+    "doi": "https://doi.org/10.34385/proc.95.18"
+  },
+  "https://researchmap.jp/megumifutatsugi/published_papers/52022642": {
+    "paper_url": "https://researchmap.jp/megumifutatsugi/published_papers/52022642",
+    "lang": "en",
+    "title": "Proceedings of the 20th International Conference on Knowledge, Information and Creativity Support Systems (KICSS 2025)",
+    "authors": "Shogo YAMAGISHI, Ren SHIMIZU, Akitaka HIGASHI, Megumi FUTATSUGI",
+    "abstract": "",
+    "keywords": [],
+    "doi": ""
+  },
+  "https://researchmap.jp/megumifutatsugi/published_papers/52022634": {
+    "paper_url": "https://researchmap.jp/megumifutatsugi/published_papers/52022634",
+    "lang": "en",
+    "title": "A Student-Led Virtual Shop Initiative for Food Loss Reduction: Practical Insights from a Regional Collaboration Project",
+    "authors": "Yoshihisa SASABAYASHI, Sougo KANAZAKI, Akitaka HIGASHI, Megumi FUTATSUGI",
+    "abstract": "",
+    "keywords": [],
+    "doi": "https://doi.org/10.34385/proc.95.19"
+  },
+  "https://researchmap.jp/yuhori/published_papers/54879879": {
+    "paper_url": "https://researchmap.jp/yuhori/published_papers/54879879",
+    "lang": "en",
+    "title": "Revisiting the Mechanism of Fluoroacetate Dehalogenase-Catalyzed Degradation of Fluorocarboxylic Acid via Cluster Models",
+    "authors": "Manussada Ratanasak, Yuta Hori, Kohei Sato, Thanyada Rungrotmongkol, Yasuteru Shigeta",
+    "abstract": "Fluoroacetate dehalogenase (FAcD) is a unique, nonmetal-dependent enzyme capable of cleaving the inert C–F bond of fluoroacetate (FA) under mild conditions, making it an important enzymatic model for organofluorine degradation. This study investigated the catalytic degradation mechanism of FA by FAcD using density functional theory calculations with an active-site cluster model. The model included the FA substrate, two crystallographic water molecules, and the key amino acid residues surrounding the active site. An integrated energy profile connecting defluorination and hydrolysis was obtained within a single computational framework. The calculated reaction pathway consists of four elementary steps: (I) C–F bond activation, (II) nucleophilic attack, (III) C–O bond cleavage, and (IV) proton transfer. Structural analyses showed that Arg111, Arg114, and Tyr219 stabilize the carboxylate group of FA and His155, Trp156, and Tyr219 stabilize the fluoride anion during C–F bond cleavage. Furthermore, His155 was suggested to activate the hydrolytic water molecule and participate directly in the nucleophilic attack step. These findings provide a unified quantum-chemical description of FAcD-catalyzed defluorination and hydrolysis and offer insights into the design of engineered enzymes and biomimetic catalysts for organofluorine degradation.",
+    "keywords": [],
+    "doi": "https://doi.org/10.1021/acs.jpcb.6c03397"
+  },
+  "https://researchmap.jp/yuhori/published_papers/53639907": {
+    "paper_url": "https://researchmap.jp/yuhori/published_papers/53639907",
+    "lang": "en",
+    "title": "2-Mercaptophenylboronic acid: a superior alternative to 2-mercaptoethanol for thioester hydrolysis",
+    "authors": "Kohei Sato, Takaya Yamamoto, Manussada Ratanasak, Yuta Hori, Tenta Ito, Masaya Denda, Tetsuo Narumi, Yasuteru Shigeta, Akira Otaka, Nobuyuki Mase",
+    "abstract": "2-Mercaptophenylboronic acid (2-MPBA) facilitates the efficient hydrolysis of peptide thioesters under mild conditions via tandem thiol–thioester exchange and borate-assisted water activation.",
+    "keywords": [],
+    "doi": "https://doi.org/10.1039/d6ob00342g"
+  },
+  "https://researchmap.jp/yuhori/published_papers/53639921": {
+    "paper_url": "https://researchmap.jp/yuhori/published_papers/53639921",
+    "lang": "en",
+    "title": "Sequential, Multistep, and Cooperative Helicity Evolution in Supramolecular Polymers of Chlorophyll Rosettes",
+    "authors": "Balaraman Vedhanarayanan, Ryoma Tsuchida, Ryo Kudo, Hiroki Hanayama, Sougata Datta, K. C. Seetha Lakshmi, Hitoshi Tamiaki, Nobuyuki Hara, Yuta Hori, Sarah E. Rogers …",
+    "abstract": "",
+    "keywords": [],
+    "doi": "https://doi.org/10.1021/jacs.6c03125"
+  },
+  "https://researchmap.jp/yuhori/published_papers/53341409": {
+    "paper_url": "https://researchmap.jp/yuhori/published_papers/53341409",
+    "lang": "en",
+    "title": "Desorption dynamics of interstellar molecule on amorphous solid water investigated by machine learning potential-based PaCS-MD simulation",
+    "authors": "Natsuki Watanabe, Johannes Kästner, Yuta Hori, Yasuteru Shigeta, Mitsuo Shoji, Ryuhei Harada",
+    "abstract": "Molecular adsorption, diffusion, reaction, and desorption on interstellar amorphous solid water (ASW) dominate the chemical processes in interstellar molecular clouds. Elucidating the chemical evolution in molecular clouds requires understanding the interactions between molecules and the ASW surface. Investigating the dynamics on ASW surfaces requires highly accurate and efficient molecular dynamics (MD) simulations. This study proposes a computational scheme that combines a rare-event sampling method, parallel cascade selection MD (PaCS-MD), with machine learning potential-based MD (MLP-MD), referred to as PaCS-MLP-MD. Because PaCS-MLP-MD explores rare-event dynamics without applying external forces or increasing the temperature, it provides a suitable framework for investigating astrochemically relevant molecular processes. Using PaCS-MLP-MD simulations, we simulated desorption of aminoacetonitrile (AAN) from an ASW surface model. Two potential desorption processes were identified: one in which the amino group desorbs first, followed by the nitrile group, and another in which the nitrile group desorbs first, followed by the amino group. Additional unbiased MLP-MD simulations, initiated from representative PaCS-MLP-MD snapshots, were performed to reveal desorption and re-adsorption behaviors of AAN on the ASW surface. These new findings from the PaCS-MLP-MD simulations may contribute to a more detailed understanding of processes occurring on ASW surfaces in molecular cloud environments.",
+    "keywords": [],
+    "doi": "https://doi.org/10.1063/5.0325531"
+  },
+  "https://researchmap.jp/yuhori/published_papers/52936206": {
+    "paper_url": "https://researchmap.jp/yuhori/published_papers/52936206",
+    "lang": "en",
+    "title": "Proton Tautomerism for Anhydrous Superprotonic Conduction in 1,2,3‐Triazolium Dihydrogen Phosphate Crystal",
+    "authors": "Kaito Nishioka, Shun Dekura, Tomoko Fujino, Motohiro Mizuno, Reiji Kumai, Bo Thomsen, Motoyuki Shiga, Yuta Hori, Yasuteru Shigeta, Hatsumi Mori",
+    "abstract": "Proton dynamics within molecular organic solids are crucial for energy‐related technologies. Proton conductors for use as solid electrolytes in hydrogen fuel cells have been developed, elucidating the higher proton transport mechanism and establishing design guidelines for higher conduction. Many anhydrous proton conductors for proton transport utilizing molecular motion in solids have been studied; however, low‐barrier conduction is challenging. In this study, we addressed proton tautomerism as a new guideline for proton conduction, rather than molecular motion. The key to facilitating low‐barrier conduction is proton transport without molecular motion via dynamic interconversion between multiple tautomers. We demonstrated the effectiveness of proton‐tautomerism strategy in 1,2,3‐triazole dihydrogen phosphate crystal, which exhibited low‐barrier, isotropic superprotonic conductivity exceeding 10 −3 S cm −1 . Both theoretical and experimental results confirmed that superprotonic conduction originates from proton tautomerism, demonstrating for the first time that proton tautomerism can serve as a design guide for highly efficient anhydrous proton conductors.",
+    "keywords": [],
+    "doi": "https://doi.org/10.1002/anie.202520785"
+  },
+  "https://researchmap.jp/matsushimad/published_papers/25030117": {
+    "paper_url": "https://researchmap.jp/matsushimad/published_papers/25030117",
+    "lang": "en",
+    "title": "新興国市場展開によるイノベーション〜日系中小企業の新興アジア展開を契機としたイノベーションの考察〜",
+    "authors": "松島大輔",
+    "abstract": "",
+    "keywords": [],
+    "doi": ""
+  },
+  "https://researchmap.jp/matsushimad/published_papers/30158078": {
+    "paper_url": "https://researchmap.jp/matsushimad/published_papers/30158078",
+    "lang": "en",
+    "title": "Supporting Agency for Transnational Innovation",
+    "authors": "Daisuke Matsushima",
+    "abstract": "",
+    "keywords": [],
+    "doi": ""
+  },
+  "https://researchmap.jp/matsushimad/published_papers/22187488": {
+    "paper_url": "https://researchmap.jp/matsushimad/published_papers/22187488",
+    "lang": "en",
+    "title": "2018年度日・タイ経済協力セミナー 脱日本化するタイに取り残された日本 : 越境型イノベーションに活路を拓く企業群像",
+    "authors": "松島大輔",
+    "abstract": "",
+    "keywords": [],
+    "doi": ""
+  },
+  "https://researchmap.jp/matsushimad/published_papers/22166071": {
+    "paper_url": "https://researchmap.jp/matsushimad/published_papers/22166071",
+    "lang": "en",
+    "title": "越境型イノベーションとは？～その生成と展開",
+    "authors": "松島大輔",
+    "abstract": "",
+    "keywords": [],
+    "doi": ""
+  },
+  "https://researchmap.jp/matsushimad/published_papers/22187487": {
+    "paper_url": "https://researchmap.jp/matsushimad/published_papers/22187487",
+    "lang": "en",
+    "title": "アントレプレナーシップ教育における「イノベーション」の意義 ―長崎ブレークスルーを中核としたグローバル・アントレプレナー シップ教育―",
+    "authors": "松島大輔",
+    "abstract": "",
+    "keywords": [],
+    "doi": ""
+  },
+  "https://researchmap.jp/7000007275/published_papers/24717160": {
+    "paper_url": "https://researchmap.jp/7000007275/published_papers/24717160",
+    "lang": "en",
+    "title": "事業者の意識と参加にみるオープンファクトリーの持続性―新潟県燕三条地域を事例として―",
+    "authors": "丸谷耕太, 石田和晋",
+    "abstract": "",
+    "keywords": [],
+    "doi": ""
+  },
+  "https://researchmap.jp/7000007275/published_papers/16369612": {
+    "paper_url": "https://researchmap.jp/7000007275/published_papers/16369612",
+    "lang": "en",
+    "title": "生態系を活用した防災・減災と観光の役割に関する基礎的研究",
+    "authors": "丸谷耕太",
+    "abstract": "",
+    "keywords": [],
+    "doi": ""
+  },
+  "https://researchmap.jp/7000007275/published_papers/16369606": {
+    "paper_url": "https://researchmap.jp/7000007275/published_papers/16369606",
+    "lang": "en",
+    "title": "Actions for cultural sustainability through craft tourism in Kanazawa",
+    "authors": "Kota MARUYA",
+    "abstract": "",
+    "keywords": [],
+    "doi": ""
+  },
+  "https://researchmap.jp/7000007275/published_papers/16369518": {
+    "paper_url": "https://researchmap.jp/7000007275/published_papers/16369518",
+    "lang": "en",
+    "title": "Community spaces in the minds of traditional craftsmen in a pottery village in Japan",
+    "authors": "Kota Maruya, Sampei Yamashita, Tadashi Uchiyama",
+    "abstract": "",
+    "keywords": [],
+    "doi": "https://doi.org/10.1016/j.foar.2015.05.002"
+  },
+  "https://researchmap.jp/7000007275/published_papers/32315262": {
+    "paper_url": "https://researchmap.jp/7000007275/published_papers/32315262",
+    "lang": "en",
+    "title": "Transformation of Pottery-Relevant Cultural Landscape in the Village of Koishiwara",
+    "authors": "丸谷耕太, 山下三平, 内山忠, 小川勇樹",
+    "abstract": "",
+    "keywords": [],
+    "doi": ""
+  },
+  "https://researchmap.jp/y-mizuuchi/published_papers/47218639": {
+    "paper_url": "https://researchmap.jp/y-mizuuchi/published_papers/47218639",
+    "lang": "en",
+    "title": "Does nationality affect landscape perceptions of urban sacred forests? A Japan–China cross-cultural comparison",
+    "authors": "Yusuke Mizuuchi, Kazuhiko W. Nakamura",
+    "abstract": "",
+    "keywords": [],
+    "doi": "https://doi.org/10.1002/2475-8876.12460"
+  },
+  "https://researchmap.jp/y-mizuuchi/published_papers/43588964": {
+    "paper_url": "https://researchmap.jp/y-mizuuchi/published_papers/43588964",
+    "lang": "en",
+    "title": "What on-site landscape experiences attract potential visitors to a site? A Japan–Korea cross-cultural comparison",
+    "authors": "Yusuke Mizuuchi, Yonghoon Son",
+    "abstract": "",
+    "keywords": [],
+    "doi": "https://doi.org/10.1080/13416979.2023.2257456"
+  },
+  "https://researchmap.jp/y-mizuuchi/published_papers/32483900": {
+    "paper_url": "https://researchmap.jp/y-mizuuchi/published_papers/32483900",
+    "lang": "en",
+    "title": "Landscape assessment of a 100-year-old sacred forest within a shrine using geotagged visitor employed photography",
+    "authors": "Yusuke MIZUUCHI, Kazuhiko W. Nakamura",
+    "abstract": "",
+    "keywords": [],
+    "doi": "https://doi.org/10.1080/13416979.2021.1892251"
+  },
+  "https://researchmap.jp/y-mizuuchi/published_papers/52292322": {
+    "paper_url": "https://researchmap.jp/y-mizuuchi/published_papers/52292322",
+    "lang": "en",
+    "title": "“Feelings toward Nature” Among Users of Forest Rental Business:",
+    "authors": "Keita Otsuka, Naomi Shimpo, Yuki Sakamoto, Yusuke Mizuuchi, Kimisato Oda, Norimasa Takayama, Asako Miyamoto, Shoma Jingu, Kazushige Yamaki",
+    "abstract": "",
+    "keywords": [],
+    "doi": "https://doi.org/10.4005/jjfs.108.52"
+  },
+  "https://researchmap.jp/y-mizuuchi/published_papers/51591805": {
+    "paper_url": "https://researchmap.jp/y-mizuuchi/published_papers/51591805",
+    "lang": "en",
+    "title": "Exploring tourist perceptions of urban sacred forest landscapes through spatial and content analysis of social media data: a case study of Meiji Jingu shrine, Tokyo",
+    "authors": "Yusuke Mizuuchi, Katsunori Furuya",
+    "abstract": "",
+    "keywords": [],
+    "doi": "https://doi.org/10.1080/02508281.2025.2577464"
+  },
+  "https://researchmap.jp/soichiro_minami/published_papers/42395857": {
+    "paper_url": "https://researchmap.jp/soichiro_minami/published_papers/42395857",
+    "lang": "en",
+    "title": "The influence of Japan's major private rail companies on metropolitan development",
+    "authors": "Soichiro MINAMI (Author), Alexandre Faure (Translate to French)",
+    "abstract": "",
+    "keywords": [],
+    "doi": ""
+  },
+  "https://researchmap.jp/soichiro_minami/published_papers/27325449": {
+    "paper_url": "https://researchmap.jp/soichiro_minami/published_papers/27325449",
+    "lang": "en",
+    "title": "Strasbourg as a Smart City Award City –Redevelopment in “Eco 2030” Plan",
+    "authors": "Soichiro MINAMI",
+    "abstract": "",
+    "keywords": [],
+    "doi": ""
+  },
+  "https://researchmap.jp/soichiro_minami/published_papers/15446238": {
+    "paper_url": "https://researchmap.jp/soichiro_minami/published_papers/15446238",
+    "lang": "en",
+    "title": "Implication of transportation By-Law in Japan",
+    "authors": "Soichiro MINAMI",
+    "abstract": "",
+    "keywords": [],
+    "doi": ""
+  },
+  "https://researchmap.jp/soichiro_minami/published_papers/15446240": {
+    "paper_url": "https://researchmap.jp/soichiro_minami/published_papers/15446240",
+    "lang": "en",
+    "title": "Concept of Spatial Development through Soft Transport in France: Rental Bicycle Network Introduction",
+    "authors": "Soichiro MINAMI",
+    "abstract": "",
+    "keywords": [],
+    "doi": ""
+  },
+  "https://researchmap.jp/soichiro_minami/published_papers/15446243": {
+    "paper_url": "https://researchmap.jp/soichiro_minami/published_papers/15446243",
+    "lang": "en",
+    "title": "Implication from History of “Versement Transport” -French urban transport tax",
+    "authors": "Soichiro MINAMI",
+    "abstract": "",
+    "keywords": [],
+    "doi": "https://doi.org/10.14989/179971"
+  },
+  "https://researchmap.jp/morisakiyuma/published_papers/37231087": {
+    "paper_url": "https://researchmap.jp/morisakiyuma/published_papers/37231087",
+    "lang": "en",
+    "title": "：新型コロナウイルス感染症の影響によるクルーズ観光の利用意向に関する分析",
+    "authors": "森崎裕磨, 藤生慎, 小橋川嘉樹",
+    "abstract": "",
+    "keywords": [],
+    "doi": ""
+  },
+  "https://researchmap.jp/morisakiyuma/published_papers/37231021": {
+    "paper_url": "https://researchmap.jp/morisakiyuma/published_papers/37231021",
+    "lang": "en",
+    "title": "新型コロナウイルス感染拡大前後における地域住民の受診行動比較に関する分析―国民健康保険データを用いた検討―",
+    "authors": "森崎裕磨, 藤生慎, 高山純一, 平子絋平",
+    "abstract": "",
+    "keywords": [],
+    "doi": ""
+  },
+  "https://researchmap.jp/morisakiyuma/published_papers/37230744": {
+    "paper_url": "https://researchmap.jp/morisakiyuma/published_papers/37230744",
+    "lang": "en",
+    "title": "地域に存在する災害時要配慮者把握のための情報検索システムの提案―国民健康保険データに基づいた検討―",
+    "authors": "森崎裕磨, 藤生慎, 高山純一, 平子絋平",
+    "abstract": "",
+    "keywords": [],
+    "doi": ""
+  },
+  "https://researchmap.jp/morisakiyuma/published_papers/37230735": {
+    "paper_url": "https://researchmap.jp/morisakiyuma/published_papers/37230735",
+    "lang": "en",
+    "title": "大規模地震災害発生直後に要配慮者が設置する存在位置・ニーズ把握キットの自動検出―YOLOv5と時系列SAR画像を用いた検討―",
+    "authors": "森崎裕磨, 藤生慎, 諏訪太紀, 古田竜一, 高山純一",
+    "abstract": "",
+    "keywords": [],
+    "doi": ""
+  },
+  "https://researchmap.jp/morisakiyuma/published_papers/37230721": {
+    "paper_url": "https://researchmap.jp/morisakiyuma/published_papers/37230721",
+    "lang": "en",
+    "title": "地震災害時に避難に困難を伴う整形外科系疾患患者の地域分布に関する分析―石川県羽咋市の医療ビッグデータを用いた検討―",
+    "authors": "森崎裕磨, 藤生慎, 高山純一, 柳原清子, 西野辰哉, 寒河江雅彦, 平子絋平",
+    "abstract": "",
+    "keywords": [],
+    "doi": ""
+  },
+  "https://researchmap.jp/myagi66/published_papers/53663556": {
+    "paper_url": "https://researchmap.jp/myagi66/published_papers/53663556",
+    "lang": "en",
+    "title": "Predicting Visibility Conditions at the CCTV installation site using Long Short-Term Memory",
+    "authors": "Masahiro Yagi, Sho Takahashi, Kazuhito Ohashi, Yasuhiro Nagata, Toru Hagiwara",
+    "abstract": "",
+    "keywords": [],
+    "doi": ""
+  },
+  "https://researchmap.jp/myagi66/published_papers/53663460": {
+    "paper_url": "https://researchmap.jp/myagi66/published_papers/53663460",
+    "lang": "en",
+    "title": "Lightweight nighttime visibility recognition using in-vehicle camera videos",
+    "authors": "Masahiro Yagi, Yuto Sasaeda, Sho Takahashi, Toshio Yoshii, Toru Hagiwara",
+    "abstract": "",
+    "keywords": [],
+    "doi": ""
+  },
+  "https://researchmap.jp/myagi66/published_papers/50271913": {
+    "paper_url": "https://researchmap.jp/myagi66/published_papers/50271913",
+    "lang": "en",
+    "title": "一人称視点映像の高周波成分とCNNによる物体検出結果に基づくデータ表示位置決定のための重要領域算出手法",
+    "authors": "八木雅大, 阿部恭征, 高橋 翔, 萩原亨",
+    "abstract": "",
+    "keywords": [],
+    "doi": ""
+  },
+  "https://researchmap.jp/myagi66/published_papers/50271881": {
+    "paper_url": "https://researchmap.jp/myagi66/published_papers/50271881",
+    "lang": "en",
+    "title": "道路空間を観測する識別器の他地域応用のための転移学習",
+    "authors": "八木雅大,植西康太,高橋翔,萩原亨",
+    "abstract": "",
+    "keywords": [],
+    "doi": ""
+  },
+  "https://researchmap.jp/myagi66/published_papers/50271971": {
+    "paper_url": "https://researchmap.jp/myagi66/published_papers/50271971",
+    "lang": "en",
+    "title": "作業動作データのアライメントに基づく建設現場作業の主体および従属の関係性評価",
+    "authors": "八木雅大,高橋翔,萩原亨",
+    "abstract": "",
+    "keywords": [],
+    "doi": ""
+  },
+  "https://researchmap.jp/y-takahiro/published_papers/53373467": {
+    "paper_url": "https://researchmap.jp/y-takahiro/published_papers/53373467",
+    "lang": "en",
+    "title": "高等学校の探究学習における教師の葛藤を資源として捉える試み―地域協働の実践から見える三つの葛藤―",
+    "authors": "山下貴弘",
+    "abstract": "",
+    "keywords": [],
+    "doi": ""
+  },
+  "https://researchmap.jp/y-takahiro/published_papers/45853825": {
+    "paper_url": "https://researchmap.jp/y-takahiro/published_papers/45853825",
+    "lang": "en",
+    "title": "企業と学校の共創・連携活動に関する研究-企業の教育参画意識調査に着目して-",
+    "authors": "山下貴弘",
+    "abstract": "",
+    "keywords": [],
+    "doi": ""
+  },
+  "https://researchmap.jp/y-takahiro/published_papers/45853806": {
+    "paper_url": "https://researchmap.jp/y-takahiro/published_papers/45853806",
+    "lang": "en",
+    "title": "山口地域における文科省「地（知）の拠点大学による地方創生推進事業」の特徴と今後の課題",
+    "authors": "山下貴弘, 三浦賢治, 山田隆裕, 田中和広",
+    "abstract": "",
+    "keywords": [],
+    "doi": ""
+  },
+  "https://researchmap.jp/y-takahiro/published_papers/45853816": {
+    "paper_url": "https://researchmap.jp/y-takahiro/published_papers/45853816",
+    "lang": "en",
+    "title": "地域と学校の連携・協働に向けた現状と課題に関する研究 : 企業の教育に対する関心に関するアンケート調査結果の考察を中心に",
+    "authors": "山下貴弘",
+    "abstract": "",
+    "keywords": [],
+    "doi": ""
+  },
+  "https://researchmap.jp/katura3/published_papers/42825101": {
+    "paper_url": "https://researchmap.jp/katura3/published_papers/42825101",
+    "lang": "en",
+    "title": "Not the Same as Real Experience!– a qualitative inquiry into how participants make sense of their online tours",
+    "authors": "– a qualitative inquiry into how participants make sense of their online tours",
+    "abstract": "",
+    "keywords": [],
+    "doi": "https://doi.org/10.1080/02508281.2023.2212352"
+  },
+  "https://researchmap.jp/katura3/published_papers/40620070": {
+    "paper_url": "https://researchmap.jp/katura3/published_papers/40620070",
+    "lang": "en",
+    "title": "Building Resilience: Learning from Tour Guides during the COVID-19 Pandemic",
+    "authors": "Yamada, N, Weiler, B, Rawat, K, Nielsen, N",
+    "abstract": "",
+    "keywords": [],
+    "doi": ""
+  },
+  "https://researchmap.jp/katura3/published_papers/40620067": {
+    "paper_url": "https://researchmap.jp/katura3/published_papers/40620067",
+    "lang": "en",
+    "title": "Can virtual tours provide authentic experiences? - A qualitative inquiry of online tour experiences",
+    "authors": "Naoko Yamada",
+    "abstract": "",
+    "keywords": [],
+    "doi": ""
+  },
+  "https://researchmap.jp/katura3/published_papers/40620074": {
+    "paper_url": "https://researchmap.jp/katura3/published_papers/40620074",
+    "lang": "en",
+    "title": "Is tourism in a state of disruption or transformation? A qualitative inquiry into perceptions of online tour experiences",
+    "authors": "Yamada, N, Matuda, M, Yoshino, A",
+    "abstract": "",
+    "keywords": [],
+    "doi": ""
+  },
+  "https://researchmap.jp/katura3/published_papers/36371845": {
+    "paper_url": "https://researchmap.jp/katura3/published_papers/36371845",
+    "lang": "en",
+    "title": "Applying Interpretation Principles to a Non-Western (Japanese) Training Context",
+    "authors": "Naoko Yamada, Jeffrey Skibins, Betty Weiler",
+    "abstract": "",
+    "keywords": [],
+    "doi": ""
+  },
+  "https://researchmap.jp/shigeru_yamamoto/published_papers/46318291": {
+    "paper_url": "https://researchmap.jp/shigeru_yamamoto/published_papers/46318291",
+    "lang": "en",
+    "title": "熱間仕上圧延における鋼板蛇行制御のための詳細モデルとオブザーバによるモデル予測制御",
+    "authors": "Shigeru YAMAMOTO, Shota MATSUDA, Eishin MORISHITA, Sanga TAKAGI, Tokujiro HORIKAWA, Yukihiro YAMASAKI, Hiroto UJIKAWA",
+    "abstract": "",
+    "keywords": [],
+    "doi": "https://doi.org/10.1299/transjsme.23-00051"
+  },
+  "https://researchmap.jp/shigeru_yamamoto/published_papers/2715232": {
+    "paper_url": "https://researchmap.jp/shigeru_yamamoto/published_papers/2715232",
+    "lang": "en",
+    "title": "Reducing the Computational Cost in l(1)-Norm Optimization for Cellular Automaton Model Identification",
+    "authors": "Kota Yamamoto, Shigeru Yamamoto",
+    "abstract": "",
+    "keywords": [],
+    "doi": "https://doi.org/10.23919/SICE.2017.8105576"
+  },
+  "https://researchmap.jp/shigeru_yamamoto/published_papers/46318298": {
+    "paper_url": "https://researchmap.jp/shigeru_yamamoto/published_papers/46318298",
+    "lang": "en",
+    "title": "A Singular Value Decomposition Approach in Model-Free Predictive Control",
+    "authors": "Pratvittaya Jiravi, Shigeru Yamamoto",
+    "abstract": "",
+    "keywords": [],
+    "doi": ""
+  },
+  "https://researchmap.jp/shigeru_yamamoto/published_papers/45623477": {
+    "paper_url": "https://researchmap.jp/shigeru_yamamoto/published_papers/45623477",
+    "lang": "en",
+    "title": "A Two-Stage Method for Order Selection in Model-Free Predictive Control",
+    "authors": "Pratvittaya Jiravit, Shigeru Yamamoto",
+    "abstract": "",
+    "keywords": [],
+    "doi": "https://doi.org/10.1002/tee.24030"
+  },
+  "https://researchmap.jp/shigeru_yamamoto/published_papers/44268865": {
+    "paper_url": "https://researchmap.jp/shigeru_yamamoto/published_papers/44268865",
+    "lang": "en",
+    "title": "Improvement of a setup accuracy for hot strip finishing mills using clustering based on linear regression and local regression",
+    "authors": "Shigeru Yamamoto, Kyosuke Tsukada, Syota Matsubara, Yukihiro Yamasaki, Sanga Takagi, Tokujiro Horikawa",
+    "abstract": "",
+    "keywords": [],
+    "doi": "https://doi.org/10.5687/iscie.36.410"
+  },
+  "https://researchmap.jp/keisuke-yoneda/published_papers/42728583": {
+    "paper_url": "https://researchmap.jp/keisuke-yoneda/published_papers/42728583",
+    "lang": "en",
+    "title": "Supervised vehicle trajectory prediction using orthogonal image map for urban automated driving.",
+    "authors": "Keisuke Yoneda, Amane Kinoshita, Yusuke Takahashi, Tadashi Okuno, Lu Cao, Naoki Suganuma",
+    "abstract": "",
+    "keywords": [],
+    "doi": "https://doi.org/10.1007/s10015-023-00863-1"
+  },
+  "https://researchmap.jp/keisuke-yoneda/published_papers/13796165": {
+    "paper_url": "https://researchmap.jp/keisuke-yoneda/published_papers/13796165",
+    "lang": "en",
+    "title": "Automated driving recognition technologies for adverse weather conditions",
+    "authors": "Keisuke YONEDA, Naoki SUGANUMA, Ryo YANASE, Mohammad ALDIBAJA",
+    "abstract": "",
+    "keywords": [],
+    "doi": ""
+  },
+  "https://researchmap.jp/keisuke-yoneda/published_papers/52588139": {
+    "paper_url": "https://researchmap.jp/keisuke-yoneda/published_papers/52588139",
+    "lang": "en",
+    "title": "Development of an automated method for extracting reflectance maps of road marking areas by camera-LiDAR fusion*.",
+    "authors": "Akisue Kuramoto, Ryo Yanase, Keisuke Yoneda, Naoki Suganuma",
+    "abstract": "",
+    "keywords": [],
+    "doi": "https://doi.org/10.1109/SII59315.2025.10870943"
+  },
+  "https://researchmap.jp/keisuke-yoneda/published_papers/42728617": {
+    "paper_url": "https://researchmap.jp/keisuke-yoneda/published_papers/42728617",
+    "lang": "en",
+    "title": "Effect of Road Markings Wear on Accuracy of ZNCC-Based Map Matching",
+    "authors": "Akisue Kuramoto, Hotsuyuki Kawanishi, Ryo Yanase, Keisuke Yoneda, Naoki Suganuma",
+    "abstract": "",
+    "keywords": [],
+    "doi": "https://doi.org/10.20485/jsaeijae.14.1_20"
+  },
+  "https://researchmap.jp/keisuke-yoneda/published_papers/42728584": {
+    "paper_url": "https://researchmap.jp/keisuke-yoneda/published_papers/42728584",
+    "lang": "en",
+    "title": "Challenging Environments for Precise Mapping Using GNSS/INS-RTK Systems: Reasons and Analysis.",
+    "authors": "Mohammad Aldibaja, Naoki Suganuma, Keisuke Yoneda, Ryo Yanase",
+    "abstract": "",
+    "keywords": [],
+    "doi": "https://doi.org/10.3390/rs14164058"
+  },
+  "https://researchmap.jp/PrimaryAldo/published_papers/54017561": {
+    "paper_url": "https://researchmap.jp/PrimaryAldo/published_papers/54017561",
+    "lang": "en",
+    "title": "Absent nocturnal cortisol decline in Pheochromocytoma: A retrospective study",
+    "authors": "Yahan Sun, Mitsuhiro Kometani, Ko Aiga, Xurong Mai, Seigo Konishi, Mayuko Kadono, Yuko Gondoh, Takashi Yoneda",
+    "abstract": "",
+    "keywords": [],
+    "doi": "https://doi.org/10.1016/j.steroids.2026.109779"
+  },
+  "https://researchmap.jp/PrimaryAldo/published_papers/53992785": {
+    "paper_url": "https://researchmap.jp/PrimaryAldo/published_papers/53992785",
+    "lang": "en",
+    "title": "Different effect of aldosterone on corrected HCO3− across primary aldosteronism subtypes",
+    "authors": "Hiroki Yasuda, Kenichi Yokota, Takuyuki Katabami, Toshifumi Nakamura, Shoichiro Izawa, Yoichi Nozato, Norio Wada, Ryuji Okamoto, Miki Kakutani, Takashi Yoneda …",
+    "abstract": "",
+    "keywords": [],
+    "doi": "https://doi.org/10.1038/s41440-026-02609-5"
+  },
+  "https://researchmap.jp/PrimaryAldo/published_papers/54208844": {
+    "paper_url": "https://researchmap.jp/PrimaryAldo/published_papers/54208844",
+    "lang": "en",
+    "title": "副腎性顕性クッシング症候群の診断基準",
+    "authors": "方波見 卓行, 柴田 洋孝, 田辺 晶代, 曽根 正勝, 大月 道夫, 小川 佳宏, 宗 友厚, 一城 貴政, 吉田 雄一, 米田 隆 …",
+    "abstract": "",
+    "keywords": [],
+    "doi": ""
+  },
+  "https://researchmap.jp/PrimaryAldo/published_papers/52833241": {
+    "paper_url": "https://researchmap.jp/PrimaryAldo/published_papers/52833241",
+    "lang": "en",
+    "title": "Impact of autonomous cortisol secretion on adrenal venous sampling with and without ACTH stimulation in patients with primary aldosteronism",
+    "authors": "Norio Wada, Arina Miyoshi, Koichi Yamamoto, Miki Kakutani, Mika Tsuiki, Akiyo Tanabe, Takuyuki Katabami, Takashi Yoneda, Katsutoshi Takahashi, Shoichiro Izawa …",
+    "abstract": "",
+    "keywords": [],
+    "doi": "https://doi.org/10.1507/endocrj.ej25-0049"
+  },
+  "https://researchmap.jp/PrimaryAldo/published_papers/53984966": {
+    "paper_url": "https://researchmap.jp/PrimaryAldo/published_papers/53984966",
+    "lang": "en",
+    "title": "悪性腫瘍と鑑別を要した副腎・大腿部Organizing hematomaの一例",
+    "authors": "浅野 嵩博, 米谷 充弘, 青野 大輔, 小西 正剛, 中野 雄二郎, 若山 綾子, 三輪 真嗣, 重原 一慶, 篁 俊成, 米田 隆 …",
+    "abstract": "",
+    "keywords": [],
+    "doi": ""
+  },
+  "https://researchmap.jp/watanabe-hiroki/published_papers/53328835": {
+    "paper_url": "https://researchmap.jp/watanabe-hiroki/published_papers/53328835",
+    "lang": "en",
+    "title": "Neurophysiological prediction of competitive orientation via EEG during outcome evaluation in gamified learning",
+    "authors": "Hiroki Watanabe, Ayato Tabata, Chikara Ishii, Yasushi Naruse",
+    "abstract": "English",
+    "keywords": [],
+    "doi": "https://doi.org/10.1038/s41539-026-00420-y"
+  },
+  "https://researchmap.jp/watanabe-hiroki/published_papers/51849418": {
+    "paper_url": "https://researchmap.jp/watanabe-hiroki/published_papers/51849418",
+    "lang": "en",
+    "title": "An Automatic Estimation System for Non-clinical Depressed States Using EEG Data in Daily Life",
+    "authors": "Hiroki Watanabe, Aya S. Ihara, Masato Okada, Sakriani Sakti, Mitsuyoshi, Tachimori, Etsuo Mizukami, Yasushi Naruse",
+    "abstract": "",
+    "keywords": [],
+    "doi": ""
+  },
+  "https://researchmap.jp/watanabe-hiroki/published_papers/40305339": {
+    "paper_url": "https://researchmap.jp/watanabe-hiroki/published_papers/40305339",
+    "lang": "en",
+    "title": "P300 as a neural indicator for setting levels of goal scores in educational gamification applications from the perspective of intrinsic motivation: An ERP study",
+    "authors": "Hiroki Watanabe, Yasushi Naruse",
+    "abstract": "The challenge level of goal achievement affects intrinsic motivation. Thus, the goal score learners are required to achieve is an important element in gamified educational applications to foster users' intrinsic motivation. However, determining optimal goal scores that enhance the intrinsic motivation of each learner is not easy because individual competence and preferences for the challenge level (e.g., preference for difficult-to-achieve challenges) vary. One approach is to determine the goal score using physiological measurements to estimate when an individual's intrinsic motivation is reinforced. Measurement of event-related potentials (ERPs) is considered useful for this purpose. ERPs time-locked to feedback onset, such as feedback-related negativity and P300, reflect intrinsic motivation. However, it remains unclear whether these ERPs can serve as indicators of optimal goal scores for gamified educational applications in terms of intrinsic motivation. The present study aimed to examine whether ERP measures vary with the challenge levels of the goal score determined by participants' competence (too-easy, moderate and too-hard levels) and/or with their preference for these levels when using a gamified mental arithmetic application. Thirty-three participants solved 64 addition problems in one session in this application and received auditory feedback immediately after each answer entry. Scores were then calculated based on their task performance. Before each session, participants were informed of the goal score and instructed to exceed it as much as possible. Sessions were repeated six times at easy, moderate, and hard levels of goal scores, with two sessions per level. Goal score preferences were quantified based on subjective ratings of the motivation to achieve each level of goal score using a 7-point Likert scale. The mean amplitudes of ERPs were obtained for each participant. Results showed that P300 was significantly related to subjective ratings but not to levels of goal scores, indicating that P300 could be an indicator of participant preference for goal score levels. This study suggests that measurement of P300 may serve as a neural indicator providing an optimal goal score for individual learners that maximizes their intrinsic motivation in gamified learning applications.",
+    "keywords": [],
+    "doi": "https://doi.org/10.3389/fnrgo.2022.948080"
+  },
+  "https://researchmap.jp/watanabe-hiroki/published_papers/35834151": {
+    "paper_url": "https://researchmap.jp/watanabe-hiroki/published_papers/35834151",
+    "lang": "en",
+    "title": "Eye-Fixation-Related Potentials (EFRPs) As a Predictor of Human Error Occurrences During a Visual Inspection Task",
+    "authors": "Hiroki Watanabe, Yuichiro Higashi, Takuma Saga, Masanori Hashizaki, Yusuke Yokota, Hirotaka Kataoka, Hiroshi Nakajima, Yasushi Naruse",
+    "abstract": "Estimation of human attentional states using an electroencephalogram (EEG) has been demonstrated to help prevent human errors associated with the degradation. Since the use of the lambda response -one of eye-fixation-related potentials time-locked to the saccade offset- enables such estimation without external triggers, the measurements are compatible for an application in a real-world environment. With aiming to apply the lambda response as an index of human errors during the visual inspection, the current research elucidated whether the mean amplitude of the lambda response was a predictor of the number of inspection errors. EEGs were measured from 50 participants while inspecting the differences between two images of the circuit board. Twenty percent of the total number of image pairs included differences. The lambda response was obtained relative to a saccade offset starting a fixation of the inspection image. Participants conducted four sessions over two days (625 trials/ session, 2 sessions/ day). A Poisson regression of the number of inspection errors using a generalized linear mixed model showed that a coefficient of the mean amplitude of the lambda response was significant , suggesting that the response has a role in th ( β ^ = 0.24 , p < 0.01 ) e prediction of the number of human error occurrences in the visual inspection.",
+    "keywords": [],
+    "doi": "https://doi.org/10.1109/EMBC46164.2021.9630308"
+  },
+  "https://researchmap.jp/watanabe-hiroki/published_papers/33377986": {
+    "paper_url": "https://researchmap.jp/watanabe-hiroki/published_papers/33377986",
+    "lang": "en",
+    "title": "Differences in Mechanical Parameters of Keyboard Switches Modulate Motor Preparation: A Wearable EEG Study",
+    "authors": "Hiroki Watanabe, Kae Nakajima, Shunsuke Takagi, Ryo Mizuyama, Mayumi Saito, Koichi Furusawa, Kunio Nakatani, Yusuke Yokota, Hirotaka Kataoka, Hiroshi Nakajima …",
+    "abstract": "",
+    "keywords": [],
+    "doi": ""
+  }
+}
