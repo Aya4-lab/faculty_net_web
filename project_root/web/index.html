@@ -242,8 +242,71 @@
         .node-label.professor {
             color: #f0c090; border-color: rgba(224, 138, 60, 0.45); font-weight: 600;
         }
-        .node-label.course { color: #b8dceb; }
+        .node-label.course {
+            color: #c5e0f0;
+            border-color: rgba(120, 180, 210, 0.35);
+            font-size: 9px;
+            font-weight: 500;
+            background: rgba(10, 16, 22, 0.7);
+            max-width: 110px;
+            padding: 1px 5px;
+            transform: translateY(-6px);
+            opacity: 0.9;
+        }
+        .node-label.field {
+            color: #dce8f0; border-color: rgba(120, 170, 200, 0.55);
+            font-size: 13px; font-weight: 600; letter-spacing: 0.02em;
+            background: rgba(10, 16, 24, 0.72);
+            max-width: 200px; padding: 4px 10px;
+            transform: translateY(-18px);
+        }
+        .node-label.major {
+            color: #f2f6fa; border-color: rgba(180, 200, 220, 0.5);
+            font-size: 16px; font-weight: 700; letter-spacing: 0.04em;
+            background: rgba(8, 12, 18, 0.55);
+            max-width: 240px; padding: 6px 14px;
+            transform: translateY(-28px);
+            text-shadow: 0 2px 12px rgba(0,0,0,0.55);
+        }
         .node-label.hidden-label { display: none !important; }
+
+        .prof-billboard {
+            display: flex; flex-direction: column; align-items: center;
+            pointer-events: none; user-select: none;
+            transition: opacity 0.25s ease;
+        }
+        .prof-billboard .photo {
+            width: 52px; height: 52px; border-radius: 50%;
+            object-fit: cover; background: #2a3038;
+            border: 2px solid rgba(224, 138, 60, 0.75);
+            box-shadow: 0 4px 14px rgba(0,0,0,0.45);
+        }
+        .prof-billboard .photo.placeholder {
+            display: flex; align-items: center; justify-content: center;
+            font-size: 18px; color: #f0c090; font-weight: 700;
+            background: linear-gradient(145deg, #3a2a1a, #1e232b);
+        }
+        .prof-billboard .caption {
+            margin-top: 4px; text-align: center;
+            max-width: 120px; line-height: 1.25;
+            padding: 2px 6px; border-radius: 4px;
+            background: rgba(12, 14, 18, 0.82);
+            border: 1px solid rgba(80, 90, 100, 0.4);
+        }
+        .prof-billboard .caption .nm {
+            display: block; font-size: 11px; font-weight: 600; color: #f0c090;
+            white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+        }
+        .prof-billboard .caption .af {
+            display: block; font-size: 9px; color: #9aa3ad;
+            white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+        }
+
+        #info-panel .type-badge.field,
+        #info-panel .type-badge.major {
+            background: rgba(90, 140, 180, 0.22); color: #b8d4e8; border: 1px solid #5a8ab0;
+        }
+        .trail-dot.field, .trail-dot.major { background: #7eb0d0; }
 
         @media (max-width: 900px) {
             #left-panel { width: 260px; }
@@ -259,7 +322,7 @@
     <aside id="left-panel">
         <div>
             <h1>知識の地図を育てる</h1>
-            <p class="subtitle">興味を起点に、講義から教員・関連へ辿っていきます</p>
+            <p class="subtitle">分野のランドマークに近づき、教員との意外なつながりを発見します</p>
         </div>
 
         <div>
@@ -293,13 +356,13 @@
     </aside>
 
     <div id="empty-hint">
-        <strong>まだ空間は空です</strong>
-        <span>左のパネルから興味のある言葉やタグを選んでください</span>
+        <strong>分野の地図が広がっています</strong>
+        <span>ズームで教員 → さらに近づくと講義が衛星のように現れます</span>
     </div>
 
     <div id="status-toast"></div>
     <div id="hover-tip"></div>
-    <div id="op-guide">ドラッグで回転 ・ ホイールでズーム ・ ノードをクリックで詳細</div>
+    <div id="op-guide">ドラッグで回転 ・ ホイールでズーム（近づくと教員が現れる） ・ ノードをクリックで詳細</div>
 
     <div id="info-panel">
         <button id="panel-close" type="button" aria-label="閉じる">×</button>
@@ -314,7 +377,7 @@
         scene.background = new THREE.Color(0x0c0d10);
 
         const camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 0.1, 2000);
-        camera.position.set(0, 18, 78);
+        camera.position.set(0, 40, 165);
 
         const renderer = new THREE.WebGLRenderer({ antialias: true });
         renderer.setSize(window.innerWidth, window.innerHeight);
@@ -342,14 +405,26 @@
 
         const PROF_COLOR = 0xe08a3c;
         const COURSE_COLOR = 0x5a9ec8;
-        // display_data coords are already normalized to ~±28
-        const SCALE = 1;
+        const FIELD_COLOR = 0x6a9ec0;
+        const MAJOR_COLOR = 0xa8c8dc;
+        // Field-joint UMAP coords are ~±28; enlarge so LOD has room to breathe
+        const SCALE = 2.4;
         const ENTRY_COUNT = 5;
         const SIM_EXPAND_TOP = 2; // discovery: top similarity bridges
-        const COURSE_NAME_MAX = 12;
-        const PROF_MIN_DIST = 3.4; // keep professor spheres clickable
-        const LABEL_NEAR = 32;
-        const LABEL_FAR = 68;
+        const COURSE_NAME_MAX = 10;
+        const PROF_MIN_DIST = 2.2; // after SCALE, in world units between professors
+        const LABEL_NEAR = 45;
+        const LABEL_FAR = 95;
+
+        // LOD hierarchy: field (far) → professor (mid) → course (near, by own position)
+        const LOD_FIELD_NEAR = 11;
+        const LOD_FIELD_FAR = 20;
+        const LOD_EDGE_NEAR = 10;
+        const LOD_EDGE_FAR = 17;
+        // Courses fade in when the camera/focus approaches the course itself
+        // (syllabus UMAP coords — not orbit satellites around instructors)
+        const LOD_COURSE_NEAR = 7.5;
+        const LOD_COURSE_FAR = 14.0;
 
         const QUICK_TAGS = [
             { label: 'AI・データ', terms: ['AI', 'データ', '機械学習', 'DX', 'データサイエンス', '情報'] },
@@ -360,11 +435,16 @@
         ];
 
         const nodeMeshes = [];
+        const fieldMeshes = [];
+        const professorMeshes = [];
+        const courseMeshes = [];
+        const midMeshes = []; // professors + courses (LOD-controlled)
         const nodeDict = {};
         const meshById = {};
-        const edgeRecords = []; // {source,target,type,score,line,material}
+        const edgeRecords = []; // {source,target,type,score,line,material,lod}
         const edgesByNode = new Map(); // id -> edgeRecords[]
         const trail = []; // {id, name, type}
+        const fieldMemberIds = new Map(); // fieldId -> Set(profId)
 
         let selectedNode = null;
         let hoveredNode = null;
@@ -372,6 +452,8 @@
         let camTween = null;
         let labelMode = 'name'; // name | keywords | hidden
         const fadeAnims = [];
+        let searchPinned = new Set(); // course/prof ids forced visible by search/expand
+        let lodFrame = 0;
 
         const raycaster = new THREE.Raycaster();
         const mouse = new THREE.Vector2();
@@ -396,6 +478,7 @@
         }
 
         function keywordLabelText(node) {
+            if (node.type === 'field' || node.type === 'major') return nameLabelText(node);
             const kws = (node.keywords || []).map(k => String(k).trim()).filter(Boolean);
             if (!kws.length) return nameLabelText(node);
             return truncateText(kws.slice(0, 3).join(' · '), 18);
@@ -406,10 +489,69 @@
             return nameLabelText(node);
         }
 
+        function isLandmark(node) {
+            return node && (node.type === 'field' || node.type === 'major');
+        }
+
+        function isMidNode(node) {
+            return node && (node.type === 'professor' || node.type === 'course');
+        }
+
+        function lodAlpha(dist, near, far) {
+            if (dist <= near) return 1;
+            if (dist >= far) return 0;
+            return 1 - (dist - near) / (far - near);
+        }
+
+        function getActiveFieldAlphas() {
+            // Rank by orbit focus (what the user is looking at), not camera position.
+            // Embedding clusters fields tightly; camera-distance alone picks neighbors along the LOS.
+            const TOP_N = 2;
+            const focus = controls.target;
+            const scored = [];
+            for (const mesh of fieldMeshes) {
+                if (mesh.userData.type !== 'field') continue;
+                const distCam = camera.position.distanceTo(mesh.position);
+                // Must physically approach — overview camera never unlocks members
+                if (distCam > LOD_FIELD_FAR) continue;
+                const distFocus = focus.distanceTo(mesh.position);
+                const alphaFocus = lodAlpha(distFocus, LOD_FIELD_NEAR * 0.55, LOD_FIELD_FAR * 0.75);
+                const alphaCam = lodAlpha(distCam, LOD_FIELD_NEAR, LOD_FIELD_FAR);
+                const alpha = Math.max(alphaFocus, alphaCam * 0.85);
+                if (alpha > 0.02) {
+                    scored.push({ id: mesh.userData.id, alpha, distFocus, distCam });
+                }
+            }
+            scored.sort((a, b) => a.distFocus - b.distFocus || b.alpha - a.alpha);
+            const active = new Map();
+            for (const row of scored.slice(0, TOP_N)) {
+                active.set(row.id, row.alpha);
+            }
+            return active;
+        }
+
+        function professorLodAlpha(mesh, activeFields) {
+            let alpha = 0;
+            const connected = edgesByNode.get(mesh.userData.id) || [];
+            for (const rec of connected) {
+                if (rec.type !== 'belongs_to_field') continue;
+                const fieldId = rec.source === mesh.userData.id ? rec.target : rec.source;
+                const a = activeFields.get(fieldId);
+                if (a) alpha = Math.max(alpha, a);
+            }
+            return alpha;
+        }
+
         function syncNodeLabel(mesh) {
             const label = mesh.userData.labelObj;
             const el = mesh.userData.labelEl;
             if (!label || !el) return;
+            // Professor billboards carry their own caption; hide CSS2D name label
+            if (mesh.userData.type === 'professor' && mesh.userData.billboardEl) {
+                label.visible = false;
+                el.classList.add('hidden-label');
+                return;
+            }
             if (!mesh.visible || labelMode === 'hidden') {
                 label.visible = false;
                 el.classList.add('hidden-label');
@@ -424,9 +566,13 @@
             const label = mesh.userData.labelObj;
             const el = mesh.userData.labelEl;
             if (!label || !el || !mesh.visible || labelMode === 'hidden') return;
+            if (mesh.userData.type === 'professor' && mesh.userData.billboardEl) return;
 
+            // Landmark labels stay readable farther out
+            const near = isLandmark(mesh.userData) ? 55 : LABEL_NEAR;
+            const far = isLandmark(mesh.userData) ? 120 : LABEL_FAR;
             const dist = camera.position.distanceTo(mesh.position);
-            if (dist > LABEL_FAR) {
+            if (dist > far) {
                 label.visible = false;
                 el.classList.add('hidden-label');
                 el.style.opacity = '0';
@@ -434,14 +580,17 @@
             }
             label.visible = true;
             el.classList.remove('hidden-label');
-            const t = dist <= LABEL_NEAR
+            const t = dist <= near
                 ? 1
-                : 1 - (dist - LABEL_NEAR) / (LABEL_FAR - LABEL_NEAR);
-            el.style.opacity = String(Math.max(0.08, Math.min(1, t)));
+                : 1 - (dist - near) / (far - near);
+            el.style.opacity = String(Math.max(0.15, Math.min(1, t)));
         }
 
         function updateVisibleLabelDistances() {
-            if (labelMode === 'hidden') return;
+            if (labelMode === 'hidden') {
+                for (const mesh of fieldMeshes) applyLabelDistance(mesh);
+                return;
+            }
             for (const mesh of nodeMeshes) {
                 if (mesh.visible) applyLabelDistance(mesh);
             }
@@ -495,8 +644,13 @@
                 hoverTip.style.display = 'none';
                 return;
             }
-            const typeLabel = node.type === 'professor' ? '教員' : node.type === 'course' ? '講義' : '';
-            const kws = (node.keywords || []).slice(0, 4).join(' · ') || '—';
+            const typeLabel = node.type === 'professor' ? '教員'
+                : node.type === 'course' ? '講義'
+                : node.type === 'major' ? '大分野'
+                : node.type === 'field' ? '研究分野'
+                : '';
+            const kws = (node.keywords || []).slice(0, 4).join(' · ')
+                || (isLandmark(node) ? `所属教員 ${node.member_count || 0} 名` : '—');
             hoverTip.innerHTML = `
                 <div class="tip-type">${escapeHtml(typeLabel)}</div>
                 <div class="tip-name">${escapeHtml(node.name || node.id || '')}</div>
@@ -524,8 +678,9 @@
         }
 
         function updateEmptyHint() {
-            const anyVisible = nodeMeshes.some(m => m.visible);
-            emptyHint.style.opacity = anyVisible ? '0' : '1';
+            const anyProf = professorMeshes.some(m => m.visible && (m.material.opacity || 0) > 0.15);
+            const anyCourse = courseMeshes.some(m => m.visible && (m.material.opacity || 0) > 0.15);
+            emptyHint.style.opacity = (anyProf || anyCourse) ? '0' : '1';
         }
 
         function ensureEdgeIndex(id) {
@@ -541,6 +696,7 @@
                 node.text_preview || '',
                 node.affiliation || '',
                 node.instructor_name || '',
+                node.major_name || '',
             ];
             return parts.join('\n').toLowerCase();
         }
@@ -579,14 +735,23 @@
         }
 
         function targetOpacityFor(mesh) {
-            return mesh.userData.type === 'professor' ? 1.0 : 0.78;
+            const t = mesh.userData.type;
+            if (t === 'major') return 0.42;
+            if (t === 'field') return 0.38;
+            if (t === 'professor') return 1.0;
+            return 0.78;
         }
 
-        function revealNode(mesh, { animate = true } = {}) {
+        function revealNode(mesh, { animate = true, pin = true } = {}) {
             if (!mesh) return;
+            if (isLandmark(mesh.userData)) return; // always managed as landmarks
+            if (pin) searchPinned.add(mesh.userData.id);
             mesh.visible = true;
             mesh.material.transparent = true;
             syncNodeLabel(mesh);
+            if (mesh.userData.billboardEl) {
+                mesh.userData.billboardEl.style.opacity = '1';
+            }
             if (!animate) {
                 mesh.material.opacity = targetOpacityFor(mesh);
                 return;
@@ -603,13 +768,16 @@
         }
 
         function edgeBaseOpacity(rec) {
-            if (rec.type === 'taught_by') return 0.35;
+            if (rec.type === 'field_hierarchy') return 0.22;
+            if (rec.type === 'belongs_to_field') return 0.28;
+            if (rec.type === 'taught_by') return 0.22;
             // discovery similarity: keep faint (~0.2)
             return 0.2;
         }
 
-        function revealEdge(rec, { animate = true } = {}) {
+        function revealEdge(rec, { animate = true, pin = true } = {}) {
             if (!rec || !rec.line) return;
+            if (pin) rec.pinned = true;
             rec.line.visible = true;
             const to = edgeBaseOpacity(rec);
             if (!animate) {
@@ -629,15 +797,35 @@
 
         function hideAllNetwork() {
             fadeAnims.length = 0;
-            for (const mesh of nodeMeshes) {
+            searchPinned.clear();
+            for (const mesh of midMeshes) {
                 mesh.visible = false;
                 mesh.material.opacity = 0;
                 mesh.scale.set(1, 1, 1);
+                if (mesh.userData.billboardEl) {
+                    mesh.userData.billboardEl.style.opacity = '0';
+                }
+                if (mesh.userData.glowMat) {
+                    mesh.userData.glowMat.opacity = 0;
+                }
                 syncNodeLabel(mesh);
             }
             for (const rec of edgeRecords) {
+                rec.pinned = false;
+                if (rec.type === 'field_hierarchy') {
+                    rec.line.visible = true;
+                    rec.material.opacity = edgeBaseOpacity(rec);
+                    continue;
+                }
                 rec.line.visible = false;
                 rec.material.opacity = 0;
+            }
+            // Landmarks stay visible
+            for (const mesh of fieldMeshes) {
+                mesh.visible = true;
+                mesh.material.opacity = targetOpacityFor(mesh);
+                mesh.scale.set(1, 1, 1);
+                syncNodeLabel(mesh);
             }
             selectedNode = null;
             hoveredNode = null;
@@ -677,7 +865,10 @@
 
         function flyToNode(mesh) {
             if (!mesh) return;
-            flyToPoints([mesh.position.clone()], { distance: 28, duration: 0.9 });
+            const dist = isLandmark(mesh.userData) ? 22
+                : mesh.userData.type === 'course' ? 11
+                : 16;
+            flyToPoints([mesh.position.clone()], { distance: dist, duration: 0.9 });
         }
 
         function addTrail(node) {
@@ -699,7 +890,13 @@
                 btn.innerHTML = `
                     <span class="trail-dot ${escapeHtml(item.type)}"></span>
                     <span>
-                        <div class="trail-meta">${idx + 1}. ${item.type === 'professor' ? '教員' : '講義'}</div>
+                        <div class="trail-meta">${idx + 1}. ${
+                            item.type === 'professor' ? '教員'
+                            : item.type === 'course' ? '講義'
+                            : item.type === 'major' ? '大分野'
+                            : item.type === 'field' ? '研究分野'
+                            : item.type
+                        }</div>
                         <div class="trail-name">${escapeHtml(item.name)}</div>
                     </span>`;
                 btn.addEventListener('click', () => {
@@ -721,26 +918,53 @@
         function expandFromNode(mesh) {
             if (!mesh) return;
             const nid = mesh.userData.id;
+            const ntype = mesh.userData.type;
             const connected = edgesByNode.get(nid) || [];
 
+            // Field landmark: reveal member professors + belongs_to_field edges
+            if (ntype === 'field' || ntype === 'major') {
+                const memberEdges = connected.filter(e => e.type === 'belongs_to_field');
+                const neighborMeshes = [];
+                for (const rec of memberEdges) {
+                    const otherId = rec.source === nid ? rec.target : rec.source;
+                    const other = meshById[otherId];
+                    if (other && other.userData.type === 'professor') {
+                        revealNode(other);
+                        neighborMeshes.push(other);
+                    }
+                    revealEdge(rec);
+                }
+                if (neighborMeshes.length) {
+                    flyToPoints(
+                        [mesh.position, ...neighborMeshes.map(m => m.position)],
+                        { distance: 32, duration: 0.95 }
+                    );
+                } else {
+                    flyToNode(mesh);
+                }
+                updateEmptyHint();
+                return;
+            }
+
             const taught = connected.filter(e => e.type === 'taught_by');
+            const belongs = connected.filter(e => e.type === 'belongs_to_field');
             const sims = connected
                 .filter(e => e.type === 'similarity')
                 .slice()
                 .sort((a, b) => (b.score || 0) - (a.score || 0))
                 .slice(0, SIM_EXPAND_TOP);
 
-            const toReveal = [...taught, ...sims];
+            const toReveal = [...taught, ...belongs, ...sims];
             const neighborMeshes = [];
 
             for (const rec of toReveal) {
                 const otherId = rec.source === nid ? rec.target : rec.source;
                 const other = meshById[otherId];
-                if (other) {
+                if (other && !isLandmark(other.userData)) {
                     revealNode(other);
                     neighborMeshes.push(other);
                 }
-                revealEdge(rec);
+                if (rec.type !== 'field_hierarchy') revealEdge(rec);
             }
 
             if (neighborMeshes.length) {
@@ -759,7 +983,8 @@
                 selectedNode.scale.set(1, 1, 1);
             }
             selectedNode = mesh;
-            mesh.scale.set(1.85, 1.85, 1.85);
+            const boost = isLandmark(mesh.userData) ? 1.35 : 1.85;
+            mesh.scale.set(boost, boost, boost);
             showInfo(mesh.userData);
 
             if (recordTrail) addTrail(mesh.userData);
@@ -780,13 +1005,29 @@
 
             document.querySelectorAll('.tag-btn').forEach(b => b.classList.remove('active'));
 
-            const entries = findEntryCourses(clean, ENTRY_COUNT);
-            if (!entries.length) {
-                showToast(`「${label || clean.join(' ')}」に合う講義が見つかりませんでした`);
+            // Prefer field landmarks matching the query; fall back to courses
+            const fieldHits = [];
+            for (const mesh of fieldMeshes) {
+                const s = scoreNodeAgainstTerms(mesh.userData, clean);
+                if (s > 0) fieldHits.push({ mesh, score: s });
+            }
+            fieldHits.sort((a, b) => b.score - a.score);
+
+            if (fieldHits.length) {
+                const top = fieldHits.slice(0, 3).map(x => x.mesh);
+                flyToPoints(top.map(m => m.position.clone()), { distance: 34, duration: 1.1 });
+                focusNode(top[0], { expand: true, recordTrail: true, flyCamera: false });
+                showToast(`分野「${top[0].userData.name}」へ近づきます`);
+                updateEmptyHint();
                 return;
             }
 
-            // Keep previously revealed map growing — only add entry courses
+            const entries = findEntryCourses(clean, ENTRY_COUNT);
+            if (!entries.length) {
+                showToast(`「${label || clean.join(' ')}」に合う分野・講義が見つかりませんでした`);
+                return;
+            }
+
             entries.forEach(m => revealNode(m));
             flyToPoints(entries.map(m => m.position.clone()), { distance: 40, duration: 1.15 });
             updateEmptyHint();
@@ -799,12 +1040,12 @@
             selectedNode = null;
             hoveredNode = null;
             camTween = null;
-            camera.position.set(0, 18, 78);
+            camera.position.set(0, 40, 165);
             controls.target.set(0, 0, 0);
             document.getElementById('search-input').value = '';
             document.querySelectorAll('.tag-btn').forEach(b => b.classList.remove('active'));
             hideHoverTip();
-            showToast('探索をリセットしました');
+            showToast('遠景に戻りました（分野ランドマークは表示中）');
         }
 
         function escapeHtml(str) {
@@ -832,7 +1073,11 @@
             const typeEl = document.getElementById('p-type');
             const nameEl = document.getElementById('p-name');
             typeEl.className = 'type-badge ' + (node.type || '');
-            typeEl.textContent = node.type === 'professor' ? '教員' : node.type === 'course' ? '講義' : (node.type || '—');
+            typeEl.textContent = node.type === 'professor' ? '教員'
+                : node.type === 'course' ? '講義'
+                : node.type === 'major' ? '大分野'
+                : node.type === 'field' ? '研究分野'
+                : (node.type || '—');
             nameEl.textContent = node.name || node.id || 'Unknown';
 
             const preview = node.text_preview || node.description || '';
@@ -843,6 +1088,9 @@
                 const ridbUrl = (node.ridb_url || '').trim();
                 const linkUrl = researchUrl || ridbUrl || (node.url || '').trim();
                 const linkLabel = researchUrl ? 'researchmap を開く' : '研究者情報を開く';
+                if (node.photo_url) {
+                    html += `<img src="${escapeHtml(node.photo_url)}" alt="" style="width:72px;height:72px;border-radius:50%;object-fit:cover;border:2px solid rgba(224,138,60,0.6);margin-bottom:10px;">`;
+                }
                 html += externalLinkButton({ href: linkUrl, label: linkLabel });
                 html += `
                     <div class="info-row">
@@ -858,13 +1106,29 @@
                         <div class="preview-text">${escapeHtml(preview || '—')}</div>
                     </div>`;
             } else if (node.type === 'course') {
-                const syllabusUrl = (node.syllabus_url || node.url || '').trim();
+                const syllabusUrls = Array.isArray(node.syllabus_urls) && node.syllabus_urls.length
+                    ? node.syllabus_urls
+                    : [(node.syllabus_url || node.url || '').trim()].filter(Boolean);
+                const syllabusUrl = (syllabusUrls[0] || '').trim();
                 html += externalLinkButton({ href: syllabusUrl, label: 'シラバス詳細を開く' });
-                const hasInstructor = !!(node.instructor_id && meshById[node.instructor_id]);
-                const instructorLabel = escapeHtml(node.instructor_name || node.instructor_id || '—');
-                const instructorHtml = hasInstructor
-                    ? `<button type="button" class="info-link" data-goto="${escapeHtml(node.instructor_id)}">${instructorLabel}</button>`
-                    : `<span class="info-value">${instructorLabel}</span>`;
+                if (syllabusUrls.length > 1) {
+                    const extra = syllabusUrls.slice(1).map((u, i) =>
+                        `<a class="info-link" href="${escapeHtml(u)}" target="_blank" rel="noopener noreferrer">別クラス ${i + 2}</a>`
+                    ).join(' · ');
+                    html += `<div class="info-row"><span class="info-label">他クラスシラバス</span><div>${extra}</div></div>`;
+                }
+                const instructorIds = Array.isArray(node.instructor_ids) && node.instructor_ids.length
+                    ? node.instructor_ids
+                    : (node.instructor_id ? [node.instructor_id] : []);
+                const instructorNames = (node.instructor_name || '').split(/\s*\/\s*/).filter(Boolean);
+                const instructorHtml = instructorIds.length
+                    ? instructorIds.map((iid, idx) => {
+                        const label = escapeHtml(instructorNames[idx] || iid);
+                        return meshById[iid]
+                            ? `<button type="button" class="info-link" data-goto="${escapeHtml(iid)}">${label}</button>`
+                            : `<span class="info-value">${label}</span>`;
+                    }).join(' · ')
+                    : `<span class="info-value">—</span>`;
                 html += `
                     <div class="info-row">
                         <span class="info-label">担当教員</span>
@@ -877,6 +1141,31 @@
                     <div class="info-row">
                         <span class="info-label">授業概要・目標</span>
                         <div class="preview-text">${escapeHtml(preview || '—')}</div>
+                    </div>`;
+            } else if (node.type === 'field' || node.type === 'major') {
+                if (node.url) {
+                    html += externalLinkButton({ href: node.url, label: 'シーズ集で見る' });
+                }
+                html += `
+                    <div class="info-row">
+                        <span class="info-label">${node.type === 'major' ? '大分野' : '研究分野'}</span>
+                        <span class="info-value">${escapeHtml(node.name || '—')}</span>
+                    </div>`;
+                if (node.type === 'field' && node.major_name) {
+                    html += `
+                    <div class="info-row">
+                        <span class="info-label">大分野</span>
+                        <span class="info-value">${escapeHtml(node.major_name)}</span>
+                    </div>`;
+                }
+                html += `
+                    <div class="info-row">
+                        <span class="info-label">紐づく教員（この空間内）</span>
+                        <span class="info-value">${Number(node.member_count || 0)} 名</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">ヒント</span>
+                        <span class="info-value">クリックで所属教員を呼び出し、近づくと顔写真が現れます。</span>
                     </div>`;
             } else {
                 html += `<div class="info-row"><span class="info-value">${escapeHtml(preview || node.id)}</span></div>`;
@@ -935,6 +1224,272 @@
             });
         });
 
+        function createProfessorBillboard(node) {
+            const wrap = document.createElement('div');
+            wrap.className = 'prof-billboard';
+            wrap.style.opacity = '0';
+
+            const photoUrl = (node.photo_url || '').trim();
+            if (photoUrl) {
+                const img = document.createElement('img');
+                img.className = 'photo';
+                img.alt = '';
+                img.referrerPolicy = 'no-referrer';
+                img.src = photoUrl;
+                img.onerror = () => {
+                    img.remove();
+                    const ph = document.createElement('div');
+                    ph.className = 'photo placeholder';
+                    ph.textContent = (node.name || '?').charAt(0);
+                    wrap.insertBefore(ph, wrap.firstChild);
+                };
+                wrap.appendChild(img);
+            } else {
+                const ph = document.createElement('div');
+                ph.className = 'photo placeholder';
+                ph.textContent = (node.name || '?').charAt(0);
+                wrap.appendChild(ph);
+            }
+
+            const cap = document.createElement('div');
+            cap.className = 'caption';
+            cap.innerHTML = `<span class="nm">${escapeHtml(node.name || node.id || '')}</span>`
+                + `<span class="af">${escapeHtml(truncateText(node.affiliation || '', 18))}</span>`;
+            wrap.appendChild(cap);
+            return wrap;
+        }
+
+        function createFieldMesh(node) {
+            const isMajor = node.type === 'major';
+            const radius = isMajor ? 2.8 : 1.55;
+            const geo = new THREE.SphereGeometry(radius, 28, 28);
+            const mat = new THREE.MeshLambertMaterial({
+                color: isMajor ? MAJOR_COLOR : FIELD_COLOR,
+                transparent: true,
+                opacity: isMajor ? 0.42 : 0.38,
+                depthWrite: false,
+            });
+            const mesh = new THREE.Mesh(geo, mat);
+            mesh.position.copy(node.vec3);
+            mesh.userData = node;
+            mesh.visible = true;
+
+            const labelEl = document.createElement('div');
+            labelEl.className = `node-label ${node.type}`;
+            labelEl.textContent = nameLabelText(node);
+            const labelObj = new THREE.CSS2DObject(labelEl);
+            labelObj.position.set(0, isMajor ? 3.4 : 2.1, 0);
+            mesh.add(labelObj);
+            mesh.userData.labelEl = labelEl;
+            mesh.userData.labelObj = labelObj;
+            return mesh;
+        }
+
+        function createProfessorMesh(node) {
+            const geo = new THREE.SphereGeometry(0.55, 16, 16);
+            const mat = new THREE.MeshLambertMaterial({
+                color: PROF_COLOR,
+                transparent: true,
+                opacity: 0,
+                depthWrite: false,
+            });
+            const mesh = new THREE.Mesh(geo, mat);
+            mesh.position.copy(node.vec3);
+            mesh.userData = node;
+            mesh.visible = false;
+
+            const billboardEl = createProfessorBillboard(node);
+            const billboard = new THREE.CSS2DObject(billboardEl);
+            billboard.position.set(0, 0.2, 0);
+            mesh.add(billboard);
+            mesh.userData.billboardEl = billboardEl;
+            mesh.userData.billboardObj = billboard;
+
+            // Keep a hidden label slot for mode toggle compatibility
+            const labelEl = document.createElement('div');
+            labelEl.className = 'node-label professor hidden-label';
+            const labelObj = new THREE.CSS2DObject(labelEl);
+            labelObj.visible = false;
+            mesh.add(labelObj);
+            mesh.userData.labelEl = labelEl;
+            mesh.userData.labelObj = labelObj;
+            return mesh;
+        }
+
+        function courseLodAlpha(mesh) {
+            // Spatial discovery: fade in by proximity to the course's own UMAP position.
+            // Clicking a professor still pins taught_by courses via expandFromNode + searchPinned.
+            const focus = controls.target;
+            const distCam = camera.position.distanceTo(mesh.position);
+            const distFocus = focus.distanceTo(mesh.position);
+            const alphaCam = lodAlpha(distCam, LOD_COURSE_NEAR, LOD_COURSE_FAR);
+            const alphaFocus = lodAlpha(distFocus, LOD_COURSE_NEAR * 0.7, LOD_COURSE_FAR * 0.9);
+            return Math.max(alphaCam, alphaFocus * 0.9);
+        }
+
+        function createCourseMesh(node) {
+            const geo = new THREE.SphereGeometry(0.18, 10, 10);
+            const mat = new THREE.MeshBasicMaterial({
+                color: COURSE_COLOR,
+                transparent: true,
+                opacity: 0,
+                depthWrite: false,
+            });
+            const mesh = new THREE.Mesh(geo, mat);
+            mesh.position.copy(node.vec3);
+            mesh.userData = node;
+            mesh.visible = false;
+
+            // Soft glow shell
+            const glow = new THREE.Mesh(
+                new THREE.SphereGeometry(0.32, 10, 10),
+                new THREE.MeshBasicMaterial({
+                    color: 0x8ecae6,
+                    transparent: true,
+                    opacity: 0,
+                    depthWrite: false,
+                })
+            );
+            mesh.add(glow);
+            mesh.userData.glowMat = glow.material;
+
+            const labelEl = document.createElement('div');
+            labelEl.className = 'node-label course hidden-label';
+            labelEl.textContent = nameLabelText(node);
+            const labelObj = new THREE.CSS2DObject(labelEl);
+            labelObj.position.set(0, 0.45, 0);
+            labelObj.visible = false;
+            mesh.add(labelObj);
+            mesh.userData.labelEl = labelEl;
+            mesh.userData.labelObj = labelObj;
+            return mesh;
+        }
+
+        function applyLodVisibility() {
+            if (!dataReady) return;
+            const activeFields = getActiveFieldAlphas();
+
+            // Pass 1: professors (mid)
+            for (const mesh of professorMeshes) {
+                const fading = fadeAnims.some(a => a.kind === 'node' && a.mesh === mesh);
+                if (fading) continue;
+                const pinned = searchPinned.has(mesh.userData.id);
+                let alpha = professorLodAlpha(mesh, activeFields);
+                if (pinned) alpha = Math.max(alpha, 0.75);
+                const show = alpha > 0.04;
+                mesh.visible = show;
+                mesh.material.opacity = show ? alpha * targetOpacityFor(mesh) : 0;
+                mesh.material.depthWrite = mesh.material.opacity > 0.85;
+                if (mesh.userData.billboardEl) {
+                    mesh.userData.billboardEl.style.opacity = show ? String(alpha) : '0';
+                }
+                syncNodeLabel(mesh);
+            }
+
+            // Pass 2: courses (near) — by own position in space; global + per-instructor caps
+            const courseCandidates = [];
+            for (const mesh of courseMeshes) {
+                const fading = fadeAnims.some(a => a.kind === 'node' && a.mesh === mesh);
+                if (fading) continue;
+                const pinned = searchPinned.has(mesh.userData.id);
+                let alpha = courseLodAlpha(mesh);
+                if (pinned) alpha = Math.max(alpha, 0.65);
+                if (alpha > 0.05 || pinned) {
+                    courseCandidates.push({
+                        mesh,
+                        alpha,
+                        pinned,
+                        dist: camera.position.distanceTo(mesh.position),
+                        instructorId: mesh.userData.instructor_id || '',
+                    });
+                } else {
+                    mesh.visible = false;
+                    mesh.material.opacity = 0;
+                    if (mesh.userData.glowMat) mesh.userData.glowMat.opacity = 0;
+                    syncNodeLabel(mesh);
+                }
+            }
+            const COURSE_CAP_GLOBAL = 48;
+            const COURSE_CAP_PER_PROF = 8;
+            courseCandidates.sort((a, b) => {
+                if (a.pinned !== b.pinned) return a.pinned ? -1 : 1;
+                return a.dist - b.dist;
+            });
+            const keep = new Set();
+            const perProf = new Map();
+            for (const row of courseCandidates) {
+                if (row.pinned) {
+                    keep.add(row.mesh.userData.id);
+                    continue;
+                }
+                const iid = row.instructorId || '_';
+                const n = perProf.get(iid) || 0;
+                if (n >= COURSE_CAP_PER_PROF) continue;
+                if (keep.size >= COURSE_CAP_GLOBAL) continue;
+                keep.add(row.mesh.userData.id);
+                perProf.set(iid, n + 1);
+            }
+            for (const row of courseCandidates) {
+                const mesh = row.mesh;
+                const show = keep.has(mesh.userData.id);
+                const alpha = show ? row.alpha : 0;
+                mesh.visible = show && alpha > 0.05;
+                mesh.material.opacity = mesh.visible ? alpha * 0.95 : 0;
+                if (mesh.userData.glowMat) {
+                    mesh.userData.glowMat.opacity = mesh.visible ? alpha * 0.22 : 0;
+                }
+                syncNodeLabel(mesh);
+            }
+
+            for (const rec of edgeRecords) {
+                if (rec.type === 'field_hierarchy') {
+                    rec.line.visible = true;
+                    rec.material.opacity = edgeBaseOpacity(rec);
+                    continue;
+                }
+
+                const src = meshById[rec.source];
+                const tgt = meshById[rec.target];
+                if (!src || !tgt) {
+                    rec.line.visible = false;
+                    rec.material.opacity = 0;
+                    continue;
+                }
+
+                const bothNearEnough = (() => {
+                    if (rec.pinned) return src.visible && tgt.visible;
+                    if (rec.type === 'similarity') return false;
+                    if (rec.type === 'belongs_to_field') {
+                        const prof = src.userData.type === 'professor' ? src : tgt;
+                        return !!(prof && prof.visible && (prof.material.opacity || 0) > 0.12);
+                    }
+                    if (rec.type === 'taught_by') {
+                        // Only when lecture satellite is visible (near view)
+                        const course = src.userData.type === 'course' ? src : tgt;
+                        return !!(course && course.visible && (course.material.opacity || 0) > 0.08);
+                    }
+                    return false;
+                })();
+
+                if (!bothNearEnough) {
+                    rec.line.visible = false;
+                    rec.material.opacity = 0;
+                    continue;
+                }
+
+                const base = edgeBaseOpacity(rec);
+                const dEdge = Math.min(
+                    camera.position.distanceTo(src.position),
+                    camera.position.distanceTo(tgt.position)
+                );
+                const a = rec.pinned ? 1 : lodAlpha(dEdge, LOD_EDGE_NEAR, LOD_EDGE_FAR);
+                rec.line.visible = a > 0.05;
+                rec.material.opacity = base * Math.max(a, rec.type === 'taught_by' ? 0.55 : a);
+            }
+
+            updateEmptyHint();
+        }
+
         // --- Load network ---
         fetch('/api/network')
             .then(res => res.json())
@@ -947,39 +1502,31 @@
                     nodeDict[node.id] = node;
                 });
 
-                // Push overlapping professor nodes apart so they stay clickable
                 separateProfessorNodes();
 
-                const profGeo = new THREE.SphereGeometry(0.85, 20, 20);
-                const courseGeo = new THREE.SphereGeometry(0.32, 12, 12);
-
                 data.nodes.forEach(node => {
-                    const isProf = node.type === 'professor';
-                    const mat = new THREE.MeshLambertMaterial({
-                        color: isProf ? PROF_COLOR : COURSE_COLOR,
-                        transparent: true,
-                        opacity: 0,
-                        depthWrite: false,
-                    });
-                    const mesh = new THREE.Mesh(isProf ? profGeo : courseGeo, mat);
-                    mesh.position.copy(node.vec3);
-                    mesh.userData = node;
-                    mesh.visible = false;
-
-                    const labelEl = document.createElement('div');
-                    labelEl.className = `node-label ${node.type || ''} hidden-label`;
-                    labelEl.textContent = nameLabelText(node);
-                    const labelObj = new THREE.CSS2DObject(labelEl);
-                    labelObj.position.set(0, isProf ? 1.35 : 0.7, 0);
-                    labelObj.visible = false;
-                    mesh.add(labelObj);
-                    mesh.userData.labelEl = labelEl;
-                    mesh.userData.labelObj = labelObj;
-
+                    let mesh;
+                    if (node.type === 'field' || node.type === 'major') {
+                        mesh = createFieldMesh(node);
+                        fieldMeshes.push(mesh);
+                    } else if (node.type === 'professor') {
+                        mesh = createProfessorMesh(node);
+                        professorMeshes.push(mesh);
+                        midMeshes.push(mesh);
+                    } else if (node.type === 'course') {
+                        mesh = createCourseMesh(node);
+                        courseMeshes.push(mesh);
+                        midMeshes.push(mesh);
+                    } else {
+                        return;
+                    }
                     scene.add(mesh);
                     nodeMeshes.push(mesh);
                     meshById[node.id] = mesh;
                 });
+
+                // Course positions come from joint syllabus UMAP (Analysis);
+                // do not re-orbit them around instructors.
 
                 data.edges.forEach(edge => {
                     const source = nodeDict[edge.source];
@@ -1004,6 +1551,28 @@
                         line = new THREE.Line(geo, mat);
                         line.computeLineDistances();
                         line.renderOrder = 0;
+                    } else if (type === 'field_hierarchy') {
+                        mat = new THREE.LineBasicMaterial({
+                            color: 0x5a7a90,
+                            transparent: true,
+                            opacity: 0.22,
+                            depthWrite: false,
+                        });
+                        line = new THREE.Line(geo, mat);
+                        line.renderOrder = 0;
+                        line.visible = true;
+                    } else if (type === 'belongs_to_field') {
+                        mat = new THREE.LineBasicMaterial({
+                            color: 0xc4a06a,
+                            transparent: true,
+                            opacity: 0,
+                            depthWrite: false,
+                        });
+                        line = new THREE.Line(geo, mat);
+                        line.renderOrder = 1;
+                        line.visible = false;
+                        if (!fieldMemberIds.has(edge.target)) fieldMemberIds.set(edge.target, new Set());
+                        fieldMemberIds.get(edge.target).add(edge.source);
                     } else {
                         mat = new THREE.LineBasicMaterial({
                             color: 0xc8cdd4,
@@ -1013,8 +1582,8 @@
                         });
                         line = new THREE.Line(geo, mat);
                         line.renderOrder = 1;
+                        line.visible = false;
                     }
-                    line.visible = false;
                     scene.add(line);
 
                     const rec = {
@@ -1024,6 +1593,7 @@
                         score,
                         line,
                         material: mat,
+                        pinned: false,
                     };
                     edgeRecords.push(rec);
                     ensureEdgeIndex(edge.source).push(rec);
@@ -1031,7 +1601,13 @@
                 });
 
                 dataReady = true;
-                updateEmptyHint();
+                camera.position.set(0, 40, 165);
+                applyLodVisibility();
+                updateVisibleLabelDistances();
+                const nField = fieldMeshes.length;
+                const nProf = professorMeshes.length;
+                const nCourse = courseMeshes.length;
+                showToast(`分野 ${nField} ・ 教員 ${nProf} ・ 講義 ${nCourse}`, 2800);
             })
             .catch(err => {
                 console.error(err);
@@ -1042,7 +1618,7 @@
             mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
             mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
             raycaster.setFromCamera(mouse, camera);
-            const visible = nodeMeshes.filter(m => m.visible);
+            const visible = nodeMeshes.filter(m => m.visible && (m.material.opacity || 0) > 0.08);
             const hits = raycaster.intersectObjects(visible);
             return hits.length ? hits[0].object : null;
         }
@@ -1146,6 +1722,8 @@
             }
 
             controls.update();
+            lodFrame += 1;
+            if (lodFrame % 2 === 0) applyLodVisibility();
             updateVisibleLabelDistances();
             renderer.render(scene, camera);
             labelRenderer.render(scene, camera);

@@ -6,14 +6,17 @@ selenium>=4.0,<5
 webdriver-manager>=4.0,<5
 
 # Data generation and analysis
-numpy>=2.4,<3
-pandas>=3.0,<4
-scikit-learn>=1.9,<2
-sentence-transformers>=5.6,<6
-torch>=2.13,<3
-tqdm>=4.68,<5
-transformers>=4.48,<5
-umap-learn>=0.5,<1
+numpy>=2.0,<3
+pandas>=2.2,<4
+scikit-learn>=1.5,<2
+scipy>=1.11,<2
+sentence-transformers>=3.0,<6
+torch>=2.2,<3
+tqdm>=4.66,<5
+transformers>=4.44,<5
+umap-learn>=0.5.6,<1
+numba>=0.59
+llvmlite>=0.42
 networkx>=3.0
 matplotlib>=3.8
 plotly>=5.20
@@ -22,3 +25,12 @@ plotly>=5.20
 streamlit>=1.36
 openpyxl>=3.0
 pdfplumber>=0.11
+
+# ---------------------------------------------------------------------------
+# Windows UMAP / numba troubleshooting
+# If `from umap import UMAP` fails with:
+#   ImportError: DLL load failed while importing _devicearray
+# (WDAC / application control policy), try pinning a known-good stack:
+#   pip install "numpy<2.3" "numba>=0.59,<0.62" "llvmlite>=0.42,<0.45" "umap-learn>=0.5.6,<0.6"
+# Pipeline 04 falls back to PCA automatically when UMAP import/fit fails.
+# ---------------------------------------------------------------------------

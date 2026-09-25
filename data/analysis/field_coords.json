@@ -1,0 +1,772 @@
+{
+  "field_1001": {
+    "level": "field",
+    "name": "情報学基礎理論",
+    "parent_id": "major_情報学",
+    "member_count": 1,
+    "position": [
+      -1.881808,
+      1.954382,
+      -2.006942
+    ]
+  },
+  "field_1003": {
+    "level": "field",
+    "name": "統計科学",
+    "parent_id": "major_情報学",
+    "member_count": 1,
+    "position": [
+      1.104503,
+      0.846319,
+      -5.429357
+    ]
+  },
+  "field_1201": {
+    "level": "field",
+    "name": "認知科学",
+    "parent_id": "major_情報学",
+    "member_count": 2,
+    "position": [
+      0.583301,
+      0.411604,
+      -6.230945
+    ]
+  },
+  "field_1202": {
+    "level": "field",
+    "name": "知覚情報処理",
+    "parent_id": "major_情報学",
+    "member_count": 1,
+    "position": [
+      0.386712,
+      0.703147,
+      -6.154023
+    ]
+  },
+  "field_1204": {
+    "level": "field",
+    "name": "知能情報学",
+    "parent_id": "major_情報学",
+    "member_count": 4,
+    "position": [
+      0.863712,
+      1.089073,
+      -6.144658
+    ]
+  },
+  "field_1206": {
+    "level": "field",
+    "name": "知能ロボティクス",
+    "parent_id": "major_情報学",
+    "member_count": 1,
+    "position": [
+      0.658858,
+      0.425699,
+      -5.40896
+    ]
+  },
+  "field_1207": {
+    "level": "field",
+    "name": "感性情報学",
+    "parent_id": "major_情報学",
+    "member_count": 2,
+    "position": [
+      0.536065,
+      1.049809,
+      -6.16929
+    ]
+  },
+  "field_1301": {
+    "level": "field",
+    "name": "生命・健康・医療情報学",
+    "parent_id": "major_情報学",
+    "member_count": 2,
+    "position": [
+      2.457541,
+      1.297897,
+      -6.636398
+    ]
+  },
+  "field_1403": {
+    "level": "field",
+    "name": "環境影響評価",
+    "parent_id": "major_環境学",
+    "member_count": 1,
+    "position": [
+      -0.920601,
+      -1.2465,
+      -8.63358
+    ]
+  },
+  "field_1602": {
+    "level": "field",
+    "name": "持続可能システム",
+    "parent_id": "major_環境学",
+    "member_count": 1,
+    "position": [
+      -0.924189,
+      -1.251225,
+      -8.637605
+    ]
+  },
+  "field_1603": {
+    "level": "field",
+    "name": "環境政策・環境社会システム",
+    "parent_id": "major_環境学",
+    "member_count": 3,
+    "position": [
+      0.881777,
+      -0.146889,
+      -6.434075
+    ]
+  },
+  "field_1651": {
+    "level": "field",
+    "name": "デザイン学",
+    "parent_id": "major_複合領域",
+    "member_count": 3,
+    "position": [
+      1.536179,
+      -0.572327,
+      -6.053845
+    ]
+  },
+  "field_1701": {
+    "level": "field",
+    "name": "家政・生活学一般",
+    "parent_id": "major_複合領域",
+    "member_count": 1,
+    "position": [
+      1.173386,
+      0.351619,
+      -5.790351
+    ]
+  },
+  "field_1801": {
+    "level": "field",
+    "name": "科学教育",
+    "parent_id": "major_複合領域",
+    "member_count": 1,
+    "position": [
+      0.61651,
+      0.236533,
+      -6.172257
+    ]
+  },
+  "field_1802": {
+    "level": "field",
+    "name": "教育工学",
+    "parent_id": "major_複合領域",
+    "member_count": 3,
+    "position": [
+      0.678269,
+      0.220065,
+      -6.122757
+    ]
+  },
+  "field_2101": {
+    "level": "field",
+    "name": "地理学",
+    "parent_id": "major_複合領域",
+    "member_count": 1,
+    "position": [
+      -0.989138,
+      -1.313454,
+      -8.703427
+    ]
+  },
+  "field_2301": {
+    "level": "field",
+    "name": "生体医工学・生体材料学",
+    "parent_id": "major_複合領域",
+    "member_count": 2,
+    "position": [
+      0.533006,
+      0.734125,
+      -5.957359
+    ]
+  },
+  "field_2304": {
+    "level": "field",
+    "name": "リハビリテーション科学・福祉工学",
+    "parent_id": "major_複合領域",
+    "member_count": 2,
+    "position": [
+      0.804561,
+      1.118987,
+      -6.161426
+    ]
+  },
+  "field_2602": {
+    "level": "field",
+    "name": "脳計測科学",
+    "parent_id": "major_複合領域",
+    "member_count": 1,
+    "position": [
+      0.254413,
+      0.660805,
+      -6.28736
+    ]
+  },
+  "field_2801": {
+    "level": "field",
+    "name": "ジェンダー",
+    "parent_id": "major_総合人文社会",
+    "member_count": 1,
+    "position": [
+      3.097354,
+      0.937149,
+      -5.833399
+    ]
+  },
+  "field_2901": {
+    "level": "field",
+    "name": "哲学・倫理学",
+    "parent_id": "major_人文学",
+    "member_count": 1,
+    "position": [
+      1.875194,
+      -0.169811,
+      -6.895404
+    ]
+  },
+  "field_3205": {
+    "level": "field",
+    "name": "外国語教育",
+    "parent_id": "major_人文学",
+    "member_count": 1,
+    "position": [
+      1.955744,
+      -0.524928,
+      -6.673421
+    ]
+  },
+  "field_3803": {
+    "level": "field",
+    "name": "経済統計",
+    "parent_id": "major_社会科学",
+    "member_count": 1,
+    "position": [
+      2.287522,
+      0.010339,
+      -6.078551
+    ]
+  },
+  "field_3804": {
+    "level": "field",
+    "name": "経済政策",
+    "parent_id": "major_社会科学",
+    "member_count": 2,
+    "position": [
+      1.638323,
+      0.176256,
+      -5.919909
+    ]
+  },
+  "field_3805": {
+    "level": "field",
+    "name": "財政・公共経済",
+    "parent_id": "major_社会科学",
+    "member_count": 1,
+    "position": [
+      1.734934,
+      0.290031,
+      -6.23409
+    ]
+  },
+  "field_3806": {
+    "level": "field",
+    "name": "金融・ファイナンス",
+    "parent_id": "major_社会科学",
+    "member_count": 1,
+    "position": [
+      2.217601,
+      0.08806,
+      -6.223047
+    ]
+  },
+  "field_3901": {
+    "level": "field",
+    "name": "経営学",
+    "parent_id": "major_社会科学",
+    "member_count": 2,
+    "position": [
+      2.82709,
+      -0.088201,
+      -4.84893
+    ]
+  },
+  "field_4001": {
+    "level": "field",
+    "name": "社会学",
+    "parent_id": "major_社会科学",
+    "member_count": 1,
+    "position": [
+      1.790642,
+      -0.098194,
+      -5.333097
+    ]
+  },
+  "field_4101": {
+    "level": "field",
+    "name": "社会心理学",
+    "parent_id": "major_社会科学",
+    "member_count": 1,
+    "position": [
+      2.494816,
+      0.122056,
+      -5.535557
+    ]
+  },
+  "field_4201": {
+    "level": "field",
+    "name": "教育学",
+    "parent_id": "major_社会科学",
+    "member_count": 2,
+    "position": [
+      2.187626,
+      -0.495813,
+      -6.637669
+    ]
+  },
+  "field_4202": {
+    "level": "field",
+    "name": "教育社会学",
+    "parent_id": "major_社会科学",
+    "member_count": 1,
+    "position": [
+      2.342692,
+      -0.282793,
+      -6.531145
+    ]
+  },
+  "field_4404": {
+    "level": "field",
+    "name": "光工学・光量子科学",
+    "parent_id": "major_総合理工",
+    "member_count": 1,
+    "position": [
+      -0.416287,
+      2.194325,
+      -8.113214
+    ]
+  },
+  "field_5201": {
+    "level": "field",
+    "name": "物理化学",
+    "parent_id": "major_化学",
+    "member_count": 1,
+    "position": [
+      -1.99839,
+      1.231056,
+      -2.347425
+    ]
+  },
+  "field_5301": {
+    "level": "field",
+    "name": "機能物性化学",
+    "parent_id": "major_化学",
+    "member_count": 1,
+    "position": [
+      -1.981217,
+      1.243671,
+      -2.33406
+    ]
+  },
+  "field_5305": {
+    "level": "field",
+    "name": "生体関連化学",
+    "parent_id": "major_化学",
+    "member_count": 1,
+    "position": [
+      -1.988107,
+      1.302758,
+      -2.371471
+    ]
+  },
+  "field_5306": {
+    "level": "field",
+    "name": "グリーン・環境化学",
+    "parent_id": "major_化学",
+    "member_count": 1,
+    "position": [
+      -1.92378,
+      1.298985,
+      -2.286463
+    ]
+  },
+  "field_5307": {
+    "level": "field",
+    "name": "エネルギー関連化学",
+    "parent_id": "major_化学",
+    "member_count": 1,
+    "position": [
+      -1.973809,
+      1.218859,
+      -2.381346
+    ]
+  },
+  "field_5506": {
+    "level": "field",
+    "name": "機械力学・制御",
+    "parent_id": "major_工学",
+    "member_count": 1,
+    "position": [
+      -1.893699,
+      1.961312,
+      -2.00872
+    ]
+  },
+  "field_5507": {
+    "level": "field",
+    "name": "知能機械学・機械システム",
+    "parent_id": "major_工学",
+    "member_count": 1,
+    "position": [
+      -1.77365,
+      1.85144,
+      -2.063454
+    ]
+  },
+  "field_5603": {
+    "level": "field",
+    "name": "電子デバイス・電子機器",
+    "parent_id": "major_工学",
+    "member_count": 2,
+    "position": [
+      -0.377783,
+      2.124694,
+      -8.01126
+    ]
+  },
+  "field_5605": {
+    "level": "field",
+    "name": "計測工学",
+    "parent_id": "major_工学",
+    "member_count": 1,
+    "position": [
+      -0.438657,
+      2.192372,
+      -8.100759
+    ]
+  },
+  "field_5606": {
+    "level": "field",
+    "name": "制御・システム工学",
+    "parent_id": "major_工学",
+    "member_count": 1,
+    "position": [
+      -1.798854,
+      1.919279,
+      -1.978905
+    ]
+  },
+  "field_5705": {
+    "level": "field",
+    "name": "土木計画学・交通工学",
+    "parent_id": "major_工学",
+    "member_count": 2,
+    "position": [
+      -0.485286,
+      -1.023117,
+      -8.012227
+    ]
+  },
+  "field_5706": {
+    "level": "field",
+    "name": "土木環境システム",
+    "parent_id": "major_工学",
+    "member_count": 1,
+    "position": [
+      -0.94129,
+      -1.256524,
+      -8.662373
+    ]
+  },
+  "field_5803": {
+    "level": "field",
+    "name": "都市計画・建築計画",
+    "parent_id": "major_工学",
+    "member_count": 3,
+    "position": [
+      1.3533,
+      -0.980155,
+      -5.413203
+    ]
+  },
+  "field_6106": {
+    "level": "field",
+    "name": "エネルギー学",
+    "parent_id": "major_工学",
+    "member_count": 1,
+    "position": [
+      -1.029688,
+      -1.359316,
+      -8.753926
+    ]
+  },
+  "field_6501": {
+    "level": "field",
+    "name": "ゲノム生物学",
+    "parent_id": "major_総合生物",
+    "member_count": 1,
+    "position": [
+      2.296925,
+      1.419192,
+      -6.870656
+    ]
+  },
+  "field_6502": {
+    "level": "field",
+    "name": "ゲノム医科学",
+    "parent_id": "major_総合生物",
+    "member_count": 2,
+    "position": [
+      2.390415,
+      1.348751,
+      -6.704163
+    ]
+  },
+  "field_7702": {
+    "level": "field",
+    "name": "環境農学（含ランドスケープ科学）",
+    "parent_id": "major_農学",
+    "member_count": 1,
+    "position": [
+      1.488082,
+      -0.762179,
+      -6.227832
+    ]
+  },
+  "field_8001": {
+    "level": "field",
+    "name": "医療社会学",
+    "parent_id": "major_医歯薬学",
+    "member_count": 2,
+    "position": [
+      2.890723,
+      1.184592,
+      -5.761831
+    ]
+  },
+  "field_8102": {
+    "level": "field",
+    "name": "衛生学・公衆衛生学",
+    "parent_id": "major_医歯薬学",
+    "member_count": 4,
+    "position": [
+      2.630622,
+      0.403122,
+      -5.229892
+    ]
+  },
+  "field_8201": {
+    "level": "field",
+    "name": "内科学一般（含心身医学）",
+    "parent_id": "major_医歯薬学",
+    "member_count": 1,
+    "position": [
+      3.336272,
+      0.146011,
+      -4.87155
+    ]
+  },
+  "field_8203": {
+    "level": "field",
+    "name": "循環器内科学",
+    "parent_id": "major_医歯薬学",
+    "member_count": 2,
+    "position": [
+      2.740788,
+      1.329534,
+      -5.980517
+    ]
+  },
+  "field_8207": {
+    "level": "field",
+    "name": "代謝学",
+    "parent_id": "major_医歯薬学",
+    "member_count": 1,
+    "position": [
+      2.882911,
+      1.606356,
+      -5.716405
+    ]
+  },
+  "field_8208": {
+    "level": "field",
+    "name": "内分泌学",
+    "parent_id": "major_医歯薬学",
+    "member_count": 1,
+    "position": [
+      2.933002,
+      1.573554,
+      -5.644783
+    ]
+  },
+  "field_8209": {
+    "level": "field",
+    "name": "血液内科学",
+    "parent_id": "major_医歯薬学",
+    "member_count": 1,
+    "position": [
+      2.344777,
+      0.906115,
+      -5.428209
+    ]
+  },
+  "field_9999": {
+    "level": "field",
+    "name": "その他",
+    "parent_id": "major_その他",
+    "member_count": 9,
+    "position": [
+      1.833807,
+      0.493954,
+      -5.196806
+    ]
+  },
+  "major_情報学": {
+    "level": "major",
+    "name": "情報学",
+    "parent_id": "",
+    "member_count": 14,
+    "position": [
+      0.586805,
+      0.912956,
+      -5.329713
+    ]
+  },
+  "major_環境学": {
+    "level": "major",
+    "name": "環境学",
+    "parent_id": "",
+    "member_count": 5,
+    "position": [
+      -0.802948,
+      -1.158182,
+      -8.489125
+    ]
+  },
+  "major_複合領域": {
+    "level": "major",
+    "name": "複合領域",
+    "parent_id": "",
+    "member_count": 14,
+    "position": [
+      0.952092,
+      0.280835,
+      -5.72323
+    ]
+  },
+  "major_総合人文社会": {
+    "level": "major",
+    "name": "総合人文社会",
+    "parent_id": "",
+    "member_count": 1,
+    "position": [
+      3.116358,
+      0.946062,
+      -5.867725
+    ]
+  },
+  "major_人文学": {
+    "level": "major",
+    "name": "人文学",
+    "parent_id": "",
+    "member_count": 2,
+    "position": [
+      2.032321,
+      -0.611061,
+      -6.914844
+    ]
+  },
+  "major_社会科学": {
+    "level": "major",
+    "name": "社会科学",
+    "parent_id": "",
+    "member_count": 12,
+    "position": [
+      1.974149,
+      -0.063739,
+      -5.807542
+    ]
+  },
+  "major_総合理工": {
+    "level": "major",
+    "name": "総合理工",
+    "parent_id": "",
+    "member_count": 1,
+    "position": [
+      -0.440392,
+      2.191921,
+      -8.101666
+    ]
+  },
+  "major_化学": {
+    "level": "major",
+    "name": "化学",
+    "parent_id": "",
+    "member_count": 5,
+    "position": [
+      -2.072651,
+      1.187118,
+      -2.419581
+    ]
+  },
+  "major_工学": {
+    "level": "major",
+    "name": "工学",
+    "parent_id": "",
+    "member_count": 13,
+    "position": [
+      -1.553974,
+      1.517254,
+      -2.004746
+    ]
+  },
+  "major_総合生物": {
+    "level": "major",
+    "name": "総合生物",
+    "parent_id": "",
+    "member_count": 3,
+    "position": [
+      2.35878,
+      1.463778,
+      -6.953096
+    ]
+  },
+  "major_農学": {
+    "level": "major",
+    "name": "農学",
+    "parent_id": "",
+    "member_count": 1,
+    "position": [
+      1.461167,
+      -0.763887,
+      -6.159229
+    ]
+  },
+  "major_医歯薬学": {
+    "level": "major",
+    "name": "医歯薬学",
+    "parent_id": "",
+    "member_count": 12,
+    "position": [
+      2.626179,
+      1.160825,
+      -5.273568
+    ]
+  },
+  "major_その他": {
+    "level": "major",
+    "name": "その他",
+    "parent_id": "",
+    "member_count": 9,
+    "position": [
+      1.846522,
+      -0.11101,
+      -4.95268
+    ]
+  }
+}

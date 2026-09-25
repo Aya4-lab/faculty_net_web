@@ -1,12 +1,13 @@
 """
-STEP 4: Sentence Transformers embedding → UMAP 3D → display_data.json
+05 — Export display_data.json (UI 表示用)
 
-Also merges Display metadata (name, affiliation, keywords, description)
+Sentence Transformers embedding → UMAP 3D → display nodes/edges,
+merged with Display metadata (name, affiliation, keywords, description, URLs)
 from RIDB + syllabus + analysis_data.
 
 Usage:
-  python pipeline/02_analyze_umap.py              # full embed + UMAP + meta
-  python pipeline/02_analyze_umap.py --enrich-only  # keep positions/edges, refresh meta
+  python pipeline/05_export_display_data.py              # full embed + UMAP + meta
+  python pipeline/05_export_display_data.py --enrich-only  # keep positions/edges, refresh meta
 """
 
 from __future__ import annotations
@@ -31,6 +32,13 @@ SYLLABUS_BASIC = RAW / "syllabus" / "all_basic_info.csv"
 REMP_FACULTY = RAW / "researchmap" / "remp_yugo_faculty_ja.json"
 RESEARCHERS_INDEX = RAW / "researchmap" / "kanazawa_researchers_index.json"
 
+from syllabus_meta import (  # noqa: E402
+    load_syllabus_detail_urls,
+    load_syllabus_titles,
+    split_urls,
+    syllabus_url_for_code,
+)
+
 MODEL_NAME = "intfloat/multilingual-e5-base"
 BATCH_SIZE = 32
 RANDOM_STATE = 42
@@ -49,11 +57,11 @@ COORD_TARGET = 28.0
 
 # Public detail page templates
 RIDB_DETAIL_TMPL = "https://ridb.kanazawa-u.ac.jp/public/detail.php?id={ridb_id}"
-SYLLABUS_YEAR = 2026
-SYLLABUS_DETAIL_TMPL = (
-    "https://eduweb.sta.kanazawa-u.ac.jp/portal/Public/Syllabus/DetailMain.aspx"
-    "?lct_year={year}&lct_no={code}&je_cd=1"
-)
+
+# Hard URL overrides (normalize_name keys) — safety net for known mismatches
+RESEARCHMAP_URL_OVERRIDES = {
+    "堀優太": "https://researchmap.jp/yuhori",
+}
 
 READING_RE = re.compile(r"[（(][^）)]*[）)]")
 WHITESPACE_RE = re.compile(r"[ \t\u3000]+")
@@ -95,20 +103,26 @@ def clean_researchmap_url(url: str) -> str:
 
 
 def load_researchmap_url_by_name() -> dict[str, str]:
-    """norm_name -> researchmap profile URL."""
+    """norm_name -> researchmap profile URL.
+
+    Preference: hard overrides > researchers index > remp scrape.
+    Index wins over remp so a wrong remp scrape cannot override a correct index URL.
+    """
     by_name: dict[str, str] = {}
-    if RESEARCHERS_INDEX.exists():
-        for row in load_json(RESEARCHERS_INDEX):
-            name = norm_name(row.get("name") or "")
-            url = clean_researchmap_url(row.get("profile_url") or "")
-            if name and url and name not in by_name:
-                by_name[name] = url
     if REMP_FACULTY.exists():
         for row in load_json(REMP_FACULTY):
             name = norm_name(remp_display_name(row))
             url = clean_researchmap_url(row.get("researchmap_url") or "")
+            if name and url and name not in by_name:
+                by_name[name] = url
+    if RESEARCHERS_INDEX.exists():
+        for row in load_json(RESEARCHERS_INDEX):
+            name = norm_name(row.get("name") or "")
+            url = clean_researchmap_url(row.get("profile_url") or "")
             if name and url:
-                by_name[name] = url  # remp overrides index
+                by_name[name] = url  # index overrides remp
+    for name, url in RESEARCHMAP_URL_OVERRIDES.items():
+        by_name[name] = clean_researchmap_url(url)
     return by_name
 
 
@@ -137,21 +151,69 @@ def load_professor_meta() -> dict[str, dict]:
 
 
 def load_course_meta() -> dict[str, dict]:
-    """Map timetable code -> {name, syllabus_url}."""
+    """Map timetable code -> {name, syllabus_url} using scraped 日URL (with lct_idx)."""
+    titles = load_syllabus_titles()
+    urls = load_syllabus_detail_urls()
     meta: dict[str, dict] = {}
-    with SYLLABUS_BASIC.open(encoding="utf-8-sig", newline="") as f:
-        for row in csv.DictReader(f):
-            code = (row.get("時間割番号") or "").strip()
-            title = (row.get("科目名") or "").strip()
-            if not code or code in meta:
-                continue
-            syllabus_url = SYLLABUS_DETAIL_TMPL.format(year=SYLLABUS_YEAR, code=code)
-            meta[code] = {
-                "name": title,
-                "syllabus_url": syllabus_url,
-                "url": syllabus_url,
-            }
+    codes = set(titles) | set(urls)
+    # Also cover codes that appear only in all_basic_info
+    if SYLLABUS_BASIC.exists():
+        with SYLLABUS_BASIC.open(encoding="utf-8-sig", newline="") as f:
+            for row in csv.DictReader(f):
+                code = (row.get("時間割番号") or "").strip()
+                title = (row.get("科目名") or "").strip()
+                if code:
+                    codes.add(code)
+                    if title and code not in titles:
+                        titles[code] = title
+    for code in codes:
+        syllabus_url = syllabus_url_for_code(code, urls)
+        if not syllabus_url and code not in titles:
+            continue
+        meta[code] = {
+            "name": titles.get(code) or "",
+            "syllabus_url": syllabus_url,
+            "url": syllabus_url,
+        }
     return meta
+
+
+def course_instructor_ids(rec: dict, node: dict | None = None) -> list[str]:
+    ids: list[str] = []
+    for src in (
+        rec.get("instructor_ids"),
+        (node or {}).get("instructor_ids"),
+        [rec.get("instructor_id")] if rec.get("instructor_id") else None,
+        [(node or {}).get("instructor_id")] if (node or {}).get("instructor_id") else None,
+    ):
+        if not src:
+            continue
+        for item in src:
+            iid = (item or "").strip()
+            if iid and iid not in ids:
+                ids.append(iid)
+    return ids
+
+
+def course_syllabus_urls(rec: dict, code_meta: dict, codes: list[str]) -> list[str]:
+    urls: list[str] = []
+    for src in (rec.get("syllabus_urls"), split_urls(rec.get("syllabus_url"))):
+        for u in src or []:
+            u = (u or "").strip()
+            if u and u not in urls:
+                urls.append(u)
+    for code in codes:
+        u = (code_meta.get(code) or {}).get("syllabus_url") or ""
+        if u and u not in urls:
+            urls.append(u)
+    return urls
+
+
+def timetable_codes_from_course(rec: dict, course_id: str) -> list[str]:
+    codes = [c.strip() for c in (rec.get("timetable_codes") or []) if str(c).strip()]
+    if codes:
+        return codes
+    return [timetable_code_from_course_id(course_id)]
 
 
 def timetable_code_from_course_id(course_id: str) -> str:
@@ -187,12 +249,14 @@ def collect_nodes(data: dict) -> list[dict]:
             if source is None:
                 print(f"skip empty: {rec.get('id')}")
                 continue
+            instructor_ids = course_instructor_ids(rec) if kind == "course" else []
             nodes.append(
                 {
                     "id": rec["id"],
                     "type": kind,
                     "source_text": source,
-                    "instructor_id": rec.get("instructor_id"),
+                    "instructor_id": instructor_ids[0] if instructor_ids else rec.get("instructor_id"),
+                    "instructor_ids": instructor_ids,
                     "keywords": list(rec.get("keywords") or []),
                     "description": (rec.get("text") or "").strip(),
                 }
@@ -229,23 +293,35 @@ def enrich_display_node(
             "description": (analysis.get("text") or "").strip(),
         }
 
-    code = timetable_code_from_course_id(nid)
-    cmeta = course_meta.get(code) or {}
-    instructor_id = analysis.get("instructor_id") or node.get("instructor_id") or ""
-    instructor_name = ""
-    if instructor_id:
-        instructor_name = (prof_meta.get(instructor_id) or {}).get("name") or ""
-    syllabus_url = cmeta.get("syllabus_url") or SYLLABUS_DETAIL_TMPL.format(
-        year=SYLLABUS_YEAR, code=code
-    )
+    codes = timetable_codes_from_course(analysis, nid)
+    primary_code = codes[0] if codes else timetable_code_from_course_id(nid)
+    cmeta = course_meta.get(primary_code) or {}
+    instructor_ids = course_instructor_ids(analysis, node)
+    instructor_id = instructor_ids[0] if instructor_ids else ""
+    instructor_names = [
+        (prof_meta.get(iid) or {}).get("name") or iid for iid in instructor_ids
+    ]
+    instructor_name = " / ".join(n for n in instructor_names if n)
+    syllabus_urls = course_syllabus_urls(analysis, course_meta, codes)
+    syllabus_url = syllabus_urls[0] if syllabus_urls else (cmeta.get("syllabus_url") or "")
+    # Prefer title from any code in the merged group
+    name = cmeta.get("name") or ""
+    if not name:
+        for code in codes:
+            name = (course_meta.get(code) or {}).get("name") or ""
+            if name:
+                break
     return {
         "id": nid,
         "type": "course",
-        "name": cmeta.get("name") or nid,
+        "name": name or nid,
         "instructor_id": instructor_id,
+        "instructor_ids": instructor_ids,
         "instructor_name": instructor_name,
+        "timetable_codes": codes,
         "syllabus_url": syllabus_url,
-        "url": cmeta.get("url") or syllabus_url,
+        "syllabus_urls": syllabus_urls,
+        "url": syllabus_url,
         "position": position,
         "keywords": list(analysis.get("keywords") or []),
         "description": (analysis.get("text") or "").strip(),
@@ -289,28 +365,29 @@ def run_umap(embeddings: np.ndarray) -> np.ndarray:
 
 
 def soft_align_taught_by(coords: np.ndarray, nodes: list[dict], pull: float = TAUGHT_BY_PULL) -> np.ndarray:
-    """Gently pull each course toward its instructor so faculty/course topics co-locate."""
+    """Gently pull each course toward its instructor(s) so faculty/course topics co-locate."""
     if pull <= 0:
         return coords
     id_to_i = {n["id"]: i for i, n in enumerate(nodes)}
     out = coords.copy()
-    # Courses → instructor
+    # Courses → mean of instructors
     for i, n in enumerate(nodes):
         if n["type"] != "course":
             continue
-        iid = n.get("instructor_id")
-        if not iid or iid not in id_to_i:
+        iids = course_instructor_ids(n)
+        prof_idxs = [id_to_i[iid] for iid in iids if iid in id_to_i]
+        if not prof_idxs:
             continue
-        j = id_to_i[iid]
-        out[i] = (1.0 - pull) * coords[i] + pull * coords[j]
+        target = coords[prof_idxs].mean(axis=0)
+        out[i] = (1.0 - pull) * coords[i] + pull * target
     # Instructors → mean of their (already-pulled) courses
     courses_by_prof: dict[str, list[int]] = {}
     for i, n in enumerate(nodes):
         if n["type"] != "course":
             continue
-        iid = n.get("instructor_id")
-        if iid and iid in id_to_i:
-            courses_by_prof.setdefault(iid, []).append(i)
+        for iid in course_instructor_ids(n):
+            if iid and iid in id_to_i:
+                courses_by_prof.setdefault(iid, []).append(i)
     for iid, idxs in courses_by_prof.items():
         j = id_to_i[iid]
         centroid = out[idxs].mean(axis=0)
@@ -340,14 +417,14 @@ def build_taught_by_edges(nodes: list[dict]) -> list[dict]:
     for n in nodes:
         if n["type"] != "course":
             continue
-        instructor_id = n.get("instructor_id")
-        if not instructor_id or instructor_id not in ids:
-            continue
-        key = (instructor_id, n["id"])
-        if key in seen:
-            continue
-        seen.add(key)
-        edges.append({"source": instructor_id, "target": n["id"], "type": "taught_by"})
+        for instructor_id in course_instructor_ids(n):
+            if not instructor_id or instructor_id not in ids:
+                continue
+            key = (instructor_id, n["id"])
+            if key in seen:
+                continue
+            seen.add(key)
+            edges.append({"source": instructor_id, "target": n["id"], "type": "taught_by"})
     return edges
 
 
@@ -431,7 +508,7 @@ def enrich_existing() -> None:
     with_rmap = sum(1 for n in nodes if n["type"] == "professor" and n.get("researchmap_url"))
     with_syll = sum(1 for n in nodes if n["type"] == "course" and n.get("syllabus_url"))
 
-    print("=== 02_analyze_umap (--enrich-only) ===")
+    print("=== 05_export_display_data (--enrich-only) ===")
     print(f"output                    : {OUT_PATH}")
     print(f"nodes (total)             : {len(nodes)}")
     print(f"  professors              : {n_prof} (named {named_prof}, researchmap {with_rmap})")
@@ -466,6 +543,7 @@ def run_full() -> None:
                 round(float(coords[i, 2]), 6),
             ],
             "instructor_id": n.get("instructor_id"),
+            "instructor_ids": n.get("instructor_ids") or [],
         }
         nodes.append(
             enrich_display_node(
@@ -490,7 +568,7 @@ def run_full() -> None:
 
     n_prof = sum(1 for n in nodes if n["type"] == "professor")
     n_course = sum(1 for n in nodes if n["type"] == "course")
-    print("=== 02_analyze_umap ===")
+    print("=== 05_export_display_data ===")
     print(f"model                     : {MODEL_NAME}")
     print(f"output                    : {OUT_PATH}")
     print(f"nodes (total)             : {len(nodes)}")

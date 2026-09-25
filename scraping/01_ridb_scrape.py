@@ -1,3 +1,9 @@
+"""
+01 — Scrape RIDB (金沢大学 融合研究域) faculty directory → ridb_yugo_faculty_{ja,en}.json
+
+Usage:
+  python scraping/01_ridb_scrape.py
+"""
 import requests
 from bs4 import BeautifulSoup
 import json

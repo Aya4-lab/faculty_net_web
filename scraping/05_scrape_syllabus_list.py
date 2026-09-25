@@ -1,3 +1,12 @@
+"""
+05 — Scrape Kanazawa University syllabus list pages
+     → data/raw/syllabus/kanazawa_syllabus.csv (+ eng)
+
+Requires Edge WebDriver (Selenium). Detail URLs must include lct_idx.
+
+Usage:
+  python scraping/05_scrape_syllabus_list.py
+"""
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
@@ -7,6 +16,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import NoSuchElementException
 from webdriver_manager.microsoft import EdgeChromiumDriverManager
 import time
+import re
 import pandas as pd
 import os
 import sys
@@ -152,13 +162,54 @@ def safe_select_page_size_100():
     return None
 
 
+DETAIL_URL_RE = re.compile(
+    r"(https?://[^\s\"'<>]*DetailMain\.aspx\?[^\s\"'<>]*lct_idx=[A-Za-z0-9]+)",
+    re.IGNORE_CASE,
+)
+LCT_PARAM_RE = re.compile(
+    r"lct_year=(\d+).*?lct_cd=([^&\"'\s]+).*?je_cd=(\d+).*?lct_idx=([A-Za-z0-9]+)",
+    re.IGNORE_CASE | re.DOTALL,
+)
+
+
 def extract_detail_link(cell):
-    """セル内のリンクから DetailMain.aspx のURLだけを返す"""
+    """セル内のリンク / onclick から DetailMain.aspx URL を完全取得（lct_idx 含む）。"""
     anchors = cell.find_elements(By.TAG_NAME, "a")
     for anchor in anchors:
-        href = anchor.get_attribute("href") or ""
-        if "DetailMain.aspx" in href:
-            return href
+        for attr in ("href", "data-href", "data-url"):
+            raw = (anchor.get_attribute(attr) or "").strip()
+            if "DetailMain.aspx" in raw and "lct_idx=" in raw:
+                return raw.split("#")[0]
+            m = DETAIL_URL_RE.search(raw)
+            if m:
+                return m.group(1)
+
+        onclick = (anchor.get_attribute("onclick") or "") + " " + (anchor.get_attribute("href") or "")
+        m = DETAIL_URL_RE.search(onclick)
+        if m:
+            return m.group(1)
+        pm = LCT_PARAM_RE.search(onclick)
+        if pm:
+            year, cd, je, idx = pm.groups()
+            return (
+                "https://eduweb.sta.kanazawa-u.ac.jp/Portal/Public/Syllabus/DetailMain.aspx"
+                f"?lct_year={year}&lct_cd={cd}&je_cd={je}&lct_idx={idx}"
+            )
+    # セル全体の HTML からも救済
+    try:
+        html = cell.get_attribute("innerHTML") or ""
+        m = DETAIL_URL_RE.search(html)
+        if m:
+            return m.group(1)
+        pm = LCT_PARAM_RE.search(html)
+        if pm:
+            year, cd, je, idx = pm.groups()
+            return (
+                "https://eduweb.sta.kanazawa-u.ac.jp/Portal/Public/Syllabus/DetailMain.aspx"
+                f"?lct_year={year}&lct_cd={cd}&je_cd={je}&lct_idx={idx}"
+            )
+    except Exception:
+        pass
     return "N/A"
 
 

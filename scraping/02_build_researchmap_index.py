@@ -1,3 +1,10 @@
+"""
+02 — Build researchmap Kanazawa University researchers index
+     → data/raw/researchmap/kanazawa_researchers_index.json
+
+Usage:
+  python scraping/02_build_researchmap_index.py --query "金沢大学"
+"""
 import json
 import time
 import re

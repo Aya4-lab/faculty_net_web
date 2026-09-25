@@ -1,4 +1,10 @@
-"""Step 2: scrape paper detail pages (title/authors/abstract/keywords/doi) with cache resume."""
+"""
+04 — Scrape researchmap paper detail pages (title/authors/abstract/keywords/doi)
+     with cache resume. Reads paper URLs produced by 03_fetch_researchmap_profiles.py.
+
+Usage:
+  python scraping/04_fetch_paper_details.py
+"""
 import json
 import time
 import re
@@ -298,7 +304,7 @@ def run_step2(input_ja, input_en, output_ja, output_en, delay=REQUEST_DELAY):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(
-        description="Step 2: fetch paper details (abstract etc.) from Step 1 paper URLs."
+        description="04: fetch paper details (abstract etc.) from 03 profile paper URLs."
     )
     parser.add_argument("--input-ja", default="data/raw/researchmap/remp_yugo_faculty_ja.json")
     parser.add_argument("--input-en", default="data/raw/researchmap/remp_yugo_faculty_en.json")

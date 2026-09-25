@@ -1,4 +1,6 @@
-# step2_scrape_paper_details.py
+"""
+Legacy — older paper-detail scraper (prefer 04_fetch_paper_details.py).
+"""
 import json
 import time
 import re

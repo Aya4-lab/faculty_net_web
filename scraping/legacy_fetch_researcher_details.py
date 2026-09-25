@@ -1,3 +1,6 @@
+"""
+Legacy — older researchmap profile scraper (prefer 03_fetch_researchmap_profiles.py).
+"""
 import json
 import time
 import re
@@ -126,14 +129,27 @@ def load_json_rows(path_str):
 
 
 def match_index_url(index_data, target_names):
-    normalized_targets = [normalize_name(name) for name in target_names if name]
-
-    for item in index_data:
-        idx_norm = normalize_name(item.get("name", ""))
-        if not idx_norm:
+    """Exact full-name match only (after normalize). No substring / surname hits."""
+    normalized_targets: list[str] = []
+    seen: set[str] = set()
+    for name in target_names:
+        if not name:
             continue
-        for target_norm in normalized_targets:
-            if target_norm == idx_norm or target_norm in idx_norm or idx_norm in target_norm:
+        spaced = re.sub(r"[（(].*?[）)]", "", str(name))
+        spaced = re.sub(r"[\u3000\s]+", " ", spaced).strip()
+        tokens = spaced.split()
+        if len(tokens) == 1 and re.fullmatch(r"[\u3400-\u9fff\uf900-\ufaff]+", tokens[0] or ""):
+            if len(tokens[0]) <= 3:
+                continue
+        n = normalize_name(name)
+        if n and n not in seen:
+            seen.add(n)
+            normalized_targets.append(n)
+
+    for target_norm in sorted(normalized_targets, key=len, reverse=True):
+        for item in index_data:
+            idx_norm = normalize_name(item.get("name", ""))
+            if idx_norm and idx_norm == target_norm:
                 return item.get("profile_url")
     return None
 

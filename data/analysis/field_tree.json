@@ -1,0 +1,3740 @@
+{
+  "majors": [
+    {
+      "id": "major_情報学",
+      "name": "情報学",
+      "member_count": 14,
+      "fields": [
+        {
+          "id": "field_1001",
+          "name": "情報学基礎理論",
+          "cat": 1001,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=1001",
+          "seeds_count": 2,
+          "member_count": 1,
+          "professor_ids": [
+            "prof_2195"
+          ]
+        },
+        {
+          "id": "field_1002",
+          "name": "数理情報学",
+          "cat": 1002,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=1002",
+          "seeds_count": 0,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_1003",
+          "name": "統計科学",
+          "cat": 1003,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=1003",
+          "seeds_count": 4,
+          "member_count": 1,
+          "professor_ids": [
+            "prof_2425"
+          ]
+        },
+        {
+          "id": "field_1101",
+          "name": "計算機システム",
+          "cat": 1101,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=1101",
+          "seeds_count": 0,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_1102",
+          "name": "ソフトウェア",
+          "cat": 1102,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=1102",
+          "seeds_count": 0,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_1103",
+          "name": "情報ネットワーク",
+          "cat": 1103,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=1103",
+          "seeds_count": 1,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_1104",
+          "name": "マルチメディア・データベース",
+          "cat": 1104,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=1104",
+          "seeds_count": 2,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_1105",
+          "name": "高性能計算",
+          "cat": 1105,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=1105",
+          "seeds_count": 1,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_1106",
+          "name": "情報セキュリティ",
+          "cat": 1106,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=1106",
+          "seeds_count": 1,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_1201",
+          "name": "認知科学",
+          "cat": 1201,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=1201",
+          "seeds_count": 7,
+          "member_count": 2,
+          "professor_ids": [
+            "prof_11739",
+            "prof_4732"
+          ]
+        },
+        {
+          "id": "field_1202",
+          "name": "知覚情報処理",
+          "cat": 1202,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=1202",
+          "seeds_count": 3,
+          "member_count": 1,
+          "professor_ids": [
+            "prof_11739"
+          ]
+        },
+        {
+          "id": "field_1203",
+          "name": "ヒューマンインターフェース・インタラクション",
+          "cat": 1203,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=1203",
+          "seeds_count": 2,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_1204",
+          "name": "知能情報学",
+          "cat": 1204,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=1204",
+          "seeds_count": 9,
+          "member_count": 4,
+          "professor_ids": [
+            "prof_2230",
+            "prof_2076",
+            "prof_2232",
+            "prof_11739"
+          ]
+        },
+        {
+          "id": "field_1205",
+          "name": "ソフトコンピューティング",
+          "cat": 1205,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=1205",
+          "seeds_count": 3,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_1206",
+          "name": "知能ロボティクス",
+          "cat": 1206,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=1206",
+          "seeds_count": 4,
+          "member_count": 1,
+          "professor_ids": [
+            "prof_4454"
+          ]
+        },
+        {
+          "id": "field_1207",
+          "name": "感性情報学",
+          "cat": 1207,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=1207",
+          "seeds_count": 4,
+          "member_count": 2,
+          "professor_ids": [
+            "prof_2232",
+            "prof_11739"
+          ]
+        },
+        {
+          "id": "field_1301",
+          "name": "生命・健康・医療情報学",
+          "cat": 1301,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=1301",
+          "seeds_count": 5,
+          "member_count": 2,
+          "professor_ids": [
+            "prof_4586",
+            "prof_2076"
+          ]
+        },
+        {
+          "id": "field_1302",
+          "name": "ウェブ情報学・サービス情報学",
+          "cat": 1302,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=1302",
+          "seeds_count": 0,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_1303",
+          "name": "図書館情報学・人文社会情報学",
+          "cat": 1303,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=1303",
+          "seeds_count": 2,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_1304",
+          "name": "学習支援システム",
+          "cat": 1304,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=1304",
+          "seeds_count": 1,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_1305",
+          "name": "エンタテインメント・ゲーム情報学",
+          "cat": 1305,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=1305",
+          "seeds_count": 1,
+          "member_count": 0,
+          "professor_ids": []
+        }
+      ]
+    },
+    {
+      "id": "major_環境学",
+      "name": "環境学",
+      "member_count": 5,
+      "fields": [
+        {
+          "id": "field_1401",
+          "name": "環境動態解析",
+          "cat": 1401,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=1401",
+          "seeds_count": 7,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_1402",
+          "name": "放射線・化学物質影響科学",
+          "cat": 1402,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=1402",
+          "seeds_count": 2,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_1403",
+          "name": "環境影響評価",
+          "cat": 1403,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=1403",
+          "seeds_count": 3,
+          "member_count": 1,
+          "professor_ids": [
+            "prof_11791"
+          ]
+        },
+        {
+          "id": "field_1501",
+          "name": "環境技術・環境負荷低減",
+          "cat": 1501,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=1501",
+          "seeds_count": 5,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_1502",
+          "name": "環境モデリング・保全修復技術",
+          "cat": 1502,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=1502",
+          "seeds_count": 0,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_1503",
+          "name": "環境材料・リサイクル",
+          "cat": 1503,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=1503",
+          "seeds_count": 0,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_1504",
+          "name": "環境リスク制御・評価",
+          "cat": 1504,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=1504",
+          "seeds_count": 0,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_1601",
+          "name": "自然共生システム",
+          "cat": 1601,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=1601",
+          "seeds_count": 0,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_1602",
+          "name": "持続可能システム",
+          "cat": 1602,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=1602",
+          "seeds_count": 1,
+          "member_count": 1,
+          "professor_ids": [
+            "prof_11791"
+          ]
+        },
+        {
+          "id": "field_1603",
+          "name": "環境政策・環境社会システム",
+          "cat": 1603,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=1603",
+          "seeds_count": 2,
+          "member_count": 3,
+          "professor_ids": [
+            "prof_11791",
+            "prof_11694",
+            "prof_4732"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "major_複合領域",
+      "name": "複合領域",
+      "member_count": 14,
+      "fields": [
+        {
+          "id": "field_1651",
+          "name": "デザイン学",
+          "cat": 1651,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=1651",
+          "seeds_count": 3,
+          "member_count": 3,
+          "professor_ids": [
+            "prof_11613",
+            "prof_4502",
+            "prof_11380"
+          ]
+        },
+        {
+          "id": "field_1701",
+          "name": "家政・生活学一般",
+          "cat": 1701,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=1701",
+          "seeds_count": 2,
+          "member_count": 1,
+          "professor_ids": [
+            "prof_2659"
+          ]
+        },
+        {
+          "id": "field_1702",
+          "name": "衣・住生活学",
+          "cat": 1702,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=1702",
+          "seeds_count": 2,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_1703",
+          "name": "食生活学",
+          "cat": 1703,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=1703",
+          "seeds_count": 4,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_1801",
+          "name": "科学教育",
+          "cat": 1801,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=1801",
+          "seeds_count": 4,
+          "member_count": 1,
+          "professor_ids": [
+            "prof_4112"
+          ]
+        },
+        {
+          "id": "field_1802",
+          "name": "教育工学",
+          "cat": 1802,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=1802",
+          "seeds_count": 9,
+          "member_count": 3,
+          "professor_ids": [
+            "prof_11389",
+            "prof_4112",
+            "prof_11739"
+          ]
+        },
+        {
+          "id": "field_1901",
+          "name": "科学社会学・科学技術史",
+          "cat": 1901,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=1901",
+          "seeds_count": 1,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_2001",
+          "name": "文化財科学・博物館学",
+          "cat": 2001,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=2001",
+          "seeds_count": 4,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_2101",
+          "name": "地理学",
+          "cat": 2101,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=2101",
+          "seeds_count": 3,
+          "member_count": 1,
+          "professor_ids": [
+            "prof_11791"
+          ]
+        },
+        {
+          "id": "field_2201",
+          "name": "社会システム工学・安全システム",
+          "cat": 2201,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=2201",
+          "seeds_count": 2,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_2202",
+          "name": "自然災害科学・防災学",
+          "cat": 2202,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=2202",
+          "seeds_count": 2,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_2301",
+          "name": "生体医工学・生体材料学",
+          "cat": 2301,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=2301",
+          "seeds_count": 9,
+          "member_count": 2,
+          "professor_ids": [
+            "prof_2848",
+            "prof_11739"
+          ]
+        },
+        {
+          "id": "field_2302",
+          "name": "医用システム",
+          "cat": 2302,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=2302",
+          "seeds_count": 5,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_2303",
+          "name": "医療技術評価学",
+          "cat": 2303,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=2303",
+          "seeds_count": 0,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_2304",
+          "name": "リハビリテーション科学・福祉工学",
+          "cat": 2304,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=2304",
+          "seeds_count": 12,
+          "member_count": 2,
+          "professor_ids": [
+            "prof_11460",
+            "prof_2232"
+          ]
+        },
+        {
+          "id": "field_2401",
+          "name": "身体教育学",
+          "cat": 2401,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=2401",
+          "seeds_count": 2,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_2402",
+          "name": "スポーツ科学",
+          "cat": 2402,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=2402",
+          "seeds_count": 7,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_2403",
+          "name": "応用健康科学",
+          "cat": 2403,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=2403",
+          "seeds_count": 2,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_2451",
+          "name": "子ども学（子ども環境学）",
+          "cat": 2451,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=2451",
+          "seeds_count": 2,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_2501",
+          "name": "生物分子化学",
+          "cat": 2501,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=2501",
+          "seeds_count": 4,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_2502",
+          "name": "ケミカルバイオロジー",
+          "cat": 2502,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=2502",
+          "seeds_count": 1,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_2601",
+          "name": "基盤・社会脳科学",
+          "cat": 2601,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=2601",
+          "seeds_count": 3,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_2602",
+          "name": "脳計測科学",
+          "cat": 2602,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=2602",
+          "seeds_count": 2,
+          "member_count": 1,
+          "professor_ids": [
+            "prof_11739"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "major_総合人文社会",
+      "name": "総合人文社会",
+      "member_count": 1,
+      "fields": [
+        {
+          "id": "field_2701",
+          "name": "地域研究",
+          "cat": 2701,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=2701",
+          "seeds_count": 8,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_2801",
+          "name": "ジェンダー",
+          "cat": 2801,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=2801",
+          "seeds_count": 3,
+          "member_count": 1,
+          "professor_ids": [
+            "prof_3055"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "major_人文学",
+      "name": "人文学",
+      "member_count": 2,
+      "fields": [
+        {
+          "id": "field_2901",
+          "name": "哲学・倫理学",
+          "cat": 2901,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=2901",
+          "seeds_count": 9,
+          "member_count": 1,
+          "professor_ids": [
+            "prof_4721"
+          ]
+        },
+        {
+          "id": "field_2902",
+          "name": "中国哲学・印度哲学・仏教学",
+          "cat": 2902,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=2902",
+          "seeds_count": 1,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_2903",
+          "name": "宗教学",
+          "cat": 2903,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=2903",
+          "seeds_count": 2,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_2904",
+          "name": "思想史",
+          "cat": 2904,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=2904",
+          "seeds_count": 7,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_3001",
+          "name": "美学・芸術諸学",
+          "cat": 3001,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=3001",
+          "seeds_count": 1,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_3002",
+          "name": "美術史",
+          "cat": 3002,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=3002",
+          "seeds_count": 3,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_3003",
+          "name": "芸術一般",
+          "cat": 3003,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=3003",
+          "seeds_count": 2,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_3101",
+          "name": "日本文学",
+          "cat": 3101,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=3101",
+          "seeds_count": 7,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_3102",
+          "name": "英米・英語圏文学",
+          "cat": 3102,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=3102",
+          "seeds_count": 7,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_3103",
+          "name": "ヨーロッパ文学",
+          "cat": 3103,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=3103",
+          "seeds_count": 3,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_3104",
+          "name": "中国文学",
+          "cat": 3104,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=3104",
+          "seeds_count": 1,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_3105",
+          "name": "文学一般",
+          "cat": 3105,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=3105",
+          "seeds_count": 6,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_3201",
+          "name": "言語学",
+          "cat": 3201,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=3201",
+          "seeds_count": 12,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_3202",
+          "name": "日本語学",
+          "cat": 3202,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=3202",
+          "seeds_count": 3,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_3203",
+          "name": "英語学",
+          "cat": 3203,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=3203",
+          "seeds_count": 5,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_3204",
+          "name": "日本語教育",
+          "cat": 3204,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=3204",
+          "seeds_count": 4,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_3205",
+          "name": "外国語教育",
+          "cat": 3205,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=3205",
+          "seeds_count": 8,
+          "member_count": 1,
+          "professor_ids": [
+            "prof_4386"
+          ]
+        },
+        {
+          "id": "field_3301",
+          "name": "史学一般",
+          "cat": 3301,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=3301",
+          "seeds_count": 3,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_3302",
+          "name": "日本史",
+          "cat": 3302,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=3302",
+          "seeds_count": 8,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_3303",
+          "name": "アジア史・アフリカ史",
+          "cat": 3303,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=3303",
+          "seeds_count": 4,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_3304",
+          "name": "ヨーロッパ史・アメリカ史",
+          "cat": 3304,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=3304",
+          "seeds_count": 2,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_3305",
+          "name": "考古学",
+          "cat": 3305,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=3305",
+          "seeds_count": 4,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_3401",
+          "name": "人文地理学",
+          "cat": 3401,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=3401",
+          "seeds_count": 5,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_3501",
+          "name": "文化人類学・民俗学",
+          "cat": 3501,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=3501",
+          "seeds_count": 6,
+          "member_count": 0,
+          "professor_ids": []
+        }
+      ]
+    },
+    {
+      "id": "major_社会科学",
+      "name": "社会科学",
+      "member_count": 12,
+      "fields": [
+        {
+          "id": "field_3601",
+          "name": "基礎法学",
+          "cat": 3601,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=3601",
+          "seeds_count": 6,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_3602",
+          "name": "公法学",
+          "cat": 3602,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=3602",
+          "seeds_count": 7,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_3603",
+          "name": "国際法学",
+          "cat": 3603,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=3603",
+          "seeds_count": 2,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_3604",
+          "name": "社会法学",
+          "cat": 3604,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=3604",
+          "seeds_count": 3,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_3605",
+          "name": "刑事法学",
+          "cat": 3605,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=3605",
+          "seeds_count": 4,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_3606",
+          "name": "民事法学",
+          "cat": 3606,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=3606",
+          "seeds_count": 5,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_3607",
+          "name": "新領域法学",
+          "cat": 3607,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=3607",
+          "seeds_count": 3,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_3701",
+          "name": "政治学",
+          "cat": 3701,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=3701",
+          "seeds_count": 6,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_3702",
+          "name": "国際関係論",
+          "cat": 3702,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=3702",
+          "seeds_count": 8,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_3801",
+          "name": "理論経済学",
+          "cat": 3801,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=3801",
+          "seeds_count": 1,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_3802",
+          "name": "経済学説・経済思想",
+          "cat": 3802,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=3802",
+          "seeds_count": 1,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_3803",
+          "name": "経済統計",
+          "cat": 3803,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=3803",
+          "seeds_count": 3,
+          "member_count": 1,
+          "professor_ids": [
+            "prof_11755"
+          ]
+        },
+        {
+          "id": "field_3804",
+          "name": "経済政策",
+          "cat": 3804,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=3804",
+          "seeds_count": 6,
+          "member_count": 2,
+          "professor_ids": [
+            "prof_2670",
+            "prof_11694"
+          ]
+        },
+        {
+          "id": "field_3805",
+          "name": "財政・公共経済",
+          "cat": 3805,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=3805",
+          "seeds_count": 2,
+          "member_count": 1,
+          "professor_ids": [
+            "prof_11694"
+          ]
+        },
+        {
+          "id": "field_3806",
+          "name": "金融・ファイナンス",
+          "cat": 3806,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=3806",
+          "seeds_count": 3,
+          "member_count": 1,
+          "professor_ids": [
+            "prof_11755"
+          ]
+        },
+        {
+          "id": "field_3807",
+          "name": "経済史",
+          "cat": 3807,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=3807",
+          "seeds_count": 6,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_3901",
+          "name": "経営学",
+          "cat": 3901,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=3901",
+          "seeds_count": 5,
+          "member_count": 2,
+          "professor_ids": [
+            "prof_4678",
+            "prof_11703"
+          ]
+        },
+        {
+          "id": "field_3902",
+          "name": "商学",
+          "cat": 3902,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=3902",
+          "seeds_count": 1,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_3903",
+          "name": "会計学",
+          "cat": 3903,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=3903",
+          "seeds_count": 3,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_4001",
+          "name": "社会学",
+          "cat": 4001,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=4001",
+          "seeds_count": 11,
+          "member_count": 1,
+          "professor_ids": [
+            "prof_1956"
+          ]
+        },
+        {
+          "id": "field_4002",
+          "name": "社会福祉学",
+          "cat": 4002,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=4002",
+          "seeds_count": 4,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_4101",
+          "name": "社会心理学",
+          "cat": 4101,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=4101",
+          "seeds_count": 3,
+          "member_count": 1,
+          "professor_ids": [
+            "prof_11731"
+          ]
+        },
+        {
+          "id": "field_4102",
+          "name": "教育心理学",
+          "cat": 4102,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=4102",
+          "seeds_count": 4,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_4103",
+          "name": "臨床心理学",
+          "cat": 4103,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=4103",
+          "seeds_count": 7,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_4104",
+          "name": "実験心理学",
+          "cat": 4104,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=4104",
+          "seeds_count": 7,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_4201",
+          "name": "教育学",
+          "cat": 4201,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=4201",
+          "seeds_count": 12,
+          "member_count": 2,
+          "professor_ids": [
+            "prof_4386",
+            "prof_11380"
+          ]
+        },
+        {
+          "id": "field_4202",
+          "name": "教育社会学",
+          "cat": 4202,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=4202",
+          "seeds_count": 3,
+          "member_count": 1,
+          "professor_ids": [
+            "prof_11380"
+          ]
+        },
+        {
+          "id": "field_4203",
+          "name": "教科教育学",
+          "cat": 4203,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=4203",
+          "seeds_count": 10,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_4204",
+          "name": "特別支援教育",
+          "cat": 4204,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=4204",
+          "seeds_count": 5,
+          "member_count": 0,
+          "professor_ids": []
+        }
+      ]
+    },
+    {
+      "id": "major_総合理工",
+      "name": "総合理工",
+      "member_count": 1,
+      "fields": [
+        {
+          "id": "field_4301",
+          "name": "ナノ構造化学",
+          "cat": 4301,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=4301",
+          "seeds_count": 4,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_4302",
+          "name": "ナノ構造物理",
+          "cat": 4302,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=4302",
+          "seeds_count": 3,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_4303",
+          "name": "ナノ材料化学",
+          "cat": 4303,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=4303",
+          "seeds_count": 5,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_4304",
+          "name": "ナノ材料工学",
+          "cat": 4304,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=4304",
+          "seeds_count": 0,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_4305",
+          "name": "ナノバイオサイエンス",
+          "cat": 4305,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=4305",
+          "seeds_count": 3,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_4306",
+          "name": "ナノマイクロシステム",
+          "cat": 4306,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=4306",
+          "seeds_count": 0,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_4401",
+          "name": "応用物性",
+          "cat": 4401,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=4401",
+          "seeds_count": 1,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_4402",
+          "name": "結晶工学",
+          "cat": 4402,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=4402",
+          "seeds_count": 0,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_4403",
+          "name": "薄膜・表面界面物性",
+          "cat": 4403,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=4403",
+          "seeds_count": 9,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_4404",
+          "name": "光工学・光量子科学",
+          "cat": 4404,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=4404",
+          "seeds_count": 2,
+          "member_count": 1,
+          "professor_ids": [
+            "prof_2385"
+          ]
+        },
+        {
+          "id": "field_4405",
+          "name": "プラズマエレクトロニクス",
+          "cat": 4405,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=4405",
+          "seeds_count": 1,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_4406",
+          "name": "応用物理学一般",
+          "cat": 4406,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=4406",
+          "seeds_count": 1,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_4501",
+          "name": "量子ビーム科学",
+          "cat": 4501,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=4501",
+          "seeds_count": 1,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_4601",
+          "name": "計算科学",
+          "cat": 4601,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=4601",
+          "seeds_count": 4,
+          "member_count": 0,
+          "professor_ids": []
+        }
+      ]
+    },
+    {
+      "id": "major_数物系科学",
+      "name": "数物系科学",
+      "member_count": 0,
+      "fields": [
+        {
+          "id": "field_4701",
+          "name": "代数学",
+          "cat": 4701,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=4701",
+          "seeds_count": 4,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_4702",
+          "name": "幾何学",
+          "cat": 4702,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=4702",
+          "seeds_count": 6,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_4703",
+          "name": "解析学基礎",
+          "cat": 4703,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=4703",
+          "seeds_count": 7,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_4704",
+          "name": "数学解析",
+          "cat": 4704,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=4704",
+          "seeds_count": 4,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_4705",
+          "name": "数学基礎・応用数学",
+          "cat": 4705,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=4705",
+          "seeds_count": 2,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_4801",
+          "name": "天文学",
+          "cat": 4801,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=4801",
+          "seeds_count": 6,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_4901",
+          "name": "素粒子・原子核・宇宙線・宇宙物理",
+          "cat": 4901,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=4901",
+          "seeds_count": 11,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_4902",
+          "name": "物性Ⅰ",
+          "cat": 4902,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=4902",
+          "seeds_count": 9,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_4903",
+          "name": "物性Ⅱ",
+          "cat": 4903,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=4903",
+          "seeds_count": 9,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_4904",
+          "name": "数理物理・物性基礎",
+          "cat": 4904,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=4904",
+          "seeds_count": 6,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_4905",
+          "name": "原子・分子・量子エレクトロニクス",
+          "cat": 4905,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=4905",
+          "seeds_count": 0,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_4906",
+          "name": "生物物理・化学物理・ソフトマターの物理",
+          "cat": 4906,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=4906",
+          "seeds_count": 5,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_5001",
+          "name": "固体地球惑星物理学",
+          "cat": 5001,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=5001",
+          "seeds_count": 5,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_5002",
+          "name": "気象・海洋物理・陸水学",
+          "cat": 5002,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=5002",
+          "seeds_count": 1,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_5003",
+          "name": "超高層物理学",
+          "cat": 5003,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=5003",
+          "seeds_count": 4,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_5004",
+          "name": "地質学",
+          "cat": 5004,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=5004",
+          "seeds_count": 5,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_5005",
+          "name": "層位・古生物学",
+          "cat": 5005,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=5005",
+          "seeds_count": 3,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_5006",
+          "name": "岩石・鉱物・鉱床学",
+          "cat": 5006,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=5006",
+          "seeds_count": 5,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_5007",
+          "name": "地球宇宙化学",
+          "cat": 5007,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=5007",
+          "seeds_count": 4,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_5101",
+          "name": "プラズマ科学",
+          "cat": 5101,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=5101",
+          "seeds_count": 4,
+          "member_count": 0,
+          "professor_ids": []
+        }
+      ]
+    },
+    {
+      "id": "major_化学",
+      "name": "化学",
+      "member_count": 5,
+      "fields": [
+        {
+          "id": "field_5201",
+          "name": "物理化学",
+          "cat": 5201,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=5201",
+          "seeds_count": 7,
+          "member_count": 1,
+          "professor_ids": [
+            "prof_11658"
+          ]
+        },
+        {
+          "id": "field_5202",
+          "name": "有機化学",
+          "cat": 5202,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=5202",
+          "seeds_count": 10,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_5203",
+          "name": "無機化学",
+          "cat": 5203,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=5203",
+          "seeds_count": 4,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_5301",
+          "name": "機能物性化学",
+          "cat": 5301,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=5301",
+          "seeds_count": 7,
+          "member_count": 1,
+          "professor_ids": [
+            "prof_11658"
+          ]
+        },
+        {
+          "id": "field_5302",
+          "name": "合成化学",
+          "cat": 5302,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=5302",
+          "seeds_count": 5,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_5303",
+          "name": "高分子化学",
+          "cat": 5303,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=5303",
+          "seeds_count": 6,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_5304",
+          "name": "分析化学",
+          "cat": 5304,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=5304",
+          "seeds_count": 6,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_5305",
+          "name": "生体関連化学",
+          "cat": 5305,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=5305",
+          "seeds_count": 3,
+          "member_count": 1,
+          "professor_ids": [
+            "prof_11658"
+          ]
+        },
+        {
+          "id": "field_5306",
+          "name": "グリーン・環境化学",
+          "cat": 5306,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=5306",
+          "seeds_count": 6,
+          "member_count": 1,
+          "professor_ids": [
+            "prof_11658"
+          ]
+        },
+        {
+          "id": "field_5307",
+          "name": "エネルギー関連化学",
+          "cat": 5307,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=5307",
+          "seeds_count": 2,
+          "member_count": 1,
+          "professor_ids": [
+            "prof_11658"
+          ]
+        },
+        {
+          "id": "field_5401",
+          "name": "有機・ハイブリッド材料",
+          "cat": 5401,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=5401",
+          "seeds_count": 0,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_5402",
+          "name": "高分子・繊維材料",
+          "cat": 5402,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=5402",
+          "seeds_count": 6,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_5403",
+          "name": "無機工業材料",
+          "cat": 5403,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=5403",
+          "seeds_count": 0,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_5404",
+          "name": "デバイス関連化学",
+          "cat": 5404,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=5404",
+          "seeds_count": 0,
+          "member_count": 0,
+          "professor_ids": []
+        }
+      ]
+    },
+    {
+      "id": "major_工学",
+      "name": "工学",
+      "member_count": 13,
+      "fields": [
+        {
+          "id": "field_5501",
+          "name": "機械材料・材料力学",
+          "cat": 5501,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=5501",
+          "seeds_count": 8,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_5502",
+          "name": "生産工学・加工学",
+          "cat": 5502,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=5502",
+          "seeds_count": 10,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_5503",
+          "name": "設計工学・機械機能要素・トライボロジー",
+          "cat": 5503,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=5503",
+          "seeds_count": 7,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_5504",
+          "name": "流体工学",
+          "cat": 5504,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=5504",
+          "seeds_count": 5,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_5505",
+          "name": "熱工学",
+          "cat": 5505,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=5505",
+          "seeds_count": 5,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_5506",
+          "name": "機械力学・制御",
+          "cat": 5506,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=5506",
+          "seeds_count": 10,
+          "member_count": 1,
+          "professor_ids": [
+            "prof_2195"
+          ]
+        },
+        {
+          "id": "field_5507",
+          "name": "知能機械学・機械システム",
+          "cat": 5507,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=5507",
+          "seeds_count": 13,
+          "member_count": 1,
+          "professor_ids": [
+            "prof_2195"
+          ]
+        },
+        {
+          "id": "field_5601",
+          "name": "電力工学・電力変換・電気機器",
+          "cat": 5601,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=5601",
+          "seeds_count": 3,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_5602",
+          "name": "電子・電気材料工学",
+          "cat": 5602,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=5602",
+          "seeds_count": 5,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_5603",
+          "name": "電子デバイス・電子機器",
+          "cat": 5603,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=5603",
+          "seeds_count": 7,
+          "member_count": 2,
+          "professor_ids": [
+            "prof_2230",
+            "prof_2385"
+          ]
+        },
+        {
+          "id": "field_5604",
+          "name": "通信・ネットワーク工学",
+          "cat": 5604,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=5604",
+          "seeds_count": 10,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_5605",
+          "name": "計測工学",
+          "cat": 5605,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=5605",
+          "seeds_count": 8,
+          "member_count": 1,
+          "professor_ids": [
+            "prof_2385"
+          ]
+        },
+        {
+          "id": "field_5606",
+          "name": "制御・システム工学",
+          "cat": 5606,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=5606",
+          "seeds_count": 5,
+          "member_count": 1,
+          "professor_ids": [
+            "prof_2195"
+          ]
+        },
+        {
+          "id": "field_5701",
+          "name": "土木材料・施工・建設マネジメント",
+          "cat": 5701,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=5701",
+          "seeds_count": 1,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_5702",
+          "name": "構造工学・地震工学・維持管理工学",
+          "cat": 5702,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=5702",
+          "seeds_count": 3,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_5703",
+          "name": "地盤工学",
+          "cat": 5703,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=5703",
+          "seeds_count": 4,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_5704",
+          "name": "水工学",
+          "cat": 5704,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=5704",
+          "seeds_count": 7,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_5705",
+          "name": "土木計画学・交通工学",
+          "cat": 5705,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=5705",
+          "seeds_count": 3,
+          "member_count": 2,
+          "professor_ids": [
+            "prof_11612",
+            "prof_11791"
+          ]
+        },
+        {
+          "id": "field_5706",
+          "name": "土木環境システム",
+          "cat": 5706,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=5706",
+          "seeds_count": 6,
+          "member_count": 1,
+          "professor_ids": [
+            "prof_11791"
+          ]
+        },
+        {
+          "id": "field_5801",
+          "name": "建築構造・材料",
+          "cat": 5801,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=5801",
+          "seeds_count": 0,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_5802",
+          "name": "建築環境・設備",
+          "cat": 5802,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=5802",
+          "seeds_count": 0,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_5803",
+          "name": "都市計画・建築計画",
+          "cat": 5803,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=5803",
+          "seeds_count": 6,
+          "member_count": 3,
+          "professor_ids": [
+            "prof_8613",
+            "prof_10561",
+            "prof_11613"
+          ]
+        },
+        {
+          "id": "field_5804",
+          "name": "建築史・意匠",
+          "cat": 5804,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=5804",
+          "seeds_count": 3,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_5901",
+          "name": "金属物性・材料",
+          "cat": 5901,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=5901",
+          "seeds_count": 4,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_5902",
+          "name": "無機材料・物性",
+          "cat": 5902,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=5902",
+          "seeds_count": 2,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_5903",
+          "name": "複合材料・表界面工学",
+          "cat": 5903,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=5903",
+          "seeds_count": 4,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_5904",
+          "name": "構造・機能材料",
+          "cat": 5904,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=5904",
+          "seeds_count": 5,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_5905",
+          "name": "材料加工・組織制御工学",
+          "cat": 5905,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=5905",
+          "seeds_count": 3,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_5906",
+          "name": "金属・資源生産工学",
+          "cat": 5906,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=5906",
+          "seeds_count": 0,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_6001",
+          "name": "化工物性・移動操作・単位操作",
+          "cat": 6001,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=6001",
+          "seeds_count": 4,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_6002",
+          "name": "反応工学・プロセスシステム",
+          "cat": 6002,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=6002",
+          "seeds_count": 5,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_6003",
+          "name": "触媒・資源化学プロセス",
+          "cat": 6003,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=6003",
+          "seeds_count": 3,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_6004",
+          "name": "生物機能・バイオプロセス",
+          "cat": 6004,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=6004",
+          "seeds_count": 2,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_6101",
+          "name": "航空宇宙工学",
+          "cat": 6101,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=6101",
+          "seeds_count": 5,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_6102",
+          "name": "船舶海洋工学",
+          "cat": 6102,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=6102",
+          "seeds_count": 0,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_6103",
+          "name": "地球・資源システム工学",
+          "cat": 6103,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=6103",
+          "seeds_count": 0,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_6104",
+          "name": "核融合学",
+          "cat": 6104,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=6104",
+          "seeds_count": 0,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_6105",
+          "name": "原子力学",
+          "cat": 6105,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=6105",
+          "seeds_count": 0,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_6106",
+          "name": "エネルギー学",
+          "cat": 6106,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=6106",
+          "seeds_count": 4,
+          "member_count": 1,
+          "professor_ids": [
+            "prof_11791"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "major_総合生物",
+      "name": "総合生物",
+      "member_count": 3,
+      "fields": [
+        {
+          "id": "field_6201",
+          "name": "神経生理学・神経科学一般",
+          "cat": 6201,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=6201",
+          "seeds_count": 10,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_6202",
+          "name": "神経解剖学・神経病理学",
+          "cat": 6202,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=6202",
+          "seeds_count": 4,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_6203",
+          "name": "神経化学・神経薬理学",
+          "cat": 6203,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=6203",
+          "seeds_count": 5,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_6301",
+          "name": "実験動物学",
+          "cat": 6301,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=6301",
+          "seeds_count": 1,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_6401",
+          "name": "腫瘍生物学",
+          "cat": 6401,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=6401",
+          "seeds_count": 12,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_6402",
+          "name": "腫瘍診断学",
+          "cat": 6402,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=6402",
+          "seeds_count": 0,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_6403",
+          "name": "腫瘍治療学",
+          "cat": 6403,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=6403",
+          "seeds_count": 3,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_6501",
+          "name": "ゲノム生物学",
+          "cat": 6501,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=6501",
+          "seeds_count": 3,
+          "member_count": 1,
+          "professor_ids": [
+            "prof_2076"
+          ]
+        },
+        {
+          "id": "field_6502",
+          "name": "ゲノム医科学",
+          "cat": 6502,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=6502",
+          "seeds_count": 1,
+          "member_count": 2,
+          "professor_ids": [
+            "prof_4586",
+            "prof_2076"
+          ]
+        },
+        {
+          "id": "field_6503",
+          "name": "システムゲノム科学",
+          "cat": 6503,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=6503",
+          "seeds_count": 1,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_6601",
+          "name": "生物資源保全学",
+          "cat": 6601,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=6601",
+          "seeds_count": 1,
+          "member_count": 0,
+          "professor_ids": []
+        }
+      ]
+    },
+    {
+      "id": "major_生物学",
+      "name": "生物学",
+      "member_count": 0,
+      "fields": [
+        {
+          "id": "field_6701",
+          "name": "分子生物学",
+          "cat": 6701,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=6701",
+          "seeds_count": 17,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_6702",
+          "name": "構造生物化学",
+          "cat": 6702,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=6702",
+          "seeds_count": 2,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_6703",
+          "name": "機能生物化学",
+          "cat": 6703,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=6703",
+          "seeds_count": 8,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_6704",
+          "name": "生物物理学",
+          "cat": 6704,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=6704",
+          "seeds_count": 9,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_6705",
+          "name": "細胞生物学",
+          "cat": 6705,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=6705",
+          "seeds_count": 11,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_6706",
+          "name": "発生生物学",
+          "cat": 6706,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=6706",
+          "seeds_count": 2,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_6801",
+          "name": "植物分子・生理科学",
+          "cat": 6801,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=6801",
+          "seeds_count": 3,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_6802",
+          "name": "形態・構造",
+          "cat": 6802,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=6802",
+          "seeds_count": 2,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_6803",
+          "name": "動物生理・行動",
+          "cat": 6803,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=6803",
+          "seeds_count": 3,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_6804",
+          "name": "遺伝・染色体動態",
+          "cat": 6804,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=6804",
+          "seeds_count": 1,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_6805",
+          "name": "進化生物学",
+          "cat": 6805,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=6805",
+          "seeds_count": 2,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_6806",
+          "name": "生物多様性・分類",
+          "cat": 6806,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=6806",
+          "seeds_count": 2,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_6807",
+          "name": "生態・環境",
+          "cat": 6807,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=6807",
+          "seeds_count": 4,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_6901",
+          "name": "自然人類学",
+          "cat": 6901,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=6901",
+          "seeds_count": 0,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_6902",
+          "name": "応用人類学",
+          "cat": 6902,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=6902",
+          "seeds_count": 0,
+          "member_count": 0,
+          "professor_ids": []
+        }
+      ]
+    },
+    {
+      "id": "major_農学",
+      "name": "農学",
+      "member_count": 1,
+      "fields": [
+        {
+          "id": "field_7001",
+          "name": "遺伝育種科学",
+          "cat": 7001,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=7001",
+          "seeds_count": 0,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_7002",
+          "name": "作物生産科学",
+          "cat": 7002,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=7002",
+          "seeds_count": 0,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_7003",
+          "name": "園芸科学",
+          "cat": 7003,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=7003",
+          "seeds_count": 0,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_7004",
+          "name": "植物保護科学",
+          "cat": 7004,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=7004",
+          "seeds_count": 1,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_7101",
+          "name": "植物栄養学・土壌学",
+          "cat": 7101,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=7101",
+          "seeds_count": 0,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_7102",
+          "name": "応用微生物学",
+          "cat": 7102,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=7102",
+          "seeds_count": 4,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_7103",
+          "name": "応用生物化学",
+          "cat": 7103,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=7103",
+          "seeds_count": 2,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_7104",
+          "name": "生物有機化学",
+          "cat": 7104,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=7104",
+          "seeds_count": 2,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_7105",
+          "name": "食品科学",
+          "cat": 7105,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=7105",
+          "seeds_count": 0,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_7201",
+          "name": "森林科学",
+          "cat": 7201,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=7201",
+          "seeds_count": 0,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_7202",
+          "name": "木質科学",
+          "cat": 7202,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=7202",
+          "seeds_count": 0,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_7301",
+          "name": "水圏生産科学",
+          "cat": 7301,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=7301",
+          "seeds_count": 2,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_7302",
+          "name": "水圏生命科学",
+          "cat": 7302,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=7302",
+          "seeds_count": 3,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_7401",
+          "name": "経営・経済農学",
+          "cat": 7401,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=7401",
+          "seeds_count": 0,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_7402",
+          "name": "社会・開発農学",
+          "cat": 7402,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=7402",
+          "seeds_count": 0,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_7501",
+          "name": "地域環境工学・計画学",
+          "cat": 7501,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=7501",
+          "seeds_count": 1,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_7502",
+          "name": "農業環境・情報工学",
+          "cat": 7502,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=7502",
+          "seeds_count": 0,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_7601",
+          "name": "動物生産科学",
+          "cat": 7601,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=7601",
+          "seeds_count": 0,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_7602",
+          "name": "獣医学",
+          "cat": 7602,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=7602",
+          "seeds_count": 0,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_7603",
+          "name": "統合動物科学",
+          "cat": 7603,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=7603",
+          "seeds_count": 1,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_7701",
+          "name": "昆虫科学",
+          "cat": 7701,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=7701",
+          "seeds_count": 2,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_7702",
+          "name": "環境農学（含ランドスケープ科学）",
+          "cat": 7702,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=7702",
+          "seeds_count": 2,
+          "member_count": 1,
+          "professor_ids": [
+            "prof_4502"
+          ]
+        },
+        {
+          "id": "field_7703",
+          "name": "応用分子細胞生物学",
+          "cat": 7703,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=7703",
+          "seeds_count": 1,
+          "member_count": 0,
+          "professor_ids": []
+        }
+      ]
+    },
+    {
+      "id": "major_医歯薬学",
+      "name": "医歯薬学",
+      "member_count": 12,
+      "fields": [
+        {
+          "id": "field_7801",
+          "name": "化学系薬学",
+          "cat": 7801,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=7801",
+          "seeds_count": 6,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_7802",
+          "name": "物理系薬学",
+          "cat": 7802,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=7802",
+          "seeds_count": 4,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_7803",
+          "name": "生物系薬学",
+          "cat": 7803,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=7803",
+          "seeds_count": 5,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_7804",
+          "name": "薬理系薬学",
+          "cat": 7804,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=7804",
+          "seeds_count": 1,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_7805",
+          "name": "天然資源系薬学",
+          "cat": 7805,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=7805",
+          "seeds_count": 2,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_7806",
+          "name": "創薬化学",
+          "cat": 7806,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=7806",
+          "seeds_count": 5,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_7807",
+          "name": "環境・衛生系薬学",
+          "cat": 7807,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=7807",
+          "seeds_count": 1,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_7808",
+          "name": "医療系薬学",
+          "cat": 7808,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=7808",
+          "seeds_count": 9,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_7901",
+          "name": "解剖学一般（含組織学・発生学）",
+          "cat": 7901,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=7901",
+          "seeds_count": 1,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_7902",
+          "name": "生理学一般",
+          "cat": 7902,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=7902",
+          "seeds_count": 5,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_7903",
+          "name": "環境生理学（含体力医学・栄養生理学）",
+          "cat": 7903,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=7903",
+          "seeds_count": 1,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_7904",
+          "name": "薬理学一般",
+          "cat": 7904,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=7904",
+          "seeds_count": 0,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_7905",
+          "name": "医化学一般",
+          "cat": 7905,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=7905",
+          "seeds_count": 7,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_7906",
+          "name": "病態医化学",
+          "cat": 7906,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=7906",
+          "seeds_count": 10,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_7907",
+          "name": "人類遺伝学",
+          "cat": 7907,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=7907",
+          "seeds_count": 2,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_7908",
+          "name": "人体病理学",
+          "cat": 7908,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=7908",
+          "seeds_count": 7,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_7909",
+          "name": "実験病理学",
+          "cat": 7909,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=7909",
+          "seeds_count": 9,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_7910",
+          "name": "寄生虫学（含衛生動物学）",
+          "cat": 7910,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=7910",
+          "seeds_count": 4,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_7911",
+          "name": "細菌学（含真菌学）",
+          "cat": 7911,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=7911",
+          "seeds_count": 3,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_7912",
+          "name": "ウイルス学",
+          "cat": 7912,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=7912",
+          "seeds_count": 5,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_7913",
+          "name": "免疫学",
+          "cat": 7913,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=7913",
+          "seeds_count": 14,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_8001",
+          "name": "医療社会学",
+          "cat": 8001,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=8001",
+          "seeds_count": 6,
+          "member_count": 2,
+          "professor_ids": [
+            "prof_3055",
+            "prof_2777"
+          ]
+        },
+        {
+          "id": "field_8002",
+          "name": "応用薬理学",
+          "cat": 8002,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=8002",
+          "seeds_count": 3,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_8003",
+          "name": "病態検査学",
+          "cat": 8003,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=8003",
+          "seeds_count": 7,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_8004",
+          "name": "疼痛学",
+          "cat": 8004,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=8004",
+          "seeds_count": 0,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_8101",
+          "name": "疫学・予防医学",
+          "cat": 8101,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=8101",
+          "seeds_count": 5,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_8102",
+          "name": "衛生学・公衆衛生学",
+          "cat": 8102,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=8102",
+          "seeds_count": 7,
+          "member_count": 4,
+          "professor_ids": [
+            "prof_11642",
+            "prof_11731",
+            "prof_4556",
+            "prof_3055"
+          ]
+        },
+        {
+          "id": "field_8103",
+          "name": "病院・医療管理学",
+          "cat": 8103,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=8103",
+          "seeds_count": 1,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_8104",
+          "name": "法医学",
+          "cat": 8104,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=8104",
+          "seeds_count": 2,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_8201",
+          "name": "内科学一般（含心身医学）",
+          "cat": 8201,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=8201",
+          "seeds_count": 6,
+          "member_count": 1,
+          "professor_ids": [
+            "prof_11642"
+          ]
+        },
+        {
+          "id": "field_8202",
+          "name": "消化器内科学",
+          "cat": 8202,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=8202",
+          "seeds_count": 8,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_8203",
+          "name": "循環器内科学",
+          "cat": 8203,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=8203",
+          "seeds_count": 11,
+          "member_count": 2,
+          "professor_ids": [
+            "prof_4586",
+            "prof_2777"
+          ]
+        },
+        {
+          "id": "field_8204",
+          "name": "呼吸器内科学",
+          "cat": 8204,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=8204",
+          "seeds_count": 4,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_8205",
+          "name": "腎臓内科学",
+          "cat": 8205,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=8205",
+          "seeds_count": 5,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_8206",
+          "name": "神経内科学",
+          "cat": 8206,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=8206",
+          "seeds_count": 1,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_8207",
+          "name": "代謝学",
+          "cat": 8207,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=8207",
+          "seeds_count": 7,
+          "member_count": 1,
+          "professor_ids": [
+            "prof_2777"
+          ]
+        },
+        {
+          "id": "field_8208",
+          "name": "内分泌学",
+          "cat": 8208,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=8208",
+          "seeds_count": 6,
+          "member_count": 1,
+          "professor_ids": [
+            "prof_2777"
+          ]
+        },
+        {
+          "id": "field_8209",
+          "name": "血液内科学",
+          "cat": 8209,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=8209",
+          "seeds_count": 10,
+          "member_count": 1,
+          "professor_ids": [
+            "prof_3738"
+          ]
+        },
+        {
+          "id": "field_8210",
+          "name": "膠原病・アレルギー内科学",
+          "cat": 8210,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=8210",
+          "seeds_count": 1,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_8211",
+          "name": "感染症内科学",
+          "cat": 8211,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=8211",
+          "seeds_count": 0,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_8212",
+          "name": "小児科学",
+          "cat": 8212,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=8212",
+          "seeds_count": 5,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_8213",
+          "name": "胎児・新生児医学",
+          "cat": 8213,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=8213",
+          "seeds_count": 2,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_8214",
+          "name": "皮膚科学",
+          "cat": 8214,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=8214",
+          "seeds_count": 2,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_8215",
+          "name": "精神神経科学",
+          "cat": 8215,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=8215",
+          "seeds_count": 7,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_8216",
+          "name": "放射線科学",
+          "cat": 8216,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=8216",
+          "seeds_count": 20,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_8301",
+          "name": "外科学一般",
+          "cat": 8301,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=8301",
+          "seeds_count": 2,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_8302",
+          "name": "消化器外科学",
+          "cat": 8302,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=8302",
+          "seeds_count": 0,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_8303",
+          "name": "心臓血管外科学",
+          "cat": 8303,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=8303",
+          "seeds_count": 1,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_8304",
+          "name": "呼吸器外科学",
+          "cat": 8304,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=8304",
+          "seeds_count": 2,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_8305",
+          "name": "脳神経外科学",
+          "cat": 8305,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=8305",
+          "seeds_count": 5,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_8306",
+          "name": "整形外科学",
+          "cat": 8306,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=8306",
+          "seeds_count": 6,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_8307",
+          "name": "麻酔科学",
+          "cat": 8307,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=8307",
+          "seeds_count": 3,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_8308",
+          "name": "泌尿器科学",
+          "cat": 8308,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=8308",
+          "seeds_count": 2,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_8309",
+          "name": "産婦人科学",
+          "cat": 8309,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=8309",
+          "seeds_count": 0,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_8310",
+          "name": "耳鼻咽喉科学",
+          "cat": 8310,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=8310",
+          "seeds_count": 5,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_8311",
+          "name": "眼科学",
+          "cat": 8311,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=8311",
+          "seeds_count": 4,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_8312",
+          "name": "小児外科学",
+          "cat": 8312,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=8312",
+          "seeds_count": 0,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_8313",
+          "name": "形成外科学",
+          "cat": 8313,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=8313",
+          "seeds_count": 0,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_8314",
+          "name": "救急医学",
+          "cat": 8314,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=8314",
+          "seeds_count": 3,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_8401",
+          "name": "形態系基礎歯科学",
+          "cat": 8401,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=8401",
+          "seeds_count": 0,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_8402",
+          "name": "機能系基礎歯科学",
+          "cat": 8402,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=8402",
+          "seeds_count": 0,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_8403",
+          "name": "病態科学系歯学・歯科放射線学",
+          "cat": 8403,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=8403",
+          "seeds_count": 0,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_8404",
+          "name": "保存治療系歯学",
+          "cat": 8404,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=8404",
+          "seeds_count": 1,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_8405",
+          "name": "補綴・理工系歯学",
+          "cat": 8405,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=8405",
+          "seeds_count": 0,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_8406",
+          "name": "歯科医用工学・再生歯学",
+          "cat": 8406,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=8406",
+          "seeds_count": 0,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_8407",
+          "name": "外科系歯学",
+          "cat": 8407,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=8407",
+          "seeds_count": 3,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_8408",
+          "name": "矯正・小児系歯学",
+          "cat": 8408,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=8408",
+          "seeds_count": 0,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_8409",
+          "name": "歯周治療系歯学",
+          "cat": 8409,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=8409",
+          "seeds_count": 0,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_8410",
+          "name": "社会系歯学",
+          "cat": 8410,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=8410",
+          "seeds_count": 0,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_8501",
+          "name": "基礎看護学",
+          "cat": 8501,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=8501",
+          "seeds_count": 0,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_8502",
+          "name": "臨床看護学",
+          "cat": 8502,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=8502",
+          "seeds_count": 8,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_8503",
+          "name": "生涯発達看護学",
+          "cat": 8503,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=8503",
+          "seeds_count": 1,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_8504",
+          "name": "高齢看護学",
+          "cat": 8504,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=8504",
+          "seeds_count": 4,
+          "member_count": 0,
+          "professor_ids": []
+        },
+        {
+          "id": "field_8505",
+          "name": "地域看護学",
+          "cat": 8505,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=8505",
+          "seeds_count": 2,
+          "member_count": 0,
+          "professor_ids": []
+        }
+      ]
+    },
+    {
+      "id": "major_その他",
+      "name": "その他",
+      "member_count": 9,
+      "fields": [
+        {
+          "id": "field_9999",
+          "name": "その他",
+          "cat": 9999,
+          "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=9999",
+          "seeds_count": 84,
+          "member_count": 9,
+          "professor_ids": [
+            "prof_2076",
+            "prof_2848",
+            "prof_4556",
+            "prof_11703",
+            "prof_2713",
+            "prof_4381",
+            "prof_1956",
+            "prof_4656",
+            "prof_2777"
+          ]
+        }
+      ]
+    }
+  ],
+  "edges_professor_field": [
+    {
+      "source": "prof_2195",
+      "target": "field_1001",
+      "type": "belongs_to_field",
+      "method": "seeds_page"
+    },
+    {
+      "source": "prof_2425",
+      "target": "field_1003",
+      "type": "belongs_to_field",
+      "method": "seeds_page"
+    },
+    {
+      "source": "prof_11739",
+      "target": "field_1201",
+      "type": "belongs_to_field",
+      "method": "seeds_page"
+    },
+    {
+      "source": "prof_11739",
+      "target": "field_1202",
+      "type": "belongs_to_field",
+      "method": "seeds_page"
+    },
+    {
+      "source": "prof_2230",
+      "target": "field_1204",
+      "type": "belongs_to_field",
+      "method": "seeds_page"
+    },
+    {
+      "source": "prof_2076",
+      "target": "field_1204",
+      "type": "belongs_to_field",
+      "method": "seeds_page"
+    },
+    {
+      "source": "prof_2232",
+      "target": "field_1204",
+      "type": "belongs_to_field",
+      "method": "seeds_page"
+    },
+    {
+      "source": "prof_11739",
+      "target": "field_1204",
+      "type": "belongs_to_field",
+      "method": "seeds_page"
+    },
+    {
+      "source": "prof_4454",
+      "target": "field_1206",
+      "type": "belongs_to_field",
+      "method": "seeds_page"
+    },
+    {
+      "source": "prof_2232",
+      "target": "field_1207",
+      "type": "belongs_to_field",
+      "method": "seeds_page"
+    },
+    {
+      "source": "prof_11739",
+      "target": "field_1207",
+      "type": "belongs_to_field",
+      "method": "seeds_page"
+    },
+    {
+      "source": "prof_4586",
+      "target": "field_1301",
+      "type": "belongs_to_field",
+      "method": "seeds_page"
+    },
+    {
+      "source": "prof_11791",
+      "target": "field_1403",
+      "type": "belongs_to_field",
+      "method": "seeds_page"
+    },
+    {
+      "source": "prof_11791",
+      "target": "field_1602",
+      "type": "belongs_to_field",
+      "method": "seeds_page"
+    },
+    {
+      "source": "prof_11791",
+      "target": "field_1603",
+      "type": "belongs_to_field",
+      "method": "seeds_page"
+    },
+    {
+      "source": "prof_11694",
+      "target": "field_1603",
+      "type": "belongs_to_field",
+      "method": "seeds_page"
+    },
+    {
+      "source": "prof_11613",
+      "target": "field_1651",
+      "type": "belongs_to_field",
+      "method": "seeds_page"
+    },
+    {
+      "source": "prof_4502",
+      "target": "field_1651",
+      "type": "belongs_to_field",
+      "method": "seeds_page"
+    },
+    {
+      "source": "prof_11380",
+      "target": "field_1651",
+      "type": "belongs_to_field",
+      "method": "seeds_page"
+    },
+    {
+      "source": "prof_2659",
+      "target": "field_1701",
+      "type": "belongs_to_field",
+      "method": "seeds_page"
+    },
+    {
+      "source": "prof_11389",
+      "target": "field_1802",
+      "type": "belongs_to_field",
+      "method": "seeds_page"
+    },
+    {
+      "source": "prof_4112",
+      "target": "field_1802",
+      "type": "belongs_to_field",
+      "method": "seeds_page"
+    },
+    {
+      "source": "prof_11739",
+      "target": "field_1802",
+      "type": "belongs_to_field",
+      "method": "seeds_page"
+    },
+    {
+      "source": "prof_11791",
+      "target": "field_2101",
+      "type": "belongs_to_field",
+      "method": "seeds_page"
+    },
+    {
+      "source": "prof_2848",
+      "target": "field_2301",
+      "type": "belongs_to_field",
+      "method": "seeds_page"
+    },
+    {
+      "source": "prof_11739",
+      "target": "field_2301",
+      "type": "belongs_to_field",
+      "method": "seeds_page"
+    },
+    {
+      "source": "prof_11460",
+      "target": "field_2304",
+      "type": "belongs_to_field",
+      "method": "seeds_page"
+    },
+    {
+      "source": "prof_2232",
+      "target": "field_2304",
+      "type": "belongs_to_field",
+      "method": "seeds_page"
+    },
+    {
+      "source": "prof_11739",
+      "target": "field_2602",
+      "type": "belongs_to_field",
+      "method": "seeds_page"
+    },
+    {
+      "source": "prof_3055",
+      "target": "field_2801",
+      "type": "belongs_to_field",
+      "method": "seeds_page"
+    },
+    {
+      "source": "prof_4721",
+      "target": "field_2901",
+      "type": "belongs_to_field",
+      "method": "seeds_page"
+    },
+    {
+      "source": "prof_4386",
+      "target": "field_3205",
+      "type": "belongs_to_field",
+      "method": "seeds_page"
+    },
+    {
+      "source": "prof_11755",
+      "target": "field_3803",
+      "type": "belongs_to_field",
+      "method": "seeds_page"
+    },
+    {
+      "source": "prof_2670",
+      "target": "field_3804",
+      "type": "belongs_to_field",
+      "method": "seeds_page"
+    },
+    {
+      "source": "prof_11694",
+      "target": "field_3804",
+      "type": "belongs_to_field",
+      "method": "seeds_page"
+    },
+    {
+      "source": "prof_11755",
+      "target": "field_3806",
+      "type": "belongs_to_field",
+      "method": "seeds_page"
+    },
+    {
+      "source": "prof_4678",
+      "target": "field_3901",
+      "type": "belongs_to_field",
+      "method": "seeds_page"
+    },
+    {
+      "source": "prof_11703",
+      "target": "field_3901",
+      "type": "belongs_to_field",
+      "method": "seeds_page"
+    },
+    {
+      "source": "prof_1956",
+      "target": "field_4001",
+      "type": "belongs_to_field",
+      "method": "seeds_page"
+    },
+    {
+      "source": "prof_11731",
+      "target": "field_4101",
+      "type": "belongs_to_field",
+      "method": "seeds_page"
+    },
+    {
+      "source": "prof_4386",
+      "target": "field_4201",
+      "type": "belongs_to_field",
+      "method": "seeds_page"
+    },
+    {
+      "source": "prof_11380",
+      "target": "field_4201",
+      "type": "belongs_to_field",
+      "method": "seeds_page"
+    },
+    {
+      "source": "prof_11380",
+      "target": "field_4202",
+      "type": "belongs_to_field",
+      "method": "seeds_page"
+    },
+    {
+      "source": "prof_2385",
+      "target": "field_4404",
+      "type": "belongs_to_field",
+      "method": "seeds_page"
+    },
+    {
+      "source": "prof_11658",
+      "target": "field_5201",
+      "type": "belongs_to_field",
+      "method": "seeds_page"
+    },
+    {
+      "source": "prof_11658",
+      "target": "field_5301",
+      "type": "belongs_to_field",
+      "method": "seeds_page"
+    },
+    {
+      "source": "prof_11658",
+      "target": "field_5305",
+      "type": "belongs_to_field",
+      "method": "seeds_page"
+    },
+    {
+      "source": "prof_11658",
+      "target": "field_5306",
+      "type": "belongs_to_field",
+      "method": "seeds_page"
+    },
+    {
+      "source": "prof_11658",
+      "target": "field_5307",
+      "type": "belongs_to_field",
+      "method": "seeds_page"
+    },
+    {
+      "source": "prof_2195",
+      "target": "field_5506",
+      "type": "belongs_to_field",
+      "method": "seeds_page"
+    },
+    {
+      "source": "prof_2195",
+      "target": "field_5507",
+      "type": "belongs_to_field",
+      "method": "seeds_page"
+    },
+    {
+      "source": "prof_2230",
+      "target": "field_5603",
+      "type": "belongs_to_field",
+      "method": "seeds_page"
+    },
+    {
+      "source": "prof_2385",
+      "target": "field_5603",
+      "type": "belongs_to_field",
+      "method": "seeds_page"
+    },
+    {
+      "source": "prof_2385",
+      "target": "field_5605",
+      "type": "belongs_to_field",
+      "method": "seeds_page"
+    },
+    {
+      "source": "prof_2195",
+      "target": "field_5606",
+      "type": "belongs_to_field",
+      "method": "seeds_page"
+    },
+    {
+      "source": "prof_11612",
+      "target": "field_5705",
+      "type": "belongs_to_field",
+      "method": "seeds_page"
+    },
+    {
+      "source": "prof_11791",
+      "target": "field_5705",
+      "type": "belongs_to_field",
+      "method": "seeds_page"
+    },
+    {
+      "source": "prof_11791",
+      "target": "field_5706",
+      "type": "belongs_to_field",
+      "method": "seeds_page"
+    },
+    {
+      "source": "prof_8613",
+      "target": "field_5803",
+      "type": "belongs_to_field",
+      "method": "seeds_page"
+    },
+    {
+      "source": "prof_10561",
+      "target": "field_5803",
+      "type": "belongs_to_field",
+      "method": "seeds_page"
+    },
+    {
+      "source": "prof_11613",
+      "target": "field_5803",
+      "type": "belongs_to_field",
+      "method": "seeds_page"
+    },
+    {
+      "source": "prof_11791",
+      "target": "field_6106",
+      "type": "belongs_to_field",
+      "method": "seeds_page"
+    },
+    {
+      "source": "prof_4586",
+      "target": "field_6502",
+      "type": "belongs_to_field",
+      "method": "seeds_page"
+    },
+    {
+      "source": "prof_4502",
+      "target": "field_7702",
+      "type": "belongs_to_field",
+      "method": "seeds_page"
+    },
+    {
+      "source": "prof_3055",
+      "target": "field_8001",
+      "type": "belongs_to_field",
+      "method": "seeds_page"
+    },
+    {
+      "source": "prof_2777",
+      "target": "field_8001",
+      "type": "belongs_to_field",
+      "method": "seeds_page"
+    },
+    {
+      "source": "prof_11642",
+      "target": "field_8102",
+      "type": "belongs_to_field",
+      "method": "seeds_page"
+    },
+    {
+      "source": "prof_11731",
+      "target": "field_8102",
+      "type": "belongs_to_field",
+      "method": "seeds_page"
+    },
+    {
+      "source": "prof_4556",
+      "target": "field_8102",
+      "type": "belongs_to_field",
+      "method": "seeds_page"
+    },
+    {
+      "source": "prof_3055",
+      "target": "field_8102",
+      "type": "belongs_to_field",
+      "method": "seeds_page"
+    },
+    {
+      "source": "prof_4586",
+      "target": "field_8203",
+      "type": "belongs_to_field",
+      "method": "seeds_page"
+    },
+    {
+      "source": "prof_2777",
+      "target": "field_8203",
+      "type": "belongs_to_field",
+      "method": "seeds_page"
+    },
+    {
+      "source": "prof_2777",
+      "target": "field_8207",
+      "type": "belongs_to_field",
+      "method": "seeds_page"
+    },
+    {
+      "source": "prof_2777",
+      "target": "field_8208",
+      "type": "belongs_to_field",
+      "method": "seeds_page"
+    },
+    {
+      "source": "prof_3738",
+      "target": "field_8209",
+      "type": "belongs_to_field",
+      "method": "seeds_page"
+    },
+    {
+      "source": "prof_2076",
+      "target": "field_9999",
+      "type": "belongs_to_field",
+      "method": "seeds_page"
+    },
+    {
+      "source": "prof_2848",
+      "target": "field_9999",
+      "type": "belongs_to_field",
+      "method": "seeds_page"
+    },
+    {
+      "source": "prof_4556",
+      "target": "field_9999",
+      "type": "belongs_to_field",
+      "method": "seeds_page"
+    },
+    {
+      "source": "prof_11703",
+      "target": "field_9999",
+      "type": "belongs_to_field",
+      "method": "seeds_page"
+    },
+    {
+      "source": "prof_2713",
+      "target": "field_9999",
+      "type": "belongs_to_field",
+      "method": "seeds_page"
+    },
+    {
+      "source": "prof_4381",
+      "target": "field_9999",
+      "type": "belongs_to_field",
+      "method": "seeds_page"
+    },
+    {
+      "source": "prof_1956",
+      "target": "field_9999",
+      "type": "belongs_to_field",
+      "method": "seeds_page"
+    },
+    {
+      "source": "prof_4656",
+      "target": "field_9999",
+      "type": "belongs_to_field",
+      "method": "seeds_page"
+    },
+    {
+      "source": "prof_2777",
+      "target": "field_9999",
+      "type": "belongs_to_field",
+      "method": "seeds_page"
+    },
+    {
+      "source": "prof_4732",
+      "target": "field_1201",
+      "type": "belongs_to_field",
+      "method": "specialty"
+    },
+    {
+      "source": "prof_4732",
+      "target": "field_1603",
+      "type": "belongs_to_field",
+      "method": "specialty"
+    },
+    {
+      "source": "prof_2076",
+      "target": "field_1301",
+      "type": "belongs_to_field",
+      "method": "specialty"
+    },
+    {
+      "source": "prof_2076",
+      "target": "field_6501",
+      "type": "belongs_to_field",
+      "method": "specialty"
+    },
+    {
+      "source": "prof_2076",
+      "target": "field_6502",
+      "type": "belongs_to_field",
+      "method": "specialty"
+    },
+    {
+      "source": "prof_11642",
+      "target": "field_8201",
+      "type": "belongs_to_field",
+      "method": "specialty"
+    },
+    {
+      "source": "prof_4112",
+      "target": "field_1801",
+      "type": "belongs_to_field",
+      "method": "specialty"
+    },
+    {
+      "source": "prof_11694",
+      "target": "field_3805",
+      "type": "belongs_to_field",
+      "method": "specialty"
+    }
+  ],
+  "unmatched_specialty_tokens": [
+    "アートセラピー",
+    "美術教育",
+    "環境心理学",
+    "応用ミクロ計量経済学",
+    "環境経済学",
+    "環境教育",
+    "進化心理学",
+    "行動生理学",
+    "生理心理学",
+    "国際教育学",
+    "高等教育",
+    "第二言語習得",
+    "観光行動",
+    "観光地管理",
+    "観光起業家の行動",
+    "障害学",
+    "人権",
+    "多様性・包摂",
+    "国際保健",
+    "精神保健",
+    "国土空間計画",
+    "ZEH建築",
+    "環境デザイン",
+    "未来社会デザイン",
+    "バイオマス変換 界面化学",
+    "日本経済史",
+    "京都企業",
+    "地域金融",
+    "京都",
+    "被ばく線量計",
+    "フォトンカウンティング",
+    "単純X線撮影",
+    "医学物理学",
+    "崩壊核分光 即発ガンマ線分析",
+    "放射線計測",
+    "地域社会学",
+    "森林風景計画学",
+    "GIS",
+    "造園学",
+    "風景計画",
+    "交通経済",
+    "インタープリテーション",
+    "自然文化資源保全",
+    "ガイド・トレーニング",
+    "サステイナブルツーリズム",
+    "高血圧"
+  ]
+}

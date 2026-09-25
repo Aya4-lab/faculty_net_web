@@ -1,0 +1,993 @@
+{
+  "source": "https://ridb.kanazawa-u.ac.jp/seeds/",
+  "mode": "specialty_overlap",
+  "fields": {
+    "1001": {
+      "cat": 1001,
+      "name": "情報学基礎理論",
+      "major": "情報学",
+      "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=1001",
+      "professor_ridb_ids": [
+        "2958",
+        "2195"
+      ],
+      "yugo_professor_ridb_ids": [
+        "2195"
+      ]
+    },
+    "1003": {
+      "cat": 1003,
+      "name": "統計科学",
+      "major": "情報学",
+      "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=1003",
+      "professor_ridb_ids": [
+        "11637",
+        "2425",
+        "11390",
+        "4103"
+      ],
+      "yugo_professor_ridb_ids": [
+        "2425"
+      ]
+    },
+    "1201": {
+      "cat": 1201,
+      "name": "認知科学",
+      "major": "情報学",
+      "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=1201",
+      "professor_ridb_ids": [
+        "4560",
+        "11679",
+        "1919",
+        "3990",
+        "2871",
+        "4194",
+        "11739"
+      ],
+      "yugo_professor_ridb_ids": [
+        "11739"
+      ]
+    },
+    "1202": {
+      "cat": 1202,
+      "name": "知覚情報処理",
+      "major": "情報学",
+      "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=1202",
+      "professor_ridb_ids": [
+        "4595",
+        "2554",
+        "11739"
+      ],
+      "yugo_professor_ridb_ids": [
+        "11739"
+      ]
+    },
+    "1204": {
+      "cat": 1204,
+      "name": "知能情報学",
+      "major": "情報学",
+      "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=1204",
+      "professor_ridb_ids": [
+        "2230",
+        "4726",
+        "11679",
+        "2076",
+        "11711",
+        "2232",
+        "3165",
+        "3110",
+        "11739"
+      ],
+      "yugo_professor_ridb_ids": [
+        "2230",
+        "2076",
+        "2232",
+        "11739"
+      ]
+    },
+    "1206": {
+      "cat": 1206,
+      "name": "知能ロボティクス",
+      "major": "情報学",
+      "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=1206",
+      "professor_ridb_ids": [
+        "11679",
+        "2103",
+        "4454",
+        "2196"
+      ],
+      "yugo_professor_ridb_ids": [
+        "4454"
+      ]
+    },
+    "1207": {
+      "cat": 1207,
+      "name": "感性情報学",
+      "major": "情報学",
+      "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=1207",
+      "professor_ridb_ids": [
+        "1919",
+        "2232",
+        "3240",
+        "11739"
+      ],
+      "yugo_professor_ridb_ids": [
+        "2232",
+        "11739"
+      ]
+    },
+    "1301": {
+      "cat": 1301,
+      "name": "生命・健康・医療情報学",
+      "major": "情報学",
+      "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=1301",
+      "professor_ridb_ids": [
+        "11679",
+        "11776",
+        "11763",
+        "2162",
+        "4586"
+      ],
+      "yugo_professor_ridb_ids": [
+        "4586"
+      ]
+    },
+    "1403": {
+      "cat": 1403,
+      "name": "環境影響評価",
+      "major": "環境学",
+      "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=1403",
+      "professor_ridb_ids": [
+        "11791",
+        "3434",
+        "4674"
+      ],
+      "yugo_professor_ridb_ids": [
+        "11791"
+      ]
+    },
+    "1602": {
+      "cat": 1602,
+      "name": "持続可能システム",
+      "major": "環境学",
+      "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=1602",
+      "professor_ridb_ids": [
+        "11791"
+      ],
+      "yugo_professor_ridb_ids": [
+        "11791"
+      ]
+    },
+    "1603": {
+      "cat": 1603,
+      "name": "環境政策・環境社会システム",
+      "major": "環境学",
+      "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=1603",
+      "professor_ridb_ids": [
+        "11791",
+        "11694"
+      ],
+      "yugo_professor_ridb_ids": [
+        "11791",
+        "11694"
+      ]
+    },
+    "1651": {
+      "cat": 1651,
+      "name": "デザイン学",
+      "major": "複合領域",
+      "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=1651",
+      "professor_ridb_ids": [
+        "11613",
+        "4502",
+        "11380"
+      ],
+      "yugo_professor_ridb_ids": [
+        "11613",
+        "4502",
+        "11380"
+      ]
+    },
+    "1701": {
+      "cat": 1701,
+      "name": "家政・生活学一般",
+      "major": "複合領域",
+      "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=1701",
+      "professor_ridb_ids": [
+        "2659",
+        "1938"
+      ],
+      "yugo_professor_ridb_ids": [
+        "2659"
+      ]
+    },
+    "1802": {
+      "cat": 1802,
+      "name": "教育工学",
+      "major": "複合領域",
+      "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=1802",
+      "professor_ridb_ids": [
+        "11389",
+        "2511",
+        "3165",
+        "1866",
+        "2541",
+        "4112",
+        "2924",
+        "3613",
+        "11739"
+      ],
+      "yugo_professor_ridb_ids": [
+        "11389",
+        "4112",
+        "11739"
+      ]
+    },
+    "2101": {
+      "cat": 2101,
+      "name": "地理学",
+      "major": "複合領域",
+      "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=2101",
+      "professor_ridb_ids": [
+        "2181",
+        "11791",
+        "3025"
+      ],
+      "yugo_professor_ridb_ids": [
+        "11791"
+      ]
+    },
+    "2301": {
+      "cat": 2301,
+      "name": "生体医工学・生体材料学",
+      "major": "複合領域",
+      "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=2301",
+      "professor_ridb_ids": [
+        "2384",
+        "3439",
+        "2848",
+        "11595",
+        "3969",
+        "2668",
+        "2724",
+        "4779",
+        "11739"
+      ],
+      "yugo_professor_ridb_ids": [
+        "2848",
+        "11739"
+      ]
+    },
+    "2304": {
+      "cat": 2304,
+      "name": "リハビリテーション科学・福祉工学",
+      "major": "複合領域",
+      "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=2304",
+      "professor_ridb_ids": [
+        "2016",
+        "11460",
+        "2024",
+        "4261",
+        "2232",
+        "11285",
+        "2747",
+        "2238",
+        "2062",
+        "2799",
+        "2756",
+        "3112"
+      ],
+      "yugo_professor_ridb_ids": [
+        "11460",
+        "2232"
+      ]
+    },
+    "2602": {
+      "cat": 2602,
+      "name": "脳計測科学",
+      "major": "複合領域",
+      "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=2602",
+      "professor_ridb_ids": [
+        "4679",
+        "11739"
+      ],
+      "yugo_professor_ridb_ids": [
+        "11739"
+      ]
+    },
+    "2801": {
+      "cat": 2801,
+      "name": "ジェンダー",
+      "major": "総合人文社会",
+      "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=2801",
+      "professor_ridb_ids": [
+        "3276",
+        "3055",
+        "11712"
+      ],
+      "yugo_professor_ridb_ids": [
+        "3055"
+      ]
+    },
+    "2901": {
+      "cat": 2901,
+      "name": "哲学・倫理学",
+      "major": "人文学",
+      "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=2901",
+      "professor_ridb_ids": [
+        "4721",
+        "4602",
+        "4574",
+        "4813",
+        "3277",
+        "4598",
+        "2895",
+        "2903",
+        "2865"
+      ],
+      "yugo_professor_ridb_ids": [
+        "4721"
+      ]
+    },
+    "3205": {
+      "cat": 3205,
+      "name": "外国語教育",
+      "major": "人文学",
+      "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=3205",
+      "professor_ridb_ids": [
+        "3164",
+        "2395",
+        "4686",
+        "4077",
+        "4386",
+        "3165",
+        "2541",
+        "11458"
+      ],
+      "yugo_professor_ridb_ids": [
+        "4386"
+      ]
+    },
+    "3803": {
+      "cat": 3803,
+      "name": "経済統計",
+      "major": "社会科学",
+      "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=3803",
+      "professor_ridb_ids": [
+        "4365",
+        "11755",
+        "4450"
+      ],
+      "yugo_professor_ridb_ids": [
+        "11755"
+      ]
+    },
+    "3804": {
+      "cat": 3804,
+      "name": "経済政策",
+      "major": "社会科学",
+      "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=3804",
+      "professor_ridb_ids": [
+        "4298",
+        "2314",
+        "2670",
+        "4450",
+        "2594",
+        "11694"
+      ],
+      "yugo_professor_ridb_ids": [
+        "2670",
+        "11694"
+      ]
+    },
+    "3806": {
+      "cat": 3806,
+      "name": "金融・ファイナンス",
+      "major": "社会科学",
+      "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=3806",
+      "professor_ridb_ids": [
+        "2314",
+        "11755",
+        "2594"
+      ],
+      "yugo_professor_ridb_ids": [
+        "11755"
+      ]
+    },
+    "3901": {
+      "cat": 3901,
+      "name": "経営学",
+      "major": "社会科学",
+      "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=3901",
+      "professor_ridb_ids": [
+        "1978",
+        "4678",
+        "4842",
+        "11703",
+        "2162"
+      ],
+      "yugo_professor_ridb_ids": [
+        "4678",
+        "11703"
+      ]
+    },
+    "4001": {
+      "cat": 4001,
+      "name": "社会学",
+      "major": "社会科学",
+      "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=4001",
+      "professor_ridb_ids": [
+        "4654",
+        "2481",
+        "2374",
+        "11704",
+        "2040",
+        "3594",
+        "2886",
+        "11614",
+        "4652",
+        "1956",
+        "11712"
+      ],
+      "yugo_professor_ridb_ids": [
+        "1956"
+      ]
+    },
+    "4101": {
+      "cat": 4101,
+      "name": "社会心理学",
+      "major": "社会科学",
+      "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=4101",
+      "professor_ridb_ids": [
+        "2896",
+        "2481",
+        "11731"
+      ],
+      "yugo_professor_ridb_ids": [
+        "11731"
+      ]
+    },
+    "4201": {
+      "cat": 4201,
+      "name": "教育学",
+      "major": "社会科学",
+      "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=4201",
+      "professor_ridb_ids": [
+        "3530",
+        "4630",
+        "2511",
+        "2845",
+        "4804",
+        "4386",
+        "2264",
+        "2475",
+        "3767",
+        "4076",
+        "11380",
+        "2394"
+      ],
+      "yugo_professor_ridb_ids": [
+        "4386",
+        "11380"
+      ]
+    },
+    "4202": {
+      "cat": 4202,
+      "name": "教育社会学",
+      "major": "社会科学",
+      "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=4202",
+      "professor_ridb_ids": [
+        "2845",
+        "11380",
+        "2370"
+      ],
+      "yugo_professor_ridb_ids": [
+        "11380"
+      ]
+    },
+    "4404": {
+      "cat": 4404,
+      "name": "光工学・光量子科学",
+      "major": "総合理工",
+      "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=4404",
+      "professor_ridb_ids": [
+        "2385",
+        "4026"
+      ],
+      "yugo_professor_ridb_ids": [
+        "2385"
+      ]
+    },
+    "5201": {
+      "cat": 5201,
+      "name": "物理化学",
+      "major": "化学",
+      "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=5201",
+      "professor_ridb_ids": [
+        "1895",
+        "3139",
+        "2692",
+        "2881",
+        "2497",
+        "11658",
+        "2549"
+      ],
+      "yugo_professor_ridb_ids": [
+        "11658"
+      ]
+    },
+    "5301": {
+      "cat": 5301,
+      "name": "機能物性化学",
+      "major": "化学",
+      "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=5301",
+      "professor_ridb_ids": [
+        "1895",
+        "2589",
+        "2478",
+        "11658",
+        "2278",
+        "3621",
+        "2333"
+      ],
+      "yugo_professor_ridb_ids": [
+        "11658"
+      ]
+    },
+    "5305": {
+      "cat": 5305,
+      "name": "生体関連化学",
+      "major": "化学",
+      "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=5305",
+      "professor_ridb_ids": [
+        "2635",
+        "1974",
+        "11658"
+      ],
+      "yugo_professor_ridb_ids": [
+        "11658"
+      ]
+    },
+    "5306": {
+      "cat": 5306,
+      "name": "グリーン・環境化学",
+      "major": "化学",
+      "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=5306",
+      "professor_ridb_ids": [
+        "2849",
+        "2589",
+        "4354",
+        "11385",
+        "1962",
+        "11658"
+      ],
+      "yugo_professor_ridb_ids": [
+        "11658"
+      ]
+    },
+    "5307": {
+      "cat": 5307,
+      "name": "エネルギー関連化学",
+      "major": "化学",
+      "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=5307",
+      "professor_ridb_ids": [
+        "4761",
+        "11658"
+      ],
+      "yugo_professor_ridb_ids": [
+        "11658"
+      ]
+    },
+    "5506": {
+      "cat": 5506,
+      "name": "機械力学・制御",
+      "major": "工学",
+      "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=5506",
+      "professor_ridb_ids": [
+        "3559",
+        "4405",
+        "2383",
+        "2229",
+        "11320",
+        "4520",
+        "2103",
+        "4261",
+        "4779",
+        "2195"
+      ],
+      "yugo_professor_ridb_ids": [
+        "2195"
+      ]
+    },
+    "5507": {
+      "cat": 5507,
+      "name": "知能機械学・機械システム",
+      "major": "工学",
+      "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=5507",
+      "professor_ridb_ids": [
+        "3559",
+        "4219",
+        "2229",
+        "11320",
+        "2554",
+        "4507",
+        "2103",
+        "2154",
+        "4559",
+        "11343",
+        "3207",
+        "2195",
+        "2196"
+      ],
+      "yugo_professor_ridb_ids": [
+        "2195"
+      ]
+    },
+    "5603": {
+      "cat": 5603,
+      "name": "電子デバイス・電子機器",
+      "major": "工学",
+      "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=5603",
+      "professor_ridb_ids": [
+        "2230",
+        "2385",
+        "2275",
+        "11548",
+        "2023",
+        "3065",
+        "3583"
+      ],
+      "yugo_professor_ridb_ids": [
+        "2230",
+        "2385"
+      ]
+    },
+    "5605": {
+      "cat": 5605,
+      "name": "計測工学",
+      "major": "工学",
+      "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=5605",
+      "professor_ridb_ids": [
+        "2385",
+        "3006",
+        "2762",
+        "2554",
+        "2103",
+        "11357",
+        "4675",
+        "2281"
+      ],
+      "yugo_professor_ridb_ids": [
+        "2385"
+      ]
+    },
+    "5606": {
+      "cat": 5606,
+      "name": "制御・システム工学",
+      "major": "工学",
+      "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=5606",
+      "professor_ridb_ids": [
+        "11320",
+        "4520",
+        "3110",
+        "2195",
+        "2180"
+      ],
+      "yugo_professor_ridb_ids": [
+        "2195"
+      ]
+    },
+    "5705": {
+      "cat": 5705,
+      "name": "土木計画学・交通工学",
+      "major": "工学",
+      "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=5705",
+      "professor_ridb_ids": [
+        "11612",
+        "11791",
+        "4626"
+      ],
+      "yugo_professor_ridb_ids": [
+        "11612",
+        "11791"
+      ]
+    },
+    "5706": {
+      "cat": 5706,
+      "name": "土木環境システム",
+      "major": "工学",
+      "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=5706",
+      "professor_ridb_ids": [
+        "11791",
+        "4769",
+        "4698",
+        "4043",
+        "4583",
+        "2330"
+      ],
+      "yugo_professor_ridb_ids": [
+        "11791"
+      ]
+    },
+    "5803": {
+      "cat": 5803,
+      "name": "都市計画・建築計画",
+      "major": "工学",
+      "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=5803",
+      "professor_ridb_ids": [
+        "8613",
+        "10561",
+        "11613",
+        "2165",
+        "11623",
+        "1938"
+      ],
+      "yugo_professor_ridb_ids": [
+        "8613",
+        "10561",
+        "11613"
+      ]
+    },
+    "6106": {
+      "cat": 6106,
+      "name": "エネルギー学",
+      "major": "工学",
+      "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=6106",
+      "professor_ridb_ids": [
+        "2331",
+        "11365",
+        "4200",
+        "11791"
+      ],
+      "yugo_professor_ridb_ids": [
+        "11791"
+      ]
+    },
+    "6502": {
+      "cat": 6502,
+      "name": "ゲノム医科学",
+      "major": "総合生物",
+      "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=6502",
+      "professor_ridb_ids": [
+        "4586"
+      ],
+      "yugo_professor_ridb_ids": [
+        "4586"
+      ]
+    },
+    "7702": {
+      "cat": 7702,
+      "name": "環境農学（含ランドスケープ科学）",
+      "major": "農学",
+      "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=7702",
+      "professor_ridb_ids": [
+        "11623",
+        "4502"
+      ],
+      "yugo_professor_ridb_ids": [
+        "4502"
+      ]
+    },
+    "8001": {
+      "cat": 8001,
+      "name": "医療社会学",
+      "major": "医歯薬学",
+      "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=8001",
+      "professor_ridb_ids": [
+        "2940",
+        "4727",
+        "2162",
+        "3055",
+        "8445",
+        "2777"
+      ],
+      "yugo_professor_ridb_ids": [
+        "3055",
+        "2777"
+      ]
+    },
+    "8102": {
+      "cat": 8102,
+      "name": "衛生学・公衆衛生学",
+      "major": "医歯薬学",
+      "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=8102",
+      "professor_ridb_ids": [
+        "2661",
+        "11642",
+        "11731",
+        "4556",
+        "3280",
+        "2985",
+        "3055"
+      ],
+      "yugo_professor_ridb_ids": [
+        "11642",
+        "11731",
+        "4556",
+        "3055"
+      ]
+    },
+    "8203": {
+      "cat": 8203,
+      "name": "循環器内科学",
+      "major": "医歯薬学",
+      "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=8203",
+      "professor_ridb_ids": [
+        "2912",
+        "2940",
+        "2065",
+        "3293",
+        "2431",
+        "2613",
+        "11445",
+        "4586",
+        "11391",
+        "2615",
+        "2777"
+      ],
+      "yugo_professor_ridb_ids": [
+        "4586",
+        "2777"
+      ]
+    },
+    "8207": {
+      "cat": 8207,
+      "name": "代謝学",
+      "major": "医歯薬学",
+      "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=8207",
+      "professor_ridb_ids": [
+        "2752",
+        "4790",
+        "2936",
+        "3039",
+        "11700",
+        "3988",
+        "2777"
+      ],
+      "yugo_professor_ridb_ids": [
+        "2777"
+      ]
+    },
+    "8208": {
+      "cat": 8208,
+      "name": "内分泌学",
+      "major": "医歯薬学",
+      "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=8208",
+      "professor_ridb_ids": [
+        "7301",
+        "4489",
+        "4790",
+        "2936",
+        "11700",
+        "2777"
+      ],
+      "yugo_professor_ridb_ids": [
+        "2777"
+      ]
+    },
+    "8209": {
+      "cat": 8209,
+      "name": "血液内科学",
+      "major": "医歯薬学",
+      "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=8209",
+      "professor_ridb_ids": [
+        "2225",
+        "4033",
+        "3738",
+        "10984",
+        "3641",
+        "3285",
+        "4614",
+        "11354",
+        "1908",
+        "2114"
+      ],
+      "yugo_professor_ridb_ids": [
+        "3738"
+      ]
+    },
+    "9999": {
+      "cat": 9999,
+      "name": "その他",
+      "major": "その他",
+      "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=9999",
+      "professor_ridb_ids": [
+        "2261",
+        "4776",
+        "2279",
+        "2661",
+        "2345",
+        "2589",
+        "2932",
+        "2940",
+        "2004",
+        "2635",
+        "3922",
+        "2869",
+        "2687",
+        "2960",
+        "2982",
+        "2858",
+        "2331",
+        "2553",
+        "2481",
+        "2702",
+        "2853",
+        "1925",
+        "3968",
+        "2704",
+        "2076",
+        "1943",
+        "3277",
+        "11548",
+        "1974",
+        "2214",
+        "4877",
+        "2040",
+        "2547",
+        "2848",
+        "4496",
+        "4200",
+        "4556",
+        "11703",
+        "3201",
+        "2882",
+        "3611",
+        "2023",
+        "2713",
+        "2935",
+        "4381",
+        "2560",
+        "2741",
+        "2629",
+        "3120",
+        "2346",
+        "3823",
+        "2880",
+        "2894",
+        "4305",
+        "3641",
+        "4665",
+        "4103",
+        "3123",
+        "2615",
+        "3971",
+        "2852",
+        "3134",
+        "3557",
+        "1956",
+        "2794",
+        "2724",
+        "2664",
+        "2399",
+        "2039",
+        "2281",
+        "3224",
+        "4840",
+        "1938",
+        "2333",
+        "3207",
+        "4656",
+        "1963",
+        "2707",
+        "2809",
+        "2777",
+        "1907",
+        "2850",
+        "2643",
+        "2394"
+      ],
+      "yugo_professor_ridb_ids": [
+        "2076",
+        "2848",
+        "4556",
+        "11703",
+        "2713",
+        "4381",
+        "1956",
+        "4656",
+        "2777"
+      ]
+    }
+  }
+}

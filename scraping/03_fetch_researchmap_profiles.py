@@ -1,4 +1,11 @@
-"""Step 1: faculty profile + lightweight first-author paper URL meta (no paper detail pages)."""
+"""
+03 — Fetch researchmap faculty profiles + lightweight first-author paper URL meta
+     (no per-paper detail pages; those are scraped in 04_fetch_paper_details.py).
+
+Usage:
+  python scraping/03_fetch_researchmap_profiles.py
+  python scraping/03_fetch_researchmap_profiles.py --only-names "堀 優太" --merge
+"""
 import json
 import time
 import re
@@ -18,6 +25,16 @@ RESEARCHMAP_USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/
 
 CITATION_RE = re.compile(r"(?:被引用件数|Citations?|Cited by)[:：\s]*(\d+)", re.I)
 REQUEST_DELAY = 1.5
+
+# Hard overrides when name→URL must not rely on fuzzy matching.
+# Keys are normalize_name() forms (spaces/furigana stripped).
+RESEARCHMAP_URL_OVERRIDES: dict[str, str] = {
+    "堀優太": "https://researchmap.jp/yuhori",
+}
+# researchmap 会員 ID → profile URL (optional secondary key)
+RESEARCHMAP_MEMBER_ID_URLS: dict[str, str] = {
+    "B000283387": "https://researchmap.jp/yuhori",
+}
 
 NOISE_TOKENS = {
     # JA / EN navigation & buttons
@@ -180,12 +197,16 @@ def normalize_name(name_str: str) -> str:
 
 
 def names_match(candidate_name: str, target_name: str) -> bool:
-    """True if names match ignoring spaces / furigana parentheses."""
+    """True if names match exactly after normalizing spaces / furigana.
+
+    Substring matching is intentionally avoided: surname-only queries like
+    「堀」must not match 「堀家 慎一」.
+    """
     c = normalize_name(candidate_name)
     t = normalize_name(target_name)
     if not c or not t:
         return False
-    return c == t or t in c or c in t
+    return c == t
 
 
 def profile_base_url(url: str) -> str:
@@ -239,14 +260,33 @@ def load_json_rows(path_str):
 
 
 def match_index_url(index_data, target_names):
-    normalized_targets = [normalize_name(name) for name in target_names if name]
+    """Resolve profile URL by exact full-name match only (after normalize).
 
-    for item in index_data:
-        idx_norm = normalize_name(item.get("name", ""))
-        if not idx_norm:
+    Longer (more specific) targets are tried first. Surname-only variants are
+    skipped so 「堀」never binds to 「堀家 慎一」.
+    """
+    normalized_targets: list[str] = []
+    seen: set[str] = set()
+    for name in target_names:
+        if not name:
             continue
-        for target_norm in normalized_targets:
-            if target_norm == idx_norm or target_norm in idx_norm or idx_norm in target_norm:
+        # Skip surname-only lookup tokens (single CJK token without given name)
+        spaced = strip_furigana(str(name))
+        spaced = re.sub(r"[\u3000\s]+", " ", spaced).strip()
+        tokens = spaced.split()
+        if len(tokens) == 1 and re.fullmatch(r"[\u3400-\u9fff\uf900-\ufaff]+", tokens[0] or ""):
+            # Single-kanji-block surname-only: ignore for index matching
+            if len(tokens[0]) <= 3:
+                continue
+        n = normalize_name(name)
+        if n and n not in seen:
+            seen.add(n)
+            normalized_targets.append(n)
+
+    for target_norm in sorted(normalized_targets, key=len, reverse=True):
+        for item in index_data:
+            idx_norm = normalize_name(item.get("name", ""))
+            if idx_norm and idx_norm == target_norm:
                 return item.get("profile_url")
     return None
 
@@ -393,6 +433,7 @@ def search_kanazawa_profile_url(name, render_browser=None, match_names=None, req
 
 
 def _index_lookup_names(name_ja, name_en) -> list:
+    """Full-name variants only (no surname-only) for index URL matching."""
     names = []
     seen = set()
 
@@ -402,20 +443,41 @@ def _index_lookup_names(name_ja, name_en) -> list:
             seen.add(n)
             names.append(n)
 
-    for v in extract_kanji_variants(name_ja):
-        add(v)
+    spaced = strip_furigana(name_ja)
+    spaced = re.sub(r"[\u3000\s]+", " ", spaced).strip()
+    if spaced:
+        add(spaced)
+        add(re.sub(r"\s+", "", spaced))
     add(strip_furigana(name_ja))
     add(name_ja)
-    add(strip_furigana(name_en))
+    en = strip_furigana(name_en or "")
+    en = re.sub(r"[\u3000\s]+", " ", en).strip()
+    if en:
+        add(en)
+        add(re.sub(r"\s+", "", en))
     add(name_en)
     return names
 
 
-def resolve_profile_url(index_data, name_ja, name_en, render_browser=None):
+def resolve_profile_url(index_data, name_ja, name_en, render_browser=None, member_id=None):
     """
     Resolve a single shared profile URL for both ja/en scraping.
-    Order: index -> kanji variants search -> English search.
+    Order: override / member-id -> index (exact) -> kanji variants search -> English search.
     """
+    override = RESEARCHMAP_URL_OVERRIDES.get(normalize_name(name_ja))
+    if not override and name_en:
+        override = RESEARCHMAP_URL_OVERRIDES.get(normalize_name(name_en))
+    if override:
+        url = profile_base_url(override)
+        print(f"  Override matched: {url}")
+        return url
+
+    mid = (member_id or "").strip().upper()
+    if mid and mid in RESEARCHMAP_MEMBER_ID_URLS:
+        url = profile_base_url(RESEARCHMAP_MEMBER_ID_URLS[mid])
+        print(f"  Member-ID matched ({mid}): {url}")
+        return url
+
     # 1) Index match (kanji variants + EN)
     matched = match_index_url(index_data, _index_lookup_names(name_ja, name_en))
     if matched:
@@ -978,7 +1040,7 @@ def scrape_profile(profile_base, render_browser=None, lang="ja", max_papers=5,
 def run_fetch(index_file, json_ja="data/raw/ridb/ridb_yugo_faculty_ja.json", json_en="data/raw/ridb/ridb_yugo_faculty_en.json",
               out_ja=None, out_en=None,
               start_idx=0, limit=None, delay=REQUEST_DELAY, max_papers=5,
-              single_source=False):
+              single_source=False, only_names=None, merge=False):
 
     index_path = resolve_path(index_file)
     with open(index_path, "r", encoding="utf-8") as f:
@@ -1017,6 +1079,15 @@ def run_fetch(index_file, json_ja="data/raw/ridb/ridb_yugo_faculty_ja.json", jso
 
     targets = build_targets_from_rows(index_data, rows_ja, None if single_source else rows_en)
 
+    only_norms = {normalize_name(n) for n in (only_names or []) if n}
+    if only_norms:
+        targets = [
+            t for t in targets
+            if normalize_name(t["name_ja"]) in only_norms
+            or normalize_name(t["name_en"]) in only_norms
+        ]
+        print(f"Filtered by --only-names: {len(targets)} target(s)")
+
     if limit:
         targets = targets[start_idx:start_idx + limit]
     else:
@@ -1039,6 +1110,13 @@ def run_fetch(index_file, json_ja="data/raw/ridb/ridb_yugo_faculty_ja.json", jso
                 p_url = resolve_profile_url(
                     index_data, name_ja, name_en, render_browser=browser
                 )
+            else:
+                # Re-resolve via override / exact index so stale wrong URLs are fixed
+                resolved = resolve_profile_url(
+                    index_data, name_ja, name_en, render_browser=None
+                )
+                if resolved:
+                    p_url = resolved
             # One shared bare URL for both JA and EN scraping
             p_url = profile_base_url(p_url) if p_url else None
             t["url"] = p_url
@@ -1082,6 +1160,25 @@ def run_fetch(index_file, json_ja="data/raw/ridb/ridb_yugo_faculty_ja.json", jso
     out_ja.parent.mkdir(parents=True, exist_ok=True)
     out_en.parent.mkdir(parents=True, exist_ok=True)
 
+    if merge and out_ja.exists() and out_en.exists():
+        existing_ja = load_json_rows(str(out_ja)) or []
+        existing_en = load_json_rows(str(out_en)) or []
+
+        def _merge_by_name(existing, updates):
+            by_norm = {normalize_name(extract_row_name(r) or remp_display_fallback(r)): i
+                       for i, r in enumerate(existing)}
+            for upd in updates:
+                key = normalize_name(extract_row_name(upd) or remp_display_fallback(upd))
+                if key and key in by_norm:
+                    existing[by_norm[key]] = upd
+                else:
+                    existing.append(upd)
+            return existing
+
+        results_ja = _merge_by_name(existing_ja, results_ja)
+        results_en = _merge_by_name(existing_en, results_en)
+        print(f"Merged into existing outputs ({len(results_ja)} JA / {len(results_en)} EN rows)")
+
     with open(out_ja, "w", encoding="utf-8") as f:
         json.dump(results_ja, f, ensure_ascii=False, indent=2)
     print(f"\nSaved JA data to {out_ja}")
@@ -1091,9 +1188,20 @@ def run_fetch(index_file, json_ja="data/raw/ridb/ridb_yugo_faculty_ja.json", jso
     print(f"Saved EN data to {out_en}")
 
 
+def remp_display_fallback(row: dict) -> str:
+    if not isinstance(row, dict):
+        return ""
+    for key, value in row.items():
+        if key in {"researchmap_url", "avatar_url", "found", "papers"}:
+            continue
+        if isinstance(value, str) and value.strip() and not value.startswith("http"):
+            return value
+    return ""
+
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(
-        description="Step 1: fetch faculty profiles and top first-author paper URL meta from researchmap."
+        description="03: fetch faculty profiles and top first-author paper URL meta from researchmap."
     )
     parser.add_argument("--index", default=str(RESEARCHMAP_DATA_DIR / "kanazawa_researchers_index.json"), help="Index file path")
     parser.add_argument("--json-ja", default="data/raw/ridb/ridb_yugo_faculty_ja.json", help="Input Japanese RIDB JSON")
@@ -1106,6 +1214,17 @@ if __name__ == "__main__":
     parser.add_argument("--max-papers", type=int, default=5, help="Max first-author papers per researcher (by citations)")
     parser.add_argument("--single-source", action="store_true", help="Use only the Japanese RIDB file and reuse it for EN output names")
     parser.add_argument("--render", action="store_true", help="Deprecated: Playwright is always used")
+    parser.add_argument(
+        "--only-names",
+        nargs="+",
+        default=None,
+        help="Scrape only these faculty names (e.g. --only-names \"堀 優太\")",
+    )
+    parser.add_argument(
+        "--merge",
+        action="store_true",
+        help="Merge scraped rows into existing out-ja/out-en by name (for targeted fixes)",
+    )
     args = parser.parse_args()
 
     lim = args.limit if args.limit and args.limit > 0 else None
@@ -1120,4 +1239,6 @@ if __name__ == "__main__":
         delay=args.delay,
         max_papers=args.max_papers,
         single_source=args.single_source,
+        only_names=args.only_names,
+        merge=args.merge,
     )

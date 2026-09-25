@@ -1,0 +1,5379 @@
+{
+  "course_01011": {
+    "instructor_id": "prof_3055",
+    "instructor_ids": [
+      "prof_3055"
+    ],
+    "name": "生命倫理学[Bio-Ethics]",
+    "position": [
+      2.198136,
+      0.950895,
+      -4.561453
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_01214": {
+    "instructor_id": "prof_2777",
+    "instructor_ids": [
+      "prof_2777"
+    ],
+    "name": "予防医学概論[Preventive Medical science]",
+    "position": [
+      2.212535,
+      1.196187,
+      -1.679447
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_01602.001": {
+    "instructor_id": "prof_2232",
+    "instructor_ids": [
+      "prof_2232"
+    ],
+    "name": "知識集約型社会とデータサイエンス [Data Science in Society 5.0 ]",
+    "position": [
+      -2.603028,
+      -1.527465,
+      0.376447
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_01602.004": {
+    "instructor_id": "prof_2232",
+    "instructor_ids": [
+      "prof_2232"
+    ],
+    "name": "知識集約型社会とデータサイエンス（英語）[Data Science in Society 5.0 ]",
+    "position": [
+      -2.531002,
+      -1.563946,
+      0.393744
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_01603": {
+    "instructor_id": "prof_2777",
+    "instructor_ids": [
+      "prof_2777"
+    ],
+    "name": "次世代の先端科学技術 [Advanced Science and Technology in the Next Generation]",
+    "position": [
+      1.121668,
+      -1.624937,
+      -2.463126
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_01605.001": {
+    "instructor_id": "prof_2230",
+    "instructor_ids": [
+      "prof_2230"
+    ],
+    "name": "イノベーション方法論[Innovation Methodology]",
+    "position": [
+      2.178913,
+      -0.560259,
+      2.915769
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_01608": {
+    "instructor_id": "prof_2777",
+    "instructor_ids": [
+      "prof_2777"
+    ],
+    "name": "ヘルスケア・イノベーション[Innovation in Healthcare]",
+    "position": [
+      2.530165,
+      1.591266,
+      -1.442353
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_01611.832l": {
+    "instructor_id": "prof_4662",
+    "instructor_ids": [
+      "prof_4662"
+    ],
+    "name": "異分野研究探査 Ｉ（放射_林裕晃研究室）[Laboratory Rotation Ｉ（放射_Laboratory of HAYASHI HIROAKI）]",
+    "position": [
+      3.289512,
+      5.476196,
+      0.683144
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_01611.9116": {
+    "instructor_id": "prof_2385",
+    "instructor_ids": [
+      "prof_2385"
+    ],
+    "name": "異分野研究探査Ⅰ（融合_飯山）[Laboratory Rotation I（融合_Iiyama）]",
+    "position": [
+      2.771008,
+      -4.016161,
+      -0.252732
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_01611.9129": {
+    "instructor_id": "prof_4454",
+    "instructor_ids": [
+      "prof_4454"
+    ],
+    "name": "異分野研究探査Ⅰ（融合_米陀）[Laboratory Rotation I（融合_Yoneda）]",
+    "position": [
+      2.740378,
+      -3.975532,
+      -0.218227
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_01611.9303": {
+    "instructor_id": "prof_4721",
+    "instructor_ids": [
+      "prof_4721"
+    ],
+    "name": "異分野研究探査Ⅰ（総合知_小田桐）[Laboratory Rotation I （総合知_Odagiri）]",
+    "position": [
+      2.752229,
+      -3.98454,
+      -0.209697
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_01611.9338": {
+    "instructor_id": "prof_11616",
+    "instructor_ids": [
+      "prof_11616"
+    ],
+    "name": "異分野研究探査Ⅰ（総合知_相澤）[Laboratory Rotation I（総合知_Aizawa）]",
+    "position": [
+      2.859845,
+      -4.103862,
+      -0.134536
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_01902": {
+    "instructor_id": "prof_3055",
+    "instructor_ids": [
+      "prof_3055"
+    ],
+    "name": "環境と健康[Environment and Health]",
+    "position": [
+      -2.523146,
+      -0.943075,
+      0.244015
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_02101-1": {
+    "instructor_id": "prof_4662",
+    "instructor_ids": [
+      "prof_4662"
+    ],
+    "name": "機能画像解析学特講（一般学生）[Analytics for Functional Imaging: Lecture]",
+    "position": [
+      3.313951,
+      7.794551,
+      0.137214
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_02101-2": {
+    "instructor_id": "prof_4662",
+    "instructor_ids": [
+      "prof_4662"
+    ],
+    "name": "機能画像解析学特講（14条特例適用学生）[Analytics for Functional Imaging: Lecture]",
+    "position": [
+      3.374999,
+      7.858011,
+      0.083107
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_02102-1": {
+    "instructor_id": "prof_4662",
+    "instructor_ids": [
+      "prof_4662"
+    ],
+    "name": "機能画像解析学特講演習（一般学生）[Analytics for Functional Imaging: Seminar]",
+    "position": [
+      3.292319,
+      7.786163,
+      0.158233
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_02102-2": {
+    "instructor_id": "prof_4662",
+    "instructor_ids": [
+      "prof_4662"
+    ],
+    "name": "機能画像解析学特講演習（14条特例適用学生）[Analytics for Functional Imaging: Seminar]",
+    "position": [
+      3.335763,
+      7.837716,
+      0.122112
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_02103a-1": {
+    "instructor_id": "prof_4662",
+    "instructor_ids": [
+      "prof_4662"
+    ],
+    "name": "機能画像解析学特別研究（一般学生）[Analytics for Functional Imaging: Research]",
+    "position": [
+      3.433008,
+      7.955242,
+      0.033849
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_02103a-2": {
+    "instructor_id": "prof_4662",
+    "instructor_ids": [
+      "prof_4662"
+    ],
+    "name": "機能画像解析学特別研究（14条特例適用学生）[Analytics for Functional Imaging: Research]",
+    "position": [
+      3.511986,
+      8.033293,
+      -0.042567
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_02103a.10": {
+    "instructor_id": "prof_4662",
+    "instructor_ids": [
+      "prof_4662"
+    ],
+    "name": "機能画像解析学特別研究（10月入学者）[Analytics for Functional Imaging: Research]",
+    "position": [
+      3.516073,
+      8.04908,
+      -0.030986
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_02915.4520": {
+    "instructor_id": "prof_11583",
+    "instructor_ids": [
+      "prof_11583"
+    ],
+    "name": "異分野研究探査Ⅰ（地創_林直樹研究室）[Laboratory Rotation I（地創_Laboratory of HAYASHI Naoki ）]",
+    "position": [
+      2.793705,
+      -4.038318,
+      -0.186767
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_03301-1": {
+    "instructor_id": "prof_4662",
+    "instructor_ids": [
+      "prof_4662"
+    ],
+    "name": "医用放射線科学研究方法論（一般学生）[Research Design in Medical Radiation Science: Lec.]",
+    "position": [
+      2.714041,
+      6.478224,
+      0.376258
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_03301-2": {
+    "instructor_id": "prof_4662",
+    "instructor_ids": [
+      "prof_4662"
+    ],
+    "name": "医用放射線科学研究方法論（14条特例適用学生）[Research Design in Medical Radiation Science: Lec.]",
+    "position": [
+      2.725869,
+      6.499017,
+      0.374598
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_03303-1": {
+    "instructor_id": "prof_4662",
+    "instructor_ids": [
+      "prof_4662"
+    ],
+    "name": "医学物理学特論（一般学生）[Medical Physics:Lecture]",
+    "position": [
+      -19.724486,
+      7.153422,
+      -5.308031
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_03303-2": {
+    "instructor_id": "prof_4662",
+    "instructor_ids": [
+      "prof_4662"
+    ],
+    "name": "医学物理学特論（14条特例適用学生）[Medical Physics:Lecture]",
+    "position": [
+      -19.71715,
+      7.14624,
+      -5.300831
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_03303-3": {
+    "instructor_id": "prof_4662",
+    "instructor_ids": [
+      "prof_4662"
+    ],
+    "name": "医学物理学特論（後期開講）[Medical Physics:Lecture]",
+    "position": [
+      -19.688888,
+      7.118226,
+      -5.272651
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_03303a-1": {
+    "instructor_id": "prof_4662",
+    "instructor_ids": [
+      "prof_4662"
+    ],
+    "name": "医学物理学特論（一般学生）[Medical Physics:Lecture]",
+    "position": [
+      -19.682179,
+      7.12225,
+      -5.274411
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_03303a-2": {
+    "instructor_id": "prof_4662",
+    "instructor_ids": [
+      "prof_4662"
+    ],
+    "name": "医学物理学特論（14条特例適用学生）[Medical Physics:Lecture]",
+    "position": [
+      -19.688472,
+      7.118282,
+      -5.272591
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_03303a-3": {
+    "instructor_id": "prof_4662",
+    "instructor_ids": [
+      "prof_4662"
+    ],
+    "name": "医学物理学特論（後期登録）[Medical Physics:Lecture]",
+    "position": [
+      -19.597882,
+      7.027313,
+      -5.181671
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_03311-1": {
+    "instructor_id": "prof_4662",
+    "instructor_ids": [
+      "prof_4662"
+    ],
+    "name": "放射線画像構築学特論（一般学生）[Radiological Imaging Technology: Lecture]",
+    "position": [
+      2.783521,
+      6.524065,
+      0.37075
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_03311-2": {
+    "instructor_id": "prof_4662",
+    "instructor_ids": [
+      "prof_4662"
+    ],
+    "name": "放射線画像構築学特論（14条特例適用学生）[Radiological Imaging Technology: Lecture]",
+    "position": [
+      2.809722,
+      6.608199,
+      0.331207
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_03312-1": {
+    "instructor_id": "prof_4662",
+    "instructor_ids": [
+      "prof_4662"
+    ],
+    "name": "放射線画像構築学演習（一般学生）[Radiological Imaging Technology: Seminar]",
+    "position": [
+      2.71755,
+      6.487227,
+      0.40395
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_03312-2": {
+    "instructor_id": "prof_4662",
+    "instructor_ids": [
+      "prof_4662"
+    ],
+    "name": "放射線画像構築学演習（14条特例適用学生）[Radiological Imaging Technology: Seminar]",
+    "position": [
+      2.847065,
+      6.584123,
+      0.456421
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_03331-1a": {
+    "instructor_id": "prof_4662",
+    "instructor_ids": [
+      "prof_4662"
+    ],
+    "name": "機能画像解析学課題研究（一般学生）[Processing & Anal. for Biofunctional Imaging: Res.]",
+    "position": [
+      3.600845,
+      8.124863,
+      -0.124877
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_03331-1b": {
+    "instructor_id": "prof_4662",
+    "instructor_ids": [
+      "prof_4662"
+    ],
+    "name": "機能画像解析学課題研究（令和４年度以前入学者　一般学生）[Processing & Anal. for Biofunctional Imaging: Res.]",
+    "position": [
+      3.574443,
+      8.106203,
+      -0.094884
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_03331-2a": {
+    "instructor_id": "prof_4662",
+    "instructor_ids": [
+      "prof_4662"
+    ],
+    "name": "機能画像解析学課題研究（14条特例適用学生）[Processing & Anal. for Biofunctional Imaging: Res.]",
+    "position": [
+      3.637623,
+      8.165636,
+      -0.157678
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_03331-2b": {
+    "instructor_id": "prof_4662",
+    "instructor_ids": [
+      "prof_4662"
+    ],
+    "name": "機能画像解析学課題研究（令和４年度以前入学者　14条特例適用学生）[Processing & Anal. for Biofunctional Imaging: Res.]",
+    "position": [
+      3.606166,
+      8.139362,
+      -0.125172
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_03615.832y": {
+    "instructor_id": "prof_4662",
+    "instructor_ids": [
+      "prof_4662"
+    ],
+    "name": "異分野研究探査 Ｉ（放射_林裕晃研究室）（保健学専攻14条特例適用学生）[Laboratory Rotation Ｉ]",
+    "position": [
+      3.299762,
+      5.43561,
+      0.658493
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_03616.832l": {
+    "instructor_id": "prof_4662",
+    "instructor_ids": [
+      "prof_4662"
+    ],
+    "name": "異分野研究探査 Ⅱ（放射_林裕晃研究室）（保健学専攻一般学生）[Laboratory Rotation Ⅱ]",
+    "position": [
+      3.238071,
+      5.491391,
+      0.614344
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_03616.832y": {
+    "instructor_id": "prof_4662",
+    "instructor_ids": [
+      "prof_4662"
+    ],
+    "name": "異分野研究探査 Ⅱ（放射_林裕晃研究室）（保健学専攻14条特例適用学生）[Laboratory Rotation Ⅱ]",
+    "position": [
+      3.188808,
+      5.392277,
+      0.5744
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_05111.1": {
+    "instructor_id": "prof_2777",
+    "instructor_ids": [
+      "prof_2777"
+    ],
+    "name": "レギュラトリー・サイエンス（卓越大学院プログラム）[Regulatory Science(WISE Program)]",
+    "position": [
+      6.707251,
+      -27.999857,
+      10.832488
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_05121": {
+    "instructor_id": "prof_2230",
+    "instructor_ids": [
+      "prof_2230"
+    ],
+    "name": "イノベーション方法論Ａ（卓越大学院プログラム）[Innovation Methodology A(WISE Program)]",
+    "position": [
+      2.017865,
+      -0.649243,
+      2.995618
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_05124": {
+    "instructor_id": "prof_2230",
+    "instructor_ids": [
+      "prof_2230"
+    ],
+    "name": "イノベーション方法論（卓越大学院プログラム）[Innovation Methodology(WISE Program)]",
+    "position": [
+      1.965911,
+      -0.734231,
+      2.934833
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_06104.1": {
+    "instructor_id": "prof_2777",
+    "instructor_ids": [
+      "prof_2777"
+    ],
+    "name": "レギュラトリーサイエンスセミナー[Seminar on Regulatory Science]",
+    "position": [
+      6.707253,
+      -27.999871,
+      10.832491
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_10008.2": {
+    "instructor_id": "prof_2777",
+    "instructor_ids": [
+      "prof_2777"
+    ],
+    "name": "レギュラトリーサイエンス（卓越大学院プログラム）[Regulatory Science(WISE Program)]",
+    "position": [
+      6.707273,
+      -27.999949,
+      10.83252
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_10027": {
+    "instructor_id": "prof_2230",
+    "instructor_ids": [
+      "prof_2230"
+    ],
+    "name": "先進ナノ診断開発論(卓越大学院プログラム)[Lecture on Development of Advanced Nano-Diagnostic Method]",
+    "position": [
+      1.928781,
+      -0.740123,
+      2.907207
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_10031": {
+    "instructor_id": "prof_2777",
+    "instructor_ids": [
+      "prof_2777"
+    ],
+    "name": "レギュラトリー・サイエンス(卓越大学院プログラム)[Regulatory Science]",
+    "position": [
+      6.707257,
+      -27.999906,
+      10.832509
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_11001.1": {
+    "instructor_id": "prof_11380",
+    "instructor_ids": [
+      "prof_11380",
+      "prof_4381"
+    ],
+    "name": "アカデミックスキル[Academic Skills]",
+    "position": [
+      1.039211,
+      -2.865049,
+      0.251801
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_11002.1": {
+    "instructor_id": "prof_11380",
+    "instructor_ids": [
+      "prof_11380",
+      "prof_4381"
+    ],
+    "name": "プレゼン・ディベート論[Presentation and Debate]",
+    "position": [
+      0.934566,
+      -2.855812,
+      0.102022
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_11003": {
+    "instructor_id": "prof_4678",
+    "instructor_ids": [
+      "prof_4678"
+    ],
+    "name": "イノベーション基礎[Introduction to Innovation]",
+    "position": [
+      1.926167,
+      -0.796049,
+      2.95543
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_11004": {
+    "instructor_id": "prof_2232",
+    "instructor_ids": [
+      "prof_2232"
+    ],
+    "name": "数理・データサイエンス基礎及び演習[Introduction and Practicum for Mathematical Data Science]",
+    "position": [
+      -0.736396,
+      1.505333,
+      2.804667
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_11005": {
+    "instructor_id": "prof_2230",
+    "instructor_ids": [
+      "prof_2230",
+      "prof_4841"
+    ],
+    "name": "デザイン思考[Design Thinking]",
+    "position": [
+      -1.491688,
+      -2.289461,
+      1.161461
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_11012.4520": {
+    "instructor_id": "prof_11583",
+    "instructor_ids": [
+      "prof_11583"
+    ],
+    "name": "異分野研究探査Ⅱ（地創_林直樹研究室）[Laboratory Rotation II（地創_Laboratory of HAYASHI Naoki ）]",
+    "position": [
+      2.681342,
+      -3.926221,
+      -0.308694
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_11018": {
+    "instructor_id": "prof_2230",
+    "instructor_ids": [
+      "prof_2230"
+    ],
+    "name": "工学とトポロジーＢ[Engineering and Topology B]",
+    "position": [
+      2.053694,
+      -0.617559,
+      2.84665
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_11018b": {
+    "instructor_id": "prof_2230",
+    "instructor_ids": [
+      "prof_2230"
+    ],
+    "name": "イノベーション方法論[Innovation Methodology(WISE Program)]",
+    "position": [
+      1.902585,
+      -0.696332,
+      2.868351
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_11101.1": {
+    "instructor_id": "prof_4386",
+    "instructor_ids": [
+      "prof_4386"
+    ],
+    "name": "学域GS言語科目Ⅰ/海外実践英語[Practical International English]",
+    "position": [
+      4.050996,
+      -1.875808,
+      14.620819
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_11102.1": {
+    "instructor_id": "prof_4386",
+    "instructor_ids": [
+      "prof_4386"
+    ],
+    "name": "学域GS言語科目Ⅱ/時事・学術英語[Current Issues and Academic English]",
+    "position": [
+      4.066247,
+      -1.838904,
+      14.614996
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_11102.2": {
+    "instructor_id": "prof_4386",
+    "instructor_ids": [
+      "prof_4386",
+      "prof_4656"
+    ],
+    "name": "学域GS言語科目Ⅱ/時事・学術英語[GS English Language Courses for Undergraduates Ⅱ/ Current Issues and Academic English ]",
+    "position": [
+      4.048927,
+      -1.83898,
+      14.597612
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_12002.1": {
+    "instructor_id": "prof_11612",
+    "instructor_ids": [
+      "prof_11612",
+      "prof_2670"
+    ],
+    "name": "プレゼン・ディベート論[Presentation and Debate]",
+    "position": [
+      0.908477,
+      -2.838205,
+      0.143856
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_12033": {
+    "instructor_id": "prof_2385",
+    "instructor_ids": [
+      "prof_2385"
+    ],
+    "name": "光工学Ａ[Optical Engineering A]",
+    "position": [
+      -4.475451,
+      5.156713,
+      0.343821
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_12034": {
+    "instructor_id": "prof_2385",
+    "instructor_ids": [
+      "prof_2385"
+    ],
+    "name": "光工学Ｂ[Optical Engineering B]",
+    "position": [
+      -4.453752,
+      5.148549,
+      0.363073
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_12109": {
+    "instructor_id": "prof_4454",
+    "instructor_ids": [
+      "prof_4454"
+    ],
+    "name": "コンピュータビジョン特論Ａ[Computer Vision A]",
+    "position": [
+      0.086277,
+      4.026307,
+      3.497401
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_12110": {
+    "instructor_id": "prof_4454",
+    "instructor_ids": [
+      "prof_4454"
+    ],
+    "name": "コンピュータビジョン特論Ｂ[Computer Vision B]",
+    "position": [
+      0.112334,
+      4.004531,
+      3.482956
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_12403": {
+    "instructor_id": "prof_2195",
+    "instructor_ids": [
+      "prof_2195"
+    ],
+    "name": "ロバスト制御[Robust Control]",
+    "position": [
+      -1.583531,
+      2.052008,
+      -1.423788
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_13001": {
+    "instructor_id": "prof_4112",
+    "instructor_ids": [
+      "prof_4112"
+    ],
+    "name": "アカデミックスキル[Academic Skils]",
+    "position": [
+      1.127628,
+      -2.690595,
+      0.33535
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_13002": {
+    "instructor_id": "prof_4662",
+    "instructor_ids": [
+      "prof_4662"
+    ],
+    "name": "プレゼン・ディベート論[Presentation and Debate]",
+    "position": [
+      9.002785,
+      -8.474121,
+      5.105125
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_13201": {
+    "instructor_id": "prof_2230",
+    "instructor_ids": [
+      "prof_2230"
+    ],
+    "name": "テクノロジトレンド工学Ａ[Technology Trend Engineering A]",
+    "position": [
+      -1.328811,
+      1.325357,
+      -2.362134
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_13202": {
+    "instructor_id": "prof_2230",
+    "instructor_ids": [
+      "prof_2230"
+    ],
+    "name": "テクノロジトレンド工学Ｂ[Technology Trend Engineering B]",
+    "position": [
+      -1.251005,
+      1.29636,
+      -2.399145
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_13403": {
+    "instructor_id": "prof_2232",
+    "instructor_ids": [
+      "prof_2232"
+    ],
+    "name": "データマイニング論Ａ[Data Mining A]",
+    "position": [
+      -5.919757,
+      12.13187,
+      -14.594798
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_13404": {
+    "instructor_id": "prof_2232",
+    "instructor_ids": [
+      "prof_2232"
+    ],
+    "name": "データマイニング論Ｂ[Data Mining B]",
+    "position": [
+      -5.926574,
+      12.138835,
+      -14.601728
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_14030": {
+    "instructor_id": "prof_4381",
+    "instructor_ids": [
+      "prof_4381"
+    ],
+    "name": "水環境保全工学Ａ[Water Pollution Control Engineering A]",
+    "position": [
+      -1.343703,
+      -0.050034,
+      0.06952
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_14119": {
+    "instructor_id": "prof_4381",
+    "instructor_ids": [
+      "prof_4381"
+    ],
+    "name": "水環境保全工学Ｂ[Water Pollution Control Engineering B]",
+    "position": [
+      -1.31149,
+      -0.105837,
+      0.071734
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_15126": {
+    "instructor_id": "prof_2076",
+    "instructor_ids": [
+      "prof_2076"
+    ],
+    "name": "生命情報と先端バイオＡ[Bioinformatics and Recent Advances in Biology A]",
+    "position": [
+      1.198559,
+      4.114853,
+      3.300643
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_15127": {
+    "instructor_id": "prof_2076",
+    "instructor_ids": [
+      "prof_2076"
+    ],
+    "name": "生命情報と先端バイオＢ[Bioinformatics and Recent Advances in Biology B]",
+    "position": [
+      1.324288,
+      4.250299,
+      3.267539
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_15310": {
+    "instructor_id": "prof_2232",
+    "instructor_ids": [
+      "prof_2232"
+    ],
+    "name": "データマイニング論a[Data Mining a]",
+    "position": [
+      -5.862127,
+      12.074222,
+      -14.536506
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_15311": {
+    "instructor_id": "prof_2232",
+    "instructor_ids": [
+      "prof_2232"
+    ],
+    "name": "データマイニング論b[Data Mining b]",
+    "position": [
+      -5.95257,
+      12.164829,
+      -14.627607
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_15514": {
+    "instructor_id": "prof_2385",
+    "instructor_ids": [
+      "prof_2385"
+    ],
+    "name": "光波工学a[Lightwave Engineering a]",
+    "position": [
+      -4.490952,
+      5.180819,
+      0.328499
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_15515": {
+    "instructor_id": "prof_2385",
+    "instructor_ids": [
+      "prof_2385"
+    ],
+    "name": "光波工学b[Lightwave Engineering b]",
+    "position": [
+      -4.423736,
+      5.128771,
+      0.413289
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_15526": {
+    "instructor_id": "prof_2385",
+    "instructor_ids": [
+      "prof_2385"
+    ],
+    "name": "光工学ａ[Optical Engineering a]",
+    "position": [
+      -4.511449,
+      5.204726,
+      0.315199
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_15527": {
+    "instructor_id": "prof_2385",
+    "instructor_ids": [
+      "prof_2385"
+    ],
+    "name": "光工学ｂ[Optical Engineering b]",
+    "position": [
+      -4.451456,
+      5.171229,
+      0.398022
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_15627": {
+    "instructor_id": "prof_4454",
+    "instructor_ids": [
+      "prof_4454"
+    ],
+    "name": "コンピュータビジョン特論A[Computer Vision A]",
+    "position": [
+      0.068462,
+      4.04715,
+      3.513
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_15628": {
+    "instructor_id": "prof_4454",
+    "instructor_ids": [
+      "prof_4454"
+    ],
+    "name": "コンピュータビジョン特論B[Computer Vision B]",
+    "position": [
+      0.170894,
+      3.940012,
+      3.418813
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_17303.1": {
+    "instructor_id": "prof_2232",
+    "instructor_ids": [
+      "prof_2232"
+    ],
+    "name": "データマイニング特論[Advanced Data Mining]",
+    "position": [
+      -5.820605,
+      12.031132,
+      -14.490623
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_17313": {
+    "instructor_id": "prof_2076",
+    "instructor_ids": [
+      "prof_2076"
+    ],
+    "name": "生命情報特論[Advanced Bioinformatics]",
+    "position": [
+      1.198534,
+      4.121005,
+      3.290387
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_17603.1": {
+    "instructor_id": "prof_2385",
+    "instructor_ids": [
+      "prof_2385"
+    ],
+    "name": "計測システム論[Measurement systems]",
+    "position": [
+      -1.342393,
+      2.349577,
+      1.135703
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_17614.1": {
+    "instructor_id": "prof_2385",
+    "instructor_ids": [
+      "prof_2385"
+    ],
+    "name": "光センシング論[Optical Sensing]",
+    "position": [
+      -4.128625,
+      4.839887,
+      0.52311
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_17615": {
+    "instructor_id": "prof_4454",
+    "instructor_ids": [
+      "prof_4454"
+    ],
+    "name": "現代脳計算論[Modern Neural Computation]",
+    "position": [
+      0.169645,
+      3.975336,
+      3.439594
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_17620.1": {
+    "instructor_id": "prof_2385",
+    "instructor_ids": [
+      "prof_2385"
+    ],
+    "name": "光センシング論[Optical Sensing]",
+    "position": [
+      -4.047826,
+      4.770377,
+      0.588319
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_17857": {
+    "instructor_id": "prof_4381",
+    "instructor_ids": [
+      "prof_4381"
+    ],
+    "name": "環境・エネルギー工学総論Ａ[Introduction to Environmental and Energy Engineering A]",
+    "position": [
+      -1.355656,
+      -0.391497,
+      0.195465
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_17862": {
+    "instructor_id": "prof_2230",
+    "instructor_ids": [
+      "prof_2230"
+    ],
+    "name": "イノベーション方法論Ａ[Innovation Methodology A]",
+    "position": [
+      1.943171,
+      -0.750673,
+      2.979528
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_17883.4522": {
+    "instructor_id": "prof_4656",
+    "instructor_ids": [
+      "prof_4656"
+    ],
+    "name": "異分野研究探査Ⅰ（地創_山田菜緒子研究室）[Laboratory Rotation I（地創_Laboratory of YAMADA Naoko ）]",
+    "position": [
+      4.037435,
+      -1.880856,
+      14.592166
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_19025": {
+    "instructor_id": "prof_2230",
+    "instructor_ids": [
+      "prof_2230"
+    ],
+    "name": "イノベーション方法論A（卓越大学院プログラム）[Innovation Methodology A(WISE Program)]",
+    "position": [
+      1.981354,
+      -0.719587,
+      2.98723
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_1B103.1": {
+    "instructor_id": "prof_4454",
+    "instructor_ids": [
+      "prof_4454"
+    ],
+    "name": "現代脳計算論[Modern Neural Computation]",
+    "position": [
+      0.106202,
+      4.041983,
+      3.497139
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_1B112.1": {
+    "instructor_id": "prof_2195",
+    "instructor_ids": [
+      "prof_2195"
+    ],
+    "name": "システム制御数理[Mathematical Systems Control Theory]",
+    "position": [
+      -1.090538,
+      1.787842,
+      -1.676843
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_1C109.1": {
+    "instructor_id": "prof_2230",
+    "instructor_ids": [
+      "prof_2230"
+    ],
+    "name": "インタフェースデバイス特論[Interface Device Technologies]",
+    "position": [
+      0.342079,
+      2.28083,
+      1.042189
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_21004": {
+    "instructor_id": "prof_2230",
+    "instructor_ids": [
+      "prof_2230",
+      "prof_4841"
+    ],
+    "name": "デザイン思考演習[Design Thinking Seminar]",
+    "position": [
+      -1.259047,
+      -2.508831,
+      0.950145
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_21102": {
+    "instructor_id": "prof_2659",
+    "instructor_ids": [
+      "prof_2659",
+      "prof_4381"
+    ],
+    "name": "現代社会を知る[Contemporary Society]",
+    "position": [
+      -1.896505,
+      -2.123567,
+      0.944716
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_21104": {
+    "instructor_id": "prof_2232",
+    "instructor_ids": [
+      "prof_2232"
+    ],
+    "name": "AIと未来社会[AI and Future Society]",
+    "position": [
+      -0.091629,
+      1.367904,
+      2.46491
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_21106": {
+    "instructor_id": "prof_11658",
+    "instructor_ids": [
+      "prof_11658"
+    ],
+    "name": "超スマートシティと Society 5.0[Super Smart City and Society 5.0]",
+    "position": [
+      -2.336693,
+      -1.278675,
+      1.500406
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_21107": {
+    "instructor_id": "prof_4721",
+    "instructor_ids": [
+      "prof_4721"
+    ],
+    "name": "倫理学[Ethics]",
+    "position": [
+      1.3679,
+      0.036741,
+      -3.080034
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_21108": {
+    "instructor_id": "prof_2670",
+    "instructor_ids": [
+      "prof_2670",
+      "prof_2232"
+    ],
+    "name": "シェアリングエコノミー[Sharing Economy]",
+    "position": [
+      -4.121882,
+      -1.175467,
+      0.999178
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_21109": {
+    "instructor_id": "prof_2659",
+    "instructor_ids": [
+      "prof_2659"
+    ],
+    "name": "消費生活論[Consumer Life Theory]",
+    "position": [
+      -1.072311,
+      -2.182301,
+      0.575781
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_21201": {
+    "instructor_id": "prof_4381",
+    "instructor_ids": [
+      "prof_4381",
+      "prof_3055"
+    ],
+    "name": "ダイバーシティ促進[Diversity Promotion]",
+    "position": [
+      -2.269714,
+      -4.012471,
+      1.353654
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_21202": {
+    "instructor_id": "prof_4678",
+    "instructor_ids": [
+      "prof_4678"
+    ],
+    "name": "マーケティング基礎[Introduction to Marketing]",
+    "position": [
+      1.357226,
+      -1.174435,
+      2.692059
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_21205": {
+    "instructor_id": "prof_4841",
+    "instructor_ids": [
+      "prof_4841"
+    ],
+    "name": "異文化理解とキャリア開発[Cross-Cultural Understanding and Career Development]",
+    "position": [
+      1.002086,
+      -2.049552,
+      0.036289
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_21207.1": {
+    "instructor_id": "prof_4732",
+    "instructor_ids": [
+      "prof_4732"
+    ],
+    "name": "SDGs基礎[Introduction to SDGs]",
+    "position": [
+      -2.066212,
+      -1.109979,
+      -0.421694
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_21208": {
+    "instructor_id": "prof_4841",
+    "instructor_ids": [
+      "prof_4841",
+      "prof_3738"
+    ],
+    "name": "グローバリゼーション[Globalization]",
+    "position": [
+      -3.445133,
+      -1.132194,
+      0.572765
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_21211": {
+    "instructor_id": "prof_4841",
+    "instructor_ids": [
+      "prof_4841",
+      "prof_4732"
+    ],
+    "name": "IDGと社会変革人材[Cultivating Changemakers for Social Transformation through Inner Development Goals]",
+    "position": [
+      -2.048575,
+      -1.126119,
+      -0.501356
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_21301": {
+    "instructor_id": "prof_2076",
+    "instructor_ids": [
+      "prof_2076",
+      "prof_4381",
+      "prof_2385"
+    ],
+    "name": "テクノロジー基礎[Introduction to Technology]",
+    "position": [
+      0.204244,
+      2.164721,
+      2.531462
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_21302": {
+    "instructor_id": "prof_2232",
+    "instructor_ids": [
+      "prof_2232"
+    ],
+    "name": "人工知能[Artificial Intelligence]",
+    "position": [
+      0.143934,
+      1.96758,
+      2.747225
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_21303": {
+    "instructor_id": "prof_4721",
+    "instructor_ids": [
+      "prof_4721",
+      "prof_3055"
+    ],
+    "name": "世界変革技術論[Technology and World Innovations]",
+    "position": [
+      2.002504,
+      -0.628353,
+      3.298583
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_21305": {
+    "instructor_id": "prof_3738",
+    "instructor_ids": [
+      "prof_3738",
+      "prof_4662"
+    ],
+    "name": "社会的な視点から見る医療[Medicine from Social Perspectives]",
+    "position": [
+      1.943462,
+      2.018081,
+      -1.039829
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_21306": {
+    "instructor_id": "prof_11267",
+    "instructor_ids": [
+      "prof_11267"
+    ],
+    "name": "世界の課題と技術トレンド[Global Problems and Technology Trends]",
+    "position": [
+      -1.607605,
+      -0.452179,
+      0.837741
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_21307": {
+    "instructor_id": "prof_2230",
+    "instructor_ids": [
+      "prof_2230"
+    ],
+    "name": "IoT技術[IoT Technology]",
+    "position": [
+      0.064209,
+      3.105118,
+      1.643984
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_21308": {
+    "instructor_id": "prof_3738",
+    "instructor_ids": [
+      "prof_3738"
+    ],
+    "name": "生命科学的な視点から見る医療[Medicine from Life Science Perspectives]",
+    "position": [
+      1.655358,
+      1.689545,
+      -1.392299
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_21309": {
+    "instructor_id": "prof_2777",
+    "instructor_ids": [
+      "prof_2777"
+    ],
+    "name": "未来医科学[Future of Medical Science]",
+    "position": [
+      2.660291,
+      1.707002,
+      -1.104037
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_22002": {
+    "instructor_id": "prof_4502",
+    "instructor_ids": [
+      "prof_4502",
+      "prof_1956"
+    ],
+    "name": "アントレプレナー演習Ⅰ[Entrepreneurship Seminar 1]",
+    "position": [
+      2.260839,
+      -1.57459,
+      1.798169
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_22003": {
+    "instructor_id": "prof_4502",
+    "instructor_ids": [
+      "prof_4502",
+      "prof_1956"
+    ],
+    "name": "アントレプレナー演習Ⅱ[Entrepreneurship Seminar 2]",
+    "position": [
+      2.19596,
+      -1.561767,
+      1.841804
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_22004": {
+    "instructor_id": "prof_11267",
+    "instructor_ids": [
+      "prof_11267"
+    ],
+    "name": "観光DX・PBL演習Ⅰ[Seminar of Digital Transformation and Project Based Learning in Tourism 1]",
+    "position": [
+      -0.493644,
+      -0.859635,
+      3.415529
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_22005": {
+    "instructor_id": "prof_11267",
+    "instructor_ids": [
+      "prof_11267"
+    ],
+    "name": "観光DX・PBL演習Ⅱ[Seminar of Digital Transformation and Project Based Learning in Tourism 2]",
+    "position": [
+      -0.503881,
+      -0.657719,
+      3.418125
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_22006": {
+    "instructor_id": "prof_3055",
+    "instructor_ids": [
+      "prof_3055"
+    ],
+    "name": "観光調査法[Social Survey in Tourism]",
+    "position": [
+      -3.047149,
+      -2.543659,
+      3.416364
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_22007": {
+    "instructor_id": "prof_1956",
+    "instructor_ids": [
+      "prof_1956"
+    ],
+    "name": "ワークショップデザイン演習[Workshop Design Seminar]",
+    "position": [
+      1.607432,
+      -0.407774,
+      -5.635251
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_22008": {
+    "instructor_id": "prof_3055",
+    "instructor_ids": [
+      "prof_3055"
+    ],
+    "name": "観光データ解析演習[Practical Data Analysis in Tourism]",
+    "position": [
+      -2.989918,
+      -2.433026,
+      3.637498
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_22010": {
+    "instructor_id": "prof_2670",
+    "instructor_ids": [
+      "prof_2670"
+    ],
+    "name": "ビジネスプラン作成演習[Business Plan Making Seminar]",
+    "position": [
+      1.30709,
+      -1.004493,
+      -3.736643
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_22011": {
+    "instructor_id": "prof_11267",
+    "instructor_ids": [
+      "prof_11267"
+    ],
+    "name": "地理情報システム演習[Geographic Information System Seminar]",
+    "position": [
+      -0.474187,
+      0.826239,
+      2.884335
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_22012": {
+    "instructor_id": "prof_2076",
+    "instructor_ids": [
+      "prof_2076"
+    ],
+    "name": "プログラミングスキル[Programming Skills]",
+    "position": [
+      -0.686626,
+      1.792016,
+      2.723624
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_22013": {
+    "instructor_id": "prof_2232",
+    "instructor_ids": [
+      "prof_2232"
+    ],
+    "name": "アプリ開発[Application Development]",
+    "position": [
+      -0.236453,
+      1.666187,
+      2.535265
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_22014": {
+    "instructor_id": "prof_3055",
+    "instructor_ids": [
+      "prof_3055",
+      "prof_11612"
+    ],
+    "name": "創生インターンシップ[Internship for Personal Development]",
+    "position": [
+      1.695224,
+      -1.95785,
+      0.080002
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_22110": {
+    "instructor_id": "prof_4721",
+    "instructor_ids": [
+      "prof_4721"
+    ],
+    "name": "観光倫理学[Tourism Ethics]",
+    "position": [
+      1.387971,
+      0.056571,
+      -3.125516
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_22115": {
+    "instructor_id": "prof_11612",
+    "instructor_ids": [
+      "prof_11612"
+    ],
+    "name": "数理統計学基礎[Introduction to Mathematical Statistics]",
+    "position": [
+      -1.231961,
+      1.261927,
+      2.600715
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_22116": {
+    "instructor_id": "prof_4502",
+    "instructor_ids": [
+      "prof_4502"
+    ],
+    "name": "北陸観光産業論[Tourism Industry in Hokuriku Region]",
+    "position": [
+      -0.394524,
+      -1.248771,
+      2.853399
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_22121.1": {
+    "instructor_id": "prof_2670",
+    "instructor_ids": [
+      "prof_2670"
+    ],
+    "name": "北陸の都市・農村・文化[Cultures in Urban and Rural Areas in Hokuriku Region]",
+    "position": [
+      -4.017351,
+      -1.778224,
+      1.701055
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_22121.2": {
+    "instructor_id": "prof_2670",
+    "instructor_ids": [
+      "prof_2670"
+    ],
+    "name": "北陸の都市・農村・文化（防災・復興人材選抜入学者用）[Cultures in Urban and Rural Areas in Hokuriku Region]",
+    "position": [
+      -3.95129,
+      -1.768468,
+      1.703385
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_22122": {
+    "instructor_id": "prof_2670",
+    "instructor_ids": [
+      "prof_2670"
+    ],
+    "name": "北陸の農林水産・製造業[Agriculture, Forestry and Fisheries / Manufacturing Industry in Hokuriku Region]",
+    "position": [
+      -4.104373,
+      -1.655003,
+      1.572712
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_22124": {
+    "instructor_id": "prof_2670",
+    "instructor_ids": [
+      "prof_2670"
+    ],
+    "name": "観光地域ビジネス論[Regional Business in Tourism]",
+    "position": [
+      0.029757,
+      -1.459626,
+      2.970283
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_22125": {
+    "instructor_id": "prof_11267",
+    "instructor_ids": [
+      "prof_11267"
+    ],
+    "name": "数理行動モデル基礎[Introduction to Mathematical Behavior Model]",
+    "position": [
+      -0.046593,
+      1.512744,
+      3.0878
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_22126": {
+    "instructor_id": "prof_4502",
+    "instructor_ids": [
+      "prof_4502"
+    ],
+    "name": "観光デザイン学概論Ⅰ",
+    "position": [
+      -0.080405,
+      -1.694713,
+      2.874276
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_22127": {
+    "instructor_id": "prof_4502",
+    "instructor_ids": [
+      "prof_4502"
+    ],
+    "name": "観光デザイン学概論Ⅱ",
+    "position": [
+      -0.072696,
+      -1.693886,
+      2.849956
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_23002": {
+    "instructor_id": "prof_2230",
+    "instructor_ids": [
+      "prof_2230",
+      "prof_2232",
+      "prof_4586"
+    ],
+    "name": "アントレプレナー演習Ⅰ[Entrepreneurship Seminar 1]",
+    "position": [
+      2.227072,
+      -1.470042,
+      1.795064
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_23003": {
+    "instructor_id": "prof_2230",
+    "instructor_ids": [
+      "prof_2230",
+      "prof_2232"
+    ],
+    "name": "アントレプレナー演習Ⅱ[Entrepreneurship Seminar 2]",
+    "position": [
+      -3.274456,
+      -2.166399,
+      1.795101
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_23004": {
+    "instructor_id": "prof_11267",
+    "instructor_ids": [
+      "prof_11267"
+    ],
+    "name": "産業ＤＸ・ＰＢＬ演習Ⅰ[Seminar of Digital Transformation and Project Based Learning in Industry 1]",
+    "position": [
+      -0.476767,
+      -0.748236,
+      3.3613
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_23005": {
+    "instructor_id": "prof_11267",
+    "instructor_ids": [
+      "prof_11267"
+    ],
+    "name": "産業ＤＸ・ＰＢＬ演習Ⅱ[Seminar of Digital Transformation and Project Based Learning in Industry 2]",
+    "position": [
+      -0.276853,
+      -0.279979,
+      3.520033
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_23006": {
+    "instructor_id": "prof_3055",
+    "instructor_ids": [
+      "prof_3055"
+    ],
+    "name": "社会調査法[Social Survey]",
+    "position": [
+      -3.042317,
+      -2.538925,
+      3.426208
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_23007": {
+    "instructor_id": "prof_2385",
+    "instructor_ids": [
+      "prof_2385"
+    ],
+    "name": "数理科学探求[Mathematical Science Exploration]",
+    "position": [
+      -0.715502,
+      3.46994,
+      1.117399
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_23008": {
+    "instructor_id": "prof_3055",
+    "instructor_ids": [
+      "prof_3055"
+    ],
+    "name": "データ解析演習[Seminar of Data Analysis]",
+    "position": [
+      -2.978578,
+      -2.471429,
+      3.587924
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_23010": {
+    "instructor_id": "prof_4112",
+    "instructor_ids": [
+      "prof_4112"
+    ],
+    "name": "スマートデバイス演習[Seminar of Smart Device]",
+    "position": [
+      -0.378964,
+      2.385067,
+      1.916067
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_23011": {
+    "instructor_id": "prof_11616",
+    "instructor_ids": [
+      "prof_11616"
+    ],
+    "name": "北陸地域創生と社会学[Hokuriku Regional Revitalization and Sociology]",
+    "position": [
+      -3.895135,
+      -0.999509,
+      1.197082
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_23012": {
+    "instructor_id": "prof_4662",
+    "instructor_ids": [
+      "prof_4662"
+    ],
+    "name": "数理・データサイエンス・AI実践[Practical Approach for Mathematics, Data Science, and AI]",
+    "position": [
+      -0.08613,
+      1.461067,
+      3.340612
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_23014": {
+    "instructor_id": "prof_4112",
+    "instructor_ids": [
+      "prof_4112"
+    ],
+    "name": "Webサイト設計基礎[Fundamentals of Website Design]",
+    "position": [
+      -0.49152,
+      1.096933,
+      3.10221
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_23015": {
+    "instructor_id": "prof_11616",
+    "instructor_ids": [
+      "prof_11616"
+    ],
+    "name": "データ駆動型社会と産業[Data Driven Society and Industry]",
+    "position": [
+      -2.559076,
+      1.26547,
+      4.256533
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_23016": {
+    "instructor_id": "prof_4454",
+    "instructor_ids": [
+      "prof_4454"
+    ],
+    "name": "プログラミングスキル実践[Practical Approach for Programming Skills]",
+    "position": [
+      -0.447415,
+      1.896239,
+      2.515802
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_23103": {
+    "instructor_id": "prof_4454",
+    "instructor_ids": [
+      "prof_4454"
+    ],
+    "name": "ロボットイノベーション[Robot Innovation]",
+    "position": [
+      0.42528,
+      2.022032,
+      2.506943
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_23104": {
+    "instructor_id": "prof_4586",
+    "instructor_ids": [
+      "prof_4586"
+    ],
+    "name": "スマート創成化学とバイオロジー[Smart Creative Chemistry and Biology]",
+    "position": [
+      1.061792,
+      1.427657,
+      -0.85641
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_23109": {
+    "instructor_id": "prof_2232",
+    "instructor_ids": [
+      "prof_2232"
+    ],
+    "name": "AIと未来の社会学[Sociology of AI and Future]",
+    "position": [
+      -0.019543,
+      1.498957,
+      2.662543
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_23110": {
+    "instructor_id": "prof_11658",
+    "instructor_ids": [
+      "prof_11658"
+    ],
+    "name": "未来エネルギー創成[Future Energy Creation]",
+    "position": [
+      -0.806106,
+      0.897743,
+      -0.248104
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_23117": {
+    "instructor_id": "prof_2195",
+    "instructor_ids": [
+      "prof_2195"
+    ],
+    "name": "情報科学応用[Applied Information Science]",
+    "position": [
+      -0.272763,
+      2.207867,
+      2.993303
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_23120": {
+    "instructor_id": "prof_2195",
+    "instructor_ids": [
+      "prof_2195"
+    ],
+    "name": "スマートシステム制御[Smart Systems and Control]",
+    "position": [
+      -1.665102,
+      2.033967,
+      -1.319211
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_23124": {
+    "instructor_id": "prof_2230",
+    "instructor_ids": [
+      "prof_2230"
+    ],
+    "name": "コンピュータとデジタル回路[Computers and Digital Circuit]",
+    "position": [
+      -0.245942,
+      3.1181,
+      1.925876
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_23125": {
+    "instructor_id": "prof_4678",
+    "instructor_ids": [
+      "prof_4678"
+    ],
+    "name": "イノベーション・マネジメント[Innovation Management]",
+    "position": [
+      1.451583,
+      -1.09146,
+      2.601002
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_24003": {
+    "instructor_id": "prof_11267",
+    "instructor_ids": [
+      "prof_11267"
+    ],
+    "name": "測量学及び実習第１[Surveying and Practice 1]",
+    "position": [
+      -1.294095,
+      1.19911,
+      2.119436
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_24024": {
+    "instructor_id": "prof_11267",
+    "instructor_ids": [
+      "prof_11267"
+    ],
+    "name": "測量学及び実習第２[Surveying and Practice 2]",
+    "position": [
+      -1.463554,
+      1.408466,
+      1.868129
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_24036": {
+    "instructor_id": "prof_11267",
+    "instructor_ids": [
+      "prof_11267"
+    ],
+    "name": "計画プロセス[Planning System and Process]",
+    "position": [
+      -2.974731,
+      -1.155482,
+      1.486567
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_31102": {
+    "instructor_id": "prof_3738",
+    "instructor_ids": [
+      "prof_3738"
+    ],
+    "name": "先端医学[Advanced Medicine]",
+    "position": [
+      1.464584,
+      1.595669,
+      -1.251533
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_31104": {
+    "instructor_id": "prof_4732",
+    "instructor_ids": [
+      "prof_4732"
+    ],
+    "name": "SDGs実践[Practical Approach for SDGs]",
+    "position": [
+      -2.079108,
+      -1.080615,
+      -0.437747
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_31105": {
+    "instructor_id": "prof_4662",
+    "instructor_ids": [
+      "prof_4662"
+    ],
+    "name": "データサイエンス実践[Practical Approach for Data Science]",
+    "position": [
+      2.94479,
+      5.399299,
+      0.744087
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_31106": {
+    "instructor_id": "prof_11612",
+    "instructor_ids": [
+      "prof_11612"
+    ],
+    "name": "需要予測[Demand Forecasting]",
+    "position": [
+      -1.245199,
+      0.931146,
+      2.719273
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_31113": {
+    "instructor_id": "prof_11267",
+    "instructor_ids": [
+      "prof_11267"
+    ],
+    "name": "プロジェクト・マネジメント[Project Management]",
+    "position": [
+      -2.600395,
+      -1.140818,
+      1.508313
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_31114": {
+    "instructor_id": "prof_2777",
+    "instructor_ids": [
+      "prof_2777"
+    ],
+    "name": "医療制度改革と医療経済[Reform of Medical System and Medical Economics]",
+    "position": [
+      2.546182,
+      1.767558,
+      -1.190643
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_31115": {
+    "instructor_id": "prof_2385",
+    "instructor_ids": [
+      "prof_2385"
+    ],
+    "name": "センシング論[Sensing Technology]",
+    "position": [
+      0.010737,
+      3.627264,
+      1.471161
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_31119": {
+    "instructor_id": "prof_2659",
+    "instructor_ids": [
+      "prof_2659"
+    ],
+    "name": "生活デザイン論[Life Design]",
+    "position": [
+      -1.022415,
+      -2.395253,
+      0.655093
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_31121": {
+    "instructor_id": "prof_2659",
+    "instructor_ids": [
+      "prof_2659"
+    ],
+    "name": "生活環境学[Life Environmental Studies]",
+    "position": [
+      -1.274859,
+      -2.016453,
+      0.383376
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_31122": {
+    "instructor_id": "prof_2777",
+    "instructor_ids": [
+      "prof_2777"
+    ],
+    "name": "超高齢社会と科学技術[Hyper-Aged Society and Science Technology]",
+    "position": [
+      2.555626,
+      1.471297,
+      -0.671106
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_31126": {
+    "instructor_id": "prof_4381",
+    "instructor_ids": [
+      "prof_4381"
+    ],
+    "name": "マテリアル科学[Material Science]",
+    "position": [
+      -1.049687,
+      -0.593981,
+      0.12007
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_31129": {
+    "instructor_id": "prof_2232",
+    "instructor_ids": [
+      "prof_2232"
+    ],
+    "name": "データベース論[Database System]",
+    "position": [
+      -0.449936,
+      1.646113,
+      3.088025
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_31130": {
+    "instructor_id": "prof_3738",
+    "instructor_ids": [
+      "prof_3738"
+    ],
+    "name": "プレシジョンメディシン[Precision Medicine]",
+    "position": [
+      2.438227,
+      1.040704,
+      -4.675768
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_31131": {
+    "instructor_id": "prof_4662",
+    "instructor_ids": [
+      "prof_4662"
+    ],
+    "name": "テクノロジーと医療・健康・介護[Technology of Medicine, Health, and Care]",
+    "position": [
+      3.116799,
+      5.355557,
+      0.592895
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_31133": {
+    "instructor_id": "prof_2670",
+    "instructor_ids": [
+      "prof_2670"
+    ],
+    "name": "比較制度論[Comparative Systems]",
+    "position": [
+      -4.114396,
+      -1.144086,
+      1.04846
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_31134": {
+    "instructor_id": "prof_2670",
+    "instructor_ids": [
+      "prof_2670"
+    ],
+    "name": "地域政策論[Regional Revitalization]",
+    "position": [
+      -3.639609,
+      -1.566229,
+      1.745267
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_31135": {
+    "instructor_id": "prof_2777",
+    "instructor_ids": [
+      "prof_2777"
+    ],
+    "name": "未来型ヘルスケアシステム[Future-oriented Healthcare System]",
+    "position": [
+      2.639992,
+      1.640667,
+      -1.029438
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_31136": {
+    "instructor_id": "prof_2076",
+    "instructor_ids": [
+      "prof_2076"
+    ],
+    "name": "機械学習[Machine Learning]",
+    "position": [
+      -1.017046,
+      1.545744,
+      2.74408
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_31137": {
+    "instructor_id": "prof_2385",
+    "instructor_ids": [
+      "prof_2385"
+    ],
+    "name": "光学技術論[Optics Technology]",
+    "position": [
+      -4.284617,
+      5.010382,
+      0.491484
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_31140": {
+    "instructor_id": "prof_2777",
+    "instructor_ids": [
+      "prof_2777"
+    ],
+    "name": "レギュラトリーサイエンス[Regulatory Science]",
+    "position": [
+      6.707292,
+      -28.0,
+      10.832509
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_31141": {
+    "instructor_id": "prof_4662",
+    "instructor_ids": [
+      "prof_4662"
+    ],
+    "name": "AI・IoT健康福祉学[AI / IoT Health and Welfare]",
+    "position": [
+      2.734961,
+      4.900354,
+      0.686945
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_31143": {
+    "instructor_id": "prof_2230",
+    "instructor_ids": [
+      "prof_2230"
+    ],
+    "name": "コンピュータと電子回路[Computers and　Electronic Circuit]",
+    "position": [
+      -0.274644,
+      3.251519,
+      1.816141
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_31144": {
+    "instructor_id": "prof_4381",
+    "instructor_ids": [
+      "prof_4381",
+      "prof_2076"
+    ],
+    "name": "環境基礎科学[Environmental Basic Science]",
+    "position": [
+      -1.246666,
+      -0.4269,
+      -0.029737
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_31145.001": {
+    "instructor_id": "prof_2230",
+    "instructor_ids": [
+      "prof_2230",
+      "prof_4841"
+    ],
+    "name": "学知特別講義（ＫＪ法で地方創生）",
+    "position": [
+      -1.774643,
+      -1.362969,
+      1.075699
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_31145.002": {
+    "instructor_id": "prof_11380",
+    "instructor_ids": [
+      "prof_11380"
+    ],
+    "name": "学知特別講義（学びをデザインし未来を描く）",
+    "position": [
+      -0.888502,
+      -2.573704,
+      0.601485
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_31145.003": {
+    "instructor_id": "prof_2659",
+    "instructor_ids": [
+      "prof_2659"
+    ],
+    "name": "学知特別講義（ライフデザインと消費者ガバナンス）",
+    "position": [
+      -0.464658,
+      -1.924143,
+      1.248698
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_31302": {
+    "instructor_id": "prof_4386",
+    "instructor_ids": [
+      "prof_4386"
+    ],
+    "name": "海外実践留学[Study Abroad Programs]",
+    "position": [
+      1.247355,
+      -2.125924,
+      0.125972
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_31303": {
+    "instructor_id": "prof_4386",
+    "instructor_ids": [
+      "prof_4386"
+    ],
+    "name": "国際インターンシップ[International Internship Programs]",
+    "position": [
+      1.596279,
+      -1.95398,
+      0.255441
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_31304": {
+    "instructor_id": "prof_4841",
+    "instructor_ids": [
+      "prof_4841",
+      "prof_2195",
+      "prof_2232",
+      "prof_4586"
+    ],
+    "name": "学術考究[Academic Investigation]",
+    "position": [
+      0.927392,
+      -2.910815,
+      0.036553
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_32105": {
+    "instructor_id": "prof_4656",
+    "instructor_ids": [
+      "prof_4656"
+    ],
+    "name": "持続的な観光[Sustainable Tourism]",
+    "position": [
+      3.911149,
+      -2.247222,
+      14.692463
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_32107": {
+    "instructor_id": "prof_2670",
+    "instructor_ids": [
+      "prof_2670"
+    ],
+    "name": "比較地域発展論[Comparative Regional Development]",
+    "position": [
+      -4.265175,
+      -1.12293,
+      1.106307
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_32109": {
+    "instructor_id": "prof_4656",
+    "instructor_ids": [
+      "prof_4656"
+    ],
+    "name": "ヘリテージ・インタープリテーション[Heritage Interpretation]",
+    "position": [
+      4.360902,
+      -2.513082,
+      15.283961
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_32110": {
+    "instructor_id": "prof_4502",
+    "instructor_ids": [
+      "prof_4502",
+      "prof_3055"
+    ],
+    "name": "文化遺産論[Cultural Heritage]",
+    "position": [
+      -3.408089,
+      -1.314827,
+      1.843231
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_32111": {
+    "instructor_id": "prof_2670",
+    "instructor_ids": [
+      "prof_2670"
+    ],
+    "name": "文化と地域経済[Culture and Regional Economies]",
+    "position": [
+      -3.585299,
+      -1.494113,
+      1.63283
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_32304": {
+    "instructor_id": "prof_11267",
+    "instructor_ids": [
+      "prof_11267"
+    ],
+    "name": "Web・クチコミ社会動向分析[Web Content and Review Analysis]",
+    "position": [
+      -0.897963,
+      0.741186,
+      3.140216
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_32305": {
+    "instructor_id": "prof_11267",
+    "instructor_ids": [
+      "prof_11267"
+    ],
+    "name": "観光データ解析応用[Applied Analysis of Tourism Data]",
+    "position": [
+      -0.582598,
+      -0.377692,
+      3.36152
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_32306": {
+    "instructor_id": "prof_11267",
+    "instructor_ids": [
+      "prof_11267"
+    ],
+    "name": "観光産業DX発展[Advanced Digital Transformation of Tourism Industry]",
+    "position": [
+      -0.388211,
+      -1.083351,
+      3.248825
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_32307": {
+    "instructor_id": "prof_2425",
+    "instructor_ids": [
+      "prof_2425"
+    ],
+    "name": "情報政策論[Information Policy]",
+    "position": [
+      -2.970157,
+      1.508716,
+      4.857219
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_32310": {
+    "instructor_id": "prof_11267",
+    "instructor_ids": [
+      "prof_11267"
+    ],
+    "name": "時空間データ解析[Spatiotemporal Data Analysis]",
+    "position": [
+      -0.58715,
+      0.17221,
+      3.250174
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_32312": {
+    "instructor_id": "prof_2425",
+    "instructor_ids": [
+      "prof_2425"
+    ],
+    "name": "統計的意思決定論[Statistical Decision Making]",
+    "position": [
+      -2.945621,
+      1.393681,
+      4.745086
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_32315": {
+    "instructor_id": "prof_11267",
+    "instructor_ids": [
+      "prof_11267"
+    ],
+    "name": "国際メディア分析論[International Media Analysis]",
+    "position": [
+      -0.936972,
+      0.50258,
+      3.418243
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_32320": {
+    "instructor_id": "prof_4502",
+    "instructor_ids": [
+      "prof_4502"
+    ],
+    "name": "観光IT戦略論[IT Strategy for Tourism]",
+    "position": [
+      -0.067579,
+      -1.298978,
+      2.971843
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_32503": {
+    "instructor_id": "prof_4656",
+    "instructor_ids": [
+      "prof_4656"
+    ],
+    "name": "環境と観光[Environment and Tourism]",
+    "position": [
+      4.097149,
+      -2.287341,
+      14.93264
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_32505": {
+    "instructor_id": "prof_1956",
+    "instructor_ids": [
+      "prof_1956"
+    ],
+    "name": "地域社会学[Regional Sociology]",
+    "position": [
+      -3.385306,
+      -1.501523,
+      1.391602
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_32510": {
+    "instructor_id": "prof_4502",
+    "instructor_ids": [
+      "prof_4502"
+    ],
+    "name": "コミュニティ・デザイン論[Community Design]",
+    "position": [
+      -2.426173,
+      -3.334004,
+      1.471308
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_32515": {
+    "instructor_id": "prof_4502",
+    "instructor_ids": [
+      "prof_4502"
+    ],
+    "name": "パブリックスペース論[Design of Public Space]",
+    "position": [
+      -2.37596,
+      -2.821394,
+      1.37346
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_32517": {
+    "instructor_id": "prof_1956",
+    "instructor_ids": [
+      "prof_1956"
+    ],
+    "name": "観光社会学[Sociology of Tourism]",
+    "position": [
+      -3.117946,
+      -2.407602,
+      3.097575
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_32701": {
+    "instructor_id": "prof_3055",
+    "instructor_ids": [
+      "prof_3055",
+      "prof_11612"
+    ],
+    "name": "観光ビジネス実践Ａ[Practical Approach in Tourism Business A]",
+    "position": [
+      1.731178,
+      -1.868183,
+      -0.030922
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_32702": {
+    "instructor_id": "prof_3055",
+    "instructor_ids": [
+      "prof_3055",
+      "prof_11612"
+    ],
+    "name": "観光ビジネス実践Ｂ[Practical Approach in Tourism Business B]",
+    "position": [
+      1.83956,
+      -1.803104,
+      -0.024019
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_32703": {
+    "instructor_id": "prof_3055",
+    "instructor_ids": [
+      "prof_3055",
+      "prof_11612"
+    ],
+    "name": "観光ビジネス実践Ｃ[Practical Approach in Tourism Business C]",
+    "position": [
+      1.899096,
+      -1.97008,
+      -0.143393
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_32704": {
+    "instructor_id": "prof_4386",
+    "instructor_ids": [
+      "prof_4386"
+    ],
+    "name": "観光実践留学[Study Abroad Programs in Tourism Sciences]",
+    "position": [
+      1.379691,
+      -2.121197,
+      0.212116
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_33104": {
+    "instructor_id": "prof_2848",
+    "instructor_ids": [
+      "prof_2848",
+      "prof_4586"
+    ],
+    "name": "人間拡張とライフ[Human Augmentation and Life]",
+    "position": [
+      1.784023,
+      1.648135,
+      -0.695795
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_33106": {
+    "instructor_id": "prof_2230",
+    "instructor_ids": [
+      "prof_2230"
+    ],
+    "name": "ヒューマンインターフェース[Human Interface]",
+    "position": [
+      0.394279,
+      2.267992,
+      1.021765
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_33107": {
+    "instructor_id": "prof_2659",
+    "instructor_ids": [
+      "prof_2659"
+    ],
+    "name": "生活デザイン論[Lifestyle Design]",
+    "position": [
+      -1.090425,
+      -2.372905,
+      0.694786
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_33114": {
+    "instructor_id": "prof_4586",
+    "instructor_ids": [
+      "prof_4586"
+    ],
+    "name": "スマートウエルネス[Smart Wellness]",
+    "position": [
+      1.960791,
+      1.497866,
+      -1.223437
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_33118": {
+    "instructor_id": "prof_4662",
+    "instructor_ids": [
+      "prof_4662"
+    ],
+    "name": "ヘルステック[Health Tech]",
+    "position": [
+      3.147806,
+      5.397278,
+      0.623658
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_33141": {
+    "instructor_id": "prof_2670",
+    "instructor_ids": [
+      "prof_2670"
+    ],
+    "name": "地域経済特論a-1[Special Study on Regional Economics a-1]",
+    "position": [
+      -3.896917,
+      -1.37011,
+      1.081607
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_33142": {
+    "instructor_id": "prof_2670",
+    "instructor_ids": [
+      "prof_2670"
+    ],
+    "name": "地域経済特論a-2[Special Study on Regional Economics a-2]",
+    "position": [
+      -3.879059,
+      -1.207196,
+      1.332049
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_33143": {
+    "instructor_id": "prof_2670",
+    "instructor_ids": [
+      "prof_2670"
+    ],
+    "name": "地域経済特論b-1[Special Study on Regional Economics b-1]",
+    "position": [
+      -3.515019,
+      -1.152474,
+      0.686161
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_33144": {
+    "instructor_id": "prof_2670",
+    "instructor_ids": [
+      "prof_2670"
+    ],
+    "name": "地域経済特論b-2[Special Study on Regional Economics b-2]",
+    "position": [
+      -3.952201,
+      -1.530323,
+      1.099215
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_33145": {
+    "instructor_id": "prof_2670",
+    "instructor_ids": [
+      "prof_2670"
+    ],
+    "name": "地域経済論演習a-1[Seminar on Regional Economics a-1]",
+    "position": [
+      -3.782957,
+      -2.080897,
+      1.404625
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_33146": {
+    "instructor_id": "prof_2670",
+    "instructor_ids": [
+      "prof_2670"
+    ],
+    "name": "地域経済論演習a-2[Seminar on Regional Economics a-2]",
+    "position": [
+      -3.712832,
+      -1.464984,
+      1.269854
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_33147": {
+    "instructor_id": "prof_2670",
+    "instructor_ids": [
+      "prof_2670"
+    ],
+    "name": "地域経済論演習b-1[Seminar on Regional Economics b-1]",
+    "position": [
+      -3.562174,
+      -1.163056,
+      0.675521
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_33148": {
+    "instructor_id": "prof_2670",
+    "instructor_ids": [
+      "prof_2670"
+    ],
+    "name": "地域経済論演習b-2[Seminar on Regional Economics b-2]",
+    "position": [
+      -3.560771,
+      -2.174794,
+      1.616779
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_33301": {
+    "instructor_id": "prof_2195",
+    "instructor_ids": [
+      "prof_2195",
+      "prof_2385",
+      "prof_11616",
+      "prof_4662",
+      "prof_11658",
+      "prof_4454",
+      "prof_4112"
+    ],
+    "name": "スマート産業論[Smart Industry Theory]",
+    "position": [
+      -0.343101,
+      -0.04547,
+      2.351627
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_33302": {
+    "instructor_id": "prof_11616",
+    "instructor_ids": [
+      "prof_11616"
+    ],
+    "name": "消費者行動と社会[Consumer Behavior and Society]",
+    "position": [
+      -3.726013,
+      -0.776441,
+      0.928235
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_33303": {
+    "instructor_id": "prof_4662",
+    "instructor_ids": [
+      "prof_4662"
+    ],
+    "name": "実践データサイエンス[Practical Data Science]",
+    "position": [
+      2.870949,
+      5.321029,
+      0.732943
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_33305": {
+    "instructor_id": "prof_2385",
+    "instructor_ids": [
+      "prof_2385"
+    ],
+    "name": "スマートセンシング[Smart Sensing]",
+    "position": [
+      0.020528,
+      3.605684,
+      1.480968
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_33306": {
+    "instructor_id": "prof_11658",
+    "instructor_ids": [
+      "prof_11658"
+    ],
+    "name": "カーボンニュートラル技術[Carbon Neutral Technology]",
+    "position": [
+      -1.819607,
+      -0.292191,
+      -0.287476
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_33310": {
+    "instructor_id": "prof_2195",
+    "instructor_ids": [
+      "prof_2195"
+    ],
+    "name": "スマートシステム制御応用[Advanced Smart Systems and Control]",
+    "position": [
+      -1.560739,
+      2.047785,
+      -1.013857
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_33312": {
+    "instructor_id": "prof_4454",
+    "instructor_ids": [
+      "prof_4454"
+    ],
+    "name": "自律ロボット[Autonomous Robot]",
+    "position": [
+      0.418437,
+      2.35997,
+      2.621826
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_33313": {
+    "instructor_id": "prof_2230",
+    "instructor_ids": [
+      "prof_2230"
+    ],
+    "name": "産業とユニバーサルデザイン[Industry and Universal Design]",
+    "position": [
+      -0.244445,
+      0.992767,
+      -2.770338
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_33314": {
+    "instructor_id": "prof_4112",
+    "instructor_ids": [
+      "prof_4112"
+    ],
+    "name": "拡張・リアリティ空間デザイン[Augmented Reality Space Design]",
+    "position": [
+      1.057454,
+      -1.040807,
+      -3.167023
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_33315": {
+    "instructor_id": "prof_2195",
+    "instructor_ids": [
+      "prof_2195"
+    ],
+    "name": "次世代情報通信[Next-generation Information Communication]",
+    "position": [
+      -0.054923,
+      2.339308,
+      2.015665
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_33316": {
+    "instructor_id": "prof_2230",
+    "instructor_ids": [
+      "prof_2230"
+    ],
+    "name": "エナジーハーベスティング[Energy Harvesting Technology]",
+    "position": [
+      -0.335273,
+      2.509442,
+      1.542051
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_33501": {
+    "instructor_id": "prof_4732",
+    "instructor_ids": [
+      "prof_4732"
+    ],
+    "name": "SDGs実践[Practical Approach for SDGｓ]",
+    "position": [
+      -2.067281,
+      -1.111191,
+      -0.451247
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_33503": {
+    "instructor_id": "prof_11612",
+    "instructor_ids": [
+      "prof_11612"
+    ],
+    "name": "ナショナルレジリエンス[National Resilience]",
+    "position": [
+      -0.529628,
+      -1.399059,
+      3.63757
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_33505": {
+    "instructor_id": "prof_11694",
+    "instructor_ids": [
+      "prof_11694",
+      "prof_11380"
+    ],
+    "name": "デジタルエコノミーと地域展開[Digital Economy and Regional Expansion]",
+    "position": [
+      -3.030732,
+      -1.371305,
+      0.516265
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_33506": {
+    "instructor_id": "prof_11694",
+    "instructor_ids": [
+      "prof_11694"
+    ],
+    "name": "都市・地域工学[Urban/Regional Engineering]",
+    "position": [
+      -2.365381,
+      -1.804006,
+      1.435574
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_33510": {
+    "instructor_id": "prof_11694",
+    "instructor_ids": [
+      "prof_11694"
+    ],
+    "name": "エビデンスベース政策論[Evidence-Based Policy Theory]",
+    "position": [
+      -2.937931,
+      1.092711,
+      4.103285
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_33511": {
+    "instructor_id": "prof_4678",
+    "instructor_ids": [
+      "prof_4678"
+    ],
+    "name": "ソーシャルイノベーション[Social Innovation]",
+    "position": [
+      1.369134,
+      -1.18784,
+      2.616708
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_33512": {
+    "instructor_id": "prof_11694",
+    "instructor_ids": [
+      "prof_11694"
+    ],
+    "name": "社会的合意形成論[Social Consensus Building Theory]",
+    "position": [
+      -2.378344,
+      -3.371186,
+      0.977784
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_33513": {
+    "instructor_id": "prof_4112",
+    "instructor_ids": [
+      "prof_4112"
+    ],
+    "name": "デジタルツインと危機管理[Digital Twin and Crisis Management]",
+    "position": [
+      0.906698,
+      -0.51984,
+      -4.110475
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_33514": {
+    "instructor_id": "prof_11694",
+    "instructor_ids": [
+      "prof_11694",
+      "prof_11658"
+    ],
+    "name": "低炭素社会[Low-Carbon Society]",
+    "position": [
+      -2.142995,
+      -0.904765,
+      -0.212026
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_33515": {
+    "instructor_id": "prof_11694",
+    "instructor_ids": [
+      "prof_11694"
+    ],
+    "name": "スマートサプライチェーン[Smart Supply Chain]",
+    "position": [
+      -0.273592,
+      -0.434129,
+      2.109968
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_33516": {
+    "instructor_id": "prof_11267",
+    "instructor_ids": [
+      "prof_11267"
+    ],
+    "name": "スマートインフラマネジメント[Smart Infrastructure Management]",
+    "position": [
+      -1.531022,
+      -0.322599,
+      1.155898
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_33518": {
+    "instructor_id": "prof_4841",
+    "instructor_ids": [
+      "prof_4841"
+    ],
+    "name": "フューチャーデザイン[Future Design]",
+    "position": [
+      -1.502853,
+      -1.98456,
+      1.479013
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_33641": {
+    "instructor_id": "prof_2425",
+    "instructor_ids": [
+      "prof_2425"
+    ],
+    "name": "情報科学特論a-1[Study on Advanced Information Science a-1]",
+    "position": [
+      -2.924036,
+      1.551884,
+      4.916173
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_33642": {
+    "instructor_id": "prof_2425",
+    "instructor_ids": [
+      "prof_2425"
+    ],
+    "name": "情報科学特論a-2[Study on Advanced Information Science a-2]",
+    "position": [
+      -2.909901,
+      1.404916,
+      4.769535
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_33643": {
+    "instructor_id": "prof_2425",
+    "instructor_ids": [
+      "prof_2425"
+    ],
+    "name": "情報科学特論b-1[Study on Advanced Information Science b-1]",
+    "position": [
+      -2.989508,
+      1.520832,
+      4.886933
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_33644": {
+    "instructor_id": "prof_2425",
+    "instructor_ids": [
+      "prof_2425"
+    ],
+    "name": "情報科学特論b-2[Study on Advanced Information Science b-2]",
+    "position": [
+      -2.998393,
+      1.52531,
+      4.895227
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_33645": {
+    "instructor_id": "prof_2425",
+    "instructor_ids": [
+      "prof_2425"
+    ],
+    "name": "情報科学論演習a-1[Seminar on Advanced Information Science a-1]",
+    "position": [
+      -2.991868,
+      1.509116,
+      4.836837
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_33646": {
+    "instructor_id": "prof_2425",
+    "instructor_ids": [
+      "prof_2425"
+    ],
+    "name": "情報科学論演習a-2[Seminar on Advanced Information Science a-2]",
+    "position": [
+      -3.024042,
+      1.473295,
+      4.860406
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_33647": {
+    "instructor_id": "prof_2425",
+    "instructor_ids": [
+      "prof_2425"
+    ],
+    "name": "情報科学論演習b-1[Seminar on Advanced Information Science b-1]",
+    "position": [
+      -2.869109,
+      1.385216,
+      4.757821
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_33648": {
+    "instructor_id": "prof_2425",
+    "instructor_ids": [
+      "prof_2425"
+    ],
+    "name": "情報科学論演習b-2[Seminar on Advanced Information Science b-2]",
+    "position": [
+      -2.997087,
+      1.512572,
+      4.889799
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_33681": {
+    "instructor_id": "prof_4678",
+    "instructor_ids": [
+      "prof_4678"
+    ],
+    "name": "イノベーション特論a-1[Theory of Innovation a-1]",
+    "position": [
+      9.295689,
+      -8.75066,
+      5.462905
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_33682": {
+    "instructor_id": "prof_4678",
+    "instructor_ids": [
+      "prof_4678"
+    ],
+    "name": "イノベーション特論a-2[Theory of Innovation a-2]",
+    "position": [
+      9.254003,
+      -8.726339,
+      5.459183
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_33683": {
+    "instructor_id": "prof_4678",
+    "instructor_ids": [
+      "prof_4678"
+    ],
+    "name": "イノベーション特論b-1[Theory of Innovation b-1]",
+    "position": [
+      9.184434,
+      -8.614827,
+      5.367614
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_33684": {
+    "instructor_id": "prof_4678",
+    "instructor_ids": [
+      "prof_4678"
+    ],
+    "name": "イノベーション特論b-2[Theory of Innovation b-2]",
+    "position": [
+      9.345779,
+      -8.755719,
+      5.395749
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_33685": {
+    "instructor_id": "prof_4678",
+    "instructor_ids": [
+      "prof_4678"
+    ],
+    "name": "イノベーション論演習a-1[Seminar on Innovation a-1]",
+    "position": [
+      9.290096,
+      -8.691719,
+      5.390942
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_33686": {
+    "instructor_id": "prof_4678",
+    "instructor_ids": [
+      "prof_4678"
+    ],
+    "name": "イノベーション論演習a-2[Seminar on Innovation a-2]",
+    "position": [
+      9.293456,
+      -8.744563,
+      5.331706
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_33687": {
+    "instructor_id": "prof_4678",
+    "instructor_ids": [
+      "prof_4678"
+    ],
+    "name": "イノベーション論演習b-1[Seminar on Innovation b-1]",
+    "position": [
+      9.480986,
+      -8.877041,
+      5.533551
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_33688": {
+    "instructor_id": "prof_4678",
+    "instructor_ids": [
+      "prof_4678"
+    ],
+    "name": "イノベーション論演習b-2[Seminar on Innovation b-2]",
+    "position": [
+      9.304598,
+      -8.718942,
+      5.44978
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_33707": {
+    "instructor_id": "prof_4586",
+    "instructor_ids": [
+      "prof_4586",
+      "prof_11616",
+      "prof_11694",
+      "prof_11658",
+      "prof_4454",
+      "prof_4662"
+    ],
+    "name": "数理・データサイエンス・AI鍛練[Training for Mathematics, Data Science, and AI]",
+    "position": [
+      -0.09948,
+      1.006011,
+      1.913967
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_35009-26": {
+    "instructor_id": "prof_4656",
+    "instructor_ids": [
+      "prof_4656",
+      "prof_4556",
+      "prof_11583",
+      "prof_1956",
+      "prof_4502"
+    ],
+    "name": "地域フィールドワーク[Regional Fieldwork]",
+    "position": [
+      -3.417272,
+      -2.491639,
+      1.678631
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_35101": {
+    "instructor_id": "prof_1956",
+    "instructor_ids": [
+      "prof_1956"
+    ],
+    "name": "地域社会学特論Ⅰ[Special Study on Regional Sociology 1]",
+    "position": [
+      -3.268367,
+      -2.071839,
+      1.993156
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_35101__m2": {
+    "instructor_id": "prof_4732",
+    "instructor_ids": [
+      "prof_4732"
+    ],
+    "name": "地域社会学特論Ⅰ[Special Study on Regional Sociology 1]",
+    "position": [
+      -1.988885,
+      -1.005713,
+      0.689263
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_35102": {
+    "instructor_id": "prof_1956",
+    "instructor_ids": [
+      "prof_1956"
+    ],
+    "name": "地域社会学特論Ⅱ[Special Study on Regional Sociology 2]",
+    "position": [
+      -6.080215,
+      -6.229592,
+      5.751074
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_35102__m2": {
+    "instructor_id": "prof_2659",
+    "instructor_ids": [
+      "prof_2659"
+    ],
+    "name": "地域社会学特論Ⅱ[Special Study on Regional Sociology 2]",
+    "position": [
+      -0.863565,
+      -2.008138,
+      0.842145
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_35106": {
+    "instructor_id": "prof_4386",
+    "instructor_ids": [
+      "prof_4386"
+    ],
+    "name": "社会政策特論Ⅱ[Special Study on Social Policy 2]",
+    "position": [
+      0.501353,
+      -2.768847,
+      0.393402
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_35107": {
+    "instructor_id": "prof_4721",
+    "instructor_ids": [
+      "prof_4721"
+    ],
+    "name": "社会保障特論Ⅰ[Special Study on Social Security 1]",
+    "position": [
+      1.528737,
+      0.245282,
+      -3.425176
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_35108": {
+    "instructor_id": "prof_4381",
+    "instructor_ids": [
+      "prof_4381"
+    ],
+    "name": "社会保障特論Ⅱ[Special Study on Social Security 2]",
+    "position": [
+      -0.508429,
+      -2.185,
+      0.325604
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_35109": {
+    "instructor_id": "prof_3738",
+    "instructor_ids": [
+      "prof_3738"
+    ],
+    "name": "社会福祉学特論Ⅰ[Special Study on Social Welfare 1]",
+    "position": [
+      2.126644,
+      -0.339848,
+      2.467561
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_35110": {
+    "instructor_id": "prof_4678",
+    "instructor_ids": [
+      "prof_4678"
+    ],
+    "name": "社会福祉学特論Ⅱ[Special Study on Social Welfare 2]",
+    "position": [
+      9.342714,
+      -8.595203,
+      5.537411
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_35112": {
+    "instructor_id": "prof_4841",
+    "instructor_ids": [
+      "prof_4841"
+    ],
+    "name": "社会研究とフィールドワーク技法[Social Science Field Research ]",
+    "position": [
+      -3.470596,
+      -2.351908,
+      1.899902
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_35114": {
+    "instructor_id": "prof_11694",
+    "instructor_ids": [
+      "prof_11694"
+    ],
+    "name": "医療社会学特論Ⅱ[Special Study on Sociology of Medicine 2]",
+    "position": [
+      -2.564321,
+      -0.858552,
+      0.192619
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_35117": {
+    "instructor_id": "prof_2670",
+    "instructor_ids": [
+      "prof_2670"
+    ],
+    "name": "地域経済学特論Ⅰ[Special Study on Regional Economics 1]",
+    "position": [
+      -3.964617,
+      -1.271259,
+      1.004397
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_35118": {
+    "instructor_id": "prof_2670",
+    "instructor_ids": [
+      "prof_2670"
+    ],
+    "name": "地域経済学特論Ⅱ[Special Study on Regional Economics 2]",
+    "position": [
+      -3.803352,
+      -1.159626,
+      1.350229
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_35141": {
+    "instructor_id": "prof_11583",
+    "instructor_ids": [
+      "prof_11583"
+    ],
+    "name": "生態系サービス特論Ⅰ[Special Study on Ecosystem Services 1]",
+    "position": [
+      -6.152939,
+      -1.963067,
+      0.877792
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_35142": {
+    "instructor_id": "prof_11583",
+    "instructor_ids": [
+      "prof_11583"
+    ],
+    "name": "生態系サービス特論Ⅱ[Special Study on Ecosystem Services 2]",
+    "position": [
+      -6.108366,
+      -1.847098,
+      0.993967
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_35155": {
+    "instructor_id": "prof_4502",
+    "instructor_ids": [
+      "prof_4502"
+    ],
+    "name": "コミュニティ・デザイン特論Ⅰ[Special Study on Community Design 1]",
+    "position": [
+      -2.337506,
+      -4.350765,
+      1.46045
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_35156": {
+    "instructor_id": "prof_4502",
+    "instructor_ids": [
+      "prof_4502"
+    ],
+    "name": "コミュニティ・デザイン特論Ⅱ[Special Study on Community Design 2]",
+    "position": [
+      -2.332906,
+      -4.357591,
+      1.454884
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_35169": {
+    "instructor_id": "prof_4656",
+    "instructor_ids": [
+      "prof_4656"
+    ],
+    "name": "ビジタースタディ特論Ⅰ[Visitor Studies 1]",
+    "position": [
+      4.30031,
+      -2.133304,
+      14.958822
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_35170": {
+    "instructor_id": "prof_4656",
+    "instructor_ids": [
+      "prof_4656"
+    ],
+    "name": "ビジタースタディ特論Ⅱ[Visitor Studies 2]",
+    "position": [
+      4.202733,
+      -2.104725,
+      14.890355
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_35201": {
+    "instructor_id": "prof_1956",
+    "instructor_ids": [
+      "prof_1956"
+    ],
+    "name": "現代社会特論Ⅰ[Special Study on Sociology of Modernity 1]",
+    "position": [
+      -3.282131,
+      -2.040563,
+      2.005061
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_35202": {
+    "instructor_id": "prof_4656",
+    "instructor_ids": [
+      "prof_4656"
+    ],
+    "name": "現代社会特論Ⅱ[Special Study on Sociology of Modernity 2]",
+    "position": [
+      4.30822,
+      -2.187692,
+      14.919242
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_35203": {
+    "instructor_id": "prof_1956",
+    "instructor_ids": [
+      "prof_1956"
+    ],
+    "name": "現代コミュニティ特論Ⅰ[Special Study on Modern Community 1]",
+    "position": [
+      -6.187475,
+      -6.35167,
+      5.870901
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_35203__m2": {
+    "instructor_id": "prof_4556",
+    "instructor_ids": [
+      "prof_4556"
+    ],
+    "name": "現代コミュニティ特論Ⅰ[Special Study on Modern Community 1]",
+    "position": [
+      2.1409,
+      1.111219,
+      -1.642218
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_35204": {
+    "instructor_id": "prof_1956",
+    "instructor_ids": [
+      "prof_1956"
+    ],
+    "name": "現代コミュニティ特論Ⅱ[Special Study on Modern Community 2]",
+    "position": [
+      -6.247271,
+      -6.412375,
+      5.931826
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_35205": {
+    "instructor_id": "prof_4502",
+    "instructor_ids": [
+      "prof_4502"
+    ],
+    "name": "生活保障システム特論Ⅰ[Special Study on Livelihood Security System 1]",
+    "position": [
+      -2.309787,
+      -4.397089,
+      1.436026
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_35209": {
+    "instructor_id": "prof_11267",
+    "instructor_ids": [
+      "prof_11267"
+    ],
+    "name": "社会福祉方法特論Ⅰ[Special Study on Social Work 1]",
+    "position": [
+      -0.476015,
+      -1.289582,
+      3.537885
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_35210": {
+    "instructor_id": "prof_2670",
+    "instructor_ids": [
+      "prof_2670"
+    ],
+    "name": "社会福祉方法特論Ⅱ[Special Study on Social Work 2]",
+    "position": [
+      -4.070259,
+      -1.706422,
+      1.155757
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_35211": {
+    "instructor_id": "prof_2777",
+    "instructor_ids": [
+      "prof_2777"
+    ],
+    "name": "未来型健康増進医学[Future Health Promotion Medicine]",
+    "position": [
+      2.164681,
+      1.50092,
+      -1.062659
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_35212": {
+    "instructor_id": "prof_3055",
+    "instructor_ids": [
+      "prof_3055"
+    ],
+    "name": "現代社会基礎論[Basic Theory of Contemporary Society]",
+    "position": [
+      -2.358158,
+      -1.618465,
+      0.768061
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_35223": {
+    "instructor_id": "prof_11583",
+    "instructor_ids": [
+      "prof_11583"
+    ],
+    "name": "農村計画特論Ⅰ[Special Study on Rural Planning 1]",
+    "position": [
+      -6.038497,
+      -1.786317,
+      1.070636
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_35224": {
+    "instructor_id": "prof_11583",
+    "instructor_ids": [
+      "prof_11583"
+    ],
+    "name": "農村計画特論Ⅱ[Special Study on Rural Planning 2]",
+    "position": [
+      -6.048652,
+      -1.768758,
+      1.090801
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_35261": {
+    "instructor_id": "prof_4502",
+    "instructor_ids": [
+      "prof_4502"
+    ],
+    "name": "自然文化ツーリズム特論Ⅰ[Special Study on Nature and Culture based Tourism 1]",
+    "position": [
+      -2.693695,
+      -3.249965,
+      2.140846
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_35262": {
+    "instructor_id": "prof_4502",
+    "instructor_ids": [
+      "prof_4502"
+    ],
+    "name": "自然文化ツーリズム特論Ⅱ[Special Study on Nature and Culture based Tourism 2]",
+    "position": [
+      -2.775486,
+      -2.894261,
+      2.112005
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_35279": {
+    "instructor_id": "prof_4656",
+    "instructor_ids": [
+      "prof_4656"
+    ],
+    "name": "資源保全コミュニケーション特論Ⅰ[Resource Conservation Communication 1]",
+    "position": [
+      4.439712,
+      -2.509323,
+      15.343613
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_35280": {
+    "instructor_id": "prof_4656",
+    "instructor_ids": [
+      "prof_4656"
+    ],
+    "name": "資源保全コミュニケーション特論Ⅱ[Resource Conservation Communication 2]",
+    "position": [
+      4.399707,
+      -2.457855,
+      15.297815
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_35301": {
+    "instructor_id": "prof_2232",
+    "instructor_ids": [
+      "prof_2232"
+    ],
+    "name": "地域調査・分析研究Ⅰ[Research in Regional Survey and Analysis 1]",
+    "position": [
+      -5.90599,
+      12.118391,
+      -14.581375
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_35302": {
+    "instructor_id": "prof_2195",
+    "instructor_ids": [
+      "prof_2195"
+    ],
+    "name": "地域調査・分析研究Ⅱ[Research in Regional Survey and Analysis 2]",
+    "position": [
+      -1.646695,
+      2.031476,
+      -0.656387
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_35305": {
+    "instructor_id": "prof_4586",
+    "instructor_ids": [
+      "prof_4586"
+    ],
+    "name": "社会福祉基礎研究Ⅰ[Introduction to Social Welfare 1]",
+    "position": [
+      1.561419,
+      2.045526,
+      0.134973
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_35306": {
+    "instructor_id": "prof_2076",
+    "instructor_ids": [
+      "prof_2076"
+    ],
+    "name": "社会福祉基礎研究Ⅱ[Introduction to Social Welfare 2]",
+    "position": [
+      -2.269868,
+      -0.558,
+      0.716164
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_35307": {
+    "instructor_id": "prof_4454",
+    "instructor_ids": [
+      "prof_4454"
+    ],
+    "name": "社会福祉制度・政策研究Ⅰ[Studies on Social Policy 1]",
+    "position": [
+      0.184393,
+      3.949896,
+      3.40949
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_35308": {
+    "instructor_id": "prof_2230",
+    "instructor_ids": [
+      "prof_2230"
+    ],
+    "name": "社会福祉制度・政策研究Ⅱ[Studies on Social Policy 2]",
+    "position": [
+      -1.265452,
+      1.264009,
+      -2.415881
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_35310": {
+    "instructor_id": "prof_2385",
+    "instructor_ids": [
+      "prof_2385"
+    ],
+    "name": "福祉国家論研究Ⅱ[Studies in Theories of Welfare State 2]",
+    "position": [
+      -3.966094,
+      4.765451,
+      0.643233
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_35311": {
+    "instructor_id": "prof_2076",
+    "instructor_ids": [
+      "prof_2076"
+    ],
+    "name": "地域政策研究Ⅰ[Seminar on Regional Policy 1]",
+    "position": [
+      1.38062,
+      4.286222,
+      3.20459
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_35312": {
+    "instructor_id": "prof_4112",
+    "instructor_ids": [
+      "prof_4112"
+    ],
+    "name": "地域政策研究Ⅱ[Seminar on Regional Policy 2]",
+    "position": [
+      -0.995641,
+      -0.048857,
+      1.34212
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_35313": {
+    "instructor_id": "prof_4112",
+    "instructor_ids": [
+      "prof_4112"
+    ],
+    "name": "フィンテックとデジタルエコノミー[FinTech and Digital Economy]",
+    "position": [
+      -0.293206,
+      1.414922,
+      2.408569
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_35314": {
+    "instructor_id": "prof_11612",
+    "instructor_ids": [
+      "prof_11612"
+    ],
+    "name": "地方創生とエビデンスベース政策[Regional Revitalization and Evidence-Based Policies]",
+    "position": [
+      -3.845991,
+      -0.931341,
+      1.797349
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_35315": {
+    "instructor_id": "prof_11658",
+    "instructor_ids": [
+      "prof_11658"
+    ],
+    "name": "情報化学概論[Introduction to Information Chemistry]",
+    "position": [
+      -0.414185,
+      1.321633,
+      -0.229397
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_35317": {
+    "instructor_id": "prof_4662",
+    "instructor_ids": [
+      "prof_4662"
+    ],
+    "name": "地域環境研究Ⅰ[Seminar in Regional Environment 1]",
+    "position": [
+      2.805463,
+      5.102818,
+      0.463174
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_35337": {
+    "instructor_id": "prof_4502",
+    "instructor_ids": [
+      "prof_4502"
+    ],
+    "name": "地域経営論研究Ⅰ[Studies on Regional Management 1]",
+    "position": [
+      -2.975639,
+      -2.992129,
+      1.983499
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_35338": {
+    "instructor_id": "prof_4502",
+    "instructor_ids": [
+      "prof_4502"
+    ],
+    "name": "地域経営論研究Ⅱ[Studies on Regional Management 2]",
+    "position": [
+      -2.898565,
+      -3.031532,
+      1.920197
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_35341": {
+    "instructor_id": "prof_4656",
+    "instructor_ids": [
+      "prof_4656"
+    ],
+    "name": "文化資源コミュニケーション研究Ⅰ[Cultural Resource Communication Studies 1]",
+    "position": [
+      4.392678,
+      -2.458802,
+      15.293036
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_35342": {
+    "instructor_id": "prof_4656",
+    "instructor_ids": [
+      "prof_4656"
+    ],
+    "name": "文化資源コミュニケーション研究Ⅱ[Cultural Resource Communication Studies 2]",
+    "position": [
+      4.45331,
+      -2.515727,
+      15.364276
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_35343": {
+    "instructor_id": "prof_11583",
+    "instructor_ids": [
+      "prof_11583"
+    ],
+    "name": "地域食環境研究Ⅰ[Local Food Environment Studies 1]",
+    "position": [
+      3.185703,
+      0.054762,
+      -4.900722
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_35344": {
+    "instructor_id": "prof_11583",
+    "instructor_ids": [
+      "prof_11583"
+    ],
+    "name": "地域食環境研究Ⅱ[Local Food Environment Studies 2]",
+    "position": [
+      3.146472,
+      -0.02959,
+      -4.846916
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_35401": {
+    "instructor_id": "prof_4732",
+    "instructor_ids": [
+      "prof_4732"
+    ],
+    "name": "幼児発達臨床特論Ⅰ[Special Study on Young Child Developmental Psychology 1]",
+    "position": [
+      -0.837552,
+      0.588504,
+      2.425833
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_35402": {
+    "instructor_id": "prof_11267",
+    "instructor_ids": [
+      "prof_11267",
+      "prof_4502",
+      "prof_2670",
+      "prof_4656"
+    ],
+    "name": "幼児発達臨床特論Ⅱ[Special Study on Young Child Developmental Psychology 2]",
+    "position": [
+      -0.29986,
+      -1.286879,
+      3.112743
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_35405": {
+    "instructor_id": "prof_11616",
+    "instructor_ids": [
+      "prof_11616"
+    ],
+    "name": "情報社会の地方創生[Regional Revitalization in the Information Society]",
+    "position": [
+      -3.849711,
+      -0.827734,
+      0.994961
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_35406": {
+    "instructor_id": "prof_4586",
+    "instructor_ids": [
+      "prof_4586"
+    ],
+    "name": "ＡＩと産業協働[AI and Industrial Collaboration]",
+    "position": [
+      1.807346,
+      -1.813169,
+      0.018642
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_35501": {
+    "instructor_id": "prof_11267",
+    "instructor_ids": [
+      "prof_11267"
+    ],
+    "name": "幼児発達科学特論Ⅰ[Special Study on Young Child Developmental Science 1]",
+    "position": [
+      1.063707,
+      -2.76042,
+      0.32024
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_35502": {
+    "instructor_id": "prof_4381",
+    "instructor_ids": [
+      "prof_4381"
+    ],
+    "name": "幼児発達科学特論Ⅱ[Special Study on Young Child Developmental Science 2]",
+    "position": [
+      0.466947,
+      -2.281065,
+      0.192065
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_35503": {
+    "instructor_id": "prof_4656",
+    "instructor_ids": [
+      "prof_4656"
+    ],
+    "name": "ツーリズムとソリューション[Tourism and Solutions]",
+    "position": [
+      4.041551,
+      -2.285523,
+      14.900417
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_35504": {
+    "instructor_id": "prof_4454",
+    "instructor_ids": [
+      "prof_4454"
+    ],
+    "name": "プログラミングと技術基盤[Programming and Technology Infrastructure]",
+    "position": [
+      0.030999,
+      2.026998,
+      2.515021
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_41004.1": {
+    "instructor_id": "prof_4454",
+    "instructor_ids": [
+      "prof_4454"
+    ],
+    "name": "機械工学基礎実験[Basic Mechanical Engineering Laboratory]",
+    "position": [
+      2.087601,
+      5.484926,
+      0.4117
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_41007": {
+    "instructor_id": "prof_4454",
+    "instructor_ids": [
+      "prof_4454"
+    ],
+    "name": "応用プログラミング技術[Computer Programming Techniques]",
+    "position": [
+      -0.594209,
+      2.121746,
+      2.080429
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_41166": {
+    "instructor_id": "prof_2777",
+    "instructor_ids": [
+      "prof_2777"
+    ],
+    "name": "腫瘍学[Oncology]",
+    "position": [
+      1.992937,
+      1.532249,
+      -2.379446
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_41180": {
+    "instructor_id": "prof_2777",
+    "instructor_ids": [
+      "prof_2777"
+    ],
+    "name": "総合診療学・地域医療学[General Medicine]",
+    "position": [
+      2.302683,
+      1.296564,
+      -1.943608
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_41192": {
+    "instructor_id": "prof_3738",
+    "instructor_ids": [
+      "prof_3738"
+    ],
+    "name": "血液内科学臨床実習[Core Clerkship（Internal Medicine/Hematology）]",
+    "position": [
+      2.231125,
+      1.257092,
+      -1.897263
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_41218": {
+    "instructor_id": "prof_4586",
+    "instructor_ids": [
+      "prof_4586"
+    ],
+    "name": "臨床医学の共通基盤[Clinical Foundation]",
+    "position": [
+      2.31563,
+      1.283446,
+      -1.955593
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_42116": {
+    "instructor_id": "prof_4454",
+    "instructor_ids": [
+      "prof_4454"
+    ],
+    "name": "知能ロボティクス基礎実験[Fundamental Intelligent Robotics Laboratory]",
+    "position": [
+      2.123059,
+      5.482901,
+      0.42245
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_42225": {
+    "instructor_id": "prof_2385",
+    "instructor_ids": [
+      "prof_2385"
+    ],
+    "name": "センサ工学Ａ[Sensor Engineering A]",
+    "position": [
+      0.060291,
+      3.675116,
+      1.41903
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_42226": {
+    "instructor_id": "prof_2385",
+    "instructor_ids": [
+      "prof_2385"
+    ],
+    "name": "センサ工学Ｂ[Sensor Engineering B]",
+    "position": [
+      -0.004472,
+      3.670829,
+      1.398031
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_43015.1": {
+    "instructor_id": "prof_2232",
+    "instructor_ids": [
+      "prof_2232"
+    ],
+    "name": "情報理論Ａ[Information Theory A]",
+    "position": [
+      -1.207348,
+      2.09059,
+      3.215021
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_43015.2": {
+    "instructor_id": "prof_2232",
+    "instructor_ids": [
+      "prof_2232"
+    ],
+    "name": "情報理論Ａ[Information Theory A]",
+    "position": [
+      -1.221398,
+      2.189821,
+      3.303006
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_43016.1": {
+    "instructor_id": "prof_2232",
+    "instructor_ids": [
+      "prof_2232"
+    ],
+    "name": "情報理論Ｂ[Information Theory B]",
+    "position": [
+      -1.174753,
+      2.302733,
+      3.354272
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_43027": {
+    "instructor_id": "prof_2230",
+    "instructor_ids": [
+      "prof_2230"
+    ],
+    "name": "集積回路工学Ａ[Integrated Circuit A]",
+    "position": [
+      -0.518097,
+      3.226728,
+      2.003285
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_43028": {
+    "instructor_id": "prof_2230",
+    "instructor_ids": [
+      "prof_2230"
+    ],
+    "name": "集積回路工学Ｂ[Integrated Circuit B]",
+    "position": [
+      -0.398254,
+      3.110268,
+      1.973677
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_43040": {
+    "instructor_id": "prof_2230",
+    "instructor_ids": [
+      "prof_2230"
+    ],
+    "name": "情報通信工学実験第１[Information and Communication Engineering Laboratory I]",
+    "position": [
+      -0.299844,
+      3.571346,
+      2.723744
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_43096": {
+    "instructor_id": "prof_2230",
+    "instructor_ids": [
+      "prof_2230"
+    ],
+    "name": "電気・電子回路Ｂ[Electric & Electronic Circuits B]",
+    "position": [
+      -0.214015,
+      3.283603,
+      1.787149
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_43109": {
+    "instructor_id": "prof_2230",
+    "instructor_ids": [
+      "prof_2230"
+    ],
+    "name": "先端情報通信技術論Ａ[Advanced Topics on Information & Communication Engineering A]",
+    "position": [
+      -0.139513,
+      3.141131,
+      1.836635
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_43110": {
+    "instructor_id": "prof_2232",
+    "instructor_ids": [
+      "prof_2232"
+    ],
+    "name": "先端情報通信技術論Ｂ[Advanced Topics on Information & Communication Engineering B]",
+    "position": [
+      0.167094,
+      2.643502,
+      3.067194
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_43117": {
+    "instructor_id": "prof_2232",
+    "instructor_ids": [
+      "prof_2232"
+    ],
+    "name": "データベース論Ａ[Database System A]",
+    "position": [
+      -0.598759,
+      1.57623,
+      3.089407
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_43127.2": {
+    "instructor_id": "prof_2230",
+    "instructor_ids": [
+      "prof_2230",
+      "prof_2232"
+    ],
+    "name": "卒業研究 [Research Project]",
+    "position": [
+      2.722661,
+      -3.952481,
+      -0.257651
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_44160": {
+    "instructor_id": "prof_11267",
+    "instructor_ids": [
+      "prof_11267"
+    ],
+    "name": "プロジェクト・マネジメント[Project Management]",
+    "position": [
+      -2.580132,
+      -1.094315,
+      1.576901
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_44161": {
+    "instructor_id": "prof_4381",
+    "instructor_ids": [
+      "prof_4381"
+    ],
+    "name": "水環境工学[Water Environmental Engineering]",
+    "position": [
+      -1.43674,
+      -0.170716,
+      0.426007
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_44167": {
+    "instructor_id": "prof_11267",
+    "instructor_ids": [
+      "prof_11267"
+    ],
+    "name": "道路・交通政策論[Road and Transportation Policy]",
+    "position": [
+      -1.400401,
+      -0.754154,
+      1.536006
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_44189": {
+    "instructor_id": "prof_11267",
+    "instructor_ids": [
+      "prof_11267"
+    ],
+    "name": "スマートシティ概論[Introduction of Smart City]",
+    "position": [
+      -2.412945,
+      -2.227453,
+      1.360393
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_45190": {
+    "instructor_id": "prof_4556",
+    "instructor_ids": [
+      "prof_4556"
+    ],
+    "name": "国際保健論[Global Health Lecture]",
+    "position": [
+      2.134878,
+      0.517832,
+      -1.935025
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_45264": {
+    "instructor_id": "prof_4662",
+    "instructor_ids": [
+      "prof_4662"
+    ],
+    "name": "放射線物理学A[Radiological Physics A]",
+    "position": [
+      2.410479,
+      5.738663,
+      0.438126
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_45265": {
+    "instructor_id": "prof_4662",
+    "instructor_ids": [
+      "prof_4662"
+    ],
+    "name": "放射線物理学B[Radiological Physics B]",
+    "position": [
+      2.303002,
+      5.666283,
+      0.405829
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_48093": {
+    "instructor_id": "prof_1956",
+    "instructor_ids": [
+      "prof_1956"
+    ],
+    "name": "コミュニティ政策論Ⅰ[Community Policy I]",
+    "position": [
+      -6.180423,
+      -6.344273,
+      5.863127
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_48094": {
+    "instructor_id": "prof_1956",
+    "instructor_ids": [
+      "prof_1956"
+    ],
+    "name": "コミュニティ政策論Ⅱ[Community Policy II]",
+    "position": [
+      -6.179268,
+      -6.343752,
+      5.862675
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_48095": {
+    "instructor_id": "prof_1956",
+    "instructor_ids": [
+      "prof_1956"
+    ],
+    "name": "コミュニティ政策論演習Ⅰ[Seminar on Community Policy I]",
+    "position": [
+      -6.122878,
+      -6.285997,
+      5.804585
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_48096": {
+    "instructor_id": "prof_1956",
+    "instructor_ids": [
+      "prof_1956"
+    ],
+    "name": "コミュニティ政策論演習Ⅱ[Seminar on Community Policy II]",
+    "position": [
+      -6.16867,
+      -6.332511,
+      5.850873
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_48365": {
+    "instructor_id": "prof_2670",
+    "instructor_ids": [
+      "prof_2670"
+    ],
+    "name": "地域経済システム論Ⅰ[Regional Economic Systems I]",
+    "position": [
+      -3.795871,
+      -0.946969,
+      0.756465
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_48366": {
+    "instructor_id": "prof_2670",
+    "instructor_ids": [
+      "prof_2670"
+    ],
+    "name": "地域経済システム論Ⅱ[Regional Economic Systems II]",
+    "position": [
+      -3.817099,
+      -1.028188,
+      0.586203
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_48367": {
+    "instructor_id": "prof_2670",
+    "instructor_ids": [
+      "prof_2670"
+    ],
+    "name": "地域経済システム論演習Ⅰ[Seminar on Regional Economic Systems I]",
+    "position": [
+      -3.802075,
+      -2.218112,
+      1.532072
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_48368": {
+    "instructor_id": "prof_2670",
+    "instructor_ids": [
+      "prof_2670"
+    ],
+    "name": "地域経済システム論演習Ⅱ[Seminar on Regional Economic Systems II]",
+    "position": [
+      -3.735406,
+      -2.220654,
+      1.649642
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_48545": {
+    "instructor_id": "prof_4678",
+    "instructor_ids": [
+      "prof_4678"
+    ],
+    "name": "マーケティングⅠ[Marketing I]",
+    "position": [
+      9.234574,
+      -8.59957,
+      5.200174
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_48546": {
+    "instructor_id": "prof_4678",
+    "instructor_ids": [
+      "prof_4678"
+    ],
+    "name": "マーケティングⅡ[Marketing II]",
+    "position": [
+      9.061958,
+      -8.611534,
+      4.949868
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_48547": {
+    "instructor_id": "prof_4678",
+    "instructor_ids": [
+      "prof_4678"
+    ],
+    "name": "マーケティング演習Ⅰ[Seminar on Marketing Ｉ]",
+    "position": [
+      9.129475,
+      -8.675821,
+      5.155589
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_48548": {
+    "instructor_id": "prof_4678",
+    "instructor_ids": [
+      "prof_4678"
+    ],
+    "name": "マーケティング演習Ⅱ[Seminar on Marketing ＩI]",
+    "position": [
+      9.131551,
+      -8.6303,
+      5.173781
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_48597": {
+    "instructor_id": "prof_11583",
+    "instructor_ids": [
+      "prof_11583"
+    ],
+    "name": "農村計画論Ⅰ[Study on Rural Planning I]",
+    "position": [
+      -5.92674,
+      -1.687929,
+      1.110852
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_48598": {
+    "instructor_id": "prof_11583",
+    "instructor_ids": [
+      "prof_11583"
+    ],
+    "name": "農村計画論Ⅱ[Study on Rural Planning II]",
+    "position": [
+      -6.039649,
+      -1.773704,
+      1.08064
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_48599": {
+    "instructor_id": "prof_11583",
+    "instructor_ids": [
+      "prof_11583"
+    ],
+    "name": "農村計画論演習Ⅰ[Seminar on Rural Planning I]",
+    "position": [
+      -6.088645,
+      -1.801586,
+      1.075637
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_48600": {
+    "instructor_id": "prof_11583",
+    "instructor_ids": [
+      "prof_11583"
+    ],
+    "name": "農村計画論演習Ⅱ[Seminar on Rural Planning II]",
+    "position": [
+      -6.063418,
+      -1.783518,
+      1.085508
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_48633": {
+    "instructor_id": "prof_4656",
+    "instructor_ids": [
+      "prof_4656"
+    ],
+    "name": "自然文化資源コミュニケーションI[Natural and Cultural Heritage Communication I]",
+    "position": [
+      4.413654,
+      -2.498198,
+      15.329517
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_48634": {
+    "instructor_id": "prof_4656",
+    "instructor_ids": [
+      "prof_4656"
+    ],
+    "name": "自然文化資源コミュニケーションII[Natural and Cultural Heritage Communication II]",
+    "position": [
+      4.44179,
+      -2.519091,
+      15.42148
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_48635": {
+    "instructor_id": "prof_4656",
+    "instructor_ids": [
+      "prof_4656"
+    ],
+    "name": "遺産資源コミュニケーション演習I[Practicum in Heritage Communication I]",
+    "position": [
+      4.466812,
+      -2.538301,
+      15.375977
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_48636": {
+    "instructor_id": "prof_4656",
+    "instructor_ids": [
+      "prof_4656"
+    ],
+    "name": "遺産資源コミュニケーション演習II[Practicum in Heritage Communication II]",
+    "position": [
+      4.435086,
+      -2.537574,
+      15.380826
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_48729": {
+    "instructor_id": "prof_4502",
+    "instructor_ids": [
+      "prof_4502"
+    ],
+    "name": "公共空間デザイン論Ⅰ[Public Space Design I]",
+    "position": [
+      -2.301314,
+      -4.398074,
+      1.435874
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_48730": {
+    "instructor_id": "prof_4502",
+    "instructor_ids": [
+      "prof_4502"
+    ],
+    "name": "公共空間デザイン論Ⅱ[Public Space Design II]",
+    "position": [
+      -2.388555,
+      -4.309339,
+      1.516259
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_48731": {
+    "instructor_id": "prof_4502",
+    "instructor_ids": [
+      "prof_4502"
+    ],
+    "name": "公共空間デザイン演習Ⅰ[Seminar on Public Space Design I]",
+    "position": [
+      -2.712953,
+      -3.107565,
+      1.732546
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_48732": {
+    "instructor_id": "prof_4502",
+    "instructor_ids": [
+      "prof_4502"
+    ],
+    "name": "公共空間デザイン演習Ⅱ[Seminar on Public Space Design II]",
+    "position": [
+      -2.624282,
+      -3.041959,
+      1.582604
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_71003": {
+    "instructor_id": "prof_2777",
+    "instructor_ids": [
+      "prof_2777"
+    ],
+    "name": "医薬科学イノベーション概論[Innovation in Medical and Pharmaceutical Science]",
+    "position": [
+      2.526723,
+      1.688843,
+      -1.5764
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_71C10a.11": {
+    "instructor_id": "prof_1956",
+    "instructor_ids": [
+      "prof_1956"
+    ],
+    "name": "グローバル時代の社会学[Sociology in a Global World]",
+    "position": [
+      -2.09056,
+      -1.401567,
+      0.737387
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_72I00.27": {
+    "instructor_id": "prof_4841",
+    "instructor_ids": [
+      "prof_4841"
+    ],
+    "name": "異文化間コミュニケーション[Intercultural Communication]",
+    "position": [
+      1.994796,
+      -0.346595,
+      -2.494288
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_73G00.12": {
+    "instructor_id": "prof_4732",
+    "instructor_ids": [
+      "prof_4732"
+    ],
+    "name": "環境学とESD[Environmental Study and ESD]",
+    "position": [
+      -1.897812,
+      -1.042591,
+      0.790605
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_74N00.11": {
+    "instructor_id": "prof_2230",
+    "instructor_ids": [
+      "prof_2230"
+    ],
+    "name": "デザイン思考入門[Introduction to Design Thinking]",
+    "position": [
+      -1.350229,
+      -2.416299,
+      1.177444
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_7531a.10": {
+    "instructor_id": "prof_2848",
+    "instructor_ids": [
+      "prof_2848"
+    ],
+    "name": "化学ⅠＡ[Fundamental Chemistry 1A]",
+    "position": [
+      -0.467641,
+      1.273955,
+      -0.206493
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_7531b.10": {
+    "instructor_id": "prof_2848",
+    "instructor_ids": [
+      "prof_2848"
+    ],
+    "name": "化学ⅠＢ[Fundamental Chemistry 1B]",
+    "position": [
+      -0.472246,
+      1.320852,
+      -0.289925
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_7532a.10": {
+    "instructor_id": "prof_11658",
+    "instructor_ids": [
+      "prof_11658"
+    ],
+    "name": "化学ⅡＡ[Fundamental Chemistry 2A]",
+    "position": [
+      -0.553881,
+      1.205818,
+      -0.255412
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_7532b.10": {
+    "instructor_id": "prof_11658",
+    "instructor_ids": [
+      "prof_11658"
+    ],
+    "name": "化学ⅡＢ[Fundamental Chemistry 2B]",
+    "position": [
+      -0.462375,
+      1.273531,
+      -0.372196
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_77642": {
+    "instructor_id": "prof_4721",
+    "instructor_ids": [
+      "prof_4721"
+    ],
+    "name": "ことばと表現[language and expression]",
+    "position": [
+      1.70322,
+      0.429432,
+      -4.002094
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_77643": {
+    "instructor_id": "prof_2230",
+    "instructor_ids": [
+      "prof_2230"
+    ],
+    "name": "アート思考とIoTプロトタイピング演習[Art Thinking and IoT Prototyping]",
+    "position": [
+      -0.128414,
+      2.905952,
+      1.859879
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_77646.1": {
+    "instructor_id": "prof_11612",
+    "instructor_ids": [
+      "prof_11612"
+    ],
+    "name": "防災と観光[Disaster Prevention and Tourism]",
+    "position": [
+      -0.494511,
+      -1.468689,
+      3.619266
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_77646.2": {
+    "instructor_id": "prof_11612",
+    "instructor_ids": [
+      "prof_11612"
+    ],
+    "name": "防災と観光（防災・復興人材選抜入学者用）[Disaster Prevention and Tourism]",
+    "position": [
+      -0.543847,
+      -1.453026,
+      3.659988
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_77663": {
+    "instructor_id": "prof_4721",
+    "instructor_ids": [
+      "prof_4721"
+    ],
+    "name": "ことばと心１[language and mind 1]",
+    "position": [
+      1.638811,
+      0.361881,
+      -4.001521
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_77664": {
+    "instructor_id": "prof_4721",
+    "instructor_ids": [
+      "prof_4721"
+    ],
+    "name": "ことばと心２[language and mind 2]",
+    "position": [
+      1.72418,
+      0.447144,
+      -3.940046
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_77665": {
+    "instructor_id": "prof_2659",
+    "instructor_ids": [
+      "prof_2659"
+    ],
+    "name": "ライフデザインと消費者ガバナンス[Life Design & Consumer Governance]",
+    "position": [
+      -0.501926,
+      -1.942776,
+      1.237157
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_79500.18": {
+    "instructor_id": "prof_11380",
+    "instructor_ids": [
+      "prof_11380",
+      "prof_2385",
+      "prof_1956",
+      "prof_2195",
+      "prof_4386"
+    ],
+    "name": "大学・社会生活論[Lecture on Life in Campus and Society]",
+    "position": [
+      1.552756,
+      -1.133787,
+      -3.173406
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_79605.05": {
+    "instructor_id": "prof_11583",
+    "instructor_ids": [
+      "prof_11583"
+    ],
+    "name": "データサイエンス基礎[Introduction to Data Science ]",
+    "position": [
+      -0.300238,
+      1.323097,
+      3.6342
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_79605.16": {
+    "instructor_id": "prof_2076",
+    "instructor_ids": [
+      "prof_2076"
+    ],
+    "name": "データサイエンス基礎[Introduction to Data Science ]",
+    "position": [
+      -0.253541,
+      1.427364,
+      3.654612
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_79607.05": {
+    "instructor_id": "prof_11583",
+    "instructor_ids": [
+      "prof_11583"
+    ],
+    "name": "データサイエンス基礎A[Introduction to Data Science A]",
+    "position": [
+      -0.333544,
+      1.262726,
+      3.59131
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_79607.16": {
+    "instructor_id": "prof_2076",
+    "instructor_ids": [
+      "prof_2076"
+    ],
+    "name": "データサイエンス基礎A[Introduction to Data Science A]",
+    "position": [
+      -0.286459,
+      1.423275,
+      3.650319
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_79608.16": {
+    "instructor_id": "prof_2076",
+    "instructor_ids": [
+      "prof_2076"
+    ],
+    "name": "データサイエンス基礎B[Introduction to Data Science B]",
+    "position": [
+      -0.475007,
+      1.270083,
+      3.198967
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_79701.18": {
+    "instructor_id": "prof_4381",
+    "instructor_ids": [
+      "prof_4381",
+      "prof_2195"
+    ],
+    "name": "地域概論[Introduction to Region-studies]",
+    "position": [
+      1.221169,
+      -1.823249,
+      -2.252158
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_79701.191": {
+    "instructor_id": "prof_2670",
+    "instructor_ids": [
+      "prof_2670"
+    ],
+    "name": "地域概論[Introduction to Region-studies]",
+    "position": [
+      1.435346,
+      -1.27911,
+      -3.248375
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_79701.192": {
+    "instructor_id": "prof_2670",
+    "instructor_ids": [
+      "prof_2670",
+      "prof_4662"
+    ],
+    "name": "地域概論[Introduction to Region-studies]",
+    "position": [
+      1.139326,
+      -2.02945,
+      -2.030242
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_79702.18": {
+    "instructor_id": "prof_4381",
+    "instructor_ids": [
+      "prof_4381",
+      "prof_2195"
+    ],
+    "name": "国際・地域概論[Introduction to International and Regional Studies]",
+    "position": [
+      1.209694,
+      -1.836301,
+      -2.27389
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_79702.191": {
+    "instructor_id": "prof_2670",
+    "instructor_ids": [
+      "prof_2670"
+    ],
+    "name": "国際・地域概論[Introduction to International and Regional Studies]",
+    "position": [
+      1.449583,
+      -1.250475,
+      -3.285773
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_79702.192": {
+    "instructor_id": "prof_2670",
+    "instructor_ids": [
+      "prof_2670",
+      "prof_4662"
+    ],
+    "name": "国際・地域概論[Introduction to International and Regional Studies]",
+    "position": [
+      1.183558,
+      -1.924887,
+      -2.147227
+    ],
+    "source": "joint_umap_syllabus"
+  },
+  "course_P1205.11": {
+    "instructor_id": "prof_2230",
+    "instructor_ids": [
+      "prof_2230"
+    ],
+    "name": "イノベーション方法論（サステ環境/II-ESD）[Innovation Methodology（Sustainable P)]",
+    "position": [
+      2.062196,
+      -0.592377,
+      3.012975
+    ],
+    "source": "joint_umap_syllabus"
+  }
+}

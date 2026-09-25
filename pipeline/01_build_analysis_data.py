@@ -1,5 +1,8 @@
 """
-Build analysis_data.json for Sentence Transformers / embedding.
+01 — Build analysis_data.json (整形・分離)
+
+Raw → Analysis: research/syllabus texts for embedding.
+Merges identical courses (same title + overview) and aggregates instructor_ids.
 
 Input (data/raw/):
   researchmap/kanazawa_researchers_index.json  (reference; not embedded)
@@ -14,6 +17,9 @@ Output:
 
 Flat node lists (professors / courses / papers) — no nesting.
 UI metadata (name, photo, affiliation, URLs) is excluded.
+
+Usage:
+  python pipeline/01_build_analysis_data.py
 """
 
 from __future__ import annotations
@@ -24,6 +30,11 @@ import json
 import re
 from pathlib import Path
 from typing import Any
+
+from syllabus_meta import (
+    load_syllabus_detail_urls,
+    syllabus_url_for_code,
+)
 
 ROOT = Path(__file__).resolve().parent.parent
 RAW = ROOT / "data" / "raw"
@@ -77,6 +88,15 @@ def base_name(name: str) -> str:
 
 def norm_name(name: str) -> str:
     return re.sub(r"\s+", "", base_name(name))
+
+
+def normalize_for_merge(value: str) -> str:
+    """Collapse whitespace / newlines for course identity comparison."""
+    return re.sub(r"\s+", "", clean_text(value or ""))
+
+
+def course_merge_key(title: str, text: str) -> tuple[str, str]:
+    return (normalize_for_merge(title), normalize_for_merge(text))
 
 
 def split_keywords(raw: Any) -> list[str]:
@@ -244,8 +264,17 @@ def build_courses(
     name_to_id: dict[str, str],
     attr_keywords: dict[str, list[str]],
 ) -> list[dict]:
-    courses: list[dict] = []
-    seen_ids: set[str] = set()
+    """
+    Build course nodes, merging rows that share the same subject title and
+    normalized syllabus text (主題・学習目標・概要) even when instructors or
+    timetable codes differ.
+
+    One node per content group; all matched faculty get taught_by edges via
+    instructor_ids. syllabus_urls keeps every distinct detail URL.
+    """
+    url_by_code = load_syllabus_detail_urls()
+    # merge_key -> accumulator
+    groups: dict[tuple[str, str], dict] = {}
 
     with SYLLABUS_BASIC.open(encoding="utf-8-sig", newline="") as f:
         reader = csv.DictReader(f)
@@ -263,6 +292,7 @@ def build_courses(
             if not code:
                 continue
 
+            title = (row.get("科目名") or "").strip()
             text = join_text_parts(
                 [
                     row.get("授業の主題") or "",
@@ -274,23 +304,63 @@ def build_courses(
                 split_keywords(row.get("キーワード")),
                 attr_keywords.get(code, []),
             )
+            syllabus_url = syllabus_url_for_code(code, url_by_code)
+            key = course_merge_key(title, text)
 
-            # One course node per timetable code; first matched instructor for edges.
-            # If multiple of our faculty teach it, emit additional edge-oriented
-            # copies with distinct ids so instructor_id stays a single key.
-            for idx, instructor_id in enumerate(matched_ids):
-                course_id = f"course_{code}" if idx == 0 else f"course_{code}__{instructor_id}"
-                if course_id in seen_ids:
-                    continue
-                seen_ids.add(course_id)
-                courses.append(
-                    {
-                        "id": course_id,
-                        "instructor_id": instructor_id,
-                        "text": text,
-                        "keywords": keywords,
-                    }
-                )
+            if key not in groups:
+                groups[key] = {
+                    "codes": [],
+                    "instructor_ids": [],
+                    "syllabus_urls": [],
+                    "text": text,
+                    "title": title,
+                    "keywords": [],
+                }
+            g = groups[key]
+            if code not in g["codes"]:
+                g["codes"].append(code)
+            for pid in matched_ids:
+                if pid not in g["instructor_ids"]:
+                    g["instructor_ids"].append(pid)
+            if syllabus_url and syllabus_url not in g["syllabus_urls"]:
+                g["syllabus_urls"].append(syllabus_url)
+            g["keywords"] = merge_keywords(g["keywords"], keywords)
+            # Prefer the longest non-empty text as canonical description
+            if len(text) > len(g["text"]):
+                g["text"] = text
+            if title and not g["title"]:
+                g["title"] = title
+
+    courses: list[dict] = []
+    seen_ids: set[str] = set()
+    for g in groups.values():
+        codes = sorted(g["codes"])
+        instructor_ids = g["instructor_ids"]
+        if not codes or not instructor_ids:
+            continue
+        primary_code = codes[0]
+        syllabus_urls = g["syllabus_urls"]
+        course_id = f"course_{primary_code}"
+        # Rare: same timetable code can appear with different syllabus text;
+        # keep IDs unique so downstream UMAP/edges stay 1:1.
+        if course_id in seen_ids:
+            suffix = 2
+            while f"{course_id}__m{suffix}" in seen_ids:
+                suffix += 1
+            course_id = f"{course_id}__m{suffix}"
+        seen_ids.add(course_id)
+        courses.append(
+            {
+                "id": course_id,
+                "instructor_id": instructor_ids[0],
+                "instructor_ids": instructor_ids,
+                "timetable_codes": codes,
+                "syllabus_urls": syllabus_urls,
+                "syllabus_url": syllabus_urls[0] if syllabus_urls else "",
+                "text": g["text"],
+                "keywords": g["keywords"],
+            }
+        )
 
     courses.sort(key=lambda x: x["id"])
     return courses
@@ -361,7 +431,7 @@ def main() -> None:
     with OUT_PATH.open("w", encoding="utf-8") as f:
         json.dump(payload, f, ensure_ascii=False, indent=2)
 
-    print("=== build_analysis_data ===")
+    print("=== 01_build_analysis_data ===")
     print(f"researchers_index entries : {len(researchers_index)}")
     print(f"output                    : {OUT_PATH}")
     print(f"有効な教員数              : {len(professors)}")
@@ -371,6 +441,12 @@ def main() -> None:
         for pid in excluded_ids:
             print(f"  - {pid}")
     print(f"講義数                    : {len(courses)}")
+    multi_prof = sum(1 for c in courses if len(c.get("instructor_ids") or []) > 1)
+    multi_url = sum(1 for c in courses if len(c.get("syllabus_urls") or []) > 1)
+    multi_code = sum(1 for c in courses if len(c.get("timetable_codes") or []) > 1)
+    print(f"  うち複数教員統合          : {multi_prof}")
+    print(f"  うち複数シラバスURL       : {multi_url}")
+    print(f"  うち複数時間割コード統合  : {multi_code}")
     print(f"papers                    : {len(papers)}")
 
 
