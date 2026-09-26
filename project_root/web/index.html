@@ -300,6 +300,26 @@
         .node-label.major:active {
             background: rgba(90, 158, 200, 0.55);
         }
+        /* Trail filter: visited / related fields vs background landmarks */
+        .node-label.field.trail-active,
+        .node-label.major.trail-active {
+            font-weight: 800;
+            border-width: 2px;
+            border-color: rgba(94, 224, 255, 0.95);
+            color: #ffffff;
+            background: rgba(14, 32, 44, 0.92);
+            text-shadow: 0 0 10px rgba(94, 224, 255, 0.5);
+            box-shadow: 0 0 0 1px rgba(94, 224, 255, 0.25);
+        }
+        .node-label.field.trail-dim,
+        .node-label.major.trail-dim {
+            font-weight: 400;
+            border-color: rgba(80, 90, 100, 0.25);
+            color: #8a9099;
+            background: rgba(12, 14, 18, 0.35);
+            text-shadow: none;
+            box-shadow: none;
+        }
         .node-label.hidden-label { display: none !important; }
 
         .prof-billboard {
@@ -474,6 +494,21 @@
         const TRAIL_DIM = 0.05;
         const TAUGHT_BY_FOCUS_COLOR = 0x2ee6ff;
 
+        // Trail filter: field landmark contrast (visited / related vs background)
+        const TRAIL_FIELD_ACTIVE_OPACITY = 0.72;
+        const TRAIL_FIELD_INACTIVE_OPACITY = 0.04;
+        const TRAIL_FIELD_ACTIVE_COLOR = 0x5ee0ff;
+        const TRAIL_FIELD_LABEL_ACTIVE_OP = 1.0;
+        const TRAIL_FIELD_LABEL_INACTIVE_OP = 0.1;
+
+        // Selection: strong-edge highlight (tunable)
+        const EDGE_HIGHLIGHT_THRESHOLD = 0.5;
+        const EDGE_HIGHLIGHT_COLOR = 0xff9f1c; // neon orange / gold
+        const EDGE_HIGHLIGHT_OPACITY = 1.0;
+        const EDGE_HIGHLIGHT_LINEWIDTH = 3;
+        const EDGE_DIM_OPACITY = 0.08;
+        const EDGE_NEIGHBOR_SCALE = 1.45;
+
         const QUICK_TAGS = [
             { label: 'AI・データ', terms: ['AI', 'データ', '機械学習', 'DX', 'データサイエンス', '情報'] },
             { label: '地域・まちづくり', terms: ['地域', 'まちづくり', '都市', '観光', 'コミュニティ', '復興'] },
@@ -505,6 +540,9 @@
         let trailFilterOn = false;
         // Professor focus: emphasize taught_by edges + connected courses
         let focusHighlight = null; // { profId, courseIds: Set, edges: Set<rec> }
+        // Selection: edges above EDGE_HIGHLIGHT_THRESHOLD + neighbor emphasis
+        let selectionHighlight = null; // { nodeId, edges: Set<rec>, neighbors: Set<id> }
+        let trailActiveFields = null; // Set<fieldId> when trail filter on, else null
 
         const raycaster = new THREE.Raycaster();
         const mouse = new THREE.Vector2();
@@ -623,6 +661,27 @@
             const near = isLandmark(mesh.userData) ? 55 : LABEL_NEAR;
             const far = isLandmark(mesh.userData) ? 120 : LABEL_FAR;
             const dist = camera.position.distanceTo(mesh.position);
+
+            // Trail filter: strong landmark contrast overrides distance fade
+            if (trailFilterOn && isLandmark(mesh.userData) && trailActiveFields) {
+                const active = trailActiveFields.has(mesh.userData.id);
+                el.classList.toggle('trail-active', active);
+                el.classList.toggle('trail-dim', !active);
+                if (!active && dist > far) {
+                    label.visible = false;
+                    el.classList.add('hidden-label');
+                    el.style.opacity = '0';
+                    return;
+                }
+                label.visible = true;
+                el.classList.remove('hidden-label');
+                el.style.opacity = String(
+                    active ? TRAIL_FIELD_LABEL_ACTIVE_OP : TRAIL_FIELD_LABEL_INACTIVE_OP
+                );
+                return;
+            }
+            el.classList.remove('trail-active', 'trail-dim');
+
             if (dist > far) {
                 label.visible = false;
                 el.classList.add('hidden-label');
@@ -631,6 +690,7 @@
             }
             label.visible = true;
             el.classList.remove('hidden-label');
+
             const t = dist <= near
                 ? 1
                 : 1 - (dist - near) / (far - near);
@@ -843,8 +903,91 @@
             if (rec.type === 'field_hierarchy') return 0.22;
             if (rec.type === 'belongs_to_field') return 0.28;
             if (rec.type === 'taught_by') return 0.22;
+            if (rec.type === 'course_field') return 0.26;
             // discovery similarity: keep faint (~0.2)
             return 0.2;
+        }
+
+        /** Effective relation strength for highlight gating (structural edges count as 1). */
+        function edgeEffectiveScore(rec) {
+            const s = Number(rec.score) || 0;
+            if (s > 0) return s;
+            // Binary / membership edges ship with score 0 — treat as full strength
+            if (
+                rec.type === 'belongs_to_field'
+                || rec.type === 'taught_by'
+                || rec.type === 'field_hierarchy'
+                || rec.type === 'course_field'
+            ) {
+                return 1.0;
+            }
+            return 0;
+        }
+
+        function computeTrailActiveFields(visited) {
+            const active = new Set();
+            if (!visited || !visited.size) return active;
+            for (const id of visited) {
+                const n = nodeDict[id];
+                if (n && isLandmark(n)) active.add(id);
+            }
+            for (const [fieldId, members] of fieldMemberIds) {
+                for (const mid of members) {
+                    if (visited.has(mid)) {
+                        active.add(fieldId);
+                        break;
+                    }
+                }
+            }
+            return active;
+        }
+
+        function buildSelectionHighlight(mesh) {
+            if (!mesh) return null;
+            const nid = mesh.userData.id;
+            const edges = new Set();
+            const neighbors = new Set();
+            for (const rec of edgesByNode.get(nid) || []) {
+                if (edgeEffectiveScore(rec) < EDGE_HIGHLIGHT_THRESHOLD) continue;
+                edges.add(rec);
+                if (!rec.pinned) {
+                    rec.pinned = true;
+                    rec._hlPinned = true;
+                }
+                const otherId = rec.source === nid ? rec.target : rec.source;
+                if (otherId && otherId !== nid) neighbors.add(otherId);
+            }
+            return { nodeId: nid, edges, neighbors };
+        }
+
+        function clearSelectionHighlightPins(hl) {
+            if (!hl) return;
+            for (const rec of hl.edges) {
+                resetEdgeHighlightStyle(rec);
+                if (rec._hlPinned) {
+                    rec.pinned = false;
+                    delete rec._hlPinned;
+                }
+            }
+        }
+
+        function resetEdgeHighlightStyle(rec) {
+            if (!rec || !rec._edgeHl) return;
+            if (rec.baseColor != null) rec.material.color.setHex(rec.baseColor);
+            if (rec.baseLinewidth != null) rec.material.linewidth = rec.baseLinewidth;
+            rec._edgeHl = false;
+        }
+
+        function applyEdgeHighlightStyle(rec) {
+            if (rec.baseColor == null) rec.baseColor = rec.material.color.getHex();
+            if (rec.baseLinewidth == null) {
+                rec.baseLinewidth = rec.material.linewidth != null ? rec.material.linewidth : 1;
+            }
+            rec.material.color.setHex(EDGE_HIGHLIGHT_COLOR);
+            rec.material.linewidth = EDGE_HIGHLIGHT_LINEWIDTH;
+            rec.material.opacity = EDGE_HIGHLIGHT_OPACITY;
+            rec.line.visible = true;
+            rec._edgeHl = true;
         }
 
         function revealEdge(rec, { animate = true, pin = true } = {}) {
@@ -895,8 +1038,15 @@
             // Landmarks stay visible (wireframe)
             for (const mesh of fieldMeshes) {
                 mesh.visible = true;
+                const baseCol = mesh.userData.baseColor != null
+                    ? mesh.userData.baseColor
+                    : (mesh.userData.type === 'major' ? MAJOR_COLOR : FIELD_COLOR);
+                mesh.material.color.setHex(baseCol);
                 mesh.material.opacity = fieldWireOpacity(mesh);
                 mesh.scale.set(1, 1, 1);
+                if (mesh.userData.labelEl) {
+                    mesh.userData.labelEl.classList.remove('trail-active', 'trail-dim');
+                }
                 syncNodeLabel(mesh);
             }
             clearSelection({ keepPanel: false });
@@ -925,8 +1075,17 @@
                     }
                 }
             }
+            // Restore neighbor scales + edge styles from selection highlight
+            if (selectionHighlight) {
+                for (const nid of selectionHighlight.neighbors) {
+                    const m = meshById[nid];
+                    if (m && m !== selectedNode) m.scale.set(1, 1, 1);
+                }
+                clearSelectionHighlightPins(selectionHighlight);
+            }
             selectedNode = null;
             focusHighlight = null;
+            selectionHighlight = null;
             hoveredNode = null;
             hideHoverTip();
             if (!keepPanel) infoPanel.style.display = 'none';
@@ -1133,6 +1292,15 @@
                 }
                 focusHighlight = null;
             }
+            // Clear previous selection edge highlight
+            if (selectionHighlight) {
+                for (const nid of selectionHighlight.neighbors) {
+                    const m = meshById[nid];
+                    if (m && m !== mesh && m !== selectedNode) m.scale.set(1, 1, 1);
+                }
+                clearSelectionHighlightPins(selectionHighlight);
+                selectionHighlight = null;
+            }
 
             selectedNode = mesh;
             const boost = isLandmark(mesh.userData) ? 1.2 : 1.85;
@@ -1146,6 +1314,8 @@
             } else {
                 focusHighlight = null;
             }
+
+            selectionHighlight = buildSelectionHighlight(mesh);
 
             if (expand) expandFromNode(mesh);
             if (flyCamera) flyToNode(mesh);
@@ -1432,6 +1602,7 @@
             const mesh = new THREE.Mesh(geo, mat);
             mesh.position.copy(node.vec3);
             mesh.userData = node;
+            mesh.userData.baseColor = isMajor ? MAJOR_COLOR : FIELD_COLOR;
             mesh.userData.raycastable = false; // never block professor/course picks
             mesh.visible = true;
 
@@ -1545,13 +1716,21 @@
             if (!dataReady) return;
             const activeFields = getActiveFieldAlphas();
             const visited = trailFilterOn ? new Set(trail.map(t => t.id)) : null;
+            trailActiveFields = visited ? computeTrailActiveFields(visited) : null;
 
             // Field landmarks: wireframe LoD (fade when close so members stay clear)
             for (const mesh of fieldMeshes) {
+                const baseCol = mesh.userData.baseColor != null
+                    ? mesh.userData.baseColor
+                    : (mesh.userData.type === 'major' ? MAJOR_COLOR : FIELD_COLOR);
+                mesh.material.color.setHex(baseCol);
                 const op = fieldWireOpacity(mesh);
                 mesh.visible = true;
                 mesh.material.opacity = op;
                 mesh.material.depthWrite = false;
+                if (mesh.userData.labelEl) {
+                    mesh.userData.labelEl.classList.remove('trail-active', 'trail-dim');
+                }
                 // Near: soften labels too
                 const dist = camera.position.distanceTo(mesh.position);
                 if (mesh.userData.labelEl) {
@@ -1637,11 +1816,12 @@
             }
 
             for (const rec of edgeRecords) {
-                // Reset focus tint each frame before re-applying
+                // Reset focus / selection tint each frame before re-applying
                 if (rec.baseColor != null && rec._focusTinted) {
                     rec.material.color.setHex(rec.baseColor);
                     rec._focusTinted = false;
                 }
+                resetEdgeHighlightStyle(rec);
 
                 if (rec.type === 'field_hierarchy') {
                     rec.line.visible = true;
@@ -1663,9 +1843,10 @@
                         return src.visible && tgt.visible;
                     }
                     if (rec.type === 'similarity') return false;
-                    if (rec.type === 'belongs_to_field') {
-                        const prof = src.userData.type === 'professor' ? src : tgt;
-                        return !!(prof && prof.visible && (prof.material.opacity || 0) > 0.12);
+                    if (rec.type === 'belongs_to_field' || rec.type === 'course_field') {
+                        const mid = src.userData.type === 'professor' || src.userData.type === 'course'
+                            ? src : tgt;
+                        return !!(mid && mid.visible && (mid.material.opacity || 0) > 0.12);
                     }
                     if (rec.type === 'taught_by') {
                         // Only when lecture satellite is visible (near view)
@@ -1738,32 +1919,103 @@
                 }
             }
 
-            // --- Trail filter: only visited nodes (and their mutual edges) stand out ---
-            if (visited) {
-                for (const mesh of nodeMeshes) {
-                    if (visited.has(mesh.userData.id)) continue;
-                    if (isLandmark(mesh.userData)) {
-                        mesh.material.opacity = Math.min(mesh.material.opacity || 0, TRAIL_DIM);
-                        if (mesh.userData.labelEl) {
-                            mesh.userData.labelEl.style.opacity = String(TRAIL_DIM);
+            // --- Selection: threshold+ edges vivid; others dimmed ---
+            if (selectionHighlight && selectedNode) {
+                const { edges: hlEdges, neighbors } = selectionHighlight;
+                for (const nid of neighbors) {
+                    const m = meshById[nid];
+                    if (!m || m === selectedNode) continue;
+                    // Don't fight professor-focus course scale (1.65)
+                    const underFocusCourse = !!(
+                        focusHighlight && focusHighlight.courseIds.has(nid)
+                    );
+                    if (!underFocusCourse) {
+                        m.visible = true;
+                        m.scale.set(EDGE_NEIGHBOR_SCALE, EDGE_NEIGHBOR_SCALE, EDGE_NEIGHBOR_SCALE);
+                        if (m.material.opacity != null) {
+                            m.material.opacity = Math.max(m.material.opacity || 0, 0.85);
                         }
-                    } else {
-                        mesh.material.opacity = Math.min(mesh.material.opacity || 0, TRAIL_DIM);
-                        if (mesh.userData.billboardEl) {
-                            mesh.userData.billboardEl.style.opacity = String(TRAIL_DIM);
+                        if (m.userData.billboardEl) {
+                            m.userData.billboardEl.style.opacity = '1';
                         }
-                        if (mesh.userData.glowMat) {
-                            mesh.userData.glowMat.opacity = Math.min(
-                                mesh.userData.glowMat.opacity || 0,
-                                TRAIL_DIM * 0.4
+                        if (m.userData.glowMat) {
+                            m.userData.glowMat.opacity = Math.max(
+                                m.userData.glowMat.opacity || 0,
+                                0.35
                             );
                         }
-                        if ((mesh.material.opacity || 0) < 0.03) {
-                            mesh.visible = false;
-                        }
+                        syncNodeLabel(m);
                     }
                 }
                 for (const rec of edgeRecords) {
+                    if (hlEdges.has(rec)) {
+                        applyEdgeHighlightStyle(rec);
+                    } else if (rec.line.visible) {
+                        rec.material.opacity = Math.min(
+                            rec.material.opacity || 0,
+                            EDGE_DIM_OPACITY
+                        );
+                    }
+                }
+            }
+
+            // --- Trail filter: only visited nodes (and their mutual edges) stand out ---
+            if (visited) {
+                const activeFieldSet = trailActiveFields || new Set();
+                for (const mesh of nodeMeshes) {
+                    if (isLandmark(mesh.userData)) {
+                        const active = activeFieldSet.has(mesh.userData.id);
+                        if (active) {
+                            mesh.visible = true;
+                            mesh.material.color.setHex(TRAIL_FIELD_ACTIVE_COLOR);
+                            mesh.material.opacity = Math.max(
+                                mesh.material.opacity || 0,
+                                TRAIL_FIELD_ACTIVE_OPACITY
+                            );
+                            if (mesh.userData.labelEl) {
+                                mesh.userData.labelEl.classList.add('trail-active');
+                                mesh.userData.labelEl.classList.remove('trail-dim');
+                                mesh.userData.labelEl.style.opacity = String(
+                                    TRAIL_FIELD_LABEL_ACTIVE_OP
+                                );
+                            }
+                        } else {
+                            mesh.material.color.setHex(
+                                mesh.userData.baseColor != null
+                                    ? mesh.userData.baseColor
+                                    : (mesh.userData.type === 'major' ? MAJOR_COLOR : FIELD_COLOR)
+                            );
+                            mesh.material.opacity = Math.min(
+                                mesh.material.opacity || 0,
+                                TRAIL_FIELD_INACTIVE_OPACITY
+                            );
+                            if (mesh.userData.labelEl) {
+                                mesh.userData.labelEl.classList.add('trail-dim');
+                                mesh.userData.labelEl.classList.remove('trail-active');
+                                mesh.userData.labelEl.style.opacity = String(
+                                    TRAIL_FIELD_LABEL_INACTIVE_OP
+                                );
+                            }
+                        }
+                        continue;
+                    }
+                    if (visited.has(mesh.userData.id)) continue;
+                    mesh.material.opacity = Math.min(mesh.material.opacity || 0, TRAIL_DIM);
+                    if (mesh.userData.billboardEl) {
+                        mesh.userData.billboardEl.style.opacity = String(TRAIL_DIM);
+                    }
+                    if (mesh.userData.glowMat) {
+                        mesh.userData.glowMat.opacity = Math.min(
+                            mesh.userData.glowMat.opacity || 0,
+                            TRAIL_DIM * 0.4
+                        );
+                    }
+                    if ((mesh.material.opacity || 0) < 0.03) {
+                        mesh.visible = false;
+                    }
+                }
+                for (const rec of edgeRecords) {
+                    if (selectionHighlight && selectionHighlight.edges.has(rec)) continue;
                     const keepEdge = visited.has(rec.source) && visited.has(rec.target);
                     if (!keepEdge && rec.line.visible) {
                         rec.material.opacity = Math.min(rec.material.opacity || 0, TRAIL_DIM);
@@ -1878,6 +2130,8 @@
                         line,
                         material: mat,
                         pinned: false,
+                        baseColor: mat.color.getHex(),
+                        baseLinewidth: mat.linewidth != null ? mat.linewidth : 1,
                     };
                     edgeRecords.push(rec);
                     ensureEdgeIndex(edge.source).push(rec);
