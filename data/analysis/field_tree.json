@@ -4,6 +4,116 @@
       "id": "major_情報学",
       "name": "情報学",
       "member_count": 14,
+      "keywords": [
+        "計算機科学",
+        "アルゴリズム理論",
+        "グラフ理論",
+        "組合せ最適化",
+        "離散数学",
+        "システム制御理論",
+        "制御応用",
+        "システムモデリング",
+        "実時間最適化",
+        "ビッグデータ解析",
+        "統計学",
+        "産業連関表",
+        "形状解析",
+        "ベイズ統計",
+        "生命画像解析",
+        "医療福祉工学",
+        "ヒューマンマシンインタラクション",
+        "歩行リハビリシステム",
+        "共創工学",
+        "認知科学",
+        "リズム同期",
+        "人間行動",
+        "脳神経システム",
+        "認知",
+        "視覚",
+        "心理学",
+        "感覚・知覚",
+        "テキスト理解",
+        "状況モデル",
+        "発達障害",
+        "幼小接続",
+        "保育における自然",
+        "保育における科学",
+        "構文",
+        "意味論",
+        "認知文法",
+        "心理言語学",
+        "言語の理解",
+        "事象関連電位",
+        "コンピュテーショナルイメージング・ディスプレイ",
+        "ホログラフィ",
+        "高度道路交通システム",
+        "運転支援システム",
+        "集積回路",
+        "イメージセンサ",
+        "インタラクティブシステム",
+        "ウェアラブルコンピュータ",
+        "情報学",
+        "AI",
+        "データサイエンス",
+        "経営工学",
+        "インダストリアル・エンジニアリング",
+        "バイオデータの解析",
+        "ニューラルネットワーク",
+        "制御可能な深層学習",
+        "植物環境情報処理",
+        "センサデータ処理",
+        "プロダクションシステム",
+        "ペットロボット",
+        "コンピュータ支援外国語教育(CALL)",
+        "言語",
+        "適応フィルタ",
+        "学習",
+        "メカトロニクス",
+        "人間共存型ロボット",
+        "スマートセンシング",
+        "自動化装置",
+        "人工知能",
+        "画像処理",
+        "移動ロボット",
+        "自動運転自動車",
+        "ロボティクス",
+        "ロボットハンド",
+        "マニピュレーション",
+        "人間支援",
+        "医療工学",
+        "感性工学",
+        "繊維工学",
+        "細胞情報学",
+        "転移",
+        "細胞休眠",
+        "不均一性",
+        "シグナル伝達",
+        "がん幹細胞性",
+        "1細胞解析",
+        "空間遺伝子発現解析",
+        "メタ解析",
+        "Transcriptome",
+        "Genomics",
+        "オミクス解析",
+        "バイオインフォマティクス",
+        "機械学習",
+        "立体構造",
+        "アプタマー",
+        "機能",
+        "タンパク質",
+        "医療経営学",
+        "医療管理学",
+        "医療情報学",
+        "医事法制",
+        "デジタル療法",
+        "デジタル医療",
+        "デジタルヘルス",
+        "web3",
+        "クロスリアリティ",
+        "遠隔医療",
+        "ゲノム医療",
+        "循環器病"
+      ],
       "fields": [
         {
           "id": "field_1001",
@@ -14,6 +124,17 @@
           "member_count": 1,
           "professor_ids": [
             "prof_2195"
+          ],
+          "keywords": [
+            "計算機科学",
+            "アルゴリズム理論",
+            "グラフ理論",
+            "組合せ最適化",
+            "離散数学",
+            "システム制御理論",
+            "制御応用",
+            "システムモデリング",
+            "実時間最適化"
           ]
         },
         {
@@ -23,7 +144,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=1002",
           "seeds_count": 0,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_1003",
@@ -34,6 +156,14 @@
           "member_count": 1,
           "professor_ids": [
             "prof_2425"
+          ],
+          "keywords": [
+            "ビッグデータ解析",
+            "統計学",
+            "産業連関表",
+            "形状解析",
+            "ベイズ統計",
+            "生命画像解析"
           ]
         },
         {
@@ -43,7 +173,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=1101",
           "seeds_count": 0,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_1102",
@@ -52,7 +183,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=1102",
           "seeds_count": 0,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_1103",
@@ -61,7 +193,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=1103",
           "seeds_count": 1,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_1104",
@@ -70,7 +203,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=1104",
           "seeds_count": 2,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_1105",
@@ -79,7 +213,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=1105",
           "seeds_count": 1,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_1106",
@@ -88,7 +223,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=1106",
           "seeds_count": 1,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_1201",
@@ -100,6 +236,32 @@
           "professor_ids": [
             "prof_11739",
             "prof_4732"
+          ],
+          "keywords": [
+            "医療福祉工学",
+            "ヒューマンマシンインタラクション",
+            "歩行リハビリシステム",
+            "共創工学",
+            "認知科学",
+            "リズム同期",
+            "人間行動",
+            "脳神経システム",
+            "認知",
+            "視覚",
+            "心理学",
+            "感覚・知覚",
+            "テキスト理解",
+            "状況モデル",
+            "発達障害",
+            "幼小接続",
+            "保育における自然",
+            "保育における科学",
+            "構文",
+            "意味論",
+            "認知文法",
+            "心理言語学",
+            "言語の理解",
+            "事象関連電位"
           ]
         },
         {
@@ -111,6 +273,12 @@
           "member_count": 1,
           "professor_ids": [
             "prof_11739"
+          ],
+          "keywords": [
+            "コンピュテーショナルイメージング・ディスプレイ",
+            "ホログラフィ",
+            "高度道路交通システム",
+            "運転支援システム"
           ]
         },
         {
@@ -120,7 +288,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=1203",
           "seeds_count": 2,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_1204",
@@ -134,6 +303,34 @@
             "prof_2076",
             "prof_2232",
             "prof_11739"
+          ],
+          "keywords": [
+            "集積回路",
+            "イメージセンサ",
+            "インタラクティブシステム",
+            "ウェアラブルコンピュータ",
+            "情報学",
+            "AI",
+            "データサイエンス",
+            "経営工学",
+            "インダストリアル・エンジニアリング",
+            "医療福祉工学",
+            "ヒューマンマシンインタラクション",
+            "歩行リハビリシステム",
+            "共創工学",
+            "認知科学",
+            "リズム同期",
+            "バイオデータの解析",
+            "ニューラルネットワーク",
+            "制御可能な深層学習",
+            "植物環境情報処理",
+            "センサデータ処理",
+            "プロダクションシステム",
+            "ペットロボット",
+            "コンピュータ支援外国語教育(CALL)",
+            "言語",
+            "適応フィルタ",
+            "学習"
           ]
         },
         {
@@ -143,7 +340,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=1205",
           "seeds_count": 3,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_1206",
@@ -154,6 +352,28 @@
           "member_count": 1,
           "professor_ids": [
             "prof_4454"
+          ],
+          "keywords": [
+            "医療福祉工学",
+            "ヒューマンマシンインタラクション",
+            "歩行リハビリシステム",
+            "共創工学",
+            "認知科学",
+            "リズム同期",
+            "メカトロニクス",
+            "人間共存型ロボット",
+            "スマートセンシング",
+            "自動化装置",
+            "人工知能",
+            "高度道路交通システム",
+            "画像処理",
+            "移動ロボット",
+            "自動運転自動車",
+            "ロボティクス",
+            "ロボットハンド",
+            "マニピュレーション",
+            "人間支援",
+            "医療工学"
           ]
         },
         {
@@ -166,6 +386,21 @@
           "professor_ids": [
             "prof_2232",
             "prof_11739"
+          ],
+          "keywords": [
+            "人間行動",
+            "認知科学",
+            "脳神経システム",
+            "認知",
+            "視覚",
+            "心理学",
+            "感覚・知覚",
+            "植物環境情報処理",
+            "センサデータ処理",
+            "プロダクションシステム",
+            "ペットロボット",
+            "感性工学",
+            "繊維工学"
           ]
         },
         {
@@ -178,6 +413,45 @@
           "professor_ids": [
             "prof_4586",
             "prof_2076"
+          ],
+          "keywords": [
+            "医療福祉工学",
+            "ヒューマンマシンインタラクション",
+            "歩行リハビリシステム",
+            "共創工学",
+            "認知科学",
+            "リズム同期",
+            "細胞情報学",
+            "転移",
+            "細胞休眠",
+            "不均一性",
+            "シグナル伝達",
+            "がん幹細胞性",
+            "1細胞解析",
+            "空間遺伝子発現解析",
+            "データサイエンス",
+            "メタ解析",
+            "Transcriptome",
+            "Genomics",
+            "オミクス解析",
+            "バイオインフォマティクス",
+            "機械学習",
+            "立体構造",
+            "アプタマー",
+            "機能",
+            "タンパク質",
+            "医療経営学",
+            "医療管理学",
+            "医療情報学",
+            "医事法制",
+            "デジタル療法",
+            "デジタル医療",
+            "デジタルヘルス",
+            "web3",
+            "クロスリアリティ",
+            "遠隔医療",
+            "ゲノム医療",
+            "循環器病"
           ]
         },
         {
@@ -187,7 +461,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=1302",
           "seeds_count": 0,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_1303",
@@ -196,7 +471,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=1303",
           "seeds_count": 2,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_1304",
@@ -205,7 +481,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=1304",
           "seeds_count": 1,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_1305",
@@ -214,7 +491,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=1305",
           "seeds_count": 1,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         }
       ]
     },
@@ -222,6 +500,26 @@
       "id": "major_環境学",
       "name": "環境学",
       "member_count": 5,
+      "keywords": [
+        "技術評価",
+        "バイオマス",
+        "資源循環",
+        "社会実装",
+        "産官学連携",
+        "産業エコロジー工学",
+        "脱炭素社会",
+        "循環型社会システム",
+        "土木環境システム",
+        "大気エアロゾル",
+        "バイオマス燃焼",
+        "有害化学物質",
+        "有機フッ素化合物",
+        "LC",
+        "MS",
+        "バイオモニタリング",
+        "分析化学",
+        "環境毒性学"
+      ],
       "fields": [
         {
           "id": "field_1401",
@@ -230,7 +528,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=1401",
           "seeds_count": 7,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_1402",
@@ -239,7 +538,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=1402",
           "seeds_count": 2,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_1403",
@@ -250,6 +550,26 @@
           "member_count": 1,
           "professor_ids": [
             "prof_11791"
+          ],
+          "keywords": [
+            "技術評価",
+            "バイオマス",
+            "資源循環",
+            "社会実装",
+            "産官学連携",
+            "産業エコロジー工学",
+            "脱炭素社会",
+            "循環型社会システム",
+            "土木環境システム",
+            "大気エアロゾル",
+            "バイオマス燃焼",
+            "有害化学物質",
+            "有機フッ素化合物",
+            "LC",
+            "MS",
+            "バイオモニタリング",
+            "分析化学",
+            "環境毒性学"
           ]
         },
         {
@@ -259,7 +579,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=1501",
           "seeds_count": 5,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_1502",
@@ -268,7 +589,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=1502",
           "seeds_count": 0,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_1503",
@@ -277,7 +599,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=1503",
           "seeds_count": 0,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_1504",
@@ -286,7 +609,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=1504",
           "seeds_count": 0,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_1601",
@@ -295,7 +619,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=1601",
           "seeds_count": 0,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_1602",
@@ -306,6 +631,17 @@
           "member_count": 1,
           "professor_ids": [
             "prof_11791"
+          ],
+          "keywords": [
+            "技術評価",
+            "バイオマス",
+            "資源循環",
+            "社会実装",
+            "産官学連携",
+            "産業エコロジー工学",
+            "脱炭素社会",
+            "循環型社会システム",
+            "土木環境システム"
           ]
         },
         {
@@ -319,6 +655,17 @@
             "prof_11791",
             "prof_11694",
             "prof_4732"
+          ],
+          "keywords": [
+            "技術評価",
+            "バイオマス",
+            "資源循環",
+            "社会実装",
+            "産官学連携",
+            "産業エコロジー工学",
+            "脱炭素社会",
+            "循環型社会システム",
+            "土木環境システム"
           ]
         }
       ]
@@ -327,6 +674,169 @@
       "id": "major_複合領域",
       "name": "複合領域",
       "member_count": 14,
+      "keywords": [
+        "環境デザイン",
+        "地域資源",
+        "地域づくり",
+        "歴史的建築物",
+        "建築",
+        "ランドスケープデザイン",
+        "インテリアデザイン",
+        "プロダクトデザイン",
+        "コミュニティ・デザイン　文化的景観　伝統工芸　ランドスケープ論",
+        "地域研究",
+        "PBL（Project Based Learning）",
+        "教育学",
+        "社会学",
+        "高等教育",
+        "文理融合",
+        "アントレプレナーシップ",
+        "高大連携",
+        "探究",
+        "アカデミック・アドバイジング",
+        "ピア・サポート",
+        "家政学原論",
+        "生活経営学",
+        "消費者教育",
+        "生活資源管理",
+        "家庭科教育",
+        "住生活",
+        "地域居住",
+        "住環境",
+        "まちづくり",
+        "創造性",
+        "多重知能理論",
+        "芸術思考",
+        "教育工学",
+        "教師教育",
+        "カリキュラム開発",
+        "授業実践力向上",
+        "ESD（持続可能な開発のための教育）",
+        "コンピュータ支援外国語教育(CALL)",
+        "言語",
+        "DX",
+        "XR",
+        "VR",
+        "大学向けポータルサイト",
+        "データウェアハウス",
+        "IR（Institutional Research）",
+        "日本語教育",
+        "第二言語習得",
+        "異文化理解教育",
+        "ビジネス日本語教育",
+        "渤海",
+        "唐会要",
+        "東アジア世界",
+        "クォークの閉じこめ",
+        "情報教育",
+        "シェルスクリプト",
+        "ものグラミング",
+        "量子色力学",
+        "理論物理学",
+        "地形",
+        "河川",
+        "侵食",
+        "堆積",
+        "土砂運搬",
+        "技術評価",
+        "バイオマス",
+        "資源循環",
+        "社会実装",
+        "産官学連携",
+        "産業エコロジー工学",
+        "脱炭素社会",
+        "循環型社会システム",
+        "土木環境システム",
+        "水産物流通・消費",
+        "食文化と｢食｣に関わる学び",
+        "地理学",
+        "防災",
+        "設計工学",
+        "生産工学",
+        "融合科学",
+        "工作機械",
+        "文化資源学",
+        "整形外科学",
+        "看護理工学",
+        "コンピュータシミュレーション",
+        "バイオミメティクス",
+        "バイオメカニクス",
+        "最適設計",
+        "計算力学",
+        "骨",
+        "筋",
+        "光生体計測",
+        "物理刺激",
+        "無侵襲計測",
+        "健康・福祉工学",
+        "医用センサー",
+        "トランスレーショナルリサーチ",
+        "医薬品開発",
+        "分子腫瘍マーカー",
+        "がん幹細胞",
+        "タンパク質相互作用",
+        "核酸医薬",
+        "分子標的治療",
+        "細胞生物学",
+        "分子生物学",
+        "腫瘍生物学",
+        "コロナウイルス感染症",
+        "ジィオテール",
+        "超低周波",
+        "電磁波",
+        "運動生理学・生化学",
+        "筋代謝",
+        "ミトコンドリア",
+        "フリーラジカル",
+        "膜輸送",
+        "生体医工学",
+        "非侵襲機能イメージング",
+        "磁気共鳴医学",
+        "機械力学",
+        "聴覚医学",
+        "耳科学",
+        "生体工学",
+        "タンパク質モーター",
+        "運動疫学",
+        "モバイルヘルス",
+        "スケールアップ",
+        "ヘルスプロモーション",
+        "脳卒中",
+        "理学療法学",
+        "生体力学",
+        "運動制御",
+        "歩行",
+        "義肢装具",
+        "マルチボディダイナミクス",
+        "植物環境情報処理",
+        "センサデータ処理",
+        "プロダクションシステム",
+        "ペットロボット",
+        "リハビリテーション",
+        "脳神経科学",
+        "運動生理学",
+        "医用生体工学",
+        "上肢・手のリハビリテーション",
+        "日常生活動作",
+        "関節拘縮",
+        "理学療法",
+        "急性期リハビリテーション医療",
+        "維持期（生活期）の運動障害のリハビリテーション医療",
+        "痙縮治療",
+        "痙縮評価",
+        "嚥下機能評価",
+        "健康増進",
+        "健康予防",
+        "オペラント行動",
+        "作業療法",
+        "フィードフォワード制御",
+        "小脳",
+        "大脳基底核",
+        "運動学習",
+        "非侵襲的脳刺激",
+        "経頭蓋磁気刺激",
+        "経頭蓋電流刺激"
+      ],
       "fields": [
         {
           "id": "field_1651",
@@ -339,6 +849,28 @@
             "prof_11613",
             "prof_4502",
             "prof_11380"
+          ],
+          "keywords": [
+            "環境デザイン",
+            "地域資源",
+            "地域づくり",
+            "歴史的建築物",
+            "建築",
+            "ランドスケープデザイン",
+            "インテリアデザイン",
+            "プロダクトデザイン",
+            "コミュニティ・デザイン　文化的景観　伝統工芸　ランドスケープ論",
+            "地域研究",
+            "PBL（Project Based Learning）",
+            "教育学",
+            "社会学",
+            "高等教育",
+            "文理融合",
+            "アントレプレナーシップ",
+            "高大連携",
+            "探究",
+            "アカデミック・アドバイジング",
+            "ピア・サポート"
           ]
         },
         {
@@ -350,6 +882,17 @@
           "member_count": 1,
           "professor_ids": [
             "prof_2659"
+          ],
+          "keywords": [
+            "家政学原論",
+            "生活経営学",
+            "消費者教育",
+            "生活資源管理",
+            "家庭科教育",
+            "住生活",
+            "地域居住",
+            "住環境",
+            "まちづくり"
           ]
         },
         {
@@ -359,7 +902,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=1702",
           "seeds_count": 2,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_1703",
@@ -368,7 +912,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=1703",
           "seeds_count": 4,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_1801",
@@ -379,7 +924,8 @@
           "member_count": 1,
           "professor_ids": [
             "prof_4112"
-          ]
+          ],
+          "keywords": []
         },
         {
           "id": "field_1802",
@@ -392,6 +938,37 @@
             "prof_11389",
             "prof_4112",
             "prof_11739"
+          ],
+          "keywords": [
+            "創造性",
+            "多重知能理論",
+            "芸術思考",
+            "教育工学",
+            "教師教育",
+            "カリキュラム開発",
+            "授業実践力向上",
+            "ESD（持続可能な開発のための教育）",
+            "コンピュータ支援外国語教育(CALL)",
+            "言語",
+            "DX",
+            "XR",
+            "VR",
+            "大学向けポータルサイト",
+            "データウェアハウス",
+            "IR（Institutional Research）",
+            "日本語教育",
+            "第二言語習得",
+            "異文化理解教育",
+            "ビジネス日本語教育",
+            "渤海",
+            "唐会要",
+            "東アジア世界",
+            "クォークの閉じこめ",
+            "情報教育",
+            "シェルスクリプト",
+            "ものグラミング",
+            "量子色力学",
+            "理論物理学"
           ]
         },
         {
@@ -401,7 +978,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=1901",
           "seeds_count": 1,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_2001",
@@ -410,7 +988,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=2001",
           "seeds_count": 4,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_2101",
@@ -421,6 +1000,26 @@
           "member_count": 1,
           "professor_ids": [
             "prof_11791"
+          ],
+          "keywords": [
+            "地形",
+            "河川",
+            "侵食",
+            "堆積",
+            "土砂運搬",
+            "技術評価",
+            "バイオマス",
+            "資源循環",
+            "社会実装",
+            "産官学連携",
+            "産業エコロジー工学",
+            "脱炭素社会",
+            "循環型社会システム",
+            "土木環境システム",
+            "水産物流通・消費",
+            "食文化と｢食｣に関わる学び",
+            "地理学",
+            "防災"
           ]
         },
         {
@@ -430,7 +1029,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=2201",
           "seeds_count": 2,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_2202",
@@ -439,7 +1039,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=2202",
           "seeds_count": 2,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_2301",
@@ -451,6 +1052,54 @@
           "professor_ids": [
             "prof_2848",
             "prof_11739"
+          ],
+          "keywords": [
+            "設計工学",
+            "生産工学",
+            "融合科学",
+            "工作機械",
+            "文化資源学",
+            "整形外科学",
+            "看護理工学",
+            "コンピュータシミュレーション",
+            "バイオミメティクス",
+            "バイオメカニクス",
+            "最適設計",
+            "計算力学",
+            "骨",
+            "筋",
+            "光生体計測",
+            "物理刺激",
+            "無侵襲計測",
+            "健康・福祉工学",
+            "医用センサー",
+            "トランスレーショナルリサーチ",
+            "医薬品開発",
+            "分子腫瘍マーカー",
+            "がん幹細胞",
+            "タンパク質相互作用",
+            "核酸医薬",
+            "分子標的治療",
+            "細胞生物学",
+            "分子生物学",
+            "腫瘍生物学",
+            "コロナウイルス感染症",
+            "ジィオテール",
+            "超低周波",
+            "電磁波",
+            "運動生理学・生化学",
+            "筋代謝",
+            "ミトコンドリア",
+            "フリーラジカル",
+            "膜輸送",
+            "生体医工学",
+            "非侵襲機能イメージング",
+            "磁気共鳴医学",
+            "機械力学",
+            "聴覚医学",
+            "耳科学",
+            "生体工学",
+            "タンパク質モーター"
           ]
         },
         {
@@ -460,7 +1109,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=2302",
           "seeds_count": 5,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_2303",
@@ -469,7 +1119,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=2303",
           "seeds_count": 0,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_2304",
@@ -481,6 +1132,45 @@
           "professor_ids": [
             "prof_11460",
             "prof_2232"
+          ],
+          "keywords": [
+            "運動疫学",
+            "モバイルヘルス",
+            "スケールアップ",
+            "ヘルスプロモーション",
+            "脳卒中",
+            "理学療法学",
+            "生体力学",
+            "運動制御",
+            "歩行",
+            "義肢装具",
+            "マルチボディダイナミクス",
+            "植物環境情報処理",
+            "センサデータ処理",
+            "プロダクションシステム",
+            "ペットロボット",
+            "リハビリテーション",
+            "脳神経科学",
+            "運動生理学",
+            "医用生体工学",
+            "上肢・手のリハビリテーション",
+            "バイオメカニクス",
+            "日常生活動作",
+            "関節拘縮",
+            "理学療法",
+            "急性期リハビリテーション医療",
+            "維持期（生活期）の運動障害のリハビリテーション医療",
+            "痙縮治療",
+            "痙縮評価",
+            "嚥下機能評価",
+            "健康増進",
+            "健康予防",
+            "オペラント行動",
+            "作業療法",
+            "フィードフォワード制御",
+            "小脳",
+            "大脳基底核",
+            "運動学習"
           ]
         },
         {
@@ -490,7 +1180,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=2401",
           "seeds_count": 2,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_2402",
@@ -499,7 +1190,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=2402",
           "seeds_count": 7,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_2403",
@@ -508,7 +1200,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=2403",
           "seeds_count": 2,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_2451",
@@ -517,7 +1210,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=2451",
           "seeds_count": 2,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_2501",
@@ -526,7 +1220,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=2501",
           "seeds_count": 4,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_2502",
@@ -535,7 +1230,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=2502",
           "seeds_count": 1,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_2601",
@@ -544,7 +1240,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=2601",
           "seeds_count": 3,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_2602",
@@ -555,6 +1252,11 @@
           "member_count": 1,
           "professor_ids": [
             "prof_11739"
+          ],
+          "keywords": [
+            "非侵襲的脳刺激",
+            "経頭蓋磁気刺激",
+            "経頭蓋電流刺激"
           ]
         }
       ]
@@ -563,6 +1265,21 @@
       "id": "major_総合人文社会",
       "name": "総合人文社会",
       "member_count": 1,
+      "keywords": [
+        "アメリカ文学",
+        "男性学",
+        "マーク・トウェイン",
+        "社会学",
+        "公衆衛生学",
+        "ジェンダー・セクシュアリティ研究",
+        "マイノリティ研究",
+        "マイクロアグレッション",
+        "差別",
+        "アイデンティティ",
+        "人権",
+        "家族社会学",
+        "ダイバーシティ"
+      ],
       "fields": [
         {
           "id": "field_2701",
@@ -571,7 +1288,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=2701",
           "seeds_count": 8,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_2801",
@@ -582,6 +1300,21 @@
           "member_count": 1,
           "professor_ids": [
             "prof_3055"
+          ],
+          "keywords": [
+            "アメリカ文学",
+            "男性学",
+            "マーク・トウェイン",
+            "社会学",
+            "公衆衛生学",
+            "ジェンダー・セクシュアリティ研究",
+            "マイノリティ研究",
+            "マイクロアグレッション",
+            "差別",
+            "アイデンティティ",
+            "人権",
+            "家族社会学",
+            "ダイバーシティ"
           ]
         }
       ]
@@ -590,6 +1323,69 @@
       "id": "major_人文学",
       "name": "人文学",
       "member_count": 2,
+      "keywords": [
+        "Ethics",
+        "Applied Ethics",
+        "Environment",
+        "Medical Humanities",
+        "Modern Japanese Thought",
+        "Buddhist Thought",
+        "行為",
+        "フィヒテ",
+        "主観性",
+        "哲学",
+        "倫理学",
+        "17-8世紀英国道徳哲学",
+        "ジョン・ロック",
+        "自由意志問題",
+        "責任",
+        "非難",
+        "依存症",
+        "クオリア",
+        "行為論",
+        "形式意味論",
+        "形式語用論",
+        "言語哲学",
+        "生成文法",
+        "初期ギリシア哲学",
+        "ハイデガー",
+        "場所",
+        "解釈学",
+        "帝国とヘゲモニー",
+        "グローバリゼーション",
+        "アメリカ",
+        "リベラリズム",
+        "ナショナリズム",
+        "リベラル・ナショナリズム",
+        "共和主義",
+        "保守主義",
+        "EAP",
+        "EMI",
+        "英語教育",
+        "児童文学",
+        "英語圏文学",
+        "イギリス小説",
+        "宗教と文学",
+        "英語学",
+        "思想史",
+        "精神分析",
+        "ジークムント・フロイト",
+        "ジャック・デリダ",
+        "フランス",
+        "英語教育学",
+        "第二言語習得",
+        "教育コミュニケーション学",
+        "コンピュータ支援外国語教育(CALL)",
+        "言語",
+        "VR",
+        "日本語教育",
+        "異文化理解教育",
+        "ビジネス日本語教育",
+        "Microethnography",
+        "multimodal analysis of interaction",
+        "learning and teaching of skills",
+        "self-access resource centers"
+      ],
       "fields": [
         {
           "id": "field_2901",
@@ -600,6 +1396,43 @@
           "member_count": 1,
           "professor_ids": [
             "prof_4721"
+          ],
+          "keywords": [
+            "Ethics",
+            "Applied Ethics",
+            "Environment",
+            "Medical Humanities",
+            "Modern Japanese Thought",
+            "Buddhist Thought",
+            "行為",
+            "フィヒテ",
+            "主観性",
+            "哲学",
+            "倫理学",
+            "17-8世紀英国道徳哲学",
+            "ジョン・ロック",
+            "自由意志問題",
+            "責任",
+            "非難",
+            "依存症",
+            "クオリア",
+            "行為論",
+            "形式意味論",
+            "形式語用論",
+            "言語哲学",
+            "生成文法",
+            "初期ギリシア哲学",
+            "ハイデガー",
+            "場所",
+            "解釈学",
+            "帝国とヘゲモニー",
+            "グローバリゼーション",
+            "アメリカ",
+            "リベラリズム",
+            "ナショナリズム",
+            "リベラル・ナショナリズム",
+            "共和主義",
+            "保守主義"
           ]
         },
         {
@@ -609,7 +1442,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=2902",
           "seeds_count": 1,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_2903",
@@ -618,7 +1452,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=2903",
           "seeds_count": 2,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_2904",
@@ -627,7 +1462,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=2904",
           "seeds_count": 7,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_3001",
@@ -636,7 +1472,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=3001",
           "seeds_count": 1,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_3002",
@@ -645,7 +1482,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=3002",
           "seeds_count": 3,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_3003",
@@ -654,7 +1492,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=3003",
           "seeds_count": 2,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_3101",
@@ -663,7 +1502,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=3101",
           "seeds_count": 7,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_3102",
@@ -672,7 +1512,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=3102",
           "seeds_count": 7,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_3103",
@@ -681,7 +1522,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=3103",
           "seeds_count": 3,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_3104",
@@ -690,7 +1532,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=3104",
           "seeds_count": 1,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_3105",
@@ -699,7 +1542,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=3105",
           "seeds_count": 6,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_3201",
@@ -708,7 +1552,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=3201",
           "seeds_count": 12,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_3202",
@@ -717,7 +1562,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=3202",
           "seeds_count": 3,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_3203",
@@ -726,7 +1572,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=3203",
           "seeds_count": 5,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_3204",
@@ -735,7 +1582,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=3204",
           "seeds_count": 4,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_3205",
@@ -746,6 +1594,34 @@
           "member_count": 1,
           "professor_ids": [
             "prof_4386"
+          ],
+          "keywords": [
+            "EAP",
+            "EMI",
+            "英語教育",
+            "児童文学",
+            "英語圏文学",
+            "イギリス小説",
+            "宗教と文学",
+            "英語学",
+            "思想史",
+            "精神分析",
+            "ジークムント・フロイト",
+            "ジャック・デリダ",
+            "フランス",
+            "英語教育学",
+            "第二言語習得",
+            "教育コミュニケーション学",
+            "コンピュータ支援外国語教育(CALL)",
+            "言語",
+            "VR",
+            "日本語教育",
+            "異文化理解教育",
+            "ビジネス日本語教育",
+            "Microethnography",
+            "multimodal analysis of interaction",
+            "learning and teaching of skills",
+            "self-access resource centers"
           ]
         },
         {
@@ -755,7 +1631,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=3301",
           "seeds_count": 3,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_3302",
@@ -764,7 +1641,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=3302",
           "seeds_count": 8,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_3303",
@@ -773,7 +1651,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=3303",
           "seeds_count": 4,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_3304",
@@ -782,7 +1661,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=3304",
           "seeds_count": 2,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_3305",
@@ -791,7 +1671,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=3305",
           "seeds_count": 4,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_3401",
@@ -800,7 +1681,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=3401",
           "seeds_count": 5,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_3501",
@@ -809,7 +1691,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=3501",
           "seeds_count": 6,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         }
       ]
     },
@@ -817,6 +1700,198 @@
       "id": "major_社会科学",
       "name": "社会科学",
       "member_count": 12,
+      "keywords": [
+        "自動車産業",
+        "繊維産業",
+        "アパレル産業",
+        "GIS",
+        "グローバル生産ネットワーク",
+        "アジア経済論",
+        "産業集積論",
+        "計量経済学",
+        "データサイエンス",
+        "国際金融",
+        "実験経済学・都市経済学・環境経済学",
+        "社会政策",
+        "英国銀行監督史",
+        "イングランド銀行",
+        "フランス中央銀行",
+        "バーゼル銀行監督委員会",
+        "欧州中央銀行",
+        "金融安定理事会",
+        "欧州銀行機構",
+        "欧州銀行同盟",
+        "欧州資本市場同盟",
+        "金融危機",
+        "ユーロダラー市場史",
+        "英国民間銀行史",
+        "金融規制の国際比較",
+        "貨幣の将来",
+        "地域経済学",
+        "世界経済論",
+        "経済発展論",
+        "通貨",
+        "経済史",
+        "西アフリカ",
+        "経済通貨統合",
+        "グローバリゼーション",
+        "セネガルの社会経済",
+        "特許",
+        "著作権",
+        "商標",
+        "ブランディング",
+        "特許実務戦略",
+        "技術開発経営",
+        "マーケティング",
+        "経営情報",
+        "モチベーション",
+        "食品産業",
+        "イノベーション",
+        "技術経営",
+        "科学技術政策",
+        "産学連携",
+        "知的財産",
+        "技術予測",
+        "国際経営",
+        "地域経済",
+        "経営理念",
+        "ビジネスモデル",
+        "経営組織論",
+        "中小企業",
+        "研究経済学",
+        "エコツーリズム",
+        "フード・システム",
+        "ガストロノミー",
+        "医療経営学",
+        "医療管理学",
+        "医療情報学",
+        "医事法制",
+        "コウノトリの野生復帰",
+        "自然再生",
+        "順応的ガバナンス",
+        "合意形成",
+        "能登半島地震・水害からの復旧・復興",
+        "生物多様性",
+        "絶滅危惧種の利用と保全",
+        "サイエンスカフェ",
+        "レジデント型研究",
+        "パタン・ランゲージ",
+        "超学際研究",
+        "ジオパーク",
+        "グリーンインフラ",
+        "エコミュージアム",
+        "コミュニケーション学（対人・異文化間）",
+        "比較犯罪社会学",
+        "文化心理学",
+        "文化比較",
+        "社会規範",
+        "逸脱行動",
+        "コントロール理論",
+        "合理的選択理論",
+        "社会階層論",
+        "社会調査法",
+        "医療",
+        "福祉",
+        "権利擁護",
+        "アドボカシー",
+        "ジェンダー",
+        "比較研究",
+        "社会学理論",
+        "社会変動論",
+        "現代社会論",
+        "社会計画論",
+        "福祉国家論",
+        "社会階層",
+        "規範理論",
+        "日独関係",
+        "地域研究",
+        "国際移動",
+        "近現代史",
+        "国際社会学",
+        "国際労働力移動",
+        "留学生",
+        "コミュニティ",
+        "まちづくり",
+        "地域集団",
+        "町内会・自治会",
+        "婦人会・女性会",
+        "NPO",
+        "市民意識調査",
+        "市民と行政との協働",
+        "善隣館",
+        "地域福祉",
+        "ジェンダー・セクシュアリティ研究",
+        "マイノリティ研究",
+        "マイクロアグレッション",
+        "差別",
+        "アイデンティティ",
+        "人権",
+        "家族社会学",
+        "ダイバーシティ",
+        "人工内耳",
+        "障害受容",
+        "ポジティブメンタルヘルス",
+        "聴覚障害",
+        "リラクセーション",
+        "ストレス対処",
+        "防衛的悲観主義",
+        "学習性無力感",
+        "数学教育学",
+        "数学教育論",
+        "算数・数学の授業開発",
+        "教育方法学",
+        "生活指導論",
+        "教育工学",
+        "教師教育",
+        "カリキュラム開発",
+        "授業実践力向上",
+        "ESD（持続可能な開発のための教育）",
+        "民族・文化的マイノリティと教育",
+        "教育における多文化主義",
+        "シティズンシップ教育",
+        "留学生教育",
+        "ケア",
+        "学童保育のチームワーク",
+        "子どもの遊び",
+        "放課後支援",
+        "放課後児童クラブ",
+        "学童保育",
+        "共生教育",
+        "教育経営学",
+        "第二言語習得",
+        "教育コミュニケーション学",
+        "近現代日本教育史",
+        "公害・環境",
+        "四日市",
+        "総合学習",
+        "福島原発事故",
+        "教学マネジメント",
+        "日本文化・日本文学",
+        "地域人材育成",
+        "高大連携",
+        "授業デザイン",
+        "カリキュラムマネジメント",
+        "ナレッジマネジメント",
+        "大学職員論",
+        "大学マネジメント",
+        "高等教育論",
+        "カリキュラム論",
+        "後期中等教育",
+        "PBL（Project Based Learning）",
+        "教育学",
+        "社会学",
+        "高等教育",
+        "文理融合",
+        "アントレプレナーシップ",
+        "探究",
+        "アカデミック・アドバイジング",
+        "ピア・サポート",
+        "家庭科教育",
+        "家族学習",
+        "ＦＤ・ＳＤ",
+        "大学評価",
+        "韓国高等教育"
+      ],
       "fields": [
         {
           "id": "field_3601",
@@ -825,7 +1900,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=3601",
           "seeds_count": 6,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_3602",
@@ -834,7 +1910,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=3602",
           "seeds_count": 7,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_3603",
@@ -843,7 +1920,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=3603",
           "seeds_count": 2,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_3604",
@@ -852,7 +1930,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=3604",
           "seeds_count": 3,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_3605",
@@ -861,7 +1940,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=3605",
           "seeds_count": 4,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_3606",
@@ -870,7 +1950,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=3606",
           "seeds_count": 5,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_3607",
@@ -879,7 +1960,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=3607",
           "seeds_count": 3,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_3701",
@@ -888,7 +1970,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=3701",
           "seeds_count": 6,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_3702",
@@ -897,7 +1980,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=3702",
           "seeds_count": 8,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_3801",
@@ -906,7 +1990,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=3801",
           "seeds_count": 1,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_3802",
@@ -915,7 +2000,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=3802",
           "seeds_count": 1,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_3803",
@@ -926,6 +2012,19 @@
           "member_count": 1,
           "professor_ids": [
             "prof_11755"
+          ],
+          "keywords": [
+            "自動車産業",
+            "繊維産業",
+            "アパレル産業",
+            "GIS",
+            "グローバル生産ネットワーク",
+            "アジア経済論",
+            "産業集積論",
+            "計量経済学",
+            "データサイエンス",
+            "国際金融",
+            "実験経済学・都市経済学・環境経済学"
           ]
         },
         {
@@ -938,6 +2037,33 @@
           "professor_ids": [
             "prof_2670",
             "prof_11694"
+          ],
+          "keywords": [
+            "社会政策",
+            "英国銀行監督史",
+            "イングランド銀行",
+            "フランス中央銀行",
+            "バーゼル銀行監督委員会",
+            "欧州中央銀行",
+            "金融安定理事会",
+            "欧州銀行機構",
+            "欧州銀行同盟",
+            "欧州資本市場同盟",
+            "金融危機",
+            "ユーロダラー市場史",
+            "英国民間銀行史",
+            "金融規制の国際比較",
+            "貨幣の将来",
+            "地域経済学",
+            "実験経済学・都市経済学・環境経済学",
+            "世界経済論",
+            "経済発展論",
+            "通貨",
+            "経済史",
+            "西アフリカ",
+            "経済通貨統合",
+            "グローバリゼーション",
+            "セネガルの社会経済"
           ]
         },
         {
@@ -949,7 +2075,8 @@
           "member_count": 1,
           "professor_ids": [
             "prof_11694"
-          ]
+          ],
+          "keywords": []
         },
         {
           "id": "field_3806",
@@ -960,6 +2087,33 @@
           "member_count": 1,
           "professor_ids": [
             "prof_11755"
+          ],
+          "keywords": [
+            "英国銀行監督史",
+            "イングランド銀行",
+            "フランス中央銀行",
+            "バーゼル銀行監督委員会",
+            "欧州中央銀行",
+            "金融安定理事会",
+            "欧州銀行機構",
+            "欧州銀行同盟",
+            "欧州資本市場同盟",
+            "金融危機",
+            "ユーロダラー市場史",
+            "英国民間銀行史",
+            "金融規制の国際比較",
+            "貨幣の将来",
+            "計量経済学",
+            "データサイエンス",
+            "国際金融",
+            "世界経済論",
+            "経済発展論",
+            "通貨",
+            "経済史",
+            "西アフリカ",
+            "経済通貨統合",
+            "グローバリゼーション",
+            "セネガルの社会経済"
           ]
         },
         {
@@ -969,7 +2123,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=3807",
           "seeds_count": 6,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_3901",
@@ -981,6 +2136,38 @@
           "professor_ids": [
             "prof_4678",
             "prof_11703"
+          ],
+          "keywords": [
+            "特許",
+            "著作権",
+            "商標",
+            "ブランディング",
+            "特許実務戦略",
+            "技術開発経営",
+            "マーケティング",
+            "経営情報",
+            "モチベーション",
+            "食品産業",
+            "イノベーション",
+            "技術経営",
+            "科学技術政策",
+            "産学連携",
+            "知的財産",
+            "技術予測",
+            "国際経営",
+            "地域経済",
+            "経営理念",
+            "ビジネスモデル",
+            "経営組織論",
+            "中小企業",
+            "研究経済学",
+            "エコツーリズム",
+            "フード・システム",
+            "ガストロノミー",
+            "医療経営学",
+            "医療管理学",
+            "医療情報学",
+            "医事法制"
           ]
         },
         {
@@ -990,7 +2177,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=3902",
           "seeds_count": 1,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_3903",
@@ -999,7 +2187,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=3903",
           "seeds_count": 3,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_4001",
@@ -1010,6 +2199,72 @@
           "member_count": 1,
           "professor_ids": [
             "prof_1956"
+          ],
+          "keywords": [
+            "コウノトリの野生復帰",
+            "自然再生",
+            "順応的ガバナンス",
+            "合意形成",
+            "能登半島地震・水害からの復旧・復興",
+            "生物多様性",
+            "絶滅危惧種の利用と保全",
+            "エコツーリズム",
+            "サイエンスカフェ",
+            "レジデント型研究",
+            "パタン・ランゲージ",
+            "超学際研究",
+            "ジオパーク",
+            "グリーンインフラ",
+            "エコミュージアム",
+            "コミュニケーション学（対人・異文化間）",
+            "比較犯罪社会学",
+            "文化心理学",
+            "文化比較",
+            "社会規範",
+            "逸脱行動",
+            "コントロール理論",
+            "合理的選択理論",
+            "社会階層論",
+            "社会調査法",
+            "医療",
+            "福祉",
+            "権利擁護",
+            "アドボカシー",
+            "ジェンダー",
+            "比較研究",
+            "社会学理論",
+            "社会変動論",
+            "現代社会論",
+            "社会計画論",
+            "福祉国家論",
+            "社会階層",
+            "規範理論",
+            "日独関係",
+            "地域研究",
+            "国際移動",
+            "近現代史",
+            "経済史",
+            "国際社会学",
+            "国際労働力移動",
+            "留学生",
+            "コミュニティ",
+            "まちづくり",
+            "地域集団",
+            "町内会・自治会",
+            "婦人会・女性会",
+            "NPO",
+            "市民意識調査",
+            "市民と行政との協働",
+            "善隣館",
+            "地域福祉",
+            "ジェンダー・セクシュアリティ研究",
+            "マイノリティ研究",
+            "マイクロアグレッション",
+            "差別",
+            "アイデンティティ",
+            "人権",
+            "家族社会学",
+            "ダイバーシティ"
           ]
         },
         {
@@ -1019,7 +2274,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=4002",
           "seeds_count": 4,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_4101",
@@ -1030,6 +2286,24 @@
           "member_count": 1,
           "professor_ids": [
             "prof_11731"
+          ],
+          "keywords": [
+            "人工内耳",
+            "障害受容",
+            "ポジティブメンタルヘルス",
+            "聴覚障害",
+            "リラクセーション",
+            "ストレス対処",
+            "防衛的悲観主義",
+            "学習性無力感",
+            "コミュニケーション学（対人・異文化間）",
+            "比較犯罪社会学",
+            "文化心理学",
+            "文化比較",
+            "社会規範",
+            "逸脱行動",
+            "コントロール理論",
+            "合理的選択理論"
           ]
         },
         {
@@ -1039,7 +2313,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=4102",
           "seeds_count": 4,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_4103",
@@ -1048,7 +2323,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=4103",
           "seeds_count": 7,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_4104",
@@ -1057,7 +2333,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=4104",
           "seeds_count": 7,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_4201",
@@ -1069,6 +2346,61 @@
           "professor_ids": [
             "prof_4386",
             "prof_11380"
+          ],
+          "keywords": [
+            "数学教育学",
+            "数学教育論",
+            "算数・数学の授業開発",
+            "教育方法学",
+            "生活指導論",
+            "教育工学",
+            "教師教育",
+            "カリキュラム開発",
+            "授業実践力向上",
+            "ESD（持続可能な開発のための教育）",
+            "民族・文化的マイノリティと教育",
+            "教育における多文化主義",
+            "シティズンシップ教育",
+            "留学生教育",
+            "ケア",
+            "学童保育のチームワーク",
+            "子どもの遊び",
+            "放課後支援",
+            "放課後児童クラブ",
+            "学童保育",
+            "共生教育",
+            "教育経営学",
+            "第二言語習得",
+            "教育コミュニケーション学",
+            "近現代日本教育史",
+            "公害・環境",
+            "四日市",
+            "総合学習",
+            "福島原発事故",
+            "教学マネジメント",
+            "日本文化・日本文学",
+            "地域人材育成",
+            "高大連携",
+            "授業デザイン",
+            "カリキュラムマネジメント",
+            "ナレッジマネジメント",
+            "大学職員論",
+            "大学マネジメント",
+            "高等教育論",
+            "カリキュラム論",
+            "後期中等教育",
+            "地域研究",
+            "PBL（Project Based Learning）",
+            "教育学",
+            "社会学",
+            "高等教育",
+            "文理融合",
+            "アントレプレナーシップ",
+            "探究",
+            "アカデミック・アドバイジング",
+            "ピア・サポート",
+            "家庭科教育",
+            "家族学習"
           ]
         },
         {
@@ -1080,6 +2412,26 @@
           "member_count": 1,
           "professor_ids": [
             "prof_11380"
+          ],
+          "keywords": [
+            "民族・文化的マイノリティと教育",
+            "教育における多文化主義",
+            "シティズンシップ教育",
+            "留学生教育",
+            "地域研究",
+            "PBL（Project Based Learning）",
+            "教育学",
+            "社会学",
+            "高等教育",
+            "文理融合",
+            "アントレプレナーシップ",
+            "高大連携",
+            "探究",
+            "アカデミック・アドバイジング",
+            "ピア・サポート",
+            "ＦＤ・ＳＤ",
+            "大学評価",
+            "韓国高等教育"
           ]
         },
         {
@@ -1089,7 +2441,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=4203",
           "seeds_count": 10,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_4204",
@@ -1098,7 +2451,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=4204",
           "seeds_count": 5,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         }
       ]
     },
@@ -1106,6 +2460,17 @@
       "id": "major_総合理工",
       "name": "総合理工",
       "member_count": 1,
+      "keywords": [
+        "光干渉計測",
+        "光計測",
+        "光ファイバセンサ",
+        "光ファイバ",
+        "光検出器",
+        "光波回路",
+        "情報物理",
+        "機械学習",
+        "ナノ・マイクロフォトニクス"
+      ],
       "fields": [
         {
           "id": "field_4301",
@@ -1114,7 +2479,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=4301",
           "seeds_count": 4,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_4302",
@@ -1123,7 +2489,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=4302",
           "seeds_count": 3,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_4303",
@@ -1132,7 +2499,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=4303",
           "seeds_count": 5,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_4304",
@@ -1141,7 +2509,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=4304",
           "seeds_count": 0,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_4305",
@@ -1150,7 +2519,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=4305",
           "seeds_count": 3,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_4306",
@@ -1159,7 +2529,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=4306",
           "seeds_count": 0,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_4401",
@@ -1168,7 +2539,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=4401",
           "seeds_count": 1,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_4402",
@@ -1177,7 +2549,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=4402",
           "seeds_count": 0,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_4403",
@@ -1186,7 +2559,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=4403",
           "seeds_count": 9,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_4404",
@@ -1197,6 +2571,17 @@
           "member_count": 1,
           "professor_ids": [
             "prof_2385"
+          ],
+          "keywords": [
+            "光干渉計測",
+            "光計測",
+            "光ファイバセンサ",
+            "光ファイバ",
+            "光検出器",
+            "光波回路",
+            "情報物理",
+            "機械学習",
+            "ナノ・マイクロフォトニクス"
           ]
         },
         {
@@ -1206,7 +2591,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=4405",
           "seeds_count": 1,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_4406",
@@ -1215,7 +2601,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=4406",
           "seeds_count": 1,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_4501",
@@ -1224,7 +2611,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=4501",
           "seeds_count": 1,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_4601",
@@ -1233,7 +2621,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=4601",
           "seeds_count": 4,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         }
       ]
     },
@@ -1241,6 +2630,7 @@
       "id": "major_数物系科学",
       "name": "数物系科学",
       "member_count": 0,
+      "keywords": [],
       "fields": [
         {
           "id": "field_4701",
@@ -1249,7 +2639,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=4701",
           "seeds_count": 4,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_4702",
@@ -1258,7 +2649,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=4702",
           "seeds_count": 6,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_4703",
@@ -1267,7 +2659,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=4703",
           "seeds_count": 7,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_4704",
@@ -1276,7 +2669,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=4704",
           "seeds_count": 4,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_4705",
@@ -1285,7 +2679,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=4705",
           "seeds_count": 2,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_4801",
@@ -1294,7 +2689,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=4801",
           "seeds_count": 6,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_4901",
@@ -1303,7 +2699,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=4901",
           "seeds_count": 11,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_4902",
@@ -1312,7 +2709,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=4902",
           "seeds_count": 9,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_4903",
@@ -1321,7 +2719,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=4903",
           "seeds_count": 9,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_4904",
@@ -1330,7 +2729,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=4904",
           "seeds_count": 6,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_4905",
@@ -1339,7 +2739,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=4905",
           "seeds_count": 0,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_4906",
@@ -1348,7 +2749,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=4906",
           "seeds_count": 5,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_5001",
@@ -1357,7 +2759,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=5001",
           "seeds_count": 5,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_5002",
@@ -1366,7 +2769,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=5002",
           "seeds_count": 1,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_5003",
@@ -1375,7 +2779,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=5003",
           "seeds_count": 4,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_5004",
@@ -1384,7 +2789,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=5004",
           "seeds_count": 5,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_5005",
@@ -1393,7 +2799,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=5005",
           "seeds_count": 3,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_5006",
@@ -1402,7 +2809,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=5006",
           "seeds_count": 5,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_5007",
@@ -1411,7 +2819,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=5007",
           "seeds_count": 4,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_5101",
@@ -1420,7 +2829,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=5101",
           "seeds_count": 4,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         }
       ]
     },
@@ -1428,6 +2838,80 @@
       "id": "major_化学",
       "name": "化学",
       "member_count": 5,
+      "keywords": [
+        "コロイド化学",
+        "界面活性剤",
+        "溶液物性",
+        "蛍光プローブ",
+        "原子間力顕微鏡",
+        "界面化学",
+        "界面分子設計",
+        "ナノテクノロジー",
+        "理論化学",
+        "量子化学",
+        "磁性",
+        "超伝導",
+        "生体分子",
+        "生物物理",
+        "分子構造",
+        "分子錯体",
+        "高分解能分子分光",
+        "計算化学",
+        "磁気共鳴",
+        "固体物性",
+        "N-アシル化アミノ酸",
+        "熱量測定",
+        "超分子化学",
+        "高分子複合材料",
+        "高分子合成",
+        "有機合成化学",
+        "有機金属化学",
+        "グリーンケミストリー",
+        "有機光化学",
+        "酸素還元",
+        "導電性高分子",
+        "電気化学",
+        "電極反応",
+        "金属タンパク質",
+        "タンパク質工学",
+        "分子生物学",
+        "生化学",
+        "酸化還元酵素",
+        "鉄硫黄タンパク質",
+        "フラボ蛋白質",
+        "反応速度論",
+        "電子伝達系",
+        "光合成細菌",
+        "光化学反応中心",
+        "ストップトフロー法",
+        "環境",
+        "資源",
+        "イオン液体",
+        "バイオリファイナリー",
+        "セルロース",
+        "リグニン",
+        "機能性高分子",
+        "エネルギー変換",
+        "水素結合",
+        "Biomass Pretreatment",
+        "Cellulose Processing",
+        "Ionic liquids",
+        "Deep Eutectic Solvents (DES)",
+        "Computational & Machine Learning",
+        "環境科学",
+        "水溶性イオン",
+        "揮発性有機化合物",
+        "微細粒子状物質",
+        "健康影響",
+        "エアロゾル",
+        "分析化学",
+        "環境化学",
+        "大気汚染",
+        "多環芳香族炭化水素",
+        "ペロブスカイト太陽電池",
+        "有機薄膜太陽電池",
+        "色素増感太陽電池"
+      ],
       "fields": [
         {
           "id": "field_5201",
@@ -1438,6 +2922,28 @@
           "member_count": 1,
           "professor_ids": [
             "prof_11658"
+          ],
+          "keywords": [
+            "コロイド化学",
+            "界面活性剤",
+            "溶液物性",
+            "蛍光プローブ",
+            "原子間力顕微鏡",
+            "界面化学",
+            "界面分子設計",
+            "ナノテクノロジー",
+            "理論化学",
+            "量子化学",
+            "磁性",
+            "超伝導",
+            "生体分子",
+            "生物物理",
+            "分子構造",
+            "分子錯体",
+            "高分解能分子分光",
+            "計算化学",
+            "磁気共鳴",
+            "固体物性"
           ]
         },
         {
@@ -1447,7 +2953,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=5202",
           "seeds_count": 10,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_5203",
@@ -1456,7 +2963,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=5203",
           "seeds_count": 4,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_5301",
@@ -1467,6 +2975,28 @@
           "member_count": 1,
           "professor_ids": [
             "prof_11658"
+          ],
+          "keywords": [
+            "コロイド化学",
+            "界面活性剤",
+            "溶液物性",
+            "蛍光プローブ",
+            "N-アシル化アミノ酸",
+            "熱量測定",
+            "超分子化学",
+            "高分子複合材料",
+            "高分子合成",
+            "理論化学",
+            "量子化学",
+            "計算化学",
+            "有機合成化学",
+            "有機金属化学",
+            "グリーンケミストリー",
+            "有機光化学",
+            "酸素還元",
+            "導電性高分子",
+            "電気化学",
+            "電極反応"
           ]
         },
         {
@@ -1476,7 +3006,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=5302",
           "seeds_count": 5,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_5303",
@@ -1485,7 +3016,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=5303",
           "seeds_count": 6,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_5304",
@@ -1494,7 +3026,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=5304",
           "seeds_count": 6,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_5305",
@@ -1505,6 +3038,23 @@
           "member_count": 1,
           "professor_ids": [
             "prof_11658"
+          ],
+          "keywords": [
+            "金属タンパク質",
+            "タンパク質工学",
+            "分子生物学",
+            "生化学",
+            "酸化還元酵素",
+            "鉄硫黄タンパク質",
+            "フラボ蛋白質",
+            "反応速度論",
+            "電子伝達系",
+            "光合成細菌",
+            "光化学反応中心",
+            "ストップトフロー法",
+            "理論化学",
+            "量子化学",
+            "計算化学"
           ]
         },
         {
@@ -1516,6 +3066,40 @@
           "member_count": 1,
           "professor_ids": [
             "prof_11658"
+          ],
+          "keywords": [
+            "グリーンケミストリー",
+            "環境",
+            "資源",
+            "有機合成化学",
+            "N-アシル化アミノ酸",
+            "界面活性剤",
+            "熱量測定",
+            "イオン液体",
+            "バイオリファイナリー",
+            "セルロース",
+            "リグニン",
+            "機能性高分子",
+            "エネルギー変換",
+            "水素結合",
+            "Biomass Pretreatment",
+            "Cellulose Processing",
+            "Ionic liquids",
+            "Deep Eutectic Solvents (DES)",
+            "Computational & Machine Learning",
+            "環境科学",
+            "水溶性イオン",
+            "揮発性有機化合物",
+            "微細粒子状物質",
+            "健康影響",
+            "エアロゾル",
+            "分析化学",
+            "環境化学",
+            "大気汚染",
+            "多環芳香族炭化水素",
+            "理論化学",
+            "量子化学",
+            "計算化学"
           ]
         },
         {
@@ -1527,6 +3111,14 @@
           "member_count": 1,
           "professor_ids": [
             "prof_11658"
+          ],
+          "keywords": [
+            "ペロブスカイト太陽電池",
+            "有機薄膜太陽電池",
+            "色素増感太陽電池",
+            "理論化学",
+            "量子化学",
+            "計算化学"
           ]
         },
         {
@@ -1536,7 +3128,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=5401",
           "seeds_count": 0,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_5402",
@@ -1545,7 +3138,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=5402",
           "seeds_count": 6,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_5403",
@@ -1554,7 +3148,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=5403",
           "seeds_count": 0,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_5404",
@@ -1563,7 +3158,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=5404",
           "seeds_count": 0,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         }
       ]
     },
@@ -1571,6 +3167,223 @@
       "id": "major_工学",
       "name": "工学",
       "member_count": 13,
+      "keywords": [
+        "メカトロニクス",
+        "CAD",
+        "CAM",
+        "ロボット",
+        "振動発電",
+        "非線形振動",
+        "振動解析",
+        "メタ構造",
+        "ワイヤレスセンサノード",
+        "繊維機械",
+        "繊維強化複合材料",
+        "繊維材料",
+        "振動制御",
+        "音響制御",
+        "音響計測",
+        "機能性材料",
+        "セルオートマトン",
+        "メタマテリアル",
+        "システム",
+        "機械力学",
+        "宇宙機",
+        "姿勢制御",
+        "姿勢推定",
+        "成層圏気球",
+        "制御工学",
+        "人間共存型ロボット",
+        "スマートセンシング",
+        "自動化装置",
+        "生体力学",
+        "運動制御",
+        "歩行",
+        "義肢装具",
+        "マルチボディダイナミクス",
+        "生体医工学",
+        "聴覚医学",
+        "耳科学",
+        "生体工学",
+        "バイオメカニクス",
+        "タンパク質モーター",
+        "システム制御理論",
+        "制御応用",
+        "システムモデリング",
+        "実時間最適化",
+        "ロボティクス",
+        "パラレルメカニズム",
+        "柔軟メカニズム",
+        "高度道路交通システム",
+        "運転支援システム",
+        "触覚センサ・近接覚センサ",
+        "多指ロボットハンド",
+        "モジュラーロボット",
+        "自律分散システム",
+        "インテリジェントタイヤ",
+        "工作機械",
+        "医工学",
+        "衝撃工学",
+        "メカニズム",
+        "ロボット工学",
+        "ロボットハンド",
+        "マニピュレーション",
+        "ソフトロボット",
+        "機構設計",
+        "フィジカルAI",
+        "構造最適化",
+        "人間支援",
+        "医療工学",
+        "集積回路",
+        "イメージセンサ",
+        "インタラクティブシステム",
+        "ウェアラブルコンピュータ",
+        "光干渉計測",
+        "光計測",
+        "光ファイバセンサ",
+        "光ファイバ",
+        "光検出器",
+        "光波回路",
+        "半導体",
+        "薄膜材料",
+        "ナノ構造",
+        "半導体レーザ",
+        "リチウム電池",
+        "太陽電池",
+        "第一原理計算",
+        "磁性体",
+        "キャリアデザイン",
+        "記憶素子",
+        "放射線画像",
+        "光エレクトロニクス",
+        "シリコンフォトニクス",
+        "光無線給電",
+        "半導体デバイス",
+        "画像処理",
+        "LSI設計自動化",
+        "自然電磁波動",
+        "南極",
+        "雷",
+        "宇宙科学",
+        "データベース",
+        "電波科学",
+        "信号処理",
+        "ナノ粒子や薄膜の触媒への応用",
+        "ローコストセンサーの環境分野への応用",
+        "LIBSを用いた組成分析手法の開発",
+        "大気汚染の高密度・高時間分解能測定",
+        "スパッタ法を用いた薄膜作製",
+        "液中パルスレーザーアブレーションを用いたナノ粒子の作製",
+        "パルスレーザーアブレーションを用いた薄膜作製",
+        "電気抵抗率",
+        "ハイエントロピー合金",
+        "ミルフィーユ構造",
+        "超微細粒",
+        "巨大ひずみ加工",
+        "水素透過合金",
+        "バルクナノ",
+        "アルミニウム",
+        "STEM",
+        "電磁波源推定・可視化",
+        "低周波磁界センサ",
+        "磁気圏プラズマ波動",
+        "適応フィルタ",
+        "学習",
+        "生産システム",
+        "サプライチェーンマネジメント",
+        "環境配慮型システム",
+        "交通安全",
+        "交通計画",
+        "適応策",
+        "アクティビティ",
+        "土地利用・交通モデル",
+        "都市政策",
+        "都市洪水",
+        "気候変動",
+        "技術評価",
+        "バイオマス",
+        "資源循環",
+        "社会実装",
+        "産官学連携",
+        "産業エコロジー工学",
+        "脱炭素社会",
+        "循環型社会システム",
+        "土木環境システム",
+        "土木計画",
+        "都市防災",
+        "都市間旅客交通",
+        "データサイエンス",
+        "水環境工学",
+        "化学物質管理",
+        "環境動態",
+        "多次元水質データ",
+        "水中の微量汚染化学物質",
+        "高度浄水処理",
+        "高度下水処理",
+        "トキシコゲノミクス",
+        "環境プロセス工学",
+        "環境微生物学",
+        "サステイナビリティ学",
+        "生物学的排水処理",
+        "微生物生態",
+        "遺伝子解析",
+        "海浜変形",
+        "沿岸波浪",
+        "沿岸砂州",
+        "画像観測",
+        "コミュニティ開発",
+        "観光まちづくり",
+        "持続可能性",
+        "小規模住民組織",
+        "都市貧困層",
+        "居住環境計画",
+        "AI シミュレーション",
+        "土地利用シミュレーション",
+        "土地利用規制",
+        "国土空間計画国際比較",
+        "AI",
+        "zebデザインガイドライン",
+        "ゼロエネルギービル",
+        "センサー",
+        "エネルギー消費の可視化",
+        "環境デザイン",
+        "地域資源",
+        "地域づくり",
+        "歴史的建築物",
+        "建築",
+        "ランドスケープデザイン",
+        "インテリアデザイン",
+        "プロダクトデザイン",
+        "公共施設マネジメント",
+        "高齢者の居住環境",
+        "施設計画",
+        "都市計画",
+        "建築計画",
+        "都市デザイン",
+        "景観",
+        "土地利用計画",
+        "文化的景観",
+        "歴史的環境",
+        "住生活",
+        "地域居住",
+        "住環境",
+        "まちづくり",
+        "エネルギー変換",
+        "熱・物質移動",
+        "ろ過",
+        "地球エネルギー工学",
+        "環境地質",
+        "地下水水文学",
+        "地球統計学",
+        "透水係数",
+        "地中熱",
+        "地下水",
+        "水理地質学",
+        "直接形燃料電池",
+        "デシカント空調",
+        "熱と物質移動解析",
+        "吸着"
+      ],
       "fields": [
         {
           "id": "field_5501",
@@ -1579,7 +3392,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=5501",
           "seeds_count": 8,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_5502",
@@ -1588,7 +3402,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=5502",
           "seeds_count": 10,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_5503",
@@ -1597,7 +3412,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=5503",
           "seeds_count": 7,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_5504",
@@ -1606,7 +3422,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=5504",
           "seeds_count": 5,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_5505",
@@ -1615,7 +3432,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=5505",
           "seeds_count": 5,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_5506",
@@ -1626,6 +3444,51 @@
           "member_count": 1,
           "professor_ids": [
             "prof_2195"
+          ],
+          "keywords": [
+            "メカトロニクス",
+            "CAD",
+            "CAM",
+            "ロボット",
+            "振動発電",
+            "非線形振動",
+            "振動解析",
+            "メタ構造",
+            "ワイヤレスセンサノード",
+            "繊維機械",
+            "繊維強化複合材料",
+            "繊維材料",
+            "振動制御",
+            "音響制御",
+            "音響計測",
+            "機能性材料",
+            "セルオートマトン",
+            "メタマテリアル",
+            "システム",
+            "機械力学",
+            "宇宙機",
+            "姿勢制御",
+            "姿勢推定",
+            "成層圏気球",
+            "制御工学",
+            "人間共存型ロボット",
+            "スマートセンシング",
+            "自動化装置",
+            "生体力学",
+            "運動制御",
+            "歩行",
+            "義肢装具",
+            "マルチボディダイナミクス",
+            "生体医工学",
+            "聴覚医学",
+            "耳科学",
+            "生体工学",
+            "バイオメカニクス",
+            "タンパク質モーター",
+            "システム制御理論",
+            "制御応用",
+            "システムモデリング",
+            "実時間最適化"
           ]
         },
         {
@@ -1637,6 +3500,55 @@
           "member_count": 1,
           "professor_ids": [
             "prof_2195"
+          ],
+          "keywords": [
+            "メカトロニクス",
+            "CAD",
+            "CAM",
+            "ロボット",
+            "ロボティクス",
+            "パラレルメカニズム",
+            "柔軟メカニズム",
+            "振動解析",
+            "振動制御",
+            "音響制御",
+            "音響計測",
+            "機能性材料",
+            "セルオートマトン",
+            "メタマテリアル",
+            "システム",
+            "機械力学",
+            "宇宙機",
+            "姿勢制御",
+            "姿勢推定",
+            "成層圏気球",
+            "高度道路交通システム",
+            "運転支援システム",
+            "触覚センサ・近接覚センサ",
+            "多指ロボットハンド",
+            "モジュラーロボット",
+            "自律分散システム",
+            "人間共存型ロボット",
+            "スマートセンシング",
+            "自動化装置",
+            "インテリジェントタイヤ",
+            "工作機械",
+            "医工学",
+            "衝撃工学",
+            "メカニズム",
+            "ロボット工学",
+            "ロボットハンド",
+            "マニピュレーション",
+            "ソフトロボット",
+            "機構設計",
+            "フィジカルAI",
+            "構造最適化",
+            "システム制御理論",
+            "制御応用",
+            "システムモデリング",
+            "実時間最適化",
+            "人間支援",
+            "医療工学"
           ]
         },
         {
@@ -1646,7 +3558,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=5601",
           "seeds_count": 3,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_5602",
@@ -1655,7 +3568,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=5602",
           "seeds_count": 5,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_5603",
@@ -1667,6 +3581,35 @@
           "professor_ids": [
             "prof_2230",
             "prof_2385"
+          ],
+          "keywords": [
+            "集積回路",
+            "イメージセンサ",
+            "インタラクティブシステム",
+            "ウェアラブルコンピュータ",
+            "光干渉計測",
+            "光計測",
+            "光ファイバセンサ",
+            "光ファイバ",
+            "光検出器",
+            "光波回路",
+            "半導体",
+            "薄膜材料",
+            "ナノ構造",
+            "半導体レーザ",
+            "リチウム電池",
+            "太陽電池",
+            "第一原理計算",
+            "磁性体",
+            "キャリアデザイン",
+            "記憶素子",
+            "放射線画像",
+            "光エレクトロニクス",
+            "シリコンフォトニクス",
+            "光無線給電",
+            "半導体デバイス",
+            "画像処理",
+            "LSI設計自動化"
           ]
         },
         {
@@ -1676,7 +3619,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=5604",
           "seeds_count": 10,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_5605",
@@ -1687,6 +3631,46 @@
           "member_count": 1,
           "professor_ids": [
             "prof_2385"
+          ],
+          "keywords": [
+            "光干渉計測",
+            "光計測",
+            "光ファイバセンサ",
+            "光ファイバ",
+            "光検出器",
+            "光波回路",
+            "自然電磁波動",
+            "南極",
+            "雷",
+            "宇宙科学",
+            "データベース",
+            "電波科学",
+            "信号処理",
+            "高度道路交通システム",
+            "運転支援システム",
+            "メカトロニクス",
+            "人間共存型ロボット",
+            "スマートセンシング",
+            "自動化装置",
+            "ナノ粒子や薄膜の触媒への応用",
+            "ローコストセンサーの環境分野への応用",
+            "LIBSを用いた組成分析手法の開発",
+            "大気汚染の高密度・高時間分解能測定",
+            "スパッタ法を用いた薄膜作製",
+            "液中パルスレーザーアブレーションを用いたナノ粒子の作製",
+            "パルスレーザーアブレーションを用いた薄膜作製",
+            "電気抵抗率",
+            "ハイエントロピー合金",
+            "ミルフィーユ構造",
+            "超微細粒",
+            "巨大ひずみ加工",
+            "水素透過合金",
+            "バルクナノ",
+            "アルミニウム",
+            "STEM",
+            "電磁波源推定・可視化",
+            "低周波磁界センサ",
+            "磁気圏プラズマ波動"
           ]
         },
         {
@@ -1698,6 +3682,24 @@
           "member_count": 1,
           "professor_ids": [
             "prof_2195"
+          ],
+          "keywords": [
+            "システム",
+            "機械力学",
+            "宇宙機",
+            "姿勢制御",
+            "姿勢推定",
+            "成層圏気球",
+            "制御工学",
+            "適応フィルタ",
+            "学習",
+            "システム制御理論",
+            "制御応用",
+            "システムモデリング",
+            "実時間最適化",
+            "生産システム",
+            "サプライチェーンマネジメント",
+            "環境配慮型システム"
           ]
         },
         {
@@ -1707,7 +3709,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=5701",
           "seeds_count": 1,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_5702",
@@ -1716,7 +3719,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=5702",
           "seeds_count": 3,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_5703",
@@ -1725,7 +3729,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=5703",
           "seeds_count": 4,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_5704",
@@ -1734,7 +3739,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=5704",
           "seeds_count": 7,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_5705",
@@ -1746,6 +3752,29 @@
           "professor_ids": [
             "prof_11612",
             "prof_11791"
+          ],
+          "keywords": [
+            "交通安全",
+            "交通計画",
+            "適応策",
+            "アクティビティ",
+            "土地利用・交通モデル",
+            "都市政策",
+            "都市洪水",
+            "気候変動",
+            "技術評価",
+            "バイオマス",
+            "資源循環",
+            "社会実装",
+            "産官学連携",
+            "産業エコロジー工学",
+            "脱炭素社会",
+            "循環型社会システム",
+            "土木環境システム",
+            "土木計画",
+            "都市防災",
+            "都市間旅客交通",
+            "データサイエンス"
           ]
         },
         {
@@ -1757,6 +3786,35 @@
           "member_count": 1,
           "professor_ids": [
             "prof_11791"
+          ],
+          "keywords": [
+            "技術評価",
+            "バイオマス",
+            "資源循環",
+            "社会実装",
+            "産官学連携",
+            "産業エコロジー工学",
+            "脱炭素社会",
+            "循環型社会システム",
+            "土木環境システム",
+            "水環境工学",
+            "化学物質管理",
+            "環境動態",
+            "多次元水質データ",
+            "水中の微量汚染化学物質",
+            "高度浄水処理",
+            "高度下水処理",
+            "トキシコゲノミクス",
+            "環境プロセス工学",
+            "環境微生物学",
+            "サステイナビリティ学",
+            "生物学的排水処理",
+            "微生物生態",
+            "遺伝子解析",
+            "海浜変形",
+            "沿岸波浪",
+            "沿岸砂州",
+            "画像観測"
           ]
         },
         {
@@ -1766,7 +3824,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=5801",
           "seeds_count": 0,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_5802",
@@ -1775,7 +3834,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=5802",
           "seeds_count": 0,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_5803",
@@ -1788,6 +3848,45 @@
             "prof_8613",
             "prof_10561",
             "prof_11613"
+          ],
+          "keywords": [
+            "コミュニティ開発",
+            "観光まちづくり",
+            "持続可能性",
+            "小規模住民組織",
+            "都市貧困層",
+            "居住環境計画",
+            "AI シミュレーション",
+            "土地利用シミュレーション",
+            "土地利用規制",
+            "国土空間計画国際比較",
+            "AI",
+            "zebデザインガイドライン",
+            "ゼロエネルギービル",
+            "センサー",
+            "エネルギー消費の可視化",
+            "環境デザイン",
+            "地域資源",
+            "地域づくり",
+            "歴史的建築物",
+            "建築",
+            "ランドスケープデザイン",
+            "インテリアデザイン",
+            "プロダクトデザイン",
+            "公共施設マネジメント",
+            "高齢者の居住環境",
+            "施設計画",
+            "都市計画",
+            "建築計画",
+            "都市デザイン",
+            "景観",
+            "土地利用計画",
+            "文化的景観",
+            "歴史的環境",
+            "住生活",
+            "地域居住",
+            "住環境",
+            "まちづくり"
           ]
         },
         {
@@ -1797,7 +3896,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=5804",
           "seeds_count": 3,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_5901",
@@ -1806,7 +3906,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=5901",
           "seeds_count": 4,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_5902",
@@ -1815,7 +3916,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=5902",
           "seeds_count": 2,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_5903",
@@ -1824,7 +3926,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=5903",
           "seeds_count": 4,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_5904",
@@ -1833,7 +3936,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=5904",
           "seeds_count": 5,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_5905",
@@ -1842,7 +3946,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=5905",
           "seeds_count": 3,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_5906",
@@ -1851,7 +3956,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=5906",
           "seeds_count": 0,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_6001",
@@ -1860,7 +3966,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=6001",
           "seeds_count": 4,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_6002",
@@ -1869,7 +3976,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=6002",
           "seeds_count": 5,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_6003",
@@ -1878,7 +3986,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=6003",
           "seeds_count": 3,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_6004",
@@ -1887,7 +3996,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=6004",
           "seeds_count": 2,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_6101",
@@ -1896,7 +4006,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=6101",
           "seeds_count": 5,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_6102",
@@ -1905,7 +4016,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=6102",
           "seeds_count": 0,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_6103",
@@ -1914,7 +4026,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=6103",
           "seeds_count": 0,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_6104",
@@ -1923,7 +4036,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=6104",
           "seeds_count": 0,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_6105",
@@ -1932,7 +4046,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=6105",
           "seeds_count": 0,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_6106",
@@ -1943,6 +4058,33 @@
           "member_count": 1,
           "professor_ids": [
             "prof_11791"
+          ],
+          "keywords": [
+            "エネルギー変換",
+            "熱・物質移動",
+            "機能性材料",
+            "ろ過",
+            "地球エネルギー工学",
+            "環境地質",
+            "地下水水文学",
+            "地球統計学",
+            "透水係数",
+            "地中熱",
+            "地下水",
+            "水理地質学",
+            "直接形燃料電池",
+            "デシカント空調",
+            "熱と物質移動解析",
+            "吸着",
+            "技術評価",
+            "バイオマス",
+            "資源循環",
+            "社会実装",
+            "産官学連携",
+            "産業エコロジー工学",
+            "脱炭素社会",
+            "循環型社会システム",
+            "土木環境システム"
           ]
         }
       ]
@@ -1951,6 +4093,17 @@
       "id": "major_総合生物",
       "name": "総合生物",
       "member_count": 3,
+      "keywords": [
+        "デジタル療法",
+        "デジタル医療",
+        "デジタルヘルス",
+        "機械学習",
+        "web3",
+        "クロスリアリティ",
+        "遠隔医療",
+        "ゲノム医療",
+        "循環器病"
+      ],
       "fields": [
         {
           "id": "field_6201",
@@ -1959,7 +4112,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=6201",
           "seeds_count": 10,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_6202",
@@ -1968,7 +4122,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=6202",
           "seeds_count": 4,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_6203",
@@ -1977,7 +4132,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=6203",
           "seeds_count": 5,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_6301",
@@ -1986,7 +4142,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=6301",
           "seeds_count": 1,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_6401",
@@ -1995,7 +4152,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=6401",
           "seeds_count": 12,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_6402",
@@ -2004,7 +4162,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=6402",
           "seeds_count": 0,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_6403",
@@ -2013,7 +4172,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=6403",
           "seeds_count": 3,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_6501",
@@ -2024,7 +4184,8 @@
           "member_count": 1,
           "professor_ids": [
             "prof_2076"
-          ]
+          ],
+          "keywords": []
         },
         {
           "id": "field_6502",
@@ -2036,6 +4197,17 @@
           "professor_ids": [
             "prof_4586",
             "prof_2076"
+          ],
+          "keywords": [
+            "デジタル療法",
+            "デジタル医療",
+            "デジタルヘルス",
+            "機械学習",
+            "web3",
+            "クロスリアリティ",
+            "遠隔医療",
+            "ゲノム医療",
+            "循環器病"
           ]
         },
         {
@@ -2045,7 +4217,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=6503",
           "seeds_count": 1,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_6601",
@@ -2054,7 +4227,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=6601",
           "seeds_count": 1,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         }
       ]
     },
@@ -2062,6 +4236,7 @@
       "id": "major_生物学",
       "name": "生物学",
       "member_count": 0,
+      "keywords": [],
       "fields": [
         {
           "id": "field_6701",
@@ -2070,7 +4245,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=6701",
           "seeds_count": 17,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_6702",
@@ -2079,7 +4255,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=6702",
           "seeds_count": 2,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_6703",
@@ -2088,7 +4265,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=6703",
           "seeds_count": 8,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_6704",
@@ -2097,7 +4275,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=6704",
           "seeds_count": 9,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_6705",
@@ -2106,7 +4285,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=6705",
           "seeds_count": 11,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_6706",
@@ -2115,7 +4295,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=6706",
           "seeds_count": 2,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_6801",
@@ -2124,7 +4305,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=6801",
           "seeds_count": 3,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_6802",
@@ -2133,7 +4315,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=6802",
           "seeds_count": 2,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_6803",
@@ -2142,7 +4325,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=6803",
           "seeds_count": 3,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_6804",
@@ -2151,7 +4335,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=6804",
           "seeds_count": 1,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_6805",
@@ -2160,7 +4345,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=6805",
           "seeds_count": 2,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_6806",
@@ -2169,7 +4355,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=6806",
           "seeds_count": 2,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_6807",
@@ -2178,7 +4365,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=6807",
           "seeds_count": 4,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_6901",
@@ -2187,7 +4375,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=6901",
           "seeds_count": 0,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_6902",
@@ -2196,7 +4385,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=6902",
           "seeds_count": 0,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         }
       ]
     },
@@ -2204,6 +4394,15 @@
       "id": "major_農学",
       "name": "農学",
       "member_count": 1,
+      "keywords": [
+        "都市計画",
+        "都市デザイン",
+        "景観",
+        "土地利用計画",
+        "文化的景観",
+        "歴史的環境",
+        "コミュニティ・デザイン　文化的景観　伝統工芸　ランドスケープ論"
+      ],
       "fields": [
         {
           "id": "field_7001",
@@ -2212,7 +4411,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=7001",
           "seeds_count": 0,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_7002",
@@ -2221,7 +4421,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=7002",
           "seeds_count": 0,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_7003",
@@ -2230,7 +4431,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=7003",
           "seeds_count": 0,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_7004",
@@ -2239,7 +4441,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=7004",
           "seeds_count": 1,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_7101",
@@ -2248,7 +4451,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=7101",
           "seeds_count": 0,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_7102",
@@ -2257,7 +4461,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=7102",
           "seeds_count": 4,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_7103",
@@ -2266,7 +4471,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=7103",
           "seeds_count": 2,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_7104",
@@ -2275,7 +4481,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=7104",
           "seeds_count": 2,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_7105",
@@ -2284,7 +4491,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=7105",
           "seeds_count": 0,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_7201",
@@ -2293,7 +4501,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=7201",
           "seeds_count": 0,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_7202",
@@ -2302,7 +4511,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=7202",
           "seeds_count": 0,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_7301",
@@ -2311,7 +4521,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=7301",
           "seeds_count": 2,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_7302",
@@ -2320,7 +4531,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=7302",
           "seeds_count": 3,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_7401",
@@ -2329,7 +4541,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=7401",
           "seeds_count": 0,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_7402",
@@ -2338,7 +4551,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=7402",
           "seeds_count": 0,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_7501",
@@ -2347,7 +4561,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=7501",
           "seeds_count": 1,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_7502",
@@ -2356,7 +4571,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=7502",
           "seeds_count": 0,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_7601",
@@ -2365,7 +4581,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=7601",
           "seeds_count": 0,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_7602",
@@ -2374,7 +4591,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=7602",
           "seeds_count": 0,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_7603",
@@ -2383,7 +4601,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=7603",
           "seeds_count": 1,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_7701",
@@ -2392,7 +4611,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=7701",
           "seeds_count": 2,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_7702",
@@ -2403,6 +4623,15 @@
           "member_count": 1,
           "professor_ids": [
             "prof_4502"
+          ],
+          "keywords": [
+            "都市計画",
+            "都市デザイン",
+            "景観",
+            "土地利用計画",
+            "文化的景観",
+            "歴史的環境",
+            "コミュニティ・デザイン　文化的景観　伝統工芸　ランドスケープ論"
           ]
         },
         {
@@ -2412,7 +4641,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=7703",
           "seeds_count": 1,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         }
       ]
     },
@@ -2420,6 +4650,118 @@
       "id": "major_医歯薬学",
       "name": "医歯薬学",
       "member_count": 12,
+      "keywords": [
+        "先天性心疾患",
+        "小児救急",
+        "小児蘇生",
+        "医学教育",
+        "医事法",
+        "医療経営学",
+        "医療管理学",
+        "医療情報学",
+        "医事法制",
+        "社会学",
+        "公衆衛生学",
+        "内分泌腫瘍",
+        "高血圧",
+        "メディカルイノベーション",
+        "レギュラトリーサイエンス",
+        "遠隔診療(IoT診療）",
+        "健康増進",
+        "学校健康教育",
+        "飲酒防止教育",
+        "環境疫学",
+        "黄砂",
+        "PM2.5",
+        "アレルギー",
+        "花粉症",
+        "心臓リモデリング",
+        "心不全",
+        "循環器内科学",
+        "遠隔医療 遠隔モニタリング",
+        "ウェアラブルデバイス",
+        "医用工学",
+        "カテーテルアブレーション",
+        "心房細動",
+        "不整脈",
+        "虚血性心疾患",
+        "冠動脈インターベンション",
+        "冠動脈イメージング",
+        "心構造疾患",
+        "心筋虚血再灌流",
+        "心筋再生",
+        "血管新生",
+        "エンドセリン",
+        "臨床不整脈",
+        "遺伝性心筋症",
+        "ゼブラフィッシュ",
+        "デジタル療法",
+        "デジタル医療",
+        "デジタルヘルス",
+        "機械学習",
+        "web3",
+        "クロスリアリティ",
+        "遠隔医療",
+        "ゲノム医療",
+        "循環器病",
+        "自律交感神経",
+        "救急医学",
+        "災害医学",
+        "肥大型心筋症",
+        "遺伝子診断",
+        "脂質代謝",
+        "動脈硬化",
+        "臨床化学",
+        "先制医療情報学",
+        "予防医科学",
+        "生体情報内科学",
+        "内分泌学",
+        "医療ビッグデータ",
+        "ステロイド",
+        "代謝学",
+        "腸内細菌",
+        "オミクス",
+        "糖尿病学",
+        "内分泌代謝学",
+        "糖尿病",
+        "内分泌代謝",
+        "脂肪肝",
+        "脂質生化学",
+        "肥満",
+        "エネルギー代謝",
+        "人類学",
+        "医学教育学",
+        "追いつき成長",
+        "酸素",
+        "成長遅滞",
+        "胚成長",
+        "神経堤幹細胞",
+        "インスリン様成長因子",
+        "白血病",
+        "自己免疫疾患",
+        "iPS細胞",
+        "造血器腫瘍",
+        "骨髄移植",
+        "血液内科学",
+        "バイオテクノロジー",
+        "血液検査学",
+        "血栓止血学",
+        "遺伝性血栓性素因",
+        "幹細胞",
+        "発がん",
+        "ゲノム編集",
+        "エピゲノム",
+        "免疫学",
+        "造血幹細胞移植",
+        "造血障害",
+        "再生不良性貧血",
+        "血液内科",
+        "造血幹細胞",
+        "ドナーリンパ球輸注",
+        "感染免疫",
+        "ワクチン",
+        "マラリア"
+      ],
       "fields": [
         {
           "id": "field_7801",
@@ -2428,7 +4770,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=7801",
           "seeds_count": 6,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_7802",
@@ -2437,7 +4780,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=7802",
           "seeds_count": 4,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_7803",
@@ -2446,7 +4790,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=7803",
           "seeds_count": 5,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_7804",
@@ -2455,7 +4800,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=7804",
           "seeds_count": 1,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_7805",
@@ -2464,7 +4810,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=7805",
           "seeds_count": 2,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_7806",
@@ -2473,7 +4820,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=7806",
           "seeds_count": 5,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_7807",
@@ -2482,7 +4830,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=7807",
           "seeds_count": 1,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_7808",
@@ -2491,7 +4840,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=7808",
           "seeds_count": 9,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_7901",
@@ -2500,7 +4850,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=7901",
           "seeds_count": 1,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_7902",
@@ -2509,7 +4860,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=7902",
           "seeds_count": 5,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_7903",
@@ -2518,7 +4870,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=7903",
           "seeds_count": 1,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_7904",
@@ -2527,7 +4880,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=7904",
           "seeds_count": 0,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_7905",
@@ -2536,7 +4890,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=7905",
           "seeds_count": 7,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_7906",
@@ -2545,7 +4900,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=7906",
           "seeds_count": 10,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_7907",
@@ -2554,7 +4910,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=7907",
           "seeds_count": 2,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_7908",
@@ -2563,7 +4920,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=7908",
           "seeds_count": 7,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_7909",
@@ -2572,7 +4930,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=7909",
           "seeds_count": 9,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_7910",
@@ -2581,7 +4940,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=7910",
           "seeds_count": 4,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_7911",
@@ -2590,7 +4950,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=7911",
           "seeds_count": 3,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_7912",
@@ -2599,7 +4960,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=7912",
           "seeds_count": 5,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_7913",
@@ -2608,7 +4970,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=7913",
           "seeds_count": 14,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_8001",
@@ -2620,6 +4983,25 @@
           "professor_ids": [
             "prof_3055",
             "prof_2777"
+          ],
+          "keywords": [
+            "先天性心疾患",
+            "小児救急",
+            "小児蘇生",
+            "医学教育",
+            "医事法",
+            "医療経営学",
+            "医療管理学",
+            "医療情報学",
+            "医事法制",
+            "社会学",
+            "公衆衛生学",
+            "内分泌腫瘍",
+            "高血圧",
+            "メディカルイノベーション",
+            "レギュラトリーサイエンス",
+            "遠隔診療(IoT診療）",
+            "健康増進"
           ]
         },
         {
@@ -2629,7 +5011,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=8002",
           "seeds_count": 3,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_8003",
@@ -2638,7 +5021,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=8003",
           "seeds_count": 7,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_8004",
@@ -2647,7 +5031,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=8004",
           "seeds_count": 0,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_8101",
@@ -2656,7 +5041,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=8101",
           "seeds_count": 5,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_8102",
@@ -2670,6 +5056,17 @@
             "prof_11731",
             "prof_4556",
             "prof_3055"
+          ],
+          "keywords": [
+            "学校健康教育",
+            "飲酒防止教育",
+            "環境疫学",
+            "黄砂",
+            "PM2.5",
+            "アレルギー",
+            "花粉症",
+            "社会学",
+            "公衆衛生学"
           ]
         },
         {
@@ -2679,7 +5076,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=8103",
           "seeds_count": 1,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_8104",
@@ -2688,7 +5086,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=8104",
           "seeds_count": 2,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_8201",
@@ -2699,7 +5098,8 @@
           "member_count": 1,
           "professor_ids": [
             "prof_11642"
-          ]
+          ],
+          "keywords": []
         },
         {
           "id": "field_8202",
@@ -2708,7 +5108,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=8202",
           "seeds_count": 8,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_8203",
@@ -2720,6 +5121,52 @@
           "professor_ids": [
             "prof_4586",
             "prof_2777"
+          ],
+          "keywords": [
+            "心臓リモデリング",
+            "心不全",
+            "循環器内科学",
+            "遠隔医療 遠隔モニタリング",
+            "ウェアラブルデバイス",
+            "医用工学",
+            "先天性心疾患",
+            "小児救急",
+            "小児蘇生",
+            "医学教育",
+            "カテーテルアブレーション",
+            "心房細動",
+            "不整脈",
+            "虚血性心疾患",
+            "冠動脈インターベンション",
+            "冠動脈イメージング",
+            "心構造疾患",
+            "心筋虚血再灌流",
+            "心筋再生",
+            "血管新生",
+            "エンドセリン",
+            "臨床不整脈",
+            "遺伝性心筋症",
+            "ゼブラフィッシュ",
+            "デジタル療法",
+            "デジタル医療",
+            "デジタルヘルス",
+            "機械学習",
+            "web3",
+            "クロスリアリティ",
+            "遠隔医療",
+            "ゲノム医療",
+            "循環器病",
+            "自律交感神経",
+            "高血圧",
+            "救急医学",
+            "災害医学",
+            "肥大型心筋症",
+            "遺伝子診断",
+            "内分泌腫瘍",
+            "メディカルイノベーション",
+            "レギュラトリーサイエンス",
+            "遠隔診療(IoT診療）",
+            "健康増進"
           ]
         },
         {
@@ -2729,7 +5176,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=8204",
           "seeds_count": 4,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_8205",
@@ -2738,7 +5186,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=8205",
           "seeds_count": 5,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_8206",
@@ -2747,7 +5196,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=8206",
           "seeds_count": 1,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_8207",
@@ -2758,6 +5208,35 @@
           "member_count": 1,
           "professor_ids": [
             "prof_2777"
+          ],
+          "keywords": [
+            "脂質代謝",
+            "動脈硬化",
+            "臨床化学",
+            "先制医療情報学",
+            "予防医科学",
+            "生体情報内科学",
+            "内分泌学",
+            "高血圧",
+            "医療ビッグデータ",
+            "ステロイド",
+            "代謝学",
+            "腸内細菌",
+            "機械学習",
+            "オミクス",
+            "糖尿病学",
+            "内分泌代謝学",
+            "糖尿病",
+            "内分泌代謝",
+            "脂肪肝",
+            "脂質生化学",
+            "肥満",
+            "エネルギー代謝",
+            "内分泌腫瘍",
+            "メディカルイノベーション",
+            "レギュラトリーサイエンス",
+            "遠隔診療(IoT診療）",
+            "健康増進"
           ]
         },
         {
@@ -2769,6 +5248,35 @@
           "member_count": 1,
           "professor_ids": [
             "prof_2777"
+          ],
+          "keywords": [
+            "人類学",
+            "医学教育学",
+            "内分泌学",
+            "ゼブラフィッシュ",
+            "追いつき成長",
+            "酸素",
+            "成長遅滞",
+            "胚成長",
+            "神経堤幹細胞",
+            "インスリン様成長因子",
+            "先制医療情報学",
+            "予防医科学",
+            "生体情報内科学",
+            "高血圧",
+            "医療ビッグデータ",
+            "ステロイド",
+            "代謝学",
+            "腸内細菌",
+            "機械学習",
+            "オミクス",
+            "糖尿病学",
+            "内分泌代謝学",
+            "内分泌腫瘍",
+            "メディカルイノベーション",
+            "レギュラトリーサイエンス",
+            "遠隔診療(IoT診療）",
+            "健康増進"
           ]
         },
         {
@@ -2780,6 +5288,32 @@
           "member_count": 1,
           "professor_ids": [
             "prof_3738"
+          ],
+          "keywords": [
+            "白血病",
+            "自己免疫疾患",
+            "iPS細胞",
+            "造血器腫瘍",
+            "骨髄移植",
+            "血液内科学",
+            "バイオテクノロジー",
+            "血液検査学",
+            "血栓止血学",
+            "遺伝性血栓性素因",
+            "幹細胞",
+            "発がん",
+            "ゲノム編集",
+            "エピゲノム",
+            "免疫学",
+            "造血幹細胞移植",
+            "造血障害",
+            "再生不良性貧血",
+            "血液内科",
+            "造血幹細胞",
+            "ドナーリンパ球輸注",
+            "感染免疫",
+            "ワクチン",
+            "マラリア"
           ]
         },
         {
@@ -2789,7 +5323,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=8210",
           "seeds_count": 1,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_8211",
@@ -2798,7 +5333,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=8211",
           "seeds_count": 0,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_8212",
@@ -2807,7 +5343,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=8212",
           "seeds_count": 5,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_8213",
@@ -2816,7 +5353,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=8213",
           "seeds_count": 2,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_8214",
@@ -2825,7 +5363,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=8214",
           "seeds_count": 2,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_8215",
@@ -2834,7 +5373,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=8215",
           "seeds_count": 7,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_8216",
@@ -2843,7 +5383,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=8216",
           "seeds_count": 20,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_8301",
@@ -2852,7 +5393,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=8301",
           "seeds_count": 2,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_8302",
@@ -2861,7 +5403,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=8302",
           "seeds_count": 0,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_8303",
@@ -2870,7 +5413,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=8303",
           "seeds_count": 1,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_8304",
@@ -2879,7 +5423,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=8304",
           "seeds_count": 2,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_8305",
@@ -2888,7 +5433,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=8305",
           "seeds_count": 5,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_8306",
@@ -2897,7 +5443,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=8306",
           "seeds_count": 6,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_8307",
@@ -2906,7 +5453,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=8307",
           "seeds_count": 3,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_8308",
@@ -2915,7 +5463,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=8308",
           "seeds_count": 2,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_8309",
@@ -2924,7 +5473,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=8309",
           "seeds_count": 0,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_8310",
@@ -2933,7 +5483,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=8310",
           "seeds_count": 5,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_8311",
@@ -2942,7 +5493,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=8311",
           "seeds_count": 4,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_8312",
@@ -2951,7 +5503,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=8312",
           "seeds_count": 0,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_8313",
@@ -2960,7 +5513,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=8313",
           "seeds_count": 0,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_8314",
@@ -2969,7 +5523,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=8314",
           "seeds_count": 3,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_8401",
@@ -2978,7 +5533,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=8401",
           "seeds_count": 0,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_8402",
@@ -2987,7 +5543,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=8402",
           "seeds_count": 0,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_8403",
@@ -2996,7 +5553,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=8403",
           "seeds_count": 0,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_8404",
@@ -3005,7 +5563,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=8404",
           "seeds_count": 1,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_8405",
@@ -3014,7 +5573,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=8405",
           "seeds_count": 0,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_8406",
@@ -3023,7 +5583,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=8406",
           "seeds_count": 0,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_8407",
@@ -3032,7 +5593,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=8407",
           "seeds_count": 3,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_8408",
@@ -3041,7 +5603,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=8408",
           "seeds_count": 0,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_8409",
@@ -3050,7 +5613,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=8409",
           "seeds_count": 0,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_8410",
@@ -3059,7 +5623,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=8410",
           "seeds_count": 0,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_8501",
@@ -3068,7 +5633,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=8501",
           "seeds_count": 0,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_8502",
@@ -3077,7 +5643,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=8502",
           "seeds_count": 8,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_8503",
@@ -3086,7 +5653,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=8503",
           "seeds_count": 1,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_8504",
@@ -3095,7 +5663,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=8504",
           "seeds_count": 4,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         },
         {
           "id": "field_8505",
@@ -3104,7 +5673,8 @@
           "url": "https://ridb.kanazawa-u.ac.jp/seeds/kekka.php?cat=8505",
           "seeds_count": 2,
           "member_count": 0,
-          "professor_ids": []
+          "professor_ids": [],
+          "keywords": []
         }
       ]
     },
@@ -3112,6 +5682,294 @@
       "id": "major_その他",
       "name": "その他",
       "member_count": 9,
+      "keywords": [
+        "トライボロジー",
+        "パターン摩耗",
+        "摩擦変形",
+        "接触面",
+        "歩行",
+        "水素雰囲気",
+        "ハイドロゲル",
+        "学校健康教育",
+        "飲酒防止教育",
+        "創傷ケア",
+        "高齢者",
+        "N-アシル化アミノ酸",
+        "界面活性剤",
+        "熱量測定",
+        "留学生教育",
+        "スペイン語",
+        "ポルトガル語",
+        "日本語",
+        "専門日本語教育",
+        "先天性心疾患",
+        "小児救急",
+        "小児蘇生",
+        "医学教育",
+        "学校数学",
+        "金属タンパク質",
+        "タンパク質工学",
+        "分子生物学",
+        "生化学",
+        "老年看護学",
+        "リハビリテーション看護学",
+        "転倒予防",
+        "チーム医療",
+        "脳卒中患者の看護看護",
+        "事業再生",
+        "景気循環",
+        "経済発展",
+        "実験病理学",
+        "ウイルス学",
+        "肝臓",
+        "がん",
+        "骨壊死",
+        "浸潤",
+        "口腔癌",
+        "内用療法",
+        "放射性医薬品",
+        "エネルギー変換",
+        "熱・物質移動",
+        "機能性材料",
+        "ろ過",
+        "デシカント空調",
+        "吸着",
+        "空気分離",
+        "コミュニケーション学（対人・異文化間）",
+        "比較犯罪社会学",
+        "文化心理学",
+        "文化比較",
+        "社会規範",
+        "逸脱行動",
+        "コントロール理論",
+        "合理的選択理論",
+        "びまん性肝疾患",
+        "門脈圧亢進症",
+        "肝動脈塞栓療法",
+        "血管内治療",
+        "肝血流",
+        "肝細胞癌",
+        "肝画像診断",
+        "腹部画像診断",
+        "放射線診断学",
+        "陸上植物",
+        "系統",
+        "進化",
+        "形態形成",
+        "コケ植物",
+        "光合成",
+        "環境耐性",
+        "エクジソン",
+        "蛹コミットメント",
+        "細胞死",
+        "肝胆道病理",
+        "原発性胆汁性肝硬変",
+        "胆管癌",
+        "バイオデータの解析",
+        "結晶成長",
+        "クオリア",
+        "行為論",
+        "倫理学",
+        "半導体レーザ",
+        "イメージセンサ",
+        "リチウム電池",
+        "太陽電池",
+        "第一原理計算",
+        "磁性体",
+        "キャリアデザイン",
+        "酸化還元酵素",
+        "鉄硫黄タンパク質",
+        "フラボ蛋白質",
+        "反応速度論",
+        "電子伝達系",
+        "光合成細菌",
+        "光化学反応中心",
+        "ストップトフロー法",
+        "データベース",
+        "リポジトリ",
+        "公衆衛生看護",
+        "保健師教育",
+        "生活習慣病予防",
+        "がん検診",
+        "GIS（地理情報システム）",
+        "医療",
+        "福祉",
+        "権利擁護",
+        "アドボカシー",
+        "ジェンダー",
+        "比較研究",
+        "会計理論",
+        "複式簿記",
+        "事象アプローチ",
+        "無侵襲計測",
+        "健康・福祉工学",
+        "医用センサー",
+        "微生物",
+        "代謝工学",
+        "有用物質生産",
+        "直接形燃料電池",
+        "熱と物質移動解析",
+        "研究経済学",
+        "エコツーリズム",
+        "フード・システム",
+        "ガストロノミー",
+        "薬物代謝",
+        "個人差",
+        "遺伝子多型",
+        "中国",
+        "農業起源",
+        "比較",
+        "東洋法制史",
+        "記憶素子",
+        "放射線画像",
+        "未来社会デザイン",
+        "つながりとネットワーク",
+        "融合科学",
+        "スマートシティ",
+        "土器付着炭化物",
+        "パレオプロテオミクス",
+        "プロテオミクス",
+        "植物免疫",
+        "木質",
+        "セルロース",
+        "ヘミセルロース",
+        "リグニン",
+        "生分解性",
+        "グラフ理論",
+        "高分子材料",
+        "高分子力学物性",
+        "糖鎖抗原",
+        "アスパラギンエンドペプチダーゼ",
+        "白亜紀",
+        "炭素同位体比",
+        "地球温暖化",
+        "水圏",
+        "環境修復",
+        "自然サイクル",
+        "地球年代学",
+        "フィッショントラック",
+        "ルミネッセンス",
+        "古環境",
+        "活断層",
+        "火山",
+        "付加体",
+        "障がい学生支援",
+        "発達障害のある学生の高大移行支援",
+        "大学生活スキル",
+        "ポリ酸",
+        "酸化物クラスター",
+        "バナジウム",
+        "無機錯体",
+        "英米法",
+        "マイノリティ",
+        "陪審制度",
+        "選挙制度",
+        "レーザー制御",
+        "光波制御",
+        "ミリ波フォトニクス",
+        "生体光計測",
+        "幹細胞",
+        "発がん",
+        "NK細胞レセプター",
+        "KIR",
+        "LILR",
+        "白血球レセプター複合体（LRC）",
+        "形状解析",
+        "ベイズ統計",
+        "生命画像解析",
+        "擬似乱数",
+        "カオス",
+        "CDMA(符号分割多元接続)",
+        "肥大型心筋症",
+        "遺伝子診断",
+        "上咽頭癌",
+        "嗅覚障害",
+        "音声障害",
+        "遺伝子発現解析",
+        "C型肝炎ウイルス",
+        "低温工学",
+        "冷凍",
+        "量子流体固体",
+        "低温物理",
+        "コミュニティ",
+        "まちづくり",
+        "地域集団",
+        "町内会・自治会",
+        "婦人会・女性会",
+        "NPO",
+        "市民意識調査",
+        "市民と行政との協働",
+        "善隣館",
+        "地域福祉",
+        "増殖因子",
+        "アンドロゲン受容体",
+        "非侵襲機能イメージング",
+        "磁気共鳴医学",
+        "抗リン脂質抗体症候群",
+        "先天性凝固異常症",
+        "凝固",
+        "レーザアブレーション",
+        "PLD",
+        "酸化物エレクトロニクス",
+        "強誘電体薄膜",
+        "不揮発性メモリ",
+        "強誘電体不揮発メモリ",
+        "強誘電性分極誘起の光起電力効果",
+        "モダリティ",
+        "否定",
+        "文法化",
+        "電磁波源推定・可視化",
+        "低周波磁界センサ",
+        "磁気圏プラズマ波動",
+        "T細胞",
+        "酸化ストレス",
+        "EBV",
+        "自己炎症疾患",
+        "コンクリート",
+        "RC構造",
+        "せん断耐荷機構",
+        "繊維補強コンクリート",
+        "超高強度コンクリート",
+        "維持管理",
+        "住生活",
+        "地域居住",
+        "住環境",
+        "酸素還元",
+        "導電性高分子",
+        "電気化学",
+        "電極反応",
+        "構造最適化",
+        "自然保護",
+        "資源保全",
+        "サステイナブルツーリズム",
+        "インタープリテーション",
+        "インフォーマルラーニング",
+        "ゲノム科学",
+        "微生物学",
+        "バイオインフォマティクス",
+        "血管生物学",
+        "糖尿病学",
+        "マトリックスメタロプロテアーゼ",
+        "頭頸部がん",
+        "内分泌腫瘍",
+        "高血圧",
+        "メディカルイノベーション",
+        "レギュラトリーサイエンス",
+        "遠隔診療(IoT診療）",
+        "健康増進",
+        "ガンマ線バースト",
+        "X線・ガンマ線天文衛星",
+        "宇宙論",
+        "赤外線望遠鏡",
+        "DNA修復",
+        "DNA損傷応答",
+        "美術教育",
+        "工作・工芸教育",
+        "金属工芸",
+        "文化財建造物",
+        "家庭科教育",
+        "家族学習"
+      ],
       "fields": [
         {
           "id": "field_9999",
@@ -3130,6 +5988,294 @@
             "prof_1956",
             "prof_4656",
             "prof_2777"
+          ],
+          "keywords": [
+            "トライボロジー",
+            "パターン摩耗",
+            "摩擦変形",
+            "接触面",
+            "歩行",
+            "水素雰囲気",
+            "ハイドロゲル",
+            "学校健康教育",
+            "飲酒防止教育",
+            "創傷ケア",
+            "高齢者",
+            "N-アシル化アミノ酸",
+            "界面活性剤",
+            "熱量測定",
+            "留学生教育",
+            "スペイン語",
+            "ポルトガル語",
+            "日本語",
+            "専門日本語教育",
+            "先天性心疾患",
+            "小児救急",
+            "小児蘇生",
+            "医学教育",
+            "学校数学",
+            "金属タンパク質",
+            "タンパク質工学",
+            "分子生物学",
+            "生化学",
+            "老年看護学",
+            "リハビリテーション看護学",
+            "転倒予防",
+            "チーム医療",
+            "脳卒中患者の看護看護",
+            "事業再生",
+            "景気循環",
+            "経済発展",
+            "実験病理学",
+            "ウイルス学",
+            "肝臓",
+            "がん",
+            "骨壊死",
+            "浸潤",
+            "口腔癌",
+            "内用療法",
+            "放射性医薬品",
+            "エネルギー変換",
+            "熱・物質移動",
+            "機能性材料",
+            "ろ過",
+            "デシカント空調",
+            "吸着",
+            "空気分離",
+            "コミュニケーション学（対人・異文化間）",
+            "比較犯罪社会学",
+            "文化心理学",
+            "文化比較",
+            "社会規範",
+            "逸脱行動",
+            "コントロール理論",
+            "合理的選択理論",
+            "びまん性肝疾患",
+            "門脈圧亢進症",
+            "肝動脈塞栓療法",
+            "血管内治療",
+            "肝血流",
+            "肝細胞癌",
+            "肝画像診断",
+            "腹部画像診断",
+            "放射線診断学",
+            "陸上植物",
+            "系統",
+            "進化",
+            "形態形成",
+            "コケ植物",
+            "光合成",
+            "環境耐性",
+            "エクジソン",
+            "蛹コミットメント",
+            "細胞死",
+            "肝胆道病理",
+            "原発性胆汁性肝硬変",
+            "胆管癌",
+            "バイオデータの解析",
+            "結晶成長",
+            "クオリア",
+            "行為論",
+            "倫理学",
+            "半導体レーザ",
+            "イメージセンサ",
+            "リチウム電池",
+            "太陽電池",
+            "第一原理計算",
+            "磁性体",
+            "キャリアデザイン",
+            "酸化還元酵素",
+            "鉄硫黄タンパク質",
+            "フラボ蛋白質",
+            "反応速度論",
+            "電子伝達系",
+            "光合成細菌",
+            "光化学反応中心",
+            "ストップトフロー法",
+            "データベース",
+            "リポジトリ",
+            "公衆衛生看護",
+            "保健師教育",
+            "生活習慣病予防",
+            "がん検診",
+            "GIS（地理情報システム）",
+            "医療",
+            "福祉",
+            "権利擁護",
+            "アドボカシー",
+            "ジェンダー",
+            "比較研究",
+            "会計理論",
+            "複式簿記",
+            "事象アプローチ",
+            "無侵襲計測",
+            "健康・福祉工学",
+            "医用センサー",
+            "微生物",
+            "代謝工学",
+            "有用物質生産",
+            "直接形燃料電池",
+            "熱と物質移動解析",
+            "研究経済学",
+            "エコツーリズム",
+            "フード・システム",
+            "ガストロノミー",
+            "薬物代謝",
+            "個人差",
+            "遺伝子多型",
+            "中国",
+            "農業起源",
+            "比較",
+            "東洋法制史",
+            "記憶素子",
+            "放射線画像",
+            "未来社会デザイン",
+            "つながりとネットワーク",
+            "融合科学",
+            "スマートシティ",
+            "土器付着炭化物",
+            "パレオプロテオミクス",
+            "プロテオミクス",
+            "植物免疫",
+            "木質",
+            "セルロース",
+            "ヘミセルロース",
+            "リグニン",
+            "生分解性",
+            "グラフ理論",
+            "高分子材料",
+            "高分子力学物性",
+            "糖鎖抗原",
+            "アスパラギンエンドペプチダーゼ",
+            "白亜紀",
+            "炭素同位体比",
+            "地球温暖化",
+            "水圏",
+            "環境修復",
+            "自然サイクル",
+            "地球年代学",
+            "フィッショントラック",
+            "ルミネッセンス",
+            "古環境",
+            "活断層",
+            "火山",
+            "付加体",
+            "障がい学生支援",
+            "発達障害のある学生の高大移行支援",
+            "大学生活スキル",
+            "ポリ酸",
+            "酸化物クラスター",
+            "バナジウム",
+            "無機錯体",
+            "英米法",
+            "マイノリティ",
+            "陪審制度",
+            "選挙制度",
+            "レーザー制御",
+            "光波制御",
+            "ミリ波フォトニクス",
+            "生体光計測",
+            "幹細胞",
+            "発がん",
+            "NK細胞レセプター",
+            "KIR",
+            "LILR",
+            "白血球レセプター複合体（LRC）",
+            "形状解析",
+            "ベイズ統計",
+            "生命画像解析",
+            "擬似乱数",
+            "カオス",
+            "CDMA(符号分割多元接続)",
+            "肥大型心筋症",
+            "遺伝子診断",
+            "上咽頭癌",
+            "嗅覚障害",
+            "音声障害",
+            "遺伝子発現解析",
+            "C型肝炎ウイルス",
+            "低温工学",
+            "冷凍",
+            "量子流体固体",
+            "低温物理",
+            "コミュニティ",
+            "まちづくり",
+            "地域集団",
+            "町内会・自治会",
+            "婦人会・女性会",
+            "NPO",
+            "市民意識調査",
+            "市民と行政との協働",
+            "善隣館",
+            "地域福祉",
+            "増殖因子",
+            "アンドロゲン受容体",
+            "非侵襲機能イメージング",
+            "磁気共鳴医学",
+            "抗リン脂質抗体症候群",
+            "先天性凝固異常症",
+            "凝固",
+            "レーザアブレーション",
+            "PLD",
+            "酸化物エレクトロニクス",
+            "強誘電体薄膜",
+            "不揮発性メモリ",
+            "強誘電体不揮発メモリ",
+            "強誘電性分極誘起の光起電力効果",
+            "モダリティ",
+            "否定",
+            "文法化",
+            "電磁波源推定・可視化",
+            "低周波磁界センサ",
+            "磁気圏プラズマ波動",
+            "T細胞",
+            "酸化ストレス",
+            "EBV",
+            "自己炎症疾患",
+            "コンクリート",
+            "RC構造",
+            "せん断耐荷機構",
+            "繊維補強コンクリート",
+            "超高強度コンクリート",
+            "維持管理",
+            "住生活",
+            "地域居住",
+            "住環境",
+            "酸素還元",
+            "導電性高分子",
+            "電気化学",
+            "電極反応",
+            "構造最適化",
+            "自然保護",
+            "資源保全",
+            "サステイナブルツーリズム",
+            "インタープリテーション",
+            "インフォーマルラーニング",
+            "ゲノム科学",
+            "微生物学",
+            "バイオインフォマティクス",
+            "血管生物学",
+            "糖尿病学",
+            "マトリックスメタロプロテアーゼ",
+            "頭頸部がん",
+            "内分泌腫瘍",
+            "高血圧",
+            "メディカルイノベーション",
+            "レギュラトリーサイエンス",
+            "遠隔診療(IoT診療）",
+            "健康増進",
+            "ガンマ線バースト",
+            "X線・ガンマ線天文衛星",
+            "宇宙論",
+            "赤外線望遠鏡",
+            "DNA修復",
+            "DNA損傷応答",
+            "美術教育",
+            "工作・工芸教育",
+            "金属工芸",
+            "文化財建造物",
+            "家庭科教育",
+            "家族学習"
           ]
         }
       ]

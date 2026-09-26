@@ -44,6 +44,7 @@ REMP_FACULTY = RAW / "researchmap" / "remp_yugo_faculty_ja.json"
 REMP_PAPERS = RAW / "researchmap" / "remp_yugo_paper_details_ja.json"
 RESEARCHERS_INDEX = RAW / "researchmap" / "kanazawa_researchers_index.json"
 RIDB_FACULTY = RAW / "ridb" / "ridb_yugo_faculty_ja.json"
+SEEDS_MEMBERSHIP = RAW / "ridb" / "seeds_membership.json"
 SYLLABUS_BASIC = RAW / "syllabus" / "all_basic_info.csv"
 SYLLABUS_ATTR = RAW / "syllabus" / "all_attribute.csv"
 
@@ -57,10 +58,66 @@ WHITESPACE_RE = re.compile(r"[ \t\u3000]+")
 NEWLINE_RE = re.compile(r"\n{3,}")
 READING_RE = re.compile(r"[（(][^）)]*[）)]")
 
+# Syllabus / admin delivery-mode phrases — drop whole sentences for embedding & UI.
+DELIVERY_NOISE_KEYWORDS: tuple[str, ...] = (
+    "対面授業",
+    "ハイフレックス型授業",
+    "ハイフレックス授業",
+    "遠隔授業",
+    "オンライン授業",
+)
+
 
 def load_json(path: Path) -> Any:
     with path.open(encoding="utf-8") as f:
         return json.load(f)
+
+
+def strip_delivery_mode_sentences(text: str) -> str:
+    """
+    Remove sentences that mention classroom delivery mode (対面 / ハイフレックス etc.).
+
+    Split units by '。' and newlines; drop any unit containing a noise keyword,
+    then rejoin. Empty result is allowed (caller may fall back to keywords).
+    """
+    if not text:
+        return ""
+    if not any(kw in text for kw in DELIVERY_NOISE_KEYWORDS):
+        return text
+
+    out_lines: list[str] = []
+    for line in text.split("\n"):
+        stripped_line = line.strip()
+        if not stripped_line:
+            if out_lines and out_lines[-1] != "":
+                out_lines.append("")
+            continue
+
+        parts = stripped_line.split("。")
+        kept: list[str] = []
+        for i, part in enumerate(parts):
+            is_last = i == len(parts) - 1
+            unit = part if is_last else f"{part}。"
+            unit_stripped = unit.strip()
+            if not unit_stripped or unit_stripped == "。":
+                continue
+            if any(kw in unit_stripped for kw in DELIVERY_NOISE_KEYWORDS):
+                continue
+            if is_last:
+                kept.append(part.strip())
+            else:
+                kept.append(f"{part.strip()}。")
+        rebuilt = "".join(kept).strip()
+        if rebuilt:
+            out_lines.append(rebuilt)
+
+    joined = "\n".join(out_lines)
+    joined = NEWLINE_RE.sub("\n\n", joined)
+    return joined.strip()
+
+
+def is_delivery_noise_keyword(kw: str) -> bool:
+    return any(noise in kw for noise in DELIVERY_NOISE_KEYWORDS)
 
 
 def clean_text(value: Any) -> str:
@@ -76,7 +133,8 @@ def clean_text(value: Any) -> str:
     text = WHITESPACE_RE.sub(" ", text)
     text = "\n".join(line.strip() for line in text.split("\n"))
     text = NEWLINE_RE.sub("\n\n", text)
-    return text.strip()
+    text = text.strip()
+    return strip_delivery_mode_sentences(text)
 
 
 def base_name(name: str) -> str:
@@ -132,6 +190,8 @@ def merge_keywords(*groups: list[str]) -> list[str]:
     seen: set[str] = set()
     for group in groups:
         for kw in group:
+            if is_delivery_noise_keyword(kw):
+                continue
             key = kw.casefold()
             if key in seen:
                 continue
@@ -169,9 +229,39 @@ def parse_syllabus_instructors(field: str) -> list[str]:
     return names
 
 
+def load_subfield_keywords(path: Path) -> dict[str, list[str]]:
+    """
+    Map ridb_id -> keywords scraped from seeds field listing pages
+    (left column of キーワード | 研究者名 | 研究紹介).
+    """
+    if not path.exists():
+        return {}
+    payload = load_json(path)
+    by_ridb: dict[str, list[str]] = {}
+
+    top = payload.get("professor_keywords") or {}
+    if isinstance(top, dict):
+        for ridb_id, kws in top.items():
+            rid = str(ridb_id).strip()
+            if rid:
+                by_ridb[rid] = merge_keywords(by_ridb.get(rid, []), split_keywords(kws))
+
+    for entry in (payload.get("fields") or {}).values():
+        for member in entry.get("members") or []:
+            rid = str(member.get("ridb_id") or "").strip()
+            if not rid:
+                continue
+            by_ridb[rid] = merge_keywords(
+                by_ridb.get(rid, []),
+                split_keywords(member.get("keywords")),
+            )
+    return by_ridb
+
+
 def build_professors(
     remp: list[dict],
     ridb: list[dict],
+    subfield_keywords_by_ridb: dict[str, list[str]] | None = None,
 ) -> tuple[list[dict], dict[str, str], dict[str, str]]:
     """
     Returns:
@@ -179,6 +269,7 @@ def build_professors(
       norm_name -> professor_id,
       paper_url -> professor_id
     """
+    subfield_keywords_by_ridb = subfield_keywords_by_ridb or {}
     ridb_by_norm = {norm_name(r["basic"]["name"]): r for r in ridb}
     remp_by_norm = {norm_name(r["名前"]): r for r in remp}
 
@@ -192,6 +283,7 @@ def build_professors(
         m = remp_by_norm.get(nkey)
 
         ridb_id = (r or {}).get("basic", {}).get("id")
+        ridb_id_str = str(ridb_id).strip() if ridb_id else ""
         prof_id = f"prof_{ridb_id}" if ridb_id else f"prof_{i:04d}"
         name_to_id[nkey] = prof_id
 
@@ -210,11 +302,13 @@ def build_professors(
                 text_parts.append(str(projects))
 
         text = join_text_parts(text_parts)
+        subfield_kw = list(subfield_keywords_by_ridb.get(ridb_id_str) or [])
         # Missing prose stays "". Keywords stay a separate list (no backfill into text).
         kw = merge_keywords(
             split_keywords(research.get("keywords")),
             split_keywords((m or {}).get("research_keywords")),
             split_keywords((m or {}).get("research_areas")),
+            subfield_kw,
         )
 
         professors.append(
@@ -222,6 +316,7 @@ def build_professors(
                 "id": prof_id,
                 "text": text,
                 "keywords": kw,
+                "subfield_keywords": subfield_kw,
             }
         )
 
@@ -401,7 +496,11 @@ def build_papers(
 
 def is_empty_professor(prof: dict) -> bool:
     """True when both text and keywords are completely missing."""
-    return not prof.get("text") and not prof.get("keywords")
+    return (
+        not prof.get("text")
+        and not prof.get("keywords")
+        and not prof.get("subfield_keywords")
+    )
 
 
 def main() -> None:
@@ -411,8 +510,11 @@ def main() -> None:
     ridb = load_json(RIDB_FACULTY)
     paper_details = load_json(REMP_PAPERS)
     attr_keywords = load_attribute_keywords(SYLLABUS_ATTR)
+    subfield_kw = load_subfield_keywords(SEEDS_MEMBERSHIP)
 
-    professors_all, name_to_id, paper_url_to_author = build_professors(remp, ridb)
+    professors_all, name_to_id, paper_url_to_author = build_professors(
+        remp, ridb, subfield_kw
+    )
 
     excluded = [p for p in professors_all if is_empty_professor(p)]
     excluded_ids = [p["id"] for p in excluded]
@@ -431,6 +533,7 @@ def main() -> None:
     with OUT_PATH.open("w", encoding="utf-8") as f:
         json.dump(payload, f, ensure_ascii=False, indent=2)
 
+    n_subfield = sum(1 for p in professors if p.get("subfield_keywords"))
     print("=== 01_build_analysis_data ===")
     print(f"researchers_index entries : {len(researchers_index)}")
     print(f"output                    : {OUT_PATH}")
@@ -440,6 +543,7 @@ def main() -> None:
         print("除外した教員ID:")
         for pid in excluded_ids:
             print(f"  - {pid}")
+    print(f"小分野KWあり教員          : {n_subfield} (from {SEEDS_MEMBERSHIP.name})")
     print(f"講義数                    : {len(courses)}")
     multi_prof = sum(1 for c in courses if len(c.get("instructor_ids") or []) > 1)
     multi_url = sum(1 for c in courses if len(c.get("syllabus_urls") or []) > 1)

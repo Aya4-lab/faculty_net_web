@@ -208,6 +208,11 @@ def _build_field_nodes() -> list[dict]:
         level = info.get("level") or "field"
         csv_row = meta.get(fid) or {}
         ntype = "major" if level == "major" else "field"
+        kw = list(info.get("keywords") or [])
+        if not kw:
+            raw_kw = (csv_row.get("keywords") or "").strip()
+            if raw_kw:
+                kw = [p.strip() for p in raw_kw.split("|") if p.strip()]
         nodes.append(
             {
                 "id": fid,
@@ -221,7 +226,7 @@ def _build_field_nodes() -> list[dict]:
                     or 0
                 ),
                 "url": (csv_row.get("url") or "").strip(),
-                "keywords": [],
+                "keywords": kw,
                 "text_preview": "",
                 "description": "",
                 "position": _position_to_dict(info.get("position")),
@@ -283,6 +288,7 @@ def load_network_data(json_path: Path) -> dict:
         nid = node.get("id", "")
         name = (node.get("name") or "").strip() or nid
         keywords = list(node.get("keywords") or [])
+        subfield_keywords = list(node.get("subfield_keywords") or [])
         preview = _text_preview(node)
 
         if ntype == "professor":
@@ -296,6 +302,7 @@ def load_network_data(json_path: Path) -> dict:
                     "name": name,
                     "affiliation": (node.get("affiliation") or "").strip(),
                     "keywords": keywords,
+                    "subfield_keywords": subfield_keywords,
                     "text_preview": preview,
                     "description": (node.get("description") or "").strip(),
                     "researchmap_url": researchmap_url,
@@ -366,6 +373,9 @@ def load_network_data(json_path: Path) -> dict:
                     "position": position,
                 }
             )
+        elif ntype in {"field", "major"}:
+            # Field/major nodes come solely from field_coords via _build_field_nodes().
+            continue
         else:
             normalized_nodes.append(
                 {

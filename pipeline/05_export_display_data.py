@@ -223,12 +223,30 @@ def timetable_code_from_course_id(course_id: str) -> str:
 
 
 def embed_source_text(record: dict) -> str | None:
+    """Build embedding input: prose + keywords (when both exist)."""
     text = (record.get("text") or "").strip()
-    keywords = record.get("keywords") or []
+    keywords = [
+        str(k).strip()
+        for k in (record.get("keywords") or [])
+        if str(k).strip()
+    ]
+    sub_kw = [
+        str(k).strip()
+        for k in (record.get("subfield_keywords") or [])
+        if str(k).strip()
+    ]
+    if sub_kw:
+        seen = {k.casefold() for k in keywords}
+        for kw in sub_kw:
+            if kw.casefold() not in seen:
+                keywords.append(kw)
+                seen.add(kw.casefold())
+    if text and keywords:
+        return f"{text} [SEP] キーワード: {', '.join(keywords)}"
     if text:
         return text
     if keywords:
-        return " ".join(str(k).strip() for k in keywords if str(k).strip())
+        return f"キーワード: {', '.join(keywords)}"
     return None
 
 
@@ -290,8 +308,25 @@ def enrich_display_node(
             "url": meta.get("url") or researchmap_url or ridb_url,
             "position": position,
             "keywords": list(analysis.get("keywords") or []),
+            "subfield_keywords": list(analysis.get("subfield_keywords") or []),
             "description": (analysis.get("text") or "").strip(),
         }
+
+    if ntype in {"field", "major"}:
+        # Keep joint-UMAP field/major nodes intact (keywords + membership meta).
+        return {
+            "id": nid,
+            "type": ntype,
+            "name": node.get("name") or nid,
+            "parent_id": node.get("parent_id") or "",
+            "member_count": node.get("member_count", 0),
+            "keywords": list(node.get("keywords") or []),
+            "position": position,
+        }
+
+    if ntype != "course":
+        # Unknown node types: preserve as-is.
+        return dict(node)
 
     codes = timetable_codes_from_course(analysis, nid)
     primary_code = codes[0] if codes else timetable_code_from_course_id(nid)

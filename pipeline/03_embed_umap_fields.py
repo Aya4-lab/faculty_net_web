@@ -4,10 +4,14 @@
 Uses analysis_data.json texts (same embedding model as 05_export_display_data.py).
 
 Vector rules:
-  - professor vector  = embed(text | keywords fallback)
-  - research-field    = mean of member professors' embeddings
-  - major-field       = mean of child research-field vectors
-  - course vector     = embed(syllabus text | keywords fallback)
+  - professor / course vector = embed(text [SEP] キーワード: ...)
+      (falls back to keywords-only or text-only when the other is missing)
+  - research-field vector     = ensemble of
+        (a) embed(大分野 / 小分野名 [SEP] キーワード: field_keywords)
+        (b) mean of member professors' embeddings
+  - major-field vector        = ensemble of
+        (a) embed(大分野名 [SEP] キーワード: child keywords)
+        (b) mean of child research-field vectors
   - then UMAP jointly on [professors + research fields + majors + courses]
 
 Outputs (Analysis):
@@ -33,6 +37,7 @@ from __future__ import annotations
 import argparse
 import csv
 import json
+import re
 from collections import defaultdict
 from pathlib import Path
 
@@ -71,20 +76,92 @@ UMAP_N_NEIGHBORS = 15
 UMAP_MIN_DIST = 0.10
 UMAP_SPREAD = 1.15
 COORD_TARGET = 28.0
+# Weight of field/major definition embedding vs member/child mean (0–1).
+# Higher → field anchors stay stable even when cross-cutting faculty join.
+FIELD_DEF_WEIGHT = 0.65
+MAJOR_DEF_WEIGHT = 0.55
 
 
 def load_json(path: Path):
     return json.loads(path.read_text(encoding="utf-8"))
 
 
+def re_split_keywords(raw: str) -> list[str]:
+    out: list[str] = []
+    seen: set[str] = set()
+    for part in re.split(r"[|、,，;/／\n]+", raw or ""):
+        token = part.strip()
+        if not token:
+            continue
+        key = token.casefold()
+        if key in seen:
+            continue
+        seen.add(key)
+        out.append(token)
+    return out
+
+
+def _clean_keywords(raw) -> list[str]:
+    if raw is None:
+        return []
+    if isinstance(raw, str):
+        # field_nodes.csv stores keywords as pipe-joined
+        return re_split_keywords(raw)
+    out: list[str] = []
+    seen: set[str] = set()
+    for item in raw:
+        token = str(item).strip()
+        if not token:
+            continue
+        key = token.casefold()
+        if key in seen:
+            continue
+        seen.add(key)
+        out.append(token)
+    return out
+
+
 def embed_source_text(record: dict) -> str | None:
+    """
+    Build embedding input: prose + keywords (when both exist).
+    Missing keywords → prose only; missing prose → keywords only.
+    """
     text = (record.get("text") or "").strip()
-    keywords = record.get("keywords") or []
+    keywords = _clean_keywords(record.get("keywords"))
+    # Prefer explicit subfield_keywords appended if not already in keywords
+    sub_kw = _clean_keywords(record.get("subfield_keywords"))
+    if sub_kw:
+        seen = {k.casefold() for k in keywords}
+        for kw in sub_kw:
+            if kw.casefold() not in seen:
+                keywords.append(kw)
+                seen.add(kw.casefold())
+
+    if text and keywords:
+        return f"{text} [SEP] キーワード: {', '.join(keywords)}"
     if text:
         return text
     if keywords:
-        return " ".join(str(k).strip() for k in keywords if str(k).strip())
+        return f"キーワード: {', '.join(keywords)}"
     return None
+
+
+def field_definition_text(row: dict) -> str:
+    """Definition text for a field/major node (name + scraped keywords)."""
+    name = (row.get("name") or "").strip()
+    major = (row.get("major_name") or "").strip()
+    keywords = _clean_keywords(row.get("keywords"))
+    if row.get("level") == "field" and major and name:
+        head = f"{major} / {name}"
+    else:
+        head = name or major
+    if head and keywords:
+        return f"{head} [SEP] キーワード: {', '.join(keywords)}"
+    if head:
+        return head
+    if keywords:
+        return f"キーワード: {', '.join(keywords)}"
+    return ""
 
 
 def encode_texts(texts: list[str]) -> np.ndarray:
@@ -101,6 +178,33 @@ def encode_texts(texts: list[str]) -> np.ndarray:
         normalize_embeddings=True,
     )
     return np.asarray(vectors, dtype=np.float64)
+
+
+def l2_normalize(vec: np.ndarray) -> np.ndarray:
+    norm = float(np.linalg.norm(vec))
+    if norm > 1e-12:
+        return vec / norm
+    return vec
+
+
+def ensemble_vectors(
+    def_vec: np.ndarray | None,
+    member_vec: np.ndarray | None,
+    *,
+    def_weight: float,
+) -> np.ndarray | None:
+    """Weighted blend of definition and member/child mean; L2-normalized."""
+    if def_vec is None and member_vec is None:
+        return None
+    if def_vec is None:
+        return l2_normalize(np.asarray(member_vec, dtype=np.float64))
+    if member_vec is None:
+        return l2_normalize(np.asarray(def_vec, dtype=np.float64))
+    w = float(np.clip(def_weight, 0.0, 1.0))
+    blended = w * np.asarray(def_vec, dtype=np.float64) + (1.0 - w) * np.asarray(
+        member_vec, dtype=np.float64
+    )
+    return l2_normalize(blended)
 
 
 def normalize_coords(coords: np.ndarray, target: float = COORD_TARGET) -> np.ndarray:
@@ -267,6 +371,10 @@ def build_field_embeddings(
     edges: list[dict],
     field_nodes: list[dict],
 ) -> tuple[list[dict], np.ndarray]:
+    """
+    Field vector = ensemble(definition embed, mean of members).
+    Major vector = ensemble(definition embed, mean of child fields).
+    """
     prof_index = {pid: i for i, pid in enumerate(prof_ids)}
     members: dict[str, list[int]] = defaultdict(list)
     for edge in edges:
@@ -278,18 +386,62 @@ def build_field_embeddings(
     field_rows = [n for n in field_nodes if n["level"] == "field"]
     major_rows = [n for n in field_nodes if n["level"] == "major"]
 
-    active_fields: list[dict] = []
-    field_vecs: list[np.ndarray] = []
-    field_id_to_vec: dict[str, np.ndarray] = {}
-
+    # Precompute definition texts for active fields (have ≥1 embedded member)
+    active_field_rows: list[dict] = []
+    field_def_texts: list[str] = []
     for row in field_rows:
         idxs = members.get(row["id"]) or []
         if not idxs:
             continue
-        vec = prof_vecs[idxs].mean(axis=0)
-        norm = np.linalg.norm(vec)
-        if norm > 1e-12:
-            vec = vec / norm
+        def_text = field_definition_text(row)
+        if not def_text:
+            def_text = (row.get("name") or row["id"]).strip()
+        active_field_rows.append(row)
+        field_def_texts.append(def_text)
+
+    if not active_field_rows:
+        raise SystemExit("No field embeddings could be built (no membership overlap).")
+
+    # Major definitions for majors that will have active children
+    pending_major_ids = {
+        row["parent_id"] for row in active_field_rows if row.get("parent_id")
+    }
+    active_major_rows = [n for n in major_rows if n["id"] in pending_major_ids]
+    major_def_texts = []
+    for row in active_major_rows:
+        def_text = field_definition_text(row)
+        if not def_text:
+            def_text = (row.get("name") or row["id"]).strip()
+        major_def_texts.append(def_text)
+
+    print(
+        f"Encoding field/major definitions: "
+        f"{len(field_def_texts)} fields + {len(major_def_texts)} majors "
+        f"(def_weight field={FIELD_DEF_WEIGHT}, major={MAJOR_DEF_WEIGHT})"
+    )
+    all_def_texts = field_def_texts + major_def_texts
+    all_def_vecs = encode_texts(all_def_texts)
+    field_def_vecs = all_def_vecs[: len(field_def_texts)]
+    major_def_by_id = {
+        row["id"]: all_def_vecs[len(field_def_texts) + i]
+        for i, row in enumerate(active_major_rows)
+    }
+
+    active_fields: list[dict] = []
+    field_vecs: list[np.ndarray] = []
+    field_id_to_vec: dict[str, np.ndarray] = {}
+
+    for i, row in enumerate(active_field_rows):
+        idxs = members.get(row["id"]) or []
+        member_mean = prof_vecs[idxs].mean(axis=0) if idxs else None
+        vec = ensemble_vectors(
+            field_def_vecs[i],
+            member_mean,
+            def_weight=FIELD_DEF_WEIGHT,
+        )
+        if vec is None:
+            continue
+        keywords = _clean_keywords(row.get("keywords"))
         active_fields.append(
             {
                 "id": row["id"],
@@ -297,6 +449,8 @@ def build_field_embeddings(
                 "name": row["name"],
                 "parent_id": row["parent_id"],
                 "member_count": len(idxs),
+                "keywords": keywords,
+                "vector_source": "definition+members",
             }
         )
         field_vecs.append(vec)
@@ -308,14 +462,19 @@ def build_field_embeddings(
 
     active_majors: list[dict] = []
     major_vecs: list[np.ndarray] = []
-    for row in major_rows:
+    for row in active_major_rows:
         child_ids = children_by_major.get(row["id"]) or []
         if not child_ids:
             continue
-        vec = np.stack([field_id_to_vec[cid] for cid in child_ids]).mean(axis=0)
-        norm = np.linalg.norm(vec)
-        if norm > 1e-12:
-            vec = vec / norm
+        child_mean = np.stack([field_id_to_vec[cid] for cid in child_ids]).mean(axis=0)
+        vec = ensemble_vectors(
+            major_def_by_id.get(row["id"]),
+            child_mean,
+            def_weight=MAJOR_DEF_WEIGHT,
+        )
+        if vec is None:
+            continue
+        keywords = _clean_keywords(row.get("keywords"))
         active_majors.append(
             {
                 "id": row["id"],
@@ -327,6 +486,8 @@ def build_field_embeddings(
                     for cid in child_ids
                 ),
                 "child_field_ids": child_ids,
+                "keywords": keywords,
+                "vector_source": "definition+children",
             }
         )
         major_vecs.append(vec)
@@ -348,11 +509,15 @@ def update_display(
     course_coords: np.ndarray,
     course_meta: dict[str, dict],
     edges: list[dict],
+    analysis_professors: list[dict] | None = None,
 ) -> None:
     if not DISPLAY_PATH.exists():
         raise SystemExit(f"Missing {DISPLAY_PATH}")
 
     display = load_json(DISPLAY_PATH)
+    prof_analysis = {
+        p["id"]: p for p in (analysis_professors or []) if p.get("id")
+    }
     prof_pos = {
         pid: [
             round(float(prof_coords[i, 0]), 6),
@@ -373,12 +538,23 @@ def update_display(
     nodes_out: list[dict] = []
     for node in display.get("nodes") or []:
         ntype = node.get("type")
-        if ntype == "professor" and node["id"] in prof_pos:
-            node = {**node, "position": prof_pos[node["id"]]}
-        elif ntype == "course" and node["id"] in course_pos:
-            node = {**node, "position": course_pos[node["id"]]}
-        if ntype in {"field", "major"}:
+        nid = str(node.get("id") or "")
+        # Drop field/major nodes (by type or id prefix) so they can be rebuilt cleanly.
+        # Also removes corrupted leftovers that were once rewritten as type=course.
+        if ntype in {"field", "major"} or nid.startswith(("field_", "major_")):
             continue
+        if ntype == "professor" and nid in prof_pos:
+            analysis = prof_analysis.get(nid) or {}
+            updated = {**node, "position": prof_pos[nid]}
+            if analysis.get("keywords") is not None:
+                updated["keywords"] = list(analysis.get("keywords") or [])
+            if analysis.get("subfield_keywords") is not None:
+                updated["subfield_keywords"] = list(
+                    analysis.get("subfield_keywords") or []
+                )
+            node = updated
+        elif ntype == "course" and nid in course_pos:
+            node = {**node, "position": course_pos[nid]}
         nodes_out.append(node)
 
     existing_ids = {n["id"] for n in nodes_out}
@@ -409,6 +585,7 @@ def update_display(
                 "name": meta["name"],
                 "parent_id": meta.get("parent_id") or "",
                 "member_count": meta.get("member_count", 0),
+                "keywords": list(meta.get("keywords") or []),
                 "position": [
                     round(float(field_coords[i, 0]), 6),
                     round(float(field_coords[i, 1]), 6),
@@ -460,7 +637,9 @@ def update_display(
 
 def main() -> None:
     parser = argparse.ArgumentParser(
-        description="Joint UMAP: professors + field centroids + courses"
+        description=(
+            "Joint UMAP: professors + field definition/member ensemble + courses"
+        )
     )
     parser.add_argument(
         "--reuse-embeddings",
@@ -492,8 +671,8 @@ def main() -> None:
     courses = analysis.get("courses") or []
     edges = load_membership_edges()
     field_nodes = load_field_nodes()
-    syllabus_names = load_syllabus_names()
 
+    # Keyword-augmented texts invalidate old caches that ignored keywords.
     prof_ids, prof_vecs = load_or_compute_entity_embeddings(
         professors,
         cache_path=PROF_EMB_PATH,
@@ -559,6 +738,8 @@ def main() -> None:
             "name": meta["name"],
             "parent_id": meta.get("parent_id") or "",
             "member_count": meta.get("member_count", 0),
+            "keywords": list(meta.get("keywords") or []),
+            "vector_source": meta.get("vector_source") or "",
             "position": [
                 round(float(field_coords[i, 0]), 6),
                 round(float(field_coords[i, 1]), 6),
@@ -593,10 +774,13 @@ def main() -> None:
 
     n_field_only = sum(1 for m in field_meta if m["level"] == "field")
     n_major = sum(1 for m in field_meta if m["level"] == "major")
+    n_field_kw = sum(
+        1 for m in field_meta if m.get("keywords") and m["level"] == "field"
+    )
     print("=== 03_embed_umap_fields ===")
     print(f"method used         : {method_used}")
     print(f"professors in UMAP  : {n_prof}")
-    print(f"field nodes         : {n_field_only}")
+    print(f"field nodes         : {n_field_only} (with keywords: {n_field_kw})")
     print(f"major nodes         : {n_major}")
     print(f"courses in UMAP     : {len(course_ids)}")
     print(f"joint points        : {n_prof + n_field + len(course_ids)}")
@@ -614,6 +798,7 @@ def main() -> None:
             course_coords=course_coords,
             course_meta=course_meta,
             edges=edges,
+            analysis_professors=professors,
         )
 
 

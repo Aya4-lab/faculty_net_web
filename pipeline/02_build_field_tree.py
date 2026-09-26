@@ -91,6 +91,42 @@ def major_id_from_name(name: str) -> str:
     return f"major_{slug}"
 
 
+def load_field_keywords(membership: dict | None) -> dict[str, list[str]]:
+    """field name -> aggregated keywords from seeds listing pages."""
+    if not membership:
+        return {}
+    out: dict[str, list[str]] = {}
+    for entry in (membership.get("fields") or {}).values():
+        name = (entry.get("name") or "").strip()
+        if not name:
+            continue
+        kws: list[str] = []
+        seen: set[str] = set()
+        for raw in entry.get("field_keywords") or []:
+            token = str(raw).strip()
+            if not token:
+                continue
+            key = token.casefold()
+            if key in seen:
+                continue
+            seen.add(key)
+            kws.append(token)
+        # Fallback: union member keywords when field_keywords missing
+        if not kws:
+            for member in entry.get("members") or []:
+                for raw in member.get("keywords") or []:
+                    token = str(raw).strip()
+                    if not token:
+                        continue
+                    key = token.casefold()
+                    if key in seen:
+                        continue
+                    seen.add(key)
+                    kws.append(token)
+        out[name] = kws
+    return out
+
+
 def build_taxonomy_indexes(taxonomy: dict) -> tuple[list[dict], dict[str, dict]]:
     """Return flat field rows and name→field lookup."""
     fields: list[dict] = []
@@ -241,10 +277,13 @@ def main() -> None:
 
     field_rows, field_by_name = build_taxonomy_indexes(taxonomy)
     major_rows = build_major_nodes(taxonomy)
+    membership: dict | None = None
+    field_keywords_by_name: dict[str, list[str]] = {}
 
     edges: list[dict] = []
     if not args.specialty_only and MEMBERSHIP_PATH.exists():
         membership = load_json(MEMBERSHIP_PATH)
+        field_keywords_by_name = load_field_keywords(membership)
         edges.extend(edges_from_membership(membership, our_prof_ids, field_by_name))
         print(f"edges from seeds_membership: {len(edges)}")
     elif not args.specialty_only:
@@ -267,6 +306,24 @@ def main() -> None:
     for edge in edges:
         members_by_field[edge["target"]].append(edge["source"])
 
+    # Attach scraped field keywords onto field rows
+    for field in field_rows:
+        field["keywords"] = field_keywords_by_name.get(field["name"], [])
+
+    # Major keywords = union of child field keywords
+    keywords_by_major: dict[str, list[str]] = defaultdict(list)
+    seen_by_major: dict[str, set[str]] = defaultdict(set)
+    for field in field_rows:
+        mid = field["parent_id"]
+        for kw in field.get("keywords") or []:
+            key = kw.casefold()
+            if key in seen_by_major[mid]:
+                continue
+            seen_by_major[mid].add(key)
+            keywords_by_major[mid].append(kw)
+    for major in major_rows:
+        major["keywords"] = keywords_by_major.get(major["id"], [])
+
     node_rows: list[dict] = []
     for major in major_rows:
         child_fields = [f for f in field_rows if f["parent_id"] == major["id"]]
@@ -276,6 +333,7 @@ def main() -> None:
                 **major,
                 "member_count": member_count,
                 "active": int(major["id"] in used_major_ids),
+                "keywords": "|".join(major.get("keywords") or []),
             }
         )
     for field in field_rows:
@@ -284,6 +342,7 @@ def main() -> None:
                 **field,
                 "member_count": len(members_by_field[field["id"]]),
                 "active": int(field["id"] in used_field_ids),
+                "keywords": "|".join(field.get("keywords") or []),
             }
         )
 
@@ -301,6 +360,7 @@ def main() -> None:
             "member_count",
             "active",
             "url",
+            "keywords",
         ],
     )
     write_csv(
@@ -317,6 +377,7 @@ def main() -> None:
                 "member_count": next(
                     n["member_count"] for n in node_rows if n["id"] == m["id"]
                 ),
+                "keywords": list(m.get("keywords") or []),
                 "fields": [
                     {
                         "id": f["id"],
@@ -326,6 +387,7 @@ def main() -> None:
                         "seeds_count": f["seeds_count"],
                         "member_count": len(members_by_field[f["id"]]),
                         "professor_ids": members_by_field[f["id"]],
+                        "keywords": list(f.get("keywords") or []),
                     }
                     for f in field_rows
                     if f["parent_id"] == m["id"]
@@ -342,13 +404,15 @@ def main() -> None:
     )
 
     n_prof = len({e["source"] for e in edges})
+    n_field_kw = sum(1 for f in used_fields if f.get("keywords"))
     print("=== 02_build_field_tree ===")
     print(f"field_nodes.csv           : {FIELD_NODES_CSV}")
     print(f"edges_professor_field.csv : {EDGES_CSV}")
     print(f"field_tree.json           : {FIELD_TREE_JSON}")
     print(f"taxonomy majors/fields    : {len(major_rows)} / {len(field_rows)}")
     print(f"active majors/fields      : {len(used_majors)} / {len(used_fields)}")
-    print(f"professors with ≥1 field  : {n_prof} / {len(our_prof_ids)}")
+    print(f"active fields with keywords: {n_field_kw}")
+    print(f"professors with >=1 field  : {n_prof} / {len(our_prof_ids)}")
     print(f"belongs_to_field edges    : {len(edges)}")
     by_method: dict[str, int] = defaultdict(int)
     for e in edges:

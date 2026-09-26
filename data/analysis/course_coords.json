@@ -6,9 +6,9 @@
     ],
     "name": "生命倫理学[Bio-Ethics]",
     "position": [
-      2.198136,
-      0.950895,
-      -4.561453
+      -2.41239,
+      2.482087,
+      -0.272254
     ],
     "source": "joint_umap_syllabus"
   },
@@ -19,9 +19,9 @@
     ],
     "name": "予防医学概論[Preventive Medical science]",
     "position": [
-      2.212535,
-      1.196187,
-      -1.679447
+      -1.26467,
+      0.365312,
+      -2.002385
     ],
     "source": "joint_umap_syllabus"
   },
@@ -32,9 +32,9 @@
     ],
     "name": "知識集約型社会とデータサイエンス [Data Science in Society 5.0 ]",
     "position": [
-      -2.603028,
-      -1.527465,
-      0.376447
+      2.506875,
+      0.9849,
+      -1.224591
     ],
     "source": "joint_umap_syllabus"
   },
@@ -45,9 +45,9 @@
     ],
     "name": "知識集約型社会とデータサイエンス（英語）[Data Science in Society 5.0 ]",
     "position": [
-      -2.531002,
-      -1.563946,
-      0.393744
+      2.507036,
+      1.103963,
+      -1.267487
     ],
     "source": "joint_umap_syllabus"
   },
@@ -58,9 +58,9 @@
     ],
     "name": "次世代の先端科学技術 [Advanced Science and Technology in the Next Generation]",
     "position": [
-      1.121668,
-      -1.624937,
-      -2.463126
+      2.05171,
+      0.424395,
+      1.007864
     ],
     "source": "joint_umap_syllabus"
   },
@@ -71,9 +71,9 @@
     ],
     "name": "イノベーション方法論[Innovation Methodology]",
     "position": [
-      2.178913,
-      -0.560259,
-      2.915769
+      -0.371721,
+      -3.7496,
+      -1.878188
     ],
     "source": "joint_umap_syllabus"
   },
@@ -84,9 +84,9 @@
     ],
     "name": "ヘルスケア・イノベーション[Innovation in Healthcare]",
     "position": [
-      2.530165,
-      1.591266,
-      -1.442353
+      -1.745523,
+      1.072217,
+      -1.932328
     ],
     "source": "joint_umap_syllabus"
   },
@@ -97,9 +97,9 @@
     ],
     "name": "異分野研究探査 Ｉ（放射_林裕晃研究室）[Laboratory Rotation Ｉ（放射_Laboratory of HAYASHI HIROAKI）]",
     "position": [
-      3.289512,
-      5.476196,
-      0.683144
+      -6.279605,
+      -5.424704,
+      -1.882572
     ],
     "source": "joint_umap_syllabus"
   },
@@ -110,9 +110,9 @@
     ],
     "name": "異分野研究探査Ⅰ（融合_飯山）[Laboratory Rotation I（融合_Iiyama）]",
     "position": [
-      2.771008,
-      -4.016161,
-      -0.252732
+      2.532368,
+      -0.894818,
+      -5.203878
     ],
     "source": "joint_umap_syllabus"
   },
@@ -123,9 +123,9 @@
     ],
     "name": "異分野研究探査Ⅰ（融合_米陀）[Laboratory Rotation I（融合_Yoneda）]",
     "position": [
-      2.740378,
-      -3.975532,
-      -0.218227
+      2.431933,
+      -0.801823,
+      -5.105812
     ],
     "source": "joint_umap_syllabus"
   },
@@ -136,9 +136,9 @@
     ],
     "name": "異分野研究探査Ⅰ（総合知_小田桐）[Laboratory Rotation I （総合知_Odagiri）]",
     "position": [
-      2.752229,
-      -3.98454,
-      -0.209697
+      2.409992,
+      -0.835866,
+      -5.032028
     ],
     "source": "joint_umap_syllabus"
   },
@@ -149,9 +149,9 @@
     ],
     "name": "異分野研究探査Ⅰ（総合知_相澤）[Laboratory Rotation I（総合知_Aizawa）]",
     "position": [
-      2.859845,
-      -4.103862,
-      -0.134536
+      2.502453,
+      -0.880777,
+      -5.158932
     ],
     "source": "joint_umap_syllabus"
   },
@@ -162,9 +162,9 @@
     ],
     "name": "環境と健康[Environment and Health]",
     "position": [
-      -2.523146,
-      -0.943075,
-      0.244015
+      2.516264,
+      2.298945,
+      -1.789263
     ],
     "source": "joint_umap_syllabus"
   },
@@ -175,9 +175,9 @@
     ],
     "name": "機能画像解析学特講（一般学生）[Analytics for Functional Imaging: Lecture]",
     "position": [
-      3.313951,
-      7.794551,
-      0.137214
+      -7.346374,
+      -6.392471,
+      -2.743784
     ],
     "source": "joint_umap_syllabus"
   },
@@ -188,9 +188,9 @@
     ],
     "name": "機能画像解析学特講（14条特例適用学生）[Analytics for Functional Imaging: Lecture]",
     "position": [
-      3.374999,
-      7.858011,
-      0.083107
+      -7.449404,
+      -6.494192,
+      -2.780636
     ],
     "source": "joint_umap_syllabus"
   },
@@ -201,9 +201,9 @@
     ],
     "name": "機能画像解析学特講演習（一般学生）[Analytics for Functional Imaging: Seminar]",
     "position": [
-      3.292319,
-      7.786163,
-      0.158233
+      -7.429463,
+      -6.474506,
+      -2.788797
     ],
     "source": "joint_umap_syllabus"
   },
@@ -214,9 +214,9 @@
     ],
     "name": "機能画像解析学特講演習（14条特例適用学生）[Analytics for Functional Imaging: Seminar]",
     "position": [
-      3.335763,
-      7.837716,
-      0.122112
+      -7.390786,
+      -6.437951,
+      -2.617625
     ],
     "source": "joint_umap_syllabus"
   },
@@ -227,9 +227,9 @@
     ],
     "name": "機能画像解析学特別研究（一般学生）[Analytics for Functional Imaging: Research]",
     "position": [
-      3.433008,
-      7.955242,
-      0.033849
+      -7.717439,
+      -6.751839,
+      -2.91552
     ],
     "source": "joint_umap_syllabus"
   },
@@ -240,9 +240,9 @@
     ],
     "name": "機能画像解析学特別研究（14条特例適用学生）[Analytics for Functional Imaging: Research]",
     "position": [
-      3.511986,
-      8.033293,
-      -0.042567
+      -7.724977,
+      -6.760217,
+      -2.923821
     ],
     "source": "joint_umap_syllabus"
   },
@@ -253,9 +253,9 @@
     ],
     "name": "機能画像解析学特別研究（10月入学者）[Analytics for Functional Imaging: Research]",
     "position": [
-      3.516073,
-      8.04908,
-      -0.030986
+      -7.692936,
+      -6.727021,
+      -2.896332
     ],
     "source": "joint_umap_syllabus"
   },
@@ -266,9 +266,9 @@
     ],
     "name": "異分野研究探査Ⅰ（地創_林直樹研究室）[Laboratory Rotation I（地創_Laboratory of HAYASHI Naoki ）]",
     "position": [
-      2.793705,
-      -4.038318,
-      -0.186767
+      2.572654,
+      -0.969333,
+      -5.112486
     ],
     "source": "joint_umap_syllabus"
   },
@@ -279,9 +279,9 @@
     ],
     "name": "医用放射線科学研究方法論（一般学生）[Research Design in Medical Radiation Science: Lec.]",
     "position": [
-      2.714041,
-      6.478224,
-      0.376258
+      -13.934457,
+      -11.167706,
+      8.655921
     ],
     "source": "joint_umap_syllabus"
   },
@@ -292,9 +292,9 @@
     ],
     "name": "医用放射線科学研究方法論（14条特例適用学生）[Research Design in Medical Radiation Science: Lec.]",
     "position": [
-      2.725869,
-      6.499017,
-      0.374598
+      -14.018174,
+      -11.251076,
+      8.740208
     ],
     "source": "joint_umap_syllabus"
   },
@@ -305,9 +305,9 @@
     ],
     "name": "医学物理学特論（一般学生）[Medical Physics:Lecture]",
     "position": [
-      -19.724486,
-      7.153422,
-      -5.308031
+      -14.02229,
+      -11.254736,
+      8.745076
     ],
     "source": "joint_umap_syllabus"
   },
@@ -318,9 +318,9 @@
     ],
     "name": "医学物理学特論（14条特例適用学生）[Medical Physics:Lecture]",
     "position": [
-      -19.71715,
-      7.14624,
-      -5.300831
+      -14.01226,
+      -11.244993,
+      8.734539
     ],
     "source": "joint_umap_syllabus"
   },
@@ -331,9 +331,9 @@
     ],
     "name": "医学物理学特論（後期開講）[Medical Physics:Lecture]",
     "position": [
-      -19.688888,
-      7.118226,
-      -5.272651
+      -14.020544,
+      -11.25297,
+      8.743357
     ],
     "source": "joint_umap_syllabus"
   },
@@ -344,9 +344,9 @@
     ],
     "name": "医学物理学特論（一般学生）[Medical Physics:Lecture]",
     "position": [
-      -19.682179,
-      7.12225,
-      -5.274411
+      -14.131248,
+      -11.360624,
+      8.859764
     ],
     "source": "joint_umap_syllabus"
   },
@@ -357,9 +357,9 @@
     ],
     "name": "医学物理学特論（14条特例適用学生）[Medical Physics:Lecture]",
     "position": [
-      -19.688472,
-      7.118282,
-      -5.272591
+      -14.103267,
+      -11.33548,
+      8.826303
     ],
     "source": "joint_umap_syllabus"
   },
@@ -370,9 +370,9 @@
     ],
     "name": "医学物理学特論（後期登録）[Medical Physics:Lecture]",
     "position": [
-      -19.597882,
-      7.027313,
-      -5.181671
+      -14.102007,
+      -11.33424,
+      8.825022
     ],
     "source": "joint_umap_syllabus"
   },
@@ -383,9 +383,9 @@
     ],
     "name": "放射線画像構築学特論（一般学生）[Radiological Imaging Technology: Lecture]",
     "position": [
-      2.783521,
-      6.524065,
-      0.37075
+      -7.219183,
+      -6.271096,
+      -2.659028
     ],
     "source": "joint_umap_syllabus"
   },
@@ -396,9 +396,9 @@
     ],
     "name": "放射線画像構築学特論（14条特例適用学生）[Radiological Imaging Technology: Lecture]",
     "position": [
-      2.809722,
-      6.608199,
-      0.331207
+      -7.286529,
+      -6.337166,
+      -2.669902
     ],
     "source": "joint_umap_syllabus"
   },
@@ -409,9 +409,9 @@
     ],
     "name": "放射線画像構築学演習（一般学生）[Radiological Imaging Technology: Seminar]",
     "position": [
-      2.71755,
-      6.487227,
-      0.40395
+      -7.298748,
+      -6.350428,
+      -2.689608
     ],
     "source": "joint_umap_syllabus"
   },
@@ -422,9 +422,9 @@
     ],
     "name": "放射線画像構築学演習（14条特例適用学生）[Radiological Imaging Technology: Seminar]",
     "position": [
-      2.847065,
-      6.584123,
-      0.456421
+      -7.168857,
+      -6.22076,
+      -2.573561
     ],
     "source": "joint_umap_syllabus"
   },
@@ -435,9 +435,9 @@
     ],
     "name": "機能画像解析学課題研究（一般学生）[Processing & Anal. for Biofunctional Imaging: Res.]",
     "position": [
-      3.600845,
-      8.124863,
-      -0.124877
+      -7.960098,
+      -6.990233,
+      -3.09168
     ],
     "source": "joint_umap_syllabus"
   },
@@ -448,9 +448,9 @@
     ],
     "name": "機能画像解析学課題研究（令和４年度以前入学者　一般学生）[Processing & Anal. for Biofunctional Imaging: Res.]",
     "position": [
-      3.574443,
-      8.106203,
-      -0.094884
+      -7.888926,
+      -6.919114,
+      -3.035185
     ],
     "source": "joint_umap_syllabus"
   },
@@ -461,9 +461,9 @@
     ],
     "name": "機能画像解析学課題研究（14条特例適用学生）[Processing & Anal. for Biofunctional Imaging: Res.]",
     "position": [
-      3.637623,
-      8.165636,
-      -0.157678
+      -7.968929,
+      -6.998064,
+      -3.095201
     ],
     "source": "joint_umap_syllabus"
   },
@@ -474,9 +474,9 @@
     ],
     "name": "機能画像解析学課題研究（令和４年度以前入学者　14条特例適用学生）[Processing & Anal. for Biofunctional Imaging: Res.]",
     "position": [
-      3.606166,
-      8.139362,
-      -0.125172
+      -7.891997,
+      -6.921969,
+      -3.034798
     ],
     "source": "joint_umap_syllabus"
   },
@@ -487,9 +487,9 @@
     ],
     "name": "異分野研究探査 Ｉ（放射_林裕晃研究室）（保健学専攻14条特例適用学生）[Laboratory Rotation Ｉ]",
     "position": [
-      3.299762,
-      5.43561,
-      0.658493
+      -6.226981,
+      -5.37085,
+      -1.950447
     ],
     "source": "joint_umap_syllabus"
   },
@@ -500,9 +500,9 @@
     ],
     "name": "異分野研究探査 Ⅱ（放射_林裕晃研究室）（保健学専攻一般学生）[Laboratory Rotation Ⅱ]",
     "position": [
-      3.238071,
-      5.491391,
-      0.614344
+      -6.274137,
+      -5.418618,
+      -1.90072
     ],
     "source": "joint_umap_syllabus"
   },
@@ -513,9 +513,9 @@
     ],
     "name": "異分野研究探査 Ⅱ（放射_林裕晃研究室）（保健学専攻14条特例適用学生）[Laboratory Rotation Ⅱ]",
     "position": [
-      3.188808,
-      5.392277,
-      0.5744
+      -6.250757,
+      -5.399676,
+      -1.867854
     ],
     "source": "joint_umap_syllabus"
   },
@@ -526,9 +526,9 @@
     ],
     "name": "レギュラトリー・サイエンス（卓越大学院プログラム）[Regulatory Science(WISE Program)]",
     "position": [
-      6.707251,
-      -27.999857,
-      10.832488
+      -27.999386,
+      2.567734,
+      5.145967
     ],
     "source": "joint_umap_syllabus"
   },
@@ -539,9 +539,9 @@
     ],
     "name": "イノベーション方法論Ａ（卓越大学院プログラム）[Innovation Methodology A(WISE Program)]",
     "position": [
-      2.017865,
-      -0.649243,
-      2.995618
+      -0.301743,
+      -3.676282,
+      -1.996686
     ],
     "source": "joint_umap_syllabus"
   },
@@ -552,9 +552,9 @@
     ],
     "name": "イノベーション方法論（卓越大学院プログラム）[Innovation Methodology(WISE Program)]",
     "position": [
-      1.965911,
-      -0.734231,
-      2.934833
+      -0.361113,
+      -3.819444,
+      -2.044241
     ],
     "source": "joint_umap_syllabus"
   },
@@ -565,9 +565,9 @@
     ],
     "name": "レギュラトリーサイエンスセミナー[Seminar on Regulatory Science]",
     "position": [
-      6.707253,
-      -27.999871,
-      10.832491
+      -28.0,
+      2.567766,
+      5.146074
     ],
     "source": "joint_umap_syllabus"
   },
@@ -578,9 +578,9 @@
     ],
     "name": "レギュラトリーサイエンス（卓越大学院プログラム）[Regulatory Science(WISE Program)]",
     "position": [
-      6.707273,
-      -27.999949,
-      10.83252
+      -27.999478,
+      2.56774,
+      5.145983
     ],
     "source": "joint_umap_syllabus"
   },
@@ -591,9 +591,9 @@
     ],
     "name": "先進ナノ診断開発論(卓越大学院プログラム)[Lecture on Development of Advanced Nano-Diagnostic Method]",
     "position": [
-      1.928781,
-      -0.740123,
-      2.907207
+      -0.399253,
+      -3.723742,
+      -1.947288
     ],
     "source": "joint_umap_syllabus"
   },
@@ -604,9 +604,9 @@
     ],
     "name": "レギュラトリー・サイエンス(卓越大学院プログラム)[Regulatory Science]",
     "position": [
-      6.707257,
-      -27.999906,
-      10.832509
+      -27.999495,
+      2.567739,
+      5.145988
     ],
     "source": "joint_umap_syllabus"
   },
@@ -618,9 +618,9 @@
     ],
     "name": "アカデミックスキル[Academic Skills]",
     "position": [
-      1.039211,
-      -2.865049,
-      0.251801
+      2.0383,
+      -0.284682,
+      -3.286288
     ],
     "source": "joint_umap_syllabus"
   },
@@ -632,9 +632,9 @@
     ],
     "name": "プレゼン・ディベート論[Presentation and Debate]",
     "position": [
-      0.934566,
-      -2.855812,
-      0.102022
+      2.023033,
+      -0.218802,
+      -3.17134
     ],
     "source": "joint_umap_syllabus"
   },
@@ -645,9 +645,9 @@
     ],
     "name": "イノベーション基礎[Introduction to Innovation]",
     "position": [
-      1.926167,
-      -0.796049,
-      2.95543
+      0.01029,
+      -4.156246,
+      -2.219144
     ],
     "source": "joint_umap_syllabus"
   },
@@ -658,9 +658,9 @@
     ],
     "name": "数理・データサイエンス基礎及び演習[Introduction and Practicum for Mathematical Data Science]",
     "position": [
-      -0.736396,
-      1.505333,
-      2.804667
+      -0.02802,
+      -2.913191,
+      -0.083601
     ],
     "source": "joint_umap_syllabus"
   },
@@ -672,9 +672,9 @@
     ],
     "name": "デザイン思考[Design Thinking]",
     "position": [
-      -1.491688,
-      -2.289461,
-      1.161461
+      2.708693,
+      1.208328,
+      -2.237475
     ],
     "source": "joint_umap_syllabus"
   },
@@ -685,9 +685,9 @@
     ],
     "name": "異分野研究探査Ⅱ（地創_林直樹研究室）[Laboratory Rotation II（地創_Laboratory of HAYASHI Naoki ）]",
     "position": [
-      2.681342,
-      -3.926221,
-      -0.308694
+      2.601309,
+      -0.965762,
+      -5.234318
     ],
     "source": "joint_umap_syllabus"
   },
@@ -698,9 +698,9 @@
     ],
     "name": "工学とトポロジーＢ[Engineering and Topology B]",
     "position": [
-      2.053694,
-      -0.617559,
-      2.84665
+      -0.456193,
+      -3.813161,
+      -1.986855
     ],
     "source": "joint_umap_syllabus"
   },
@@ -711,9 +711,9 @@
     ],
     "name": "イノベーション方法論[Innovation Methodology(WISE Program)]",
     "position": [
-      1.902585,
-      -0.696332,
-      2.868351
+      -0.530868,
+      -3.644164,
+      -1.846927
     ],
     "source": "joint_umap_syllabus"
   },
@@ -724,9 +724,9 @@
     ],
     "name": "学域GS言語科目Ⅰ/海外実践英語[Practical International English]",
     "position": [
-      4.050996,
-      -1.875808,
-      14.620819
+      1.494634,
+      -0.045302,
+      -3.459697
     ],
     "source": "joint_umap_syllabus"
   },
@@ -737,9 +737,9 @@
     ],
     "name": "学域GS言語科目Ⅱ/時事・学術英語[Current Issues and Academic English]",
     "position": [
-      4.066247,
-      -1.838904,
-      14.614996
+      1.468627,
+      -0.032363,
+      -3.501246
     ],
     "source": "joint_umap_syllabus"
   },
@@ -751,9 +751,9 @@
     ],
     "name": "学域GS言語科目Ⅱ/時事・学術英語[GS English Language Courses for Undergraduates Ⅱ/ Current Issues and Academic English ]",
     "position": [
-      4.048927,
-      -1.83898,
-      14.597612
+      1.478969,
+      -0.035062,
+      -3.50563
     ],
     "source": "joint_umap_syllabus"
   },
@@ -765,9 +765,9 @@
     ],
     "name": "プレゼン・ディベート論[Presentation and Debate]",
     "position": [
-      0.908477,
-      -2.838205,
-      0.143856
+      2.035413,
+      -0.375431,
+      -3.005189
     ],
     "source": "joint_umap_syllabus"
   },
@@ -778,9 +778,9 @@
     ],
     "name": "光工学Ａ[Optical Engineering A]",
     "position": [
-      -4.475451,
-      5.156713,
-      0.343821
+      -4.778619,
+      3.030462,
+      3.920501
     ],
     "source": "joint_umap_syllabus"
   },
@@ -791,9 +791,9 @@
     ],
     "name": "光工学Ｂ[Optical Engineering B]",
     "position": [
-      -4.453752,
-      5.148549,
-      0.363073
+      -4.885462,
+      3.120841,
+      4.022761
     ],
     "source": "joint_umap_syllabus"
   },
@@ -804,9 +804,9 @@
     ],
     "name": "コンピュータビジョン特論Ａ[Computer Vision A]",
     "position": [
-      0.086277,
-      4.026307,
-      3.497401
+      -1.034572,
+      -4.608936,
+      18.010446
     ],
     "source": "joint_umap_syllabus"
   },
@@ -817,9 +817,9 @@
     ],
     "name": "コンピュータビジョン特論Ｂ[Computer Vision B]",
     "position": [
-      0.112334,
-      4.004531,
-      3.482956
+      -1.161136,
+      -4.481785,
+      18.136171
     ],
     "source": "joint_umap_syllabus"
   },
@@ -830,9 +830,9 @@
     ],
     "name": "ロバスト制御[Robust Control]",
     "position": [
-      -1.583531,
-      2.052008,
-      -1.423788
+      -2.225391,
+      1.239798,
+      1.981081
     ],
     "source": "joint_umap_syllabus"
   },
@@ -843,9 +843,9 @@
     ],
     "name": "アカデミックスキル[Academic Skils]",
     "position": [
-      1.127628,
-      -2.690595,
-      0.33535
+      1.851534,
+      -0.517228,
+      -2.990966
     ],
     "source": "joint_umap_syllabus"
   },
@@ -856,9 +856,9 @@
     ],
     "name": "プレゼン・ディベート論[Presentation and Debate]",
     "position": [
-      9.002785,
-      -8.474121,
-      5.105125
+      1.731602,
+      -0.333316,
+      -2.897274
     ],
     "source": "joint_umap_syllabus"
   },
@@ -869,9 +869,9 @@
     ],
     "name": "テクノロジトレンド工学Ａ[Technology Trend Engineering A]",
     "position": [
-      -1.328811,
-      1.325357,
-      -2.362134
+      -1.221061,
+      2.348249,
+      0.992483
     ],
     "source": "joint_umap_syllabus"
   },
@@ -882,9 +882,9 @@
     ],
     "name": "テクノロジトレンド工学Ｂ[Technology Trend Engineering B]",
     "position": [
-      -1.251005,
-      1.29636,
-      -2.399145
+      -1.123268,
+      2.431409,
+      0.884901
     ],
     "source": "joint_umap_syllabus"
   },
@@ -895,9 +895,9 @@
     ],
     "name": "データマイニング論Ａ[Data Mining A]",
     "position": [
-      -5.919757,
-      12.13187,
-      -14.594798
+      -2.073282,
+      -4.10131,
+      2.172592
     ],
     "source": "joint_umap_syllabus"
   },
@@ -908,9 +908,9 @@
     ],
     "name": "データマイニング論Ｂ[Data Mining B]",
     "position": [
-      -5.926574,
-      12.138835,
-      -14.601728
+      -2.051167,
+      -4.08792,
+      2.143392
     ],
     "source": "joint_umap_syllabus"
   },
@@ -921,9 +921,9 @@
     ],
     "name": "水環境保全工学Ａ[Water Pollution Control Engineering A]",
     "position": [
-      -1.343703,
-      -0.050034,
-      0.06952
+      0.635761,
+      4.463813,
+      0.554838
     ],
     "source": "joint_umap_syllabus"
   },
@@ -934,9 +934,9 @@
     ],
     "name": "水環境保全工学Ｂ[Water Pollution Control Engineering B]",
     "position": [
-      -1.31149,
-      -0.105837,
-      0.071734
+      0.604607,
+      4.512505,
+      0.586912
     ],
     "source": "joint_umap_syllabus"
   },
@@ -947,9 +947,9 @@
     ],
     "name": "生命情報と先端バイオＡ[Bioinformatics and Recent Advances in Biology A]",
     "position": [
-      1.198559,
-      4.114853,
-      3.300643
+      -2.986454,
+      -0.756859,
+      -0.315586
     ],
     "source": "joint_umap_syllabus"
   },
@@ -960,9 +960,9 @@
     ],
     "name": "生命情報と先端バイオＢ[Bioinformatics and Recent Advances in Biology B]",
     "position": [
-      1.324288,
-      4.250299,
-      3.267539
+      -2.965794,
+      -0.879658,
+      -0.303542
     ],
     "source": "joint_umap_syllabus"
   },
@@ -973,9 +973,9 @@
     ],
     "name": "データマイニング論a[Data Mining a]",
     "position": [
-      -5.862127,
-      12.074222,
-      -14.536506
+      -2.056112,
+      -4.090344,
+      2.15597
     ],
     "source": "joint_umap_syllabus"
   },
@@ -986,9 +986,9 @@
     ],
     "name": "データマイニング論b[Data Mining b]",
     "position": [
-      -5.95257,
-      12.164829,
-      -14.627607
+      -2.079474,
+      -4.117363,
+      2.172534
     ],
     "source": "joint_umap_syllabus"
   },
@@ -999,9 +999,9 @@
     ],
     "name": "光波工学a[Lightwave Engineering a]",
     "position": [
-      -4.490952,
-      5.180819,
-      0.328499
+      -4.741072,
+      2.986035,
+      3.880391
     ],
     "source": "joint_umap_syllabus"
   },
@@ -1012,9 +1012,9 @@
     ],
     "name": "光波工学b[Lightwave Engineering b]",
     "position": [
-      -4.423736,
-      5.128771,
-      0.413289
+      -4.810914,
+      3.029819,
+      3.996552
     ],
     "source": "joint_umap_syllabus"
   },
@@ -1025,9 +1025,9 @@
     ],
     "name": "光工学ａ[Optical Engineering a]",
     "position": [
-      -4.511449,
-      5.204726,
-      0.315199
+      -4.779969,
+      3.001261,
+      3.921082
     ],
     "source": "joint_umap_syllabus"
   },
@@ -1038,9 +1038,9 @@
     ],
     "name": "光工学ｂ[Optical Engineering b]",
     "position": [
-      -4.451456,
-      5.171229,
-      0.398022
+      -4.879416,
+      3.106695,
+      4.027369
     ],
     "source": "joint_umap_syllabus"
   },
@@ -1051,9 +1051,9 @@
     ],
     "name": "コンピュータビジョン特論A[Computer Vision A]",
     "position": [
-      0.068462,
-      4.04715,
-      3.513
+      -1.105832,
+      -4.538775,
+      18.078977
     ],
     "source": "joint_umap_syllabus"
   },
@@ -1064,9 +1064,9 @@
     ],
     "name": "コンピュータビジョン特論B[Computer Vision B]",
     "position": [
-      0.170894,
-      3.940012,
-      3.418813
+      -1.135648,
+      -4.507422,
+      18.110264
     ],
     "source": "joint_umap_syllabus"
   },
@@ -1077,9 +1077,9 @@
     ],
     "name": "データマイニング特論[Advanced Data Mining]",
     "position": [
-      -5.820605,
-      12.031132,
-      -14.490623
+      -1.810343,
+      -3.90856,
+      1.837387
     ],
     "source": "joint_umap_syllabus"
   },
@@ -1090,9 +1090,9 @@
     ],
     "name": "生命情報特論[Advanced Bioinformatics]",
     "position": [
-      1.198534,
-      4.121005,
-      3.290387
+      -2.980427,
+      -0.834506,
+      -0.311796
     ],
     "source": "joint_umap_syllabus"
   },
@@ -1103,9 +1103,9 @@
     ],
     "name": "計測システム論[Measurement systems]",
     "position": [
-      -1.342393,
-      2.349577,
-      1.135703
+      -4.119227,
+      2.585081,
+      3.176067
     ],
     "source": "joint_umap_syllabus"
   },
@@ -1116,9 +1116,9 @@
     ],
     "name": "光センシング論[Optical Sensing]",
     "position": [
-      -4.128625,
-      4.839887,
-      0.52311
+      -4.307626,
+      2.745307,
+      3.399311
     ],
     "source": "joint_umap_syllabus"
   },
@@ -1129,9 +1129,9 @@
     ],
     "name": "現代脳計算論[Modern Neural Computation]",
     "position": [
-      0.169645,
-      3.975336,
-      3.439594
+      -1.078193,
+      -4.562508,
+      18.054589
     ],
     "source": "joint_umap_syllabus"
   },
@@ -1142,9 +1142,9 @@
     ],
     "name": "光センシング論[Optical Sensing]",
     "position": [
-      -4.047826,
-      4.770377,
-      0.588319
+      -4.411651,
+      2.831263,
+      3.50724
     ],
     "source": "joint_umap_syllabus"
   },
@@ -1155,9 +1155,9 @@
     ],
     "name": "環境・エネルギー工学総論Ａ[Introduction to Environmental and Energy Engineering A]",
     "position": [
-      -1.355656,
-      -0.391497,
-      0.195465
+      0.501996,
+      4.765914,
+      0.201408
     ],
     "source": "joint_umap_syllabus"
   },
@@ -1168,9 +1168,9 @@
     ],
     "name": "イノベーション方法論Ａ[Innovation Methodology A]",
     "position": [
-      1.943171,
-      -0.750673,
-      2.979528
+      -0.460009,
+      -3.752735,
+      -1.937446
     ],
     "source": "joint_umap_syllabus"
   },
@@ -1181,9 +1181,9 @@
     ],
     "name": "異分野研究探査Ⅰ（地創_山田菜緒子研究室）[Laboratory Rotation I（地創_Laboratory of YAMADA Naoko ）]",
     "position": [
-      4.037435,
-      -1.880856,
-      14.592166
+      1.558004,
+      -0.092731,
+      -3.595905
     ],
     "source": "joint_umap_syllabus"
   },
@@ -1194,9 +1194,9 @@
     ],
     "name": "イノベーション方法論A（卓越大学院プログラム）[Innovation Methodology A(WISE Program)]",
     "position": [
-      1.981354,
-      -0.719587,
-      2.98723
+      -0.39835,
+      -3.704602,
+      -2.013295
     ],
     "source": "joint_umap_syllabus"
   },
@@ -1207,9 +1207,9 @@
     ],
     "name": "現代脳計算論[Modern Neural Computation]",
     "position": [
-      0.106202,
-      4.041983,
-      3.497139
+      -1.141679,
+      -4.503335,
+      18.122173
     ],
     "source": "joint_umap_syllabus"
   },
@@ -1220,9 +1220,9 @@
     ],
     "name": "システム制御数理[Mathematical Systems Control Theory]",
     "position": [
-      -1.090538,
-      1.787842,
-      -1.676843
+      -2.126852,
+      1.646972,
+      1.420582
     ],
     "source": "joint_umap_syllabus"
   },
@@ -1233,9 +1233,9 @@
     ],
     "name": "インタフェースデバイス特論[Interface Device Technologies]",
     "position": [
-      0.342079,
-      2.28083,
-      1.042189
+      -1.769666,
+      1.664771,
+      0.894284
     ],
     "source": "joint_umap_syllabus"
   },
@@ -1247,9 +1247,9 @@
     ],
     "name": "デザイン思考演習[Design Thinking Seminar]",
     "position": [
-      -1.259047,
-      -2.508831,
-      0.950145
+      3.048558,
+      0.875101,
+      -2.643929
     ],
     "source": "joint_umap_syllabus"
   },
@@ -1261,9 +1261,9 @@
     ],
     "name": "現代社会を知る[Contemporary Society]",
     "position": [
-      -1.896505,
-      -2.123567,
-      0.944716
+      3.354059,
+      1.139873,
+      -2.455901
     ],
     "source": "joint_umap_syllabus"
   },
@@ -1274,9 +1274,9 @@
     ],
     "name": "AIと未来社会[AI and Future Society]",
     "position": [
-      -0.091629,
-      1.367904,
-      2.46491
+      -0.645459,
+      -2.333093,
+      -0.308058
     ],
     "source": "joint_umap_syllabus"
   },
@@ -1287,9 +1287,9 @@
     ],
     "name": "超スマートシティと Society 5.0[Super Smart City and Society 5.0]",
     "position": [
-      -2.336693,
-      -1.278675,
-      1.500406
+      1.187533,
+      2.097948,
+      0.166854
     ],
     "source": "joint_umap_syllabus"
   },
@@ -1300,9 +1300,9 @@
     ],
     "name": "倫理学[Ethics]",
     "position": [
-      1.3679,
-      0.036741,
-      -3.080034
+      1.48618,
+      1.754718,
+      -1.242617
     ],
     "source": "joint_umap_syllabus"
   },
@@ -1314,9 +1314,9 @@
     ],
     "name": "シェアリングエコノミー[Sharing Economy]",
     "position": [
-      -4.121882,
-      -1.175467,
-      0.999178
+      4.028039,
+      3.548661,
+      -1.482824
     ],
     "source": "joint_umap_syllabus"
   },
@@ -1327,9 +1327,9 @@
     ],
     "name": "消費生活論[Consumer Life Theory]",
     "position": [
-      -1.072311,
-      -2.182301,
-      0.575781
+      3.325564,
+      0.910893,
+      -2.867014
     ],
     "source": "joint_umap_syllabus"
   },
@@ -1341,9 +1341,9 @@
     ],
     "name": "ダイバーシティ促進[Diversity Promotion]",
     "position": [
-      -2.269714,
-      -4.012471,
-      1.353654
+      5.853913,
+      1.354345,
+      1.196238
     ],
     "source": "joint_umap_syllabus"
   },
@@ -1354,9 +1354,9 @@
     ],
     "name": "マーケティング基礎[Introduction to Marketing]",
     "position": [
-      1.357226,
-      -1.174435,
-      2.692059
+      -0.041266,
+      -4.298926,
+      -2.262983
     ],
     "source": "joint_umap_syllabus"
   },
@@ -1367,9 +1367,9 @@
     ],
     "name": "異文化理解とキャリア開発[Cross-Cultural Understanding and Career Development]",
     "position": [
-      1.002086,
-      -2.049552,
-      0.036289
+      0.765076,
+      -2.695675,
+      -2.543701
     ],
     "source": "joint_umap_syllabus"
   },
@@ -1380,9 +1380,9 @@
     ],
     "name": "SDGs基礎[Introduction to SDGs]",
     "position": [
-      -2.066212,
-      -1.109979,
-      -0.421694
+      2.480244,
+      2.005331,
+      -0.88691
     ],
     "source": "joint_umap_syllabus"
   },
@@ -1394,9 +1394,9 @@
     ],
     "name": "グローバリゼーション[Globalization]",
     "position": [
-      -3.445133,
-      -1.132194,
-      0.572765
+      3.582773,
+      3.393563,
+      -1.727297
     ],
     "source": "joint_umap_syllabus"
   },
@@ -1408,9 +1408,9 @@
     ],
     "name": "IDGと社会変革人材[Cultivating Changemakers for Social Transformation through Inner Development Goals]",
     "position": [
-      -2.048575,
-      -1.126119,
-      -0.501356
+      2.282655,
+      1.986076,
+      -0.717404
     ],
     "source": "joint_umap_syllabus"
   },
@@ -1423,9 +1423,9 @@
     ],
     "name": "テクノロジー基礎[Introduction to Technology]",
     "position": [
-      0.204244,
-      2.164721,
-      2.531462
+      -1.319412,
+      -1.709729,
+      -0.142051
     ],
     "source": "joint_umap_syllabus"
   },
@@ -1436,9 +1436,9 @@
     ],
     "name": "人工知能[Artificial Intelligence]",
     "position": [
-      0.143934,
-      1.96758,
-      2.747225
+      -0.944698,
+      -2.074262,
+      -0.332706
     ],
     "source": "joint_umap_syllabus"
   },
@@ -1450,9 +1450,9 @@
     ],
     "name": "世界変革技術論[Technology and World Innovations]",
     "position": [
-      2.002504,
-      -0.628353,
-      3.298583
+      0.812466,
+      2.214931,
+      0.381303
     ],
     "source": "joint_umap_syllabus"
   },
@@ -1464,9 +1464,9 @@
     ],
     "name": "社会的な視点から見る医療[Medicine from Social Perspectives]",
     "position": [
-      1.943462,
-      2.018081,
-      -1.039829
+      -6.156371,
+      -5.207991,
+      -2.026926
     ],
     "source": "joint_umap_syllabus"
   },
@@ -1477,9 +1477,9 @@
     ],
     "name": "世界の課題と技術トレンド[Global Problems and Technology Trends]",
     "position": [
-      -1.607605,
-      -0.452179,
-      0.837741
+      2.146118,
+      3.300907,
+      0.020846
     ],
     "source": "joint_umap_syllabus"
   },
@@ -1490,9 +1490,9 @@
     ],
     "name": "IoT技術[IoT Technology]",
     "position": [
-      0.064209,
-      3.105118,
-      1.643984
+      -1.545101,
+      -1.766797,
+      0.390146
     ],
     "source": "joint_umap_syllabus"
   },
@@ -1503,9 +1503,9 @@
     ],
     "name": "生命科学的な視点から見る医療[Medicine from Life Science Perspectives]",
     "position": [
-      1.655358,
-      1.689545,
-      -1.392299
+      -2.978868,
+      2.337925,
+      -0.340884
     ],
     "source": "joint_umap_syllabus"
   },
@@ -1516,9 +1516,9 @@
     ],
     "name": "未来医科学[Future of Medical Science]",
     "position": [
-      2.660291,
-      1.707002,
-      -1.104037
+      -0.857563,
+      0.847169,
+      -2.642024
     ],
     "source": "joint_umap_syllabus"
   },
@@ -1530,9 +1530,9 @@
     ],
     "name": "アントレプレナー演習Ⅰ[Entrepreneurship Seminar 1]",
     "position": [
-      2.260839,
-      -1.57459,
-      1.798169
+      0.690033,
+      -3.604912,
+      -2.542586
     ],
     "source": "joint_umap_syllabus"
   },
@@ -1544,9 +1544,9 @@
     ],
     "name": "アントレプレナー演習Ⅱ[Entrepreneurship Seminar 2]",
     "position": [
-      2.19596,
-      -1.561767,
-      1.841804
+      0.665837,
+      -3.640358,
+      -2.531503
     ],
     "source": "joint_umap_syllabus"
   },
@@ -1557,9 +1557,9 @@
     ],
     "name": "観光DX・PBL演習Ⅰ[Seminar of Digital Transformation and Project Based Learning in Tourism 1]",
     "position": [
-      -0.493644,
-      -0.859635,
-      3.415529
+      2.917477,
+      -1.373573,
+      0.329532
     ],
     "source": "joint_umap_syllabus"
   },
@@ -1570,9 +1570,9 @@
     ],
     "name": "観光DX・PBL演習Ⅱ[Seminar of Digital Transformation and Project Based Learning in Tourism 2]",
     "position": [
-      -0.503881,
-      -0.657719,
-      3.418125
+      2.65596,
+      -1.609702,
+      0.29349
     ],
     "source": "joint_umap_syllabus"
   },
@@ -1583,9 +1583,9 @@
     ],
     "name": "観光調査法[Social Survey in Tourism]",
     "position": [
-      -3.047149,
-      -2.543659,
-      3.416364
+      4.982086,
+      0.47719,
+      -0.560578
     ],
     "source": "joint_umap_syllabus"
   },
@@ -1596,9 +1596,9 @@
     ],
     "name": "ワークショップデザイン演習[Workshop Design Seminar]",
     "position": [
-      1.607432,
-      -0.407774,
-      -5.635251
+      1.287415,
+      2.543128,
+      -1.065346
     ],
     "source": "joint_umap_syllabus"
   },
@@ -1609,9 +1609,9 @@
     ],
     "name": "観光データ解析演習[Practical Data Analysis in Tourism]",
     "position": [
-      -2.989918,
-      -2.433026,
-      3.637498
+      4.971514,
+      0.371988,
+      -0.511794
     ],
     "source": "joint_umap_syllabus"
   },
@@ -1622,9 +1622,9 @@
     ],
     "name": "ビジネスプラン作成演習[Business Plan Making Seminar]",
     "position": [
-      1.30709,
-      -1.004493,
-      -3.736643
+      2.769308,
+      -0.194588,
+      0.757363
     ],
     "source": "joint_umap_syllabus"
   },
@@ -1635,9 +1635,9 @@
     ],
     "name": "地理情報システム演習[Geographic Information System Seminar]",
     "position": [
-      -0.474187,
-      0.826239,
-      2.884335
+      0.563349,
+      -2.038753,
+      -0.041871
     ],
     "source": "joint_umap_syllabus"
   },
@@ -1648,9 +1648,9 @@
     ],
     "name": "プログラミングスキル[Programming Skills]",
     "position": [
-      -0.686626,
-      1.792016,
-      2.723624
+      -0.219145,
+      -2.714824,
+      0.390207
     ],
     "source": "joint_umap_syllabus"
   },
@@ -1661,9 +1661,9 @@
     ],
     "name": "アプリ開発[Application Development]",
     "position": [
-      -0.236453,
-      1.666187,
-      2.535265
+      -0.533576,
+      -2.574898,
+      -0.216354
     ],
     "source": "joint_umap_syllabus"
   },
@@ -1675,9 +1675,9 @@
     ],
     "name": "創生インターンシップ[Internship for Personal Development]",
     "position": [
-      1.695224,
-      -1.95785,
-      0.080002
+      1.478785,
+      -2.306766,
+      -2.392731
     ],
     "source": "joint_umap_syllabus"
   },
@@ -1688,9 +1688,9 @@
     ],
     "name": "観光倫理学[Tourism Ethics]",
     "position": [
-      1.387971,
-      0.056571,
-      -3.125516
+      0.988058,
+      1.897296,
+      -1.151173
     ],
     "source": "joint_umap_syllabus"
   },
@@ -1701,9 +1701,9 @@
     ],
     "name": "数理統計学基礎[Introduction to Mathematical Statistics]",
     "position": [
-      -1.231961,
-      1.261927,
-      2.600715
+      0.041738,
+      -2.478595,
+      0.85585
     ],
     "source": "joint_umap_syllabus"
   },
@@ -1714,9 +1714,9 @@
     ],
     "name": "北陸観光産業論[Tourism Industry in Hokuriku Region]",
     "position": [
-      -0.394524,
-      -1.248771,
-      2.853399
+      3.013195,
+      -0.313661,
+      0.676055
     ],
     "source": "joint_umap_syllabus"
   },
@@ -1727,9 +1727,9 @@
     ],
     "name": "北陸の都市・農村・文化[Cultures in Urban and Rural Areas in Hokuriku Region]",
     "position": [
-      -4.017351,
-      -1.778224,
-      1.701055
+      4.594049,
+      3.063854,
+      -0.9392
     ],
     "source": "joint_umap_syllabus"
   },
@@ -1740,9 +1740,9 @@
     ],
     "name": "北陸の都市・農村・文化（防災・復興人材選抜入学者用）[Cultures in Urban and Rural Areas in Hokuriku Region]",
     "position": [
-      -3.95129,
-      -1.768468,
-      1.703385
+      4.62269,
+      3.040673,
+      -0.975844
     ],
     "source": "joint_umap_syllabus"
   },
@@ -1753,9 +1753,9 @@
     ],
     "name": "北陸の農林水産・製造業[Agriculture, Forestry and Fisheries / Manufacturing Industry in Hokuriku Region]",
     "position": [
-      -4.104373,
-      -1.655003,
-      1.572712
+      4.556428,
+      3.081851,
+      -0.875962
     ],
     "source": "joint_umap_syllabus"
   },
@@ -1766,9 +1766,9 @@
     ],
     "name": "観光地域ビジネス論[Regional Business in Tourism]",
     "position": [
-      0.029757,
-      -1.459626,
-      2.970283
+      3.444956,
+      -0.598734,
+      0.453742
     ],
     "source": "joint_umap_syllabus"
   },
@@ -1779,9 +1779,9 @@
     ],
     "name": "数理行動モデル基礎[Introduction to Mathematical Behavior Model]",
     "position": [
-      -0.046593,
-      1.512744,
-      3.0878
+      0.097697,
+      -2.13009,
+      -0.156695
     ],
     "source": "joint_umap_syllabus"
   },
@@ -1792,9 +1792,9 @@
     ],
     "name": "観光デザイン学概論Ⅰ",
     "position": [
-      -0.080405,
-      -1.694713,
-      2.874276
+      4.178565,
+      0.045613,
+      0.526507
     ],
     "source": "joint_umap_syllabus"
   },
@@ -1805,9 +1805,9 @@
     ],
     "name": "観光デザイン学概論Ⅱ",
     "position": [
-      -0.072696,
-      -1.693886,
-      2.849956
+      4.166015,
+      0.020371,
+      0.526751
     ],
     "source": "joint_umap_syllabus"
   },
@@ -1820,9 +1820,9 @@
     ],
     "name": "アントレプレナー演習Ⅰ[Entrepreneurship Seminar 1]",
     "position": [
-      2.227072,
-      -1.470042,
-      1.795064
+      0.567786,
+      -3.591507,
+      -2.463343
     ],
     "source": "joint_umap_syllabus"
   },
@@ -1834,9 +1834,9 @@
     ],
     "name": "アントレプレナー演習Ⅱ[Entrepreneurship Seminar 2]",
     "position": [
-      -3.274456,
-      -2.166399,
-      1.795101
+      3.390038,
+      1.63738,
+      -1.202645
     ],
     "source": "joint_umap_syllabus"
   },
@@ -1847,9 +1847,9 @@
     ],
     "name": "産業ＤＸ・ＰＢＬ演習Ⅰ[Seminar of Digital Transformation and Project Based Learning in Industry 1]",
     "position": [
-      -0.476767,
-      -0.748236,
-      3.3613
+      2.779388,
+      -1.384083,
+      0.248658
     ],
     "source": "joint_umap_syllabus"
   },
@@ -1860,9 +1860,9 @@
     ],
     "name": "産業ＤＸ・ＰＢＬ演習Ⅱ[Seminar of Digital Transformation and Project Based Learning in Industry 2]",
     "position": [
-      -0.276853,
-      -0.279979,
-      3.520033
+      2.266783,
+      -1.836371,
+      0.251885
     ],
     "source": "joint_umap_syllabus"
   },
@@ -1873,9 +1873,9 @@
     ],
     "name": "社会調査法[Social Survey]",
     "position": [
-      -3.042317,
-      -2.538925,
-      3.426208
+      4.946902,
+      0.510962,
+      -0.594247
     ],
     "source": "joint_umap_syllabus"
   },
@@ -1886,9 +1886,9 @@
     ],
     "name": "数理科学探求[Mathematical Science Exploration]",
     "position": [
-      -0.715502,
-      3.46994,
-      1.117399
+      -2.280927,
+      0.637422,
+      1.548283
     ],
     "source": "joint_umap_syllabus"
   },
@@ -1899,9 +1899,9 @@
     ],
     "name": "データ解析演習[Seminar of Data Analysis]",
     "position": [
-      -2.978578,
-      -2.471429,
-      3.587924
+      4.978795,
+      0.38892,
+      -0.524021
     ],
     "source": "joint_umap_syllabus"
   },
@@ -1912,9 +1912,9 @@
     ],
     "name": "スマートデバイス演習[Seminar of Smart Device]",
     "position": [
-      -0.378964,
-      2.385067,
-      1.916067
+      -1.107055,
+      -1.843233,
+      0.571994
     ],
     "source": "joint_umap_syllabus"
   },
@@ -1925,9 +1925,9 @@
     ],
     "name": "北陸地域創生と社会学[Hokuriku Regional Revitalization and Sociology]",
     "position": [
-      -3.895135,
-      -0.999509,
-      1.197082
+      4.374747,
+      3.52819,
+      -1.826589
     ],
     "source": "joint_umap_syllabus"
   },
@@ -1938,9 +1938,9 @@
     ],
     "name": "数理・データサイエンス・AI実践[Practical Approach for Mathematics, Data Science, and AI]",
     "position": [
-      -0.08613,
-      1.461067,
-      3.340612
+      0.147381,
+      -3.141497,
+      -0.323469
     ],
     "source": "joint_umap_syllabus"
   },
@@ -1951,9 +1951,9 @@
     ],
     "name": "Webサイト設計基礎[Fundamentals of Website Design]",
     "position": [
-      -0.49152,
-      1.096933,
-      3.10221
+      0.003048,
+      -2.845572,
+      0.068236
     ],
     "source": "joint_umap_syllabus"
   },
@@ -1964,9 +1964,9 @@
     ],
     "name": "データ駆動型社会と産業[Data Driven Society and Industry]",
     "position": [
-      -2.559076,
-      1.26547,
-      4.256533
+      0.063134,
+      -2.683852,
+      0.541139
     ],
     "source": "joint_umap_syllabus"
   },
@@ -1977,9 +1977,9 @@
     ],
     "name": "プログラミングスキル実践[Practical Approach for Programming Skills]",
     "position": [
-      -0.447415,
-      1.896239,
-      2.515802
+      -0.261337,
+      -2.443051,
+      0.348945
     ],
     "source": "joint_umap_syllabus"
   },
@@ -1990,9 +1990,9 @@
     ],
     "name": "ロボットイノベーション[Robot Innovation]",
     "position": [
-      0.42528,
-      2.022032,
-      2.506943
+      -1.027858,
+      -1.701755,
+      -0.545294
     ],
     "source": "joint_umap_syllabus"
   },
@@ -2003,9 +2003,9 @@
     ],
     "name": "スマート創成化学とバイオロジー[Smart Creative Chemistry and Biology]",
     "position": [
-      1.061792,
-      1.427657,
-      -0.85641
+      -1.669291,
+      4.029508,
+      2.756616
     ],
     "source": "joint_umap_syllabus"
   },
@@ -2016,9 +2016,9 @@
     ],
     "name": "AIと未来の社会学[Sociology of AI and Future]",
     "position": [
-      -0.019543,
-      1.498957,
-      2.662543
+      -0.58281,
+      -2.391903,
+      -0.524903
     ],
     "source": "joint_umap_syllabus"
   },
@@ -2029,9 +2029,9 @@
     ],
     "name": "未来エネルギー創成[Future Energy Creation]",
     "position": [
-      -0.806106,
-      0.897743,
-      -0.248104
+      -1.034479,
+      3.785579,
+      2.532949
     ],
     "source": "joint_umap_syllabus"
   },
@@ -2042,9 +2042,9 @@
     ],
     "name": "情報科学応用[Applied Information Science]",
     "position": [
-      -0.272763,
-      2.207867,
-      2.993303
+      -1.222542,
+      -2.198274,
+      0.131572
     ],
     "source": "joint_umap_syllabus"
   },
@@ -2055,9 +2055,9 @@
     ],
     "name": "スマートシステム制御[Smart Systems and Control]",
     "position": [
-      -1.665102,
-      2.033967,
-      -1.319211
+      -2.25819,
+      1.056885,
+      1.903921
     ],
     "source": "joint_umap_syllabus"
   },
@@ -2068,9 +2068,9 @@
     ],
     "name": "コンピュータとデジタル回路[Computers and Digital Circuit]",
     "position": [
-      -0.245942,
-      3.1181,
-      1.925876
+      -1.785134,
+      -1.485248,
+      0.971194
     ],
     "source": "joint_umap_syllabus"
   },
@@ -2081,9 +2081,9 @@
     ],
     "name": "イノベーション・マネジメント[Innovation Management]",
     "position": [
-      1.451583,
-      -1.09146,
-      2.601002
+      -0.104239,
+      -4.111919,
+      -2.317329
     ],
     "source": "joint_umap_syllabus"
   },
@@ -2094,9 +2094,9 @@
     ],
     "name": "測量学及び実習第１[Surveying and Practice 1]",
     "position": [
-      -1.294095,
-      1.19911,
-      2.119436
+      -0.896134,
+      1.000711,
+      0.992023
     ],
     "source": "joint_umap_syllabus"
   },
@@ -2107,9 +2107,9 @@
     ],
     "name": "測量学及び実習第２[Surveying and Practice 2]",
     "position": [
-      -1.463554,
-      1.408466,
-      1.868129
+      -1.070829,
+      1.149377,
+      1.034129
     ],
     "source": "joint_umap_syllabus"
   },
@@ -2120,9 +2120,9 @@
     ],
     "name": "計画プロセス[Planning System and Process]",
     "position": [
-      -2.974731,
-      -1.155482,
-      1.486567
+      3.998296,
+      2.98576,
+      -0.890955
     ],
     "source": "joint_umap_syllabus"
   },
@@ -2133,9 +2133,9 @@
     ],
     "name": "先端医学[Advanced Medicine]",
     "position": [
-      1.464584,
-      1.595669,
-      -1.251533
+      -2.968624,
+      2.585249,
+      -0.073213
     ],
     "source": "joint_umap_syllabus"
   },
@@ -2146,9 +2146,9 @@
     ],
     "name": "SDGs実践[Practical Approach for SDGs]",
     "position": [
-      -2.079108,
-      -1.080615,
-      -0.437747
+      2.266388,
+      2.09735,
+      -0.769565
     ],
     "source": "joint_umap_syllabus"
   },
@@ -2159,9 +2159,9 @@
     ],
     "name": "データサイエンス実践[Practical Approach for Data Science]",
     "position": [
-      2.94479,
-      5.399299,
-      0.744087
+      -5.905471,
+      -5.077181,
+      -2.048418
     ],
     "source": "joint_umap_syllabus"
   },
@@ -2172,9 +2172,9 @@
     ],
     "name": "需要予測[Demand Forecasting]",
     "position": [
-      -1.245199,
-      0.931146,
-      2.719273
+      0.116728,
+      -2.611041,
+      0.828039
     ],
     "source": "joint_umap_syllabus"
   },
@@ -2185,9 +2185,9 @@
     ],
     "name": "プロジェクト・マネジメント[Project Management]",
     "position": [
-      -2.600395,
-      -1.140818,
-      1.508313
+      3.362769,
+      2.598814,
+      -0.460974
     ],
     "source": "joint_umap_syllabus"
   },
@@ -2198,9 +2198,9 @@
     ],
     "name": "医療制度改革と医療経済[Reform of Medical System and Medical Economics]",
     "position": [
-      2.546182,
-      1.767558,
-      -1.190643
+      -0.920733,
+      0.910521,
+      -2.617533
     ],
     "source": "joint_umap_syllabus"
   },
@@ -2211,9 +2211,9 @@
     ],
     "name": "センシング論[Sensing Technology]",
     "position": [
-      0.010737,
-      3.627264,
-      1.471161
+      -1.869302,
+      -1.21336,
+      0.725045
     ],
     "source": "joint_umap_syllabus"
   },
@@ -2224,9 +2224,9 @@
     ],
     "name": "生活デザイン論[Life Design]",
     "position": [
-      -1.022415,
-      -2.395253,
-      0.655093
+      3.149424,
+      0.8507,
+      -2.813244
     ],
     "source": "joint_umap_syllabus"
   },
@@ -2237,9 +2237,9 @@
     ],
     "name": "生活環境学[Life Environmental Studies]",
     "position": [
-      -1.274859,
-      -2.016453,
-      0.383376
+      3.331068,
+      1.025767,
+      -2.84529
     ],
     "source": "joint_umap_syllabus"
   },
@@ -2250,9 +2250,9 @@
     ],
     "name": "超高齢社会と科学技術[Hyper-Aged Society and Science Technology]",
     "position": [
-      2.555626,
-      1.471297,
-      -0.671106
+      -0.54878,
+      0.731176,
+      -2.606378
     ],
     "source": "joint_umap_syllabus"
   },
@@ -2263,9 +2263,9 @@
     ],
     "name": "マテリアル科学[Material Science]",
     "position": [
-      -1.049687,
-      -0.593981,
-      0.12007
+      0.108827,
+      4.280422,
+      0.846649
     ],
     "source": "joint_umap_syllabus"
   },
@@ -2276,9 +2276,9 @@
     ],
     "name": "データベース論[Database System]",
     "position": [
-      -0.449936,
-      1.646113,
-      3.088025
+      -0.981666,
+      -3.384871,
+      0.768228
     ],
     "source": "joint_umap_syllabus"
   },
@@ -2289,9 +2289,9 @@
     ],
     "name": "プレシジョンメディシン[Precision Medicine]",
     "position": [
-      2.438227,
-      1.040704,
-      -4.675768
+      -2.863283,
+      2.410484,
+      -0.87014
     ],
     "source": "joint_umap_syllabus"
   },
@@ -2302,9 +2302,9 @@
     ],
     "name": "テクノロジーと医療・健康・介護[Technology of Medicine, Health, and Care]",
     "position": [
-      3.116799,
-      5.355557,
-      0.592895
+      -6.080034,
+      -5.218901,
+      -2.098306
     ],
     "source": "joint_umap_syllabus"
   },
@@ -2315,9 +2315,9 @@
     ],
     "name": "比較制度論[Comparative Systems]",
     "position": [
-      -4.114396,
-      -1.144086,
-      1.04846
+      4.766521,
+      3.240013,
+      -1.518874
     ],
     "source": "joint_umap_syllabus"
   },
@@ -2328,9 +2328,9 @@
     ],
     "name": "地域政策論[Regional Revitalization]",
     "position": [
-      -3.639609,
-      -1.566229,
-      1.745267
+      4.102823,
+      2.978308,
+      -1.271722
     ],
     "source": "joint_umap_syllabus"
   },
@@ -2341,9 +2341,9 @@
     ],
     "name": "未来型ヘルスケアシステム[Future-oriented Healthcare System]",
     "position": [
-      2.639992,
-      1.640667,
-      -1.029438
+      -0.858292,
+      0.855875,
+      -2.633058
     ],
     "source": "joint_umap_syllabus"
   },
@@ -2354,9 +2354,9 @@
     ],
     "name": "機械学習[Machine Learning]",
     "position": [
-      -1.017046,
-      1.545744,
-      2.74408
+      0.029818,
+      -2.734421,
+      0.71992
     ],
     "source": "joint_umap_syllabus"
   },
@@ -2367,9 +2367,9 @@
     ],
     "name": "光学技術論[Optics Technology]",
     "position": [
-      -4.284617,
-      5.010382,
-      0.491484
+      -4.87462,
+      3.14631,
+      3.971603
     ],
     "source": "joint_umap_syllabus"
   },
@@ -2380,9 +2380,9 @@
     ],
     "name": "レギュラトリーサイエンス[Regulatory Science]",
     "position": [
-      6.707292,
-      -28.0,
-      10.832509
+      -27.999547,
+      2.567748,
+      5.145994
     ],
     "source": "joint_umap_syllabus"
   },
@@ -2393,9 +2393,9 @@
     ],
     "name": "AI・IoT健康福祉学[AI / IoT Health and Welfare]",
     "position": [
-      2.734961,
-      4.900354,
-      0.686945
+      -5.433135,
+      -4.591428,
+      -1.859878
     ],
     "source": "joint_umap_syllabus"
   },
@@ -2406,9 +2406,9 @@
     ],
     "name": "コンピュータと電子回路[Computers and　Electronic Circuit]",
     "position": [
-      -0.274644,
-      3.251519,
-      1.816141
+      -1.941093,
+      -1.288238,
+      0.961296
     ],
     "source": "joint_umap_syllabus"
   },
@@ -2420,9 +2420,9 @@
     ],
     "name": "環境基礎科学[Environmental Basic Science]",
     "position": [
-      -1.246666,
-      -0.4269,
-      -0.029737
+      0.223447,
+      4.50986,
+      0.560858
     ],
     "source": "joint_umap_syllabus"
   },
@@ -2434,9 +2434,9 @@
     ],
     "name": "学知特別講義（ＫＪ法で地方創生）",
     "position": [
-      -1.774643,
-      -1.362969,
-      1.075699
+      2.761853,
+      1.706862,
+      -1.64745
     ],
     "source": "joint_umap_syllabus"
   },
@@ -2447,9 +2447,9 @@
     ],
     "name": "学知特別講義（学びをデザインし未来を描く）",
     "position": [
-      -0.888502,
-      -2.573704,
-      0.601485
+      2.855559,
+      0.654372,
+      -2.787063
     ],
     "source": "joint_umap_syllabus"
   },
@@ -2460,9 +2460,9 @@
     ],
     "name": "学知特別講義（ライフデザインと消費者ガバナンス）",
     "position": [
-      -0.464658,
-      -1.924143,
-      1.248698
+      3.54829,
+      1.144902,
+      -2.960708
     ],
     "source": "joint_umap_syllabus"
   },
@@ -2473,9 +2473,9 @@
     ],
     "name": "海外実践留学[Study Abroad Programs]",
     "position": [
-      1.247355,
-      -2.125924,
-      0.125972
+      1.165796,
+      -2.587493,
+      -2.555637
     ],
     "source": "joint_umap_syllabus"
   },
@@ -2486,9 +2486,9 @@
     ],
     "name": "国際インターンシップ[International Internship Programs]",
     "position": [
-      1.596279,
-      -1.95398,
-      0.255441
+      1.12615,
+      -2.727926,
+      -2.516644
     ],
     "source": "joint_umap_syllabus"
   },
@@ -2502,9 +2502,9 @@
     ],
     "name": "学術考究[Academic Investigation]",
     "position": [
-      0.927392,
-      -2.910815,
-      0.036553
+      -0.323999,
+      -3.011236,
+      -0.993477
     ],
     "source": "joint_umap_syllabus"
   },
@@ -2515,9 +2515,9 @@
     ],
     "name": "持続的な観光[Sustainable Tourism]",
     "position": [
-      3.911149,
-      -2.247222,
-      14.692463
+      10.483353,
+      -5.222995,
+      5.323596
     ],
     "source": "joint_umap_syllabus"
   },
@@ -2528,9 +2528,9 @@
     ],
     "name": "比較地域発展論[Comparative Regional Development]",
     "position": [
-      -4.265175,
-      -1.12293,
-      1.106307
+      4.743542,
+      3.225417,
+      -1.465116
     ],
     "source": "joint_umap_syllabus"
   },
@@ -2541,9 +2541,9 @@
     ],
     "name": "ヘリテージ・インタープリテーション[Heritage Interpretation]",
     "position": [
-      4.360902,
-      -2.513082,
-      15.283961
+      11.156661,
+      -5.577217,
+      5.972494
     ],
     "source": "joint_umap_syllabus"
   },
@@ -2555,9 +2555,9 @@
     ],
     "name": "文化遺産論[Cultural Heritage]",
     "position": [
-      -3.408089,
-      -1.314827,
-      1.843231
+      3.581227,
+      2.816017,
+      -1.002488
     ],
     "source": "joint_umap_syllabus"
   },
@@ -2568,9 +2568,9 @@
     ],
     "name": "文化と地域経済[Culture and Regional Economies]",
     "position": [
-      -3.585299,
-      -1.494113,
-      1.63283
+      4.217437,
+      2.918384,
+      -1.248726
     ],
     "source": "joint_umap_syllabus"
   },
@@ -2581,9 +2581,9 @@
     ],
     "name": "Web・クチコミ社会動向分析[Web Content and Review Analysis]",
     "position": [
-      -0.897963,
-      0.741186,
-      3.140216
+      0.275251,
+      -2.777303,
+      0.010338
     ],
     "source": "joint_umap_syllabus"
   },
@@ -2594,9 +2594,9 @@
     ],
     "name": "観光データ解析応用[Applied Analysis of Tourism Data]",
     "position": [
-      -0.582598,
-      -0.377692,
-      3.36152
+      2.875152,
+      -1.345022,
+      0.360253
     ],
     "source": "joint_umap_syllabus"
   },
@@ -2607,9 +2607,9 @@
     ],
     "name": "観光産業DX発展[Advanced Digital Transformation of Tourism Industry]",
     "position": [
-      -0.388211,
-      -1.083351,
-      3.248825
+      3.184974,
+      -0.951897,
+      0.388127
     ],
     "source": "joint_umap_syllabus"
   },
@@ -2620,9 +2620,9 @@
     ],
     "name": "情報政策論[Information Policy]",
     "position": [
-      -2.970157,
-      1.508716,
-      4.857219
+      1.59321,
+      -5.7535,
+      1.995979
     ],
     "source": "joint_umap_syllabus"
   },
@@ -2633,9 +2633,9 @@
     ],
     "name": "時空間データ解析[Spatiotemporal Data Analysis]",
     "position": [
-      -0.58715,
-      0.17221,
-      3.250174
+      1.133966,
+      -2.302193,
+      0.155526
     ],
     "source": "joint_umap_syllabus"
   },
@@ -2646,9 +2646,9 @@
     ],
     "name": "統計的意思決定論[Statistical Decision Making]",
     "position": [
-      -2.945621,
-      1.393681,
-      4.745086
+      1.545217,
+      -5.704806,
+      2.024262
     ],
     "source": "joint_umap_syllabus"
   },
@@ -2659,9 +2659,9 @@
     ],
     "name": "国際メディア分析論[International Media Analysis]",
     "position": [
-      -0.936972,
-      0.50258,
-      3.418243
+      0.656038,
+      -3.063832,
+      0.246196
     ],
     "source": "joint_umap_syllabus"
   },
@@ -2672,9 +2672,9 @@
     ],
     "name": "観光IT戦略論[IT Strategy for Tourism]",
     "position": [
-      -0.067579,
-      -1.298978,
-      2.971843
+      2.992451,
+      -0.56224,
+      0.546128
     ],
     "source": "joint_umap_syllabus"
   },
@@ -2685,9 +2685,9 @@
     ],
     "name": "環境と観光[Environment and Tourism]",
     "position": [
-      4.097149,
-      -2.287341,
-      14.93264
+      10.62886,
+      -5.328748,
+      5.459333
     ],
     "source": "joint_umap_syllabus"
   },
@@ -2698,9 +2698,9 @@
     ],
     "name": "地域社会学[Regional Sociology]",
     "position": [
-      -3.385306,
-      -1.501523,
-      1.391602
+      3.51706,
+      3.138939,
+      -1.417561
     ],
     "source": "joint_umap_syllabus"
   },
@@ -2711,9 +2711,9 @@
     ],
     "name": "コミュニティ・デザイン論[Community Design]",
     "position": [
-      -2.426173,
-      -3.334004,
-      1.471308
+      5.659419,
+      1.419925,
+      1.00711
     ],
     "source": "joint_umap_syllabus"
   },
@@ -2724,9 +2724,9 @@
     ],
     "name": "パブリックスペース論[Design of Public Space]",
     "position": [
-      -2.37596,
-      -2.821394,
-      1.37346
+      0.837018,
+      2.541046,
+      -0.104775
     ],
     "source": "joint_umap_syllabus"
   },
@@ -2737,9 +2737,9 @@
     ],
     "name": "観光社会学[Sociology of Tourism]",
     "position": [
-      -3.117946,
-      -2.407602,
-      3.097575
+      4.527272,
+      1.26289,
+      -0.984229
     ],
     "source": "joint_umap_syllabus"
   },
@@ -2751,9 +2751,9 @@
     ],
     "name": "観光ビジネス実践Ａ[Practical Approach in Tourism Business A]",
     "position": [
-      1.731178,
-      -1.868183,
-      -0.030922
+      1.445498,
+      -2.26905,
+      -2.271799
     ],
     "source": "joint_umap_syllabus"
   },
@@ -2765,9 +2765,9 @@
     ],
     "name": "観光ビジネス実践Ｂ[Practical Approach in Tourism Business B]",
     "position": [
-      1.83956,
-      -1.803104,
-      -0.024019
+      1.409026,
+      -2.304892,
+      -2.304785
     ],
     "source": "joint_umap_syllabus"
   },
@@ -2779,9 +2779,9 @@
     ],
     "name": "観光ビジネス実践Ｃ[Practical Approach in Tourism Business C]",
     "position": [
-      1.899096,
-      -1.97008,
-      -0.143393
+      1.399624,
+      -2.318715,
+      -2.313244
     ],
     "source": "joint_umap_syllabus"
   },
@@ -2792,9 +2792,9 @@
     ],
     "name": "観光実践留学[Study Abroad Programs in Tourism Sciences]",
     "position": [
-      1.379691,
-      -2.121197,
-      0.212116
+      1.152569,
+      -2.578178,
+      -2.6459
     ],
     "source": "joint_umap_syllabus"
   },
@@ -2806,9 +2806,9 @@
     ],
     "name": "人間拡張とライフ[Human Augmentation and Life]",
     "position": [
-      1.784023,
-      1.648135,
-      -0.695795
+      -1.15442,
+      -1.027126,
+      -0.691779
     ],
     "source": "joint_umap_syllabus"
   },
@@ -2819,9 +2819,9 @@
     ],
     "name": "ヒューマンインターフェース[Human Interface]",
     "position": [
-      0.394279,
-      2.267992,
-      1.021765
+      -1.670802,
+      1.263035,
+      0.591264
     ],
     "source": "joint_umap_syllabus"
   },
@@ -2832,9 +2832,9 @@
     ],
     "name": "生活デザイン論[Lifestyle Design]",
     "position": [
-      -1.090425,
-      -2.372905,
-      0.694786
+      3.222366,
+      0.827109,
+      -2.889665
     ],
     "source": "joint_umap_syllabus"
   },
@@ -2845,9 +2845,9 @@
     ],
     "name": "スマートウエルネス[Smart Wellness]",
     "position": [
-      1.960791,
-      1.497866,
-      -1.223437
+      -0.787135,
+      2.589242,
+      0.059291
     ],
     "source": "joint_umap_syllabus"
   },
@@ -2858,9 +2858,9 @@
     ],
     "name": "ヘルステック[Health Tech]",
     "position": [
-      3.147806,
-      5.397278,
-      0.623658
+      -6.242078,
+      -5.376818,
+      -1.968134
     ],
     "source": "joint_umap_syllabus"
   },
@@ -2871,9 +2871,9 @@
     ],
     "name": "地域経済特論a-1[Special Study on Regional Economics a-1]",
     "position": [
-      -3.896917,
-      -1.37011,
-      1.081607
+      4.140054,
+      3.597805,
+      -1.556909
     ],
     "source": "joint_umap_syllabus"
   },
@@ -2884,9 +2884,9 @@
     ],
     "name": "地域経済特論a-2[Special Study on Regional Economics a-2]",
     "position": [
-      -3.879059,
-      -1.207196,
-      1.332049
+      4.200149,
+      3.406567,
+      -1.198407
     ],
     "source": "joint_umap_syllabus"
   },
@@ -2897,9 +2897,9 @@
     ],
     "name": "地域経済特論b-1[Special Study on Regional Economics b-1]",
     "position": [
-      -3.515019,
-      -1.152474,
-      0.686161
+      3.811971,
+      3.492073,
+      -1.565655
     ],
     "source": "joint_umap_syllabus"
   },
@@ -2910,9 +2910,9 @@
     ],
     "name": "地域経済特論b-2[Special Study on Regional Economics b-2]",
     "position": [
-      -3.952201,
-      -1.530323,
-      1.099215
+      4.652693,
+      3.241189,
+      -1.39911
     ],
     "source": "joint_umap_syllabus"
   },
@@ -2923,9 +2923,9 @@
     ],
     "name": "地域経済論演習a-1[Seminar on Regional Economics a-1]",
     "position": [
-      -3.782957,
-      -2.080897,
-      1.404625
+      4.299767,
+      2.868019,
+      -1.421543
     ],
     "source": "joint_umap_syllabus"
   },
@@ -2936,9 +2936,9 @@
     ],
     "name": "地域経済論演習a-2[Seminar on Regional Economics a-2]",
     "position": [
-      -3.712832,
-      -1.464984,
-      1.269854
+      4.074157,
+      3.335462,
+      -1.182393
     ],
     "source": "joint_umap_syllabus"
   },
@@ -2949,9 +2949,9 @@
     ],
     "name": "地域経済論演習b-1[Seminar on Regional Economics b-1]",
     "position": [
-      -3.562174,
-      -1.163056,
-      0.675521
+      3.783327,
+      3.63082,
+      -1.793355
     ],
     "source": "joint_umap_syllabus"
   },
@@ -2962,9 +2962,9 @@
     ],
     "name": "地域経済論演習b-2[Seminar on Regional Economics b-2]",
     "position": [
-      -3.560771,
-      -2.174794,
-      1.616779
+      4.661353,
+      2.743516,
+      -1.158267
     ],
     "source": "joint_umap_syllabus"
   },
@@ -2981,9 +2981,9 @@
     ],
     "name": "スマート産業論[Smart Industry Theory]",
     "position": [
-      -0.343101,
-      -0.04547,
-      2.351627
+      2.363313,
+      0.484166,
+      -1.014815
     ],
     "source": "joint_umap_syllabus"
   },
@@ -2994,9 +2994,9 @@
     ],
     "name": "消費者行動と社会[Consumer Behavior and Society]",
     "position": [
-      -3.726013,
-      -0.776441,
-      0.928235
+      4.138933,
+      3.325099,
+      -2.040027
     ],
     "source": "joint_umap_syllabus"
   },
@@ -3007,9 +3007,9 @@
     ],
     "name": "実践データサイエンス[Practical Data Science]",
     "position": [
-      2.870949,
-      5.321029,
-      0.732943
+      -5.883801,
+      -5.05809,
+      -2.016395
     ],
     "source": "joint_umap_syllabus"
   },
@@ -3020,9 +3020,9 @@
     ],
     "name": "スマートセンシング[Smart Sensing]",
     "position": [
-      0.020528,
-      3.605684,
-      1.480968
+      -0.695204,
+      -2.195142,
+      0.458692
     ],
     "source": "joint_umap_syllabus"
   },
@@ -3033,9 +3033,9 @@
     ],
     "name": "カーボンニュートラル技術[Carbon Neutral Technology]",
     "position": [
-      -1.819607,
-      -0.292191,
-      -0.287476
+      1.50526,
+      2.791476,
+      0.662323
     ],
     "source": "joint_umap_syllabus"
   },
@@ -3046,9 +3046,9 @@
     ],
     "name": "スマートシステム制御応用[Advanced Smart Systems and Control]",
     "position": [
-      -1.560739,
-      2.047785,
-      -1.013857
+      -2.169043,
+      1.118065,
+      2.143888
     ],
     "source": "joint_umap_syllabus"
   },
@@ -3059,9 +3059,9 @@
     ],
     "name": "自律ロボット[Autonomous Robot]",
     "position": [
-      0.418437,
-      2.35997,
-      2.621826
+      -2.02655,
+      0.374914,
+      0.633251
     ],
     "source": "joint_umap_syllabus"
   },
@@ -3072,9 +3072,9 @@
     ],
     "name": "産業とユニバーサルデザイン[Industry and Universal Design]",
     "position": [
-      -0.244445,
-      0.992767,
-      -2.770338
+      0.453437,
+      2.087856,
+      -0.105203
     ],
     "source": "joint_umap_syllabus"
   },
@@ -3085,9 +3085,9 @@
     ],
     "name": "拡張・リアリティ空間デザイン[Augmented Reality Space Design]",
     "position": [
-      1.057454,
-      -1.040807,
-      -3.167023
+      1.890342,
+      0.263418,
+      0.838194
     ],
     "source": "joint_umap_syllabus"
   },
@@ -3098,9 +3098,9 @@
     ],
     "name": "次世代情報通信[Next-generation Information Communication]",
     "position": [
-      -0.054923,
-      2.339308,
-      2.015665
+      -1.418332,
+      -2.034105,
+      0.248033
     ],
     "source": "joint_umap_syllabus"
   },
@@ -3111,9 +3111,9 @@
     ],
     "name": "エナジーハーベスティング[Energy Harvesting Technology]",
     "position": [
-      -0.335273,
-      2.509442,
-      1.542051
+      -1.598077,
+      -1.732487,
+      0.62781
     ],
     "source": "joint_umap_syllabus"
   },
@@ -3124,9 +3124,9 @@
     ],
     "name": "SDGs実践[Practical Approach for SDGｓ]",
     "position": [
-      -2.067281,
-      -1.111191,
-      -0.451247
+      2.268954,
+      2.110549,
+      -0.740833
     ],
     "source": "joint_umap_syllabus"
   },
@@ -3137,9 +3137,9 @@
     ],
     "name": "ナショナルレジリエンス[National Resilience]",
     "position": [
-      -0.529628,
-      -1.399059,
-      3.63757
+      3.686135,
+      -0.980732,
+      0.639595
     ],
     "source": "joint_umap_syllabus"
   },
@@ -3151,9 +3151,9 @@
     ],
     "name": "デジタルエコノミーと地域展開[Digital Economy and Regional Expansion]",
     "position": [
-      -3.030732,
-      -1.371305,
-      0.516265
+      2.64565,
+      0.950232,
+      -1.264089
     ],
     "source": "joint_umap_syllabus"
   },
@@ -3164,9 +3164,9 @@
     ],
     "name": "都市・地域工学[Urban/Regional Engineering]",
     "position": [
-      -2.365381,
-      -1.804006,
-      1.435574
+      4.040077,
+      2.117429,
+      -0.527441
     ],
     "source": "joint_umap_syllabus"
   },
@@ -3177,9 +3177,9 @@
     ],
     "name": "エビデンスベース政策論[Evidence-Based Policy Theory]",
     "position": [
-      -2.937931,
-      1.092711,
-      4.103285
+      1.160565,
+      -2.4808,
+      0.440255
     ],
     "source": "joint_umap_syllabus"
   },
@@ -3190,9 +3190,9 @@
     ],
     "name": "ソーシャルイノベーション[Social Innovation]",
     "position": [
-      1.369134,
-      -1.18784,
-      2.616708
+      -0.179361,
+      -4.491826,
+      -2.04395
     ],
     "source": "joint_umap_syllabus"
   },
@@ -3203,9 +3203,9 @@
     ],
     "name": "社会的合意形成論[Social Consensus Building Theory]",
     "position": [
-      -2.378344,
-      -3.371186,
-      0.977784
+      5.400754,
+      1.566202,
+      0.843721
     ],
     "source": "joint_umap_syllabus"
   },
@@ -3216,9 +3216,9 @@
     ],
     "name": "デジタルツインと危機管理[Digital Twin and Crisis Management]",
     "position": [
-      0.906698,
-      -0.51984,
-      -4.110475
+      1.72173,
+      0.0565,
+      0.825486
     ],
     "source": "joint_umap_syllabus"
   },
@@ -3230,9 +3230,9 @@
     ],
     "name": "低炭素社会[Low-Carbon Society]",
     "position": [
-      -2.142995,
-      -0.904765,
-      -0.212026
+      2.060741,
+      2.56851,
+      -0.241631
     ],
     "source": "joint_umap_syllabus"
   },
@@ -3243,9 +3243,9 @@
     ],
     "name": "スマートサプライチェーン[Smart Supply Chain]",
     "position": [
-      -0.273592,
-      -0.434129,
-      2.109968
+      2.54789,
+      0.719189,
+      -0.967762
     ],
     "source": "joint_umap_syllabus"
   },
@@ -3256,9 +3256,9 @@
     ],
     "name": "スマートインフラマネジメント[Smart Infrastructure Management]",
     "position": [
-      -1.531022,
-      -0.322599,
-      1.155898
+      1.880639,
+      3.071101,
+      0.019369
     ],
     "source": "joint_umap_syllabus"
   },
@@ -3269,9 +3269,9 @@
     ],
     "name": "フューチャーデザイン[Future Design]",
     "position": [
-      -1.502853,
-      -1.98456,
-      1.479013
+      3.026234,
+      0.744407,
+      -2.822017
     ],
     "source": "joint_umap_syllabus"
   },
@@ -3282,9 +3282,9 @@
     ],
     "name": "情報科学特論a-1[Study on Advanced Information Science a-1]",
     "position": [
-      -2.924036,
-      1.551884,
-      4.916173
+      1.522999,
+      -5.682561,
+      2.027923
     ],
     "source": "joint_umap_syllabus"
   },
@@ -3295,9 +3295,9 @@
     ],
     "name": "情報科学特論a-2[Study on Advanced Information Science a-2]",
     "position": [
-      -2.909901,
-      1.404916,
-      4.769535
+      1.58887,
+      -5.750193,
+      2.029419
     ],
     "source": "joint_umap_syllabus"
   },
@@ -3308,9 +3308,9 @@
     ],
     "name": "情報科学特論b-1[Study on Advanced Information Science b-1]",
     "position": [
-      -2.989508,
-      1.520832,
-      4.886933
+      0.880848,
+      -5.281595,
+      2.268066
     ],
     "source": "joint_umap_syllabus"
   },
@@ -3321,9 +3321,9 @@
     ],
     "name": "情報科学特論b-2[Study on Advanced Information Science b-2]",
     "position": [
-      -2.998393,
-      1.52531,
-      4.895227
+      0.812779,
+      -5.222201,
+      2.291384
     ],
     "source": "joint_umap_syllabus"
   },
@@ -3334,9 +3334,9 @@
     ],
     "name": "情報科学論演習a-1[Seminar on Advanced Information Science a-1]",
     "position": [
-      -2.991868,
-      1.509116,
-      4.836837
+      1.624879,
+      -5.787104,
+      1.947439
     ],
     "source": "joint_umap_syllabus"
   },
@@ -3347,9 +3347,9 @@
     ],
     "name": "情報科学論演習a-2[Seminar on Advanced Information Science a-2]",
     "position": [
-      -3.024042,
-      1.473295,
-      4.860406
+      1.507612,
+      -5.674975,
+      2.058446
     ],
     "source": "joint_umap_syllabus"
   },
@@ -3360,9 +3360,9 @@
     ],
     "name": "情報科学論演習b-1[Seminar on Advanced Information Science b-1]",
     "position": [
-      -2.869109,
-      1.385216,
-      4.757821
+      0.82183,
+      -5.230351,
+      2.326851
     ],
     "source": "joint_umap_syllabus"
   },
@@ -3373,9 +3373,9 @@
     ],
     "name": "情報科学論演習b-2[Seminar on Advanced Information Science b-2]",
     "position": [
-      -2.997087,
-      1.512572,
-      4.889799
+      0.864503,
+      -5.267066,
+      2.291738
     ],
     "source": "joint_umap_syllabus"
   },
@@ -3386,9 +3386,9 @@
     ],
     "name": "イノベーション特論a-1[Theory of Innovation a-1]",
     "position": [
-      9.295689,
-      -8.75066,
-      5.462905
+      6.991275,
+      -9.288948,
+      -5.079906
     ],
     "source": "joint_umap_syllabus"
   },
@@ -3399,9 +3399,9 @@
     ],
     "name": "イノベーション特論a-2[Theory of Innovation a-2]",
     "position": [
-      9.254003,
-      -8.726339,
-      5.459183
+      7.074391,
+      -9.215494,
+      -5.000842
     ],
     "source": "joint_umap_syllabus"
   },
@@ -3412,9 +3412,9 @@
     ],
     "name": "イノベーション特論b-1[Theory of Innovation b-1]",
     "position": [
-      9.184434,
-      -8.614827,
-      5.367614
+      7.114176,
+      -9.191917,
+      -4.976051
     ],
     "source": "joint_umap_syllabus"
   },
@@ -3425,9 +3425,9 @@
     ],
     "name": "イノベーション特論b-2[Theory of Innovation b-2]",
     "position": [
-      9.345779,
-      -8.755719,
-      5.395749
+      7.158464,
+      -9.258599,
+      -4.967865
     ],
     "source": "joint_umap_syllabus"
   },
@@ -3438,9 +3438,9 @@
     ],
     "name": "イノベーション論演習a-1[Seminar on Innovation a-1]",
     "position": [
-      9.290096,
-      -8.691719,
-      5.390942
+      7.037639,
+      -9.253663,
+      -5.0405
     ],
     "source": "joint_umap_syllabus"
   },
@@ -3451,9 +3451,9 @@
     ],
     "name": "イノベーション論演習a-2[Seminar on Innovation a-2]",
     "position": [
-      9.293456,
-      -8.744563,
-      5.331706
+      7.199636,
+      -9.078059,
+      -4.857198
     ],
     "source": "joint_umap_syllabus"
   },
@@ -3464,9 +3464,9 @@
     ],
     "name": "イノベーション論演習b-1[Seminar on Innovation b-1]",
     "position": [
-      9.480986,
-      -8.877041,
-      5.533551
+      7.006018,
+      -9.276403,
+      -5.067898
     ],
     "source": "joint_umap_syllabus"
   },
@@ -3477,9 +3477,9 @@
     ],
     "name": "イノベーション論演習b-2[Seminar on Innovation b-2]",
     "position": [
-      9.304598,
-      -8.718942,
-      5.44978
+      7.00696,
+      -9.281724,
+      -5.070416
     ],
     "source": "joint_umap_syllabus"
   },
@@ -3495,9 +3495,9 @@
     ],
     "name": "数理・データサイエンス・AI鍛練[Training for Mathematics, Data Science, and AI]",
     "position": [
-      -0.09948,
-      1.006011,
-      1.913967
+      -0.288427,
+      -2.955936,
+      -0.728927
     ],
     "source": "joint_umap_syllabus"
   },
@@ -3512,9 +3512,9 @@
     ],
     "name": "地域フィールドワーク[Regional Fieldwork]",
     "position": [
-      -3.417272,
-      -2.491639,
-      1.678631
+      4.5643,
+      2.25178,
+      -0.9886
     ],
     "source": "joint_umap_syllabus"
   },
@@ -3525,9 +3525,9 @@
     ],
     "name": "地域社会学特論Ⅰ[Special Study on Regional Sociology 1]",
     "position": [
-      -3.268367,
-      -2.071839,
-      1.993156
+      4.022842,
+      1.97214,
+      -1.090867
     ],
     "source": "joint_umap_syllabus"
   },
@@ -3538,9 +3538,9 @@
     ],
     "name": "地域社会学特論Ⅰ[Special Study on Regional Sociology 1]",
     "position": [
-      -1.988885,
-      -1.005713,
-      0.689263
+      2.860538,
+      1.705181,
+      -1.45994
     ],
     "source": "joint_umap_syllabus"
   },
@@ -3551,9 +3551,9 @@
     ],
     "name": "地域社会学特論Ⅱ[Special Study on Regional Sociology 2]",
     "position": [
-      -6.080215,
-      -6.229592,
-      5.751074
+      12.311926,
+      -2.504984,
+      -0.135292
     ],
     "source": "joint_umap_syllabus"
   },
@@ -3564,9 +3564,9 @@
     ],
     "name": "地域社会学特論Ⅱ[Special Study on Regional Sociology 2]",
     "position": [
-      -0.863565,
-      -2.008138,
-      0.842145
+      3.33725,
+      0.963349,
+      -2.823613
     ],
     "source": "joint_umap_syllabus"
   },
@@ -3577,9 +3577,9 @@
     ],
     "name": "社会政策特論Ⅱ[Special Study on Social Policy 2]",
     "position": [
-      0.501353,
-      -2.768847,
-      0.393402
+      1.960612,
+      0.313661,
+      -2.720125
     ],
     "source": "joint_umap_syllabus"
   },
@@ -3590,9 +3590,9 @@
     ],
     "name": "社会保障特論Ⅰ[Special Study on Social Security 1]",
     "position": [
-      1.528737,
-      0.245282,
-      -3.425176
+      -1.497888,
+      1.489002,
+      -0.276763
     ],
     "source": "joint_umap_syllabus"
   },
@@ -3603,9 +3603,9 @@
     ],
     "name": "社会保障特論Ⅱ[Special Study on Social Security 2]",
     "position": [
-      -0.508429,
-      -2.185,
-      0.325604
+      2.785752,
+      0.346389,
+      -2.892494
     ],
     "source": "joint_umap_syllabus"
   },
@@ -3616,9 +3616,9 @@
     ],
     "name": "社会福祉学特論Ⅰ[Special Study on Social Welfare 1]",
     "position": [
-      2.126644,
-      -0.339848,
-      2.467561
+      -0.603101,
+      -3.03802,
+      -1.72424
     ],
     "source": "joint_umap_syllabus"
   },
@@ -3629,9 +3629,9 @@
     ],
     "name": "社会福祉学特論Ⅱ[Special Study on Social Welfare 2]",
     "position": [
-      9.342714,
-      -8.595203,
-      5.537411
+      6.965669,
+      -9.313654,
+      -5.108356
     ],
     "source": "joint_umap_syllabus"
   },
@@ -3642,9 +3642,9 @@
     ],
     "name": "社会研究とフィールドワーク技法[Social Science Field Research ]",
     "position": [
-      -3.470596,
-      -2.351908,
-      1.899902
+      1.71191,
+      1.554835,
+      -0.860181
     ],
     "source": "joint_umap_syllabus"
   },
@@ -3655,9 +3655,9 @@
     ],
     "name": "医療社会学特論Ⅱ[Special Study on Sociology of Medicine 2]",
     "position": [
-      -2.564321,
-      -0.858552,
-      0.192619
+      2.634733,
+      1.344812,
+      -1.277996
     ],
     "source": "joint_umap_syllabus"
   },
@@ -3668,9 +3668,9 @@
     ],
     "name": "地域経済学特論Ⅰ[Special Study on Regional Economics 1]",
     "position": [
-      -3.964617,
-      -1.271259,
-      1.004397
+      3.987828,
+      3.555964,
+      -1.514158
     ],
     "source": "joint_umap_syllabus"
   },
@@ -3681,9 +3681,9 @@
     ],
     "name": "地域経済学特論Ⅱ[Special Study on Regional Economics 2]",
     "position": [
-      -3.803352,
-      -1.159626,
-      1.350229
+      4.121212,
+      3.536499,
+      -1.324938
     ],
     "source": "joint_umap_syllabus"
   },
@@ -3694,9 +3694,9 @@
     ],
     "name": "生態系サービス特論Ⅰ[Special Study on Ecosystem Services 1]",
     "position": [
-      -6.152939,
-      -1.963067,
-      0.877792
+      2.318764,
+      4.447365,
+      -0.177497
     ],
     "source": "joint_umap_syllabus"
   },
@@ -3707,9 +3707,9 @@
     ],
     "name": "生態系サービス特論Ⅱ[Special Study on Ecosystem Services 2]",
     "position": [
-      -6.108366,
-      -1.847098,
-      0.993967
+      2.652117,
+      4.656058,
+      -0.25687
     ],
     "source": "joint_umap_syllabus"
   },
@@ -3720,9 +3720,9 @@
     ],
     "name": "コミュニティ・デザイン特論Ⅰ[Special Study on Community Design 1]",
     "position": [
-      -2.337506,
-      -4.350765,
-      1.46045
+      5.762808,
+      1.386767,
+      1.135303
     ],
     "source": "joint_umap_syllabus"
   },
@@ -3733,9 +3733,9 @@
     ],
     "name": "コミュニティ・デザイン特論Ⅱ[Special Study on Community Design 2]",
     "position": [
-      -2.332906,
-      -4.357591,
-      1.454884
+      5.734745,
+      1.386806,
+      1.091481
     ],
     "source": "joint_umap_syllabus"
   },
@@ -3746,9 +3746,9 @@
     ],
     "name": "ビジタースタディ特論Ⅰ[Visitor Studies 1]",
     "position": [
-      4.30031,
-      -2.133304,
-      14.958822
+      10.868325,
+      -5.755197,
+      5.694776
     ],
     "source": "joint_umap_syllabus"
   },
@@ -3759,9 +3759,9 @@
     ],
     "name": "ビジタースタディ特論Ⅱ[Visitor Studies 2]",
     "position": [
-      4.202733,
-      -2.104725,
-      14.890355
+      10.890509,
+      -5.598849,
+      5.71537
     ],
     "source": "joint_umap_syllabus"
   },
@@ -3772,9 +3772,9 @@
     ],
     "name": "現代社会特論Ⅰ[Special Study on Sociology of Modernity 1]",
     "position": [
-      -3.282131,
-      -2.040563,
-      2.005061
+      4.399547,
+      2.080732,
+      -1.111065
     ],
     "source": "joint_umap_syllabus"
   },
@@ -3785,9 +3785,9 @@
     ],
     "name": "現代社会特論Ⅱ[Special Study on Sociology of Modernity 2]",
     "position": [
-      4.30822,
-      -2.187692,
-      14.919242
+      10.8516,
+      -5.652358,
+      5.677208
     ],
     "source": "joint_umap_syllabus"
   },
@@ -3798,9 +3798,9 @@
     ],
     "name": "現代コミュニティ特論Ⅰ[Special Study on Modern Community 1]",
     "position": [
-      -6.187475,
-      -6.35167,
-      5.870901
+      12.390434,
+      -2.557403,
+      -0.06026
     ],
     "source": "joint_umap_syllabus"
   },
@@ -3811,9 +3811,9 @@
     ],
     "name": "現代コミュニティ特論Ⅰ[Special Study on Modern Community 1]",
     "position": [
-      2.1409,
-      1.111219,
-      -1.642218
+      -1.081961,
+      0.523254,
+      -1.833271
     ],
     "source": "joint_umap_syllabus"
   },
@@ -3824,9 +3824,9 @@
     ],
     "name": "現代コミュニティ特論Ⅱ[Special Study on Modern Community 2]",
     "position": [
-      -6.247271,
-      -6.412375,
-      5.931826
+      12.453424,
+      -2.622276,
+      -0.126258
     ],
     "source": "joint_umap_syllabus"
   },
@@ -3837,9 +3837,9 @@
     ],
     "name": "生活保障システム特論Ⅰ[Special Study on Livelihood Security System 1]",
     "position": [
-      -2.309787,
-      -4.397089,
-      1.436026
+      5.868291,
+      1.260941,
+      1.221757
     ],
     "source": "joint_umap_syllabus"
   },
@@ -3850,9 +3850,9 @@
     ],
     "name": "社会福祉方法特論Ⅰ[Special Study on Social Work 1]",
     "position": [
-      -0.476015,
-      -1.289582,
-      3.537885
+      3.371101,
+      -0.993295,
+      0.486416
     ],
     "source": "joint_umap_syllabus"
   },
@@ -3863,9 +3863,9 @@
     ],
     "name": "社会福祉方法特論Ⅱ[Special Study on Social Work 2]",
     "position": [
-      -4.070259,
-      -1.706422,
-      1.155757
+      4.754172,
+      3.101732,
+      -1.429098
     ],
     "source": "joint_umap_syllabus"
   },
@@ -3876,9 +3876,9 @@
     ],
     "name": "未来型健康増進医学[Future Health Promotion Medicine]",
     "position": [
-      2.164681,
-      1.50092,
-      -1.062659
+      -1.189015,
+      0.454328,
+      -2.226219
     ],
     "source": "joint_umap_syllabus"
   },
@@ -3889,9 +3889,9 @@
     ],
     "name": "現代社会基礎論[Basic Theory of Contemporary Society]",
     "position": [
-      -2.358158,
-      -1.618465,
-      0.768061
+      3.414517,
+      1.548784,
+      -1.323628
     ],
     "source": "joint_umap_syllabus"
   },
@@ -3902,9 +3902,9 @@
     ],
     "name": "農村計画特論Ⅰ[Special Study on Rural Planning 1]",
     "position": [
-      -6.038497,
-      -1.786317,
-      1.070636
+      3.124443,
+      5.109757,
+      -0.40222
     ],
     "source": "joint_umap_syllabus"
   },
@@ -3915,9 +3915,9 @@
     ],
     "name": "農村計画特論Ⅱ[Special Study on Rural Planning 2]",
     "position": [
-      -6.048652,
-      -1.768758,
-      1.090801
+      3.17515,
+      5.164205,
+      -0.411542
     ],
     "source": "joint_umap_syllabus"
   },
@@ -3928,9 +3928,9 @@
     ],
     "name": "自然文化ツーリズム特論Ⅰ[Special Study on Nature and Culture based Tourism 1]",
     "position": [
-      -2.693695,
-      -3.249965,
-      2.140846
+      5.282163,
+      1.041553,
+      0.821978
     ],
     "source": "joint_umap_syllabus"
   },
@@ -3941,9 +3941,9 @@
     ],
     "name": "自然文化ツーリズム特論Ⅱ[Special Study on Nature and Culture based Tourism 2]",
     "position": [
-      -2.775486,
-      -2.894261,
-      2.112005
+      4.40739,
+      0.47242,
+      0.517655
     ],
     "source": "joint_umap_syllabus"
   },
@@ -3954,9 +3954,9 @@
     ],
     "name": "資源保全コミュニケーション特論Ⅰ[Resource Conservation Communication 1]",
     "position": [
-      4.439712,
-      -2.509323,
-      15.343613
+      11.237609,
+      -5.592087,
+      6.053113
     ],
     "source": "joint_umap_syllabus"
   },
@@ -3967,9 +3967,9 @@
     ],
     "name": "資源保全コミュニケーション特論Ⅱ[Resource Conservation Communication 2]",
     "position": [
-      4.399707,
-      -2.457855,
-      15.297815
+      11.063006,
+      -5.657945,
+      5.878311
     ],
     "source": "joint_umap_syllabus"
   },
@@ -3980,9 +3980,9 @@
     ],
     "name": "地域調査・分析研究Ⅰ[Research in Regional Survey and Analysis 1]",
     "position": [
-      -5.90599,
-      12.118391,
-      -14.581375
+      -2.052472,
+      -4.093746,
+      2.14908
     ],
     "source": "joint_umap_syllabus"
   },
@@ -3993,9 +3993,9 @@
     ],
     "name": "地域調査・分析研究Ⅱ[Research in Regional Survey and Analysis 2]",
     "position": [
-      -1.646695,
-      2.031476,
-      -0.656387
+      -2.133708,
+      1.237243,
+      2.121336
     ],
     "source": "joint_umap_syllabus"
   },
@@ -4006,9 +4006,9 @@
     ],
     "name": "社会福祉基礎研究Ⅰ[Introduction to Social Welfare 1]",
     "position": [
-      1.561419,
-      2.045526,
-      0.134973
+      -0.594424,
+      -2.850308,
+      -1.02091
     ],
     "source": "joint_umap_syllabus"
   },
@@ -4019,9 +4019,9 @@
     ],
     "name": "社会福祉基礎研究Ⅱ[Introduction to Social Welfare 2]",
     "position": [
-      -2.269868,
-      -0.558,
-      0.716164
+      0.823388,
+      -1.089907,
+      -0.302637
     ],
     "source": "joint_umap_syllabus"
   },
@@ -4032,9 +4032,9 @@
     ],
     "name": "社会福祉制度・政策研究Ⅰ[Studies on Social Policy 1]",
     "position": [
-      0.184393,
-      3.949896,
-      3.40949
+      -1.107429,
+      -4.536201,
+      18.084098
     ],
     "source": "joint_umap_syllabus"
   },
@@ -4045,9 +4045,9 @@
     ],
     "name": "社会福祉制度・政策研究Ⅱ[Studies on Social Policy 2]",
     "position": [
-      -1.265452,
-      1.264009,
-      -2.415881
+      -1.173814,
+      2.376915,
+      0.981336
     ],
     "source": "joint_umap_syllabus"
   },
@@ -4058,9 +4058,9 @@
     ],
     "name": "福祉国家論研究Ⅱ[Studies in Theories of Welfare State 2]",
     "position": [
-      -3.966094,
-      4.765451,
-      0.643233
+      -4.544286,
+      2.986585,
+      3.656174
     ],
     "source": "joint_umap_syllabus"
   },
@@ -4071,9 +4071,9 @@
     ],
     "name": "地域政策研究Ⅰ[Seminar on Regional Policy 1]",
     "position": [
-      1.38062,
-      4.286222,
-      3.20459
+      -2.907567,
+      -0.925416,
+      -0.247441
     ],
     "source": "joint_umap_syllabus"
   },
@@ -4084,9 +4084,9 @@
     ],
     "name": "地域政策研究Ⅱ[Seminar on Regional Policy 2]",
     "position": [
-      -0.995641,
-      -0.048857,
-      1.34212
+      1.78738,
+      1.215406,
+      -0.692861
     ],
     "source": "joint_umap_syllabus"
   },
@@ -4097,9 +4097,9 @@
     ],
     "name": "フィンテックとデジタルエコノミー[FinTech and Digital Economy]",
     "position": [
-      -0.293206,
-      1.414922,
-      2.408569
+      -0.292222,
+      -2.789953,
+      -0.355008
     ],
     "source": "joint_umap_syllabus"
   },
@@ -4110,9 +4110,9 @@
     ],
     "name": "地方創生とエビデンスベース政策[Regional Revitalization and Evidence-Based Policies]",
     "position": [
-      -3.845991,
-      -0.931341,
-      1.797349
+      3.88059,
+      2.795269,
+      -1.998825
     ],
     "source": "joint_umap_syllabus"
   },
@@ -4123,9 +4123,9 @@
     ],
     "name": "情報化学概論[Introduction to Information Chemistry]",
     "position": [
-      -0.414185,
-      1.321633,
-      -0.229397
+      -1.671127,
+      4.087897,
+      3.118227
     ],
     "source": "joint_umap_syllabus"
   },
@@ -4136,9 +4136,9 @@
     ],
     "name": "地域環境研究Ⅰ[Seminar in Regional Environment 1]",
     "position": [
-      2.805463,
-      5.102818,
-      0.463174
+      -6.106369,
+      -5.247279,
+      -2.227461
     ],
     "source": "joint_umap_syllabus"
   },
@@ -4149,9 +4149,9 @@
     ],
     "name": "地域経営論研究Ⅰ[Studies on Regional Management 1]",
     "position": [
-      -2.975639,
-      -2.992129,
-      1.983499
+      4.645859,
+      1.521556,
+      0.002396
     ],
     "source": "joint_umap_syllabus"
   },
@@ -4162,9 +4162,9 @@
     ],
     "name": "地域経営論研究Ⅱ[Studies on Regional Management 2]",
     "position": [
-      -2.898565,
-      -3.031532,
-      1.920197
+      4.728973,
+      1.64114,
+      -0.076564
     ],
     "source": "joint_umap_syllabus"
   },
@@ -4175,9 +4175,9 @@
     ],
     "name": "文化資源コミュニケーション研究Ⅰ[Cultural Resource Communication Studies 1]",
     "position": [
-      4.392678,
-      -2.458802,
-      15.293036
+      10.971233,
+      -5.831052,
+      5.787983
     ],
     "source": "joint_umap_syllabus"
   },
@@ -4188,9 +4188,9 @@
     ],
     "name": "文化資源コミュニケーション研究Ⅱ[Cultural Resource Communication Studies 2]",
     "position": [
-      4.45331,
-      -2.515727,
-      15.364276
+      11.196616,
+      -5.701009,
+      6.012326
     ],
     "source": "joint_umap_syllabus"
   },
@@ -4201,9 +4201,9 @@
     ],
     "name": "地域食環境研究Ⅰ[Local Food Environment Studies 1]",
     "position": [
-      3.185703,
-      0.054762,
-      -4.900722
+      -1.895544,
+      2.264396,
+      -0.517549
     ],
     "source": "joint_umap_syllabus"
   },
@@ -4214,9 +4214,9 @@
     ],
     "name": "地域食環境研究Ⅱ[Local Food Environment Studies 2]",
     "position": [
-      3.146472,
-      -0.02959,
-      -4.846916
+      -1.855805,
+      2.178817,
+      -0.511223
     ],
     "source": "joint_umap_syllabus"
   },
@@ -4227,9 +4227,9 @@
     ],
     "name": "幼児発達臨床特論Ⅰ[Special Study on Young Child Developmental Psychology 1]",
     "position": [
-      -0.837552,
-      0.588504,
-      2.425833
+      -0.071404,
+      -3.113105,
+      -0.44953
     ],
     "source": "joint_umap_syllabus"
   },
@@ -4243,9 +4243,9 @@
     ],
     "name": "幼児発達臨床特論Ⅱ[Special Study on Young Child Developmental Psychology 2]",
     "position": [
-      -0.29986,
-      -1.286879,
-      3.112743
+      3.263146,
+      -0.727637,
+      0.205518
     ],
     "source": "joint_umap_syllabus"
   },
@@ -4256,9 +4256,9 @@
     ],
     "name": "情報社会の地方創生[Regional Revitalization in the Information Society]",
     "position": [
-      -3.849711,
-      -0.827734,
-      0.994961
+      4.308184,
+      3.611378,
+      -1.929252
     ],
     "source": "joint_umap_syllabus"
   },
@@ -4269,9 +4269,9 @@
     ],
     "name": "ＡＩと産業協働[AI and Industrial Collaboration]",
     "position": [
-      1.807346,
-      -1.813169,
-      0.018642
+      0.350099,
+      -2.820042,
+      -0.71055
     ],
     "source": "joint_umap_syllabus"
   },
@@ -4282,9 +4282,9 @@
     ],
     "name": "幼児発達科学特論Ⅰ[Special Study on Young Child Developmental Science 1]",
     "position": [
-      1.063707,
-      -2.76042,
-      0.32024
+      2.007077,
+      -0.297004,
+      -3.203996
     ],
     "source": "joint_umap_syllabus"
   },
@@ -4295,9 +4295,9 @@
     ],
     "name": "幼児発達科学特論Ⅱ[Special Study on Young Child Developmental Science 2]",
     "position": [
-      0.466947,
-      -2.281065,
-      0.192065
+      2.569821,
+      -0.020117,
+      -3.295274
     ],
     "source": "joint_umap_syllabus"
   },
@@ -4308,9 +4308,9 @@
     ],
     "name": "ツーリズムとソリューション[Tourism and Solutions]",
     "position": [
-      4.041551,
-      -2.285523,
-      14.900417
+      10.481418,
+      -5.238404,
+      5.320847
     ],
     "source": "joint_umap_syllabus"
   },
@@ -4321,9 +4321,9 @@
     ],
     "name": "プログラミングと技術基盤[Programming and Technology Infrastructure]",
     "position": [
-      0.030999,
-      2.026998,
-      2.515021
+      -1.076875,
+      -1.919831,
+      -0.131945
     ],
     "source": "joint_umap_syllabus"
   },
@@ -4334,9 +4334,9 @@
     ],
     "name": "機械工学基礎実験[Basic Mechanical Engineering Laboratory]",
     "position": [
-      2.087601,
-      5.484926,
-      0.4117
+      -2.570653,
+      1.284654,
+      1.786763
     ],
     "source": "joint_umap_syllabus"
   },
@@ -4347,9 +4347,9 @@
     ],
     "name": "応用プログラミング技術[Computer Programming Techniques]",
     "position": [
-      -0.594209,
-      2.121746,
-      2.080429
+      -0.806827,
+      -1.639362,
+      0.869362
     ],
     "source": "joint_umap_syllabus"
   },
@@ -4360,9 +4360,9 @@
     ],
     "name": "腫瘍学[Oncology]",
     "position": [
-      1.992937,
-      1.532249,
-      -2.379446
+      -2.763775,
+      2.478637,
+      -0.35946
     ],
     "source": "joint_umap_syllabus"
   },
@@ -4373,9 +4373,9 @@
     ],
     "name": "総合診療学・地域医療学[General Medicine]",
     "position": [
-      2.302683,
-      1.296564,
-      -1.943608
+      -1.482977,
+      0.511169,
+      -1.925754
     ],
     "source": "joint_umap_syllabus"
   },
@@ -4386,9 +4386,9 @@
     ],
     "name": "血液内科学臨床実習[Core Clerkship（Internal Medicine/Hematology）]",
     "position": [
-      2.231125,
-      1.257092,
-      -1.897263
+      -1.622274,
+      0.463384,
+      -1.84387
     ],
     "source": "joint_umap_syllabus"
   },
@@ -4399,9 +4399,9 @@
     ],
     "name": "臨床医学の共通基盤[Clinical Foundation]",
     "position": [
-      2.31563,
-      1.283446,
-      -1.955593
+      -1.730515,
+      0.565676,
+      -1.788903
     ],
     "source": "joint_umap_syllabus"
   },
@@ -4412,9 +4412,9 @@
     ],
     "name": "知能ロボティクス基礎実験[Fundamental Intelligent Robotics Laboratory]",
     "position": [
-      2.123059,
-      5.482901,
-      0.42245
+      -2.561434,
+      1.264966,
+      1.785079
     ],
     "source": "joint_umap_syllabus"
   },
@@ -4425,9 +4425,9 @@
     ],
     "name": "センサ工学Ａ[Sensor Engineering A]",
     "position": [
-      0.060291,
-      3.675116,
-      1.41903
+      -1.889224,
+      -1.120326,
+      0.755342
     ],
     "source": "joint_umap_syllabus"
   },
@@ -4438,9 +4438,9 @@
     ],
     "name": "センサ工学Ｂ[Sensor Engineering B]",
     "position": [
-      -0.004472,
-      3.670829,
-      1.398031
+      -1.863477,
+      -1.189419,
+      0.841247
     ],
     "source": "joint_umap_syllabus"
   },
@@ -4451,9 +4451,9 @@
     ],
     "name": "情報理論Ａ[Information Theory A]",
     "position": [
-      -1.207348,
-      2.09059,
-      3.215021
+      -0.653276,
+      -2.76054,
+      0.663229
     ],
     "source": "joint_umap_syllabus"
   },
@@ -4464,9 +4464,9 @@
     ],
     "name": "情報理論Ａ[Information Theory A]",
     "position": [
-      -1.221398,
-      2.189821,
-      3.303006
+      -0.801309,
+      -2.778955,
+      0.689796
     ],
     "source": "joint_umap_syllabus"
   },
@@ -4477,9 +4477,9 @@
     ],
     "name": "情報理論Ｂ[Information Theory B]",
     "position": [
-      -1.174753,
-      2.302733,
-      3.354272
+      -0.839408,
+      -2.761277,
+      0.68226
     ],
     "source": "joint_umap_syllabus"
   },
@@ -4490,9 +4490,9 @@
     ],
     "name": "集積回路工学Ａ[Integrated Circuit A]",
     "position": [
-      -0.518097,
-      3.226728,
-      2.003285
+      -2.066082,
+      -0.784805,
+      1.074736
     ],
     "source": "joint_umap_syllabus"
   },
@@ -4503,9 +4503,9 @@
     ],
     "name": "集積回路工学Ｂ[Integrated Circuit B]",
     "position": [
-      -0.398254,
-      3.110268,
-      1.973677
+      -2.167169,
+      -0.791538,
+      1.061044
     ],
     "source": "joint_umap_syllabus"
   },
@@ -4516,9 +4516,9 @@
     ],
     "name": "情報通信工学実験第１[Information and Communication Engineering Laboratory I]",
     "position": [
-      -0.299844,
-      3.571346,
-      2.723744
+      -2.524082,
+      0.930495,
+      1.198465
     ],
     "source": "joint_umap_syllabus"
   },
@@ -4529,9 +4529,9 @@
     ],
     "name": "電気・電子回路Ｂ[Electric & Electronic Circuits B]",
     "position": [
-      -0.214015,
-      3.283603,
-      1.787149
+      -1.942893,
+      -1.289332,
+      0.961067
     ],
     "source": "joint_umap_syllabus"
   },
@@ -4542,9 +4542,9 @@
     ],
     "name": "先端情報通信技術論Ａ[Advanced Topics on Information & Communication Engineering A]",
     "position": [
-      -0.139513,
-      3.141131,
-      1.836635
+      -1.777329,
+      -1.650741,
+      0.562039
     ],
     "source": "joint_umap_syllabus"
   },
@@ -4555,9 +4555,9 @@
     ],
     "name": "先端情報通信技術論Ｂ[Advanced Topics on Information & Communication Engineering B]",
     "position": [
-      0.167094,
-      2.643502,
-      3.067194
+      -1.084812,
+      -1.623215,
+      -0.075377
     ],
     "source": "joint_umap_syllabus"
   },
@@ -4568,9 +4568,9 @@
     ],
     "name": "データベース論Ａ[Database System A]",
     "position": [
-      -0.598759,
-      1.57623,
-      3.089407
+      -1.053404,
+      -3.398606,
+      0.816671
     ],
     "source": "joint_umap_syllabus"
   },
@@ -4582,9 +4582,9 @@
     ],
     "name": "卒業研究 [Research Project]",
     "position": [
-      2.722661,
-      -3.952481,
-      -0.257651
+      2.42119,
+      -0.662853,
+      -5.019212
     ],
     "source": "joint_umap_syllabus"
   },
@@ -4595,9 +4595,9 @@
     ],
     "name": "プロジェクト・マネジメント[Project Management]",
     "position": [
-      -2.580132,
-      -1.094315,
-      1.576901
+      3.38984,
+      2.725493,
+      -0.498141
     ],
     "source": "joint_umap_syllabus"
   },
@@ -4608,9 +4608,9 @@
     ],
     "name": "水環境工学[Water Environmental Engineering]",
     "position": [
-      -1.43674,
-      -0.170716,
-      0.426007
+      1.734787,
+      3.752303,
+      0.195132
     ],
     "source": "joint_umap_syllabus"
   },
@@ -4621,9 +4621,9 @@
     ],
     "name": "道路・交通政策論[Road and Transportation Policy]",
     "position": [
-      -1.400401,
-      -0.754154,
-      1.536006
+      1.179909,
+      3.173944,
+      0.217938
     ],
     "source": "joint_umap_syllabus"
   },
@@ -4634,9 +4634,9 @@
     ],
     "name": "スマートシティ概論[Introduction of Smart City]",
     "position": [
-      -2.412945,
-      -2.227453,
-      1.360393
+      0.551499,
+      -1.518926,
+      -0.059064
     ],
     "source": "joint_umap_syllabus"
   },
@@ -4647,9 +4647,9 @@
     ],
     "name": "国際保健論[Global Health Lecture]",
     "position": [
-      2.134878,
-      0.517832,
-      -1.935025
+      -0.808405,
+      0.147436,
+      -1.870789
     ],
     "source": "joint_umap_syllabus"
   },
@@ -4660,9 +4660,9 @@
     ],
     "name": "放射線物理学A[Radiological Physics A]",
     "position": [
-      2.410479,
-      5.738663,
-      0.438126
+      -6.789386,
+      -5.855797,
+      -2.319721
     ],
     "source": "joint_umap_syllabus"
   },
@@ -4673,9 +4673,9 @@
     ],
     "name": "放射線物理学B[Radiological Physics B]",
     "position": [
-      2.303002,
-      5.666283,
-      0.405829
+      -6.785699,
+      -5.838954,
+      -2.284715
     ],
     "source": "joint_umap_syllabus"
   },
@@ -4686,9 +4686,9 @@
     ],
     "name": "コミュニティ政策論Ⅰ[Community Policy I]",
     "position": [
-      -6.180423,
-      -6.344273,
-      5.863127
+      12.51341,
+      -2.67877,
+      -0.172231
     ],
     "source": "joint_umap_syllabus"
   },
@@ -4699,9 +4699,9 @@
     ],
     "name": "コミュニティ政策論Ⅱ[Community Policy II]",
     "position": [
-      -6.179268,
-      -6.343752,
-      5.862675
+      12.493487,
+      -2.659437,
+      -0.157489
     ],
     "source": "joint_umap_syllabus"
   },
@@ -4712,9 +4712,9 @@
     ],
     "name": "コミュニティ政策論演習Ⅰ[Seminar on Community Policy I]",
     "position": [
-      -6.122878,
-      -6.285997,
-      5.804585
+      12.458319,
+      -2.623238,
+      -0.079296
     ],
     "source": "joint_umap_syllabus"
   },
@@ -4725,9 +4725,9 @@
     ],
     "name": "コミュニティ政策論演習Ⅱ[Seminar on Community Policy II]",
     "position": [
-      -6.16867,
-      -6.332511,
-      5.850873
+      12.420853,
+      -2.58579,
+      -0.079541
     ],
     "source": "joint_umap_syllabus"
   },
@@ -4738,9 +4738,9 @@
     ],
     "name": "地域経済システム論Ⅰ[Regional Economic Systems I]",
     "position": [
-      -3.795871,
-      -0.946969,
-      0.756465
+      4.109833,
+      3.810563,
+      -1.841865
     ],
     "source": "joint_umap_syllabus"
   },
@@ -4751,9 +4751,9 @@
     ],
     "name": "地域経済システム論Ⅱ[Regional Economic Systems II]",
     "position": [
-      -3.817099,
-      -1.028188,
-      0.586203
+      4.041476,
+      4.02777,
+      -2.009729
     ],
     "source": "joint_umap_syllabus"
   },
@@ -4764,9 +4764,9 @@
     ],
     "name": "地域経済システム論演習Ⅰ[Seminar on Regional Economic Systems I]",
     "position": [
-      -3.802075,
-      -2.218112,
-      1.532072
+      4.882193,
+      2.692294,
+      -1.34204
     ],
     "source": "joint_umap_syllabus"
   },
@@ -4777,9 +4777,9 @@
     ],
     "name": "地域経済システム論演習Ⅱ[Seminar on Regional Economic Systems II]",
     "position": [
-      -3.735406,
-      -2.220654,
-      1.649642
+      4.837239,
+      2.673078,
+      -1.310338
     ],
     "source": "joint_umap_syllabus"
   },
@@ -4790,9 +4790,9 @@
     ],
     "name": "マーケティングⅠ[Marketing I]",
     "position": [
-      9.234574,
-      -8.59957,
-      5.200174
+      7.288591,
+      -8.870422,
+      -4.655224
     ],
     "source": "joint_umap_syllabus"
   },
@@ -4803,9 +4803,9 @@
     ],
     "name": "マーケティングⅡ[Marketing II]",
     "position": [
-      9.061958,
-      -8.611534,
-      4.949868
+      7.212183,
+      -8.713014,
+      -4.517066
     ],
     "source": "joint_umap_syllabus"
   },
@@ -4816,9 +4816,9 @@
     ],
     "name": "マーケティング演習Ⅰ[Seminar on Marketing Ｉ]",
     "position": [
-      9.129475,
-      -8.675821,
-      5.155589
+      7.297332,
+      -8.878205,
+      -4.66029
     ],
     "source": "joint_umap_syllabus"
   },
@@ -4829,9 +4829,9 @@
     ],
     "name": "マーケティング演習Ⅱ[Seminar on Marketing ＩI]",
     "position": [
-      9.131551,
-      -8.6303,
-      5.173781
+      7.342542,
+      -8.870222,
+      -4.648221
     ],
     "source": "joint_umap_syllabus"
   },
@@ -4842,9 +4842,9 @@
     ],
     "name": "農村計画論Ⅰ[Study on Rural Planning I]",
     "position": [
-      -5.92674,
-      -1.687929,
-      1.110852
+      3.132553,
+      5.120989,
+      -0.365214
     ],
     "source": "joint_umap_syllabus"
   },
@@ -4855,9 +4855,9 @@
     ],
     "name": "農村計画論Ⅱ[Study on Rural Planning II]",
     "position": [
-      -6.039649,
-      -1.773704,
-      1.08064
+      3.199439,
+      5.135254,
+      -0.423553
     ],
     "source": "joint_umap_syllabus"
   },
@@ -4868,9 +4868,9 @@
     ],
     "name": "農村計画論演習Ⅰ[Seminar on Rural Planning I]",
     "position": [
-      -6.088645,
-      -1.801586,
-      1.075637
+      3.19024,
+      5.213761,
+      -0.372768
     ],
     "source": "joint_umap_syllabus"
   },
@@ -4881,9 +4881,9 @@
     ],
     "name": "農村計画論演習Ⅱ[Seminar on Rural Planning II]",
     "position": [
-      -6.063418,
-      -1.783518,
-      1.085508
+      3.172596,
+      5.237732,
+      -0.343332
     ],
     "source": "joint_umap_syllabus"
   },
@@ -4894,9 +4894,9 @@
     ],
     "name": "自然文化資源コミュニケーションI[Natural and Cultural Heritage Communication I]",
     "position": [
-      4.413654,
-      -2.498198,
-      15.329517
+      11.084876,
+      -5.62579,
+      5.89697
     ],
     "source": "joint_umap_syllabus"
   },
@@ -4907,9 +4907,9 @@
     ],
     "name": "自然文化資源コミュニケーションII[Natural and Cultural Heritage Communication II]",
     "position": [
-      4.44179,
-      -2.519091,
-      15.42148
+      11.199523,
+      -5.649821,
+      6.014086
     ],
     "source": "joint_umap_syllabus"
   },
@@ -4920,9 +4920,9 @@
     ],
     "name": "遺産資源コミュニケーション演習I[Practicum in Heritage Communication I]",
     "position": [
-      4.466812,
-      -2.538301,
-      15.375977
+      11.223627,
+      -5.537533,
+      6.038499
     ],
     "source": "joint_umap_syllabus"
   },
@@ -4933,9 +4933,9 @@
     ],
     "name": "遺産資源コミュニケーション演習II[Practicum in Heritage Communication II]",
     "position": [
-      4.435086,
-      -2.537574,
-      15.380826
+      11.053457,
+      -5.602332,
+      5.868286
     ],
     "source": "joint_umap_syllabus"
   },
@@ -4946,9 +4946,9 @@
     ],
     "name": "公共空間デザイン論Ⅰ[Public Space Design I]",
     "position": [
-      -2.301314,
-      -4.398074,
-      1.435874
+      5.798444,
+      1.326009,
+      1.151201
     ],
     "source": "joint_umap_syllabus"
   },
@@ -4959,9 +4959,9 @@
     ],
     "name": "公共空間デザイン論Ⅱ[Public Space Design II]",
     "position": [
-      -2.388555,
-      -4.309339,
-      1.516259
+      5.798238,
+      1.27068,
+      1.139784
     ],
     "source": "joint_umap_syllabus"
   },
@@ -4972,9 +4972,9 @@
     ],
     "name": "公共空間デザイン演習Ⅰ[Seminar on Public Space Design I]",
     "position": [
-      -2.712953,
-      -3.107565,
-      1.732546
+      4.552927,
+      1.700234,
+      -0.236854
     ],
     "source": "joint_umap_syllabus"
   },
@@ -4985,9 +4985,9 @@
     ],
     "name": "公共空間デザイン演習Ⅱ[Seminar on Public Space Design II]",
     "position": [
-      -2.624282,
-      -3.041959,
-      1.582604
+      4.559274,
+      1.617206,
+      -0.137553
     ],
     "source": "joint_umap_syllabus"
   },
@@ -4998,9 +4998,9 @@
     ],
     "name": "医薬科学イノベーション概論[Innovation in Medical and Pharmaceutical Science]",
     "position": [
-      2.526723,
-      1.688843,
-      -1.5764
+      -1.854177,
+      1.18229,
+      -1.840073
     ],
     "source": "joint_umap_syllabus"
   },
@@ -5011,9 +5011,9 @@
     ],
     "name": "グローバル時代の社会学[Sociology in a Global World]",
     "position": [
-      -2.09056,
-      -1.401567,
-      0.737387
+      3.093271,
+      2.003313,
+      -1.452921
     ],
     "source": "joint_umap_syllabus"
   },
@@ -5024,9 +5024,9 @@
     ],
     "name": "異文化間コミュニケーション[Intercultural Communication]",
     "position": [
-      1.994796,
-      -0.346595,
-      -2.494288
+      1.149667,
+      -1.368209,
+      -2.514257
     ],
     "source": "joint_umap_syllabus"
   },
@@ -5037,9 +5037,9 @@
     ],
     "name": "環境学とESD[Environmental Study and ESD]",
     "position": [
-      -1.897812,
-      -1.042591,
-      0.790605
+      2.96398,
+      1.952784,
+      -1.318163
     ],
     "source": "joint_umap_syllabus"
   },
@@ -5050,9 +5050,9 @@
     ],
     "name": "デザイン思考入門[Introduction to Design Thinking]",
     "position": [
-      -1.350229,
-      -2.416299,
-      1.177444
+      3.053374,
+      0.912013,
+      -2.642962
     ],
     "source": "joint_umap_syllabus"
   },
@@ -5063,9 +5063,9 @@
     ],
     "name": "化学ⅠＡ[Fundamental Chemistry 1A]",
     "position": [
-      -0.467641,
-      1.273955,
-      -0.206493
+      -1.727422,
+      4.007367,
+      3.024349
     ],
     "source": "joint_umap_syllabus"
   },
@@ -5076,9 +5076,9 @@
     ],
     "name": "化学ⅠＢ[Fundamental Chemistry 1B]",
     "position": [
-      -0.472246,
-      1.320852,
-      -0.289925
+      -1.737481,
+      4.001316,
+      3.009308
     ],
     "source": "joint_umap_syllabus"
   },
@@ -5089,9 +5089,9 @@
     ],
     "name": "化学ⅡＡ[Fundamental Chemistry 2A]",
     "position": [
-      -0.553881,
-      1.205818,
-      -0.255412
+      -1.652835,
+      4.061444,
+      3.088498
     ],
     "source": "joint_umap_syllabus"
   },
@@ -5102,9 +5102,9 @@
     ],
     "name": "化学ⅡＢ[Fundamental Chemistry 2B]",
     "position": [
-      -0.462375,
-      1.273531,
-      -0.372196
+      -1.723709,
+      3.999239,
+      2.974346
     ],
     "source": "joint_umap_syllabus"
   },
@@ -5115,9 +5115,9 @@
     ],
     "name": "ことばと表現[language and expression]",
     "position": [
-      1.70322,
-      0.429432,
-      -4.002094
+      -0.761554,
+      1.96678,
+      -0.716736
     ],
     "source": "joint_umap_syllabus"
   },
@@ -5128,9 +5128,9 @@
     ],
     "name": "アート思考とIoTプロトタイピング演習[Art Thinking and IoT Prototyping]",
     "position": [
-      -0.128414,
-      2.905952,
-      1.859879
+      -1.569493,
+      -1.865282,
+      0.455354
     ],
     "source": "joint_umap_syllabus"
   },
@@ -5141,9 +5141,9 @@
     ],
     "name": "防災と観光[Disaster Prevention and Tourism]",
     "position": [
-      -0.494511,
-      -1.468689,
-      3.619266
+      3.753196,
+      -0.951314,
+      0.666995
     ],
     "source": "joint_umap_syllabus"
   },
@@ -5154,9 +5154,9 @@
     ],
     "name": "防災と観光（防災・復興人材選抜入学者用）[Disaster Prevention and Tourism]",
     "position": [
-      -0.543847,
-      -1.453026,
-      3.659988
+      3.714054,
+      -0.977895,
+      0.667891
     ],
     "source": "joint_umap_syllabus"
   },
@@ -5167,9 +5167,9 @@
     ],
     "name": "ことばと心１[language and mind 1]",
     "position": [
-      1.638811,
-      0.361881,
-      -4.001521
+      -0.899758,
+      1.887987,
+      -0.792408
     ],
     "source": "joint_umap_syllabus"
   },
@@ -5180,9 +5180,9 @@
     ],
     "name": "ことばと心２[language and mind 2]",
     "position": [
-      1.72418,
-      0.447144,
-      -3.940046
+      -0.872895,
+      1.834303,
+      -0.813562
     ],
     "source": "joint_umap_syllabus"
   },
@@ -5193,9 +5193,9 @@
     ],
     "name": "ライフデザインと消費者ガバナンス[Life Design & Consumer Governance]",
     "position": [
-      -0.501926,
-      -1.942776,
-      1.237157
+      3.517434,
+      1.089596,
+      -2.949283
     ],
     "source": "joint_umap_syllabus"
   },
@@ -5210,9 +5210,9 @@
     ],
     "name": "大学・社会生活論[Lecture on Life in Campus and Society]",
     "position": [
-      1.552756,
-      -1.133787,
-      -3.173406
+      2.070147,
+      0.638328,
+      1.199416
     ],
     "source": "joint_umap_syllabus"
   },
@@ -5223,9 +5223,9 @@
     ],
     "name": "データサイエンス基礎[Introduction to Data Science ]",
     "position": [
-      -0.300238,
-      1.323097,
-      3.6342
+      0.303907,
+      -3.052199,
+      -0.174728
     ],
     "source": "joint_umap_syllabus"
   },
@@ -5236,9 +5236,9 @@
     ],
     "name": "データサイエンス基礎[Introduction to Data Science ]",
     "position": [
-      -0.253541,
-      1.427364,
-      3.654612
+      0.140096,
+      -2.969505,
+      -0.183637
     ],
     "source": "joint_umap_syllabus"
   },
@@ -5249,9 +5249,9 @@
     ],
     "name": "データサイエンス基礎A[Introduction to Data Science A]",
     "position": [
-      -0.333544,
-      1.262726,
-      3.59131
+      0.153347,
+      -3.073616,
+      -0.204969
     ],
     "source": "joint_umap_syllabus"
   },
@@ -5262,9 +5262,9 @@
     ],
     "name": "データサイエンス基礎A[Introduction to Data Science A]",
     "position": [
-      -0.286459,
-      1.423275,
-      3.650319
+      0.053152,
+      -2.77905,
+      -0.037041
     ],
     "source": "joint_umap_syllabus"
   },
@@ -5275,9 +5275,9 @@
     ],
     "name": "データサイエンス基礎B[Introduction to Data Science B]",
     "position": [
-      -0.475007,
-      1.270083,
-      3.198967
+      -0.392279,
+      -3.014617,
+      -0.063783
     ],
     "source": "joint_umap_syllabus"
   },
@@ -5289,9 +5289,9 @@
     ],
     "name": "地域概論[Introduction to Region-studies]",
     "position": [
-      1.221169,
-      -1.823249,
-      -2.252158
+      2.147123,
+      0.678019,
+      1.325062
     ],
     "source": "joint_umap_syllabus"
   },
@@ -5302,9 +5302,9 @@
     ],
     "name": "地域概論[Introduction to Region-studies]",
     "position": [
-      1.435346,
-      -1.27911,
-      -3.248375
+      2.117332,
+      0.67244,
+      1.242044
     ],
     "source": "joint_umap_syllabus"
   },
@@ -5316,9 +5316,9 @@
     ],
     "name": "地域概論[Introduction to Region-studies]",
     "position": [
-      1.139326,
-      -2.02945,
-      -2.030242
+      2.314801,
+      0.713442,
+      1.486616
     ],
     "source": "joint_umap_syllabus"
   },
@@ -5330,9 +5330,9 @@
     ],
     "name": "国際・地域概論[Introduction to International and Regional Studies]",
     "position": [
-      1.209694,
-      -1.836301,
-      -2.27389
+      2.182011,
+      0.788266,
+      1.369837
     ],
     "source": "joint_umap_syllabus"
   },
@@ -5343,9 +5343,9 @@
     ],
     "name": "国際・地域概論[Introduction to International and Regional Studies]",
     "position": [
-      1.449583,
-      -1.250475,
-      -3.285773
+      2.099852,
+      0.670093,
+      1.23239
     ],
     "source": "joint_umap_syllabus"
   },
@@ -5357,9 +5357,9 @@
     ],
     "name": "国際・地域概論[Introduction to International and Regional Studies]",
     "position": [
-      1.183558,
-      -1.924887,
-      -2.147227
+      2.240049,
+      0.75826,
+      1.416344
     ],
     "source": "joint_umap_syllabus"
   },
@@ -5370,9 +5370,9 @@
     ],
     "name": "イノベーション方法論（サステ環境/II-ESD）[Innovation Methodology（Sustainable P)]",
     "position": [
-      2.062196,
-      -0.592377,
-      3.012975
+      -0.428663,
+      -3.882392,
+      -2.085903
     ],
     "source": "joint_umap_syllabus"
   }

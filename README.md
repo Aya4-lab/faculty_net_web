@@ -141,7 +141,7 @@ faculty_net_web/
 | 05 | `scraping/05_scrape_syllabus_list.py` | シラバス一覧（`lct_idx` 付き URL） |
 | 06 | `scraping/06_scrape_syllabus_details.py` | シラバス本文 CSV |
 | 07 | `scraping/07_fetch_seeds_taxonomy.py` | シーズ分野ツリー |
-| 08 | `scraping/08_fetch_seeds_membership.py` | 分野↔教員メンバーシップ |
+| 08 | `scraping/08_fetch_seeds_membership.py` | 分野↔教員メンバーシップ + 左列キーワード |
 
 researchmap はセッション cookie が必要な場合があります（環境変数 `RESEARCHMAP_SESSION_COOKIE`、または `data/raw/researchmap/researchmap_session_cookie.txt`）。
 
@@ -153,7 +153,7 @@ researchmap はセッション cookie が必要な場合があります（環境
 |---|---|---|---|
 | 01 | 整形・分離 | `pipeline/01_build_analysis_data.py` | Raw → analysis テキスト。同内容講義の統合 |
 | 02 | リレーション | `pipeline/02_build_field_tree.py` | 分野ツリー + `belongs_to_field` |
-| 03 | 埋め込み・空間化 | `pipeline/03_embed_umap_fields.py` | Embedding + 共同 UMAP 座標 |
+| 03 | 埋め込み・空間化 | `pipeline/03_embed_umap_fields.py` | Embedding（本文+KW）+ 分野定義アンサンブル + 共同 UMAP |
 | 04 | リレーション | `pipeline/04_build_course_relations.py` | `taught_by` + course_nodes |
 | 05 | UI 出力 | `pipeline/05_export_display_data.py` | `display_data.json` |
 
@@ -221,6 +221,7 @@ python app_v2.py
 - **researchmap 氏名マッチ**: 正規化後の完全一致。姓だけの部分一致は禁止（誤紐付け防止）。必要に応じて URL override / 会員 ID を使用。
 - **シラバス URL**: 一覧スクレイプの `日URL`（`lct_cd` + `lct_idx`）を display まで引き継ぐ。不完全な `lct_no` 再構築はしない。
 - **講義統合**: 科目名 + 授業概要等の正規化テキストが一致するものを 1 ノードに集約し、複数教員へ `taught_by`、複数 URL は `syllabus_urls` に保持。
+- **シーズ小分野キーワード**: `08` が分野ページ左列（キーワード列）を取得。`01` で `subfield_keywords` として教員に統合し、埋め込み入力は `本文 [SEP] キーワード: ...`。分野ベクトルは「定義テキスト埋め込み」と「所属教員平均」のアンサンブル（デフォルト定義側 0.65）。
 
 ---
 
