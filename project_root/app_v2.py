@@ -15,9 +15,13 @@ from __future__ import annotations
 import csv
 import json
 import math
+import threading
+from datetime import datetime, timezone
 from pathlib import Path
 
-from flask import Flask, jsonify, send_from_directory
+from flask import Flask, jsonify, request, send_from_directory
+
+import explore_engine
 
 APP_DIR = Path(__file__).resolve().parent
 PROJECT_ROOT = APP_DIR.parent
@@ -28,6 +32,8 @@ if not DISPLAY_JSON.exists():
 
 ANALYSIS = PROJECT_ROOT / "data" / "analysis"
 RAW_RIDB = PROJECT_ROOT / "data" / "raw" / "ridb"
+SURVEY_RESULTS_PATH = PROJECT_ROOT / "data" / "survey_results.json"
+_SURVEY_LOCK = threading.Lock()
 
 FIELD_COORDS_PATH = ANALYSIS / "field_coords.json"
 PROF_COORDS_PATH = ANALYSIS / "professor_coords_with_fields.json"
@@ -516,5 +522,151 @@ def api_reload():
     )
 
 
+@app.get("/api/explore/status")
+def api_explore_status():
+    """Health check for free-text explore (embeddings + model)."""
+    return jsonify(explore_engine.status(ANALYSIS))
+
+
+@app.post("/api/explore/text")
+def api_explore_text():
+    """
+    Free-text exploration (Analysis layer).
+
+    Body JSON:
+      { "text": "...", "top_k": 24, "min_score": 0.55,
+        "types": ["field","professor","course"] }
+    """
+    payload = request.get_json(silent=True) or {}
+    text = (payload.get("text") or payload.get("query") or "").strip()
+    if not text:
+        return jsonify({"ok": False, "error": "text が空です"}), 400
+
+    try:
+        top_k = int(payload.get("top_k", 24))
+    except (TypeError, ValueError):
+        top_k = 24
+    try:
+        min_score = float(payload.get("min_score", 0.55))
+    except (TypeError, ValueError):
+        min_score = 0.55
+
+    types = payload.get("types")
+    if types is not None and not isinstance(types, list):
+        types = None
+
+    try:
+        result = explore_engine.explore_text(
+            text,
+            ANALYSIS,
+            top_k=max(1, min(top_k, 80)),
+            min_score=min_score,
+            types=types,
+        )
+        return jsonify(result)
+    except ValueError as exc:
+        return jsonify({"ok": False, "error": str(exc)}), 400
+    except FileNotFoundError as exc:
+        return jsonify({"ok": False, "error": str(exc)}), 503
+    except Exception as exc:  # noqa: BLE001
+        return jsonify(
+            {
+                "ok": False,
+                "error": f"探索エンジンの初期化または計算に失敗しました: {exc}",
+            }
+        ), 503
+
+
+def _load_survey_results() -> list:
+    if not SURVEY_RESULTS_PATH.exists():
+        return []
+    try:
+        raw = json.loads(SURVEY_RESULTS_PATH.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return []
+    return raw if isinstance(raw, list) else []
+
+
+def _clamp_score(value, default: int = 0) -> int:
+    try:
+        n = int(value)
+    except (TypeError, ValueError):
+        return default
+    return max(1, min(5, n)) if n else default
+
+
+@app.post("/api/survey")
+def api_survey():
+    """
+    Append a lightweight exploration feedback record to survey_results.json.
+
+    Expected JSON (extra fields are kept under explore_log / passthrough):
+      {
+        "timestamp": "...",
+        "mode": "文章入力モード",
+        "input_text": "...",
+        "score": 5,
+        "recommend": 4,
+        "found_items": ["知らない教員", "意外な異分野"],
+        "comment": "...",
+        "explore_log": { ... }
+      }
+    """
+    payload = request.get_json(silent=True) or {}
+    score = _clamp_score(payload.get("score"))
+    recommend = _clamp_score(payload.get("recommend"))
+    if not score:
+        return jsonify({"ok": False, "error": "score（発見度 1〜5）が必要です"}), 400
+    if not recommend:
+        return jsonify({"ok": False, "error": "recommend（おすすめ度 1〜5）が必要です"}), 400
+
+    found_raw = payload.get("found_items") or payload.get("found") or []
+    if not isinstance(found_raw, list):
+        found_raw = [found_raw]
+    found_items = [str(x).strip() for x in found_raw if str(x).strip()]
+    if not found_items:
+        return jsonify({"ok": False, "error": "found_items が空です"}), 400
+
+    ts = (payload.get("timestamp") or "").strip()
+    if not ts:
+        ts = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+
+    record = {
+        "timestamp": ts,
+        "mode": str(payload.get("mode") or "").strip() or "unknown",
+        "input_text": str(payload.get("input_text") or payload.get("query") or ""),
+        "score": score,
+        "recommend": recommend,
+        "found_items": found_items,
+        "comment": str(payload.get("comment") or ""),
+    }
+    if isinstance(payload.get("explore_log"), dict):
+        record["explore_log"] = payload["explore_log"]
+
+    try:
+        SURVEY_RESULTS_PATH.parent.mkdir(parents=True, exist_ok=True)
+        with _SURVEY_LOCK:
+            rows = _load_survey_results()
+            rows.append(record)
+            SURVEY_RESULTS_PATH.write_text(
+                json.dumps(rows, ensure_ascii=False, indent=2) + "\n",
+                encoding="utf-8",
+            )
+    except OSError as exc:
+        return jsonify({"ok": False, "error": f"保存に失敗しました: {exc}"}), 500
+
+    return jsonify({"ok": True, "count": len(rows), "path": str(SURVEY_RESULTS_PATH)})
+
+
+@app.get("/api/survey")
+def api_survey_list():
+    """Return stored survey results (for local review)."""
+    with _SURVEY_LOCK:
+        rows = _load_survey_results()
+    return jsonify({"ok": True, "count": len(rows), "results": rows})
+
+
 if __name__ == "__main__":
-    app.run(host="127.0.0.1", port=5001, debug=True)
+    # use_reloader=False: loading sentence-transformers can touch site-packages
+    # and trigger an endless watchdog restart on Windows.
+    app.run(host="127.0.0.1", port=5001, debug=True, use_reloader=False)

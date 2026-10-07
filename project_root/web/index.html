@@ -53,6 +53,52 @@
         }
         #search-input:focus { border-color: var(--accent); }
         #search-input::placeholder { color: #666; }
+
+        #explore-mode-toggle { margin-bottom: 8px; }
+        #explore-mode-toggle button { font-size: 0.7em; padding: 8px 4px; line-height: 1.25; }
+        #mode-keyword-panel, #mode-text-panel { display: flex; flex-direction: column; gap: 8px; }
+        #mode-text-panel { display: none; }
+        #text-explore-form { display: flex; flex-direction: column; gap: 8px; }
+        #text-explore-input {
+            width: 100%; min-height: 96px; resize: vertical;
+            background: #1a1d24; border: 1px solid #455; color: var(--text);
+            border-radius: 8px; padding: 9px 11px; font-size: 0.85em; outline: none;
+            font-family: inherit; line-height: 1.45;
+        }
+        #text-explore-input:focus { border-color: #e0a060; }
+        #text-explore-input::placeholder { color: #666; }
+        .btn-warm {
+            background: rgba(224, 138, 60, 0.22); border-color: #c4863a; color: #f0c090;
+        }
+        .btn-warm:hover { background: rgba(224, 138, 60, 0.38); }
+        .mode-hint {
+            margin: 0; font-size: 0.72em; color: var(--muted); line-height: 1.4;
+        }
+        #hover-tip .tip-reason {
+            margin-top: 6px; padding-top: 5px; border-top: 1px solid rgba(80,90,100,0.45);
+            color: #f0c090; font-size: 0.88em; line-height: 1.35;
+        }
+        #hover-tip.edge-tip {
+            max-width: 300px;
+            border: 1px solid rgba(255, 159, 28, 0.55);
+            background: rgba(18, 16, 12, 0.92);
+        }
+        #hover-tip.edge-tip .tip-type { color: #f0c090; }
+        #hover-tip.edge-tip .tip-score {
+            font-size: 0.95em; font-weight: 600; color: #ffe0b0; margin-bottom: 4px;
+        }
+        #hover-tip.edge-tip .tip-style {
+            display: inline-block; margin-left: 6px; font-size: 0.78em; font-weight: 500;
+            color: #aeb6c0; border: 1px solid rgba(120,130,140,0.5);
+            border-radius: 4px; padding: 0 5px;
+        }
+        .node-label.user {
+            color: #ffe8c8; border-color: rgba(255, 180, 80, 0.85);
+            font-size: 13px; font-weight: 700; letter-spacing: 0.03em;
+            background: rgba(40, 24, 10, 0.88);
+            box-shadow: 0 0 14px rgba(255, 160, 60, 0.35);
+            pointer-events: none;
+        }
         .btn {
             background: #2a303a; border: 1px solid #4a5560; color: var(--text);
             border-radius: 8px; padding: 9px 12px; font-size: 0.85em; cursor: pointer;
@@ -132,7 +178,12 @@
         #empty-hint {
             position: absolute; left: 50%; top: 48%; transform: translate(-50%, -50%);
             text-align: center; color: #6a7078; pointer-events: none; z-index: 5;
-            transition: opacity 0.4s ease;
+            transition: opacity 0.5s ease;
+        }
+        #empty-hint.is-hidden {
+            opacity: 0 !important;
+            visibility: hidden;
+            pointer-events: none;
         }
         #empty-hint strong { display: block; color: #9aa0a8; font-size: 1.1em; margin-bottom: 8px; font-weight: 500; }
         #empty-hint span { font-size: 0.85em; }
@@ -186,7 +237,7 @@
             background: rgba(30, 34, 40, 0.9); border: 1px solid #455;
             color: #c8ced6; padding: 8px 14px; border-radius: 8px;
             font-size: 0.8em; z-index: 8; opacity: 0; pointer-events: none;
-            transition: opacity 0.3s ease;
+            transition: opacity 0.5s ease;
         }
         #status-toast.show { opacity: 1; }
 
@@ -202,6 +253,12 @@
             pointer-events: none;
             white-space: nowrap;
             text-shadow: 0 1px 4px rgba(0, 0, 0, 0.55);
+            transition: opacity 0.5s ease;
+        }
+        #op-guide.is-hidden {
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
         }
 
         .ext-link-btn {
@@ -363,7 +420,249 @@
         @media (max-width: 900px) {
             #left-panel { width: 260px; }
             #info-panel { width: 280px; }
+            .setup-cards { grid-template-columns: 1fr; }
+            #survey-fab { right: 12px; bottom: 12px; font-size: 0.78em; padding: 10px 12px; }
         }
+
+        /* --- Setup modal & survey overlays --- */
+        .ui-overlay {
+            position: fixed; inset: 0; z-index: 100;
+            display: flex; align-items: center; justify-content: center;
+            padding: 24px 16px;
+            background: rgba(8, 10, 14, 0.45);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+            transition: opacity 0.35s ease, visibility 0.35s ease;
+        }
+        .ui-overlay.is-open {
+            opacity: 1;
+            visibility: visible;
+            pointer-events: auto;
+        }
+        .ui-modal {
+            width: min(640px, 100%);
+            max-height: min(90vh, 760px);
+            overflow-y: auto;
+            background: rgba(18, 22, 28, 0.92);
+            border: 1px solid rgba(90, 100, 112, 0.55);
+            border-radius: 16px;
+            box-shadow: 0 24px 64px rgba(0, 0, 0, 0.5);
+            padding: 28px 24px 22px;
+            transform: translateY(14px) scale(0.97);
+            opacity: 0;
+            transition: transform 0.35s ease, opacity 0.35s ease;
+        }
+        .ui-overlay.is-open .ui-modal {
+            transform: translateY(0) scale(1);
+            opacity: 1;
+        }
+        .ui-modal h2 {
+            margin: 0 0 6px;
+            font-size: 1.25em;
+            font-weight: 600;
+            letter-spacing: 0.02em;
+            color: #f2f4f7;
+        }
+        .ui-modal .modal-lead {
+            margin: 0 0 20px;
+            font-size: 0.88em;
+            color: var(--muted);
+            line-height: 1.5;
+        }
+        .setup-cards {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+        .setup-card {
+            text-align: left;
+            background: rgba(26, 30, 38, 0.95);
+            border: 1px solid #3d4550;
+            border-radius: 12px;
+            padding: 16px 14px;
+            color: var(--text);
+            cursor: pointer;
+            font: inherit;
+            transition: border-color 0.2s ease, background 0.2s ease, transform 0.2s ease;
+        }
+        .setup-card:hover {
+            border-color: #6a8498;
+            background: rgba(36, 44, 54, 0.98);
+            transform: translateY(-2px);
+        }
+        .setup-card.recommended {
+            border-color: rgba(90, 158, 200, 0.65);
+            box-shadow: inset 0 0 0 1px rgba(90, 158, 200, 0.15);
+        }
+        .setup-card.warm {
+            border-color: rgba(224, 138, 60, 0.55);
+        }
+        .setup-card .card-badge {
+            display: inline-block;
+            font-size: 0.68em;
+            letter-spacing: 0.04em;
+            padding: 2px 8px;
+            border-radius: 999px;
+            margin-bottom: 8px;
+            color: #b8e0f5;
+            background: rgba(90, 158, 200, 0.2);
+            border: 1px solid rgba(90, 158, 200, 0.4);
+        }
+        .setup-card.warm .card-badge {
+            color: #f0c090;
+            background: rgba(224, 138, 60, 0.18);
+            border-color: rgba(224, 138, 60, 0.4);
+        }
+        .setup-card .card-title {
+            display: block;
+            font-size: 0.95em;
+            font-weight: 600;
+            margin-bottom: 8px;
+            line-height: 1.35;
+        }
+        .setup-card .card-desc {
+            display: block;
+            font-size: 0.78em;
+            color: #9aa3ad;
+            line-height: 1.45;
+        }
+        .panel-header-row {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 10px;
+        }
+        .panel-header-row > div { flex: 1; min-width: 0; }
+        #mode-change-btn {
+            flex-shrink: 0;
+            padding: 7px 10px;
+            font-size: 0.72em;
+            white-space: nowrap;
+        }
+
+        #survey-fab {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            z-index: 40;
+            padding: 11px 14px;
+            font-size: 0.82em;
+            border-radius: 999px;
+            background: rgba(24, 28, 34, 0.92);
+            border: 1px solid rgba(120, 140, 160, 0.45);
+            color: #dce4ec;
+            box-shadow: 0 8px 28px rgba(0, 0, 0, 0.4);
+            cursor: pointer;
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            transition: background 0.15s ease, border-color 0.15s ease, transform 0.15s ease;
+        }
+        #survey-fab:hover {
+            background: rgba(40, 48, 58, 0.95);
+            border-color: #8ecae6;
+            transform: translateY(-1px);
+        }
+
+        #survey-nudge {
+            position: fixed;
+            right: 20px;
+            bottom: 72px;
+            z-index: 41;
+            width: min(280px, calc(100vw - 40px));
+            padding: 12px 14px;
+            background: rgba(18, 22, 28, 0.94);
+            border: 1px solid rgba(90, 158, 200, 0.45);
+            border-radius: 12px;
+            box-shadow: 0 12px 36px rgba(0, 0, 0, 0.45);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(8px);
+            pointer-events: none;
+            transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+        }
+        #survey-nudge.is-open {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+            pointer-events: auto;
+        }
+        #survey-nudge p {
+            margin: 0 0 10px;
+            font-size: 0.82em;
+            line-height: 1.4;
+            color: #e8eaed;
+        }
+        #survey-nudge .nudge-actions {
+            display: flex; gap: 8px; justify-content: flex-end;
+        }
+        #survey-nudge .nudge-actions .btn { padding: 6px 10px; font-size: 0.75em; }
+
+        .survey-q { margin-bottom: 18px; }
+        .survey-q label.q-label,
+        .survey-q .q-label {
+            display: block;
+            font-size: 0.86em;
+            line-height: 1.45;
+            margin-bottom: 10px;
+            color: #e8eaed;
+        }
+        .star-row {
+            display: flex; gap: 6px; flex-wrap: wrap;
+        }
+        .star-btn {
+            width: 40px; height: 40px;
+            border-radius: 8px;
+            border: 1px solid #3d4550;
+            background: #1a1d24;
+            color: #8a9099;
+            font-size: 1.05em;
+            cursor: pointer;
+            transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+        }
+        .star-btn:hover { border-color: #c4863a; color: #f0c090; }
+        .star-btn.is-on {
+            background: rgba(224, 138, 60, 0.22);
+            border-color: #c4863a;
+            color: #ffd59a;
+        }
+        .check-grid {
+            display: flex; flex-direction: column; gap: 8px;
+        }
+        .check-row {
+            display: flex; align-items: flex-start; gap: 8px;
+            font-size: 0.84em; color: #c8ced6; cursor: pointer;
+            user-select: none; line-height: 1.35;
+        }
+        .check-row input { margin-top: 2px; accent-color: #5a9ec8; }
+        #survey-comment {
+            width: 100%; min-height: 84px; resize: vertical;
+            background: #1a1d24; border: 1px solid #455; color: var(--text);
+            border-radius: 8px; padding: 9px 11px; font-size: 0.85em;
+            font-family: inherit; line-height: 1.45; outline: none;
+        }
+        #survey-comment:focus { border-color: var(--accent); }
+        .survey-actions {
+            display: flex; gap: 8px; justify-content: flex-end; margin-top: 8px;
+        }
+        .survey-error {
+            margin: 0 0 10px;
+            font-size: 0.78em;
+            color: #f0a090;
+            min-height: 1.2em;
+        }
+        .modal-close-x {
+            position: absolute; top: 12px; right: 14px;
+            background: transparent; border: none; color: #888;
+            font-size: 1.25em; cursor: pointer; line-height: 1;
+        }
+        .modal-close-x:hover { color: #fff; }
+        #survey-modal .ui-modal { position: relative; width: min(480px, 100%); }
+        #setup-modal .ui-modal { position: relative; }
     </style>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
@@ -372,22 +671,41 @@
 <body>
 
     <aside id="left-panel">
-        <div>
-            <h1>知識の地図を育てる</h1>
-            <p class="subtitle">分野のランドマークに近づき、教員との意外なつながりを発見します</p>
+        <div class="panel-header-row">
+            <div>
+                <h1>知識の地図を育てる</h1>
+                <p class="subtitle">分野のランドマークに近づき、教員との意外なつながりを発見します</p>
+            </div>
+            <button id="mode-change-btn" class="btn" type="button" title="探索モードを選び直す">モード変更</button>
         </div>
 
         <div>
+            <div class="section-label">探索モード</div>
+            <div class="seg-toggle" id="explore-mode-toggle" role="group" aria-label="探索モード切替">
+                <button type="button" data-mode="keyword" class="active">キーワード検索</button>
+                <button type="button" data-mode="text">関心・文章入力</button>
+            </div>
+        </div>
+
+        <div id="mode-keyword-panel">
             <div class="section-label">興味のある言葉</div>
             <form id="search-form">
                 <input id="search-input" type="search" placeholder="例: ロボット / 触覚 / まちづくり" autocomplete="off">
                 <button class="btn btn-primary" type="submit">探索</button>
             </form>
+            <div>
+                <div class="section-label">クイック関心</div>
+                <div id="quick-tags"></div>
+            </div>
         </div>
 
-        <div>
-            <div class="section-label">クイック関心</div>
-            <div id="quick-tags"></div>
+        <div id="mode-text-panel">
+            <div class="section-label">関心・思考の文章</div>
+            <p class="mode-hint">自由記述すると、空間に「自分」が現れ、近い教員・講義・分野が引き寄せられます。</p>
+            <form id="text-explore-form">
+                <textarea id="text-explore-input" placeholder="例: ウェアラブルデバイスから取得したデジタルバイオマーカーと喘息との関係を調べたい…"></textarea>
+                <button class="btn btn-warm" type="submit" id="text-explore-btn">文章で探索</button>
+            </form>
         </div>
 
         <div>
@@ -428,6 +746,73 @@
         <div id="p-type" class="type-badge">—</div>
         <h2 id="p-name">—</h2>
         <div id="panel-body"></div>
+    </div>
+
+    <!-- Initial setup: mode selection -->
+    <div id="setup-modal" class="ui-overlay is-open" role="dialog" aria-modal="true" aria-labelledby="setup-title">
+        <div class="ui-modal">
+            <h2 id="setup-title">探索の始め方を選ぶ</h2>
+            <p class="modal-lead">3Dの知識空間はそのまま後ろに広がっています。まずはモードを選んで探索を始めましょう。</p>
+            <div class="setup-cards">
+                <button type="button" class="setup-card recommended" data-setup-mode="keyword">
+                    <span class="card-badge">おすすめ</span>
+                    <span class="card-title">キーワードから探す</span>
+                    <span class="card-desc">「ロボット」「医療」などの単語から、関連する授業や先生を探索します。</span>
+                </button>
+                <button type="button" class="setup-card warm" data-setup-mode="text">
+                    <span class="card-badge">引力・波紋</span>
+                    <span class="card-title">文章・関心から思考を広げる</span>
+                    <span class="card-desc">やってみたいことや興味のある文章を入力し、知識空間の中に自分ノードを出現させます。</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Survey FAB + nudge -->
+    <button id="survey-fab" type="button">発見を記録（アンケート）</button>
+    <div id="survey-nudge" role="status">
+        <p>探索はいかがでしたか？ 思いがけない発見があれば、短く記録してみてください。</p>
+        <div class="nudge-actions">
+            <button type="button" class="btn" id="survey-nudge-dismiss">あとで</button>
+            <button type="button" class="btn btn-primary" id="survey-nudge-open">回答する</button>
+        </div>
+    </div>
+
+    <!-- Survey modal -->
+    <div id="survey-modal" class="ui-overlay" role="dialog" aria-modal="true" aria-labelledby="survey-title">
+        <div class="ui-modal">
+            <button type="button" class="modal-close-x" id="survey-close-x" aria-label="閉じる">×</button>
+            <h2 id="survey-title">発見の記録</h2>
+            <p class="modal-lead">短いアンケートです。探索体験の改善に使わせてください。</p>
+            <form id="survey-form">
+                <div class="survey-q">
+                    <div class="q-label">思いがけないつながりや、気になる授業・先生は見つかりましたか？（「おっ」という発見度）</div>
+                    <div class="star-row" id="survey-score-stars" data-name="score" role="group" aria-label="発見度 1〜5"></div>
+                </div>
+                <div class="survey-q">
+                    <div class="q-label">見つかった情報は何ですか？（複数可）</div>
+                    <div class="check-grid">
+                        <label class="check-row"><input type="checkbox" name="found" value="知らない教員"> 知らない教員</label>
+                        <label class="check-row"><input type="checkbox" name="found" value="面白そうな講義"> 面白そうな講義</label>
+                        <label class="check-row"><input type="checkbox" name="found" value="意外な異分野"> 意外な異分野</label>
+                        <label class="check-row"><input type="checkbox" name="found" value="特にない" data-none="1"> 特にない</label>
+                    </div>
+                </div>
+                <div class="survey-q">
+                    <div class="q-label">体験は良かったですか？ほかの人にもおススメしたいですか？</div>
+                    <div class="star-row" id="survey-recommend-stars" data-name="recommend" role="group" aria-label="おすすめ度 1〜5"></div>
+                </div>
+                <div class="survey-q">
+                    <label class="q-label" for="survey-comment">気になった部分や感想、欲しい機能があれば教えてください（任意）</label>
+                    <textarea id="survey-comment" name="comment" placeholder="例: 医学系と情報工学の先生がこんな風につながると思わなかった…"></textarea>
+                </div>
+                <p class="survey-error" id="survey-error" aria-live="polite"></p>
+                <div class="survey-actions">
+                    <button type="button" class="btn" id="survey-cancel">キャンセル</button>
+                    <button type="submit" class="btn btn-primary" id="survey-submit">送信する</button>
+                </div>
+            </form>
+        </div>
     </div>
 
     <script>
@@ -487,9 +872,9 @@
         const LOD_COURSE_FAR = 14.0;
         // Field wireframe opacity: solid landmark far away, fade when close
         const FIELD_OPACITY_FAR = 0.30;
-        const FIELD_OPACITY_NEAR = 0.10;
-        const MAJOR_OPACITY_FAR = 0.34;
-        const MAJOR_OPACITY_NEAR = 0.10;
+        const FIELD_OPACITY_NEAR = 0.12;
+        const MAJOR_OPACITY_FAR = 0.44;
+        const MAJOR_OPACITY_NEAR = 0.12;
         const FOCUS_DIM = 0.10;
         const TRAIL_DIM = 0.05;
         const TAUGHT_BY_FOCUS_COLOR = 0x2ee6ff;
@@ -508,6 +893,43 @@
         const EDGE_HIGHLIGHT_LINEWIDTH = 3;
         const EDGE_DIM_OPACITY = 0.08;
         const EDGE_NEIGHBOR_SCALE = 1.45;
+
+        // Free-text explore (gravity + ripple)
+        const USER_NODE_COLOR = 0xffb04a;
+        const USER_EDGE_COLOR = 0xff9f1c;
+        const EXPLORE_DIM = 0.06;
+        // Field/professor expand during text-explore: visible, but clearly under search hits
+        const EXPLORE_CONTEXT_OPACITY = 0.58;
+        const EXPLORE_CONTEXT_GLOW = 0.16;
+        const EXPLORE_CONTEXT_LABEL_OP = 0.78;
+        const EXPLORE_CONTEXT_EDGE_OP = 0.42;
+        const GRAVITY_PULL_BASE = 0.22;
+        const GRAVITY_PULL_SCORE = 0.48;
+        const GRAVITY_DURATION = 1.15;
+        const RESTORE_DURATION = 0.95;
+        const RIPPLE_COUNT = 3;
+        const TEXT_EXPLORE_TOP_K = 22;
+        // User node: mid-size, slightly under professor radius (0.72)
+        const USER_NODE_RADIUS = 0.62;
+        const USER_GLOW_RADIUS = 0.95;
+        const USER_LABEL_Y = 1.05;
+        // Text-explore camera choreography
+        const EXPLORE_CAM_OVERVIEW_DIST = 20;
+        const EXPLORE_CAM_OVERVIEW_DUR = 1.05;
+        const EXPLORE_CAM_FOCUS_DIST = 10;
+        const EXPLORE_CAM_FOCUS_DUR = 1.15;
+        const EXPLORE_CAM_FOCUS_DELAY = 0.35; // after gravity settles
+        const TEXT_EXPLORE_MIN_SCORE = 0.52;
+
+        // Relation-edge visuals — always dashed/dotted; strength → density/color
+        // Score cutoffs are re-fit from loaded similarity scores (tertiles).
+        let EDGE_SCORE_STRONG = 0.96;
+        let EDGE_SCORE_MID = 0.90;
+        const EDGE_HOVER_COLOR = 0xffc857;
+        const EDGE_HOVER_ENDPOINT_SCALE = 1.35;
+        const EDGE_PICK_THRESHOLD = 0.65;
+        // Dim / background edges below this opacity are not hoverable
+        const EDGE_INTERACT_MIN_OPACITY = 0.3;
 
         const QUICK_TAGS = [
             { label: 'AI・データ', terms: ['AI', 'データ', '機械学習', 'DX', 'データサイエンス', '情報'] },
@@ -533,6 +955,7 @@
         let hoveredNode = null;
         let dataReady = false;
         let camTween = null;
+        let exploreFocusTimer = null; // delayed soft-focus after gravity
         let labelMode = 'name'; // name | keywords | hidden
         const fadeAnims = [];
         let searchPinned = new Set(); // course/prof ids forced visible by search/expand
@@ -544,6 +967,33 @@
         let selectionHighlight = null; // { nodeId, edges: Set<rec>, neighbors: Set<id> }
         let trailActiveFields = null; // Set<fieldId> when trail filter on, else null
 
+        // Explore mode: 'keyword' | 'text'
+        let exploreMode = 'keyword';
+        let setupCompleted = false;
+        const SURVEY_NUDGE_DELAY_MS = 2 * 60 * 1000; // 2 min after text explore
+        let surveyNudgeTimer = null;
+        let surveyRatings = { score: 0, recommend: 0 };
+        // Lightweight session log attached to survey submissions
+        const exploreSession = {
+            lastKeywordQuery: '',
+            lastTextQuery: '',
+            lastTextHitCount: 0,
+            lastTextHitIds: [],
+            textExploreStartedAt: null,
+        };
+        // Active free-text session (user node + gravity + ripples)
+        let textExplore = null;
+        // Nodes revealed by clicking fields/professors during text-explore (not search hits)
+        const exploreContextIds = new Set();
+        // id -> THREE.Vector3 (UMAP home position after separation)
+        const homePositions = new Map();
+        const posTweens = []; // { mesh, from, to, t, dur, onDone? }
+        const ripples = []; // { mesh, t, dur, maxScale }
+        let hoveredUserEdge = null;
+        let hoveredRelationEdge = null; // edgeRecords entry currently hovered
+        let edgeHoverEndpoints = []; // meshes scaled for edge hover
+        let lastQueryTerms = []; // keyword-mode query tokens for relation tips
+
         const raycaster = new THREE.Raycaster();
         const mouse = new THREE.Vector2();
 
@@ -554,6 +1004,14 @@
         const toastEl = document.getElementById('status-toast');
         const leftPanel = document.getElementById('left-panel');
         const hoverTip = document.getElementById('hover-tip');
+        const opGuide = document.getElementById('op-guide');
+
+        const GUIDE_AUTO_HIDE_MS = 3500; // 表示後に消すまでの時間
+        const GUIDE_FADE_MS = 500;
+        let emptyHintHideTimer = null;
+        let emptyHintFadeTimer = null;
+        let opGuideHideTimer = null;
+        let opGuideFadeTimer = null;
 
         function truncateText(str, max) {
             const t = String(str || '').replace(/\s+/g, ' ').trim();
@@ -631,31 +1089,145 @@
             return alpha;
         }
 
+        /** Overlay emphasis: focus (show) | context (soft show) | dim (hide/fade) | normal (LoD). */
+        function labelEmphasis(mesh) {
+            if (!mesh || !mesh.userData) return 'normal';
+            const id = mesh.userData.id;
+            if (mesh.userData.type === 'user') return 'focus';
+
+            if (textExplore && textExplore.related) {
+                if (textExplore.related.has(id)) return 'focus';
+                if (exploreContextIds.has(id)) return 'context';
+                if (selectedNode && selectedNode.userData.id === id) return 'context';
+                // Field landmarks keep distance-based labels (still clickable to expand)
+                if (isLandmark(mesh.userData)) return 'normal';
+                return 'dim';
+            }
+
+            // Keyword exploration (after 探索): pinned / selected stay sharp; others fade
+            if (exploreMode === 'keyword' && searchPinned.size > 0) {
+                if (selectedNode && selectedNode.userData.id === id) return 'focus';
+                if (searchPinned.has(id)) return 'focus';
+                if (trailFilterOn && trailActiveFields && trailActiveFields.has(id)) {
+                    return 'focus';
+                }
+                if (isLandmark(mesh.userData) || isMidNode(mesh.userData)) return 'dim';
+            }
+
+            return 'normal';
+        }
+
+        function setOverlayHidden(el, labelObj, hidden, opacity) {
+            if (labelObj) labelObj.visible = !hidden;
+            if (!el) return;
+            if (hidden) {
+                el.classList.add('hidden-label');
+                el.style.opacity = '0';
+                el.style.pointerEvents = 'none';
+                el.style.display = 'none';
+            } else {
+                el.classList.remove('hidden-label');
+                el.style.display = '';
+                el.style.opacity = String(opacity != null ? opacity : 1);
+            }
+        }
+
         function syncNodeLabel(mesh) {
             const label = mesh.userData.labelObj;
             const el = mesh.userData.labelEl;
-            if (!label || !el) return;
-            // Professor billboards carry their own caption; hide CSS2D name label
-            if (mesh.userData.type === 'professor' && mesh.userData.billboardEl) {
-                label.visible = false;
-                el.classList.add('hidden-label');
+            const billboard = mesh.userData.billboardEl;
+
+            // Professor: billboard is the visible overlay
+            if (mesh.userData.type === 'professor' && billboard) {
+                if (label) {
+                    label.visible = false;
+                    if (el) {
+                        el.classList.add('hidden-label');
+                        el.style.display = 'none';
+                        el.style.pointerEvents = 'none';
+                    }
+                }
+                applyOverlayVisibility(mesh);
                 return;
             }
+
+            if (!label || !el) return;
             if (!mesh.visible || labelMode === 'hidden') {
-                label.visible = false;
-                el.classList.add('hidden-label');
-                el.style.opacity = '0';
+                setOverlayHidden(el, label, true, 0);
                 return;
             }
             el.textContent = labelTextFor(mesh.userData);
             applyLabelDistance(mesh);
         }
 
+        function applyOverlayVisibility(mesh) {
+            const emphasis = labelEmphasis(mesh);
+            const billboard = mesh.userData.billboardEl;
+            const label = mesh.userData.labelObj;
+            const el = mesh.userData.labelEl;
+
+            if (emphasis === 'dim') {
+                if (billboard) {
+                    billboard.style.opacity = '0';
+                    billboard.style.display = 'none';
+                    billboard.style.pointerEvents = 'none';
+                }
+                if (el || label) setOverlayHidden(el, label, true, 0);
+                return 'dim';
+            }
+
+            if (billboard) {
+                billboard.style.display = '';
+                billboard.style.pointerEvents = 'none';
+            }
+
+            if (emphasis === 'focus' || emphasis === 'context') {
+                const op = emphasis === 'context' ? EXPLORE_CONTEXT_LABEL_OP : 1;
+                if (billboard) billboard.style.opacity = String(op);
+                if (el && label && !(mesh.userData.type === 'professor' && billboard)) {
+                    setOverlayHidden(el, label, false, op);
+                    if (emphasis === 'focus') {
+                        el.classList.add('trail-active');
+                        el.classList.remove('trail-dim');
+                    } else {
+                        el.classList.remove('trail-active', 'trail-dim');
+                    }
+                    // Landmarks remain clickable via label; others use mesh raycast
+                    el.style.pointerEvents = isLandmark(mesh.userData) ? 'auto' : 'none';
+                }
+                return emphasis;
+            }
+
+            // normal — billboard opacity left to LoD caller; labels via distance
+            if (el) {
+                el.classList.remove('trail-active', 'trail-dim');
+                el.style.display = '';
+            }
+            return 'normal';
+        }
+
         function applyLabelDistance(mesh) {
             const label = mesh.userData.labelObj;
             const el = mesh.userData.labelEl;
-            if (!label || !el || !mesh.visible || labelMode === 'hidden') return;
+            if (!mesh.visible || labelMode === 'hidden') {
+                if (el || label) setOverlayHidden(el, label, true, 0);
+                if (mesh.userData.billboardEl) {
+                    mesh.userData.billboardEl.style.opacity = '0';
+                    mesh.userData.billboardEl.style.display = 'none';
+                }
+                return;
+            }
+
+            // Emphasis gate (text explore / keyword) — must win over distance fade
+            const emphasis = applyOverlayVisibility(mesh);
+            if (emphasis === 'dim') return;
             if (mesh.userData.type === 'professor' && mesh.userData.billboardEl) return;
+            if (!label || !el) return;
+
+            if (emphasis === 'focus' || emphasis === 'context') {
+                // Explore / search / field-expand context: keep labels visible from afar
+                return;
+            }
 
             // Landmark labels stay readable farther out
             const near = isLandmark(mesh.userData) ? 55 : LABEL_NEAR;
@@ -667,44 +1239,38 @@
                 const active = trailActiveFields.has(mesh.userData.id);
                 el.classList.toggle('trail-active', active);
                 el.classList.toggle('trail-dim', !active);
-                if (!active && dist > far) {
-                    label.visible = false;
-                    el.classList.add('hidden-label');
-                    el.style.opacity = '0';
+                if (!active) {
+                    setOverlayHidden(el, label, true, 0);
                     return;
                 }
-                label.visible = true;
-                el.classList.remove('hidden-label');
-                el.style.opacity = String(
-                    active ? TRAIL_FIELD_LABEL_ACTIVE_OP : TRAIL_FIELD_LABEL_INACTIVE_OP
-                );
+                setOverlayHidden(el, label, false, TRAIL_FIELD_LABEL_ACTIVE_OP);
+                el.style.pointerEvents = 'auto';
                 return;
             }
             el.classList.remove('trail-active', 'trail-dim');
 
             if (dist > far) {
-                label.visible = false;
-                el.classList.add('hidden-label');
-                el.style.opacity = '0';
+                setOverlayHidden(el, label, true, 0);
                 return;
             }
-            label.visible = true;
-            el.classList.remove('hidden-label');
-
             const t = dist <= near
                 ? 1
                 : 1 - (dist - near) / (far - near);
-            el.style.opacity = String(Math.max(0.15, Math.min(1, t)));
+            const op = Math.max(0.15, Math.min(1, t));
+            setOverlayHidden(el, label, false, op);
+            el.style.pointerEvents = isLandmark(mesh.userData) ? 'auto' : 'none';
         }
 
         function updateVisibleLabelDistances() {
             if (labelMode === 'hidden') {
                 for (const mesh of fieldMeshes) applyLabelDistance(mesh);
+                if (textExplore && textExplore.userMesh) applyLabelDistance(textExplore.userMesh);
                 return;
             }
             for (const mesh of nodeMeshes) {
-                if (mesh.visible) applyLabelDistance(mesh);
+                applyLabelDistance(mesh);
             }
+            if (textExplore && textExplore.userMesh) applyLabelDistance(textExplore.userMesh);
         }
 
         function separateSameTypeNodes(nodes, minDist, iterations = 40) {
@@ -758,22 +1324,33 @@
             nodeMeshes.forEach(syncNodeLabel);
         }
 
-        function showHoverTip(node, clientX, clientY) {
+        function showHoverTip(node, clientX, clientY, extraReasons) {
             if (!node) {
                 hoverTip.style.display = 'none';
                 return;
             }
+            hoverTip.classList.remove('edge-tip');
             const typeLabel = node.type === 'professor' ? '教員'
                 : node.type === 'course' ? '講義'
                 : node.type === 'major' ? '大分野'
                 : node.type === 'field' ? '研究分野'
+                : node.type === 'user' ? '自分の関心'
                 : '';
             const kws = (node.keywords || []).slice(0, 4).join(' · ')
                 || (isLandmark(node) ? `所属教員 ${node.member_count || 0} 名` : '—');
+            let reasonHtml = '';
+            const reasons = extraReasons
+                || (textExplore && textExplore.related.get(node.id)?.reasons)
+                || node.reasons
+                || null;
+            if (reasons && reasons.length) {
+                reasonHtml = `<div class="tip-reason">接続理由: ${escapeHtml(reasons.join(' / '))}</div>`;
+            }
             hoverTip.innerHTML = `
                 <div class="tip-type">${escapeHtml(typeLabel)}</div>
                 <div class="tip-name">${escapeHtml(node.name || node.id || '')}</div>
-                <div class="tip-kw">${escapeHtml(kws)}</div>`;
+                <div class="tip-kw">${escapeHtml(kws)}</div>
+                ${reasonHtml}`;
             hoverTip.style.display = 'block';
             const pad = 14;
             let left = clientX + pad;
@@ -787,6 +1364,398 @@
 
         function hideHoverTip() {
             hoverTip.style.display = 'none';
+            hoverTip.classList.remove('edge-tip');
+        }
+
+        function calibrateEdgeStyleThresholds(scores) {
+            const xs = (scores || [])
+                .map(Number)
+                .filter(s => Number.isFinite(s) && s > 0)
+                .sort((a, b) => a - b);
+            if (xs.length < 8) return;
+            const pct = (p) => {
+                const i = Math.min(xs.length - 1, Math.max(0, Math.floor((xs.length - 1) * p)));
+                return xs[i];
+            };
+            // Tertiles → weak / mid / strong dash density (all remain dotted)
+            let lo = pct(0.33);
+            let hi = pct(0.67);
+            if (hi - lo < 0.008) {
+                const min = xs[0];
+                const max = xs[xs.length - 1];
+                const span = Math.max(max - min, 0.02);
+                lo = min + span * 0.33;
+                hi = min + span * 0.67;
+            }
+            EDGE_SCORE_MID = lo;
+            EDGE_SCORE_STRONG = hi;
+            console.info(
+                `[edges] similarity dash density weak < ${lo.toFixed(3)} ≤ mid < ${hi.toFixed(3)} ≤ strong; relation edges = solid`
+            );
+        }
+
+        function isStructuralRelationEdge(type) {
+            return (
+                type === 'taught_by'
+                || type === 'belongs_to_field'
+                || type === 'field_hierarchy'
+            );
+        }
+
+        /** Strength band for similarity dash density / color. */
+        function edgeStrengthBand(score, type) {
+            if (isStructuralRelationEdge(type)) return 'solid';
+            const s = Number(score) || 0;
+            if (s >= EDGE_SCORE_STRONG) return 'strong';
+            if (s >= EDGE_SCORE_MID) return 'mid';
+            return 'weak';
+        }
+
+        function edgeStyleFromScore(score, type) {
+            // 関係エッジ（所属・担当・階層）→ 実線 / 類似度 → 点線（密度で強弱）
+            return edgeStrengthBand(score, type);
+        }
+
+        function edgeStyleLabelJa(band) {
+            if (band === 'solid') return '実線';
+            if (band === 'strong') return '点線・密';
+            if (band === 'mid') return '点線・中';
+            return '点線・疎';
+        }
+
+        function isEdgeInteractive(recOrLine) {
+            if (!recOrLine) return false;
+            const line = recOrLine.line || recOrLine;
+            const mat = recOrLine.material || line.material;
+            const op = (mat && mat.opacity) || 0;
+            if (!line.visible || op < EDGE_INTERACT_MIN_OPACITY) return false;
+            // Explicit flag wins when set (dimmed / background)
+            if (line.userData && line.userData.isInteractive === false) return false;
+            if (line.userData && line.userData.isHighlighted === false) return false;
+            return true;
+        }
+
+        function syncEdgeInteractFlags(rec) {
+            if (!rec || !rec.line) return;
+            const op = rec.material?.opacity || 0;
+            const interactive = rec.line.visible
+                && op >= EDGE_INTERACT_MIN_OPACITY
+                && !!(rec.pinned || rec._edgeHl || rec._focusTinted || rec._edgeHovered);
+            // Pinned/highlighted OR simply bright enough (revealed)
+            const brightEnough = rec.line.visible && op >= EDGE_INTERACT_MIN_OPACITY;
+            rec.line.userData.isInteractive = brightEnough;
+            rec.line.userData.isHighlighted = !!(
+                rec.pinned || rec._edgeHl || rec._focusTinted || rec._edgeHovered || brightEnough
+            );
+        }
+
+        function commonKeywordsBetween(a, b, limit = 4) {
+            const ka = new Set(
+                (a?.keywords || []).map(k => String(k).trim().toLowerCase()).filter(Boolean)
+            );
+            if (!ka.size) return [];
+            const out = [];
+            for (const k of (b?.keywords || [])) {
+                const t = String(k).trim();
+                if (!t) continue;
+                if (ka.has(t.toLowerCase())) out.push(t);
+                if (out.length >= limit) break;
+            }
+            return out;
+        }
+
+        function keywordsMatchingQuery(node, terms, limit = 4) {
+            if (!node || !terms || !terms.length) return [];
+            const blob = (node.keywords || []).map(k => String(k));
+            const name = String(node.name || '');
+            const hits = [];
+            for (const term of terms) {
+                const t = String(term).trim();
+                if (!t) continue;
+                const tl = t.toLowerCase();
+                for (const kw of blob) {
+                    if (kw.toLowerCase().includes(tl) || tl.includes(kw.toLowerCase())) {
+                        if (!hits.includes(kw)) hits.push(kw);
+                    }
+                }
+                if (name.toLowerCase().includes(tl) && !hits.includes(t)) hits.push(t);
+                if (hits.length >= limit) break;
+            }
+            return hits.slice(0, limit);
+        }
+
+        function buildEdgeRelation(rec, queryTerms) {
+            const src = nodeDict[rec.source];
+            const tgt = nodeDict[rec.target];
+            const score = Number(rec.score) || 0;
+            const style = edgeStyleFromScore(score, rec.type);
+            const shared = commonKeywordsBetween(src, tgt);
+            const qHits = [
+                ...keywordsMatchingQuery(src, queryTerms),
+                ...keywordsMatchingQuery(tgt, queryTerms),
+            ].filter((v, i, a) => a.indexOf(v) === i).slice(0, 4);
+
+            let kind = '意味的類似';
+            let kindKey = 'semantic';
+            const detailParts = [];
+
+            if (rec.type === 'taught_by') {
+                kind = '担当講義';
+                kindKey = 'taught_by';
+                // 説明は種別のみ（講義名・共通語は付けない）
+            } else if (rec.type === 'belongs_to_field') {
+                kind = '分野所属';
+                kindKey = 'belongs_to_field';
+                const field = isLandmark(src) ? src : (isLandmark(tgt) ? tgt : null);
+                const prof = src?.type === 'professor' ? src : (tgt?.type === 'professor' ? tgt : null);
+                if (field?.name) detailParts.push(`分野「${field.name}」`);
+                if (prof?.name) detailParts.push(`教員「${prof.name}」`);
+            } else if (rec.type === 'field_hierarchy') {
+                kind = '分野階層';
+                kindKey = 'field_hierarchy';
+                detailParts.push('大分野 ⊃ 研究分野');
+            } else if (rec.type === 'course_field') {
+                kind = '講義×分野の意味的類似';
+                kindKey = 'course_field';
+            } else if (rec.type === 'similarity') {
+                const ta = src?.type || '';
+                const tb = tgt?.type || '';
+                if (ta === 'professor' && tb === 'professor') {
+                    kind = '教員間の意味的類似';
+                } else if (ta === 'course' && tb === 'course') {
+                    kind = '講義間の意味的類似';
+                } else {
+                    kind = '意味的類似';
+                }
+                kindKey = 'similarity';
+            }
+
+            if (kindKey !== 'taught_by') {
+                if (shared.length) {
+                    detailParts.push(`共通キーワード「${shared.join('」「')}」`);
+                } else if (qHits.length) {
+                    detailParts.push(`検索語との接点「${qHits.join('」「')}」`);
+                } else if (kindKey === 'similarity' || kindKey === 'course_field') {
+                    detailParts.push('埋め込みベクトルの近接');
+                }
+            }
+
+            const reasons = kindKey === 'taught_by'
+                ? ['担当講義']
+                : [`${kind}${detailParts.length ? ' — ' + detailParts.join(' / ') : ''}`];
+            return {
+                score,
+                style,
+                styleLabel: edgeStyleLabelJa(style),
+                kind,
+                kindKey,
+                shared,
+                queryHits: qHits,
+                reasons,
+                sourceName: src?.name || rec.source,
+                targetName: tgt?.name || rec.target,
+                sourceType: src?.type || '',
+                targetType: tgt?.type || '',
+            };
+        }
+
+        function enrichEdgeMeta(rec, queryTerms) {
+            if (!rec) return null;
+            const terms = queryTerms != null ? queryTerms : lastQueryTerms;
+            rec.relation = buildEdgeRelation(rec, terms);
+            if (rec.line) {
+                rec.line.userData.kind = 'relation_edge';
+                rec.line.userData.edgeRec = rec;
+            }
+            return rec.relation;
+        }
+
+        function makeEdgeMaterial(type, score) {
+            const band = edgeStrengthBand(score, type);
+
+            // 関係エッジ（所属・担当・階層）は実線
+            if (isStructuralRelationEdge(type) || band === 'solid') {
+                let color = 0xc8cdd4;
+                if (type === 'field_hierarchy') color = 0x5a7a90;
+                else if (type === 'belongs_to_field') color = 0xc4a06a;
+                else if (type === 'taught_by') color = 0xb8c0c8;
+                return {
+                    mat: new THREE.LineBasicMaterial({
+                        color,
+                        transparent: true,
+                        opacity: 0,
+                        depthWrite: false,
+                        linewidth: 1,
+                    }),
+                    style: 'solid',
+                    needsDash: false,
+                };
+            }
+
+            // 類似度・関心エッジは点線（密度・色で強弱）
+            let color = 0x7eb8d4;
+            let dashSize = 0.55;
+            let gapSize = 0.55;
+            let linewidth = 1;
+
+            if (band === 'strong') {
+                dashSize = 1.15;
+                gapSize = 0.32;
+                linewidth = 2;
+                color = 0x8fd4ff;
+            } else if (band === 'mid') {
+                dashSize = 0.65;
+                gapSize = 0.55;
+                linewidth = 1;
+                color = 0x7eb8d4;
+            } else {
+                dashSize = 0.28;
+                gapSize = 0.9;
+                linewidth = 1;
+                color = 0x5a7a90;
+            }
+            if (type === 'user_affinity') color = USER_EDGE_COLOR;
+
+            return {
+                mat: new THREE.LineDashedMaterial({
+                    color,
+                    transparent: true,
+                    opacity: 0,
+                    dashSize,
+                    gapSize,
+                    depthWrite: false,
+                    linewidth,
+                }),
+                style: band,
+                needsDash: true,
+            };
+        }
+
+        function showEdgeHoverTip(rec, clientX, clientY) {
+            if (!rec) {
+                hideHoverTip();
+                return;
+            }
+            const rel = rec.relation || enrichEdgeMeta(rec);
+            const scoreTxt = (rel.score > 0)
+                ? `類似度 ${rel.score.toFixed(2)}`
+                : '関係エッジ';
+            const styleTxt = rel.styleLabel || edgeStyleLabelJa(rel.style);
+            const reason = (rel.reasons && rel.reasons[0]) || rel.kind || 'つながり';
+            hoverTip.classList.add('edge-tip');
+            hoverTip.innerHTML = `
+                <div class="tip-type">接続の根拠</div>
+                <div class="tip-score">${escapeHtml(scoreTxt)}<span class="tip-style">${escapeHtml(styleTxt)}</span></div>
+                <div class="tip-name">${escapeHtml(rel.sourceName)} ⟷ ${escapeHtml(rel.targetName)}</div>
+                <div class="tip-reason">${escapeHtml(reason)}</div>`;
+            hoverTip.style.display = 'block';
+            const pad = 14;
+            let left = clientX + pad;
+            let top = clientY + pad;
+            const rect = hoverTip.getBoundingClientRect();
+            if (left + rect.width > window.innerWidth - 8) left = clientX - rect.width - pad;
+            if (top + rect.height > window.innerHeight - 8) top = clientY - rect.height - pad;
+            hoverTip.style.left = `${Math.max(8, left)}px`;
+            hoverTip.style.top = `${Math.max(8, top)}px`;
+        }
+
+        function clearEdgeHoverHighlight() {
+            if (hoveredRelationEdge) {
+                const rec = hoveredRelationEdge;
+                if (rec.baseColor != null) rec.material.color.setHex(rec.baseColor);
+                if (rec._hoverPrevOpacity != null) {
+                    rec.material.opacity = rec._hoverPrevOpacity;
+                    delete rec._hoverPrevOpacity;
+                }
+                if (rec.baseLinewidth != null) rec.material.linewidth = rec.baseLinewidth;
+                rec._edgeHovered = false;
+            }
+            for (const m of edgeHoverEndpoints) {
+                if (m && m !== selectedNode && m !== hoveredNode) {
+                    m.scale.set(1, 1, 1);
+                }
+            }
+            edgeHoverEndpoints = [];
+            hoveredRelationEdge = null;
+            hoveredUserEdge = null;
+        }
+
+        function applyEdgeHoverHighlight(rec) {
+            if (!rec || !rec.line) return;
+            if (hoveredRelationEdge && hoveredRelationEdge !== rec) {
+                clearEdgeHoverHighlight();
+            }
+            hoveredRelationEdge = rec;
+            if (rec.baseColor == null) rec.baseColor = rec.material.color.getHex();
+            if (rec.baseLinewidth == null) {
+                rec.baseLinewidth = rec.material.linewidth != null ? rec.material.linewidth : 1;
+            }
+            rec._hoverPrevOpacity = rec.material.opacity;
+            rec.material.color.setHex(EDGE_HOVER_COLOR);
+            rec.material.opacity = Math.max(rec.material.opacity || 0, 1);
+            rec.material.linewidth = Math.max(rec.baseLinewidth || 1, 3);
+            rec._edgeHovered = true;
+
+            const endpoints = [];
+            for (const id of [rec.source, rec.target]) {
+                const m = meshById[id];
+                if (!m) continue;
+                endpoints.push(m);
+                if (m !== selectedNode) {
+                    m.scale.set(
+                        EDGE_HOVER_ENDPOINT_SCALE,
+                        EDGE_HOVER_ENDPOINT_SCALE,
+                        EDGE_HOVER_ENDPOINT_SCALE
+                    );
+                }
+            }
+            edgeHoverEndpoints = endpoints;
+        }
+
+        function pickRelationEdge(event) {
+            mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
+            mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
+            raycaster.setFromCamera(mouse, camera);
+            raycaster.params.Line = raycaster.params.Line || {};
+            raycaster.params.Line.threshold = EDGE_PICK_THRESHOLD;
+
+            const lines = [];
+            for (const rec of edgeRecords) {
+                if (!rec.line || !rec.line.visible) continue;
+                syncEdgeInteractFlags(rec);
+                // Skip dim / background edges — no hover tip
+                if (!isEdgeInteractive(rec)) continue;
+                lines.push(rec.line);
+            }
+            if (textExplore) {
+                for (const ue of textExplore.edges) {
+                    if (!ue.line || !ue.line.visible) continue;
+                    if ((ue.material?.opacity || 0) < EDGE_INTERACT_MIN_OPACITY) continue;
+                    ue.line.userData.isInteractive = true;
+                    ue.line.userData.isHighlighted = true;
+                    lines.push(ue.line);
+                }
+            }
+            if (!lines.length) return null;
+            const hits = raycaster.intersectObjects(lines, false);
+            if (!hits.length) return null;
+            // Prefer first hit that still passes the opacity gate
+            for (const hit of hits) {
+                const obj = hit.object;
+                const op = obj.material?.opacity || 0;
+                if (op < EDGE_INTERACT_MIN_OPACITY) continue;
+                if (obj.userData && obj.userData.isInteractive === false) continue;
+                if (obj.userData && obj.userData.edgeRec) {
+                    return { kind: 'relation', rec: obj.userData.edgeRec };
+                }
+                if (obj.userData && obj.userData.kind === 'user_edge' && textExplore) {
+                    const ue = textExplore.edges.find(e => e.line === obj);
+                    if (ue) return { kind: 'user', rec: ue };
+                }
+                const rel = edgeRecords.find(r => r.line === obj);
+                if (rel) return { kind: 'relation', rec: rel };
+            }
+            return null;
         }
 
         function showToast(msg, ms = 2200) {
@@ -796,10 +1765,88 @@
             showToast._t = setTimeout(() => toastEl.classList.remove('show'), ms);
         }
 
+        function clearGuideTimers(kind) {
+            if (!kind || kind === 'empty') {
+                if (emptyHintHideTimer) clearTimeout(emptyHintHideTimer);
+                if (emptyHintFadeTimer) clearTimeout(emptyHintFadeTimer);
+                emptyHintHideTimer = null;
+                emptyHintFadeTimer = null;
+            }
+            if (!kind || kind === 'op') {
+                if (opGuideHideTimer) clearTimeout(opGuideHideTimer);
+                if (opGuideFadeTimer) clearTimeout(opGuideFadeTimer);
+                opGuideHideTimer = null;
+                opGuideFadeTimer = null;
+            }
+        }
+
+        function dismissGuideEl(el, { animate = true, kind = 'empty' } = {}) {
+            if (!el) return;
+            clearGuideTimers(kind);
+            if (!animate) {
+                el.style.opacity = '0';
+                el.classList.add('is-hidden');
+                return;
+            }
+            el.style.opacity = '0';
+            const fadeTimerKey = kind === 'op' ? 'opGuideFadeTimer' : 'emptyHintFadeTimer';
+            const t = setTimeout(() => {
+                el.classList.add('is-hidden');
+                if (kind === 'op') opGuideFadeTimer = null;
+                else emptyHintFadeTimer = null;
+            }, GUIDE_FADE_MS);
+            if (kind === 'op') opGuideFadeTimer = t;
+            else emptyHintFadeTimer = t;
+        }
+
+        function scheduleGuideAutoHide(el, kind) {
+            if (!el) return;
+            clearGuideTimers(kind);
+            const hideTimer = setTimeout(() => {
+                if (kind === 'op') opGuideHideTimer = null;
+                else emptyHintHideTimer = null;
+                dismissGuideEl(el, { animate: true, kind });
+            }, GUIDE_AUTO_HIDE_MS);
+            if (kind === 'op') opGuideHideTimer = hideTimer;
+            else emptyHintHideTimer = hideTimer;
+        }
+
+        /** Show center guide ("分野の地図が広がっています") then auto-fade. */
+        function showEmptyHintGuide({ restartTimer = true } = {}) {
+            if (!emptyHint) return;
+            clearGuideTimers('empty');
+            emptyHint.classList.remove('is-hidden');
+            // force reflow so opacity transition runs when re-showing
+            void emptyHint.offsetWidth;
+            emptyHint.style.opacity = '1';
+            if (restartTimer) scheduleGuideAutoHide(emptyHint, 'empty');
+        }
+
+        function showOpGuide({ restartTimer = true } = {}) {
+            if (!opGuide) return;
+            clearGuideTimers('op');
+            opGuide.classList.remove('is-hidden');
+            void opGuide.offsetWidth;
+            opGuide.style.opacity = '1';
+            if (restartTimer) scheduleGuideAutoHide(opGuide, 'op');
+        }
+
         function updateEmptyHint() {
             const anyProf = professorMeshes.some(m => m.visible && (m.material.opacity || 0) > 0.15);
             const anyCourse = courseMeshes.some(m => m.visible && (m.material.opacity || 0) > 0.15);
-            emptyHint.style.opacity = (anyProf || anyCourse) ? '0' : '1';
+            if (anyProf || anyCourse) {
+                // Exploration active — hide guide if still visible
+                if (!emptyHint.classList.contains('is-hidden')) {
+                    dismissGuideEl(emptyHint, { animate: true, kind: 'empty' });
+                }
+                return;
+            }
+            // Overview: do not re-show every LoD frame once auto-hidden
+            if (emptyHint.classList.contains('is-hidden')) return;
+            // Visible but no timer (e.g. just restored) → schedule once
+            if (!emptyHintHideTimer && !emptyHintFadeTimer) {
+                scheduleGuideAutoHide(emptyHint, 'empty');
+            }
         }
 
         function ensureEdgeIndex(id) {
@@ -874,10 +1921,19 @@
             return nearOp + (farOp - nearOp) * Math.max(0, Math.min(1, t));
         }
 
+        function pinExploreContext(mesh) {
+            if (!mesh || !textExplore || !textExplore.related) return;
+            const id = mesh.userData.id;
+            if (!id || textExplore.related.has(id)) return;
+            if (isLandmark(mesh.userData) || mesh.userData.type === 'user') return;
+            exploreContextIds.add(id);
+        }
+
         function revealNode(mesh, { animate = true, pin = true } = {}) {
             if (!mesh) return;
             if (isLandmark(mesh.userData)) return; // always managed as landmarks
             if (pin) searchPinned.add(mesh.userData.id);
+            pinExploreContext(mesh);
             mesh.visible = true;
             mesh.material.transparent = true;
             syncNodeLabel(mesh);
@@ -900,12 +1956,13 @@
         }
 
         function edgeBaseOpacity(rec) {
+            // Revealed / related edges sit above EDGE_INTERACT_MIN_OPACITY (0.3)
+            // so they remain hoverable; hierarchy stays as faint background.
             if (rec.type === 'field_hierarchy') return 0.22;
-            if (rec.type === 'belongs_to_field') return 0.28;
-            if (rec.type === 'taught_by') return 0.22;
-            if (rec.type === 'course_field') return 0.26;
-            // discovery similarity: keep faint (~0.2)
-            return 0.2;
+            if (rec.type === 'belongs_to_field') return 0.42;
+            if (rec.type === 'taught_by') return 0.40;
+            if (rec.type === 'course_field') return 0.38;
+            return 0.36; // similarity
         }
 
         /** Effective relation strength for highlight gating (structural edges count as 1). */
@@ -993,10 +2050,12 @@
         function revealEdge(rec, { animate = true, pin = true } = {}) {
             if (!rec || !rec.line) return;
             if (pin) rec.pinned = true;
+            enrichEdgeMeta(rec, lastQueryTerms);
             rec.line.visible = true;
             const to = edgeBaseOpacity(rec);
             if (!animate) {
                 rec.material.opacity = to;
+                syncEdgeInteractFlags(rec);
                 return;
             }
             if (rec.material.opacity < 0.02) rec.material.opacity = 0;
@@ -1010,9 +2069,12 @@
             });
         }
 
-        function hideAllNetwork() {
+        function hideAllNetwork({ clearExplore = true } = {}) {
             fadeAnims.length = 0;
             searchPinned.clear();
+            if (clearExplore) {
+                clearTextExplore({ restorePositions: true, animateRestore: false });
+            }
             for (const mesh of midMeshes) {
                 mesh.visible = false;
                 mesh.material.opacity = 0;
@@ -1111,10 +2173,15 @@
             focusHighlight = { profId, courseIds, edges };
         }
 
-        function flyToPoints(points, { distance = 42, duration = 1.1 } = {}) {
-            if (!points.length) return;
+        function flyToPoints(points, { distance = 42, duration = 1.1, onComplete = null } = {}) {
+            if (!points.length) {
+                if (onComplete) onComplete();
+                return;
+            }
             const box = new THREE.Box3();
-            points.forEach(p => box.expandByPoint(p));
+            points.forEach(p => {
+                if (p) box.expandByPoint(p);
+            });
             const center = new THREE.Vector3();
             box.getCenter(center);
             const size = new THREE.Vector3();
@@ -1137,6 +2204,7 @@
                 endPos,
                 startTarget,
                 endTarget,
+                onComplete: onComplete || null,
             };
         }
 
@@ -1213,22 +2281,62 @@
             const ntype = mesh.userData.type;
             const connected = edgesByNode.get(nid) || [];
 
-            // Field landmark: reveal member professors + belongs_to_field edges
+            // Field landmark: reveal member professors + related courses
             if (ntype === 'field' || ntype === 'major') {
                 const memberEdges = connected.filter(e => e.type === 'belongs_to_field');
+                const courseFieldEdges = connected.filter(e => e.type === 'course_field');
                 const neighborMeshes = [];
+                const seen = new Set();
+
                 for (const rec of memberEdges) {
                     const otherId = rec.source === nid ? rec.target : rec.source;
                     const other = meshById[otherId];
                     if (other && other.userData.type === 'professor') {
                         revealNode(other);
-                        neighborMeshes.push(other);
+                        if (!seen.has(otherId)) {
+                            seen.add(otherId);
+                            neighborMeshes.push(other);
+                        }
+                        // Also surface a few taught courses for each member professor
+                        let courseN = 0;
+                        for (const erec of edgesByNode.get(otherId) || []) {
+                            if (erec.type !== 'taught_by') continue;
+                            const cid = erec.source === otherId ? erec.target : erec.source;
+                            const course = meshById[cid];
+                            if (!course || course.userData.type !== 'course') continue;
+                            revealNode(course);
+                            revealEdge(erec);
+                            if (!seen.has(cid)) {
+                                seen.add(cid);
+                                neighborMeshes.push(course);
+                            }
+                            courseN += 1;
+                            if (courseN >= 4) break;
+                        }
                     }
                     revealEdge(rec);
                 }
+
+                // Direct course↔field links (if present in the graph)
+                let cfN = 0;
+                for (const rec of courseFieldEdges) {
+                    const otherId = rec.source === nid ? rec.target : rec.source;
+                    const other = meshById[otherId];
+                    if (other && other.userData.type === 'course') {
+                        revealNode(other);
+                        if (!seen.has(otherId)) {
+                            seen.add(otherId);
+                            neighborMeshes.push(other);
+                        }
+                        revealEdge(rec);
+                        cfN += 1;
+                        if (cfN >= 24) break;
+                    }
+                }
+
                 if (neighborMeshes.length) {
                     flyToPoints(
-                        [mesh.position, ...neighborMeshes.map(m => m.position)],
+                        [mesh.position, ...neighborMeshes.slice(0, 18).map(m => m.position)],
                         { distance: 32, duration: 0.95 }
                     );
                 } else {
@@ -1270,8 +2378,12 @@
 
         function focusNode(mesh, { flyCamera = false, expand = true, recordTrail = true } = {}) {
             if (!mesh) return;
-            // Landmarks may be faded but still focusable via trail / search
-            if (!mesh.visible && !isLandmark(mesh.userData)) return;
+            // Landmarks / user node may be faded but still focusable
+            if (
+                !mesh.visible
+                && !isLandmark(mesh.userData)
+                && mesh.userData.type !== 'user'
+            ) return;
 
             if (selectedNode && selectedNode !== mesh) {
                 selectedNode.scale.set(1, 1, 1);
@@ -1307,7 +2419,7 @@
             mesh.scale.set(boost, boost, boost);
             showInfo(mesh.userData);
 
-            if (recordTrail) addTrail(mesh.userData);
+            if (recordTrail && mesh.userData.type !== 'user') addTrail(mesh.userData);
 
             if (mesh.userData.type === 'professor') {
                 setProfessorFocus(mesh);
@@ -1315,11 +2427,16 @@
                 focusHighlight = null;
             }
 
-            selectionHighlight = buildSelectionHighlight(mesh);
+            if (mesh.userData.type !== 'user') {
+                selectionHighlight = buildSelectionHighlight(mesh);
+            } else {
+                selectionHighlight = null;
+            }
 
-            if (expand) expandFromNode(mesh);
+            if (expand && mesh.userData.type !== 'user') expandFromNode(mesh);
             if (flyCamera) flyToNode(mesh);
             applyLodVisibility();
+            updateVisibleLabelDistances();
         }
 
         function startExploration(terms, label) {
@@ -1332,6 +2449,13 @@
                 showToast('データを読み込み中です…');
                 return;
             }
+
+            // Keyword mode never keeps a free-text user node
+            clearTextExplore({ restorePositions: true, animateRestore: false });
+            lastQueryTerms = clean.slice();
+            exploreSession.lastKeywordQuery = String(label || clean.join(' ')).trim();
+            dismissGuideEl(emptyHint, { animate: true, kind: 'empty' });
+            dismissGuideEl(opGuide, { animate: true, kind: 'op' });
 
             document.querySelectorAll('.tag-btn').forEach(b => b.classList.remove('active'));
 
@@ -1364,16 +2488,608 @@
             showToast(`${entries.length}件の講義が現れました — クリックして辿ってみましょう`);
         }
 
+        function captureHomePositions() {
+            homePositions.clear();
+            for (const mesh of nodeMeshes) {
+                homePositions.set(mesh.userData.id, mesh.position.clone());
+                mesh.userData.homePos = mesh.position.clone();
+            }
+        }
+
+        function homePosFor(mesh) {
+            if (!mesh) return null;
+            return homePositions.get(mesh.userData.id)
+                || mesh.userData.homePos
+                || mesh.position.clone();
+        }
+
+        function refreshEdgesForNodes(nodeIds) {
+            const idSet = nodeIds instanceof Set ? nodeIds : new Set(nodeIds || []);
+            for (const rec of edgeRecords) {
+                if (!idSet.has(rec.source) && !idSet.has(rec.target)) continue;
+                const src = meshById[rec.source];
+                const tgt = meshById[rec.target];
+                if (!src || !tgt) continue;
+                const pos = rec.line.geometry.attributes.position;
+                pos.setXYZ(0, src.position.x, src.position.y, src.position.z);
+                pos.setXYZ(1, tgt.position.x, tgt.position.y, tgt.position.z);
+                pos.needsUpdate = true;
+                if (rec.line.computeLineDistances) rec.line.computeLineDistances();
+            }
+            if (textExplore) {
+                for (const ue of textExplore.edges) {
+                    const tgt = meshById[ue.targetId];
+                    if (!tgt || !textExplore.userMesh) continue;
+                    const pos = ue.line.geometry.attributes.position;
+                    pos.setXYZ(
+                        0,
+                        textExplore.userMesh.position.x,
+                        textExplore.userMesh.position.y,
+                        textExplore.userMesh.position.z
+                    );
+                    pos.setXYZ(1, tgt.position.x, tgt.position.y, tgt.position.z);
+                    pos.needsUpdate = true;
+                }
+            }
+        }
+
+        function pushPosTween(mesh, to, dur, onDone) {
+            if (!mesh) return;
+            posTweens.push({
+                mesh,
+                from: mesh.position.clone(),
+                to: to.clone(),
+                t: 0,
+                dur: Math.max(0.05, dur || 1),
+                onDone: onDone || null,
+            });
+        }
+
+        function spawnRipple(center, delay = 0) {
+            const geo = new THREE.RingGeometry(0.35, 0.55, 48);
+            const mat = new THREE.MeshBasicMaterial({
+                color: USER_NODE_COLOR,
+                transparent: true,
+                opacity: 0.55,
+                side: THREE.DoubleSide,
+                depthWrite: false,
+            });
+            const mesh = new THREE.Mesh(geo, mat);
+            mesh.position.copy(center);
+            mesh.lookAt(camera.position);
+            mesh.visible = delay <= 0;
+            scene.add(mesh);
+            ripples.push({
+                mesh,
+                t: -delay,
+                dur: 1.35,
+                maxScale: 38,
+            });
+        }
+
+        function createUserNode(position, queryText) {
+            const geo = new THREE.SphereGeometry(USER_NODE_RADIUS, 20, 20);
+            const mat = new THREE.MeshBasicMaterial({
+                color: USER_NODE_COLOR,
+                transparent: true,
+                opacity: 0.95,
+                depthWrite: false,
+            });
+            const mesh = new THREE.Mesh(geo, mat);
+            mesh.position.copy(position);
+            mesh.userData = {
+                id: 'user_interest',
+                type: 'user',
+                name: '自分の関心',
+                keywords: [],
+                text_preview: queryText,
+                reasons: ['入力文章の意味重心'],
+            };
+
+            const glow = new THREE.Mesh(
+                new THREE.SphereGeometry(USER_GLOW_RADIUS, 16, 16),
+                new THREE.MeshBasicMaterial({
+                    color: 0xffc878,
+                    transparent: true,
+                    opacity: 0.28,
+                    depthWrite: false,
+                })
+            );
+            mesh.add(glow);
+            mesh.userData.glowMat = glow.material;
+
+            // Soft edge ring (billboarded each frame via lookAt in applyLodVisibility)
+            const ring = new THREE.Mesh(
+                new THREE.RingGeometry(
+                    USER_NODE_RADIUS * 1.15,
+                    USER_NODE_RADIUS * 1.45,
+                    48
+                ),
+                new THREE.MeshBasicMaterial({
+                    color: USER_EDGE_COLOR,
+                    transparent: true,
+                    opacity: 0.55,
+                    side: THREE.DoubleSide,
+                    depthWrite: false,
+                })
+            );
+            mesh.add(ring);
+            mesh.userData.edgeRing = ring;
+            mesh.userData.edgeRingMat = ring.material;
+            mesh.userData.edgeRingPhase = 0;
+
+            const labelEl = document.createElement('div');
+            labelEl.className = 'node-label user';
+            labelEl.textContent = '自分';
+            const labelObj = new THREE.CSS2DObject(labelEl);
+            labelObj.position.set(0, USER_LABEL_Y, 0);
+            mesh.add(labelObj);
+            mesh.userData.labelEl = labelEl;
+            mesh.userData.labelObj = labelObj;
+
+            scene.add(mesh);
+            return mesh;
+        }
+
+        function createUserEdge(userMesh, targetMesh, hit) {
+            const geo = new THREE.BufferGeometry().setFromPoints([
+                userMesh.position.clone(),
+                targetMesh.position.clone(),
+            ]);
+            const score = hit.score || 0;
+            const { mat, style } = makeEdgeMaterial('user_affinity', score);
+            mat.color.setHex(USER_EDGE_COLOR);
+            mat.opacity = Math.max(EDGE_INTERACT_MIN_OPACITY, 0.35 + Math.min(0.55, score * 0.6));
+            const line = new THREE.Line(geo, mat);
+            line.computeLineDistances();
+            line.renderOrder = 3;
+            line.visible = true;
+            line.userData = {
+                kind: 'user_edge',
+                targetId: hit.id,
+                reasons: hit.reasons || [],
+                score,
+                isInteractive: true,
+                isHighlighted: true,
+            };
+            scene.add(line);
+            return {
+                line,
+                material: mat,
+                targetId: hit.id,
+                reasons: hit.reasons || [],
+                score,
+                baseColor: USER_EDGE_COLOR,
+                lineStyle: style,
+                // Shape compatible with relation tip helpers
+                source: 'user_interest',
+                target: hit.id,
+                type: 'user_affinity',
+                relation: {
+                    score,
+                    style,
+                    styleLabel: edgeStyleLabelJa(style),
+                    kind: '関心との意味的近接',
+                    reasons: hit.reasons || ['関心文章との意味的近接'],
+                    sourceName: '自分の関心',
+                    targetName: hit.name || hit.id,
+                },
+            };
+        }
+
+        function disposeObject3D(root) {
+            if (!root) return;
+            scene.remove(root);
+            root.traverse((child) => {
+                if (child.geometry) child.geometry.dispose();
+                if (child.material) {
+                    const mats = Array.isArray(child.material)
+                        ? child.material
+                        : [child.material];
+                    mats.forEach((m) => m && m.dispose && m.dispose());
+                }
+                // CSS2DObject (three r128): .element is the DOM node
+                const dom = child.element || child.userData?.labelEl;
+                if (dom && dom.parentNode) dom.parentNode.removeChild(dom);
+            });
+            const labelEl = root.userData && root.userData.labelEl;
+            if (labelEl && labelEl.parentNode) labelEl.parentNode.removeChild(labelEl);
+        }
+
+        function clearTextExplore({ restorePositions = true, animateRestore = true } = {}) {
+            hoveredUserEdge = null;
+            if (exploreFocusTimer != null) {
+                clearTimeout(exploreFocusTimer);
+                exploreFocusTimer = null;
+            }
+
+            // Clear ripples (including in-flight)
+            for (const r of ripples) {
+                disposeObject3D(r.mesh);
+            }
+            ripples.length = 0;
+
+            const movedIds = new Set();
+            if (textExplore) {
+                for (const id of textExplore.related.keys()) {
+                    movedIds.add(id);
+                    const m = meshById[id];
+                    if (m) delete m.userData.exploreReasons;
+                }
+                for (const ue of textExplore.edges) {
+                    disposeObject3D(ue.line);
+                }
+                if (textExplore.userMesh) {
+                    disposeObject3D(textExplore.userMesh);
+                }
+            }
+
+            // Safety: remove any leftover user meshes / affinity lines
+            const leftovers = [];
+            scene.traverse((obj) => {
+                if (obj.userData && (
+                    obj.userData.id === 'user_interest'
+                    || obj.userData.kind === 'user_edge'
+                    || obj.userData.type === 'user'
+                )) {
+                    leftovers.push(obj);
+                }
+            });
+            leftovers.forEach(disposeObject3D);
+
+            // Orphaned CSS2D "自分" labels outside the graph
+            document.querySelectorAll('.node-label.user').forEach((el) => {
+                if (el.parentNode) el.parentNode.removeChild(el);
+            });
+
+            textExplore = null;
+            exploreContextIds.clear();
+            posTweens.length = 0;
+
+            if (restorePositions && movedIds.size) {
+                if (animateRestore) {
+                    for (const id of movedIds) {
+                        const mesh = meshById[id];
+                        const home = homePosFor(mesh);
+                        if (mesh && home) pushPosTween(mesh, home, RESTORE_DURATION);
+                    }
+                } else {
+                    for (const id of movedIds) {
+                        const mesh = meshById[id];
+                        const home = homePosFor(mesh);
+                        if (mesh && home) mesh.position.copy(home);
+                    }
+                    refreshEdgesForNodes(movedIds);
+                }
+            }
+
+            // Refresh overlays so dimmed labels come back
+            for (const mesh of nodeMeshes) {
+                if (mesh.userData.billboardEl) {
+                    mesh.userData.billboardEl.style.display = '';
+                }
+                syncNodeLabel(mesh);
+            }
+        }
+
+        function setExploreMode(mode) {
+            const next = mode === 'text' ? 'text' : 'keyword';
+            if (next === exploreMode) {
+                // still sync UI
+            } else if (next === 'text') {
+                // leave keyword highlights / pins
+                clearSelection();
+                searchPinned.clear();
+                document.querySelectorAll('.tag-btn').forEach(b => b.classList.remove('active'));
+            } else {
+                // text → keyword: remove user node & restore pulled positions
+                clearTextExplore({ restorePositions: true, animateRestore: true });
+            }
+            exploreMode = next;
+
+            const kwPanel = document.getElementById('mode-keyword-panel');
+            const txPanel = document.getElementById('mode-text-panel');
+            if (kwPanel) kwPanel.style.display = exploreMode === 'keyword' ? 'flex' : 'none';
+            if (txPanel) txPanel.style.display = exploreMode === 'text' ? 'flex' : 'none';
+
+            document.querySelectorAll('#explore-mode-toggle button').forEach(btn => {
+                btn.classList.toggle('active', btn.getAttribute('data-mode') === exploreMode);
+            });
+            // Mode switch: clear stale timers; re-show overview guide if still at rest
+            clearGuideTimers();
+            applyLodVisibility();
+            const anyMid = midMeshes.some(m => m.visible && (m.material.opacity || 0) > 0.15);
+            if (!anyMid && !textExplore) {
+                showEmptyHintGuide({ restartTimer: true });
+            } else {
+                dismissGuideEl(emptyHint, { animate: true, kind: 'empty' });
+            }
+        }
+
+        async function startTextExploration(rawText) {
+            const text = String(rawText || '').trim();
+            if (text.length < 4) {
+                showToast('文章を4文字以上入力してください');
+                return;
+            }
+            if (!dataReady) {
+                showToast('データを読み込み中です…');
+                return;
+            }
+
+            const btn = document.getElementById('text-explore-btn');
+            if (btn) {
+                btn.disabled = true;
+                btn.textContent = '計算中…';
+            }
+            dismissGuideEl(emptyHint, { animate: true, kind: 'empty' });
+            dismissGuideEl(opGuide, { animate: true, kind: 'op' });
+            showToast('文章を埋め込み、近いノードを探しています…', 4000);
+
+            try {
+                const res = await fetch('/api/explore/text', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        text,
+                        top_k: TEXT_EXPLORE_TOP_K,
+                        min_score: TEXT_EXPLORE_MIN_SCORE,
+                        types: ['field', 'professor', 'course'],
+                    }),
+                });
+                const data = await res.json();
+                if (!res.ok || !data.ok) {
+                    throw new Error(data.error || `探索に失敗しました (${res.status})`);
+                }
+                if (!data.hits || !data.hits.length) {
+                    showToast('関連するノードが見つかりませんでした');
+                    return;
+                }
+                applyTextExploreResult(data);
+            } catch (err) {
+                console.error(err);
+                showToast(String(err.message || err));
+            } finally {
+                if (btn) {
+                    btn.disabled = false;
+                    btn.textContent = '文章で探索';
+                }
+            }
+        }
+
+        function applyTextExploreResult(data) {
+            clearTextExplore({ restorePositions: true, animateRestore: false });
+            clearSelection();
+            searchPinned.clear();
+            dismissGuideEl(emptyHint, { animate: true, kind: 'empty' });
+            dismissGuideEl(opGuide, { animate: true, kind: 'op' });
+
+            const c = data.centroid || { x: 0, y: 0, z: 0 };
+            const userPos = new THREE.Vector3(c.x * SCALE, c.y * SCALE, c.z * SCALE);
+            const userMesh = createUserNode(userPos, data.query || '');
+            // Hidden until overview camera lands — then appear + ripple + gravity
+            userMesh.material.opacity = 0;
+            if (userMesh.userData.glowMat) userMesh.userData.glowMat.opacity = 0;
+            if (userMesh.userData.edgeRingMat) userMesh.userData.edgeRingMat.opacity = 0;
+            if (userMesh.userData.labelEl && userMesh.userData.labelObj) {
+                setOverlayHidden(userMesh.userData.labelEl, userMesh.userData.labelObj, true, 0);
+            }
+
+            const related = new Map();
+            const edges = [];
+            const pullIds = [];
+            const pendingPulls = [];
+
+            for (const hit of data.hits) {
+                const mesh = meshById[hit.id];
+                if (!mesh) continue;
+                related.set(hit.id, {
+                    score: hit.score || 0,
+                    reasons: hit.reasons || [],
+                    type: hit.type || mesh.userData.type,
+                });
+                mesh.userData.exploreReasons = hit.reasons || [];
+
+                revealNode(mesh, { animate: false, pin: true });
+                mesh.visible = true;
+                // Lecture nodes must stay fully opaque when related
+                if (mesh.userData.type === 'course') {
+                    mesh.material.opacity = 1.0;
+                    if (mesh.userData.glowMat) mesh.userData.glowMat.opacity = 0.35;
+                } else {
+                    mesh.material.opacity = Math.max(mesh.material.opacity || 0, 0.9);
+                }
+
+                const home = homePosFor(mesh);
+                const pull = GRAVITY_PULL_BASE + (hit.score || 0) * GRAVITY_PULL_SCORE;
+                const target = home.clone().lerp(userPos, Math.min(0.85, pull));
+                pendingPulls.push({ mesh, target });
+                pullIds.push(hit.id);
+
+                const edge = createUserEdge(userMesh, mesh, hit);
+                edge.line.visible = false;
+                edge.material.opacity = 0;
+                edges.push(edge);
+            }
+
+            textExplore = {
+                query: data.query || '',
+                userMesh,
+                edges,
+                related,
+                pullIds,
+            };
+
+            exploreSession.lastTextQuery = data.query || '';
+            exploreSession.lastTextHitCount = related.size;
+            exploreSession.lastTextHitIds = Array.from(related.keys());
+            exploreSession.textExploreStartedAt = new Date().toISOString();
+            scheduleSurveyNudge();
+
+            // Overview points: user + related homes (full scene of the pull)
+            const overviewPts = [
+                userPos.clone(),
+                ...pullIds.map((id) => {
+                    const m = meshById[id];
+                    return homePosFor(m) || (m && m.position.clone());
+                }).filter(Boolean),
+            ];
+
+            const beginAppearSequence = () => {
+                if (!textExplore || textExplore.userMesh !== userMesh) return;
+
+                userMesh.visible = true;
+                userMesh.material.opacity = 0.95;
+                if (userMesh.userData.glowMat) userMesh.userData.glowMat.opacity = 0.28;
+                if (userMesh.userData.edgeRingMat) userMesh.userData.edgeRingMat.opacity = 0.55;
+                if (userMesh.userData.labelEl && userMesh.userData.labelObj) {
+                    setOverlayHidden(
+                        userMesh.userData.labelEl,
+                        userMesh.userData.labelObj,
+                        false,
+                        1
+                    );
+                }
+
+                for (let i = 0; i < RIPPLE_COUNT; i++) {
+                    spawnRipple(userPos, i * 0.18);
+                }
+
+                for (const p of pendingPulls) {
+                    pushPosTween(p.mesh, p.target, GRAVITY_DURATION);
+                }
+                for (const ue of edges) {
+                    ue.line.visible = true;
+                    ue.material.opacity = Math.max(0.2, 0.2 + (ue.score || 0) * 0.8);
+                }
+
+                applyLodVisibility();
+                showToast(
+                    `自分ノードを配置 — 関連 ${related.size} 件を引き寄せています`,
+                    3200
+                );
+
+                // Soft focus after gravity + ripple window
+                const focusMs = (GRAVITY_DURATION + EXPLORE_CAM_FOCUS_DELAY) * 1000;
+                exploreFocusTimer = setTimeout(() => {
+                    exploreFocusTimer = null;
+                    if (!textExplore || textExplore.userMesh !== userMesh) return;
+                    const focusPts = [
+                        userPos.clone(),
+                        ...pullIds.slice(0, 10).map((id) => {
+                            const m = meshById[id];
+                            return m ? m.position.clone() : null;
+                        }).filter(Boolean),
+                    ];
+                    flyToPoints(focusPts, {
+                        distance: EXPLORE_CAM_FOCUS_DIST,
+                        duration: EXPLORE_CAM_FOCUS_DUR,
+                    });
+                }, focusMs);
+            };
+
+            // Step 1: pull camera to far overview, then run appear / ripple / gravity
+            flyToPoints(overviewPts, {
+                distance: EXPLORE_CAM_OVERVIEW_DIST,
+                duration: EXPLORE_CAM_OVERVIEW_DUR,
+                onComplete: beginAppearSequence,
+            });
+            applyLodVisibility();
+            updateEmptyHint();
+        }
+
+        function updatePosTweens(dt) {
+            if (!posTweens.length) return;
+            const touched = new Set();
+            for (let i = posTweens.length - 1; i >= 0; i--) {
+                const a = posTweens[i];
+                a.t += dt;
+                const u = Math.min(1, a.t / a.dur);
+                const e = easeInOut(u);
+                a.mesh.position.lerpVectors(a.from, a.to, e);
+                touched.add(a.mesh.userData.id);
+                if (u >= 1) {
+                    a.mesh.position.copy(a.to);
+                    if (a.onDone) a.onDone();
+                    posTweens.splice(i, 1);
+                }
+            }
+            if (touched.size) refreshEdgesForNodes(touched);
+        }
+
+        function updateRipples(dt) {
+            for (let i = ripples.length - 1; i >= 0; i--) {
+                const r = ripples[i];
+                r.t += dt;
+                if (r.t < 0) {
+                    r.mesh.visible = false;
+                    continue;
+                }
+                r.mesh.visible = true;
+                const u = Math.min(1, r.t / r.dur);
+                const scale = 0.4 + r.maxScale * easeInOut(u);
+                r.mesh.scale.set(scale, scale, scale);
+                r.mesh.material.opacity = 0.55 * (1 - u);
+                r.mesh.lookAt(camera.position);
+                if (u >= 1) {
+                    scene.remove(r.mesh);
+                    r.mesh.geometry.dispose();
+                    r.mesh.material.dispose();
+                    ripples.splice(i, 1);
+                }
+            }
+        }
+
+        function pickUserEdge(event) {
+            if (!textExplore || !textExplore.edges.length) return null;
+            mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
+            mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
+            raycaster.setFromCamera(mouse, camera);
+            raycaster.params.Line = raycaster.params.Line || {};
+            raycaster.params.Line.threshold = 0.45;
+            const lines = textExplore.edges.map(e => e.line);
+            const hits = raycaster.intersectObjects(lines, false);
+            if (!hits.length) return null;
+            const line = hits[0].object;
+            return textExplore.edges.find(e => e.line === line) || null;
+        }
+
         function resetExploration() {
-            hideAllNetwork();
+            // Restore pulled nodes smoothly, fully destroy user node / edges / ripples
+            clearTextExplore({ restorePositions: true, animateRestore: true });
+            hideAllNetwork({ clearExplore: false });
             clearTrail();
             setTrailFilter(false);
+            clearSelection();
+            if (exploreFocusTimer != null) {
+                clearTimeout(exploreFocusTimer);
+                exploreFocusTimer = null;
+            }
             camTween = null;
             camera.position.set(0, 40, 165);
             controls.target.set(0, 0, 0);
-            document.getElementById('search-input').value = '';
+            const si = document.getElementById('search-input');
+            if (si) si.value = '';
+            const ti = document.getElementById('text-explore-input');
+            if (ti) ti.value = '';
             document.querySelectorAll('.tag-btn').forEach(b => b.classList.remove('active'));
+            lastQueryTerms = [];
+            clearEdgeHoverHighlight();
             hideHoverTip();
+            // Ensure every node eventually lands on home (tweens already queued)
+            const allIds = new Set(nodeMeshes.map(m => m.userData.id));
+            for (const mesh of nodeMeshes) {
+                const home = homePosFor(mesh);
+                if (!home) continue;
+                // If no restore tween was queued for this mesh, snap now
+                const tweening = posTweens.some(t => t.mesh === mesh);
+                if (!tweening) mesh.position.copy(home);
+            }
+            refreshEdgesForNodes(allIds);
+            applyLodVisibility();
+            updateVisibleLabelDistances();
+            showEmptyHintGuide({ restartTimer: true });
+            showOpGuide({ restartTimer: true });
             showToast('遠景に戻りました（分野ランドマークは表示中）');
         }
 
@@ -1406,11 +3122,26 @@
                 : node.type === 'course' ? '講義'
                 : node.type === 'major' ? '大分野'
                 : node.type === 'field' ? '研究分野'
+                : node.type === 'user' ? '自分の関心'
                 : (node.type || '—');
             nameEl.textContent = node.name || node.id || 'Unknown';
 
             const preview = node.text_preview || node.description || '';
             let html = '';
+
+            if (node.type === 'user') {
+                html += `<div class="info-block"><div class="info-label">入力内容</div>`
+                    + `<div class="info-value">${escapeHtml(preview || '—')}</div></div>`;
+                const reasons = node.reasons || [];
+                if (reasons.length) {
+                    html += `<div class="info-block"><div class="info-label">位置づけ</div>`
+                        + `<div class="info-value">${escapeHtml(reasons.join(' / '))}</div></div>`;
+                }
+                panelBody.innerHTML = html;
+                infoPanel.style.display = 'block';
+                dismissGuideEl(emptyHint, { animate: true, kind: 'empty' });
+                return;
+            }
 
             if (node.type === 'professor') {
                 const researchUrl = (node.researchmap_url || '').trim();
@@ -1542,6 +3273,268 @@
             startExploration(parseQuery(q), q.trim());
         });
 
+        document.getElementById('text-explore-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const q = document.getElementById('text-explore-input').value;
+            startTextExploration(q);
+        });
+
+        document.querySelectorAll('#explore-mode-toggle button').forEach(btn => {
+            btn.addEventListener('click', () => {
+                setExploreMode(btn.getAttribute('data-mode') || 'keyword');
+            });
+        });
+        setExploreMode('keyword');
+
+        // --- Setup modal (mode picker overlay) ---
+        const setupModal = document.getElementById('setup-modal');
+        const surveyModal = document.getElementById('survey-modal');
+        const surveyNudge = document.getElementById('survey-nudge');
+
+        function openOverlay(el) {
+            if (!el) return;
+            el.classList.add('is-open');
+            el.setAttribute('aria-hidden', 'false');
+        }
+
+        function closeOverlay(el) {
+            if (!el) return;
+            el.classList.remove('is-open');
+            el.setAttribute('aria-hidden', 'true');
+        }
+
+        function openSetupModal() {
+            closeOverlay(surveyModal);
+            hideSurveyNudge();
+            openOverlay(setupModal);
+        }
+
+        function closeSetupModal() {
+            closeOverlay(setupModal);
+            setupCompleted = true;
+        }
+
+        function applySetupMode(mode) {
+            const next = mode === 'text' ? 'text' : 'keyword';
+            closeSetupModal();
+            setExploreMode(next);
+            // Focus the relevant input after the modal fade
+            setTimeout(() => {
+                if (next === 'text') {
+                    const ta = document.getElementById('text-explore-input');
+                    if (ta) { ta.focus(); ta.select(); }
+                } else {
+                    const si = document.getElementById('search-input');
+                    if (si) { si.focus(); si.select(); }
+                }
+            }, 320);
+        }
+
+        document.querySelectorAll('[data-setup-mode]').forEach((btn) => {
+            btn.addEventListener('click', () => {
+                applySetupMode(btn.getAttribute('data-setup-mode') || 'keyword');
+            });
+        });
+        document.getElementById('mode-change-btn').addEventListener('click', () => {
+            openSetupModal();
+        });
+
+        // --- Survey / feedback ---
+        function buildStarRow(containerId, key) {
+            const row = document.getElementById(containerId);
+            if (!row) return;
+            row.innerHTML = '';
+            for (let i = 1; i <= 5; i++) {
+                const b = document.createElement('button');
+                b.type = 'button';
+                b.className = 'star-btn';
+                b.dataset.value = String(i);
+                b.setAttribute('aria-label', `${i}`);
+                b.textContent = '★';
+                b.addEventListener('click', () => {
+                    surveyRatings[key] = i;
+                    row.querySelectorAll('.star-btn').forEach((el) => {
+                        const v = Number(el.dataset.value);
+                        el.classList.toggle('is-on', v <= i);
+                    });
+                    const err = document.getElementById('survey-error');
+                    if (err) err.textContent = '';
+                });
+                row.appendChild(b);
+            }
+        }
+
+        function resetSurveyForm() {
+            surveyRatings = { score: 0, recommend: 0 };
+            buildStarRow('survey-score-stars', 'score');
+            buildStarRow('survey-recommend-stars', 'recommend');
+            document.querySelectorAll('#survey-form input[name="found"]').forEach((el) => {
+                el.checked = false;
+            });
+            const comment = document.getElementById('survey-comment');
+            if (comment) comment.value = '';
+            const err = document.getElementById('survey-error');
+            if (err) err.textContent = '';
+            const submitBtn = document.getElementById('survey-submit');
+            if (submitBtn) {
+                submitBtn.disabled = false;
+                submitBtn.textContent = '送信する';
+            }
+        }
+
+        function hideSurveyNudge() {
+            if (surveyNudge) surveyNudge.classList.remove('is-open');
+        }
+
+        function showSurveyNudge() {
+            if (!surveyNudge || surveyModal.classList.contains('is-open')) return;
+            surveyNudge.classList.add('is-open');
+        }
+
+        function scheduleSurveyNudge() {
+            if (surveyNudgeTimer != null) clearTimeout(surveyNudgeTimer);
+            surveyNudgeTimer = setTimeout(() => {
+                surveyNudgeTimer = null;
+                showSurveyNudge();
+            }, SURVEY_NUDGE_DELAY_MS);
+        }
+
+        function openSurveyModal() {
+            hideSurveyNudge();
+            closeOverlay(setupModal);
+            resetSurveyForm();
+            openOverlay(surveyModal);
+        }
+
+        function closeSurveyModal() {
+            closeOverlay(surveyModal);
+        }
+
+        function collectExploreLog() {
+            return {
+                mode: exploreMode === 'text' ? '文章入力モード' : 'キーワードモード',
+                input_text: exploreMode === 'text'
+                    ? (exploreSession.lastTextQuery
+                        || (document.getElementById('text-explore-input') || {}).value
+                        || '')
+                    : (exploreSession.lastKeywordQuery
+                        || (document.getElementById('search-input') || {}).value
+                        || ''),
+                trail: trail.map((t) => ({ id: t.id, name: t.name, type: t.type })),
+                related_hit_count: exploreSession.lastTextHitCount,
+                related_hit_ids: exploreSession.lastTextHitIds.slice(0, 40),
+                text_explore_started_at: exploreSession.textExploreStartedAt,
+            };
+        }
+
+        async function submitSurvey(ev) {
+            ev.preventDefault();
+            const err = document.getElementById('survey-error');
+            if (!surveyRatings.score) {
+                if (err) err.textContent = '発見度（質問1）を選んでください。';
+                return;
+            }
+            if (!surveyRatings.recommend) {
+                if (err) err.textContent = 'おすすめ度（質問3）を選んでください。';
+                return;
+            }
+            let found = Array.from(
+                document.querySelectorAll('#survey-form input[name="found"]:checked')
+            ).map((el) => el.value);
+            if (!found.length) {
+                if (err) err.textContent = '見つかった情報（質問2）を1つ以上選んでください。';
+                return;
+            }
+            if (found.includes('特にない') && found.length > 1) {
+                found = ['特にない'];
+            }
+
+            const log = collectExploreLog();
+            const payload = {
+                timestamp: new Date().toISOString(),
+                mode: log.mode,
+                input_text: log.input_text,
+                score: surveyRatings.score,
+                recommend: surveyRatings.recommend,
+                found_items: found,
+                comment: (document.getElementById('survey-comment') || {}).value || '',
+                explore_log: log,
+            };
+
+            const submitBtn = document.getElementById('survey-submit');
+            if (submitBtn) {
+                submitBtn.disabled = true;
+                submitBtn.textContent = '送信中…';
+            }
+            if (err) err.textContent = '';
+
+            try {
+                const res = await fetch('/api/survey', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload),
+                });
+                const data = await res.json().catch(() => ({}));
+                if (!res.ok || !data.ok) {
+                    throw new Error(data.error || `送信に失敗しました (${res.status})`);
+                }
+                // Also keep a local copy as fallback / offline mirror
+                try {
+                    const key = 'faculty_net_survey_results';
+                    const prev = JSON.parse(localStorage.getItem(key) || '[]');
+                    prev.push(payload);
+                    localStorage.setItem(key, JSON.stringify(prev));
+                } catch (_) { /* ignore quota */ }
+
+                closeSurveyModal();
+                showToast('フィードバックありがとうございました！', 3200);
+            } catch (e) {
+                console.error(e);
+                if (err) err.textContent = String(e.message || e);
+                if (submitBtn) {
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = '送信する';
+                }
+            }
+        }
+
+        document.getElementById('survey-fab').addEventListener('click', openSurveyModal);
+        document.getElementById('survey-nudge-open').addEventListener('click', openSurveyModal);
+        document.getElementById('survey-nudge-dismiss').addEventListener('click', hideSurveyNudge);
+        document.getElementById('survey-cancel').addEventListener('click', closeSurveyModal);
+        document.getElementById('survey-close-x').addEventListener('click', closeSurveyModal);
+        document.getElementById('survey-form').addEventListener('submit', submitSurvey);
+
+        // 「特にない」とその他は排他
+        document.querySelectorAll('#survey-form input[name="found"]').forEach((el) => {
+            el.addEventListener('change', () => {
+                const none = document.querySelector('#survey-form input[name="found"][data-none]');
+                if (!none) return;
+                if (el === none && none.checked) {
+                    document.querySelectorAll('#survey-form input[name="found"]:not([data-none])')
+                        .forEach((o) => { o.checked = false; });
+                } else if (el !== none && el.checked && none.checked) {
+                    none.checked = false;
+                }
+            });
+        });
+
+        // Escape closes topmost overlay
+        window.addEventListener('keydown', (e) => {
+            if (e.key !== 'Escape') return;
+            if (surveyModal.classList.contains('is-open')) {
+                closeSurveyModal();
+                e.preventDefault();
+            } else if (setupModal.classList.contains('is-open') && setupCompleted) {
+                closeSetupModal();
+                e.preventDefault();
+            }
+        });
+
+        buildStarRow('survey-score-stars', 'score');
+        buildStarRow('survey-recommend-stars', 'recommend');
+        // Keep setup modal open on first paint (HTML already has is-open)
+
         document.getElementById('reset-btn').addEventListener('click', resetExploration);
 
         document.querySelectorAll('#label-mode-toggle button').forEach(btn => {
@@ -1603,7 +3596,8 @@
             mesh.position.copy(node.vec3);
             mesh.userData = node;
             mesh.userData.baseColor = isMajor ? MAJOR_COLOR : FIELD_COLOR;
-            mesh.userData.raycastable = false; // never block professor/course picks
+            // Fields are pickable via raycast (mid nodes are preferred first in pickVisibleNode)
+            mesh.userData.raycastable = true;
             mesh.visible = true;
 
             const labelEl = document.createElement('div');
@@ -1761,18 +3755,39 @@
 
             // Pass 2: courses (near) — by own position in space; global + per-instructor caps
             const courseCandidates = [];
+            const exploreRel = textExplore && textExplore.related ? textExplore.related : null;
             for (const mesh of courseMeshes) {
                 const fading = fadeAnims.some(a => a.kind === 'node' && a.mesh === mesh);
                 if (fading) continue;
                 const pinned = searchPinned.has(mesh.userData.id);
+                const exploreHit = !!(exploreRel && exploreRel.has(mesh.userData.id));
+                const exploreCtx = exploreContextIds.has(mesh.userData.id);
                 let alpha = courseLodAlpha(mesh);
-                if (pinned) alpha = Math.max(alpha, 0.65);
+                if (exploreHit) {
+                    // Related lectures stay fully visible even from overview distance
+                    alpha = 1.0;
+                } else if (exploreCtx) {
+                    alpha = Math.max(alpha, 0.72);
+                } else if (pinned) {
+                    alpha = Math.max(alpha, 0.65);
+                }
                 if (visited && visited.has(mesh.userData.id)) alpha = Math.max(alpha, 0.8);
-                if (alpha > 0.05 || pinned || (visited && visited.has(mesh.userData.id))) {
+                if (
+                    alpha > 0.05
+                    || pinned
+                    || exploreHit
+                    || exploreCtx
+                    || (visited && visited.has(mesh.userData.id))
+                ) {
                     courseCandidates.push({
                         mesh,
                         alpha,
-                        pinned: pinned || !!(visited && visited.has(mesh.userData.id)),
+                        pinned: pinned
+                            || exploreHit
+                            || exploreCtx
+                            || !!(visited && visited.has(mesh.userData.id)),
+                        exploreHit,
+                        exploreCtx,
                         dist: camera.position.distanceTo(mesh.position),
                         instructorId: mesh.userData.instructor_id || '',
                     });
@@ -1808,9 +3823,21 @@
                 const show = keep.has(mesh.userData.id);
                 const alpha = show ? row.alpha : 0;
                 mesh.visible = show && alpha > 0.05;
-                mesh.material.opacity = mesh.visible ? alpha * 0.95 : 0;
-                if (mesh.userData.glowMat) {
-                    mesh.userData.glowMat.opacity = mesh.visible ? alpha * 0.22 : 0;
+                if (row.exploreHit && show) {
+                    // Related lecture: force opaque (do not apply LoD fade multiplier)
+                    mesh.material.opacity = 1.0;
+                    if (mesh.userData.glowMat) mesh.userData.glowMat.opacity = 0.35;
+                } else if (row.exploreCtx && show) {
+                    // Field-expand context: readable but below search hits
+                    mesh.material.opacity = EXPLORE_CONTEXT_OPACITY;
+                    if (mesh.userData.glowMat) {
+                        mesh.userData.glowMat.opacity = EXPLORE_CONTEXT_GLOW;
+                    }
+                } else {
+                    mesh.material.opacity = mesh.visible ? alpha * 0.95 : 0;
+                    if (mesh.userData.glowMat) {
+                        mesh.userData.glowMat.opacity = mesh.visible ? alpha * 0.22 : 0;
+                    }
                 }
                 syncNodeLabel(mesh);
             }
@@ -2023,6 +4050,176 @@
                 }
             }
 
+            // --- Free-text explore: keep related nodes vivid; dim the rest ---
+            if (textExplore && textExplore.related) {
+                const rel = textExplore.related;
+                if (textExplore.userMesh) {
+                    const um = textExplore.userMesh;
+                    // Keep hidden until appear sequence raises opacity
+                    if ((um.material.opacity || 0) > 0.05) {
+                        um.visible = true;
+                        um.material.opacity = 0.95;
+                        if (um.userData.glowMat) um.userData.glowMat.opacity = 0.28;
+                        if (um.userData.edgeRing) {
+                            um.userData.edgeRingPhase =
+                                (um.userData.edgeRingPhase || 0) + 0.04;
+                            const pulse = 0.45 + 0.2 * Math.sin(um.userData.edgeRingPhase);
+                            if (um.userData.edgeRingMat) {
+                                um.userData.edgeRingMat.opacity = pulse;
+                            }
+                            um.userData.edgeRing.lookAt(camera.position);
+                        }
+                    }
+                }
+                for (const mesh of nodeMeshes) {
+                    const id = mesh.userData.id;
+                    if (rel.has(id)) {
+                        mesh.visible = true;
+                        const score = rel.get(id).score || 0.6;
+                        const isCourse = mesh.userData.type === 'course';
+                        if (isCourse) {
+                            mesh.material.opacity = 1.0;
+                        } else {
+                            mesh.material.opacity = Math.max(
+                                mesh.material.opacity || 0,
+                                0.75 + score * 0.25
+                            );
+                        }
+                        if (mesh.userData.billboardEl) {
+                            mesh.userData.billboardEl.style.opacity = '1';
+                            mesh.userData.billboardEl.style.display = '';
+                        }
+                        if (mesh.userData.glowMat) {
+                            mesh.userData.glowMat.opacity = Math.max(
+                                mesh.userData.glowMat.opacity || 0,
+                                isCourse ? 0.35 : 0.28
+                            );
+                        }
+                        // Force lecture labels unhidden while related
+                        if (isCourse && mesh.userData.labelEl && mesh.userData.labelObj) {
+                            setOverlayHidden(
+                                mesh.userData.labelEl,
+                                mesh.userData.labelObj,
+                                false,
+                                1
+                            );
+                            mesh.userData.labelEl.classList.add('trail-active');
+                            mesh.userData.labelEl.classList.remove('trail-dim');
+                        }
+                        syncNodeLabel(mesh);
+                    } else if (
+                        exploreContextIds.has(id)
+                        || (selectedNode && selectedNode.userData.id === id)
+                    ) {
+                        // Field/professor expand: visible, but softer than search hits
+                        mesh.visible = true;
+                        if (isLandmark(mesh.userData)) {
+                            // Keep selected / context field wire readable
+                            mesh.material.opacity = Math.max(
+                                mesh.material.opacity || 0,
+                                0.35
+                            );
+                        } else {
+                            mesh.material.opacity = Math.min(
+                                Math.max(
+                                    mesh.material.opacity || 0,
+                                    EXPLORE_CONTEXT_OPACITY
+                                ),
+                                EXPLORE_CONTEXT_OPACITY + 0.08
+                            );
+                        }
+                        if (mesh.userData.billboardEl) {
+                            mesh.userData.billboardEl.style.display = '';
+                            mesh.userData.billboardEl.style.opacity = String(
+                                EXPLORE_CONTEXT_LABEL_OP
+                            );
+                        }
+                        if (mesh.userData.glowMat) {
+                            mesh.userData.glowMat.opacity = Math.min(
+                                Math.max(
+                                    mesh.userData.glowMat.opacity || 0,
+                                    EXPLORE_CONTEXT_GLOW
+                                ),
+                                EXPLORE_CONTEXT_GLOW + 0.06
+                            );
+                        }
+                        syncNodeLabel(mesh);
+                    } else if (isLandmark(mesh.userData)) {
+                        // Other fields stay navigable (not crushed to EXPLORE_DIM)
+                        mesh.visible = true;
+                        mesh.material.opacity = Math.min(
+                            Math.max(mesh.material.opacity || 0, 0.22),
+                            0.40
+                        );
+                        applyOverlayVisibility(mesh);
+                    } else {
+                        mesh.material.opacity = Math.min(
+                            mesh.material.opacity || 0,
+                            EXPLORE_DIM
+                        );
+                        if (mesh.userData.glowMat) {
+                            mesh.userData.glowMat.opacity = Math.min(
+                                mesh.userData.glowMat.opacity || 0,
+                                EXPLORE_DIM * 0.4
+                            );
+                        }
+                        if ((mesh.material.opacity || 0) < 0.03) {
+                            mesh.visible = false;
+                        }
+                        // Hide text overlays for non-related nodes (billboards + labels)
+                        applyOverlayVisibility(mesh);
+                    }
+                }
+                for (const rec of edgeRecords) {
+                    if (!rec.line.visible) continue;
+                    const srcRel = rel.has(rec.source);
+                    const tgtRel = rel.has(rec.target);
+                    const srcCtx = exploreContextIds.has(rec.source);
+                    const tgtCtx = exploreContextIds.has(rec.target);
+                    if (srcRel && tgtRel) continue; // keep vivid
+                    if ((srcRel || srcCtx || isLandmark(meshById[rec.source]?.userData))
+                        && (tgtRel || tgtCtx || isLandmark(meshById[rec.target]?.userData))) {
+                        // Context / field membership edges stay readable
+                        rec.material.opacity = Math.max(
+                            rec.material.opacity || 0,
+                            EXPLORE_CONTEXT_EDGE_OP
+                        );
+                        rec.material.opacity = Math.min(
+                            rec.material.opacity,
+                            EXPLORE_CONTEXT_EDGE_OP + 0.12
+                        );
+                        continue;
+                    }
+                    rec.material.opacity = Math.min(
+                        rec.material.opacity || 0,
+                        EXPLORE_DIM
+                    );
+                }
+                for (const ue of textExplore.edges) {
+                    ue.line.visible = true;
+                    ue.material.opacity = Math.max(
+                        0.2,
+                        0.2 + (ue.score || 0) * 0.8
+                    );
+                }
+                if (textExplore.userMesh) applyLabelDistance(textExplore.userMesh);
+            }
+
+            // Keep edge-hover emphasis alive across LoD frames
+            if (hoveredRelationEdge && hoveredRelationEdge.line && hoveredRelationEdge.line.visible) {
+                hoveredRelationEdge.material.color.setHex(EDGE_HOVER_COLOR);
+                hoveredRelationEdge.material.opacity = 1;
+                for (const m of edgeHoverEndpoints) {
+                    if (m && m !== selectedNode) {
+                        m.scale.set(
+                            EDGE_HOVER_ENDPOINT_SCALE,
+                            EDGE_HOVER_ENDPOINT_SCALE,
+                            EDGE_HOVER_ENDPOINT_SCALE
+                        );
+                    }
+                }
+            }
+
             updateEmptyHint();
         }
 
@@ -2061,8 +4258,18 @@
                     meshById[node.id] = mesh;
                 });
 
+                captureHomePositions();
+
                 // Course positions come from joint syllabus UMAP (Analysis);
                 // do not re-orbit them around instructors.
+
+                // Fit solid/dashed/dotted cutoffs to this corpus (scores cluster high)
+                calibrateEdgeStyleThresholds(
+                    (data.edges || [])
+                        .filter(e => (e.type || 'similarity') === 'similarity'
+                            || e.type === 'course_field')
+                        .map(e => Number(e.similarity ?? e.score ?? 0) || 0)
+                );
 
                 data.edges.forEach(edge => {
                     const source = nodeDict[edge.source];
@@ -2073,52 +4280,19 @@
                     const type = edge.type || 'similarity';
                     const geo = new THREE.BufferGeometry().setFromPoints([source.vec3, target.vec3]);
 
-                    let mat;
-                    let line;
-                    if (type === 'similarity') {
-                        mat = new THREE.LineDashedMaterial({
-                            color: 0x7eb8d4,
-                            transparent: true,
-                            opacity: 0,
-                            dashSize: 0.55,
-                            gapSize: 0.4,
-                            depthWrite: false,
-                        });
-                        line = new THREE.Line(geo, mat);
-                        line.computeLineDistances();
-                        line.renderOrder = 0;
-                    } else if (type === 'field_hierarchy') {
-                        mat = new THREE.LineBasicMaterial({
-                            color: 0x5a7a90,
-                            transparent: true,
-                            opacity: 0.22,
-                            depthWrite: false,
-                        });
-                        line = new THREE.Line(geo, mat);
-                        line.renderOrder = 0;
-                        line.visible = true;
-                    } else if (type === 'belongs_to_field') {
-                        mat = new THREE.LineBasicMaterial({
-                            color: 0xc4a06a,
-                            transparent: true,
-                            opacity: 0,
-                            depthWrite: false,
-                        });
-                        line = new THREE.Line(geo, mat);
-                        line.renderOrder = 1;
-                        line.visible = false;
+                    const { mat, style, needsDash } = makeEdgeMaterial(type, score);
+                    const line = new THREE.Line(geo, mat);
+                    if (needsDash) line.computeLineDistances();
+                    line.renderOrder = (type === 'similarity' || type === 'field_hierarchy') ? 0 : 1;
+                    line.visible = type === 'field_hierarchy';
+                    if (type === 'field_hierarchy') {
+                        mat.opacity = 0.22; // background — below interact threshold
+                        line.userData.isInteractive = false;
+                        line.userData.isHighlighted = false;
+                    }
+                    if (type === 'belongs_to_field') {
                         if (!fieldMemberIds.has(edge.target)) fieldMemberIds.set(edge.target, new Set());
                         fieldMemberIds.get(edge.target).add(edge.source);
-                    } else {
-                        mat = new THREE.LineBasicMaterial({
-                            color: 0xc8cdd4,
-                            transparent: true,
-                            opacity: 0,
-                            depthWrite: false,
-                        });
-                        line = new THREE.Line(geo, mat);
-                        line.renderOrder = 1;
-                        line.visible = false;
                     }
                     scene.add(line);
 
@@ -2132,7 +4306,11 @@
                         pinned: false,
                         baseColor: mat.color.getHex(),
                         baseLinewidth: mat.linewidth != null ? mat.linewidth : 1,
+                        lineStyle: style,
                     };
+                    line.userData.kind = 'relation_edge';
+                    line.userData.edgeRec = rec;
+                    enrichEdgeMeta(rec, []);
                     edgeRecords.push(rec);
                     ensureEdgeIndex(edge.source).push(rec);
                     ensureEdgeIndex(edge.target).push(rec);
@@ -2142,6 +4320,8 @@
                 camera.position.set(0, 40, 165);
                 applyLodVisibility();
                 updateVisibleLabelDistances();
+                showEmptyHintGuide({ restartTimer: true });
+                showOpGuide({ restartTimer: true });
                 const nField = fieldMeshes.length;
                 const nProf = professorMeshes.length;
                 const nCourse = courseMeshes.length;
@@ -2156,13 +4336,25 @@
             mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
             mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
             raycaster.setFromCamera(mouse, camera);
-            // Field/major wireframes are never pickable — professors & courses stay clickable inside.
-            const pickable = midMeshes.filter(
-                m => m.visible && (m.material.opacity || 0) > 0.08
+
+            const opMinMid = 0.04;
+            const opMinField = 0.025;
+            const midPickable = midMeshes.filter(
+                m => m.visible && (m.material.opacity || 0) > opMinMid
             );
-            // Enlarge pick threshold slightly when near so dense clusters remain usable
-            raycaster.params.Points = raycaster.params.Points || {};
-            const hits = raycaster.intersectObjects(pickable, false);
+            // Prefer professors / courses so large field wireframes don't steal hits
+            let hits = raycaster.intersectObjects(midPickable, false);
+            if (hits.length) return hits[0].object;
+
+            if (textExplore && textExplore.userMesh && textExplore.userMesh.visible) {
+                hits = raycaster.intersectObjects([textExplore.userMesh], false);
+                if (hits.length) return hits[0].object;
+            }
+
+            const fieldPickable = fieldMeshes.filter(
+                m => m.visible && (m.material.opacity || 0) > opMinField
+            );
+            hits = raycaster.intersectObjects(fieldPickable, false);
             return hits.length ? hits[0].object : null;
         }
 
@@ -2170,10 +4362,20 @@
             if (leftPanel.contains(event.target) || infoPanel.contains(event.target)) {
                 return true;
             }
-            // Field/major CSS2D labels are interactive HTML — don't treat as canvas picks.
+            // Only interactive (non-dimmed) field/major labels count as UI hits.
             const t = event.target;
-            if (t && t.closest && t.closest('.node-label.field, .node-label.major')) {
-                return true;
+            if (t && t.closest) {
+                const lab = t.closest('.node-label.field, .node-label.major');
+                if (lab) {
+                    if (lab.classList.contains('hidden-label') || lab.style.display === 'none') {
+                        return false;
+                    }
+                    // Dimmed labels must not block canvas picking of professors/courses
+                    if (lab.classList.contains('trail-dim')) return false;
+                    const op = parseFloat(lab.style.opacity || '1');
+                    if (op < 0.2) return false;
+                    return true;
+                }
             }
             return false;
         }
@@ -2181,26 +4383,79 @@
         window.addEventListener('mousemove', (event) => {
             if (isUiEvent(event)) {
                 document.body.style.cursor = 'default';
+                clearEdgeHoverHighlight();
                 hideHoverTip();
                 return;
             }
             const object = pickVisibleNode(event);
             if (object) {
+                if (hoveredRelationEdge) clearEdgeHoverHighlight();
                 if (hoveredNode && hoveredNode !== object && hoveredNode !== selectedNode) {
                     hoveredNode.scale.set(1, 1, 1);
                 }
                 hoveredNode = object;
                 if (object !== selectedNode) object.scale.set(1.4, 1.4, 1.4);
                 document.body.style.cursor = 'pointer';
-                showHoverTip(object.userData, event.clientX, event.clientY);
-            } else {
+                const reasons = object.userData.exploreReasons
+                    || (textExplore && textExplore.related.get(object.userData.id)?.reasons);
+                showHoverTip(object.userData, event.clientX, event.clientY, reasons);
+                return;
+            }
+
+            // Relation / user edges — show connection rationale
+            const edgeHit = pickRelationEdge(event);
+            if (edgeHit) {
                 if (hoveredNode && hoveredNode !== selectedNode) {
                     hoveredNode.scale.set(1, 1, 1);
                 }
                 hoveredNode = null;
-                document.body.style.cursor = 'default';
-                hideHoverTip();
+                document.body.style.cursor = 'pointer';
+                if (edgeHit.kind === 'relation') {
+                    applyEdgeHoverHighlight(edgeHit.rec);
+                    showEdgeHoverTip(edgeHit.rec, event.clientX, event.clientY);
+                } else {
+                    // user affinity edge
+                    clearEdgeHoverHighlight();
+                    hoveredUserEdge = edgeHit.rec;
+                    if (edgeHit.rec.material) {
+                        edgeHit.rec._hoverPrevOpacity = edgeHit.rec.material.opacity;
+                        edgeHit.rec.material.opacity = 1;
+                        if (edgeHit.rec.baseColor == null) {
+                            edgeHit.rec.baseColor = edgeHit.rec.material.color.getHex();
+                        }
+                        edgeHit.rec.material.color.setHex(EDGE_HOVER_COLOR);
+                    }
+                    const tgt = meshById[edgeHit.rec.targetId];
+                    if (tgt && tgt !== selectedNode) {
+                        tgt.scale.set(
+                            EDGE_HOVER_ENDPOINT_SCALE,
+                            EDGE_HOVER_ENDPOINT_SCALE,
+                            EDGE_HOVER_ENDPOINT_SCALE
+                        );
+                        edgeHoverEndpoints = [tgt];
+                    }
+                    showEdgeHoverTip(edgeHit.rec, event.clientX, event.clientY);
+                }
+                return;
             }
+
+            if (hoveredRelationEdge || hoveredUserEdge) {
+                if (hoveredUserEdge && hoveredUserEdge.material) {
+                    if (hoveredUserEdge.baseColor != null) {
+                        hoveredUserEdge.material.color.setHex(hoveredUserEdge.baseColor);
+                    }
+                    if (hoveredUserEdge._hoverPrevOpacity != null) {
+                        hoveredUserEdge.material.opacity = hoveredUserEdge._hoverPrevOpacity;
+                    }
+                }
+                clearEdgeHoverHighlight();
+            }
+            if (hoveredNode && hoveredNode !== selectedNode) {
+                hoveredNode.scale.set(1, 1, 1);
+            }
+            hoveredNode = null;
+            document.body.style.cursor = 'default';
+            hideHoverTip();
         });
 
         let pointerDown = null;
@@ -2218,12 +4473,29 @@
             }
             const object = pickVisibleNode(event);
             if (object) {
-                focusNode(object, { expand: true, recordTrail: true });
-            } else {
-                // Background click: clear selection / focus emphasis
-                clearSelection();
-                applyLodVisibility();
+                clearEdgeHoverHighlight();
+                focusNode(object, {
+                    expand: true,
+                    recordTrail: object.userData.type !== 'user',
+                    flyCamera: true,
+                });
+                return;
             }
+            // Tap edge (esp. mobile): keep rationale tip + emphasize endpoints
+            const edgeHit = pickRelationEdge(event);
+            if (edgeHit) {
+                if (edgeHit.kind === 'relation') {
+                    applyEdgeHoverHighlight(edgeHit.rec);
+                    showEdgeHoverTip(edgeHit.rec, event.clientX, event.clientY);
+                } else {
+                    showEdgeHoverTip(edgeHit.rec, event.clientX, event.clientY);
+                }
+                return;
+            }
+            // Background click: clear selection / focus emphasis
+            clearEdgeHoverHighlight();
+            clearSelection();
+            applyLodVisibility();
         });
 
         document.getElementById('panel-close').addEventListener('click', (e) => {
@@ -2269,7 +4541,11 @@
                 const e = easeInOut(u);
                 camera.position.lerpVectors(camTween.startPos, camTween.endPos, e);
                 controls.target.lerpVectors(camTween.startTarget, camTween.endTarget, e);
-                if (u >= 1) camTween = null;
+                if (u >= 1) {
+                    const done = camTween.onComplete;
+                    camTween = null;
+                    if (done) done();
+                }
             }
 
             for (let i = fadeAnims.length - 1; i >= 0; i--) {
@@ -2286,6 +4562,9 @@
                 }
                 if (u >= 1) fadeAnims.splice(i, 1);
             }
+
+            updatePosTweens(dt);
+            updateRipples(dt);
 
             controls.update();
             lodFrame += 1;
