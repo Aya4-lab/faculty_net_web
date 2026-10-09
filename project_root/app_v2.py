@@ -8,6 +8,9 @@ Serves display_data.json merged with Analysis-layer field landmarks:
 
 Usage (from project_root/):
   python app_v2.py
+
+Production (repo root):
+  gunicorn app:app --bind 0.0.0.0:$PORT --workers 1
 """
 
 from __future__ import annotations
@@ -15,11 +18,14 @@ from __future__ import annotations
 import csv
 import json
 import math
+import os
+import re
 import threading
 from datetime import datetime, timezone
 from pathlib import Path
 
-from flask import Flask, jsonify, request, send_from_directory
+from flask import Flask, Response, jsonify, request, send_from_directory
+from flask_cors import CORS
 
 import explore_engine
 
@@ -32,8 +38,14 @@ if not DISPLAY_JSON.exists():
 
 ANALYSIS = PROJECT_ROOT / "data" / "analysis"
 RAW_RIDB = PROJECT_ROOT / "data" / "raw" / "ridb"
-SURVEY_RESULTS_PATH = PROJECT_ROOT / "data" / "survey_results.json"
+# Alpha feedback / explore logs (under data/, not Raw/Analysis/Display)
+SURVEY_RESPONSES_PATH = PROJECT_ROOT / "data" / "survey_responses.json"
+LEGACY_SURVEY_PATH = PROJECT_ROOT / "data" / "survey_results.json"
 _SURVEY_LOCK = threading.Lock()
+
+BASIC_AUTH_USER = os.environ.get("BASIC_AUTH_USER", "user")
+BASIC_AUTH_PASSWORD = os.environ.get("BASIC_AUTH_PASSWORD", "alpha2026")
+_QUERY_SPLIT = re.compile(r"[\s　、,，/|]+")
 
 FIELD_COORDS_PATH = ANALYSIS / "field_coords.json"
 PROF_COORDS_PATH = ANALYSIS / "professor_coords_with_fields.json"
@@ -46,6 +58,35 @@ RIDB_FACULTY = RAW_RIDB / "ridb_yugo_faculty_ja.json"
 
 app = Flask(__name__, static_folder="web", static_url_path="/web")
 app.config["JSON_AS_ASCII"] = False
+CORS(app, resources={r"/api/*": {"origins": "*"}})
+
+
+def _check_basic_auth(auth) -> bool:
+    if auth is None:
+        return False
+    return (
+        auth.username == BASIC_AUTH_USER
+        and auth.password == BASIC_AUTH_PASSWORD
+    )
+
+
+def _unauthorized() -> Response:
+    return Response(
+        "Authentication required",
+        401,
+        {"WWW-Authenticate": 'Basic realm="Faculty Net Alpha"'},
+    )
+
+
+@app.before_request
+def require_basic_auth():
+    """Gate the whole app for alpha stakeholders (env-configurable)."""
+    # CORS preflight must pass without credentials challenge
+    if request.method == "OPTIONS":
+        return None
+    if not _check_basic_auth(request.authorization):
+        return _unauthorized()
+    return None
 
 
 def _position_to_dict(pos) -> dict:
@@ -522,22 +563,42 @@ def api_reload():
     )
 
 
-@app.get("/api/explore/status")
-def api_explore_status():
-    """Health check for free-text explore (embeddings + model)."""
-    return jsonify(explore_engine.status(ANALYSIS))
+def _parse_search_terms(query: str) -> list[str]:
+    return [t for t in _QUERY_SPLIT.split(query or "") if t.strip()]
 
 
-@app.post("/api/explore/text")
-def api_explore_text():
-    """
-    Free-text exploration (Analysis layer).
+def _node_search_blob(node: dict) -> str:
+    parts = [
+        node.get("name") or "",
+        *(node.get("keywords") or []),
+        *(node.get("subfield_keywords") or []),
+        node.get("description") or "",
+        node.get("text_preview") or "",
+        node.get("affiliation") or "",
+        node.get("instructor_name") or "",
+        node.get("major_name") or "",
+    ]
+    return "\n".join(str(p) for p in parts).lower()
 
-    Body JSON:
-      { "text": "...", "top_k": 24, "min_score": 0.55,
-        "types": ["field","professor","course"] }
-    """
-    payload = request.get_json(silent=True) or {}
+
+def _score_node_against_terms(node: dict, terms: list[str]) -> float:
+    blob = _node_search_blob(node)
+    score = 0.0
+    for term in terms:
+        t = term.strip().lower()
+        if not t:
+            continue
+        if t in (node.get("name") or "").lower():
+            score += 6
+        if any(t in str(k).lower() for k in (node.get("keywords") or [])):
+            score += 4
+        if t in blob:
+            score += 2
+    return score
+
+
+def _run_text_explore(payload: dict):
+    """Shared handler for /api/search/text and /api/explore/text."""
     text = (payload.get("text") or payload.get("query") or "").strip()
     if not text:
         return jsonify({"ok": False, "error": "text が空です"}), 400
@@ -563,6 +624,9 @@ def api_explore_text():
             min_score=min_score,
             types=types,
         )
+        # Explicit aliases for alpha API consumers
+        result.setdefault("user_position", result.get("centroid"))
+        result.setdefault("edges", result.get("user_edges") or [])
         return jsonify(result)
     except ValueError as exc:
         return jsonify({"ok": False, "error": str(exc)}), 400
@@ -577,14 +641,144 @@ def api_explore_text():
         ), 503
 
 
-def _load_survey_results() -> list:
-    if not SURVEY_RESULTS_PATH.exists():
+@app.get("/api/explore/status")
+def api_explore_status():
+    """Health check for free-text explore (embeddings + model)."""
+    return jsonify(explore_engine.status(ANALYSIS))
+
+
+@app.post("/api/search/keyword")
+def api_search_keyword():
+    """
+    Keyword search over the loaded network.
+
+    Body JSON:
+      { "keyword": "...", "query": "...", "limit": 40 }
+
+    Returns matching nodes (with scores) and edges among them.
+    """
+    payload = request.get_json(silent=True) or {}
+    query = (
+        payload.get("keyword")
+        or payload.get("query")
+        or payload.get("text")
+        or ""
+    ).strip()
+    if not query:
+        return jsonify({"ok": False, "error": "keyword が空です"}), 400
+
+    try:
+        limit = int(payload.get("limit", 40))
+    except (TypeError, ValueError):
+        limit = 40
+    limit = max(1, min(limit, 120))
+
+    terms = _parse_search_terms(query)
+    if not terms:
+        return jsonify({"ok": False, "error": "keyword が空です"}), 400
+
+    scored: list[tuple[float, dict]] = []
+    for node in DATA.get("nodes") or []:
+        s = _score_node_against_terms(node, terms)
+        if s > 0:
+            scored.append((s, node))
+    scored.sort(
+        key=lambda item: (-item[0], str(item[1].get("name") or ""))
+    )
+
+    hits = []
+    hit_ids: set[str] = set()
+    for score, node in scored[:limit]:
+        nid = node.get("id") or ""
+        if not nid:
+            continue
+        hit_ids.add(nid)
+        hits.append(
+            {
+                "id": nid,
+                "type": node.get("type"),
+                "name": node.get("name"),
+                "score": score,
+                "keywords": list(node.get("keywords") or [])[:12],
+                "position": node.get("position"),
+            }
+        )
+
+    edges = []
+    for edge in DATA.get("edges") or []:
+        src = edge.get("source") or ""
+        tgt = edge.get("target") or ""
+        if src in hit_ids and tgt in hit_ids:
+            edges.append(edge)
+
+    return jsonify(
+        {
+            "ok": True,
+            "query": query,
+            "terms": terms,
+            "hits": hits,
+            "nodes": hits,
+            "edges": edges,
+            "count": len(hits),
+        }
+    )
+
+
+@app.post("/api/search/text")
+def api_search_text():
+    """
+    Free-text embedding explore.
+
+    Body JSON:
+      { "text": "...", "top_k": 24, "min_score": 0.55,
+        "types": ["field","professor","course"] }
+
+    Returns centroid (user node position), hits, and attraction edges.
+    """
+    payload = request.get_json(silent=True) or {}
+    return _run_text_explore(payload)
+
+
+@app.post("/api/explore/text")
+def api_explore_text():
+    """Legacy alias for POST /api/search/text (frontend compatibility)."""
+    payload = request.get_json(silent=True) or {}
+    return _run_text_explore(payload)
+
+
+def _load_survey_responses() -> list:
+    path = SURVEY_RESPONSES_PATH
+    if not path.exists() and LEGACY_SURVEY_PATH.exists():
+        path = LEGACY_SURVEY_PATH
+    if not path.exists():
         return []
     try:
-        raw = json.loads(SURVEY_RESULTS_PATH.read_text(encoding="utf-8"))
+        raw = json.loads(path.read_text(encoding="utf-8"))
     except (OSError, json.JSONDecodeError):
         return []
     return raw if isinstance(raw, list) else []
+
+
+def _append_survey_response(record: dict) -> int:
+    """Thread-safe append into data/survey_responses.json (JSON array)."""
+    SURVEY_RESPONSES_PATH.parent.mkdir(parents=True, exist_ok=True)
+    with _SURVEY_LOCK:
+        rows = _load_survey_responses()
+        # Prefer migrating legacy file once into the new path
+        if (
+            not SURVEY_RESPONSES_PATH.exists()
+            and LEGACY_SURVEY_PATH.exists()
+            and rows
+        ):
+            pass  # rows already loaded from legacy
+        rows.append(record)
+        tmp = SURVEY_RESPONSES_PATH.with_suffix(".json.tmp")
+        tmp.write_text(
+            json.dumps(rows, ensure_ascii=False, indent=2) + "\n",
+            encoding="utf-8",
+        )
+        tmp.replace(SURVEY_RESPONSES_PATH)
+        return len(rows)
 
 
 def _clamp_score(value, default: int = 0) -> int:
@@ -598,9 +792,9 @@ def _clamp_score(value, default: int = 0) -> int:
 @app.post("/api/survey")
 def api_survey():
     """
-    Append a lightweight exploration feedback record to survey_results.json.
+    Append exploration feedback to data/survey_responses.json.
 
-    Expected JSON (extra fields are kept under explore_log / passthrough):
+    Expected JSON:
       {
         "timestamp": "...",
         "mode": "文章入力モード",
@@ -644,29 +838,29 @@ def api_survey():
         record["explore_log"] = payload["explore_log"]
 
     try:
-        SURVEY_RESULTS_PATH.parent.mkdir(parents=True, exist_ok=True)
-        with _SURVEY_LOCK:
-            rows = _load_survey_results()
-            rows.append(record)
-            SURVEY_RESULTS_PATH.write_text(
-                json.dumps(rows, ensure_ascii=False, indent=2) + "\n",
-                encoding="utf-8",
-            )
+        count = _append_survey_response(record)
     except OSError as exc:
         return jsonify({"ok": False, "error": f"保存に失敗しました: {exc}"}), 500
 
-    return jsonify({"ok": True, "count": len(rows), "path": str(SURVEY_RESULTS_PATH)})
+    return jsonify(
+        {
+            "ok": True,
+            "count": count,
+            "path": SURVEY_RESPONSES_PATH.relative_to(PROJECT_ROOT).as_posix(),
+        }
+    )
 
 
 @app.get("/api/survey")
 def api_survey_list():
     """Return stored survey results (for local review)."""
     with _SURVEY_LOCK:
-        rows = _load_survey_results()
+        rows = _load_survey_responses()
     return jsonify({"ok": True, "count": len(rows), "results": rows})
 
 
 if __name__ == "__main__":
     # use_reloader=False: loading sentence-transformers can touch site-packages
     # and trigger an endless watchdog restart on Windows.
-    app.run(host="127.0.0.1", port=5001, debug=True, use_reloader=False)
+    port = int(os.environ.get("PORT", "5001"))
+    app.run(host="127.0.0.1", port=port, debug=True, use_reloader=False)
