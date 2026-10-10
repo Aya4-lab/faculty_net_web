@@ -164,11 +164,11 @@ def safe_select_page_size_100():
 
 DETAIL_URL_RE = re.compile(
     r"(https?://[^\s\"'<>]*DetailMain\.aspx\?[^\s\"'<>]*lct_idx=[A-Za-z0-9]+)",
-    re.IGNORE_CASE,
+    re.IGNORECASE,
 )
 LCT_PARAM_RE = re.compile(
     r"lct_year=(\d+).*?lct_cd=([^&\"'\s]+).*?je_cd=(\d+).*?lct_idx=([A-Za-z0-9]+)",
-    re.IGNORE_CASE | re.DOTALL,
+    re.IGNORECASE | re.DOTALL,
 )
 
 

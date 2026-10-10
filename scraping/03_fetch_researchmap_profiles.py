@@ -1040,7 +1040,7 @@ def scrape_profile(profile_base, render_browser=None, lang="ja", max_papers=5,
 def run_fetch(index_file, json_ja="data/raw/ridb/ridb_yugo_faculty_ja.json", json_en="data/raw/ridb/ridb_yugo_faculty_en.json",
               out_ja=None, out_en=None,
               start_idx=0, limit=None, delay=REQUEST_DELAY, max_papers=5,
-              single_source=False, only_names=None, merge=False):
+              single_source=False, only_names=None, merge=False, skip_existing=False):
 
     index_path = resolve_path(index_file)
     with open(index_path, "r", encoding="utf-8") as f:
@@ -1087,6 +1087,23 @@ def run_fetch(index_file, json_ja="data/raw/ridb/ridb_yugo_faculty_ja.json", jso
             or normalize_name(t["name_en"]) in only_norms
         ]
         print(f"Filtered by --only-names: {len(targets)} target(s)")
+
+    if skip_existing and out_ja.exists():
+        existing_ja = load_json_rows(str(out_ja)) or []
+        existing_norms = set()
+        for row in existing_ja:
+            if not isinstance(row, dict) or not row.get("found"):
+                continue
+            n = extract_row_name(row) or remp_display_fallback(row)
+            if n:
+                existing_norms.add(normalize_name(n))
+        before = len(targets)
+        targets = [
+            t for t in targets
+            if normalize_name(t["name_ja"]) not in existing_norms
+            and normalize_name(t["name_en"]) not in existing_norms
+        ]
+        print(f"Skipped existing found profiles: {before - len(targets)}; remaining: {len(targets)}")
 
     if limit:
         targets = targets[start_idx:start_idx + limit]
@@ -1225,6 +1242,11 @@ if __name__ == "__main__":
         action="store_true",
         help="Merge scraped rows into existing out-ja/out-en by name (for targeted fixes)",
     )
+    parser.add_argument(
+        "--skip-existing",
+        action="store_true",
+        help="Skip researchers already present with found=true in out-ja (use with --merge)",
+    )
     args = parser.parse_args()
 
     lim = args.limit if args.limit and args.limit > 0 else None
@@ -1241,4 +1263,5 @@ if __name__ == "__main__":
         single_source=args.single_source,
         only_names=args.only_names,
         merge=args.merge,
+        skip_existing=args.skip_existing,
     )

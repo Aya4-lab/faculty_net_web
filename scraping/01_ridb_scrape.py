@@ -1,26 +1,108 @@
 """
-01 — Scrape RIDB (金沢大学 融合研究域) faculty directory → ridb_yugo_faculty_{ja,en}.json
+01 — Scrape RIDB faculty directories → ridb_yugo_faculty_{ja,en}.json
 
 Usage:
   python scraping/01_ridb_scrape.py
+  python scraping/01_ridb_scrape.py --only-new   # scrape configured add-on orgs only
+  python scraping/01_ridb_scrape.py --refresh    # re-fetch even if id already stored
 """
-import requests
-from bs4 import BeautifulSoup
+from __future__ import annotations
+
+import argparse
 import json
 import re
+import sys
 import time
 from pathlib import Path
 from urllib.parse import parse_qs, urljoin, urlparse
 
+import requests
+from bs4 import BeautifulSoup
+
+# Windows cp932 コンソールでも落ちないようにする
+try:
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+    sys.stderr.reconfigure(encoding="utf-8", errors="replace")
+except Exception:
+    pass
+
 # --- 設定 ---
 BASE_URL = "https://ridb.kanazawa-u.ac.jp/public/"
-URLS = {
-    "ja": "https://ridb.kanazawa-u.ac.jp/public/list.php?org1_cd=31",
-    "en": "https://ridb.kanazawa-u.ac.jp/public/list_en.php?org1_cd=31"
-}
 REQUEST_TIMEOUT = 20
-REQUEST_DELAY = 1
+REQUEST_DELAY = 1.5
 OUTPUT_DIR = Path(__file__).resolve().parent.parent / "data" / "raw" / "ridb"
+
+# 既存コア（融合研究域）+ 追加対象の学部・系
+CORE_SOURCES = {
+    "ja": [
+        {
+            "label": "融合研究域",
+            "url": "https://ridb.kanazawa-u.ac.jp/public/list.php?org1_cd=31",
+        },
+    ],
+    "en": [
+        {
+            "label": "Institute of Transdisciplinary Sciences",
+            "url": "https://ridb.kanazawa-u.ac.jp/public/list_en.php?org1_cd=31",
+        },
+    ],
+}
+
+# 追加収集対象（org2）
+NEW_SOURCES = {
+    "ja": [
+        {
+            "label": "人間社会研究域 経済学経営学系",
+            "url": "https://ridb.kanazawa-u.ac.jp/public/list.php?org2_cd=320800",
+        },
+        {
+            "label": "人間社会研究域 地域創造学系",
+            "url": "https://ridb.kanazawa-u.ac.jp/public/list.php?org2_cd=321400",
+        },
+        {
+            "label": "人間社会研究域 国際学系",
+            "url": "https://ridb.kanazawa-u.ac.jp/public/list.php?org2_cd=321600",
+        },
+        {
+            "label": "理工研究域 電子情報通信学系",
+            "url": "https://ridb.kanazawa-u.ac.jp/public/list.php?org2_cd=341600",
+        },
+        {
+            "label": "理工研究域 フロンティア工学系",
+            "url": "https://ridb.kanazawa-u.ac.jp/public/list.php?org2_cd=341400",
+        },
+        {
+            "label": "医薬保健研究域 保健学系",
+            "url": "https://ridb.kanazawa-u.ac.jp/public/list.php?org2_cd=360600",
+        },
+    ],
+    "en": [
+        {
+            "label": "Faculty of Economics and Management",
+            "url": "https://ridb.kanazawa-u.ac.jp/public/list_en.php?org2_cd=320800",
+        },
+        {
+            "label": "Faculty of Regional Development Studies",
+            "url": "https://ridb.kanazawa-u.ac.jp/public/list_en.php?org2_cd=321400",
+        },
+        {
+            "label": "Faculty of International Studies",
+            "url": "https://ridb.kanazawa-u.ac.jp/public/list_en.php?org2_cd=321600",
+        },
+        {
+            "label": "Faculty of Electrical, Information and Communication Engineering",
+            "url": "https://ridb.kanazawa-u.ac.jp/public/list_en.php?org2_cd=341600",
+        },
+        {
+            "label": "Faculty of Frontier Engineering",
+            "url": "https://ridb.kanazawa-u.ac.jp/public/list_en.php?org2_cd=341400",
+        },
+        {
+            "label": "Faculty of Health Sciences",
+            "url": "https://ridb.kanazawa-u.ac.jp/public/list_en.php?org2_cd=360600",
+        },
+    ],
+}
 
 # 取得したい項目の見出しテキスト（日本語/英語の対応）
 TARGET_HEADERS = {
@@ -48,7 +130,7 @@ TARGET_HEADERS = {
         "awards": ["受賞学術賞", "受賞"],
         "internal_committees": ["学内委員会委員等"],
         "education_records": ["担当経験のある科目", "教育実績"],
-        "social_contributions": ["社会貢献", "社会活動"]
+        "social_contributions": ["社会貢献", "社会活動"],
     },
     "en": {
         "affiliation_title": ["Affiliation/Title", "Faculty, Affiliation"],
@@ -70,13 +152,19 @@ TARGET_HEADERS = {
         "art_fieldwork": ["Arts and Fieldwork"],
         "patents": ["Patents"],
         "kaken": ["Grants-in-Aid", "KAKENHI"],
-        "competitive_funding": ["Competitive research funding,Contribution", "Competitive Funding", "Research Projects", "Competitive Research Funding"],
+        "competitive_funding": [
+            "Competitive research funding,Contribution",
+            "Competitive Funding",
+            "Research Projects",
+            "Competitive Research Funding",
+        ],
         "awards": ["Award", "Awards"],
         "internal_committees": ["Internal Committees"],
         "education_records": ["Courses Taught", "Educational Activities"],
-        "social_contributions": ["Social Contributions", "Social Activities"]
-    }
+        "social_contributions": ["Social Contributions", "Social Activities"],
+    },
 }
+
 
 def fetch_soup(session, url):
     response = session.get(url, timeout=REQUEST_TIMEOUT)
@@ -94,7 +182,8 @@ def get_detail_text(soup, header_texts):
         header_texts = [header_texts]
 
     header = soup.find(
-        lambda tag: tag.name == "h3" and any(header_text in tag.get_text(strip=True) for header_text in header_texts)
+        lambda tag: tag.name == "h3"
+        and any(header_text in tag.get_text(strip=True) for header_text in header_texts)
     )
     if not header:
         return ""
@@ -187,7 +276,11 @@ def get_photo_url(soup, page_url):
 
     photo_box = soup.select_one("#sub p.pht_box[style]")
     if photo_box:
-        match = re.search(r"background-image\s*:\s*url\(['\"]?([^)'\"]+)", photo_box["style"], re.IGNORECASE)
+        match = re.search(
+            r"background-image\s*:\s*url\(['\"]?([^)'\"]+)",
+            photo_box["style"],
+            re.IGNORECASE,
+        )
         if match:
             return urljoin(page_url, match.group(1))
 
@@ -268,120 +361,313 @@ def parse_list_rows(soup, page_url):
 
     return rows
 
-def scrape_ridb_list(lang="ja"):
-    url = URLS[lang]
+
+def load_existing_results(output_filename: Path) -> list:
+    if not output_filename.exists():
+        return []
+    try:
+        with open(output_filename, "r", encoding="utf-8") as f:
+            data = json.load(f)
+        return data if isinstance(data, list) else []
+    except Exception as e:
+        print(f"[WARN] 既存ファイルの読み込みに失敗 ({output_filename}): {e}")
+        return []
+
+
+def merge_by_id(existing: list, updates: list) -> list:
+    """ridb id をキーに更新・追加（重複防止）。"""
+    by_id = {}
+    order = []
+
+    for row in existing:
+        rid = str((row.get("basic") or {}).get("id") or "").strip()
+        key = rid or f"name:{(row.get('basic') or {}).get('name', '')}"
+        if key not in by_id:
+            order.append(key)
+        by_id[key] = row
+
+    for row in updates:
+        rid = str((row.get("basic") or {}).get("id") or "").strip()
+        key = rid or f"name:{(row.get('basic') or {}).get('name', '')}"
+        if key not in by_id:
+            order.append(key)
+        by_id[key] = row
+
+    return [by_id[k] for k in order]
+
+
+def scrape_researcher_detail(session, row, headers_dict, lang):
+    detail_data = {k: "" for k in headers_dict.keys()}
+    detail_soup = None
+    photo_url = ""
+    email = ""
+    personal_url = ""
+
+    if row["detail_url"]:
+        try:
+            time.sleep(REQUEST_DELAY)
+            detail_soup = fetch_soup(session, row["detail_url"])
+            lab_website = get_lab_website(detail_soup)
+            photo_url = get_photo_url(detail_soup, row["detail_url"])
+            email = get_email(detail_soup)
+            personal_url = get_personal_url(detail_soup, row["detail_url"])
+
+            for key, header_label in headers_dict.items():
+                detail_data[key] = get_detail_text(detail_soup, header_label)
+
+            if lab_website:
+                detail_data["lab_web"] = lab_website
+
+        except Exception as e:
+            print(f"  [WARN] {row['name']} の詳細ページ取得エラー: {e}")
+
+    return {
+        "basic": {
+            "id": get_researcher_id(row["detail_url"]),
+            "name": row["name"],
+            "affiliation": detail_data["affiliation_title"] or row["affiliation"],
+            "position": row["position"],
+            "birth_date": detail_data["birth_date"],
+            "photo_url": photo_url,
+            "email": email,
+            "lab_website": detail_data["lab_web"],
+            "personal_url": personal_url or row["detail_url"],
+        },
+        "education": {
+            "education_field": detail_data["edu_field"],
+            "lab": detail_data["lab"],
+            "academic_background": detail_data["education"],
+            "career": detail_data["work_history"],
+        },
+        "research": {
+            "specialty": detail_data["specialty"] or row["keywords"],
+            "keywords": detail_data["keywords"] or row["keywords"],
+            "research_themes": detail_data["research_theme"],
+            "joint_research": detail_data["joint_research"],
+        },
+        "outputs": {
+            "papers": get_detail_items(detail_soup, headers_dict["papers"]) if detail_soup else [],
+            "books": get_detail_items(detail_soup, headers_dict["books"]) if detail_soup else [],
+            "presentations": get_detail_items(detail_soup, headers_dict["presentations"])
+            if detail_soup
+            else [],
+            "other_publications": get_detail_items(detail_soup, headers_dict["other_publications"])
+            if detail_soup
+            else [],
+            "art_fieldwork": get_detail_items(detail_soup, headers_dict["art_fieldwork"])
+            if detail_soup
+            else [],
+            "patents": get_detail_items(detail_soup, headers_dict["patents"]) if detail_soup else [],
+        },
+        "funding": {
+            "kaken": get_detail_items(detail_soup, headers_dict["kaken"]) if detail_soup else [],
+            "competitive_funding": get_detail_items(
+                detail_soup, headers_dict["competitive_funding"]
+            )
+            if detail_soup
+            else [],
+        },
+        "awards": get_detail_items(detail_soup, headers_dict["awards"]) if detail_soup else [],
+        "internal_committees": get_detail_items(detail_soup, headers_dict["internal_committees"])
+        if detail_soup
+        else [],
+        "society": [detail_data["society"]] if detail_data["society"] else [],
+        "education_records": get_detail_items_for_headers(
+            detail_soup,
+            [
+                headers_dict["education_records"],
+                ["大学院担当授業科目", "Graduate School Courses"],
+                ["学士課程担当授業科目", "Undergraduate Courses"],
+            ],
+        )
+        if detail_soup
+        else [],
+        "social_contributions": get_detail_items_for_headers(
+            detail_soup,
+            [
+                headers_dict["social_contributions"],
+                ["国際事業協力", "International Cooperation"],
+                ["留学生参加の社会活動", "Social Activities Involving International Students"],
+                ["審議会等の参加", "Advisory Councils"],
+                ["講演可能なテーマ", "Topics Available for Lectures"],
+                ["その他公的社会活動", "Other Public Social Activities"],
+            ],
+        )
+        if detail_soup
+        else [],
+    }
+
+
+def collect_list_rows(session, sources):
+    """複数一覧URLから研究者行を収集し、detail_url / id で重複除去。"""
+    seen_ids = set()
+    seen_urls = set()
+    all_rows = []
+
+    for source in sources:
+        label = source["label"]
+        url = source["url"]
+        print(f"  一覧: {label}")
+        print(f"    URL: {url}")
+        try:
+            first_soup = fetch_soup(session, url)
+        except Exception as e:
+            print(f"    [WARN] 一覧取得エラー: {e}")
+            continue
+
+        max_page_count = get_max_page_count(first_soup)
+        print(f"    {max_page_count} ページ")
+
+        for page_number in range(1, max_page_count + 1):
+            page_url = build_list_url(url, page_number)
+            if page_number > 1:
+                time.sleep(REQUEST_DELAY)
+                try:
+                    soup = fetch_soup(session, page_url)
+                except Exception as e:
+                    print(f"    [WARN] ページ {page_number} 取得エラー: {e}")
+                    continue
+            else:
+                soup = first_soup
+
+            rows = parse_list_rows(soup, page_url)
+            added = 0
+            for row in rows:
+                rid = get_researcher_id(row["detail_url"]) if row["detail_url"] else ""
+                if rid and rid in seen_ids:
+                    continue
+                if row["detail_url"] and row["detail_url"] in seen_urls:
+                    continue
+                if rid:
+                    seen_ids.add(rid)
+                if row["detail_url"]:
+                    seen_urls.add(row["detail_url"])
+                row["_source_label"] = label
+                all_rows.append(row)
+                added += 1
+            print(f"    page {page_number}/{max_page_count}: +{added} (raw {len(rows)})")
+
+    return all_rows
+
+
+def scrape_ridb_list(lang="ja", sources=None, merge=True, skip_existing=True):
     headers_dict = TARGET_HEADERS[lang]
     output_filename = OUTPUT_DIR / f"ridb_yugo_faculty_{lang}.json"
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
-    
-    # 取得した全研究者のデータを格納するリスト
-    results = []
+
+    if sources is None:
+        sources = CORE_SOURCES[lang] + NEW_SOURCES[lang]
+
+    existing = load_existing_results(output_filename) if merge else []
+    existing_ids = {
+        str((row.get("basic") or {}).get("id") or "").strip()
+        for row in existing
+        if str((row.get("basic") or {}).get("id") or "").strip()
+    }
+    print(
+        f"[{lang.upper()}] 既存レコード: {len(existing)} "
+        f"(skip_existing={skip_existing}, merge={merge})"
+    )
 
     try:
         session = requests.Session()
         session.headers.update({"User-Agent": "Mozilla/5.0"})
 
-        print(f"[{lang.upper()}] リストページにアクセス中: {url}")
-        first_soup = fetch_soup(session, url)
-        max_page_count = get_max_page_count(first_soup)
-        print(f"{max_page_count} ページ分の一覧を取得します...")
+        print(f"[{lang.upper()}] {len(sources)} 件の一覧ソースを走査します...")
+        researcher_rows = collect_list_rows(session, sources)
+        print(f"[{lang.upper()}] 一覧ユニーク件数: {len(researcher_rows)}")
 
-        for page_number in range(1, max_page_count + 1):
-            page_url = build_list_url(url, page_number)
-            print(f"[{lang.upper()}] 一覧ページ {page_number}/{max_page_count}: {page_url}")
-            soup = first_soup if page_number == 1 else fetch_soup(session, page_url)
+        to_fetch = []
+        skipped = 0
+        for row in researcher_rows:
+            rid = get_researcher_id(row["detail_url"]) if row["detail_url"] else ""
+            if skip_existing and rid and rid in existing_ids:
+                skipped += 1
+                continue
+            to_fetch.append(row)
 
-            researcher_rows = parse_list_rows(soup, page_url)
-            print(f"  {len(researcher_rows)} 名の情報を取得します...")
+        print(f"[{lang.upper()}] 詳細取得対象: {len(to_fetch)} / スキップ: {skipped}")
 
-            for row in researcher_rows:
-                detail_data = {k: "" for k in headers_dict.keys()}
-                detail_soup = None
-                photo_url = ""
-                email = ""
-                personal_url = ""
+        updates = []
+        for i, row in enumerate(to_fetch, 1):
+            print(f"  [{i}/{len(to_fetch)}] {row['name']} ({row.get('_source_label', '')})")
+            researcher_info = scrape_researcher_detail(session, row, headers_dict, lang)
+            updates.append(researcher_info)
+            print(
+                f"    [OK] 取得完了: {researcher_info['basic']['name']} "
+                f"id={researcher_info['basic']['id']}"
+            )
 
-                if row["detail_url"]:
-                    try:
-                        time.sleep(REQUEST_DELAY)
-                        detail_soup = fetch_soup(session, row["detail_url"])
-                        lab_website = get_lab_website(detail_soup)
-                        photo_url = get_photo_url(detail_soup, row["detail_url"])
-                        email = get_email(detail_soup)
-                        personal_url = get_personal_url(detail_soup, row["detail_url"])
+            # 途中保存（長時間実行の安全策）
+            if merge and i % 10 == 0:
+                merged_partial = merge_by_id(existing, updates)
+                with open(output_filename, "w", encoding="utf-8") as f:
+                    json.dump(merged_partial, f, ensure_ascii=False, indent=4)
+                print(f"    ... checkpoint saved ({len(merged_partial)} total)")
 
-                        for key, header_label in headers_dict.items():
-                            detail_data[key] = get_detail_text(detail_soup, header_label)
+        if merge:
+            results = merge_by_id(existing, updates)
+        else:
+            results = updates
 
-                        if lab_website:
-                            detail_data["lab_web"] = lab_website
-
-                    except Exception as e:
-                        print(f"  ⚠ {row['name']} の詳細ページ取得エラー: {e}")
-
-                researcher_info = {
-                    "basic": {
-                        "id": get_researcher_id(row["detail_url"]),
-                        "name": row["name"],
-                        "affiliation": detail_data["affiliation_title"] or row["affiliation"],
-                        "position": row["position"],
-                        "birth_date": detail_data["birth_date"],
-                        "photo_url": photo_url,
-                        "email": email,
-                        "lab_website": detail_data["lab_web"],
-                        "personal_url": personal_url or row["detail_url"],
-                    },
-                    "education": {
-                        "education_field": detail_data["edu_field"],
-                        "lab": detail_data["lab"],
-                        "academic_background": detail_data["education"],
-                        "career": detail_data["work_history"],
-                    },
-                    "research": {
-                        "specialty": detail_data["specialty"] or row["keywords"],
-                        "keywords": detail_data["keywords"] or row["keywords"],
-                        "research_themes": detail_data["research_theme"],
-                        "joint_research": detail_data["joint_research"],
-                    },
-                    "outputs": {
-                        "papers": get_detail_items(detail_soup, headers_dict["papers"]) if detail_soup else [],
-                        "books": get_detail_items(detail_soup, headers_dict["books"]) if detail_soup else [],
-                        "presentations": get_detail_items(detail_soup, headers_dict["presentations"]) if detail_soup else [],
-                        "other_publications": get_detail_items(detail_soup, headers_dict["other_publications"]) if detail_soup else [],
-                        "art_fieldwork": get_detail_items(detail_soup, headers_dict["art_fieldwork"]) if detail_soup else [],
-                        "patents": get_detail_items(detail_soup, headers_dict["patents"]) if detail_soup else [],
-                    },
-                    "funding": {
-                        "kaken": get_detail_items(detail_soup, headers_dict["kaken"]) if detail_soup else [],
-                        "competitive_funding": get_detail_items(detail_soup, headers_dict["competitive_funding"]) if detail_soup else [],
-                    },
-                    "awards": get_detail_items(detail_soup, headers_dict["awards"]) if detail_soup else [],
-                    "internal_committees": get_detail_items(detail_soup, headers_dict["internal_committees"]) if detail_soup else [],
-                    "society": [detail_data["society"]] if detail_data["society"] else [],
-                    "education_records": get_detail_items_for_headers(
-                        detail_soup,
-                        [headers_dict["education_records"], ["大学院担当授業科目", "Graduate School Courses"], ["学士課程担当授業科目", "Undergraduate Courses"]],
-                    ) if detail_soup else [],
-                    "social_contributions": get_detail_items_for_headers(
-                        detail_soup,
-                        [headers_dict["social_contributions"], ["国際事業協力", "International Cooperation"], ["留学生参加の社会活動", "Social Activities Involving International Students"], ["審議会等の参加", "Advisory Councils"], ["講演可能なテーマ", "Topics Available for Lectures"], ["その他公的社会活動", "Other Public Social Activities"]],
-                    ) if detail_soup else [],
-                }
-
-                results.append(researcher_info)
-                print(f"    ✓ 取得完了: {row['name']}")
-
-        # JSONファイルへの書き出し (日本語等の文字化けを防ぐ設定)
-        with open(output_filename, 'w', encoding='utf-8') as f:
+        with open(output_filename, "w", encoding="utf-8") as f:
             json.dump(results, f, ensure_ascii=False, indent=4)
-            
-        print(f"\n[{lang.upper()}] スクリプト完了。{output_filename} に保存しました。\n")
+
+        print(
+            f"\n[{lang.upper()}] 完了: 新規/更新 {len(updates)} 件 → "
+            f"合計 {len(results)} 件 → {output_filename}\n"
+        )
+        return {"lang": lang, "fetched": len(updates), "skipped": skipped, "total": len(results)}
 
     except Exception as e:
         print(f"[{lang.upper()}] エラーが発生しました: {e}")
+        return {"lang": lang, "error": str(e)}
 
-if __name__ == '__main__':
-    # 日本語版の実行
-    scrape_ridb_list("ja")
-    # 英語版の実行
-    scrape_ridb_list("en")
+
+def parse_args():
+    parser = argparse.ArgumentParser(description="01: scrape RIDB faculty lists into JSON.")
+    parser.add_argument(
+        "--only-new",
+        action="store_true",
+        help="Scrape only NEW_SOURCES (additional org2 departments), not the core org1 list.",
+    )
+    parser.add_argument(
+        "--refresh",
+        action="store_true",
+        help="Re-fetch researchers even if their RIDB id already exists in the output JSON.",
+    )
+    parser.add_argument(
+        "--no-merge",
+        action="store_true",
+        help="Overwrite output with this run only (do not merge into existing JSON).",
+    )
+    parser.add_argument(
+        "--lang",
+        choices=["ja", "en", "both"],
+        default="both",
+        help="Language to scrape (default: both).",
+    )
+    return parser.parse_args()
+
+
+if __name__ == "__main__":
+    args = parse_args()
+    langs = ["ja", "en"] if args.lang == "both" else [args.lang]
+    merge = not args.no_merge
+    skip_existing = not args.refresh
+
+    summaries = []
+    for lang in langs:
+        sources = NEW_SOURCES[lang] if args.only_new else (CORE_SOURCES[lang] + NEW_SOURCES[lang])
+        summaries.append(
+            scrape_ridb_list(
+                lang=lang,
+                sources=sources,
+                merge=merge,
+                skip_existing=skip_existing,
+            )
+        )
+
+    print("=== RIDB scrape summary ===")
+    for s in summaries:
+        print(s)

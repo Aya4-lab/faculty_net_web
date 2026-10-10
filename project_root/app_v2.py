@@ -43,6 +43,13 @@ SURVEY_RESPONSES_PATH = PROJECT_ROOT / "data" / "survey_responses.json"
 LEGACY_SURVEY_PATH = PROJECT_ROOT / "data" / "survey_results.json"
 _SURVEY_LOCK = threading.Lock()
 
+# Local default: auth off. Production (Render 等) では BASIC_AUTH_ENABLED=1 を設定。
+BASIC_AUTH_ENABLED = os.environ.get("BASIC_AUTH_ENABLED", "0").strip().lower() in {
+    "1",
+    "true",
+    "yes",
+    "on",
+}
 BASIC_AUTH_USER = os.environ.get("BASIC_AUTH_USER", "user")
 BASIC_AUTH_PASSWORD = os.environ.get("BASIC_AUTH_PASSWORD", "alpha2026")
 _QUERY_SPLIT = re.compile(r"[\s　、,，/|]+")
@@ -80,7 +87,9 @@ def _unauthorized() -> Response:
 
 @app.before_request
 def require_basic_auth():
-    """Gate the whole app for alpha stakeholders (env-configurable)."""
+    """Gate the whole app when BASIC_AUTH_ENABLED is on (alpha / production)."""
+    if not BASIC_AUTH_ENABLED:
+        return None
     # CORS preflight must pass without credentials challenge
     if request.method == "OPTIONS":
         return None
