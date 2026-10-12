@@ -1,1 +1,21 @@
-[]
+[
+  {
+    "timestamp": "2026-10-10T03:58:12.487Z",
+    "mode": "キーワードモード",
+    "input_text": "",
+    "score": 3,
+    "recommend": 3,
+    "found_items": [
+      "知らない教員"
+    ],
+    "comment": "面白い（テスト）",
+    "explore_log": {
+      "mode": "キーワードモード",
+      "input_text": "",
+      "trail": [],
+      "related_hit_count": 0,
+      "related_hit_ids": [],
+      "text_explore_started_at": null
+    }
+  }
+]

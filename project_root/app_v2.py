@@ -32,6 +32,29 @@ import explore_engine
 APP_DIR = Path(__file__).resolve().parent
 PROJECT_ROOT = APP_DIR.parent
 
+
+def _load_dotenv(path: Path) -> None:
+    """Load KEY=VALUE pairs from .env without overriding existing env vars."""
+    if not path.is_file():
+        return
+    try:
+        text = path.read_text(encoding="utf-8")
+    except OSError:
+        return
+    for raw_line in text.splitlines():
+        line = raw_line.strip()
+        if not line or line.startswith("#") or "=" not in line:
+            continue
+        key, _, value = line.partition("=")
+        key = key.strip()
+        if not key:
+            continue
+        value = value.strip().strip('"').strip("'")
+        os.environ.setdefault(key, value)
+
+
+_load_dotenv(PROJECT_ROOT / ".env")
+
 DISPLAY_JSON = PROJECT_ROOT / "data" / "display" / "display_data.json"
 if not DISPLAY_JSON.exists():
     DISPLAY_JSON = APP_DIR / "display_data.json"
@@ -43,15 +66,20 @@ SURVEY_RESPONSES_PATH = PROJECT_ROOT / "data" / "survey_responses.json"
 LEGACY_SURVEY_PATH = PROJECT_ROOT / "data" / "survey_results.json"
 _SURVEY_LOCK = threading.Lock()
 
-# Local default: auth off. Production (Render 等) では BASIC_AUTH_ENABLED=1 を設定。
+# Local default: auth off. Production では BASIC_AUTH_ENABLED=1 とパスワードを .env / 環境変数で設定。
 BASIC_AUTH_ENABLED = os.environ.get("BASIC_AUTH_ENABLED", "0").strip().lower() in {
     "1",
     "true",
     "yes",
     "on",
 }
-BASIC_AUTH_USER = os.environ.get("BASIC_AUTH_USER", "user")
-BASIC_AUTH_PASSWORD = os.environ.get("BASIC_AUTH_PASSWORD", "alpha2026")
+BASIC_AUTH_USER = os.environ.get("BASIC_AUTH_USER", "user").strip()
+BASIC_AUTH_PASSWORD = os.environ.get("BASIC_AUTH_PASSWORD", "").strip()
+if BASIC_AUTH_ENABLED and not BASIC_AUTH_PASSWORD:
+    raise RuntimeError(
+        "BASIC_AUTH_ENABLED is set but BASIC_AUTH_PASSWORD is empty. "
+        "Copy .env.example to .env and set a strong password."
+    )
 _QUERY_SPLIT = re.compile(r"[\s　、,，/|]+")
 
 FIELD_COORDS_PATH = ANALYSIS / "field_coords.json"

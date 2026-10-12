@@ -1,4 +1,4 @@
-# Web application (alpha deploy)
+# Web application
 Flask>=3.1,<4
 flask-cors>=4.0,<6
 gunicorn>=22.0,<24
@@ -8,6 +8,7 @@ beautifulsoup4>=4.15,<5
 requests>=2.34,<3
 selenium>=4.0,<5
 webdriver-manager>=4.0,<5
+playwright>=1.40,<2
 
 # Data generation and analysis
 numpy>=2.0,<3
@@ -36,5 +37,5 @@ pdfplumber>=0.11
 #   ImportError: DLL load failed while importing _devicearray
 # (WDAC / application control policy), try pinning a known-good stack:
 #   pip install "numpy<2.3" "numba>=0.59,<0.62" "llvmlite>=0.42,<0.45" "umap-learn>=0.5.6,<0.6"
-# Pipeline 04 falls back to PCA automatically when UMAP import/fit fails.
+# Pipeline 03 falls back to PCA automatically when UMAP import/fit fails.
 # ---------------------------------------------------------------------------

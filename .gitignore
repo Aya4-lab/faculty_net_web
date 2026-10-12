@@ -1,0 +1,29 @@
+# Python & Cache
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.env
+venv/
+.venv/
+
+# OS / IDE
+.DS_Store
+.vscode/
+.idea/
+.cursor/
+
+# Data / Logs
+*.log
+*.mjs.map
+data/raw/*
+!data/raw/.gitkeep
+data/raw.zip
+data/survey_responses.json
+data/survey_results.json
+
+# Secrets / local credentials
+**/researchmap_session_cookie.txt
+
+# Dream
+dream.md 
